@@ -5,11 +5,19 @@
  */
 package form;
 
+import config.koneksi;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.HashSet;
+import javax.swing.JOptionPane;
 import javax.swing.Timer;
+import java.util.HashSet;
 
 /**
  *
@@ -22,8 +30,105 @@ public class form_hasil extends javax.swing.JPanel {
      */
     public form_hasil() {
         initComponents();
-        
+        loadIdPendaftaran();
+                    
+    id_daftar.addActionListener(new ActionListener() {
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        resetTabHasil();
+        tampilkanTabSesuaiLayanan();
+        }
+    });  
+    
+    id_daftar.addActionListener(new ActionListener() {
+        @Override
+    public void actionPerformed(ActionEvent e) {
+        ambiliddaftar();
     }
+});
+    }
+    private void ambiliddaftar() {
+        try {
+                Connection kon = koneksi.koneksiDb();
+                String idDaftarDipilih = id_daftar.getSelectedItem().toString();
+
+                String sql = "SELECT p.nama AS nama_pasien, d.nama AS nama_dokter " +
+                             "FROM pendaftaran pd " +
+                             "JOIN pasien p ON pd.No_rm = p.No_rm " +
+                             "JOIN dokter d ON pd.id_Dokter = d.id_Dokter " +
+                             "WHERE pd.id_pendaftaran = ?";
+
+                PreparedStatement pst = kon.prepareStatement(sql);
+                pst.setString(1, idDaftarDipilih);
+                ResultSet rs = pst.executeQuery();
+
+                if (rs.next()) {
+                    nm_pasien.setText(rs.getString("nama_pasien"));
+                    nm_dokter.setText(rs.getString("nama_dokter"));
+                }
+
+            } catch (SQLException e) {
+                JOptionPane.showMessageDialog(null, "Gagal mengambil data: " + e.getMessage());
+            }
+    }
+    
+    public void loadIdPendaftaran() {
+    try {
+        Connection kon = koneksi.koneksiDb();
+        String sql = "SELECT id_pendaftaran FROM pendaftaran";
+        PreparedStatement pst = kon.prepareStatement(sql);
+        ResultSet rs = pst.executeQuery();
+
+        id_daftar.removeAllItems(); // kosongkan dulu isinya
+        while (rs.next()) {
+            id_daftar.addItem(rs.getString("id_pendaftaran"));
+        }
+    } catch (Exception e) {
+        JOptionPane.showMessageDialog(null, "Gagal load ID Pendaftaran: " + e.getMessage());
+    }
+}
+    
+    private void tampilkanTabSesuaiLayanan() {
+    try {
+        // Ambil ID Pendaftaran dari combobox
+        String idPendaftaran = id_daftar.getSelectedItem().toString();
+         Connection kon = koneksi.koneksiDb();
+         
+        // Query ambil jenis layanan
+        String sql = "SELECT l.nama_layanan FROM pendaftaran_detail pd JOIN layanan l ON pd.id_layanan = l.id_layanan WHERE pd.id_pendaftaran = ?";
+        PreparedStatement pst = kon.prepareStatement(sql);
+        pst.setString(1, idPendaftaran);
+        ResultSet rs = pst.executeQuery();
+
+        // Simpan jenis layanan
+        HashSet<String> jenisLayanan = new HashSet<>();
+        while (rs.next()) {
+            jenisLayanan.add(rs.getString("nama_layanan").toLowerCase());
+        }
+
+        // Tampilkan tab sesuai jenis layanan
+        for (int i = TabHasil.getTabCount() - 1; i >= 0; i--) {
+            String title = TabHasil.getTitleAt(i).toLowerCase();
+            if (!jenisLayanan.contains(title)) {
+                TabHasil.removeTabAt(i);
+            }
+        }
+
+    } catch (Exception ex) {
+        ex.printStackTrace();
+        JOptionPane.showMessageDialog(null, "Gagal mengambil layanan: " + ex.getMessage());
+    }
+}
+    private void resetTabHasil() {
+    TabHasil.removeAll();
+    TabHasil.addTab("URINE", URINE);
+    TabHasil.addTab("HEMATOLOGI", HEMATOLOGI);
+    TabHasil.addTab("SEROLOGI", SEROLOGI);
+    TabHasil.addTab("KIMIA1", KIMIA1);
+    TabHasil.addTab("KIMIA2", KIMIA2);
+    TabHasil.addTab("TINJA", TINJA);
+}
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -41,7 +146,7 @@ public class form_hasil extends javax.swing.JPanel {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTabbedPane2 = new javax.swing.JTabbedPane();
+        TabHasil = new javax.swing.JTabbedPane();
         URINE = new javax.swing.JPanel();
         jPanel10 = new javax.swing.JPanel();
         jLabel327 = new javax.swing.JLabel();
@@ -104,6 +209,8 @@ public class form_hasil extends javax.swing.JPanel {
         jComboBox17 = new javax.swing.JComboBox<>();
         jComboBox18 = new javax.swing.JComboBox<>();
         jLabel4 = new javax.swing.JLabel();
+        sv_urine = new javax.swing.JButton();
+        cn_urine = new javax.swing.JButton();
         HEMATOLOGI = new javax.swing.JPanel();
         jPanel7 = new javax.swing.JPanel();
         jLabel181 = new javax.swing.JLabel();
@@ -560,16 +667,20 @@ public class form_hasil extends javax.swing.JPanel {
         jButton5 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
         jLabel318 = new javax.swing.JLabel();
-        jComboBox3 = new javax.swing.JComboBox<>();
+        id_daftar = new javax.swing.JComboBox<>();
         jLabel76 = new javax.swing.JLabel();
-        jLabel77 = new javax.swing.JLabel();
-        jLabel78 = new javax.swing.JLabel();
+        nm_pasien = new javax.swing.JLabel();
+        nm_dokter = new javax.swing.JLabel();
         jLabel79 = new javax.swing.JLabel();
         jLabel80 = new javax.swing.JLabel();
         jLabel81 = new javax.swing.JLabel();
         jLabel82 = new javax.swing.JLabel();
         jLabel83 = new javax.swing.JLabel();
         jLabel84 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
 
         setLayout(new java.awt.CardLayout());
 
@@ -827,104 +938,114 @@ public class form_hasil extends javax.swing.JPanel {
         jLabel4.setText("jLabel4");
         jLabel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
 
+        sv_urine.setText("SAVE");
+
+        cn_urine.setText("CANCEL");
+
         javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
         jPanel10.setLayout(jPanel10Layout);
         jPanel10Layout.setHorizontalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel10Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel327, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel10Layout.createSequentialGroup()
                         .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel340, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel341, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel10Layout.createSequentialGroup()
-                                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(jLabel328, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLabel331, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLabel332, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLabel333, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLabel335, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLabel334, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLabel336, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLabel337, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLabel339, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLabel338, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLabel330, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(18, 18, 18)
                                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel329, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel340, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel341, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(jPanel10Layout.createSequentialGroup()
-                                        .addGap(3, 3, 3)
-                                        .addComponent(jLabel342)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jLabel343)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jLabel344)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jLabel345))
-                                    .addGroup(jPanel10Layout.createSequentialGroup()
-                                        .addComponent(jRadioButton31)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton32))
-                                    .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(kejernihan, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(Bjenis, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(reaksi, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(protein, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(warna, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(jPanel10Layout.createSequentialGroup()
-                                        .addComponent(jRadioButton29)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jRadioButton30))
-                                    .addComponent(reduksi, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(jPanel10Layout.createSequentialGroup()
-                                        .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(jRadioButton37)
-                                            .addComponent(jRadioButton33, javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jRadioButton36, javax.swing.GroupLayout.Alignment.LEADING))
+                                        .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                            .addComponent(jLabel328, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(jLabel331, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(jLabel332, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(jLabel333, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(jLabel335, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(jLabel334, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(jLabel336, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(jLabel337, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(jLabel339, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(jLabel338, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(jLabel330, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGap(18, 18, 18)
                                         .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jRadioButton35)
-                                            .addComponent(jRadioButton34)
-                                            .addComponent(jRadioButton38))))))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel346, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel348, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel349, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel350, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel351, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel352, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel353, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel354, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel355, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel356, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel357, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel347, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jComboBox18, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jComboBox17, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jComboBox16, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jComboBox15, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jComboBox14, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lekosi, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(S_eritrosit, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel10Layout.createSequentialGroup()
-                                .addComponent(jRadioButton39)
+                                            .addComponent(jLabel329, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGroup(jPanel10Layout.createSequentialGroup()
+                                                .addGap(3, 3, 3)
+                                                .addComponent(jLabel342)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(jLabel343)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(jLabel344)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(jLabel345))
+                                            .addGroup(jPanel10Layout.createSequentialGroup()
+                                                .addComponent(jRadioButton31)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(jRadioButton32))
+                                            .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                .addComponent(kejernihan, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(Bjenis, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(reaksi, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(protein, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(warna, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(jPanel10Layout.createSequentialGroup()
+                                                .addComponent(jRadioButton29)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(jRadioButton30))
+                                            .addComponent(reduksi, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGroup(jPanel10Layout.createSequentialGroup()
+                                                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                    .addComponent(jRadioButton37)
+                                                    .addComponent(jRadioButton33, javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(jRadioButton36, javax.swing.GroupLayout.Alignment.LEADING))
+                                                .addGap(18, 18, 18)
+                                                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(jRadioButton35)
+                                                    .addComponent(jRadioButton34)
+                                                    .addComponent(jRadioButton38))))))
                                 .addGap(18, 18, 18)
-                                .addComponent(jRadioButton40))
-                            .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addGroup(jPanel10Layout.createSequentialGroup()
-                                    .addComponent(jComboBox12, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jComboBox13, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addComponent(epital, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jLabel327, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jLabel346, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel348, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel349, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel350, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel351, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel352, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel353, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel354, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel355, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel356, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel357, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel347, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jComboBox18, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jComboBox17, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jComboBox16, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jComboBox15, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jComboBox14, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lekosi, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(S_eritrosit, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(jPanel10Layout.createSequentialGroup()
+                                        .addComponent(jRadioButton39)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jRadioButton40))
+                                    .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addGroup(jPanel10Layout.createSequentialGroup()
+                                            .addComponent(jComboBox12, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(jComboBox13, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(epital, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addGroup(jPanel10Layout.createSequentialGroup()
+                                .addComponent(sv_urine, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(cn_urine, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
-            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel10Layout.setVerticalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1019,6 +1140,10 @@ public class form_hasil extends javax.swing.JPanel {
                     .addComponent(jRadioButton38)
                     .addComponent(jLabel357, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jComboBox18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(cn_urine, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
+                    .addComponent(sv_urine, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -1032,10 +1157,10 @@ public class form_hasil extends javax.swing.JPanel {
             URINELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(URINELayout.createSequentialGroup()
                 .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
-        jTabbedPane2.addTab("URINE", URINE);
+        TabHasil.addTab("URINE", URINE);
 
         jPanel7.setBackground(java.awt.Color.white);
         jPanel7.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
@@ -1859,7 +1984,7 @@ public class form_hasil extends javax.swing.JPanel {
                 .addGap(0, 0, 0))
         );
 
-        jTabbedPane2.addTab("HEMATOLOGI", HEMATOLOGI);
+        TabHasil.addTab("HEMATOLOGI", HEMATOLOGI);
 
         jPanel9.setBackground(new java.awt.Color(255, 255, 255));
         jPanel9.setForeground(new java.awt.Color(204, 204, 255));
@@ -2665,14 +2790,14 @@ public class form_hasil extends javax.swing.JPanel {
             SEROLOGILayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(SEROLOGILayout.createSequentialGroup()
                 .addComponent(jPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 20, Short.MAX_VALUE))
+                .addGap(0, 852, Short.MAX_VALUE))
         );
         SEROLOGILayout.setVerticalGroup(
             SEROLOGILayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel9, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
-        jTabbedPane2.addTab("SEROLOGI", SEROLOGI);
+        TabHasil.addTab("SEROLOGI", SEROLOGI);
 
         jPanel2.setBackground(java.awt.Color.white);
 
@@ -3757,10 +3882,10 @@ public class form_hasil extends javax.swing.JPanel {
             .addGroup(KIMIA1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(141, Short.MAX_VALUE))
         );
 
-        jTabbedPane2.addTab("KIMIA 1", KIMIA1);
+        TabHasil.addTab("KIMIA 1", KIMIA1);
 
         jPanel11.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -4805,7 +4930,7 @@ public class form_hasil extends javax.swing.JPanel {
                 .addGap(0, 0, 0))
         );
 
-        jTabbedPane2.addTab("KIMIA 2", KIMIA2);
+        TabHasil.addTab("KIMIA 2", KIMIA2);
 
         jPanel8.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -5521,21 +5646,21 @@ public class form_hasil extends javax.swing.JPanel {
             TINJALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(TINJALayout.createSequentialGroup()
                 .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 3, Short.MAX_VALUE))
+                .addGap(0, 426, Short.MAX_VALUE))
         );
 
-        jTabbedPane2.addTab("TINJA", TINJA);
+        TabHasil.addTab("TINJA", TINJA);
 
-        jScrollPane1.setViewportView(jTabbedPane2);
+        jScrollPane1.setViewportView(TabHasil);
 
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        id_daftar.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         jLabel76.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         jLabel76.setText("Nama Dokter");
 
-        jLabel77.setText("jLabel77");
+        nm_pasien.setText("jLabel77");
 
-        jLabel78.setText("jLabel77");
+        nm_dokter.setText("jLabel77");
 
         jLabel79.setText("Tanggal ");
 
@@ -5553,6 +5678,23 @@ public class form_hasil extends javax.swing.JPanel {
         jLabel84.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         jLabel84.setText(":");
 
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane2.setViewportView(jTable1);
+
+        jButton1.setText("SAVE");
+
+        jButton2.setText("CANCEL");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -5563,35 +5705,43 @@ public class form_hasil extends javax.swing.JPanel {
                         .addGap(235, 235, 235)
                         .addComponent(jLabel1))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 831, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(20, 20, 20)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3)
+                            .addComponent(jScrollPane2)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                        .addComponent(jLabel76, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addGap(12, 12, 12)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel81)
-                                    .addComponent(jLabel82)
-                                    .addComponent(jLabel83))))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jComboBox3, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel77, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel78, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel79, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel84)
-                        .addGap(43, 43, 43)
-                        .addComponent(jLabel80)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(jButton1)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jButton2))
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel3)
+                                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                                        .addComponent(jLabel76, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                        .addGap(12, 12, 12)))
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(jLabel81)
+                                                    .addComponent(jLabel82)
+                                                    .addComponent(jLabel83))))
+                                        .addGap(18, 18, 18)
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(id_daftar, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(nm_pasien, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(nm_dokter, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel79, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel84)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(jLabel80))
+                                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 719, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(0, 0, Short.MAX_VALUE)))))
+                .addContainerGap(560, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -5621,13 +5771,20 @@ public class form_hasil extends javax.swing.JPanel {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel83))
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(id_daftar, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel77, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(nm_pasien, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel78, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 413, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(nm_dokter, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 392, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton1)
+                    .addComponent(jButton2))
+                .addContainerGap(20, Short.MAX_VALUE))
         );
 
         main_panel.add(jPanel1, "card2");
@@ -5635,439 +5792,365 @@ public class form_hasil extends javax.swing.JPanel {
         add(main_panel, "card2");
     }// </editor-fold>//GEN-END:initComponents
 
-    private void themoglobin3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_themoglobin3ActionPerformed
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_themoglobin3ActionPerformed
-
-    private void tled3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tled3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tled3ActionPerformed
-
-    private void bbatal3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bbatal3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_bbatal3ActionPerformed
-
-    private void bexit3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bexit3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_bexit3ActionPerformed
-
-    private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox2ActionPerformed
-
-    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton1ActionPerformed
-
-    private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton2ActionPerformed
-
-    private void jRadioButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton3ActionPerformed
-
-    private void jRadioButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton4ActionPerformed
-
-    private void jRadioButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton5ActionPerformed
-
-    private void jRadioButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton6ActionPerformed
-
-    private void jRadioButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton7ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton7ActionPerformed
-
-    private void jRadioButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton8ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton8ActionPerformed
-
-    private void jRadioButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton9ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton9ActionPerformed
-
-    private void jRadioButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton10ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton10ActionPerformed
-
-    private void jRadioButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton11ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton11ActionPerformed
-
-    private void jRadioButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton12ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton12ActionPerformed
-
-    private void jRadioButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton13ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton13ActionPerformed
-
-    private void jRadioButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton14ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton14ActionPerformed
-
-    private void jRadioButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton15ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton15ActionPerformed
-
-    private void jRadioButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton16ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton16ActionPerformed
-
-    private void jRadioButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton17ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton17ActionPerformed
-
-    private void jRadioButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton18ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton18ActionPerformed
-
-    private void jRadioButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton19ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton19ActionPerformed
-
-    private void jRadioButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton20ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton20ActionPerformed
-
-    private void jRadioButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton21ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton21ActionPerformed
-
-    private void jRadioButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton22ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton22ActionPerformed
-
-    private void jRadioButton23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton23ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton23ActionPerformed
-
-    private void jRadioButton24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton24ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton24ActionPerformed
-
-    private void jRadioButton25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton25ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton25ActionPerformed
-
-    private void jRadioButton26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton26ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton26ActionPerformed
-
-    private void jRadioButton27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton27ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton27ActionPerformed
-
-    private void jRadioButton28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton28ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton28ActionPerformed
+    }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton5ActionPerformed
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+    private void jRadioButton28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton28ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton6ActionPerformed
+    }//GEN-LAST:event_jRadioButton28ActionPerformed
 
-    private void comboxTyphusHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboxTyphusHActionPerformed
+    private void jRadioButton27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton27ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_comboxTyphusHActionPerformed
+    }//GEN-LAST:event_jRadioButton27ActionPerformed
 
-    private void positiveCRPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_positiveCRPActionPerformed
+    private void jRadioButton26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton26ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_positiveCRPActionPerformed
+    }//GEN-LAST:event_jRadioButton26ActionPerformed
 
-    private void bsimpan4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bsimpan4ActionPerformed
+    private void jRadioButton25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton25ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_bsimpan4ActionPerformed
+    }//GEN-LAST:event_jRadioButton25ActionPerformed
 
-    private void bbatal4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bbatal4ActionPerformed
+    private void jRadioButton24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton24ActionPerformed
         // TODO add your handling code here:
-//        dispose();
-    }//GEN-LAST:event_bbatal4ActionPerformed
+    }//GEN-LAST:event_jRadioButton24ActionPerformed
 
-    private void bexit4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bexit4ActionPerformed
+    private void jRadioButton23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton23ActionPerformed
         // TODO add your handling code here:
-//        dispose();
-    }//GEN-LAST:event_bexit4ActionPerformed
+    }//GEN-LAST:event_jRadioButton23ActionPerformed
 
-    private void jTextField23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField23ActionPerformed
+    private void jRadioButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton22ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField23ActionPerformed
+    }//GEN-LAST:event_jRadioButton22ActionPerformed
 
-    private void jTextField24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField24ActionPerformed
+    private void jRadioButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton21ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField24ActionPerformed
+    }//GEN-LAST:event_jRadioButton21ActionPerformed
 
-    private void jTextField25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField25ActionPerformed
+    private void jRadioButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton20ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField25ActionPerformed
+    }//GEN-LAST:event_jRadioButton20ActionPerformed
 
-    private void jTextField26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField26ActionPerformed
+    private void jRadioButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton19ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField26ActionPerformed
+    }//GEN-LAST:event_jRadioButton19ActionPerformed
 
-    private void jTextField27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField27ActionPerformed
+    private void jRadioButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton18ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField27ActionPerformed
+    }//GEN-LAST:event_jRadioButton18ActionPerformed
 
-    private void jTextField28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField28ActionPerformed
+    private void jRadioButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton17ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField28ActionPerformed
+    }//GEN-LAST:event_jRadioButton17ActionPerformed
 
-    private void jTextField29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField29ActionPerformed
+    private void jRadioButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton16ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField29ActionPerformed
+    }//GEN-LAST:event_jRadioButton16ActionPerformed
 
-    private void jTextField30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField30ActionPerformed
+    private void jRadioButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton15ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField30ActionPerformed
+    }//GEN-LAST:event_jRadioButton15ActionPerformed
 
-    private void jTextField31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField31ActionPerformed
+    private void jRadioButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton14ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField31ActionPerformed
+    }//GEN-LAST:event_jRadioButton14ActionPerformed
 
-    private void jTextField32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField32ActionPerformed
+    private void jRadioButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton13ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField32ActionPerformed
+    }//GEN-LAST:event_jRadioButton13ActionPerformed
 
-    private void jComboBox19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox19ActionPerformed
+    private void jRadioButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton12ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox19ActionPerformed
+    }//GEN-LAST:event_jRadioButton12ActionPerformed
 
-    private void jComboBox20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox20ActionPerformed
+    private void jRadioButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton11ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox20ActionPerformed
+    }//GEN-LAST:event_jRadioButton11ActionPerformed
 
-    private void jComboBox21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox21ActionPerformed
+    private void jRadioButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton10ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox21ActionPerformed
+    }//GEN-LAST:event_jRadioButton10ActionPerformed
 
-    private void jComboBox22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox22ActionPerformed
+    private void jRadioButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton9ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox22ActionPerformed
+    }//GEN-LAST:event_jRadioButton9ActionPerformed
 
-    private void jComboBox23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox23ActionPerformed
+    private void jRadioButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton8ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox23ActionPerformed
+    }//GEN-LAST:event_jRadioButton8ActionPerformed
 
-    private void jComboBox24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox24ActionPerformed
+    private void jRadioButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton7ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox24ActionPerformed
+    }//GEN-LAST:event_jRadioButton7ActionPerformed
 
-    private void jTextField33ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField33ActionPerformed
+    private void jRadioButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton6ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField33ActionPerformed
+    }//GEN-LAST:event_jRadioButton6ActionPerformed
 
-    private void jTextField34ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField34ActionPerformed
+    private void jRadioButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton5ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField34ActionPerformed
+    }//GEN-LAST:event_jRadioButton5ActionPerformed
 
-    private void jTextField35ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField35ActionPerformed
+    private void jRadioButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton4ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField35ActionPerformed
+    }//GEN-LAST:event_jRadioButton4ActionPerformed
 
-    private void jTextField36ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField36ActionPerformed
+    private void jRadioButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton3ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField36ActionPerformed
+    }//GEN-LAST:event_jRadioButton3ActionPerformed
 
-    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+    private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton8ActionPerformed
+    }//GEN-LAST:event_jRadioButton2ActionPerformed
 
-    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton9ActionPerformed
+    }//GEN-LAST:event_jRadioButton1ActionPerformed
 
-    private void jTextField37ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField37ActionPerformed
+    private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField37ActionPerformed
+    }//GEN-LAST:event_jComboBox2ActionPerformed
 
-    private void jTextField38ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField38ActionPerformed
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField38ActionPerformed
-
-    private void jTextField39ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField39ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField39ActionPerformed
-
-    private void jTextField40ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField40ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField40ActionPerformed
-
-    private void jTextField41ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField41ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField41ActionPerformed
-
-    private void jTextField42ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField42ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField42ActionPerformed
-
-    private void jTextField43ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField43ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField43ActionPerformed
-
-    private void jTextField44ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField44ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField44ActionPerformed
-
-    private void jTextField45ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField45ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField45ActionPerformed
-
-    private void jTextField46ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField46ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField46ActionPerformed
-
-    private void jTextField47ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField47ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField47ActionPerformed
-
-    private void jTextField48ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField48ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField48ActionPerformed
-
-    private void jTextField49ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField49ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField49ActionPerformed
-
-    private void jTextField50ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField50ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField50ActionPerformed
-
-    private void jTextField51ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField51ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField51ActionPerformed
-
-    private void jTextField52ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField52ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField52ActionPerformed
-
-    private void jTextField53ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField53ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField53ActionPerformed
-
-    private void jTextField54ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField54ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField54ActionPerformed
+    }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jTextField55ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField55ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField55ActionPerformed
 
-    private void warnaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_warnaActionPerformed
+    private void jTextField54ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField54ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_warnaActionPerformed
+    }//GEN-LAST:event_jTextField54ActionPerformed
 
-    private void themoglobin4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_themoglobin4ActionPerformed
+    private void jTextField53ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField53ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_themoglobin4ActionPerformed
+    }//GEN-LAST:event_jTextField53ActionPerformed
 
-    private void themoglobin5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_themoglobin5ActionPerformed
+    private void jTextField52ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField52ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_themoglobin5ActionPerformed
+    }//GEN-LAST:event_jTextField52ActionPerformed
 
-    private void themoglobin6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_themoglobin6ActionPerformed
+    private void jTextField51ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField51ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_themoglobin6ActionPerformed
+    }//GEN-LAST:event_jTextField51ActionPerformed
 
-    private void themoglobin7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_themoglobin7ActionPerformed
+    private void jTextField50ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField50ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_themoglobin7ActionPerformed
+    }//GEN-LAST:event_jTextField50ActionPerformed
 
-    private void themoglobin8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_themoglobin8ActionPerformed
+    private void jTextField49ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField49ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_themoglobin8ActionPerformed
+    }//GEN-LAST:event_jTextField49ActionPerformed
 
-    private void themoglobin9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_themoglobin9ActionPerformed
+    private void jTextField48ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField48ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_themoglobin9ActionPerformed
+    }//GEN-LAST:event_jTextField48ActionPerformed
 
-    private void themoglobin10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_themoglobin10ActionPerformed
+    private void jTextField47ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField47ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_themoglobin10ActionPerformed
+    }//GEN-LAST:event_jTextField47ActionPerformed
 
-    private void themoglobin11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_themoglobin11ActionPerformed
+    private void jTextField46ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField46ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_themoglobin11ActionPerformed
+    }//GEN-LAST:event_jTextField46ActionPerformed
 
-    private void themoglobin12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_themoglobin12ActionPerformed
+    private void jTextField45ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField45ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_themoglobin12ActionPerformed
+    }//GEN-LAST:event_jTextField45ActionPerformed
 
-    private void themoglobin13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_themoglobin13ActionPerformed
+    private void jTextField44ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField44ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_themoglobin13ActionPerformed
+    }//GEN-LAST:event_jTextField44ActionPerformed
 
-    private void themoglobin14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_themoglobin14ActionPerformed
+    private void jTextField43ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField43ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_themoglobin14ActionPerformed
+    }//GEN-LAST:event_jTextField43ActionPerformed
 
-    private void themoglobin15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_themoglobin15ActionPerformed
+    private void jTextField42ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField42ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_themoglobin15ActionPerformed
+    }//GEN-LAST:event_jTextField42ActionPerformed
 
-    private void themoglobin16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_themoglobin16ActionPerformed
+    private void jTextField41ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField41ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_themoglobin16ActionPerformed
+    }//GEN-LAST:event_jTextField41ActionPerformed
 
-    private void tled4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tled4ActionPerformed
+    private void jTextField40ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField40ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tled4ActionPerformed
+    }//GEN-LAST:event_jTextField40ActionPerformed
 
-    private void tled5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tled5ActionPerformed
+    private void jTextField39ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField39ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tled5ActionPerformed
+    }//GEN-LAST:event_jTextField39ActionPerformed
 
-    private void tled6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tled6ActionPerformed
+    private void jTextField38ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField38ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tled6ActionPerformed
+    }//GEN-LAST:event_jTextField38ActionPerformed
 
-    private void tled7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tled7ActionPerformed
+    private void jTextField37ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField37ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tled7ActionPerformed
+    }//GEN-LAST:event_jTextField37ActionPerformed
 
-    private void tled8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tled8ActionPerformed
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tled8ActionPerformed
+    }//GEN-LAST:event_jButton9ActionPerformed
 
-    private void tled9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tled9ActionPerformed
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tled9ActionPerformed
+    }//GEN-LAST:event_jButton8ActionPerformed
 
-    private void tled10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tled10ActionPerformed
+    private void jTextField36ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField36ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tled10ActionPerformed
+    }//GEN-LAST:event_jTextField36ActionPerformed
 
-    private void tled11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tled11ActionPerformed
+    private void jTextField35ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField35ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tled11ActionPerformed
+    }//GEN-LAST:event_jTextField35ActionPerformed
 
-    private void tled12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tled12ActionPerformed
+    private void jTextField34ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField34ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tled12ActionPerformed
+    }//GEN-LAST:event_jTextField34ActionPerformed
 
-    private void tled13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tled13ActionPerformed
+    private void jTextField33ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField33ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tled13ActionPerformed
+    }//GEN-LAST:event_jTextField33ActionPerformed
 
-    private void tled14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tled14ActionPerformed
+    private void jComboBox24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox24ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tled14ActionPerformed
+    }//GEN-LAST:event_jComboBox24ActionPerformed
 
-    private void positivetpha2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_positivetpha2ActionPerformed
+    private void jComboBox23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox23ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_positivetpha2ActionPerformed
+    }//GEN-LAST:event_jComboBox23ActionPerformed
 
-    private void positivetpha3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_positivetpha3ActionPerformed
+    private void jComboBox22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox22ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_positivetpha3ActionPerformed
+    }//GEN-LAST:event_jComboBox22ActionPerformed
+
+    private void jComboBox21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox21ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox21ActionPerformed
+
+    private void jComboBox20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox20ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox20ActionPerformed
+
+    private void jComboBox19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox19ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox19ActionPerformed
+
+    private void jTextField32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField32ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField32ActionPerformed
+
+    private void jTextField31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField31ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField31ActionPerformed
+
+    private void jTextField30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField30ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField30ActionPerformed
+
+    private void jTextField29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField29ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField29ActionPerformed
+
+    private void jTextField28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField28ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField28ActionPerformed
+
+    private void jTextField27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField27ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField27ActionPerformed
+
+    private void jTextField26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField26ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField26ActionPerformed
+
+    private void jTextField25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField25ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField25ActionPerformed
+
+    private void jTextField24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField24ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField24ActionPerformed
+
+    private void jTextField23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField23ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField23ActionPerformed
+
+    private void bilirubin16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bilirubin16ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bilirubin16ActionPerformed
+
+    private void bilirubin15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bilirubin15ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bilirubin15ActionPerformed
+
+    private void bilirubin14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bilirubin14ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bilirubin14ActionPerformed
+
+    private void bilirubin13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bilirubin13ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bilirubin13ActionPerformed
+
+    private void bilirubin12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bilirubin12ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bilirubin12ActionPerformed
+
+    private void bilirubin11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bilirubin11ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bilirubin11ActionPerformed
+
+    private void bilirubin10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bilirubin10ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bilirubin10ActionPerformed
+
+    private void bilirubin9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bilirubin9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bilirubin9ActionPerformed
+
+    private void bilirubin8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bilirubin8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bilirubin8ActionPerformed
+
+    private void bilirubin7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bilirubin7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bilirubin7ActionPerformed
+
+    private void bilirubin6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bilirubin6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bilirubin6ActionPerformed
+
+    private void bilirubin5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bilirubin5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bilirubin5ActionPerformed
+
+    private void bilirubin4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bilirubin4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bilirubin4ActionPerformed
+
+    private void bilirubin3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bilirubin3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bilirubin3ActionPerformed
+
+    private void bilirubin2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bilirubin2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bilirubin2ActionPerformed
+
+    private void bilirubin1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bilirubin1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bilirubin1ActionPerformed
+
+    private void jTextField56ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField56ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField56ActionPerformed
 
     private void jTextField15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField15ActionPerformed
         // TODO add your handling code here:
@@ -6105,13 +6188,13 @@ public class form_hasil extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField7ActionPerformed
 
-    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField6ActionPerformed
-
     private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField5ActionPerformed
+
+    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField6ActionPerformed
 
     private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
         // TODO add your handling code here:
@@ -6125,77 +6208,151 @@ public class form_hasil extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_bilirubinActionPerformed
 
-    private void jTextField56ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField56ActionPerformed
+    private void bexit4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bexit4ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField56ActionPerformed
+        //        dispose();
+    }//GEN-LAST:event_bexit4ActionPerformed
 
-    private void bilirubin1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bilirubin1ActionPerformed
+    private void bbatal4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bbatal4ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_bilirubin1ActionPerformed
+        //        dispose();
+    }//GEN-LAST:event_bbatal4ActionPerformed
 
-    private void bilirubin2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bilirubin2ActionPerformed
+    private void bsimpan4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bsimpan4ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_bilirubin2ActionPerformed
+    }//GEN-LAST:event_bsimpan4ActionPerformed
 
-    private void bilirubin3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bilirubin3ActionPerformed
+    private void positiveCRPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_positiveCRPActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_bilirubin3ActionPerformed
+    }//GEN-LAST:event_positiveCRPActionPerformed
 
-    private void bilirubin4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bilirubin4ActionPerformed
+    private void comboxTyphusHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboxTyphusHActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_bilirubin4ActionPerformed
+    }//GEN-LAST:event_comboxTyphusHActionPerformed
 
-    private void bilirubin5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bilirubin5ActionPerformed
+    private void positivetpha3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_positivetpha3ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_bilirubin5ActionPerformed
+    }//GEN-LAST:event_positivetpha3ActionPerformed
 
-    private void bilirubin6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bilirubin6ActionPerformed
+    private void positivetpha2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_positivetpha2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_bilirubin6ActionPerformed
+    }//GEN-LAST:event_positivetpha2ActionPerformed
 
-    private void bilirubin7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bilirubin7ActionPerformed
+    private void tled14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tled14ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_bilirubin7ActionPerformed
+    }//GEN-LAST:event_tled14ActionPerformed
 
-    private void bilirubin8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bilirubin8ActionPerformed
+    private void tled13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tled13ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_bilirubin8ActionPerformed
+    }//GEN-LAST:event_tled13ActionPerformed
 
-    private void bilirubin9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bilirubin9ActionPerformed
+    private void tled12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tled12ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_bilirubin9ActionPerformed
+    }//GEN-LAST:event_tled12ActionPerformed
 
-    private void bilirubin10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bilirubin10ActionPerformed
+    private void tled11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tled11ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_bilirubin10ActionPerformed
+    }//GEN-LAST:event_tled11ActionPerformed
 
-    private void bilirubin11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bilirubin11ActionPerformed
+    private void tled10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tled10ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_bilirubin11ActionPerformed
+    }//GEN-LAST:event_tled10ActionPerformed
 
-    private void bilirubin12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bilirubin12ActionPerformed
+    private void tled9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tled9ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_bilirubin12ActionPerformed
+    }//GEN-LAST:event_tled9ActionPerformed
 
-    private void bilirubin13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bilirubin13ActionPerformed
+    private void tled8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tled8ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_bilirubin13ActionPerformed
+    }//GEN-LAST:event_tled8ActionPerformed
 
-    private void bilirubin14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bilirubin14ActionPerformed
+    private void tled7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tled7ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_bilirubin14ActionPerformed
+    }//GEN-LAST:event_tled7ActionPerformed
 
-    private void bilirubin15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bilirubin15ActionPerformed
+    private void tled6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tled6ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_bilirubin15ActionPerformed
+    }//GEN-LAST:event_tled6ActionPerformed
 
-    private void bilirubin16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bilirubin16ActionPerformed
+    private void tled5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tled5ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_bilirubin16ActionPerformed
+    }//GEN-LAST:event_tled5ActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void tled4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tled4ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_tled4ActionPerformed
+
+    private void themoglobin16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_themoglobin16ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_themoglobin16ActionPerformed
+
+    private void themoglobin15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_themoglobin15ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_themoglobin15ActionPerformed
+
+    private void themoglobin14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_themoglobin14ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_themoglobin14ActionPerformed
+
+    private void themoglobin13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_themoglobin13ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_themoglobin13ActionPerformed
+
+    private void themoglobin12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_themoglobin12ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_themoglobin12ActionPerformed
+
+    private void themoglobin11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_themoglobin11ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_themoglobin11ActionPerformed
+
+    private void themoglobin10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_themoglobin10ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_themoglobin10ActionPerformed
+
+    private void themoglobin9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_themoglobin9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_themoglobin9ActionPerformed
+
+    private void themoglobin8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_themoglobin8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_themoglobin8ActionPerformed
+
+    private void themoglobin7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_themoglobin7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_themoglobin7ActionPerformed
+
+    private void themoglobin6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_themoglobin6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_themoglobin6ActionPerformed
+
+    private void themoglobin5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_themoglobin5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_themoglobin5ActionPerformed
+
+    private void themoglobin4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_themoglobin4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_themoglobin4ActionPerformed
+
+    private void bexit3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bexit3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bexit3ActionPerformed
+
+    private void bbatal3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bbatal3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bbatal3ActionPerformed
+
+    private void tled3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tled3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tled3ActionPerformed
+
+    private void themoglobin3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_themoglobin3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_themoglobin3ActionPerformed
+
+    private void warnaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_warnaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_warnaActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -6214,6 +6371,7 @@ public class form_hasil extends javax.swing.JPanel {
     private javax.swing.JPanel SEROLOGI;
     private javax.swing.JComboBox<String> S_eritrosit;
     private javax.swing.JPanel TINJA;
+    private javax.swing.JTabbedPane TabHasil;
     private javax.swing.JPanel URINE;
     private javax.swing.JLabel antiHA;
     private javax.swing.JLabel antiHBc;
@@ -6243,6 +6401,7 @@ public class form_hasil extends javax.swing.JPanel {
     private javax.swing.JTextField bilirubin9;
     private javax.swing.JButton bsimpan3;
     private javax.swing.JButton bsimpan4;
+    private javax.swing.JButton cn_urine;
     private javax.swing.JComboBox<String> comboxAntiHA;
     private javax.swing.JComboBox<String> comboxAntiHBc;
     private javax.swing.JComboBox<String> comboxAntiHBe;
@@ -6261,6 +6420,9 @@ public class form_hasil extends javax.swing.JPanel {
     private javax.swing.JLabel ft1;
     private javax.swing.JLabel hasil1;
     private javax.swing.JLabel hasil2;
+    private javax.swing.JComboBox<String> id_daftar;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
@@ -6281,7 +6443,6 @@ public class form_hasil extends javax.swing.JPanel {
     private javax.swing.JComboBox<String> jComboBox22;
     private javax.swing.JComboBox<String> jComboBox23;
     private javax.swing.JComboBox<String> jComboBox24;
-    private javax.swing.JComboBox<String> jComboBox3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -6532,8 +6693,6 @@ public class form_hasil extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel74;
     private javax.swing.JLabel jLabel75;
     private javax.swing.JLabel jLabel76;
-    private javax.swing.JLabel jLabel77;
-    private javax.swing.JLabel jLabel78;
     private javax.swing.JLabel jLabel79;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel80;
@@ -6596,8 +6755,9 @@ public class form_hasil extends javax.swing.JPanel {
     private javax.swing.JRadioButton jRadioButton8;
     private javax.swing.JRadioButton jRadioButton9;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JTabbedPane jTabbedPane2;
+    private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField10;
     private javax.swing.JTextField jTextField11;
@@ -6668,6 +6828,8 @@ public class form_hasil extends javax.swing.JPanel {
     private javax.swing.JRadioButton negativtpha2;
     private javax.swing.JRadioButton negativtpha3;
     private javax.swing.JLabel ngAFP;
+    private javax.swing.JLabel nm_dokter;
+    private javax.swing.JLabel nm_pasien;
     private javax.swing.JLabel paraAH;
     private javax.swing.JLabel paraAO;
     private javax.swing.JLabel paraBH;
@@ -6686,6 +6848,7 @@ public class form_hasil extends javax.swing.JPanel {
     private javax.swing.JLabel raf;
     private javax.swing.JComboBox<String> reaksi;
     private javax.swing.JComboBox<String> reduksi;
+    private javax.swing.JButton sv_urine;
     private javax.swing.JLabel t3;
     private javax.swing.JLabel t3uptake;
     private javax.swing.JLabel t4;
