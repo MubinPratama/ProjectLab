@@ -38,14 +38,14 @@ public class Form_Kinerja extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGap(179, 179, 179)
                 .addComponent(jLabel1)
-                .addContainerGap(180, Short.MAX_VALUE))
+                .addContainerGap(304, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(104, 104, 104)
                 .addComponent(jLabel1)
-                .addContainerGap(180, Short.MAX_VALUE))
+                .addContainerGap(241, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
