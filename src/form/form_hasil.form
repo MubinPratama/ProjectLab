@@ -156,9 +156,9 @@
                               </Group>
                           </Group>
                       </Group>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jScrollPane1" min="-2" pref="392" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
                       <Component id="jScrollPane2" min="-2" pref="102" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -348,9 +348,9 @@
                                                               <Group type="102" alignment="1" attributes="0">
                                                                   <Component id="u_kristal1" min="-2" pref="90" max="-2" attributes="0"/>
                                                                   <EmptySpace max="32767" attributes="0"/>
-                                                                  <Component id="jComboBox13" min="-2" pref="90" max="-2" attributes="0"/>
+                                                                  <Component id="u_kristal2" min="-2" pref="90" max="-2" attributes="0"/>
                                                               </Group>
-                                                              <Component id="u_epital" alignment="1" min="-2" pref="214" max="-2" attributes="0"/>
+                                                              <Component id="u_epitel" alignment="1" min="-2" pref="214" max="-2" attributes="0"/>
                                                           </Group>
                                                       </Group>
                                                   </Group>
@@ -418,7 +418,7 @@
                                           <Component id="jLabel334" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                                           <Component id="u_protein" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="jLabel351" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                                          <Component id="u_epital" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="u_epitel" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
@@ -427,7 +427,7 @@
                                           <Component id="pos_PE" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="jLabel352" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                                           <Component id="u_kristal1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jComboBox13" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="u_kristal2" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
@@ -770,6 +770,9 @@
                                   </StringArray>
                                 </Property>
                               </Properties>
+                              <Events>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="u_BjenisActionPerformed"/>
+                              </Events>
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                               </AuxValues>
@@ -821,9 +824,6 @@
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                                 </Property>
-                                <Property name="model" type="javax.swing.ButtonModel" editor="org.netbeans.modules.form.ComponentChooserEditor">
-                                  <ComponentRef name="default"/>
-                                </Property>
                                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                                   <ComponentRef name="protein_esbach"/>
                                 </Property>
@@ -837,9 +837,6 @@
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                                </Property>
-                                <Property name="model" type="javax.swing.ButtonModel" editor="org.netbeans.modules.form.ComponentChooserEditor">
-                                  <ComponentRef name="default"/>
                                 </Property>
                                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                                   <ComponentRef name="protein_esbach"/>
@@ -931,9 +928,6 @@
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                                 </Property>
-                                <Property name="model" type="javax.swing.ButtonModel" editor="org.netbeans.modules.form.ComponentChooserEditor">
-                                  <ComponentRef name="default"/>
-                                </Property>
                                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                                   <ComponentRef name="darah_samar"/>
                                 </Property>
@@ -947,9 +941,6 @@
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                                </Property>
-                                <Property name="model" type="javax.swing.ButtonModel" editor="org.netbeans.modules.form.ComponentChooserEditor">
-                                  <ComponentRef name="default"/>
                                 </Property>
                                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                                   <ComponentRef name="darah_samar"/>
@@ -1294,7 +1285,7 @@
                                 <Property name="text" type="java.lang.String" value="Positive"/>
                               </Properties>
                             </Component>
-                            <Component class="javax.swing.JComboBox" name="u_epital">
+                            <Component class="javax.swing.JComboBox" name="u_epitel">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Tahoma" size="12" style="0"/>
@@ -1333,7 +1324,7 @@
                                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                               </AuxValues>
                             </Component>
-                            <Component class="javax.swing.JComboBox" name="jComboBox13">
+                            <Component class="javax.swing.JComboBox" name="u_kristal2">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Tahoma" size="12" style="0"/>
@@ -1467,6 +1458,9 @@
                               <Properties>
                                 <Property name="text" type="java.lang.String" value="SAVE"/>
                               </Properties>
+                              <Events>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sv_urineActionPerformed"/>
+                              </Events>
                             </Component>
                             <Component class="javax.swing.JButton" name="cn_urine">
                               <Properties>
@@ -1863,10 +1857,8 @@
                                               <Component id="themoglobin14" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
                                               <Component id="jLabel210" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
                                           </Group>
-                                          <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                                              <Component id="jLabel238" alignment="0" min="-2" pref="38" max="-2" attributes="0"/>
-                                              <Component id="tled14" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                                          </Group>
+                                          <Component id="jLabel238" alignment="0" min="-2" pref="38" max="-2" attributes="0"/>
+                                          <Component id="tled14" min="-2" pref="38" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">

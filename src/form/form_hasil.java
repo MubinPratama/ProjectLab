@@ -206,9 +206,9 @@ public class form_hasil extends javax.swing.JPanel {
         u_lekosi = new javax.swing.JComboBox<>();
         neg_S = new javax.swing.JRadioButton();
         pos_S = new javax.swing.JRadioButton();
-        u_epital = new javax.swing.JComboBox<>();
+        u_epitel = new javax.swing.JComboBox<>();
         u_kristal1 = new javax.swing.JComboBox<>();
-        jComboBox13 = new javax.swing.JComboBox<>();
+        u_kristal2 = new javax.swing.JComboBox<>();
         u_bakter = new javax.swing.JComboBox<>();
         u_bilirubin = new javax.swing.JComboBox<>();
         u_urobinogel = new javax.swing.JComboBox<>();
@@ -787,6 +787,11 @@ public class form_hasil extends javax.swing.JPanel {
 
         u_Bjenis.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         u_Bjenis.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "1.005", "1.010", "1.015", "1.020", "1.025", "1.030" }));
+        u_Bjenis.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                u_BjenisActionPerformed(evt);
+            }
+        });
 
         u_reaksi.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         u_reaksi.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "5.0", "5.5", "6.0", "6.5", "7.0", "7.5", "8.0" }));
@@ -939,14 +944,14 @@ public class form_hasil extends javax.swing.JPanel {
         pos_S.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         pos_S.setText("Positive");
 
-        u_epital.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        u_epital.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "[-]/Negative", "[+]/Positif 1", "[++]/Positif 2", "[+++]/Positfi3", "[++++]/Positif 4" }));
+        u_epitel.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        u_epitel.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "[-]/Negative", "[+]/Positif 1", "[++]/Positif 2", "[+++]/Positfi3", "[++++]/Positif 4" }));
 
         u_kristal1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         u_kristal1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "Urat Amorf", "Asam Urat", "Ca. Oxalat", "Tripel Postat" }));
 
-        jComboBox13.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jComboBox13.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "[-]/Negative", "[+]/Positif 1", "[++]/Positif 2", "[+++]/Positfi3", "[++++]/Positif 4" }));
+        u_kristal2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        u_kristal2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "[-]/Negative", "[+]/Positif 1", "[++]/Positif 2", "[+++]/Positfi3", "[++++]/Positif 4" }));
 
         u_bakter.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         u_bakter.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "[-]/Negative", "[+]/Positif 1", "[++]/Positif 2", "[+++]/Positfi3", "[++++]/Positif 4" }));
@@ -967,6 +972,11 @@ public class form_hasil extends javax.swing.JPanel {
         jLabel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
 
         sv_urine.setText("SAVE");
+        sv_urine.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sv_urineActionPerformed(evt);
+            }
+        });
 
         cn_urine.setText("CANCEL");
 
@@ -1066,8 +1076,8 @@ public class form_hasil extends javax.swing.JPanel {
                                         .addGroup(jPanel10Layout.createSequentialGroup()
                                             .addComponent(u_kristal1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(jComboBox13, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addComponent(u_epital, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                            .addComponent(u_kristal2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(u_epitel, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE))))
                             .addGroup(jPanel10Layout.createSequentialGroup()
                                 .addComponent(sv_urine, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
@@ -1118,7 +1128,7 @@ public class form_hasil extends javax.swing.JPanel {
                     .addComponent(jLabel334, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(u_protein, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel351, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(u_epital, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(u_epitel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel335, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1126,7 +1136,7 @@ public class form_hasil extends javax.swing.JPanel {
                     .addComponent(pos_PE)
                     .addComponent(jLabel352, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(u_kristal1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(u_kristal2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel336, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1959,9 +1969,8 @@ public class form_hasil extends javax.swing.JPanel {
                         .addComponent(jLabel194, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(themoglobin14, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel210, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel238, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(tled14, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jLabel238, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tled14, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel195, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -5725,9 +5734,9 @@ public class form_hasil extends javax.swing.JPanel {
                                 .addComponent(nm_pasien, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(nm_dokter, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 392, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(12, 12, 12)
+                .addGap(16, 16, 16)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -6273,6 +6282,59 @@ public class form_hasil extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_cn_tinjaActionPerformed
 
+    private void sv_urineActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sv_urineActionPerformed
+        // TODO add your handling code here:
+        Connection kon = koneksi.koneksiDb();
+        String sql = "INSERT INTO hasil_urine (id_pendaftaran, warna, kejernihan, berat_jenis, reaksi, protein, "
+    + "protein_esbach, protein_bence_jones, reduksi, "
+    + "benda_keton, darah_samar, tes_kehamilan, "
+    + "sendimen_eritrosit, lekosit, silinder, epitel, kristal_jenis, kristal_bentuk, "
+    + "bakteri, bilirubin, urobilinogen, urobilin, nitrit) "
+    + "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+
+try (PreparedStatement ps = kon.prepareStatement(sql)) {
+    ps.setInt(1, Integer.parseInt(id_daftar.getSelectedItem().toString())); // ID Pendaftaran
+    ps.setString(2, u_warna.getSelectedItem().toString());
+    ps.setString(3, u_kejernihan.getSelectedItem().toString());
+    ps.setString(4, u_Bjenis.getSelectedItem().toString());
+    ps.setString(5, u_reaksi.getSelectedItem().toString());
+    ps.setString(6, u_protein.getSelectedItem().toString());
+    
+    ps.setString(7, pos_PE.isSelected() ? "Positive" : "Negative"); // Protein Esbach
+    ps.setString(8, pos_PBJ.isSelected() ? "Positive" : "Negative"); // Protein Bence Jones
+
+    ps.setString(9, u_reduksi.getSelectedItem().toString());
+
+    ps.setString(10, pos_BK.isSelected() ? "Positive" : "Negative"); // Benda Keton
+    ps.setString(11, pos_DS.isSelected() ? "Positive" : "Negative"); // Darah Samar
+    ps.setString(12, pos_TK.isSelected() ? "Positive" : "Negative"); // Tes Kehamilan
+
+    ps.setString(13, u_S_eritrosit.getSelectedItem().toString());
+    ps.setString(14, u_lekosi.getSelectedItem().toString());
+    ps.setString(15, pos_S.isSelected() ? "Positive" : "Negative");
+
+    ps.setString(16, u_epitel.getSelectedItem().toString());
+    ps.setString(17, u_kristal1.getSelectedItem().toString());
+    ps.setString(18, u_kristal2.getSelectedItem().toString());
+    
+    ps.setString(19, u_bakter.getSelectedItem().toString());
+    ps.setString(20, u_bilirubin.getSelectedItem().toString());
+    ps.setString(21, u_urobinogel.getSelectedItem().toString());
+    ps.setString(22, jComboBox17.getSelectedItem().toString());
+    ps.setString(23, jComboBox18.getSelectedItem().toString());
+
+    ps.executeUpdate();
+    JOptionPane.showMessageDialog(null, "Data berhasil disimpan!");
+
+} catch (SQLException e) {
+    JOptionPane.showMessageDialog(null, "Gagal menyimpan: " + e.getMessage());
+}
+    }//GEN-LAST:event_sv_urineActionPerformed
+
+    private void u_BjenisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_u_BjenisActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_u_BjenisActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel AFP;
@@ -6340,7 +6402,6 @@ public class form_hasil extends javax.swing.JPanel {
     private javax.swing.JComboBox<String> id_daftar;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JComboBox<String> jComboBox13;
     private javax.swing.JComboBox<String> jComboBox17;
     private javax.swing.JComboBox<String> jComboBox18;
     private javax.swing.JComboBox<String> jComboBox19;
@@ -6806,9 +6867,10 @@ public class form_hasil extends javax.swing.JPanel {
     private javax.swing.JComboBox<String> u_S_eritrosit;
     private javax.swing.JComboBox<String> u_bakter;
     private javax.swing.JComboBox<String> u_bilirubin;
-    private javax.swing.JComboBox<String> u_epital;
+    private javax.swing.JComboBox<String> u_epitel;
     private javax.swing.JComboBox<String> u_kejernihan;
     private javax.swing.JComboBox<String> u_kristal1;
+    private javax.swing.JComboBox<String> u_kristal2;
     private javax.swing.JComboBox<String> u_lekosi;
     private javax.swing.JComboBox<String> u_protein;
     private javax.swing.JComboBox<String> u_reaksi;

@@ -182,6 +182,8 @@ public class Menu extends javax.swing.JFrame {
         pn_utama.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         pn_utama.setName(""); // NOI18N
         pn_utama.setLayout(new java.awt.BorderLayout());
+
+        logo_pn.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         pn_utama.add(logo_pn, java.awt.BorderLayout.CENTER);
 
         javax.swing.GroupLayout pn_isiLayout = new javax.swing.GroupLayout(pn_isi);
@@ -273,7 +275,7 @@ public class Menu extends javax.swing.JFrame {
         ImageIcon iconLpKinerja = new ImageIcon(getClass().getResource("/img/lp_Hasil.png"));
         ImageIcon iconLpKeuangan = new ImageIcon(getClass().getResource("/img/lp_keuangan.png"));
         ImageIcon iconLphasil = new ImageIcon(getClass().getResource("/img/lp_Hasil.png"));
-        
+        ImageIcon Logo_pn = new ImageIcon(getClass().getResource("/img/pn_utama.jpg"));
         
         Item_menu masDokter = new Item_menu(null, true, iconDokter, "Dokter", new ActionListener() {
             @Override
@@ -343,6 +345,7 @@ public class Menu extends javax.swing.JFrame {
                 pn_utama.add(new pn_utama());
                 pn_utama.repaint();
                 pn_utama.revalidate();
+                logo_pn.setIcon(Logo_pn);
             }
         });
         Item_menu menuLogout = new Item_menu(iconMaster, false, null, "Logout", new ActionListener() {
