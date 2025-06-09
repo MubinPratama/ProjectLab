@@ -1531,14 +1531,14 @@
                                                       <EmptySpace max="-2" attributes="0"/>
                                                       <Group type="103" groupAlignment="0" attributes="0">
                                                           <Component id="jLabel197" pref="97" max="32767" attributes="0"/>
-                                                          <Component id="themoglobin3" alignment="0" max="32767" attributes="0"/>
-                                                          <Component id="themoglobin4" alignment="0" max="32767" attributes="0"/>
+                                                          <Component id="txtHemoglobin" alignment="0" max="32767" attributes="0"/>
+                                                          <Component id="txtHematokrit" alignment="0" max="32767" attributes="0"/>
                                                       </Group>
                                                   </Group>
                                                   <Group type="102" attributes="0">
                                                       <Component id="jLabel193" min="-2" pref="107" max="-2" attributes="0"/>
                                                       <EmptySpace max="-2" attributes="0"/>
-                                                      <Component id="themoglobin13" max="32767" attributes="0"/>
+                                                      <Component id="txtBatang" max="32767" attributes="0"/>
                                                   </Group>
                                                   <Group type="102" alignment="0" attributes="0">
                                                       <Group type="103" groupAlignment="1" max="-2" attributes="0">
@@ -1555,14 +1555,14 @@
                                                       </Group>
                                                       <EmptySpace max="-2" attributes="0"/>
                                                       <Group type="103" groupAlignment="0" attributes="0">
-                                                          <Component id="themoglobin5" max="32767" attributes="0"/>
-                                                          <Component id="themoglobin6" max="32767" attributes="0"/>
-                                                          <Component id="themoglobin7" alignment="0" max="32767" attributes="0"/>
-                                                          <Component id="themoglobin8" alignment="0" max="32767" attributes="0"/>
-                                                          <Component id="themoglobin9" alignment="0" max="32767" attributes="0"/>
-                                                          <Component id="themoglobin10" alignment="0" max="32767" attributes="0"/>
-                                                          <Component id="themoglobin11" alignment="0" max="32767" attributes="0"/>
-                                                          <Component id="themoglobin12" alignment="0" max="32767" attributes="0"/>
+                                                          <Component id="txtEritrosit" max="32767" attributes="0"/>
+                                                          <Component id="txtVER_MCH" max="32767" attributes="0"/>
+                                                          <Component id="txtHER_MCH" alignment="0" max="32767" attributes="0"/>
+                                                          <Component id="txtKHER_MCHC" alignment="0" max="32767" attributes="0"/>
+                                                          <Component id="txtRetikulosit" alignment="0" max="32767" attributes="0"/>
+                                                          <Component id="txtLeukosit" alignment="0" max="32767" attributes="0"/>
+                                                          <Component id="txtBasofil" alignment="0" max="32767" attributes="0"/>
+                                                          <Component id="txtEosinofil" alignment="0" max="32767" attributes="0"/>
                                                       </Group>
                                                   </Group>
                                                   <Group type="102" alignment="1" attributes="0">
@@ -1573,9 +1573,9 @@
                                                       </Group>
                                                       <EmptySpace max="-2" attributes="0"/>
                                                       <Group type="103" groupAlignment="0" attributes="0">
-                                                          <Component id="themoglobin14" alignment="0" max="32767" attributes="0"/>
-                                                          <Component id="themoglobin15" alignment="0" max="32767" attributes="0"/>
-                                                          <Component id="themoglobin16" alignment="0" max="32767" attributes="0"/>
+                                                          <Component id="txtSegmen" alignment="0" max="32767" attributes="0"/>
+                                                          <Component id="txtLimfosit" alignment="0" max="32767" attributes="0"/>
+                                                          <Component id="txtMonosit" alignment="0" max="32767" attributes="0"/>
                                                       </Group>
                                                   </Group>
                                               </Group>
@@ -1619,19 +1619,19 @@
                                               </Group>
                                               <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                                  <Component id="tled13" alignment="0" max="32767" attributes="0"/>
-                                                  <Component id="tled12" alignment="0" max="32767" attributes="0"/>
-                                                  <Component id="tled11" alignment="0" max="32767" attributes="0"/>
-                                                  <Component id="tled10" alignment="0" max="32767" attributes="0"/>
-                                                  <Component id="tled8" max="32767" attributes="0"/>
-                                                  <Component id="tled7" alignment="0" max="32767" attributes="0"/>
-                                                  <Component id="tled6" alignment="0" max="32767" attributes="0"/>
-                                                  <Component id="tled5" alignment="0" max="32767" attributes="0"/>
-                                                  <Component id="tled4" alignment="0" max="32767" attributes="0"/>
-                                                  <Component id="tled3" alignment="0" max="32767" attributes="0"/>
+                                                  <Component id="txtMalaria" alignment="0" max="32767" attributes="0"/>
+                                                  <Component id="txtReaksiLE" alignment="0" max="32767" attributes="0"/>
+                                                  <Component id="txtSelLE" alignment="0" max="32767" attributes="0"/>
+                                                  <Component id="txtResistensiOsmotik" alignment="0" max="32767" attributes="0"/>
+                                                  <Component id="txtPembendungan" max="32767" attributes="0"/>
+                                                  <Component id="txtMasaPembekuan" alignment="0" max="32767" attributes="0"/>
+                                                  <Component id="txtMasaPendarahan" alignment="0" max="32767" attributes="0"/>
+                                                  <Component id="txtTrombosit" alignment="0" max="32767" attributes="0"/>
+                                                  <Component id="txtWestergren" alignment="0" max="32767" attributes="0"/>
+                                                  <Component id="txtLED" alignment="0" max="32767" attributes="0"/>
                                                   <Component id="jLabel215" alignment="0" pref="110" max="32767" attributes="0"/>
-                                                  <Component id="tled9" max="32767" attributes="0"/>
-                                                  <Component id="tled14" max="32767" attributes="0"/>
+                                                  <Component id="txtRetraksi" max="32767" attributes="0"/>
+                                                  <Component id="txtGolDarah" max="32767" attributes="0"/>
                                               </Group>
                                               <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -1677,12 +1677,12 @@
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="3" attributes="0">
                                                   <Component id="jLabel223" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                                                  <Component id="tled6" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                                  <Component id="txtMasaPendarahan" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
                                           <Group type="102" attributes="0">
                                               <Group type="103" groupAlignment="1" attributes="0">
-                                                  <Component id="themoglobin3" alignment="1" min="-2" pref="38" max="-2" attributes="0"/>
+                                                  <Component id="txtHemoglobin" alignment="1" min="-2" pref="38" max="-2" attributes="0"/>
                                                   <Component id="jLabel183" min="-2" pref="38" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace max="-2" attributes="0"/>
@@ -1690,19 +1690,19 @@
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="3" attributes="0">
                                                   <Component id="jLabel185" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                                                  <Component id="themoglobin5" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                                  <Component id="txtEritrosit" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="3" attributes="0">
                                                   <Component id="jLabel186" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                                                  <Component id="themoglobin6" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                                  <Component id="txtVER_MCH" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
                                           <Group type="102" alignment="0" attributes="0">
                                               <Group type="103" groupAlignment="1" attributes="0">
                                                   <Group type="102" attributes="0">
                                                       <Group type="103" groupAlignment="1" attributes="0">
-                                                          <Component id="themoglobin4" alignment="1" min="-2" pref="38" max="-2" attributes="0"/>
+                                                          <Component id="txtHematokrit" alignment="1" min="-2" pref="38" max="-2" attributes="0"/>
                                                           <Group type="102" alignment="0" attributes="0">
                                                               <Group type="103" groupAlignment="3" attributes="0">
                                                                   <Component id="jLabel214" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
@@ -1713,7 +1713,7 @@
                                                                   <Component id="jLabel200" min="-2" pref="38" max="-2" attributes="0"/>
                                                                   <Group type="103" groupAlignment="3" attributes="0">
                                                                       <Component id="jLabel218" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                                                                      <Component id="tled4" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                                                      <Component id="txtWestergren" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
                                                                   </Group>
                                                               </Group>
                                                           </Group>
@@ -1723,7 +1723,7 @@
                                                   </Group>
                                                   <Group type="103" groupAlignment="3" attributes="0">
                                                       <Component id="jLabel220" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                                                      <Component id="tled5" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                                      <Component id="txtTrombosit" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
                                                   </Group>
                                               </Group>
                                               <EmptySpace max="-2" attributes="0"/>
@@ -1732,7 +1732,7 @@
                                                   <Component id="jLabel222" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
-                                          <Component id="tled3" min="-2" pref="38" max="-2" attributes="0"/>
+                                          <Component id="txtLED" min="-2" pref="38" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
@@ -1746,18 +1746,18 @@
                                                   <Group type="102" attributes="0">
                                                       <Group type="103" groupAlignment="3" attributes="0">
                                                           <Component id="jLabel203" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                                                          <Component id="themoglobin7" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                                          <Component id="txtHER_MCH" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
                                                       </Group>
                                                       <EmptySpace max="-2" attributes="0"/>
                                                       <Group type="103" groupAlignment="3" attributes="0">
                                                           <Component id="jLabel204" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                                                          <Component id="themoglobin8" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                                          <Component id="txtKHER_MCHC" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
                                                       </Group>
                                                   </Group>
                                                   <Group type="102" alignment="0" attributes="0">
                                                       <Group type="103" groupAlignment="3" attributes="0">
                                                           <Component id="jLabel224" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                                                          <Component id="tled7" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                                          <Component id="txtMasaPembekuan" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
                                                       </Group>
                                                       <EmptySpace max="-2" attributes="0"/>
                                                       <Component id="jLabel226" min="-2" pref="38" max="-2" attributes="0"/>
@@ -1769,7 +1769,7 @@
                                                       <Group type="103" groupAlignment="0" attributes="0">
                                                           <Group type="103" groupAlignment="3" attributes="0">
                                                               <Component id="jLabel189" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                                                              <Component id="themoglobin9" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                                              <Component id="txtRetikulosit" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
                                                           </Group>
                                                           <Component id="jLabel205" max="32767" attributes="0"/>
                                                           <Component id="jLabel228" max="32767" attributes="0"/>
@@ -1777,19 +1777,19 @@
                                                       <EmptySpace max="-2" attributes="0"/>
                                                   </Group>
                                                   <Group type="102" attributes="0">
-                                                      <Component id="tled9" max="32767" attributes="0"/>
+                                                      <Component id="txtRetraksi" max="32767" attributes="0"/>
                                                       <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
                                                   </Group>
                                               </Group>
                                               <Group type="103" groupAlignment="0" attributes="0">
                                                   <Group type="103" groupAlignment="3" attributes="0">
                                                       <Component id="jLabel190" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                                                      <Component id="themoglobin10" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                                      <Component id="txtLeukosit" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
                                                   </Group>
                                                   <Component id="jLabel206" min="-2" pref="38" max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="3" attributes="0">
                                                       <Component id="jLabel230" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                                                      <Component id="tled10" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                                      <Component id="txtResistensiOsmotik" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
                                                   </Group>
                                               </Group>
                                               <EmptySpace max="-2" attributes="0"/>
@@ -1797,17 +1797,17 @@
                                                   <Group type="102" alignment="0" attributes="0">
                                                       <Group type="103" groupAlignment="3" attributes="0">
                                                           <Component id="jLabel232" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                                                          <Component id="tled11" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                                          <Component id="txtSelLE" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
                                                       </Group>
                                                       <EmptySpace max="-2" attributes="0"/>
                                                       <Group type="103" groupAlignment="3" attributes="0">
                                                           <Component id="jLabel234" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                                                          <Component id="tled12" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                                          <Component id="txtReaksiLE" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
                                                       </Group>
                                                       <EmptySpace max="-2" attributes="0"/>
                                                       <Group type="103" groupAlignment="3" attributes="0">
                                                           <Component id="jLabel236" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                                                          <Component id="tled13" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                                          <Component id="txtMalaria" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
                                                       </Group>
                                                   </Group>
                                                   <Group type="102" attributes="0">
@@ -1815,7 +1815,7 @@
                                                           <Component id="jLabel191" min="-2" pref="38" max="-2" attributes="0"/>
                                                           <Group type="103" groupAlignment="3" attributes="0">
                                                               <Component id="jLabel207" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                                                              <Component id="themoglobin11" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                                              <Component id="txtBasofil" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
                                                           </Group>
                                                       </Group>
                                                       <EmptySpace max="-2" attributes="0"/>
@@ -1823,14 +1823,14 @@
                                                           <Component id="jLabel192" min="-2" pref="38" max="-2" attributes="0"/>
                                                           <Group type="103" groupAlignment="3" attributes="0">
                                                               <Component id="jLabel208" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                                                              <Component id="themoglobin12" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                                              <Component id="txtEosinofil" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
                                                           </Group>
                                                       </Group>
                                                       <EmptySpace max="-2" attributes="0"/>
                                                       <Group type="103" groupAlignment="0" attributes="0">
                                                           <Group type="103" groupAlignment="3" attributes="0">
                                                               <Component id="jLabel193" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                                                              <Component id="themoglobin13" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                                              <Component id="txtBatang" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
                                                           </Group>
                                                           <Component id="jLabel209" min="-2" pref="38" max="-2" attributes="0"/>
                                                       </Group>
@@ -1839,7 +1839,7 @@
                                           </Group>
                                           <Group type="102" alignment="0" attributes="0">
                                               <Group type="103" groupAlignment="1" attributes="0">
-                                                  <Component id="tled8" min="-2" pref="38" max="-2" attributes="0"/>
+                                                  <Component id="txtPembendungan" min="-2" pref="38" max="-2" attributes="0"/>
                                                   <Group type="102" attributes="0">
                                                       <Component id="jLabel225" min="-2" pref="38" max="-2" attributes="0"/>
                                                       <EmptySpace max="-2" attributes="0"/>
@@ -1854,16 +1854,16 @@
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="103" alignment="0" groupAlignment="3" attributes="0">
                                               <Component id="jLabel194" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                                              <Component id="themoglobin14" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                              <Component id="txtSegmen" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
                                               <Component id="jLabel210" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
                                           </Group>
                                           <Component id="jLabel238" alignment="0" min="-2" pref="38" max="-2" attributes="0"/>
-                                          <Component id="tled14" min="-2" pref="38" max="-2" attributes="0"/>
+                                          <Component id="txtGolDarah" min="-2" pref="38" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
                                           <Component id="jLabel195" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                                          <Component id="themoglobin15" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                          <Component id="txtLimfosit" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
                                           <Component id="jLabel211" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace max="-2" attributes="0"/>
@@ -1871,7 +1871,7 @@
                                           <Component id="jLabel196" alignment="0" min="-2" pref="38" max="-2" attributes="0"/>
                                           <Group type="103" alignment="0" groupAlignment="3" attributes="0">
                                               <Component id="jLabel212" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
-                                              <Component id="themoglobin16" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
+                                              <Component id="txtMonosit" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                       <EmptySpace pref="22" max="32767" attributes="0"/>
@@ -2153,7 +2153,7 @@
                                 <Property name="text" type="java.lang.String" value="HASIL"/>
                               </Properties>
                             </Component>
-                            <Component class="javax.swing.JTextField" name="themoglobin3">
+                            <Component class="javax.swing.JTextField" name="txtHemoglobin">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Times New Roman" size="12" style="0"/>
@@ -2165,7 +2165,7 @@
                                 </Property>
                               </Properties>
                               <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="themoglobin3ActionPerformed"/>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtHemoglobinActionPerformed"/>
                               </Events>
                             </Component>
                             <Component class="javax.swing.JLabel" name="jLabel198">
@@ -2444,7 +2444,7 @@
                                 <Property name="text" type="java.lang.String" value="HASIL"/>
                               </Properties>
                             </Component>
-                            <Component class="javax.swing.JTextField" name="tled3">
+                            <Component class="javax.swing.JTextField" name="txtLED">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Times New Roman" size="12" style="0"/>
@@ -2456,7 +2456,7 @@
                                 </Property>
                               </Properties>
                               <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tled3ActionPerformed"/>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtLEDActionPerformed"/>
                               </Events>
                             </Component>
                             <Component class="javax.swing.JLabel" name="jLabel216">
@@ -2759,7 +2759,7 @@
                                 </Property>
                               </Properties>
                             </Component>
-                            <Component class="javax.swing.JTextField" name="themoglobin4">
+                            <Component class="javax.swing.JTextField" name="txtHematokrit">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Times New Roman" size="12" style="0"/>
@@ -2771,10 +2771,10 @@
                                 </Property>
                               </Properties>
                               <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="themoglobin4ActionPerformed"/>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtHematokritActionPerformed"/>
                               </Events>
                             </Component>
-                            <Component class="javax.swing.JTextField" name="themoglobin5">
+                            <Component class="javax.swing.JTextField" name="txtEritrosit">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Times New Roman" size="12" style="0"/>
@@ -2786,10 +2786,10 @@
                                 </Property>
                               </Properties>
                               <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="themoglobin5ActionPerformed"/>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtEritrositActionPerformed"/>
                               </Events>
                             </Component>
-                            <Component class="javax.swing.JTextField" name="themoglobin6">
+                            <Component class="javax.swing.JTextField" name="txtVER_MCH">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Times New Roman" size="12" style="0"/>
@@ -2801,10 +2801,10 @@
                                 </Property>
                               </Properties>
                               <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="themoglobin6ActionPerformed"/>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtVER_MCHActionPerformed"/>
                               </Events>
                             </Component>
-                            <Component class="javax.swing.JTextField" name="themoglobin7">
+                            <Component class="javax.swing.JTextField" name="txtHER_MCH">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Times New Roman" size="12" style="0"/>
@@ -2816,10 +2816,10 @@
                                 </Property>
                               </Properties>
                               <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="themoglobin7ActionPerformed"/>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtHER_MCHActionPerformed"/>
                               </Events>
                             </Component>
-                            <Component class="javax.swing.JTextField" name="themoglobin8">
+                            <Component class="javax.swing.JTextField" name="txtKHER_MCHC">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Times New Roman" size="12" style="0"/>
@@ -2831,10 +2831,10 @@
                                 </Property>
                               </Properties>
                               <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="themoglobin8ActionPerformed"/>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtKHER_MCHCActionPerformed"/>
                               </Events>
                             </Component>
-                            <Component class="javax.swing.JTextField" name="themoglobin9">
+                            <Component class="javax.swing.JTextField" name="txtRetikulosit">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Times New Roman" size="12" style="0"/>
@@ -2846,10 +2846,10 @@
                                 </Property>
                               </Properties>
                               <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="themoglobin9ActionPerformed"/>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtRetikulositActionPerformed"/>
                               </Events>
                             </Component>
-                            <Component class="javax.swing.JTextField" name="themoglobin10">
+                            <Component class="javax.swing.JTextField" name="txtLeukosit">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Times New Roman" size="12" style="0"/>
@@ -2861,10 +2861,10 @@
                                 </Property>
                               </Properties>
                               <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="themoglobin10ActionPerformed"/>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtLeukositActionPerformed"/>
                               </Events>
                             </Component>
-                            <Component class="javax.swing.JTextField" name="themoglobin11">
+                            <Component class="javax.swing.JTextField" name="txtBasofil">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Times New Roman" size="12" style="0"/>
@@ -2876,10 +2876,10 @@
                                 </Property>
                               </Properties>
                               <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="themoglobin11ActionPerformed"/>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtBasofilActionPerformed"/>
                               </Events>
                             </Component>
-                            <Component class="javax.swing.JTextField" name="themoglobin12">
+                            <Component class="javax.swing.JTextField" name="txtEosinofil">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Times New Roman" size="12" style="0"/>
@@ -2891,10 +2891,10 @@
                                 </Property>
                               </Properties>
                               <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="themoglobin12ActionPerformed"/>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtEosinofilActionPerformed"/>
                               </Events>
                             </Component>
-                            <Component class="javax.swing.JTextField" name="themoglobin13">
+                            <Component class="javax.swing.JTextField" name="txtBatang">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Times New Roman" size="12" style="0"/>
@@ -2906,10 +2906,10 @@
                                 </Property>
                               </Properties>
                               <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="themoglobin13ActionPerformed"/>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtBatangActionPerformed"/>
                               </Events>
                             </Component>
-                            <Component class="javax.swing.JTextField" name="themoglobin14">
+                            <Component class="javax.swing.JTextField" name="txtSegmen">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Times New Roman" size="12" style="0"/>
@@ -2921,10 +2921,10 @@
                                 </Property>
                               </Properties>
                               <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="themoglobin14ActionPerformed"/>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtSegmenActionPerformed"/>
                               </Events>
                             </Component>
-                            <Component class="javax.swing.JTextField" name="themoglobin15">
+                            <Component class="javax.swing.JTextField" name="txtLimfosit">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Times New Roman" size="12" style="0"/>
@@ -2936,10 +2936,10 @@
                                 </Property>
                               </Properties>
                               <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="themoglobin15ActionPerformed"/>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtLimfositActionPerformed"/>
                               </Events>
                             </Component>
-                            <Component class="javax.swing.JTextField" name="themoglobin16">
+                            <Component class="javax.swing.JTextField" name="txtMonosit">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Times New Roman" size="12" style="0"/>
@@ -2951,10 +2951,10 @@
                                 </Property>
                               </Properties>
                               <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="themoglobin16ActionPerformed"/>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtMonositActionPerformed"/>
                               </Events>
                             </Component>
-                            <Component class="javax.swing.JTextField" name="tled4">
+                            <Component class="javax.swing.JTextField" name="txtWestergren">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Times New Roman" size="12" style="0"/>
@@ -2966,10 +2966,10 @@
                                 </Property>
                               </Properties>
                               <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tled4ActionPerformed"/>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtWestergrenActionPerformed"/>
                               </Events>
                             </Component>
-                            <Component class="javax.swing.JTextField" name="tled5">
+                            <Component class="javax.swing.JTextField" name="txtTrombosit">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Times New Roman" size="12" style="0"/>
@@ -2981,10 +2981,10 @@
                                 </Property>
                               </Properties>
                               <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tled5ActionPerformed"/>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtTrombositActionPerformed"/>
                               </Events>
                             </Component>
-                            <Component class="javax.swing.JTextField" name="tled6">
+                            <Component class="javax.swing.JTextField" name="txtMasaPendarahan">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Times New Roman" size="12" style="0"/>
@@ -2996,10 +2996,10 @@
                                 </Property>
                               </Properties>
                               <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tled6ActionPerformed"/>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtMasaPendarahanActionPerformed"/>
                               </Events>
                             </Component>
-                            <Component class="javax.swing.JTextField" name="tled7">
+                            <Component class="javax.swing.JTextField" name="txtMasaPembekuan">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Times New Roman" size="12" style="0"/>
@@ -3011,10 +3011,10 @@
                                 </Property>
                               </Properties>
                               <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tled7ActionPerformed"/>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtMasaPembekuanActionPerformed"/>
                               </Events>
                             </Component>
-                            <Component class="javax.swing.JTextField" name="tled8">
+                            <Component class="javax.swing.JTextField" name="txtPembendungan">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Times New Roman" size="12" style="0"/>
@@ -3026,10 +3026,10 @@
                                 </Property>
                               </Properties>
                               <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tled8ActionPerformed"/>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtPembendunganActionPerformed"/>
                               </Events>
                             </Component>
-                            <Component class="javax.swing.JTextField" name="tled9">
+                            <Component class="javax.swing.JTextField" name="txtRetraksi">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Times New Roman" size="12" style="0"/>
@@ -3041,10 +3041,10 @@
                                 </Property>
                               </Properties>
                               <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tled9ActionPerformed"/>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtRetraksiActionPerformed"/>
                               </Events>
                             </Component>
-                            <Component class="javax.swing.JTextField" name="tled10">
+                            <Component class="javax.swing.JTextField" name="txtResistensiOsmotik">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Times New Roman" size="12" style="0"/>
@@ -3056,10 +3056,10 @@
                                 </Property>
                               </Properties>
                               <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tled10ActionPerformed"/>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtResistensiOsmotikActionPerformed"/>
                               </Events>
                             </Component>
-                            <Component class="javax.swing.JTextField" name="tled11">
+                            <Component class="javax.swing.JTextField" name="txtSelLE">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Times New Roman" size="12" style="0"/>
@@ -3071,10 +3071,10 @@
                                 </Property>
                               </Properties>
                               <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tled11ActionPerformed"/>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtSelLEActionPerformed"/>
                               </Events>
                             </Component>
-                            <Component class="javax.swing.JTextField" name="tled12">
+                            <Component class="javax.swing.JTextField" name="txtReaksiLE">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Times New Roman" size="12" style="0"/>
@@ -3086,10 +3086,10 @@
                                 </Property>
                               </Properties>
                               <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tled12ActionPerformed"/>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtReaksiLEActionPerformed"/>
                               </Events>
                             </Component>
-                            <Component class="javax.swing.JTextField" name="tled13">
+                            <Component class="javax.swing.JTextField" name="txtMalaria">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Times New Roman" size="12" style="0"/>
@@ -3101,10 +3101,10 @@
                                 </Property>
                               </Properties>
                               <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tled13ActionPerformed"/>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtMalariaActionPerformed"/>
                               </Events>
                             </Component>
-                            <Component class="javax.swing.JTextField" name="tled14">
+                            <Component class="javax.swing.JTextField" name="txtGolDarah">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Times New Roman" size="12" style="0"/>
@@ -3116,7 +3116,7 @@
                                 </Property>
                               </Properties>
                               <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tled14ActionPerformed"/>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtGolDarahActionPerformed"/>
                               </Events>
                             </Component>
                             <Component class="javax.swing.JLabel" name="jLabel5">
@@ -3132,6 +3132,9 @@
                               <Properties>
                                 <Property name="text" type="java.lang.String" value="SAVE"/>
                               </Properties>
+                              <Events>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sv_hematologiActionPerformed"/>
+                              </Events>
                             </Component>
                             <Component class="javax.swing.JButton" name="cn_hematologi">
                               <Properties>

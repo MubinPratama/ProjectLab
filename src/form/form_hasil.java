@@ -236,7 +236,7 @@ public class form_hasil extends javax.swing.JPanel {
         jLabel195 = new javax.swing.JLabel();
         jLabel196 = new javax.swing.JLabel();
         jLabel197 = new javax.swing.JLabel();
-        themoglobin3 = new javax.swing.JTextField();
+        txtHemoglobin = new javax.swing.JTextField();
         jLabel198 = new javax.swing.JLabel();
         jLabel199 = new javax.swing.JLabel();
         jLabel200 = new javax.swing.JLabel();
@@ -255,7 +255,7 @@ public class form_hasil extends javax.swing.JPanel {
         jLabel213 = new javax.swing.JLabel();
         jLabel214 = new javax.swing.JLabel();
         jLabel215 = new javax.swing.JLabel();
-        tled3 = new javax.swing.JTextField();
+        txtLED = new javax.swing.JTextField();
         jLabel216 = new javax.swing.JLabel();
         jLabel217 = new javax.swing.JLabel();
         jLabel218 = new javax.swing.JLabel();
@@ -275,30 +275,30 @@ public class form_hasil extends javax.swing.JPanel {
         jLabel234 = new javax.swing.JLabel();
         jLabel236 = new javax.swing.JLabel();
         jLabel238 = new javax.swing.JLabel();
-        themoglobin4 = new javax.swing.JTextField();
-        themoglobin5 = new javax.swing.JTextField();
-        themoglobin6 = new javax.swing.JTextField();
-        themoglobin7 = new javax.swing.JTextField();
-        themoglobin8 = new javax.swing.JTextField();
-        themoglobin9 = new javax.swing.JTextField();
-        themoglobin10 = new javax.swing.JTextField();
-        themoglobin11 = new javax.swing.JTextField();
-        themoglobin12 = new javax.swing.JTextField();
-        themoglobin13 = new javax.swing.JTextField();
-        themoglobin14 = new javax.swing.JTextField();
-        themoglobin15 = new javax.swing.JTextField();
-        themoglobin16 = new javax.swing.JTextField();
-        tled4 = new javax.swing.JTextField();
-        tled5 = new javax.swing.JTextField();
-        tled6 = new javax.swing.JTextField();
-        tled7 = new javax.swing.JTextField();
-        tled8 = new javax.swing.JTextField();
-        tled9 = new javax.swing.JTextField();
-        tled10 = new javax.swing.JTextField();
-        tled11 = new javax.swing.JTextField();
-        tled12 = new javax.swing.JTextField();
-        tled13 = new javax.swing.JTextField();
-        tled14 = new javax.swing.JTextField();
+        txtHematokrit = new javax.swing.JTextField();
+        txtEritrosit = new javax.swing.JTextField();
+        txtVER_MCH = new javax.swing.JTextField();
+        txtHER_MCH = new javax.swing.JTextField();
+        txtKHER_MCHC = new javax.swing.JTextField();
+        txtRetikulosit = new javax.swing.JTextField();
+        txtLeukosit = new javax.swing.JTextField();
+        txtBasofil = new javax.swing.JTextField();
+        txtEosinofil = new javax.swing.JTextField();
+        txtBatang = new javax.swing.JTextField();
+        txtSegmen = new javax.swing.JTextField();
+        txtLimfosit = new javax.swing.JTextField();
+        txtMonosit = new javax.swing.JTextField();
+        txtWestergren = new javax.swing.JTextField();
+        txtTrombosit = new javax.swing.JTextField();
+        txtMasaPendarahan = new javax.swing.JTextField();
+        txtMasaPembekuan = new javax.swing.JTextField();
+        txtPembendungan = new javax.swing.JTextField();
+        txtRetraksi = new javax.swing.JTextField();
+        txtResistensiOsmotik = new javax.swing.JTextField();
+        txtSelLE = new javax.swing.JTextField();
+        txtReaksiLE = new javax.swing.JTextField();
+        txtMalaria = new javax.swing.JTextField();
+        txtGolDarah = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         sv_hematologi = new javax.swing.JButton();
         cn_hematologi = new javax.swing.JButton();
@@ -1294,11 +1294,11 @@ public class form_hasil extends javax.swing.JPanel {
         jLabel197.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel197.setText("HASIL");
 
-        themoglobin3.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
-        themoglobin3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        themoglobin3.addActionListener(new java.awt.event.ActionListener() {
+        txtHemoglobin.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        txtHemoglobin.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtHemoglobin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                themoglobin3ActionPerformed(evt);
+                txtHemoglobinActionPerformed(evt);
             }
         });
 
@@ -1392,11 +1392,11 @@ public class form_hasil extends javax.swing.JPanel {
         jLabel215.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel215.setText("HASIL");
 
-        tled3.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
-        tled3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        tled3.addActionListener(new java.awt.event.ActionListener() {
+        txtLED.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        txtLED.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtLED.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tled3ActionPerformed(evt);
+                txtLEDActionPerformed(evt);
             }
         });
 
@@ -1495,201 +1495,206 @@ public class form_hasil extends javax.swing.JPanel {
         jLabel238.setText("Gol Darah");
         jLabel238.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        themoglobin4.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
-        themoglobin4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        themoglobin4.addActionListener(new java.awt.event.ActionListener() {
+        txtHematokrit.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        txtHematokrit.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtHematokrit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                themoglobin4ActionPerformed(evt);
+                txtHematokritActionPerformed(evt);
             }
         });
 
-        themoglobin5.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
-        themoglobin5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        themoglobin5.addActionListener(new java.awt.event.ActionListener() {
+        txtEritrosit.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        txtEritrosit.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtEritrosit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                themoglobin5ActionPerformed(evt);
+                txtEritrositActionPerformed(evt);
             }
         });
 
-        themoglobin6.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
-        themoglobin6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        themoglobin6.addActionListener(new java.awt.event.ActionListener() {
+        txtVER_MCH.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        txtVER_MCH.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtVER_MCH.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                themoglobin6ActionPerformed(evt);
+                txtVER_MCHActionPerformed(evt);
             }
         });
 
-        themoglobin7.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
-        themoglobin7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        themoglobin7.addActionListener(new java.awt.event.ActionListener() {
+        txtHER_MCH.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        txtHER_MCH.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtHER_MCH.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                themoglobin7ActionPerformed(evt);
+                txtHER_MCHActionPerformed(evt);
             }
         });
 
-        themoglobin8.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
-        themoglobin8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        themoglobin8.addActionListener(new java.awt.event.ActionListener() {
+        txtKHER_MCHC.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        txtKHER_MCHC.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtKHER_MCHC.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                themoglobin8ActionPerformed(evt);
+                txtKHER_MCHCActionPerformed(evt);
             }
         });
 
-        themoglobin9.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
-        themoglobin9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        themoglobin9.addActionListener(new java.awt.event.ActionListener() {
+        txtRetikulosit.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        txtRetikulosit.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtRetikulosit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                themoglobin9ActionPerformed(evt);
+                txtRetikulositActionPerformed(evt);
             }
         });
 
-        themoglobin10.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
-        themoglobin10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        themoglobin10.addActionListener(new java.awt.event.ActionListener() {
+        txtLeukosit.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        txtLeukosit.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtLeukosit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                themoglobin10ActionPerformed(evt);
+                txtLeukositActionPerformed(evt);
             }
         });
 
-        themoglobin11.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
-        themoglobin11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        themoglobin11.addActionListener(new java.awt.event.ActionListener() {
+        txtBasofil.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        txtBasofil.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtBasofil.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                themoglobin11ActionPerformed(evt);
+                txtBasofilActionPerformed(evt);
             }
         });
 
-        themoglobin12.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
-        themoglobin12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        themoglobin12.addActionListener(new java.awt.event.ActionListener() {
+        txtEosinofil.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        txtEosinofil.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtEosinofil.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                themoglobin12ActionPerformed(evt);
+                txtEosinofilActionPerformed(evt);
             }
         });
 
-        themoglobin13.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
-        themoglobin13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        themoglobin13.addActionListener(new java.awt.event.ActionListener() {
+        txtBatang.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        txtBatang.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtBatang.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                themoglobin13ActionPerformed(evt);
+                txtBatangActionPerformed(evt);
             }
         });
 
-        themoglobin14.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
-        themoglobin14.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        themoglobin14.addActionListener(new java.awt.event.ActionListener() {
+        txtSegmen.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        txtSegmen.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtSegmen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                themoglobin14ActionPerformed(evt);
+                txtSegmenActionPerformed(evt);
             }
         });
 
-        themoglobin15.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
-        themoglobin15.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        themoglobin15.addActionListener(new java.awt.event.ActionListener() {
+        txtLimfosit.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        txtLimfosit.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtLimfosit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                themoglobin15ActionPerformed(evt);
+                txtLimfositActionPerformed(evt);
             }
         });
 
-        themoglobin16.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
-        themoglobin16.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        themoglobin16.addActionListener(new java.awt.event.ActionListener() {
+        txtMonosit.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        txtMonosit.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtMonosit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                themoglobin16ActionPerformed(evt);
+                txtMonositActionPerformed(evt);
             }
         });
 
-        tled4.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
-        tled4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        tled4.addActionListener(new java.awt.event.ActionListener() {
+        txtWestergren.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        txtWestergren.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtWestergren.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tled4ActionPerformed(evt);
+                txtWestergrenActionPerformed(evt);
             }
         });
 
-        tled5.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
-        tled5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        tled5.addActionListener(new java.awt.event.ActionListener() {
+        txtTrombosit.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        txtTrombosit.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtTrombosit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tled5ActionPerformed(evt);
+                txtTrombositActionPerformed(evt);
             }
         });
 
-        tled6.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
-        tled6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        tled6.addActionListener(new java.awt.event.ActionListener() {
+        txtMasaPendarahan.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        txtMasaPendarahan.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtMasaPendarahan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tled6ActionPerformed(evt);
+                txtMasaPendarahanActionPerformed(evt);
             }
         });
 
-        tled7.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
-        tled7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        tled7.addActionListener(new java.awt.event.ActionListener() {
+        txtMasaPembekuan.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        txtMasaPembekuan.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtMasaPembekuan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tled7ActionPerformed(evt);
+                txtMasaPembekuanActionPerformed(evt);
             }
         });
 
-        tled8.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
-        tled8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        tled8.addActionListener(new java.awt.event.ActionListener() {
+        txtPembendungan.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        txtPembendungan.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtPembendungan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tled8ActionPerformed(evt);
+                txtPembendunganActionPerformed(evt);
             }
         });
 
-        tled9.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
-        tled9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        tled9.addActionListener(new java.awt.event.ActionListener() {
+        txtRetraksi.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        txtRetraksi.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtRetraksi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tled9ActionPerformed(evt);
+                txtRetraksiActionPerformed(evt);
             }
         });
 
-        tled10.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
-        tled10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        tled10.addActionListener(new java.awt.event.ActionListener() {
+        txtResistensiOsmotik.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        txtResistensiOsmotik.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtResistensiOsmotik.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tled10ActionPerformed(evt);
+                txtResistensiOsmotikActionPerformed(evt);
             }
         });
 
-        tled11.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
-        tled11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        tled11.addActionListener(new java.awt.event.ActionListener() {
+        txtSelLE.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        txtSelLE.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtSelLE.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tled11ActionPerformed(evt);
+                txtSelLEActionPerformed(evt);
             }
         });
 
-        tled12.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
-        tled12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        tled12.addActionListener(new java.awt.event.ActionListener() {
+        txtReaksiLE.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        txtReaksiLE.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtReaksiLE.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tled12ActionPerformed(evt);
+                txtReaksiLEActionPerformed(evt);
             }
         });
 
-        tled13.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
-        tled13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        tled13.addActionListener(new java.awt.event.ActionListener() {
+        txtMalaria.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        txtMalaria.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtMalaria.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tled13ActionPerformed(evt);
+                txtMalariaActionPerformed(evt);
             }
         });
 
-        tled14.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
-        tled14.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        tled14.addActionListener(new java.awt.event.ActionListener() {
+        txtGolDarah.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        txtGolDarah.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtGolDarah.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tled14ActionPerformed(evt);
+                txtGolDarahActionPerformed(evt);
             }
         });
 
         jLabel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
 
         sv_hematologi.setText("SAVE");
+        sv_hematologi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sv_hematologiActionPerformed(evt);
+            }
+        });
 
         cn_hematologi.setText("CANCEL");
 
@@ -1714,12 +1719,12 @@ public class form_hasil extends javax.swing.JPanel {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel197, javax.swing.GroupLayout.DEFAULT_SIZE, 97, Short.MAX_VALUE)
-                                    .addComponent(themoglobin3)
-                                    .addComponent(themoglobin4)))
+                                    .addComponent(txtHemoglobin)
+                                    .addComponent(txtHematokrit)))
                             .addGroup(jPanel7Layout.createSequentialGroup()
                                 .addComponent(jLabel193, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(themoglobin13))
+                                .addComponent(txtBatang))
                             .addGroup(jPanel7Layout.createSequentialGroup()
                                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                     .addComponent(jLabel187, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1734,14 +1739,14 @@ public class form_hasil extends javax.swing.JPanel {
                                     .addComponent(jLabel192, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(themoglobin5)
-                                    .addComponent(themoglobin6)
-                                    .addComponent(themoglobin7)
-                                    .addComponent(themoglobin8)
-                                    .addComponent(themoglobin9)
-                                    .addComponent(themoglobin10)
-                                    .addComponent(themoglobin11)
-                                    .addComponent(themoglobin12)))
+                                    .addComponent(txtEritrosit)
+                                    .addComponent(txtVER_MCH)
+                                    .addComponent(txtHER_MCH)
+                                    .addComponent(txtKHER_MCHC)
+                                    .addComponent(txtRetikulosit)
+                                    .addComponent(txtLeukosit)
+                                    .addComponent(txtBasofil)
+                                    .addComponent(txtEosinofil)))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
                                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                     .addComponent(jLabel196, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1749,9 +1754,9 @@ public class form_hasil extends javax.swing.JPanel {
                                     .addComponent(jLabel194, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(themoglobin14)
-                                    .addComponent(themoglobin15)
-                                    .addComponent(themoglobin16))))
+                                    .addComponent(txtSegmen)
+                                    .addComponent(txtLimfosit)
+                                    .addComponent(txtMonosit))))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel209, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -1788,19 +1793,19 @@ public class form_hasil extends javax.swing.JPanel {
                             .addComponent(jLabel238, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(30, 30, 30)
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(tled13, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(tled12, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(tled11, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(tled10, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(tled8)
-                            .addComponent(tled7, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(tled6, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(tled5, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(tled4, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(tled3, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtMalaria, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtReaksiLE, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtSelLE, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtResistensiOsmotik, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtPembendungan)
+                            .addComponent(txtMasaPembekuan, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtMasaPendarahan, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtTrombosit, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtWestergren, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtLED, javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel215, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)
-                            .addComponent(tled9)
-                            .addComponent(tled14))
+                            .addComponent(txtRetraksi)
+                            .addComponent(txtGolDarah))
                         .addGap(7, 7, 7)
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel229)
@@ -1839,26 +1844,26 @@ public class form_hasil extends javax.swing.JPanel {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel223, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(tled6, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(txtMasaPendarahan, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel7Layout.createSequentialGroup()
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(themoglobin3, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtHemoglobin, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel183, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel184, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel185, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(themoglobin5, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txtEritrosit, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel186, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(themoglobin6, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(txtVER_MCH, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel7Layout.createSequentialGroup()
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(jPanel7Layout.createSequentialGroup()
                                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(themoglobin4, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtHematokrit, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel7Layout.createSequentialGroup()
                                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                             .addComponent(jLabel214, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1868,17 +1873,17 @@ public class form_hasil extends javax.swing.JPanel {
                                             .addComponent(jLabel200, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                                 .addComponent(jLabel218, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(tled4, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                                .addComponent(txtWestergren, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel201, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(jLabel220, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(tled5, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(txtTrombosit, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel202, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel222, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(tled3, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtLED, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(6, 6, 6)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel7Layout.createSequentialGroup()
@@ -1890,15 +1895,15 @@ public class form_hasil extends javax.swing.JPanel {
                             .addGroup(jPanel7Layout.createSequentialGroup()
                                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jLabel203, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(themoglobin7, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(txtHER_MCH, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jLabel204, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(themoglobin8, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(txtKHER_MCHC, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(jPanel7Layout.createSequentialGroup()
                                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jLabel224, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(tled7, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(txtMasaPembekuan, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel226, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1907,56 +1912,56 @@ public class form_hasil extends javax.swing.JPanel {
                                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                         .addComponent(jLabel189, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(themoglobin9, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(txtRetikulosit, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addComponent(jLabel205)
                                     .addComponent(jLabel228, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
                             .addGroup(jPanel7Layout.createSequentialGroup()
-                                .addComponent(tled9)
+                                .addComponent(txtRetraksi)
                                 .addGap(6, 6, 6)))
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(jLabel190, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(themoglobin10, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(txtLeukosit, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jLabel206, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(jLabel230, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(tled10, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(txtResistensiOsmotik, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel7Layout.createSequentialGroup()
                                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jLabel232, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(tled11, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(txtSelLE, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jLabel234, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(tled12, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(txtReaksiLE, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jLabel236, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(tled13, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(txtMalaria, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(jPanel7Layout.createSequentialGroup()
                                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel191, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                         .addComponent(jLabel207, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(themoglobin11, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addComponent(txtBasofil, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel192, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                         .addComponent(jLabel208, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(themoglobin12, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addComponent(txtEosinofil, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                         .addComponent(jLabel193, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(themoglobin13, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(txtBatang, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addComponent(jLabel209, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                     .addGroup(jPanel7Layout.createSequentialGroup()
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(tled8, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtPembendungan, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel7Layout.createSequentialGroup()
                                 .addComponent(jLabel225, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1967,21 +1972,21 @@ public class form_hasil extends javax.swing.JPanel {
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel194, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(themoglobin14, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtSegmen, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel210, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jLabel238, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tled14, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtGolDarah, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel195, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(themoglobin15, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtLimfosit, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel211, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel196, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel212, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(themoglobin16, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(txtMonosit, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(cn_hematologi, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -6166,109 +6171,109 @@ public class form_hasil extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_positivetpha2ActionPerformed
 
-    private void tled14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tled14ActionPerformed
+    private void txtGolDarahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtGolDarahActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tled14ActionPerformed
+    }//GEN-LAST:event_txtGolDarahActionPerformed
 
-    private void tled13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tled13ActionPerformed
+    private void txtMalariaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMalariaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tled13ActionPerformed
+    }//GEN-LAST:event_txtMalariaActionPerformed
 
-    private void tled12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tled12ActionPerformed
+    private void txtReaksiLEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtReaksiLEActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tled12ActionPerformed
+    }//GEN-LAST:event_txtReaksiLEActionPerformed
 
-    private void tled11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tled11ActionPerformed
+    private void txtSelLEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSelLEActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tled11ActionPerformed
+    }//GEN-LAST:event_txtSelLEActionPerformed
 
-    private void tled10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tled10ActionPerformed
+    private void txtResistensiOsmotikActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtResistensiOsmotikActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tled10ActionPerformed
+    }//GEN-LAST:event_txtResistensiOsmotikActionPerformed
 
-    private void tled9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tled9ActionPerformed
+    private void txtRetraksiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtRetraksiActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tled9ActionPerformed
+    }//GEN-LAST:event_txtRetraksiActionPerformed
 
-    private void tled8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tled8ActionPerformed
+    private void txtPembendunganActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPembendunganActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tled8ActionPerformed
+    }//GEN-LAST:event_txtPembendunganActionPerformed
 
-    private void tled7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tled7ActionPerformed
+    private void txtMasaPembekuanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMasaPembekuanActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tled7ActionPerformed
+    }//GEN-LAST:event_txtMasaPembekuanActionPerformed
 
-    private void tled6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tled6ActionPerformed
+    private void txtMasaPendarahanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMasaPendarahanActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tled6ActionPerformed
+    }//GEN-LAST:event_txtMasaPendarahanActionPerformed
 
-    private void tled5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tled5ActionPerformed
+    private void txtTrombositActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTrombositActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tled5ActionPerformed
+    }//GEN-LAST:event_txtTrombositActionPerformed
 
-    private void tled4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tled4ActionPerformed
+    private void txtWestergrenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtWestergrenActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tled4ActionPerformed
+    }//GEN-LAST:event_txtWestergrenActionPerformed
 
-    private void themoglobin16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_themoglobin16ActionPerformed
+    private void txtMonositActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMonositActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_themoglobin16ActionPerformed
+    }//GEN-LAST:event_txtMonositActionPerformed
 
-    private void themoglobin15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_themoglobin15ActionPerformed
+    private void txtLimfositActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtLimfositActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_themoglobin15ActionPerformed
+    }//GEN-LAST:event_txtLimfositActionPerformed
 
-    private void themoglobin14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_themoglobin14ActionPerformed
+    private void txtSegmenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSegmenActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_themoglobin14ActionPerformed
+    }//GEN-LAST:event_txtSegmenActionPerformed
 
-    private void themoglobin13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_themoglobin13ActionPerformed
+    private void txtBatangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtBatangActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_themoglobin13ActionPerformed
+    }//GEN-LAST:event_txtBatangActionPerformed
 
-    private void themoglobin12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_themoglobin12ActionPerformed
+    private void txtEosinofilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEosinofilActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_themoglobin12ActionPerformed
+    }//GEN-LAST:event_txtEosinofilActionPerformed
 
-    private void themoglobin11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_themoglobin11ActionPerformed
+    private void txtBasofilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtBasofilActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_themoglobin11ActionPerformed
+    }//GEN-LAST:event_txtBasofilActionPerformed
 
-    private void themoglobin10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_themoglobin10ActionPerformed
+    private void txtLeukositActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtLeukositActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_themoglobin10ActionPerformed
+    }//GEN-LAST:event_txtLeukositActionPerformed
 
-    private void themoglobin9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_themoglobin9ActionPerformed
+    private void txtRetikulositActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtRetikulositActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_themoglobin9ActionPerformed
+    }//GEN-LAST:event_txtRetikulositActionPerformed
 
-    private void themoglobin8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_themoglobin8ActionPerformed
+    private void txtKHER_MCHCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtKHER_MCHCActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_themoglobin8ActionPerformed
+    }//GEN-LAST:event_txtKHER_MCHCActionPerformed
 
-    private void themoglobin7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_themoglobin7ActionPerformed
+    private void txtHER_MCHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtHER_MCHActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_themoglobin7ActionPerformed
+    }//GEN-LAST:event_txtHER_MCHActionPerformed
 
-    private void themoglobin6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_themoglobin6ActionPerformed
+    private void txtVER_MCHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtVER_MCHActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_themoglobin6ActionPerformed
+    }//GEN-LAST:event_txtVER_MCHActionPerformed
 
-    private void themoglobin5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_themoglobin5ActionPerformed
+    private void txtEritrositActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEritrositActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_themoglobin5ActionPerformed
+    }//GEN-LAST:event_txtEritrositActionPerformed
 
-    private void themoglobin4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_themoglobin4ActionPerformed
+    private void txtHematokritActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtHematokritActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_themoglobin4ActionPerformed
+    }//GEN-LAST:event_txtHematokritActionPerformed
 
-    private void tled3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tled3ActionPerformed
+    private void txtLEDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtLEDActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tled3ActionPerformed
+    }//GEN-LAST:event_txtLEDActionPerformed
 
-    private void themoglobin3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_themoglobin3ActionPerformed
+    private void txtHemoglobinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtHemoglobinActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_themoglobin3ActionPerformed
+    }//GEN-LAST:event_txtHemoglobinActionPerformed
 
     private void u_warnaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_u_warnaActionPerformed
         // TODO add your handling code here:
@@ -6334,6 +6339,52 @@ try (PreparedStatement ps = kon.prepareStatement(sql)) {
     private void u_BjenisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_u_BjenisActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_u_BjenisActionPerformed
+
+    private void sv_hematologiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sv_hematologiActionPerformed
+        // TODO add your handling code here:
+        try {
+        String sql = "INSERT INTO pemeriksaan_hematologi (id_pendaftaran, hemoglobin, hematokrit, eritrosit, mch, mch_her, mchc, " +
+                "retikulosit, leukosit, basofil, eosinofil, batang, segmen, limfosit, monosit, laju_endap, westergren, trombosit, " +
+                "masa_pendarahan, masa_pembekuan, pembendungan, retraksi, resistensi_osmotik, sel_le, reaksi_le, malaria, gol_darah) " +
+                "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        Connection kon = koneksi.koneksiDb();
+        PreparedStatement ps = kon.prepareStatement(sql);
+        ps.setInt(1, Integer.parseInt(id_daftar.getSelectedItem().toString())); // misal dari TextField ID
+
+        ps.setString(2, txtHemoglobin.getText());
+        ps.setString(3, txtHematokrit.getText());
+        ps.setString(4, txtEritrosit.getText());
+        ps.setString(5, txtVER_MCH.getText());
+        ps.setString(6, txtHER_MCH.getText());
+        ps.setString(7, txtKHER_MCHC.getText());
+        ps.setString(8, txtRetikulosit.getText());
+        ps.setString(9, txtLeukosit.getText());
+        ps.setString(10, txtBasofil.getText());
+        ps.setString(11, txtEosinofil.getText());
+        ps.setString(12, txtBatang.getText());
+        ps.setString(13, txtSegmen.getText());
+        ps.setString(14, txtLimfosit.getText());
+        ps.setString(15, txtMonosit.getText());
+        ps.setString(16, txtLED.getText());
+        ps.setString(17, txtWestergren.getText());
+        ps.setString(18, txtTrombosit.getText());
+        ps.setString(19, txtMasaPendarahan.getText());
+        ps.setString(20, txtMasaPembekuan.getText());
+        ps.setString(21, txtPembendungan.getText());
+        ps.setString(22, txtRetraksi.getText());
+        ps.setString(23, txtResistensiOsmotik.getText());
+        ps.setString(24, txtSelLE.getText());
+        ps.setString(25, txtReaksiLE.getText());
+        ps.setString(26, txtMalaria.getText());
+        ps.setString(27, txtGolDarah.getText());
+
+        ps.executeUpdate();
+        JOptionPane.showMessageDialog(null, "Data berhasil disimpan ke database!");
+
+    } catch (SQLException e) {
+        JOptionPane.showMessageDialog(null, "Gagal simpan data: " + e.getMessage());
+    }
+    }//GEN-LAST:event_sv_hematologiActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -6833,34 +6884,34 @@ try (PreparedStatement ps = kon.prepareStatement(sql)) {
     private javax.swing.JTextField tTSH;
     private javax.swing.JTable tb_rincian;
     private javax.swing.ButtonGroup tes_kehamilan;
-    private javax.swing.JTextField themoglobin10;
-    private javax.swing.JTextField themoglobin11;
-    private javax.swing.JTextField themoglobin12;
-    private javax.swing.JTextField themoglobin13;
-    private javax.swing.JTextField themoglobin14;
-    private javax.swing.JTextField themoglobin15;
-    private javax.swing.JTextField themoglobin16;
-    private javax.swing.JTextField themoglobin3;
-    private javax.swing.JTextField themoglobin4;
-    private javax.swing.JTextField themoglobin5;
-    private javax.swing.JTextField themoglobin6;
-    private javax.swing.JTextField themoglobin7;
-    private javax.swing.JTextField themoglobin8;
-    private javax.swing.JTextField themoglobin9;
-    private javax.swing.JTextField tled10;
-    private javax.swing.JTextField tled11;
-    private javax.swing.JTextField tled12;
-    private javax.swing.JTextField tled13;
-    private javax.swing.JTextField tled14;
-    private javax.swing.JTextField tled3;
-    private javax.swing.JTextField tled4;
-    private javax.swing.JTextField tled5;
-    private javax.swing.JTextField tled6;
-    private javax.swing.JTextField tled7;
-    private javax.swing.JTextField tled8;
-    private javax.swing.JTextField tled9;
     private javax.swing.JLabel tpha;
     private javax.swing.JLabel tsh;
+    private javax.swing.JTextField txtBasofil;
+    private javax.swing.JTextField txtBatang;
+    private javax.swing.JTextField txtEosinofil;
+    private javax.swing.JTextField txtEritrosit;
+    private javax.swing.JTextField txtGolDarah;
+    private javax.swing.JTextField txtHER_MCH;
+    private javax.swing.JTextField txtHematokrit;
+    private javax.swing.JTextField txtHemoglobin;
+    private javax.swing.JTextField txtKHER_MCHC;
+    private javax.swing.JTextField txtLED;
+    private javax.swing.JTextField txtLeukosit;
+    private javax.swing.JTextField txtLimfosit;
+    private javax.swing.JTextField txtMalaria;
+    private javax.swing.JTextField txtMasaPembekuan;
+    private javax.swing.JTextField txtMasaPendarahan;
+    private javax.swing.JTextField txtMonosit;
+    private javax.swing.JTextField txtPembendungan;
+    private javax.swing.JTextField txtReaksiLE;
+    private javax.swing.JTextField txtResistensiOsmotik;
+    private javax.swing.JTextField txtRetikulosit;
+    private javax.swing.JTextField txtRetraksi;
+    private javax.swing.JTextField txtSegmen;
+    private javax.swing.JTextField txtSelLE;
+    private javax.swing.JTextField txtTrombosit;
+    private javax.swing.JTextField txtVER_MCH;
+    private javax.swing.JTextField txtWestergren;
     private javax.swing.JLabel typhusH;
     private javax.swing.JLabel typhusO;
     private javax.swing.JComboBox<String> u_Bjenis;
