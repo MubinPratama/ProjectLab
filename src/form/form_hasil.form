@@ -16,6 +16,12 @@
     </Component>
     <Component class="javax.swing.ButtonGroup" name="silinder">
     </Component>
+    <Component class="javax.swing.ButtonGroup" name="t_lendir">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="t_darah">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="t_nanah">
+    </Component>
   </NonVisualComponents>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
@@ -728,9 +734,6 @@
                                   </StringArray>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="u_warnaActionPerformed"/>
-                              </Events>
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                               </AuxValues>
@@ -770,9 +773,6 @@
                                   </StringArray>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="u_BjenisActionPerformed"/>
-                              </Events>
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                               </AuxValues>
@@ -2164,9 +2164,6 @@
                                   </Border>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtHemoglobinActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JLabel" name="jLabel198">
                               <Properties>
@@ -2455,9 +2452,6 @@
                                   </Border>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtLEDActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JLabel" name="jLabel216">
                               <Properties>
@@ -2770,9 +2764,6 @@
                                   </Border>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtHematokritActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JTextField" name="txtEritrosit">
                               <Properties>
@@ -2785,9 +2776,6 @@
                                   </Border>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtEritrositActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JTextField" name="txtVER_MCH">
                               <Properties>
@@ -2800,9 +2788,6 @@
                                   </Border>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtVER_MCHActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JTextField" name="txtHER_MCH">
                               <Properties>
@@ -2815,9 +2800,6 @@
                                   </Border>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtHER_MCHActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JTextField" name="txtKHER_MCHC">
                               <Properties>
@@ -2830,9 +2812,6 @@
                                   </Border>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtKHER_MCHCActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JTextField" name="txtRetikulosit">
                               <Properties>
@@ -2845,9 +2824,6 @@
                                   </Border>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtRetikulositActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JTextField" name="txtLeukosit">
                               <Properties>
@@ -2860,9 +2836,6 @@
                                   </Border>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtLeukositActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JTextField" name="txtBasofil">
                               <Properties>
@@ -2875,9 +2848,6 @@
                                   </Border>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtBasofilActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JTextField" name="txtEosinofil">
                               <Properties>
@@ -2890,9 +2860,6 @@
                                   </Border>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtEosinofilActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JTextField" name="txtBatang">
                               <Properties>
@@ -2905,9 +2872,6 @@
                                   </Border>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtBatangActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JTextField" name="txtSegmen">
                               <Properties>
@@ -2920,9 +2884,6 @@
                                   </Border>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtSegmenActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JTextField" name="txtLimfosit">
                               <Properties>
@@ -2935,9 +2896,6 @@
                                   </Border>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtLimfositActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JTextField" name="txtMonosit">
                               <Properties>
@@ -2950,9 +2908,6 @@
                                   </Border>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtMonositActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JTextField" name="txtWestergren">
                               <Properties>
@@ -2965,9 +2920,6 @@
                                   </Border>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtWestergrenActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JTextField" name="txtTrombosit">
                               <Properties>
@@ -2980,9 +2932,6 @@
                                   </Border>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtTrombositActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JTextField" name="txtMasaPendarahan">
                               <Properties>
@@ -2995,9 +2944,6 @@
                                   </Border>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtMasaPendarahanActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JTextField" name="txtMasaPembekuan">
                               <Properties>
@@ -3010,9 +2956,6 @@
                                   </Border>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtMasaPembekuanActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JTextField" name="txtPembendungan">
                               <Properties>
@@ -3025,9 +2968,6 @@
                                   </Border>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtPembendunganActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JTextField" name="txtRetraksi">
                               <Properties>
@@ -3040,9 +2980,6 @@
                                   </Border>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtRetraksiActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JTextField" name="txtResistensiOsmotik">
                               <Properties>
@@ -3055,9 +2992,6 @@
                                   </Border>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtResistensiOsmotikActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JTextField" name="txtSelLE">
                               <Properties>
@@ -3070,9 +3004,6 @@
                                   </Border>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtSelLEActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JTextField" name="txtReaksiLE">
                               <Properties>
@@ -3085,9 +3016,6 @@
                                   </Border>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtReaksiLEActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JTextField" name="txtMalaria">
                               <Properties>
@@ -3100,9 +3028,6 @@
                                   </Border>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtMalariaActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JTextField" name="txtGolDarah">
                               <Properties>
@@ -3115,9 +3040,6 @@
                                   </Border>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtGolDarahActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JLabel" name="jLabel5">
                               <Properties>
@@ -3237,23 +3159,20 @@
                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                                       <Component id="comboxHbeAg" min="-2" pref="130" max="-2" attributes="0"/>
                                                   </Group>
-                                                  <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                                                      <Component id="mgIgG" min="-2" pref="110" max="-2" attributes="0"/>
-                                                      <Group type="103" alignment="1" groupAlignment="1" max="-2" attributes="0">
-                                                          <Group type="102" alignment="0" attributes="0">
-                                                              <Component id="EA" min="-2" pref="170" max="-2" attributes="0"/>
-                                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                              <Component id="tEA" min="-2" pref="102" max="-2" attributes="0"/>
-                                                              <EmptySpace max="32767" attributes="0"/>
-                                                              <Component id="ugEA" min="-2" pref="110" max="-2" attributes="0"/>
-                                                          </Group>
-                                                          <Group type="102" alignment="0" attributes="0">
-                                                              <Component id="AFP" min="-2" pref="170" max="-2" attributes="0"/>
-                                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                              <Component id="tAFP" min="-2" pref="102" max="-2" attributes="0"/>
-                                                              <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
-                                                              <Component id="ngAFP" min="-2" pref="110" max="-2" attributes="0"/>
-                                                          </Group>
+                                                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                                      <Group type="102" alignment="0" attributes="0">
+                                                          <Component id="EA" min="-2" pref="170" max="-2" attributes="0"/>
+                                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                          <Component id="tEA" min="-2" pref="102" max="-2" attributes="0"/>
+                                                          <EmptySpace max="32767" attributes="0"/>
+                                                          <Component id="ugEA" min="-2" pref="110" max="-2" attributes="0"/>
+                                                      </Group>
+                                                      <Group type="102" alignment="0" attributes="0">
+                                                          <Component id="AFP" min="-2" pref="170" max="-2" attributes="0"/>
+                                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                          <Component id="tAFP" min="-2" pref="102" max="-2" attributes="0"/>
+                                                          <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+                                                          <Component id="ngAFP" min="-2" pref="110" max="-2" attributes="0"/>
                                                       </Group>
                                                       <Component id="mgIgA" alignment="1" min="-2" pref="110" max="-2" attributes="0"/>
                                                       <Group type="102" alignment="1" attributes="0">
@@ -3265,6 +3184,13 @@
                                                           <Component id="tIgE" min="-2" pref="102" max="-2" attributes="0"/>
                                                           <EmptySpace type="separate" max="-2" attributes="0"/>
                                                           <Component id="mgIgE" min="-2" pref="110" max="-2" attributes="0"/>
+                                                      </Group>
+                                                      <Group type="102" attributes="0">
+                                                          <Component id="IgG" min="-2" pref="170" max="-2" attributes="0"/>
+                                                          <EmptySpace max="-2" attributes="0"/>
+                                                          <Component id="tIgG" min="-2" pref="102" max="-2" attributes="0"/>
+                                                          <EmptySpace max="32767" attributes="0"/>
+                                                          <Component id="mgIgG" min="-2" pref="110" max="-2" attributes="0"/>
                                                       </Group>
                                                   </Group>
                                                   <Group type="103" alignment="0" groupAlignment="1" attributes="0">
@@ -3375,11 +3301,6 @@
                                               <Component id="IgA" min="-2" pref="170" max="-2" attributes="0"/>
                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                               <Component id="tIgA" min="-2" pref="102" max="-2" attributes="0"/>
-                                          </Group>
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <Component id="IgG" min="-2" pref="170" max="-2" attributes="0"/>
-                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                              <Component id="tIgG" min="-2" pref="102" max="-2" attributes="0"/>
                                           </Group>
                                           <Component id="IgE" alignment="0" min="-2" pref="170" max="-2" attributes="0"/>
                                           <Component id="judul" alignment="0" max="32767" attributes="0"/>
@@ -3967,9 +3888,6 @@
                                 </Property>
                                 <Property name="text" type="java.lang.String" value="Positive"/>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="positivetpha2ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JRadioButton" name="negativtpha3">
                               <Properties>
@@ -3992,9 +3910,6 @@
                                 </Property>
                                 <Property name="text" type="java.lang.String" value="Positive"/>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="positivetpha3ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JComboBox" name="comboxAntiHBs">
                               <Properties>
@@ -4557,9 +4472,6 @@
                                   </Border>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="comboxTyphusHActionPerformed"/>
-                              </Events>
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                               </AuxValues>
@@ -4762,9 +4674,6 @@
                                 </Property>
                                 <Property name="text" type="java.lang.String" value="Positive"/>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="positiveCRPActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JTextField" name="tT4">
                               <Properties>
@@ -4977,7 +4886,7 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace pref="200" max="32767" attributes="0"/>
+                                  <EmptySpace pref="205" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -5228,7 +5137,7 @@
                                           <Component id="jLabel45" alignment="3" min="-2" pref="26" max="-2" attributes="0"/>
                                           <Component id="bilirubin2" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
                                           <Component id="jLabel10" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
                                           <Component id="jTextField3" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
@@ -6229,9 +6138,6 @@
                                   <Font name="Tahoma" size="12" style="0"/>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bilirubinActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JTextField" name="jTextField3">
                               <Properties>
@@ -6239,9 +6145,6 @@
                                   <Font name="Tahoma" size="12" style="0"/>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField3ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JTextField" name="jTextField4">
                               <Properties>
@@ -6249,9 +6152,6 @@
                                   <Font name="Tahoma" size="12" style="0"/>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField4ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JTextField" name="jTextField6">
                               <Properties>
@@ -6259,9 +6159,6 @@
                                   <Font name="Tahoma" size="12" style="0"/>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField6ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JTextField" name="jTextField5">
                               <Properties>
@@ -6269,9 +6166,6 @@
                                   <Font name="Tahoma" size="12" style="0"/>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField5ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JTextField" name="jTextField7">
                               <Properties>
@@ -6279,9 +6173,6 @@
                                   <Font name="Tahoma" size="12" style="0"/>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField7ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JTextField" name="jTextField8">
                               <Properties>
@@ -6289,9 +6180,6 @@
                                   <Font name="Tahoma" size="12" style="0"/>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField8ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JTextField" name="jTextField9">
                               <Properties>
@@ -6299,9 +6187,6 @@
                                   <Font name="Tahoma" size="12" style="0"/>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField9ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JTextField" name="jTextField10">
                               <Properties>
@@ -6309,9 +6194,6 @@
                                   <Font name="Tahoma" size="12" style="0"/>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField10ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JTextField" name="jTextField11">
                               <Properties>
@@ -6319,9 +6201,6 @@
                                   <Font name="Tahoma" size="12" style="0"/>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField11ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JTextField" name="jTextField12">
                               <Properties>
@@ -6329,9 +6208,6 @@
                                   <Font name="Tahoma" size="12" style="0"/>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField12ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JTextField" name="jTextField13">
                               <Properties>
@@ -6339,9 +6215,6 @@
                                   <Font name="Tahoma" size="12" style="0"/>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField13ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JTextField" name="jTextField14">
                               <Properties>
@@ -6349,9 +6222,6 @@
                                   <Font name="Tahoma" size="12" style="0"/>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField14ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JTextField" name="jTextField15">
                               <Properties>
@@ -6404,9 +6274,6 @@
                                   <Font name="Tahoma" size="12" style="0"/>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField56ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JLabel" name="jLabel62">
                               <Properties>
@@ -6472,9 +6339,6 @@
                                   <Font name="Tahoma" size="12" style="0"/>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bilirubin1ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JLabel" name="jLabel44">
                               <Properties>
@@ -6518,9 +6382,6 @@
                                   <Font name="Tahoma" size="12" style="0"/>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bilirubin2ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JTextField" name="bilirubin3">
                               <Properties>
@@ -6528,9 +6389,6 @@
                                   <Font name="Tahoma" size="12" style="0"/>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bilirubin3ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JTextField" name="bilirubin4">
                               <Properties>
@@ -6538,9 +6396,6 @@
                                   <Font name="Tahoma" size="12" style="0"/>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bilirubin4ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JTextField" name="bilirubin5">
                               <Properties>
@@ -6548,9 +6403,6 @@
                                   <Font name="Tahoma" size="12" style="0"/>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bilirubin5ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JTextField" name="bilirubin6">
                               <Properties>
@@ -6558,9 +6410,6 @@
                                   <Font name="Tahoma" size="12" style="0"/>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bilirubin6ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JTextField" name="bilirubin7">
                               <Properties>
@@ -6568,9 +6417,6 @@
                                   <Font name="Tahoma" size="12" style="0"/>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bilirubin7ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JTextField" name="bilirubin8">
                               <Properties>
@@ -6578,9 +6424,6 @@
                                   <Font name="Tahoma" size="12" style="0"/>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bilirubin8ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JTextField" name="bilirubin9">
                               <Properties>
@@ -6588,9 +6431,6 @@
                                   <Font name="Tahoma" size="12" style="0"/>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bilirubin9ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JTextField" name="bilirubin10">
                               <Properties>
@@ -6598,9 +6438,6 @@
                                   <Font name="Tahoma" size="12" style="0"/>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bilirubin10ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JTextField" name="bilirubin11">
                               <Properties>
@@ -6608,9 +6445,6 @@
                                   <Font name="Tahoma" size="12" style="0"/>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bilirubin11ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JTextField" name="bilirubin12">
                               <Properties>
@@ -6618,9 +6452,6 @@
                                   <Font name="Tahoma" size="12" style="0"/>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bilirubin12ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JTextField" name="bilirubin13">
                               <Properties>
@@ -6628,9 +6459,6 @@
                                   <Font name="Tahoma" size="12" style="0"/>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bilirubin13ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JLabel" name="jLabel65">
                               <Properties>
@@ -6674,9 +6502,6 @@
                                   <Font name="Tahoma" size="12" style="0"/>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bilirubin14ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JTextField" name="bilirubin15">
                               <Properties>
@@ -6684,9 +6509,6 @@
                                   <Font name="Tahoma" size="12" style="0"/>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bilirubin15ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JLabel" name="jLabel67">
                               <Properties>
@@ -6712,9 +6534,6 @@
                                   <Font name="Tahoma" size="12" style="0"/>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bilirubin16ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JLabel" name="jLabel46">
                               <Properties>
@@ -7841,9 +7660,6 @@
                                   <Font name="Tahoma" size="12" style="0"/>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField23ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JTextField" name="jTextField24">
                               <Properties>
@@ -7851,9 +7667,6 @@
                                   <Font name="Tahoma" size="12" style="0"/>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField24ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JTextField" name="jTextField25">
                               <Properties>
@@ -7861,9 +7674,6 @@
                                   <Font name="Tahoma" size="12" style="0"/>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField25ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JTextField" name="jTextField26">
                               <Properties>
@@ -7871,9 +7681,6 @@
                                   <Font name="Tahoma" size="12" style="0"/>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField26ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JTextField" name="jTextField27">
                               <Properties>
@@ -7881,9 +7688,6 @@
                                   <Font name="Tahoma" size="12" style="0"/>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField27ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JTextField" name="jTextField28">
                               <Properties>
@@ -7891,9 +7695,6 @@
                                   <Font name="Tahoma" size="12" style="0"/>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField28ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JTextField" name="jTextField29">
                               <Properties>
@@ -7901,9 +7702,6 @@
                                   <Font name="Tahoma" size="12" style="0"/>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField29ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JTextField" name="jTextField30">
                               <Properties>
@@ -7911,9 +7709,6 @@
                                   <Font name="Tahoma" size="12" style="0"/>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField30ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JTextField" name="jTextField31">
                               <Properties>
@@ -7921,9 +7716,6 @@
                                   <Font name="Tahoma" size="12" style="0"/>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField31ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JTextField" name="jTextField32">
                               <Properties>
@@ -7931,9 +7723,6 @@
                                   <Font name="Tahoma" size="12" style="0"/>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField32ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JComboBox" name="jComboBox19">
                               <Properties>
@@ -7947,9 +7736,6 @@
                                   </StringArray>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox19ActionPerformed"/>
-                              </Events>
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                               </AuxValues>
@@ -7966,9 +7752,6 @@
                                   </StringArray>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox20ActionPerformed"/>
-                              </Events>
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                               </AuxValues>
@@ -7985,9 +7768,6 @@
                                   </StringArray>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox21ActionPerformed"/>
-                              </Events>
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                               </AuxValues>
@@ -8004,9 +7784,6 @@
                                   </StringArray>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox22ActionPerformed"/>
-                              </Events>
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                               </AuxValues>
@@ -8023,9 +7800,6 @@
                                   </StringArray>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox23ActionPerformed"/>
-                              </Events>
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                               </AuxValues>
@@ -8042,9 +7816,6 @@
                                   </StringArray>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox24ActionPerformed"/>
-                              </Events>
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                               </AuxValues>
@@ -8082,9 +7853,6 @@
                                   <Font name="Tahoma" size="12" style="0"/>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField33ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JLabel" name="jLabel380">
                               <Properties>
@@ -8118,9 +7886,6 @@
                                   <Font name="Tahoma" size="12" style="0"/>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField34ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JLabel" name="jLabel382">
                               <Properties>
@@ -8154,9 +7919,6 @@
                                   <Font name="Tahoma" size="12" style="0"/>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField35ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JLabel" name="jLabel384">
                               <Properties>
@@ -8203,9 +7965,6 @@
                                   <Font name="Tahoma" size="12" style="0"/>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField36ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JLabel" name="jLabel387">
                               <Properties>
@@ -8226,9 +7985,6 @@
                                   <Font name="Tahoma" size="12" style="0"/>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField37ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JLabel" name="jLabel388">
                               <Properties>
@@ -8262,9 +8018,6 @@
                                   <Font name="Tahoma" size="12" style="0"/>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField38ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JLabel" name="jLabel390">
                               <Properties>
@@ -8299,9 +8052,6 @@
                                   <Font name="Tahoma" size="12" style="0"/>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField39ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JLabel" name="jLabel392">
                               <Properties>
@@ -8349,9 +8099,6 @@
                                   <Font name="Tahoma" size="12" style="0"/>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField40ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JLabel" name="jLabel395">
                               <Properties>
@@ -8373,9 +8120,6 @@
                                   <Font name="Tahoma" size="12" style="0"/>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField41ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JLabel" name="jLabel396">
                               <Properties>
@@ -8411,9 +8155,6 @@
                                   <Font name="Tahoma" size="12" style="0"/>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField42ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JLabel" name="jLabel398">
                               <Properties>
@@ -8435,9 +8176,6 @@
                                   <Font name="Tahoma" size="12" style="0"/>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField43ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JLabel" name="jLabel399">
                               <Properties>
@@ -8485,9 +8223,6 @@
                                   <Font name="Tahoma" size="12" style="0"/>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField44ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JTextField" name="jTextField45">
                               <Properties>
@@ -8495,9 +8230,6 @@
                                   <Font name="Tahoma" size="12" style="0"/>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField45ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JLabel" name="jLabel402">
                               <Properties>
@@ -8533,9 +8265,6 @@
                                   <Font name="Tahoma" size="12" style="0"/>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField46ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JLabel" name="jLabel404">
                               <Properties>
@@ -8584,9 +8313,6 @@
                                   <Font name="Tahoma" size="12" style="0"/>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField47ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JLabel" name="jLabel407">
                               <Properties>
@@ -8621,9 +8347,6 @@
                                   <Font name="Tahoma" size="12" style="0"/>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField48ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JLabel" name="jLabel409">
                               <Properties>
@@ -8645,9 +8368,6 @@
                                   <Font name="Tahoma" size="12" style="0"/>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField49ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JLabel" name="jLabel410">
                               <Properties>
@@ -8683,9 +8403,6 @@
                                   <Font name="Tahoma" size="12" style="0"/>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField50ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JTextField" name="jTextField51">
                               <Properties>
@@ -8693,9 +8410,6 @@
                                   <Font name="Tahoma" size="12" style="0"/>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField51ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JLabel" name="jLabel412">
                               <Properties>
@@ -8731,9 +8445,6 @@
                                   <Font name="Tahoma" size="12" style="0"/>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField52ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JLabel" name="jLabel414">
                               <Properties>
@@ -8795,9 +8506,6 @@
                                   <Font name="Tahoma" size="12" style="0"/>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField53ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JLabel" name="jLabel418">
                               <Properties>
@@ -8831,9 +8539,6 @@
                                   <Font name="Tahoma" size="12" style="0"/>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField54ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JLabel" name="jLabel420">
                               <Properties>
@@ -8854,9 +8559,6 @@
                                   <Font name="Tahoma" size="12" style="0"/>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField55ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JLabel" name="jLabel421">
                               <Properties>
@@ -9394,9 +9096,6 @@
                                   <Font name="Tahoma" size="12" style="0"/>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField1ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JComboBox" name="jComboBox2">
                               <Properties>
@@ -9407,9 +9106,6 @@
                                   <StringArray count="0"/>
                                 </Property>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox2ActionPerformed"/>
-                              </Events>
                               <AuxValues>
                                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                               </AuxValues>
@@ -9419,84 +9115,84 @@
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                                 </Property>
+                                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                                  <ComponentRef name="t_lendir"/>
+                                </Property>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Tahoma" size="12" style="0"/>
                                 </Property>
                                 <Property name="text" type="java.lang.String" value="Neg"/>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton1ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JRadioButton" name="jRadioButton2">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                                 </Property>
+                                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                                  <ComponentRef name="t_darah"/>
+                                </Property>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Tahoma" size="12" style="0"/>
                                 </Property>
                                 <Property name="text" type="java.lang.String" value="Neg"/>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton2ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JRadioButton" name="jRadioButton3">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                                 </Property>
+                                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                                  <ComponentRef name="t_nanah"/>
+                                </Property>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Tahoma" size="12" style="0"/>
                                 </Property>
                                 <Property name="text" type="java.lang.String" value="Neg"/>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton3ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JRadioButton" name="jRadioButton4">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                                 </Property>
+                                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                                  <ComponentRef name="t_lendir"/>
+                                </Property>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Tahoma" size="12" style="0"/>
                                 </Property>
                                 <Property name="text" type="java.lang.String" value="Pos"/>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton4ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JRadioButton" name="jRadioButton5">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                                 </Property>
+                                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                                  <ComponentRef name="t_darah"/>
+                                </Property>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Tahoma" size="12" style="0"/>
                                 </Property>
                                 <Property name="text" type="java.lang.String" value="Pos"/>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton5ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JRadioButton" name="jRadioButton6">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                                 </Property>
+                                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                                  <ComponentRef name="t_nanah"/>
+                                </Property>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Tahoma" size="12" style="0"/>
                                 </Property>
                                 <Property name="text" type="java.lang.String" value="Pos"/>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton6ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JLabel" name="jLabel301">
                               <Properties>
@@ -9670,9 +9366,6 @@
                                 </Property>
                                 <Property name="text" type="java.lang.String" value="Neg"/>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton7ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JRadioButton" name="jRadioButton8">
                               <Properties>
@@ -9684,9 +9377,6 @@
                                 </Property>
                                 <Property name="text" type="java.lang.String" value="Neg"/>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton8ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JRadioButton" name="jRadioButton9">
                               <Properties>
@@ -9698,9 +9388,6 @@
                                 </Property>
                                 <Property name="text" type="java.lang.String" value="Neg"/>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton9ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JRadioButton" name="jRadioButton10">
                               <Properties>
@@ -9712,9 +9399,6 @@
                                 </Property>
                                 <Property name="text" type="java.lang.String" value="Neg"/>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton10ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JRadioButton" name="jRadioButton11">
                               <Properties>
@@ -9726,9 +9410,6 @@
                                 </Property>
                                 <Property name="text" type="java.lang.String" value="Neg"/>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton11ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JRadioButton" name="jRadioButton12">
                               <Properties>
@@ -9740,9 +9421,6 @@
                                 </Property>
                                 <Property name="text" type="java.lang.String" value="Neg"/>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton12ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JRadioButton" name="jRadioButton13">
                               <Properties>
@@ -9754,9 +9432,6 @@
                                 </Property>
                                 <Property name="text" type="java.lang.String" value="Pos"/>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton13ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JRadioButton" name="jRadioButton14">
                               <Properties>
@@ -9768,9 +9443,6 @@
                                 </Property>
                                 <Property name="text" type="java.lang.String" value="Pos"/>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton14ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JRadioButton" name="jRadioButton15">
                               <Properties>
@@ -9782,9 +9454,6 @@
                                 </Property>
                                 <Property name="text" type="java.lang.String" value="Pos"/>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton15ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JRadioButton" name="jRadioButton16">
                               <Properties>
@@ -9796,9 +9465,6 @@
                                 </Property>
                                 <Property name="text" type="java.lang.String" value="Pos"/>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton16ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JRadioButton" name="jRadioButton17">
                               <Properties>
@@ -9810,9 +9476,6 @@
                                 </Property>
                                 <Property name="text" type="java.lang.String" value="Pos"/>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton17ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JRadioButton" name="jRadioButton18">
                               <Properties>
@@ -9824,9 +9487,6 @@
                                 </Property>
                                 <Property name="text" type="java.lang.String" value="Pos"/>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton18ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JLabel" name="jLabel310">
                               <Properties>
@@ -9959,9 +9619,6 @@
                                 </Property>
                                 <Property name="text" type="java.lang.String" value="Neg"/>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton19ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JRadioButton" name="jRadioButton20">
                               <Properties>
@@ -9976,9 +9633,6 @@
                                 </Property>
                                 <Property name="text" type="java.lang.String" value="Neg"/>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton20ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JRadioButton" name="jRadioButton21">
                               <Properties>
@@ -9990,9 +9644,6 @@
                                 </Property>
                                 <Property name="text" type="java.lang.String" value="Neg"/>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton21ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JRadioButton" name="jRadioButton22">
                               <Properties>
@@ -10004,9 +9655,6 @@
                                 </Property>
                                 <Property name="text" type="java.lang.String" value="Neg"/>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton22ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JRadioButton" name="jRadioButton23">
                               <Properties>
@@ -10018,9 +9666,6 @@
                                 </Property>
                                 <Property name="text" type="java.lang.String" value="Neg"/>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton23ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JRadioButton" name="jRadioButton24">
                               <Properties>
@@ -10032,9 +9677,6 @@
                                 </Property>
                                 <Property name="text" type="java.lang.String" value="Pos"/>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton24ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JRadioButton" name="jRadioButton25">
                               <Properties>
@@ -10049,9 +9691,6 @@
                                 </Property>
                                 <Property name="text" type="java.lang.String" value="Pos"/>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton25ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JRadioButton" name="jRadioButton26">
                               <Properties>
@@ -10063,9 +9702,6 @@
                                 </Property>
                                 <Property name="text" type="java.lang.String" value="Pos"/>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton26ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JRadioButton" name="jRadioButton27">
                               <Properties>
@@ -10077,9 +9713,6 @@
                                 </Property>
                                 <Property name="text" type="java.lang.String" value="Pos"/>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton27ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JRadioButton" name="jRadioButton28">
                               <Properties>
@@ -10091,9 +9724,6 @@
                                 </Property>
                                 <Property name="text" type="java.lang.String" value="Pos"/>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton28ActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JLabel" name="jLabel318">
                               <Properties>

@@ -146,6 +146,9 @@ public class form_hasil extends javax.swing.JPanel {
         darah_samar = new javax.swing.ButtonGroup();
         tes_kehamilan = new javax.swing.ButtonGroup();
         silinder = new javax.swing.ButtonGroup();
+        t_lendir = new javax.swing.ButtonGroup();
+        t_darah = new javax.swing.ButtonGroup();
+        t_nanah = new javax.swing.ButtonGroup();
         main_panel = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -776,22 +779,12 @@ public class form_hasil extends javax.swing.JPanel {
 
         u_warna.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         u_warna.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "Kuning Muda", "Kuning Tua" }));
-        u_warna.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                u_warnaActionPerformed(evt);
-            }
-        });
 
         u_kejernihan.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         u_kejernihan.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "Jernih", "Agak Keruh", "Keruh" }));
 
         u_Bjenis.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         u_Bjenis.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "1.005", "1.010", "1.015", "1.020", "1.025", "1.030" }));
-        u_Bjenis.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                u_BjenisActionPerformed(evt);
-            }
-        });
 
         u_reaksi.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         u_reaksi.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "5.0", "5.5", "6.0", "6.5", "7.0", "7.5", "8.0" }));
@@ -1296,11 +1289,6 @@ public class form_hasil extends javax.swing.JPanel {
 
         txtHemoglobin.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         txtHemoglobin.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        txtHemoglobin.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtHemoglobinActionPerformed(evt);
-            }
-        });
 
         jLabel198.setBackground(new java.awt.Color(255, 255, 255));
         jLabel198.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
@@ -1394,11 +1382,6 @@ public class form_hasil extends javax.swing.JPanel {
 
         txtLED.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         txtLED.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        txtLED.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtLEDActionPerformed(evt);
-            }
-        });
 
         jLabel216.setBackground(new java.awt.Color(255, 255, 255));
         jLabel216.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
@@ -1497,195 +1480,75 @@ public class form_hasil extends javax.swing.JPanel {
 
         txtHematokrit.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         txtHematokrit.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        txtHematokrit.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtHematokritActionPerformed(evt);
-            }
-        });
 
         txtEritrosit.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         txtEritrosit.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        txtEritrosit.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtEritrositActionPerformed(evt);
-            }
-        });
 
         txtVER_MCH.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         txtVER_MCH.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        txtVER_MCH.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtVER_MCHActionPerformed(evt);
-            }
-        });
 
         txtHER_MCH.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         txtHER_MCH.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        txtHER_MCH.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtHER_MCHActionPerformed(evt);
-            }
-        });
 
         txtKHER_MCHC.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         txtKHER_MCHC.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        txtKHER_MCHC.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtKHER_MCHCActionPerformed(evt);
-            }
-        });
 
         txtRetikulosit.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         txtRetikulosit.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        txtRetikulosit.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtRetikulositActionPerformed(evt);
-            }
-        });
 
         txtLeukosit.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         txtLeukosit.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        txtLeukosit.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtLeukositActionPerformed(evt);
-            }
-        });
 
         txtBasofil.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         txtBasofil.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        txtBasofil.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtBasofilActionPerformed(evt);
-            }
-        });
 
         txtEosinofil.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         txtEosinofil.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        txtEosinofil.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtEosinofilActionPerformed(evt);
-            }
-        });
 
         txtBatang.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         txtBatang.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        txtBatang.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtBatangActionPerformed(evt);
-            }
-        });
 
         txtSegmen.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         txtSegmen.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        txtSegmen.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtSegmenActionPerformed(evt);
-            }
-        });
 
         txtLimfosit.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         txtLimfosit.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        txtLimfosit.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtLimfositActionPerformed(evt);
-            }
-        });
 
         txtMonosit.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         txtMonosit.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        txtMonosit.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtMonositActionPerformed(evt);
-            }
-        });
 
         txtWestergren.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         txtWestergren.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        txtWestergren.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtWestergrenActionPerformed(evt);
-            }
-        });
 
         txtTrombosit.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         txtTrombosit.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        txtTrombosit.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtTrombositActionPerformed(evt);
-            }
-        });
 
         txtMasaPendarahan.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         txtMasaPendarahan.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        txtMasaPendarahan.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtMasaPendarahanActionPerformed(evt);
-            }
-        });
 
         txtMasaPembekuan.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         txtMasaPembekuan.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        txtMasaPembekuan.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtMasaPembekuanActionPerformed(evt);
-            }
-        });
 
         txtPembendungan.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         txtPembendungan.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        txtPembendungan.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtPembendunganActionPerformed(evt);
-            }
-        });
 
         txtRetraksi.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         txtRetraksi.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        txtRetraksi.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtRetraksiActionPerformed(evt);
-            }
-        });
 
         txtResistensiOsmotik.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         txtResistensiOsmotik.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        txtResistensiOsmotik.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtResistensiOsmotikActionPerformed(evt);
-            }
-        });
 
         txtSelLE.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         txtSelLE.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        txtSelLE.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtSelLEActionPerformed(evt);
-            }
-        });
 
         txtReaksiLE.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         txtReaksiLE.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        txtReaksiLE.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtReaksiLEActionPerformed(evt);
-            }
-        });
 
         txtMalaria.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         txtMalaria.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        txtMalaria.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtMalariaActionPerformed(evt);
-            }
-        });
 
         txtGolDarah.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         txtGolDarah.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        txtGolDarah.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtGolDarahActionPerformed(evt);
-            }
-        });
 
         jLabel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
 
@@ -2133,11 +1996,6 @@ public class form_hasil extends javax.swing.JPanel {
         positivetpha2.setBackground(new java.awt.Color(255, 255, 255));
         positivetpha2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         positivetpha2.setText("Positive");
-        positivetpha2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                positivetpha2ActionPerformed(evt);
-            }
-        });
 
         negativtpha3.setBackground(new java.awt.Color(255, 255, 255));
         negativtpha3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
@@ -2146,11 +2004,6 @@ public class form_hasil extends javax.swing.JPanel {
         positivetpha3.setBackground(new java.awt.Color(255, 255, 255));
         positivetpha3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         positivetpha3.setText("Positive");
-        positivetpha3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                positivetpha3ActionPerformed(evt);
-            }
-        });
 
         comboxAntiHBs.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         comboxAntiHBs.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
@@ -2323,11 +2176,6 @@ public class form_hasil extends javax.swing.JPanel {
 
         comboxTyphusH.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         comboxTyphusH.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
-        comboxTyphusH.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                comboxTyphusHActionPerformed(evt);
-            }
-        });
 
         comboxParaAH.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         comboxParaAH.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
@@ -2374,11 +2222,6 @@ public class form_hasil extends javax.swing.JPanel {
         positiveCRP.setBackground(new java.awt.Color(255, 255, 255));
         positiveCRP.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         positiveCRP.setText("Positive");
-        positiveCRP.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                positiveCRPActionPerformed(evt);
-            }
-        });
 
         tT4.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         tT4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -2482,21 +2325,19 @@ public class form_hasil extends javax.swing.JPanel {
                                 .addComponent(HbeAg, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(comboxHbeAg, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(mgIgG, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel9Layout.createSequentialGroup()
-                                        .addComponent(EA, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(tEA, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(ugEA, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel9Layout.createSequentialGroup()
-                                        .addComponent(AFP, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(tAFP, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(19, 19, 19)
-                                        .addComponent(ngAFP, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel9Layout.createSequentialGroup()
+                                    .addComponent(EA, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(tEA, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(ugEA, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel9Layout.createSequentialGroup()
+                                    .addComponent(AFP, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(tAFP, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(19, 19, 19)
+                                    .addComponent(ngAFP, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addComponent(mgIgA, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGroup(jPanel9Layout.createSequentialGroup()
                                     .addComponent(tIgM, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2505,7 +2346,13 @@ public class form_hasil extends javax.swing.JPanel {
                                 .addGroup(jPanel9Layout.createSequentialGroup()
                                     .addComponent(tIgE, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGap(18, 18, 18)
-                                    .addComponent(mgIgE, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(mgIgE, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(jPanel9Layout.createSequentialGroup()
+                                    .addComponent(IgG, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(tIgG, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(mgIgG, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                 .addGroup(jPanel9Layout.createSequentialGroup()
                                     .addComponent(pemeriksaan1, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2595,10 +2442,6 @@ public class form_hasil extends javax.swing.JPanel {
                         .addComponent(IgA, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(tIgA, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel9Layout.createSequentialGroup()
-                        .addComponent(IgG, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(tIgG, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(IgE, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(judul, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(0, 0, 0))
@@ -3123,95 +2966,30 @@ public class form_hasil extends javax.swing.JPanel {
         jLabel58.setVerifyInputWhenFocusTarget(false);
 
         bilirubin.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        bilirubin.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bilirubinActionPerformed(evt);
-            }
-        });
 
         jTextField3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
-            }
-        });
 
         jTextField4.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField4ActionPerformed(evt);
-            }
-        });
 
         jTextField6.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField6ActionPerformed(evt);
-            }
-        });
 
         jTextField5.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField5ActionPerformed(evt);
-            }
-        });
 
         jTextField7.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField7ActionPerformed(evt);
-            }
-        });
 
         jTextField8.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField8ActionPerformed(evt);
-            }
-        });
 
         jTextField9.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField9.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField9ActionPerformed(evt);
-            }
-        });
 
         jTextField10.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField10.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField10ActionPerformed(evt);
-            }
-        });
 
         jTextField11.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField11.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField11ActionPerformed(evt);
-            }
-        });
 
         jTextField12.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField12.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField12ActionPerformed(evt);
-            }
-        });
 
         jTextField13.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField13.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField13ActionPerformed(evt);
-            }
-        });
 
         jTextField14.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField14.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField14ActionPerformed(evt);
-            }
-        });
 
         jTextField15.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jTextField15.addActionListener(new java.awt.event.ActionListener() {
@@ -3234,11 +3012,6 @@ public class form_hasil extends javax.swing.JPanel {
         jLabel61.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jTextField56.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField56.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField56ActionPerformed(evt);
-            }
-        });
 
         jLabel62.setBackground(java.awt.Color.white);
         jLabel62.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
@@ -3264,11 +3037,6 @@ public class form_hasil extends javax.swing.JPanel {
         jLabel64.setVerifyInputWhenFocusTarget(false);
 
         bilirubin1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        bilirubin1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bilirubin1ActionPerformed(evt);
-            }
-        });
 
         jLabel44.setBackground(java.awt.Color.white);
         jLabel44.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
@@ -3285,88 +3053,28 @@ public class form_hasil extends javax.swing.JPanel {
         jLabel45.setVerifyInputWhenFocusTarget(false);
 
         bilirubin2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        bilirubin2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bilirubin2ActionPerformed(evt);
-            }
-        });
 
         bilirubin3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        bilirubin3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bilirubin3ActionPerformed(evt);
-            }
-        });
 
         bilirubin4.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        bilirubin4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bilirubin4ActionPerformed(evt);
-            }
-        });
 
         bilirubin5.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        bilirubin5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bilirubin5ActionPerformed(evt);
-            }
-        });
 
         bilirubin6.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        bilirubin6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bilirubin6ActionPerformed(evt);
-            }
-        });
 
         bilirubin7.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        bilirubin7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bilirubin7ActionPerformed(evt);
-            }
-        });
 
         bilirubin8.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        bilirubin8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bilirubin8ActionPerformed(evt);
-            }
-        });
 
         bilirubin9.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        bilirubin9.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bilirubin9ActionPerformed(evt);
-            }
-        });
 
         bilirubin10.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        bilirubin10.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bilirubin10ActionPerformed(evt);
-            }
-        });
 
         bilirubin11.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        bilirubin11.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bilirubin11ActionPerformed(evt);
-            }
-        });
 
         bilirubin12.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        bilirubin12.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bilirubin12ActionPerformed(evt);
-            }
-        });
 
         bilirubin13.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        bilirubin13.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bilirubin13ActionPerformed(evt);
-            }
-        });
 
         jLabel65.setBackground(java.awt.Color.white);
         jLabel65.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
@@ -3383,18 +3091,8 @@ public class form_hasil extends javax.swing.JPanel {
         jLabel66.setVerifyInputWhenFocusTarget(false);
 
         bilirubin14.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        bilirubin14.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bilirubin14ActionPerformed(evt);
-            }
-        });
 
         bilirubin15.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        bilirubin15.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bilirubin15ActionPerformed(evt);
-            }
-        });
 
         jLabel67.setBackground(java.awt.Color.white);
         jLabel67.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
@@ -3404,11 +3102,6 @@ public class form_hasil extends javax.swing.JPanel {
         jLabel67.setVerifyInputWhenFocusTarget(false);
 
         bilirubin16.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        bilirubin16.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bilirubin16ActionPerformed(evt);
-            }
-        });
 
         jLabel46.setBackground(java.awt.Color.white);
         jLabel46.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
@@ -3714,7 +3407,7 @@ public class form_hasil extends javax.swing.JPanel {
                     .addComponent(jLabel40, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel45, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(bilirubin2, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -3873,7 +3566,7 @@ public class form_hasil extends javax.swing.JPanel {
             .addGroup(KIMIA1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(200, Short.MAX_VALUE))
+                .addContainerGap(205, Short.MAX_VALUE))
         );
 
         TabHasil.addTab("KIMIA 1", KIMIA1);
@@ -3980,116 +3673,36 @@ public class form_hasil extends javax.swing.JPanel {
         jLabel377.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jTextField23.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField23.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField23ActionPerformed(evt);
-            }
-        });
 
         jTextField24.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField24.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField24ActionPerformed(evt);
-            }
-        });
 
         jTextField25.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField25.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField25ActionPerformed(evt);
-            }
-        });
 
         jTextField26.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField26.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField26ActionPerformed(evt);
-            }
-        });
 
         jTextField27.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField27.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField27ActionPerformed(evt);
-            }
-        });
 
         jTextField28.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField28.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField28ActionPerformed(evt);
-            }
-        });
 
         jTextField29.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField29.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField29ActionPerformed(evt);
-            }
-        });
 
         jTextField30.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField30.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField30ActionPerformed(evt);
-            }
-        });
 
         jTextField31.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField31.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField31ActionPerformed(evt);
-            }
-        });
 
         jTextField32.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField32.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField32ActionPerformed(evt);
-            }
-        });
 
         jComboBox19.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "[-]/Neg", "[+]/Pos", "[++]/Pos", "[+++]/Pos", " " }));
-        jComboBox19.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox19ActionPerformed(evt);
-            }
-        });
 
         jComboBox20.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "[-]/Neg", "[+]/Pos", "[++]/Pos", "[+++]/Pos", " " }));
-        jComboBox20.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox20ActionPerformed(evt);
-            }
-        });
 
         jComboBox21.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "[-]/Neg", "[+]/Pos", "[++]/Pos", "[+++]/Pos", " " }));
-        jComboBox21.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox21ActionPerformed(evt);
-            }
-        });
 
         jComboBox22.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "[-]/Neg", "[+]/Pos", "[++]/Pos", "[+++]/Pos", " " }));
-        jComboBox22.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox22ActionPerformed(evt);
-            }
-        });
 
         jComboBox23.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "[-]/Neg", "[+]/Pos", "[++]/Pos", "[+++]/Pos", " " }));
-        jComboBox23.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox23ActionPerformed(evt);
-            }
-        });
 
         jComboBox24.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "[-]/Neg", "[+]/Pos", "[++]/Pos", "[+++]/Pos", " " }));
-        jComboBox24.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox24ActionPerformed(evt);
-            }
-        });
 
         jLabel378.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel378.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -4101,11 +3714,6 @@ public class form_hasil extends javax.swing.JPanel {
         jLabel379.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jTextField33.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField33.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField33ActionPerformed(evt);
-            }
-        });
 
         jLabel380.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel380.setText("<37 u/l [Laki] <31 [Per] ");
@@ -4116,11 +3724,6 @@ public class form_hasil extends javax.swing.JPanel {
         jLabel381.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jTextField34.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField34.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField34ActionPerformed(evt);
-            }
-        });
 
         jLabel382.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel382.setText("<42 u/l [Laki] <32 [Per] ");
@@ -4131,11 +3734,6 @@ public class form_hasil extends javax.swing.JPanel {
         jLabel383.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jTextField35.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField35.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField35ActionPerformed(evt);
-            }
-        });
 
         jLabel384.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel384.setText("120 - 240 u/l");
@@ -4150,22 +3748,12 @@ public class form_hasil extends javax.swing.JPanel {
         jLabel386.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jTextField36.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField36.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField36ActionPerformed(evt);
-            }
-        });
 
         jLabel387.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel387.setText("<html> Glycosylated Hemaglobin [HbA1] : </html>");
         jLabel387.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jTextField37.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField37.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField37ActionPerformed(evt);
-            }
-        });
 
         jLabel388.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel388.setText("%[N : 5-9]");
@@ -4176,11 +3764,6 @@ public class form_hasil extends javax.swing.JPanel {
         jLabel389.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jTextField38.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField38.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField38ActionPerformed(evt);
-            }
-        });
 
         jLabel390.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel390.setText("ml/menit [N:97-137] ");
@@ -4192,11 +3775,6 @@ public class form_hasil extends javax.swing.JPanel {
         jLabel391.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jTextField39.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField39.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField39ActionPerformed(evt);
-            }
-        });
 
         jLabel392.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel392.setText("mg/dl [N:0.5-1.5]");
@@ -4212,11 +3790,6 @@ public class form_hasil extends javax.swing.JPanel {
         jLabel394.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jTextField40.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField40.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField40ActionPerformed(evt);
-            }
-        });
 
         jLabel395.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel395.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -4224,11 +3797,6 @@ public class form_hasil extends javax.swing.JPanel {
         jLabel395.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jTextField41.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField41.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField41ActionPerformed(evt);
-            }
-        });
 
         jLabel396.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel396.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -4241,11 +3809,6 @@ public class form_hasil extends javax.swing.JPanel {
         jLabel397.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jTextField42.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField42.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField42ActionPerformed(evt);
-            }
-        });
 
         jLabel398.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel398.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -4253,11 +3816,6 @@ public class form_hasil extends javax.swing.JPanel {
         jLabel398.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jTextField43.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField43.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField43ActionPerformed(evt);
-            }
-        });
 
         jLabel399.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel399.setText("%[N : 70-110]");
@@ -4273,18 +3831,8 @@ public class form_hasil extends javax.swing.JPanel {
         jLabel401.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jTextField44.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField44.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField44ActionPerformed(evt);
-            }
-        });
 
         jTextField45.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField45.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField45ActionPerformed(evt);
-            }
-        });
 
         jLabel402.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel402.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -4297,11 +3845,6 @@ public class form_hasil extends javax.swing.JPanel {
         jLabel403.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jTextField46.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField46.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField46ActionPerformed(evt);
-            }
-        });
 
         jLabel404.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel404.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -4318,11 +3861,6 @@ public class form_hasil extends javax.swing.JPanel {
         jLabel406.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jTextField47.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField47.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField47ActionPerformed(evt);
-            }
-        });
 
         jLabel407.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel407.setText("mg/dl");
@@ -4334,11 +3872,6 @@ public class form_hasil extends javax.swing.JPanel {
         jLabel408.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jTextField48.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField48.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField48ActionPerformed(evt);
-            }
-        });
 
         jLabel409.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel409.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -4346,11 +3879,6 @@ public class form_hasil extends javax.swing.JPanel {
         jLabel409.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jTextField49.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField49.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField49ActionPerformed(evt);
-            }
-        });
 
         jLabel410.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel410.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -4363,18 +3891,8 @@ public class form_hasil extends javax.swing.JPanel {
         jLabel411.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jTextField50.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField50.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField50ActionPerformed(evt);
-            }
-        });
 
         jTextField51.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField51.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField51ActionPerformed(evt);
-            }
-        });
 
         jLabel412.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel412.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -4387,11 +3905,6 @@ public class form_hasil extends javax.swing.JPanel {
         jLabel413.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jTextField52.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField52.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField52ActionPerformed(evt);
-            }
-        });
 
         jLabel414.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel414.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -4412,11 +3925,6 @@ public class form_hasil extends javax.swing.JPanel {
         jLabel417.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jTextField53.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField53.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField53ActionPerformed(evt);
-            }
-        });
 
         jLabel418.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel418.setText("<html>28 u/l [Laki] <br> 18 u/l [Per] </html>");
@@ -4427,22 +3935,12 @@ public class form_hasil extends javax.swing.JPanel {
         jLabel419.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jTextField54.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField54.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField54ActionPerformed(evt);
-            }
-        });
 
         jLabel420.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel420.setText("CHE [cholin estetara]");
         jLabel420.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jTextField55.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField55.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField55ActionPerformed(evt);
-            }
-        });
 
         jLabel421.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel421.setText("3-9 k -u/l");
@@ -4958,72 +4456,38 @@ public class form_hasil extends javax.swing.JPanel {
         jLabel300.setText("MAKROSKOPI");
 
         jTextField1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
-            }
-        });
 
         jComboBox2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jComboBox2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox2ActionPerformed(evt);
-            }
-        });
 
         jRadioButton1.setBackground(new java.awt.Color(255, 255, 255));
+        t_lendir.add(jRadioButton1);
         jRadioButton1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jRadioButton1.setText("Neg");
-        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton1ActionPerformed(evt);
-            }
-        });
 
         jRadioButton2.setBackground(new java.awt.Color(255, 255, 255));
+        t_darah.add(jRadioButton2);
         jRadioButton2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jRadioButton2.setText("Neg");
-        jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton2ActionPerformed(evt);
-            }
-        });
 
         jRadioButton3.setBackground(new java.awt.Color(255, 255, 255));
+        t_nanah.add(jRadioButton3);
         jRadioButton3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jRadioButton3.setText("Neg");
-        jRadioButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton3ActionPerformed(evt);
-            }
-        });
 
         jRadioButton4.setBackground(new java.awt.Color(255, 255, 255));
+        t_lendir.add(jRadioButton4);
         jRadioButton4.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jRadioButton4.setText("Pos");
-        jRadioButton4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton4ActionPerformed(evt);
-            }
-        });
 
         jRadioButton5.setBackground(new java.awt.Color(255, 255, 255));
+        t_darah.add(jRadioButton5);
         jRadioButton5.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jRadioButton5.setText("Pos");
-        jRadioButton5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton5ActionPerformed(evt);
-            }
-        });
 
         jRadioButton6.setBackground(new java.awt.Color(255, 255, 255));
+        t_nanah.add(jRadioButton6);
         jRadioButton6.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jRadioButton6.setText("Pos");
-        jRadioButton6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton6ActionPerformed(evt);
-            }
-        });
 
         jLabel301.setBackground(new java.awt.Color(255, 255, 255));
         jLabel301.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -5085,110 +4549,50 @@ public class form_hasil extends javax.swing.JPanel {
         jRadioButton7.setBackground(new java.awt.Color(255, 255, 255));
         jRadioButton7.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jRadioButton7.setText("Neg");
-        jRadioButton7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton7ActionPerformed(evt);
-            }
-        });
 
         jRadioButton8.setBackground(new java.awt.Color(255, 255, 255));
         jRadioButton8.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jRadioButton8.setText("Neg");
-        jRadioButton8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton8ActionPerformed(evt);
-            }
-        });
 
         jRadioButton9.setBackground(new java.awt.Color(255, 255, 255));
         jRadioButton9.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jRadioButton9.setText("Neg");
-        jRadioButton9.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton9ActionPerformed(evt);
-            }
-        });
 
         jRadioButton10.setBackground(new java.awt.Color(255, 255, 255));
         jRadioButton10.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jRadioButton10.setText("Neg");
-        jRadioButton10.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton10ActionPerformed(evt);
-            }
-        });
 
         jRadioButton11.setBackground(new java.awt.Color(255, 255, 255));
         jRadioButton11.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jRadioButton11.setText("Neg");
-        jRadioButton11.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton11ActionPerformed(evt);
-            }
-        });
 
         jRadioButton12.setBackground(new java.awt.Color(255, 255, 255));
         jRadioButton12.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jRadioButton12.setText("Neg");
-        jRadioButton12.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton12ActionPerformed(evt);
-            }
-        });
 
         jRadioButton13.setBackground(new java.awt.Color(255, 255, 255));
         jRadioButton13.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jRadioButton13.setText("Pos");
-        jRadioButton13.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton13ActionPerformed(evt);
-            }
-        });
 
         jRadioButton14.setBackground(new java.awt.Color(255, 255, 255));
         jRadioButton14.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jRadioButton14.setText("Pos");
-        jRadioButton14.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton14ActionPerformed(evt);
-            }
-        });
 
         jRadioButton15.setBackground(new java.awt.Color(255, 255, 255));
         jRadioButton15.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jRadioButton15.setText("Pos");
-        jRadioButton15.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton15ActionPerformed(evt);
-            }
-        });
 
         jRadioButton16.setBackground(new java.awt.Color(255, 255, 255));
         jRadioButton16.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jRadioButton16.setText("Pos");
-        jRadioButton16.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton16ActionPerformed(evt);
-            }
-        });
 
         jRadioButton17.setBackground(new java.awt.Color(255, 255, 255));
         jRadioButton17.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jRadioButton17.setText("Pos");
-        jRadioButton17.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton17ActionPerformed(evt);
-            }
-        });
 
         jRadioButton18.setBackground(new java.awt.Color(255, 255, 255));
         jRadioButton18.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jRadioButton18.setText("Pos");
-        jRadioButton18.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton18ActionPerformed(evt);
-            }
-        });
 
         jLabel310.setBackground(new java.awt.Color(255, 255, 255));
         jLabel310.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -5238,94 +4642,44 @@ public class form_hasil extends javax.swing.JPanel {
         jRadioButton19.setBackground(new java.awt.Color(255, 255, 255));
         jRadioButton19.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jRadioButton19.setText("Neg");
-        jRadioButton19.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton19ActionPerformed(evt);
-            }
-        });
 
         jRadioButton20.setBackground(new java.awt.Color(255, 255, 255));
         lemak.add(jRadioButton20);
         jRadioButton20.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jRadioButton20.setText("Neg");
-        jRadioButton20.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton20ActionPerformed(evt);
-            }
-        });
 
         jRadioButton21.setBackground(new java.awt.Color(255, 255, 255));
         jRadioButton21.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jRadioButton21.setText("Neg");
-        jRadioButton21.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton21ActionPerformed(evt);
-            }
-        });
 
         jRadioButton22.setBackground(new java.awt.Color(255, 255, 255));
         jRadioButton22.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jRadioButton22.setText("Neg");
-        jRadioButton22.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton22ActionPerformed(evt);
-            }
-        });
 
         jRadioButton23.setBackground(new java.awt.Color(255, 255, 255));
         jRadioButton23.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jRadioButton23.setText("Neg");
-        jRadioButton23.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton23ActionPerformed(evt);
-            }
-        });
 
         jRadioButton24.setBackground(new java.awt.Color(255, 255, 255));
         jRadioButton24.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jRadioButton24.setText("Pos");
-        jRadioButton24.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton24ActionPerformed(evt);
-            }
-        });
 
         jRadioButton25.setBackground(new java.awt.Color(255, 255, 255));
         lemak.add(jRadioButton25);
         jRadioButton25.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jRadioButton25.setText("Pos");
-        jRadioButton25.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton25ActionPerformed(evt);
-            }
-        });
 
         jRadioButton26.setBackground(new java.awt.Color(255, 255, 255));
         jRadioButton26.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jRadioButton26.setText("Pos");
-        jRadioButton26.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton26ActionPerformed(evt);
-            }
-        });
 
         jRadioButton27.setBackground(new java.awt.Color(255, 255, 255));
         jRadioButton27.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jRadioButton27.setText("Pos");
-        jRadioButton27.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton27ActionPerformed(evt);
-            }
-        });
 
         jRadioButton28.setBackground(new java.awt.Color(255, 255, 255));
         jRadioButton28.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jRadioButton28.setText("Pos");
-        jRadioButton28.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton28ActionPerformed(evt);
-            }
-        });
 
         jLabel318.setBackground(new java.awt.Color(255, 255, 255));
         jLabel318.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
@@ -5755,529 +5109,9 @@ public class form_hasil extends javax.swing.JPanel {
         add(main_panel, "card2");
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jRadioButton28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton28ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton28ActionPerformed
-
-    private void jRadioButton27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton27ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton27ActionPerformed
-
-    private void jRadioButton26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton26ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton26ActionPerformed
-
-    private void jRadioButton25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton25ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton25ActionPerformed
-
-    private void jRadioButton24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton24ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton24ActionPerformed
-
-    private void jRadioButton23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton23ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton23ActionPerformed
-
-    private void jRadioButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton22ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton22ActionPerformed
-
-    private void jRadioButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton21ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton21ActionPerformed
-
-    private void jRadioButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton20ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton20ActionPerformed
-
-    private void jRadioButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton19ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton19ActionPerformed
-
-    private void jRadioButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton18ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton18ActionPerformed
-
-    private void jRadioButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton17ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton17ActionPerformed
-
-    private void jRadioButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton16ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton16ActionPerformed
-
-    private void jRadioButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton15ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton15ActionPerformed
-
-    private void jRadioButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton14ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton14ActionPerformed
-
-    private void jRadioButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton13ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton13ActionPerformed
-
-    private void jRadioButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton12ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton12ActionPerformed
-
-    private void jRadioButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton11ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton11ActionPerformed
-
-    private void jRadioButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton10ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton10ActionPerformed
-
-    private void jRadioButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton9ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton9ActionPerformed
-
-    private void jRadioButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton8ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton8ActionPerformed
-
-    private void jRadioButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton7ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton7ActionPerformed
-
-    private void jRadioButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton6ActionPerformed
-
-    private void jRadioButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton5ActionPerformed
-
-    private void jRadioButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton4ActionPerformed
-
-    private void jRadioButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton3ActionPerformed
-
-    private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton2ActionPerformed
-
-    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton1ActionPerformed
-
-    private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox2ActionPerformed
-
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
-
-    private void jTextField55ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField55ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField55ActionPerformed
-
-    private void jTextField54ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField54ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField54ActionPerformed
-
-    private void jTextField53ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField53ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField53ActionPerformed
-
-    private void jTextField52ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField52ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField52ActionPerformed
-
-    private void jTextField51ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField51ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField51ActionPerformed
-
-    private void jTextField50ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField50ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField50ActionPerformed
-
-    private void jTextField49ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField49ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField49ActionPerformed
-
-    private void jTextField48ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField48ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField48ActionPerformed
-
-    private void jTextField47ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField47ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField47ActionPerformed
-
-    private void jTextField46ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField46ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField46ActionPerformed
-
-    private void jTextField45ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField45ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField45ActionPerformed
-
-    private void jTextField44ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField44ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField44ActionPerformed
-
-    private void jTextField43ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField43ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField43ActionPerformed
-
-    private void jTextField42ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField42ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField42ActionPerformed
-
-    private void jTextField41ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField41ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField41ActionPerformed
-
-    private void jTextField40ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField40ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField40ActionPerformed
-
-    private void jTextField39ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField39ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField39ActionPerformed
-
-    private void jTextField38ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField38ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField38ActionPerformed
-
-    private void jTextField37ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField37ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField37ActionPerformed
-
-    private void jTextField36ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField36ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField36ActionPerformed
-
-    private void jTextField35ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField35ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField35ActionPerformed
-
-    private void jTextField34ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField34ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField34ActionPerformed
-
-    private void jTextField33ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField33ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField33ActionPerformed
-
-    private void jComboBox24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox24ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox24ActionPerformed
-
-    private void jComboBox23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox23ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox23ActionPerformed
-
-    private void jComboBox22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox22ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox22ActionPerformed
-
-    private void jComboBox21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox21ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox21ActionPerformed
-
-    private void jComboBox20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox20ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox20ActionPerformed
-
-    private void jComboBox19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox19ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox19ActionPerformed
-
-    private void jTextField32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField32ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField32ActionPerformed
-
-    private void jTextField31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField31ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField31ActionPerformed
-
-    private void jTextField30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField30ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField30ActionPerformed
-
-    private void jTextField29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField29ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField29ActionPerformed
-
-    private void jTextField28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField28ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField28ActionPerformed
-
-    private void jTextField27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField27ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField27ActionPerformed
-
-    private void jTextField26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField26ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField26ActionPerformed
-
-    private void jTextField25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField25ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField25ActionPerformed
-
-    private void jTextField24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField24ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField24ActionPerformed
-
-    private void jTextField23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField23ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField23ActionPerformed
-
-    private void bilirubin16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bilirubin16ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_bilirubin16ActionPerformed
-
-    private void bilirubin15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bilirubin15ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_bilirubin15ActionPerformed
-
-    private void bilirubin14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bilirubin14ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_bilirubin14ActionPerformed
-
-    private void bilirubin13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bilirubin13ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_bilirubin13ActionPerformed
-
-    private void bilirubin12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bilirubin12ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_bilirubin12ActionPerformed
-
-    private void bilirubin11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bilirubin11ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_bilirubin11ActionPerformed
-
-    private void bilirubin10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bilirubin10ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_bilirubin10ActionPerformed
-
-    private void bilirubin9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bilirubin9ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_bilirubin9ActionPerformed
-
-    private void bilirubin8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bilirubin8ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_bilirubin8ActionPerformed
-
-    private void bilirubin7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bilirubin7ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_bilirubin7ActionPerformed
-
-    private void bilirubin6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bilirubin6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_bilirubin6ActionPerformed
-
-    private void bilirubin5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bilirubin5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_bilirubin5ActionPerformed
-
-    private void bilirubin4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bilirubin4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_bilirubin4ActionPerformed
-
-    private void bilirubin3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bilirubin3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_bilirubin3ActionPerformed
-
-    private void bilirubin2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bilirubin2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_bilirubin2ActionPerformed
-
-    private void bilirubin1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bilirubin1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_bilirubin1ActionPerformed
-
-    private void jTextField56ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField56ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField56ActionPerformed
-
     private void jTextField15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField15ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField15ActionPerformed
-
-    private void jTextField14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField14ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField14ActionPerformed
-
-    private void jTextField13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField13ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField13ActionPerformed
-
-    private void jTextField12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField12ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField12ActionPerformed
-
-    private void jTextField11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField11ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField11ActionPerformed
-
-    private void jTextField10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField10ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField10ActionPerformed
-
-    private void jTextField9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField9ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField9ActionPerformed
-
-    private void jTextField8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField8ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField8ActionPerformed
-
-    private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField7ActionPerformed
-
-    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField5ActionPerformed
-
-    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField6ActionPerformed
-
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
-
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
-
-    private void bilirubinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bilirubinActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_bilirubinActionPerformed
-
-    private void positiveCRPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_positiveCRPActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_positiveCRPActionPerformed
-
-    private void comboxTyphusHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboxTyphusHActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_comboxTyphusHActionPerformed
-
-    private void positivetpha3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_positivetpha3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_positivetpha3ActionPerformed
-
-    private void positivetpha2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_positivetpha2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_positivetpha2ActionPerformed
-
-    private void txtGolDarahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtGolDarahActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtGolDarahActionPerformed
-
-    private void txtMalariaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMalariaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtMalariaActionPerformed
-
-    private void txtReaksiLEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtReaksiLEActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtReaksiLEActionPerformed
-
-    private void txtSelLEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSelLEActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtSelLEActionPerformed
-
-    private void txtResistensiOsmotikActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtResistensiOsmotikActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtResistensiOsmotikActionPerformed
-
-    private void txtRetraksiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtRetraksiActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtRetraksiActionPerformed
-
-    private void txtPembendunganActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPembendunganActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtPembendunganActionPerformed
-
-    private void txtMasaPembekuanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMasaPembekuanActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtMasaPembekuanActionPerformed
-
-    private void txtMasaPendarahanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMasaPendarahanActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtMasaPendarahanActionPerformed
-
-    private void txtTrombositActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTrombositActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtTrombositActionPerformed
-
-    private void txtWestergrenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtWestergrenActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtWestergrenActionPerformed
-
-    private void txtMonositActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMonositActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtMonositActionPerformed
-
-    private void txtLimfositActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtLimfositActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtLimfositActionPerformed
-
-    private void txtSegmenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSegmenActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtSegmenActionPerformed
-
-    private void txtBatangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtBatangActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtBatangActionPerformed
-
-    private void txtEosinofilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEosinofilActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtEosinofilActionPerformed
-
-    private void txtBasofilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtBasofilActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtBasofilActionPerformed
-
-    private void txtLeukositActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtLeukositActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtLeukositActionPerformed
-
-    private void txtRetikulositActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtRetikulositActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtRetikulositActionPerformed
-
-    private void txtKHER_MCHCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtKHER_MCHCActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtKHER_MCHCActionPerformed
-
-    private void txtHER_MCHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtHER_MCHActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtHER_MCHActionPerformed
-
-    private void txtVER_MCHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtVER_MCHActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtVER_MCHActionPerformed
-
-    private void txtEritrositActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEritrositActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtEritrositActionPerformed
-
-    private void txtHematokritActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtHematokritActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtHematokritActionPerformed
-
-    private void txtLEDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtLEDActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtLEDActionPerformed
-
-    private void txtHemoglobinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtHemoglobinActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtHemoglobinActionPerformed
-
-    private void u_warnaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_u_warnaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_u_warnaActionPerformed
 
     private void cn_kimia3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cn_kimia3ActionPerformed
         // TODO add your handling code here:
@@ -6336,16 +5170,13 @@ try (PreparedStatement ps = kon.prepareStatement(sql)) {
 }
     }//GEN-LAST:event_sv_urineActionPerformed
 
-    private void u_BjenisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_u_BjenisActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_u_BjenisActionPerformed
-
     private void sv_hematologiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sv_hematologiActionPerformed
         // TODO add your handling code here:
         try {
-        String sql = "INSERT INTO pemeriksaan_hematologi (id_pendaftaran, hemoglobin, hematokrit, eritrosit, mch, mch_her, mchc, " +
-                "retikulosit, leukosit, basofil, eosinofil, batang, segmen, limfosit, monosit, laju_endap, westergren, trombosit, " +
-                "masa_pendarahan, masa_pembekuan, pembendungan, retraksi, resistensi_osmotik, sel_le, reaksi_le, malaria, gol_darah) " +
+        String sql = "INSERT INTO hasil_hematologi (id_pendaftaran, hemoglobin, hematokrit, eritrosit, mch, her, mchc, " +
+                "retikulosit, leukosit, basofil, eosinofil, batang, segmen, limfosit, monosit, led_wintrobe, westergren, trombosit, " +
+                "masa_pendarahan, masa_pembekuan, percobaan_pembendungan, retraksi_bekuan, resistensi_osmotik, " +
+                "sel_le, reaksi_le, malaria, gol_darah) " +
                 "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         Connection kon = koneksi.koneksiDb();
         PreparedStatement ps = kon.prepareStatement(sql);
@@ -6882,6 +5713,9 @@ try (PreparedStatement ps = kon.prepareStatement(sql)) {
     private javax.swing.JTextField tT3uptake;
     private javax.swing.JTextField tT4;
     private javax.swing.JTextField tTSH;
+    private javax.swing.ButtonGroup t_darah;
+    private javax.swing.ButtonGroup t_lendir;
+    private javax.swing.ButtonGroup t_nanah;
     private javax.swing.JTable tb_rincian;
     private javax.swing.ButtonGroup tes_kehamilan;
     private javax.swing.JLabel tpha;
