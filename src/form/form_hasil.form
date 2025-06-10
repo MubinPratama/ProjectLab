@@ -2,7 +2,7 @@
 
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
   <NonVisualComponents>
-    <Component class="javax.swing.ButtonGroup" name="lemak">
+    <Component class="javax.swing.ButtonGroup" name="groupLemak">
     </Component>
     <Component class="javax.swing.ButtonGroup" name="groupEsbach">
     </Component>
@@ -16,11 +16,11 @@
     </Component>
     <Component class="javax.swing.ButtonGroup" name="groupSilinder">
     </Component>
-    <Component class="javax.swing.ButtonGroup" name="t_lendir">
+    <Component class="javax.swing.ButtonGroup" name="groupLendir">
     </Component>
-    <Component class="javax.swing.ButtonGroup" name="t_darah">
+    <Component class="javax.swing.ButtonGroup" name="groupDarah">
     </Component>
-    <Component class="javax.swing.ButtonGroup" name="t_nanah">
+    <Component class="javax.swing.ButtonGroup" name="groupNanah">
     </Component>
     <Component class="javax.swing.ButtonGroup" name="groupTPHA">
     </Component>
@@ -33,6 +33,26 @@
     <Component class="javax.swing.ButtonGroup" name="groupCRP">
     </Component>
     <Component class="javax.swing.ButtonGroup" name="groupRAF">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="groupEcoli">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="groupEhistolytica">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="groupTelor">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="groupAnky">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="groupTrichiuris">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="groupLain">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="groupAmylum">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="groupSerat">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="groupSeratotot">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="groupDasar">
     </Component>
   </NonVisualComponents>
   <AuxValues>
@@ -7178,15 +7198,15 @@
                                                               </Group>
                                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                                                  <Component id="jRadioButton4" alignment="0" max="32767" attributes="0"/>
-                                                                  <Component id="jRadioButton5" alignment="0" max="32767" attributes="0"/>
-                                                                  <Component id="jRadioButton6" alignment="0" min="-2" pref="73" max="-2" attributes="0"/>
+                                                                  <Component id="TLendir" alignment="0" max="32767" attributes="0"/>
+                                                                  <Component id="TDarah" alignment="0" max="32767" attributes="0"/>
+                                                                  <Component id="TNanah" alignment="0" min="-2" pref="73" max="-2" attributes="0"/>
                                                               </Group>
                                                           </Group>
                                                           <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                                                              <Component id="jTextField1" alignment="0" max="32767" attributes="0"/>
+                                                              <Component id="TWarna" alignment="0" max="32767" attributes="0"/>
                                                               <Component id="jLabel300" alignment="0" max="32767" attributes="0"/>
-                                                              <Component id="jComboBox2" min="-2" pref="145" max="-2" attributes="0"/>
+                                                              <Component id="TKonsistensi" min="-2" pref="145" max="-2" attributes="0"/>
                                                           </Group>
                                                       </Group>
                                                       <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
@@ -7213,15 +7233,15 @@
                                                                       <Group type="102" alignment="1" attributes="0">
                                                                           <Component id="jRadioButton8" min="-2" pref="66" max="-2" attributes="0"/>
                                                                           <EmptySpace max="-2" attributes="0"/>
-                                                                          <Component id="jRadioButton14" max="32767" attributes="0"/>
+                                                                          <Component id="TEhistolytica" max="32767" attributes="0"/>
                                                                       </Group>
                                                                       <Group type="102" alignment="1" attributes="0">
                                                                           <Component id="jRadioButton7" min="-2" pref="66" max="-2" attributes="0"/>
                                                                           <EmptySpace max="-2" attributes="0"/>
-                                                                          <Component id="jRadioButton13" max="32767" attributes="0"/>
+                                                                          <Component id="TEcoli" max="32767" attributes="0"/>
                                                                       </Group>
-                                                                      <Component id="jTextField22" alignment="0" max="32767" attributes="0"/>
-                                                                      <Component id="jTextField2" alignment="0" max="32767" attributes="0"/>
+                                                                      <Component id="TEritrosit" alignment="0" max="32767" attributes="0"/>
+                                                                      <Component id="TLekosit" alignment="0" max="32767" attributes="0"/>
                                                                       <Group type="102" alignment="0" attributes="0">
                                                                           <Group type="103" groupAlignment="1" attributes="0">
                                                                               <Component id="jRadioButton12" max="32767" attributes="0"/>
@@ -7230,9 +7250,9 @@
                                                                           </Group>
                                                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                                                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                                                              <Component id="jRadioButton17" alignment="0" max="32767" attributes="0"/>
-                                                                              <Component id="jRadioButton16" alignment="0" max="32767" attributes="0"/>
-                                                                              <Component id="jRadioButton18" min="-2" pref="74" max="-2" attributes="0"/>
+                                                                              <Component id="TTrichiuris" alignment="0" max="32767" attributes="0"/>
+                                                                              <Component id="TAnkylotoma" alignment="0" max="32767" attributes="0"/>
+                                                                              <Component id="TLL" min="-2" pref="74" max="-2" attributes="0"/>
                                                                           </Group>
                                                                           <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
                                                                       </Group>
@@ -7240,7 +7260,7 @@
                                                                   <Group type="102" alignment="0" attributes="0">
                                                                       <Component id="jRadioButton9" min="-2" pref="66" max="-2" attributes="0"/>
                                                                       <EmptySpace max="-2" attributes="0"/>
-                                                                      <Component id="jRadioButton15" min="-2" pref="76" max="-2" attributes="0"/>
+                                                                      <Component id="TTelurcacing" min="-2" pref="76" max="-2" attributes="0"/>
                                                                   </Group>
                                                               </Group>
                                                           </Group>
@@ -7266,11 +7286,11 @@
                                                               </Group>
                                                               <EmptySpace max="-2" attributes="0"/>
                                                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                                                  <Component id="jRadioButton25" alignment="0" min="-2" pref="79" max="-2" attributes="0"/>
-                                                                  <Component id="jRadioButton26" alignment="0" min="-2" pref="79" max="-2" attributes="0"/>
-                                                                  <Component id="jRadioButton27" alignment="0" min="-2" pref="79" max="-2" attributes="0"/>
-                                                                  <Component id="jRadioButton28" alignment="0" min="-2" pref="79" max="-2" attributes="0"/>
-                                                                  <Component id="jRadioButton24" alignment="0" min="-2" pref="79" max="-2" attributes="0"/>
+                                                                  <Component id="TLemak" alignment="0" min="-2" pref="79" max="-2" attributes="0"/>
+                                                                  <Component id="TSerat" alignment="0" min="-2" pref="79" max="-2" attributes="0"/>
+                                                                  <Component id="TSeratotot" alignment="0" min="-2" pref="79" max="-2" attributes="0"/>
+                                                                  <Component id="TDarahsamar" alignment="0" min="-2" pref="79" max="-2" attributes="0"/>
+                                                                  <Component id="TAmylum" alignment="0" min="-2" pref="79" max="-2" attributes="0"/>
                                                               </Group>
                                                           </Group>
                                                           <Component id="jLabel312" min="-2" pref="145" max="-2" attributes="0"/>
@@ -7336,21 +7356,21 @@
                                                   <Group type="103" groupAlignment="0" attributes="0">
                                                       <Group type="102" alignment="0" attributes="0">
                                                           <EmptySpace min="-2" pref="148" max="-2" attributes="0"/>
-                                                          <Component id="jRadioButton28" min="-2" pref="31" max="-2" attributes="0"/>
+                                                          <Component id="TDarahsamar" min="-2" pref="31" max="-2" attributes="0"/>
                                                       </Group>
                                                       <Group type="102" alignment="0" attributes="0">
                                                           <EmptySpace min="-2" pref="111" max="-2" attributes="0"/>
-                                                          <Component id="jRadioButton27" min="-2" pref="31" max="-2" attributes="0"/>
+                                                          <Component id="TSeratotot" min="-2" pref="31" max="-2" attributes="0"/>
                                                       </Group>
                                                       <Group type="102" alignment="0" attributes="0">
                                                           <EmptySpace min="-2" pref="74" max="-2" attributes="0"/>
-                                                          <Component id="jRadioButton26" min="-2" pref="31" max="-2" attributes="0"/>
+                                                          <Component id="TSerat" min="-2" pref="31" max="-2" attributes="0"/>
                                                       </Group>
                                                       <Group type="102" alignment="0" attributes="0">
                                                           <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
-                                                          <Component id="jRadioButton25" min="-2" pref="31" max="-2" attributes="0"/>
+                                                          <Component id="TLemak" min="-2" pref="31" max="-2" attributes="0"/>
                                                       </Group>
-                                                      <Component id="jRadioButton24" alignment="0" min="-2" pref="31" max="-2" attributes="0"/>
+                                                      <Component id="TAmylum" alignment="0" min="-2" pref="31" max="-2" attributes="0"/>
                                                       <Group type="103" alignment="0" groupAlignment="3" attributes="0">
                                                           <Component id="jLabel313" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
                                                           <Component id="jRadioButton19" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
@@ -7360,19 +7380,19 @@
                                               <Group type="102" alignment="0" attributes="0">
                                                   <Component id="jLabel300" min="-2" pref="31" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="jTextField1" min="-2" pref="31" max="-2" attributes="0"/>
+                                                  <Component id="TWarna" min="-2" pref="31" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="jComboBox2" min="-2" pref="31" max="-2" attributes="0"/>
+                                                  <Component id="TKonsistensi" min="-2" pref="31" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="2" attributes="0">
                                                       <Component id="jRadioButton1" alignment="2" min="-2" pref="31" max="-2" attributes="0"/>
-                                                      <Component id="jRadioButton4" alignment="2" min="-2" pref="31" max="-2" attributes="0"/>
+                                                      <Component id="TLendir" alignment="2" min="-2" pref="31" max="-2" attributes="0"/>
                                                       <Component id="jLabel297" alignment="2" min="-2" pref="31" max="-2" attributes="0"/>
                                                   </Group>
                                                   <EmptySpace max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="2" attributes="0">
                                                       <Component id="jRadioButton2" alignment="2" min="-2" pref="31" max="-2" attributes="0"/>
-                                                      <Component id="jRadioButton5" alignment="2" min="-2" pref="31" max="-2" attributes="0"/>
+                                                      <Component id="TDarah" alignment="2" min="-2" pref="31" max="-2" attributes="0"/>
                                                       <Component id="jLabel298" alignment="2" min="-2" pref="31" max="-2" attributes="0"/>
                                                   </Group>
                                                   <EmptySpace max="-2" attributes="0"/>
@@ -7381,7 +7401,7 @@
                                                           <Component id="jRadioButton3" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
                                                           <Component id="jLabel299" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
                                                       </Group>
-                                                      <Component id="jRadioButton6" min="-2" pref="31" max="-2" attributes="0"/>
+                                                      <Component id="TNanah" min="-2" pref="31" max="-2" attributes="0"/>
                                                   </Group>
                                               </Group>
                                               <Group type="102" alignment="0" attributes="0">
@@ -7402,18 +7422,18 @@
                                                           <EmptySpace min="184" pref="184" max="-2" attributes="0"/>
                                                           <Group type="103" groupAlignment="2" attributes="0">
                                                               <Component id="jRadioButton10" alignment="2" min="-2" pref="31" max="-2" attributes="0"/>
-                                                              <Component id="jRadioButton16" alignment="2" min="-2" pref="31" max="-2" attributes="0"/>
+                                                              <Component id="TAnkylotoma" alignment="2" min="-2" pref="31" max="-2" attributes="0"/>
                                                               <Component id="jLabel307" alignment="2" min="-2" pref="31" max="-2" attributes="0"/>
                                                           </Group>
                                                           <EmptySpace max="-2" attributes="0"/>
                                                           <Group type="103" groupAlignment="2" attributes="0">
                                                               <Component id="jLabel308" alignment="2" min="-2" pref="31" max="-2" attributes="0"/>
                                                               <Component id="jRadioButton11" alignment="2" min="-2" pref="31" max="-2" attributes="0"/>
-                                                              <Component id="jRadioButton17" alignment="2" min="-2" pref="31" max="-2" attributes="0"/>
+                                                              <Component id="TTrichiuris" alignment="2" min="-2" pref="31" max="-2" attributes="0"/>
                                                           </Group>
                                                           <EmptySpace max="-2" attributes="0"/>
                                                           <Group type="103" groupAlignment="2" attributes="0">
-                                                              <Component id="jRadioButton18" alignment="2" min="-2" pref="31" max="-2" attributes="0"/>
+                                                              <Component id="TLL" alignment="2" min="-2" pref="31" max="-2" attributes="0"/>
                                                               <Component id="jRadioButton12" alignment="2" min="-2" pref="31" max="-2" attributes="0"/>
                                                               <Component id="jLabel309" alignment="2" min="-2" pref="31" max="-2" attributes="0"/>
                                                           </Group>
@@ -7438,14 +7458,14 @@
                                                       <Group type="102" alignment="0" attributes="0">
                                                           <EmptySpace min="-2" pref="148" max="-2" attributes="0"/>
                                                           <Group type="103" groupAlignment="0" attributes="0">
-                                                              <Component id="jRadioButton15" min="-2" pref="31" max="-2" attributes="0"/>
+                                                              <Component id="TTelurcacing" min="-2" pref="31" max="-2" attributes="0"/>
                                                               <Component id="jRadioButton9" min="-2" pref="31" max="-2" attributes="0"/>
                                                           </Group>
                                                       </Group>
-                                                      <Component id="jTextField2" alignment="0" min="-2" pref="31" max="-2" attributes="0"/>
+                                                      <Component id="TLekosit" alignment="0" min="-2" pref="31" max="-2" attributes="0"/>
                                                       <Group type="102" alignment="0" attributes="0">
                                                           <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
-                                                          <Component id="jTextField22" min="-2" pref="31" max="-2" attributes="0"/>
+                                                          <Component id="TEritrosit" min="-2" pref="31" max="-2" attributes="0"/>
                                                       </Group>
                                                       <Group type="102" alignment="0" attributes="0">
                                                           <EmptySpace min="-2" pref="74" max="-2" attributes="0"/>
@@ -7453,7 +7473,7 @@
                                                       </Group>
                                                       <Group type="102" alignment="0" attributes="0">
                                                           <EmptySpace min="-2" pref="74" max="-2" attributes="0"/>
-                                                          <Component id="jRadioButton13" min="-2" pref="31" max="-2" attributes="0"/>
+                                                          <Component id="TEcoli" min="-2" pref="31" max="-2" attributes="0"/>
                                                       </Group>
                                                       <Group type="102" alignment="0" attributes="0">
                                                           <EmptySpace min="-2" pref="111" max="-2" attributes="0"/>
@@ -7461,7 +7481,7 @@
                                                       </Group>
                                                       <Group type="102" alignment="0" attributes="0">
                                                           <EmptySpace min="-2" pref="111" max="-2" attributes="0"/>
-                                                          <Component id="jRadioButton14" min="-2" pref="31" max="-2" attributes="0"/>
+                                                          <Component id="TEhistolytica" min="-2" pref="31" max="-2" attributes="0"/>
                                                       </Group>
                                                   </Group>
                                               </Group>
@@ -7598,20 +7618,25 @@
                                     <Property name="text" type="java.lang.String" value="MAKROSKOPI"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JTextField" name="jTextField1">
+                                <Component class="javax.swing.JTextField" name="TWarna">
                                   <Properties>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="12" style="0"/>
                                     </Property>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JComboBox" name="jComboBox2">
+                                <Component class="javax.swing.JComboBox" name="TKonsistensi">
                                   <Properties>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="12" style="0"/>
                                     </Property>
                                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                                      <StringArray count="0"/>
+                                      <StringArray count="4">
+                                        <StringItem index="0" value=" "/>
+                                        <StringItem index="1" value="Encer"/>
+                                        <StringItem index="2" value="Lembek"/>
+                                        <StringItem index="3" value="Padat"/>
+                                      </StringArray>
                                     </Property>
                                   </Properties>
                                   <AuxValues>
@@ -7624,7 +7649,7 @@
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
                                     </Property>
                                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                                      <ComponentRef name="t_lendir"/>
+                                      <ComponentRef name="groupLendir"/>
                                     </Property>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="12" style="0"/>
@@ -7638,7 +7663,7 @@
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
                                     </Property>
                                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                                      <ComponentRef name="t_darah"/>
+                                      <ComponentRef name="groupDarah"/>
                                     </Property>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="12" style="0"/>
@@ -7652,7 +7677,7 @@
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
                                     </Property>
                                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                                      <ComponentRef name="t_nanah"/>
+                                      <ComponentRef name="groupNanah"/>
                                     </Property>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="12" style="0"/>
@@ -7660,13 +7685,13 @@
                                     <Property name="text" type="java.lang.String" value="Neg"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JRadioButton" name="jRadioButton4">
+                                <Component class="javax.swing.JRadioButton" name="TLendir">
                                   <Properties>
                                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
                                     </Property>
                                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                                      <ComponentRef name="t_lendir"/>
+                                      <ComponentRef name="groupLendir"/>
                                     </Property>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="12" style="0"/>
@@ -7674,13 +7699,13 @@
                                     <Property name="text" type="java.lang.String" value="Pos"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JRadioButton" name="jRadioButton5">
+                                <Component class="javax.swing.JRadioButton" name="TDarah">
                                   <Properties>
                                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
                                     </Property>
                                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                                      <ComponentRef name="t_darah"/>
+                                      <ComponentRef name="groupDarah"/>
                                     </Property>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="12" style="0"/>
@@ -7688,13 +7713,13 @@
                                     <Property name="text" type="java.lang.String" value="Pos"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JRadioButton" name="jRadioButton6">
+                                <Component class="javax.swing.JRadioButton" name="TNanah">
                                   <Properties>
                                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
                                     </Property>
                                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                                      <ComponentRef name="t_nanah"/>
+                                      <ComponentRef name="groupNanah"/>
                                     </Property>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="12" style="0"/>
@@ -7850,14 +7875,14 @@
                                     </Property>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JTextField" name="jTextField2">
+                                <Component class="javax.swing.JTextField" name="TLekosit">
                                   <Properties>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="12" style="0"/>
                                     </Property>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JTextField" name="jTextField22">
+                                <Component class="javax.swing.JTextField" name="TEritrosit">
                                   <Properties>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="12" style="0"/>
@@ -7868,6 +7893,9 @@
                                   <Properties>
                                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                                    </Property>
+                                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                                      <ComponentRef name="groupEcoli"/>
                                     </Property>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="12" style="0"/>
@@ -7880,6 +7908,9 @@
                                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
                                     </Property>
+                                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                                      <ComponentRef name="groupEhistolytica"/>
+                                    </Property>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="12" style="0"/>
                                     </Property>
@@ -7890,6 +7921,9 @@
                                   <Properties>
                                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                                    </Property>
+                                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                                      <ComponentRef name="groupTelor"/>
                                     </Property>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="12" style="0"/>
@@ -7902,6 +7936,9 @@
                                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
                                     </Property>
+                                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                                      <ComponentRef name="groupAnky"/>
+                                    </Property>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="12" style="0"/>
                                     </Property>
@@ -7912,6 +7949,9 @@
                                   <Properties>
                                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                                    </Property>
+                                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                                      <ComponentRef name="groupTrichiuris"/>
                                     </Property>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="12" style="0"/>
@@ -7924,16 +7964,22 @@
                                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
                                     </Property>
+                                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                                      <ComponentRef name="groupLain"/>
+                                    </Property>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="12" style="0"/>
                                     </Property>
                                     <Property name="text" type="java.lang.String" value="Neg"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JRadioButton" name="jRadioButton13">
+                                <Component class="javax.swing.JRadioButton" name="TEcoli">
                                   <Properties>
                                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                                    </Property>
+                                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                                      <ComponentRef name="groupEcoli"/>
                                     </Property>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="12" style="0"/>
@@ -7941,10 +7987,13 @@
                                     <Property name="text" type="java.lang.String" value="Pos"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JRadioButton" name="jRadioButton14">
+                                <Component class="javax.swing.JRadioButton" name="TEhistolytica">
                                   <Properties>
                                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                                    </Property>
+                                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                                      <ComponentRef name="groupEhistolytica"/>
                                     </Property>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="12" style="0"/>
@@ -7952,10 +8001,13 @@
                                     <Property name="text" type="java.lang.String" value="Pos"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JRadioButton" name="jRadioButton15">
+                                <Component class="javax.swing.JRadioButton" name="TTelurcacing">
                                   <Properties>
                                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                                    </Property>
+                                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                                      <ComponentRef name="groupTelor"/>
                                     </Property>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="12" style="0"/>
@@ -7963,10 +8015,13 @@
                                     <Property name="text" type="java.lang.String" value="Pos"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JRadioButton" name="jRadioButton16">
+                                <Component class="javax.swing.JRadioButton" name="TAnkylotoma">
                                   <Properties>
                                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                                    </Property>
+                                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                                      <ComponentRef name="groupAnky"/>
                                     </Property>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="12" style="0"/>
@@ -7974,10 +8029,13 @@
                                     <Property name="text" type="java.lang.String" value="Pos"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JRadioButton" name="jRadioButton17">
+                                <Component class="javax.swing.JRadioButton" name="TTrichiuris">
                                   <Properties>
                                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                                    </Property>
+                                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                                      <ComponentRef name="groupTrichiuris"/>
                                     </Property>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="12" style="0"/>
@@ -7985,10 +8043,13 @@
                                     <Property name="text" type="java.lang.String" value="Pos"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JRadioButton" name="jRadioButton18">
+                                <Component class="javax.swing.JRadioButton" name="TLL">
                                   <Properties>
                                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                                    </Property>
+                                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                                      <ComponentRef name="groupLain"/>
                                     </Property>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="12" style="0"/>
@@ -8109,7 +8170,7 @@
                                       <Font name="Tahoma" size="12" style="0"/>
                                     </Property>
                                     <Property name="horizontalAlignment" type="int" value="0"/>
-                                    <Property name="text" type="java.lang.String" value="o) Darah Samar"/>
+                                    <Property name="text" type="java.lang.String" value="Darah Samar"/>
                                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                                         <LineBorder/>
@@ -8121,6 +8182,9 @@
                                   <Properties>
                                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                                    </Property>
+                                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                                      <ComponentRef name="groupAmylum"/>
                                     </Property>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="12" style="0"/>
@@ -8134,7 +8198,7 @@
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
                                     </Property>
                                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                                      <ComponentRef name="lemak"/>
+                                      <ComponentRef name="groupLemak"/>
                                     </Property>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="12" style="0"/>
@@ -8147,6 +8211,9 @@
                                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
                                     </Property>
+                                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                                      <ComponentRef name="groupSerat"/>
+                                    </Property>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="12" style="0"/>
                                     </Property>
@@ -8157,6 +8224,9 @@
                                   <Properties>
                                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                                    </Property>
+                                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                                      <ComponentRef name="groupSeratotot"/>
                                     </Property>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="12" style="0"/>
@@ -8169,30 +8239,22 @@
                                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
                                     </Property>
+                                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                                      <ComponentRef name="groupDasar"/>
+                                    </Property>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="12" style="0"/>
                                     </Property>
                                     <Property name="text" type="java.lang.String" value="Neg"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JRadioButton" name="jRadioButton24">
-                                  <Properties>
-                                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                                    </Property>
-                                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                      <Font name="Tahoma" size="12" style="0"/>
-                                    </Property>
-                                    <Property name="text" type="java.lang.String" value="Pos"/>
-                                  </Properties>
-                                </Component>
-                                <Component class="javax.swing.JRadioButton" name="jRadioButton25">
+                                <Component class="javax.swing.JRadioButton" name="TAmylum">
                                   <Properties>
                                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
                                     </Property>
                                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                                      <ComponentRef name="lemak"/>
+                                      <ComponentRef name="groupAmylum"/>
                                     </Property>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="12" style="0"/>
@@ -8200,10 +8262,13 @@
                                     <Property name="text" type="java.lang.String" value="Pos"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JRadioButton" name="jRadioButton26">
+                                <Component class="javax.swing.JRadioButton" name="TLemak">
                                   <Properties>
                                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                                    </Property>
+                                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                                      <ComponentRef name="groupLemak"/>
                                     </Property>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="12" style="0"/>
@@ -8211,10 +8276,13 @@
                                     <Property name="text" type="java.lang.String" value="Pos"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JRadioButton" name="jRadioButton27">
+                                <Component class="javax.swing.JRadioButton" name="TSerat">
                                   <Properties>
                                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                                    </Property>
+                                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                                      <ComponentRef name="groupSerat"/>
                                     </Property>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="12" style="0"/>
@@ -8222,10 +8290,27 @@
                                     <Property name="text" type="java.lang.String" value="Pos"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JRadioButton" name="jRadioButton28">
+                                <Component class="javax.swing.JRadioButton" name="TSeratotot">
                                   <Properties>
                                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                                    </Property>
+                                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                                      <ComponentRef name="groupSeratotot"/>
+                                    </Property>
+                                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                      <Font name="Tahoma" size="12" style="0"/>
+                                    </Property>
+                                    <Property name="text" type="java.lang.String" value="Pos"/>
+                                  </Properties>
+                                </Component>
+                                <Component class="javax.swing.JRadioButton" name="TDarahsamar">
+                                  <Properties>
+                                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                                    </Property>
+                                    <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                                      <ComponentRef name="groupDasar"/>
                                     </Property>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="12" style="0"/>
@@ -8252,6 +8337,9 @@
                                   <Properties>
                                     <Property name="text" type="java.lang.String" value="SAVE"/>
                                   </Properties>
+                                  <Events>
+                                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sv_tinjaActionPerformed"/>
+                                  </Events>
                                 </Component>
                                 <Component class="javax.swing.JButton" name="cn_tinja">
                                   <Properties>
