@@ -21,27 +21,19 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="269" max="-2" attributes="0"/>
-              <Component id="jLabel1" min="-2" pref="201" max="-2" attributes="0"/>
-              <EmptySpace pref="339" max="32767" attributes="0"/>
-          </Group>
+          <Component id="logo_pn" alignment="0" pref="809" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="207" max="-2" attributes="0"/>
-              <Component id="jLabel1" min="-2" pref="125" max="-2" attributes="0"/>
-              <EmptySpace pref="257" max="32767" attributes="0"/>
-          </Group>
+          <Component id="logo_pn" alignment="0" pref="589" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JLabel" name="jLabel1">
+    <Component class="javax.swing.JLabel" name="logo_pn">
       <Properties>
-        <Property name="text" type="java.lang.String" value="UTAMA"/>
+        <Property name="horizontalTextPosition" type="int" value="0"/>
       </Properties>
     </Component>
   </SubComponents>

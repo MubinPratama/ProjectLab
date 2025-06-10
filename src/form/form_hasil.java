@@ -140,16 +140,23 @@ public class form_hasil extends javax.swing.JPanel {
     private void initComponents() {
 
         lemak = new javax.swing.ButtonGroup();
-        protein_esbach = new javax.swing.ButtonGroup();
-        protein_esbach_jones = new javax.swing.ButtonGroup();
-        benda_keton = new javax.swing.ButtonGroup();
-        darah_samar = new javax.swing.ButtonGroup();
-        tes_kehamilan = new javax.swing.ButtonGroup();
-        silinder = new javax.swing.ButtonGroup();
+        groupEsbach = new javax.swing.ButtonGroup();
+        groupBenceJones = new javax.swing.ButtonGroup();
+        groupBendaKeton = new javax.swing.ButtonGroup();
+        groupDarahSamar = new javax.swing.ButtonGroup();
+        groupTesKehamilan = new javax.swing.ButtonGroup();
+        groupSilinder = new javax.swing.ButtonGroup();
         t_lendir = new javax.swing.ButtonGroup();
         t_darah = new javax.swing.ButtonGroup();
         t_nanah = new javax.swing.ButtonGroup();
+        groupTPHA = new javax.swing.ButtonGroup();
+        groupVDRL = new javax.swing.ButtonGroup();
+        groupWR = new javax.swing.ButtonGroup();
+        groupHBsAg = new javax.swing.ButtonGroup();
+        groupCRP = new javax.swing.ButtonGroup();
+        groupRAF = new javax.swing.ButtonGroup();
         main_panel = new javax.swing.JPanel();
+        jScrollPane3 = new javax.swing.JScrollPane();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -173,16 +180,16 @@ public class form_hasil extends javax.swing.JPanel {
         jLabel339 = new javax.swing.JLabel();
         jLabel340 = new javax.swing.JLabel();
         jLabel341 = new javax.swing.JLabel();
-        u_warna = new javax.swing.JComboBox<>();
-        u_kejernihan = new javax.swing.JComboBox<>();
-        u_Bjenis = new javax.swing.JComboBox<>();
-        u_reaksi = new javax.swing.JComboBox<>();
-        u_protein = new javax.swing.JComboBox<>();
+        cmbWarna = new javax.swing.JComboBox<>();
+        cmbKejernihan = new javax.swing.JComboBox<>();
+        cmbBeratJenis = new javax.swing.JComboBox<>();
+        cmbReaksi = new javax.swing.JComboBox<>();
+        cmbProtein = new javax.swing.JComboBox<>();
         neg_PE = new javax.swing.JRadioButton();
         pos_PE = new javax.swing.JRadioButton();
         neg_PBJ = new javax.swing.JRadioButton();
         pos_PBJ = new javax.swing.JRadioButton();
-        u_reduksi = new javax.swing.JComboBox<>();
+        cmbReduksi = new javax.swing.JComboBox<>();
         neg_BK = new javax.swing.JRadioButton();
         pos_BK = new javax.swing.JRadioButton();
         pos_DS = new javax.swing.JRadioButton();
@@ -205,18 +212,18 @@ public class form_hasil extends javax.swing.JPanel {
         jLabel355 = new javax.swing.JLabel();
         jLabel356 = new javax.swing.JLabel();
         jLabel357 = new javax.swing.JLabel();
-        u_S_eritrosit = new javax.swing.JComboBox<>();
-        u_lekosi = new javax.swing.JComboBox<>();
+        cmbSendimenEritrosit = new javax.swing.JComboBox<>();
+        cmbLekosit = new javax.swing.JComboBox<>();
         neg_S = new javax.swing.JRadioButton();
         pos_S = new javax.swing.JRadioButton();
-        u_epitel = new javax.swing.JComboBox<>();
-        u_kristal1 = new javax.swing.JComboBox<>();
-        u_kristal2 = new javax.swing.JComboBox<>();
-        u_bakter = new javax.swing.JComboBox<>();
-        u_bilirubin = new javax.swing.JComboBox<>();
-        u_urobinogel = new javax.swing.JComboBox<>();
-        jComboBox17 = new javax.swing.JComboBox<>();
-        jComboBox18 = new javax.swing.JComboBox<>();
+        cmbEpitel = new javax.swing.JComboBox<>();
+        cmbKristal = new javax.swing.JComboBox<>();
+        cmbKristal2 = new javax.swing.JComboBox<>();
+        cmbBakteri = new javax.swing.JComboBox<>();
+        cmbBilirubin = new javax.swing.JComboBox<>();
+        cmbUrobilinogen = new javax.swing.JComboBox<>();
+        cmbUrobilin = new javax.swing.JComboBox<>();
+        cmbNitrit = new javax.swing.JComboBox<>();
         jLabel4 = new javax.swing.JLabel();
         sv_urine = new javax.swing.JButton();
         cn_urine = new javax.swing.JButton();
@@ -325,25 +332,25 @@ public class form_hasil extends javax.swing.JPanel {
         IgM = new javax.swing.JLabel();
         IgE = new javax.swing.JLabel();
         hasil1 = new javax.swing.JLabel();
-        negativtpha = new javax.swing.JRadioButton();
-        positivetpha = new javax.swing.JRadioButton();
-        negativtpha1 = new javax.swing.JRadioButton();
-        positivetpha1 = new javax.swing.JRadioButton();
-        negativtpha2 = new javax.swing.JRadioButton();
-        positivetpha2 = new javax.swing.JRadioButton();
-        negativtpha3 = new javax.swing.JRadioButton();
-        positivetpha3 = new javax.swing.JRadioButton();
-        comboxAntiHBs = new javax.swing.JComboBox<>();
-        comboxHbeAg = new javax.swing.JComboBox<>();
-        comboxAntiHBe = new javax.swing.JComboBox<>();
-        comboxAntiHBc = new javax.swing.JComboBox<>();
-        comboxAntiHA = new javax.swing.JComboBox<>();
-        tAFP = new javax.swing.JTextField();
-        tEA = new javax.swing.JTextField();
-        tIgG = new javax.swing.JTextField();
-        tIgA = new javax.swing.JTextField();
-        tIgM = new javax.swing.JTextField();
-        tIgE = new javax.swing.JTextField();
+        rbtnTPHANeg = new javax.swing.JRadioButton();
+        rbtnTPHAPos = new javax.swing.JRadioButton();
+        rbtnVDRLNeg = new javax.swing.JRadioButton();
+        rbtnVDRLPos = new javax.swing.JRadioButton();
+        rbtnWRNeg = new javax.swing.JRadioButton();
+        rbtnWRPos = new javax.swing.JRadioButton();
+        rbtnHBsAgNeg = new javax.swing.JRadioButton();
+        rbtnHBsAgPos = new javax.swing.JRadioButton();
+        cmbAntiHBs = new javax.swing.JComboBox<>();
+        cmbHbeAg = new javax.swing.JComboBox<>();
+        cmbAntiHBe = new javax.swing.JComboBox<>();
+        cmbAntiHBc = new javax.swing.JComboBox<>();
+        cmbAntiHA = new javax.swing.JComboBox<>();
+        txtAFP = new javax.swing.JTextField();
+        txtEA = new javax.swing.JTextField();
+        txtIgG = new javax.swing.JTextField();
+        txtIgA = new javax.swing.JTextField();
+        txtIgM = new javax.swing.JTextField();
+        txtIgE = new javax.swing.JTextField();
         ngAFP = new javax.swing.JLabel();
         ugEA = new javax.swing.JLabel();
         mgIgG = new javax.swing.JLabel();
@@ -367,25 +374,25 @@ public class form_hasil extends javax.swing.JPanel {
         t3 = new javax.swing.JLabel();
         tsh = new javax.swing.JLabel();
         ft1 = new javax.swing.JLabel();
-        comboxTyphusH = new javax.swing.JComboBox<>();
-        comboxParaAH = new javax.swing.JComboBox<>();
-        comboxParaBH = new javax.swing.JComboBox<>();
-        comboxParaCH = new javax.swing.JComboBox<>();
-        comboxTyphusO = new javax.swing.JComboBox<>();
-        comboxParaAO = new javax.swing.JComboBox<>();
-        comboxParaBO = new javax.swing.JComboBox<>();
-        comboxParaCO = new javax.swing.JComboBox<>();
-        tASTO = new javax.swing.JTextField();
+        cmbTyphusH = new javax.swing.JComboBox<>();
+        cmbParatyphusAH = new javax.swing.JComboBox<>();
+        cmbParatyphusBH = new javax.swing.JComboBox<>();
+        cmbParatyphusCH = new javax.swing.JComboBox<>();
+        cmbTyphusO = new javax.swing.JComboBox<>();
+        cmbParatyphusAO = new javax.swing.JComboBox<>();
+        cmbParatyphusBO = new javax.swing.JComboBox<>();
+        cmbParatyphusCO = new javax.swing.JComboBox<>();
+        txtASTO = new javax.swing.JTextField();
         jLabelASTO = new javax.swing.JLabel();
-        postiveRAF = new javax.swing.JRadioButton();
-        negativRAF = new javax.swing.JRadioButton();
-        negativeCRP = new javax.swing.JRadioButton();
-        positiveCRP = new javax.swing.JRadioButton();
-        tT4 = new javax.swing.JTextField();
-        tT3uptake = new javax.swing.JTextField();
-        tFT = new javax.swing.JTextField();
-        tT3 = new javax.swing.JTextField();
-        tTSH = new javax.swing.JTextField();
+        rbtnCRPPos = new javax.swing.JRadioButton();
+        rbtnCRPNeg = new javax.swing.JRadioButton();
+        rbtnRAfNeg = new javax.swing.JRadioButton();
+        rbtnRAfPos = new javax.swing.JRadioButton();
+        txtT4 = new javax.swing.JTextField();
+        txtT3Uptake = new javax.swing.JTextField();
+        txtFTI = new javax.swing.JTextField();
+        txtT3 = new javax.swing.JTextField();
+        txtTSH = new javax.swing.JTextField();
         jLabelt4 = new javax.swing.JLabel();
         jLabelT3up = new javax.swing.JLabel();
         jLabelFT = new javax.swing.JLabel();
@@ -443,47 +450,47 @@ public class form_hasil extends javax.swing.JPanel {
         jLabel56 = new javax.swing.JLabel();
         jLabel57 = new javax.swing.JLabel();
         jLabel58 = new javax.swing.JLabel();
-        bilirubin = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField7 = new javax.swing.JTextField();
-        jTextField8 = new javax.swing.JTextField();
-        jTextField9 = new javax.swing.JTextField();
-        jTextField10 = new javax.swing.JTextField();
-        jTextField11 = new javax.swing.JTextField();
-        jTextField12 = new javax.swing.JTextField();
-        jTextField13 = new javax.swing.JTextField();
-        jTextField14 = new javax.swing.JTextField();
-        jTextField15 = new javax.swing.JTextField();
+        txtBilirubinTotal = new javax.swing.JTextField();
+        txtBilirubinIndirek = new javax.swing.JTextField();
+        txtBilirubinDirek = new javax.swing.JTextField();
+        txtFosfataseAlkali = new javax.swing.JTextField();
+        txtIndeksIkterus = new javax.swing.JTextField();
+        txtFosfatAsamTotal = new javax.swing.JTextField();
+        txtProteinTotal = new javax.swing.JTextField();
+        txtAlbumin = new javax.swing.JTextField();
+        txtGlobulin = new javax.swing.JTextField();
+        txtAlfa1Globulin = new javax.swing.JTextField();
+        txtAlfa2Globulin = new javax.swing.JTextField();
+        txtGamaGlobulin = new javax.swing.JTextField();
+        txtElektroAlbumin = new javax.swing.JTextField();
+        txtBetaGlobulin = new javax.swing.JTextField();
         jLabel60 = new javax.swing.JLabel();
         jLabel61 = new javax.swing.JLabel();
-        jTextField56 = new javax.swing.JTextField();
+        txtRetensiBSP = new javax.swing.JTextField();
         jLabel62 = new javax.swing.JLabel();
         jLabel63 = new javax.swing.JLabel();
         jLabel64 = new javax.swing.JLabel();
-        bilirubin1 = new javax.swing.JTextField();
+        txtTTT = new javax.swing.JTextField();
         jLabel44 = new javax.swing.JLabel();
         jLabel45 = new javax.swing.JLabel();
-        bilirubin2 = new javax.swing.JTextField();
-        bilirubin3 = new javax.swing.JTextField();
-        bilirubin4 = new javax.swing.JTextField();
-        bilirubin5 = new javax.swing.JTextField();
-        bilirubin6 = new javax.swing.JTextField();
-        bilirubin7 = new javax.swing.JTextField();
-        bilirubin8 = new javax.swing.JTextField();
-        bilirubin9 = new javax.swing.JTextField();
-        bilirubin10 = new javax.swing.JTextField();
-        bilirubin11 = new javax.swing.JTextField();
-        bilirubin12 = new javax.swing.JTextField();
-        bilirubin13 = new javax.swing.JTextField();
+        txtKunkel = new javax.swing.JTextField();
+        txtLipidaTotal = new javax.swing.JTextField();
+        txtKolesterolTotal = new javax.swing.JTextField();
+        txtBetaLipoprotein = new javax.swing.JTextField();
+        txtUreum = new javax.swing.JTextField();
+        txtKreatinin = new javax.swing.JTextField();
+        txtAsamUrat = new javax.swing.JTextField();
+        txtCa = new javax.swing.JTextField();
+        txtP = new javax.swing.JTextField();
+        txtNa = new javax.swing.JTextField();
+        txtK = new javax.swing.JTextField();
+        txtCl = new javax.swing.JTextField();
         jLabel65 = new javax.swing.JLabel();
         jLabel66 = new javax.swing.JLabel();
-        bilirubin14 = new javax.swing.JTextField();
-        bilirubin15 = new javax.swing.JTextField();
+        txtHdl = new javax.swing.JTextField();
+        txtLdl = new javax.swing.JTextField();
         jLabel67 = new javax.swing.JLabel();
-        bilirubin16 = new javax.swing.JTextField();
+        txtTrigliserida = new javax.swing.JTextField();
         jLabel46 = new javax.swing.JLabel();
         jLabel47 = new javax.swing.JLabel();
         jLabel49 = new javax.swing.JLabel();
@@ -777,71 +784,71 @@ public class form_hasil extends javax.swing.JPanel {
         jLabel341.setText("Tes Kehamilan");
         jLabel341.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        u_warna.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        u_warna.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "Kuning Muda", "Kuning Tua" }));
+        cmbWarna.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        cmbWarna.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "Kuning Muda", "Kuning Tua" }));
 
-        u_kejernihan.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        u_kejernihan.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "Jernih", "Agak Keruh", "Keruh" }));
+        cmbKejernihan.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        cmbKejernihan.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "Jernih", "Agak Keruh", "Keruh" }));
 
-        u_Bjenis.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        u_Bjenis.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "1.005", "1.010", "1.015", "1.020", "1.025", "1.030" }));
+        cmbBeratJenis.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        cmbBeratJenis.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "1.005", "1.010", "1.015", "1.020", "1.025", "1.030" }));
 
-        u_reaksi.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        u_reaksi.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "5.0", "5.5", "6.0", "6.5", "7.0", "7.5", "8.0" }));
+        cmbReaksi.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        cmbReaksi.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "5.0", "5.5", "6.0", "6.5", "7.0", "7.5", "8.0" }));
 
-        u_protein.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        u_protein.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "[-]/Negative", "[+]/Positif 1", "[++]/Positif 2", "[+++]/Positfi3", "[++++]/Positif 4" }));
+        cmbProtein.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        cmbProtein.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "[-]/Negative", "[+]/Positif 1", "[++]/Positif 2", "[+++]/Positfi3", "[++++]/Positif 4" }));
 
         neg_PE.setBackground(new java.awt.Color(255, 255, 255));
-        protein_esbach.add(neg_PE);
+        groupEsbach.add(neg_PE);
         neg_PE.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         neg_PE.setText("Negative");
 
         pos_PE.setBackground(new java.awt.Color(255, 255, 255));
-        protein_esbach.add(pos_PE);
+        groupEsbach.add(pos_PE);
         pos_PE.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         pos_PE.setText("Positive");
 
         neg_PBJ.setBackground(new java.awt.Color(255, 255, 255));
-        protein_esbach_jones.add(neg_PBJ);
+        groupBenceJones.add(neg_PBJ);
         neg_PBJ.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         neg_PBJ.setText("Negative");
 
         pos_PBJ.setBackground(new java.awt.Color(255, 255, 255));
-        protein_esbach_jones.add(pos_PBJ);
+        groupBenceJones.add(pos_PBJ);
         pos_PBJ.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         pos_PBJ.setText("Positive");
 
-        u_reduksi.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        u_reduksi.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "[-]/Negative", "[+]/Positif 1", "[++]/Positif 2", "[+++]/Positfi3", "[++++]/Positif 4" }));
+        cmbReduksi.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        cmbReduksi.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "[-]/Negative", "[+]/Positif 1", "[++]/Positif 2", "[+++]/Positfi3", "[++++]/Positif 4" }));
 
         neg_BK.setBackground(new java.awt.Color(255, 255, 255));
-        benda_keton.add(neg_BK);
+        groupBendaKeton.add(neg_BK);
         neg_BK.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         neg_BK.setText("Negative");
 
         pos_BK.setBackground(new java.awt.Color(255, 255, 255));
-        benda_keton.add(pos_BK);
+        groupBendaKeton.add(pos_BK);
         pos_BK.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         pos_BK.setText("Positive");
 
         pos_DS.setBackground(new java.awt.Color(255, 255, 255));
-        darah_samar.add(pos_DS);
+        groupDarahSamar.add(pos_DS);
         pos_DS.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         pos_DS.setText("Positive");
 
         neg_DS.setBackground(new java.awt.Color(255, 255, 255));
-        darah_samar.add(neg_DS);
+        groupDarahSamar.add(neg_DS);
         neg_DS.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         neg_DS.setText("Negative");
 
         neg_TK.setBackground(new java.awt.Color(255, 255, 255));
-        tes_kehamilan.add(neg_TK);
+        groupTesKehamilan.add(neg_TK);
         neg_TK.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         neg_TK.setText("Negative");
 
         pos_TK.setBackground(new java.awt.Color(255, 255, 255));
-        tes_kehamilan.add(pos_TK);
+        groupTesKehamilan.add(pos_TK);
         pos_TK.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         pos_TK.setText("Positive");
 
@@ -921,45 +928,45 @@ public class form_hasil extends javax.swing.JPanel {
         jLabel357.setText("Nitrit");
         jLabel357.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        u_S_eritrosit.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        u_S_eritrosit.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "1-2", "2-3", "3-4", "4-5", "5-6", "6-7", "7-8", "8-9", "9-10", "Banyak - Penuh" }));
+        cmbSendimenEritrosit.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        cmbSendimenEritrosit.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "1-2", "2-3", "3-4", "4-5", "5-6", "6-7", "7-8", "8-9", "9-10", "Banyak - Penuh" }));
 
-        u_lekosi.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        u_lekosi.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "1-2", "2-3", "3-4", "4-5", "5-6", "6-7", "7-8", "8-9", "9-10", "Banyak - Penuh" }));
+        cmbLekosit.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        cmbLekosit.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "1-2", "2-3", "3-4", "4-5", "5-6", "6-7", "7-8", "8-9", "9-10", "Banyak - Penuh" }));
 
         neg_S.setBackground(new java.awt.Color(255, 255, 255));
-        silinder.add(neg_S);
+        groupSilinder.add(neg_S);
         neg_S.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         neg_S.setText("Negative");
 
         pos_S.setBackground(new java.awt.Color(255, 255, 255));
-        silinder.add(pos_S);
+        groupSilinder.add(pos_S);
         pos_S.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         pos_S.setText("Positive");
 
-        u_epitel.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        u_epitel.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "[-]/Negative", "[+]/Positif 1", "[++]/Positif 2", "[+++]/Positfi3", "[++++]/Positif 4" }));
+        cmbEpitel.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        cmbEpitel.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "[-]/Negative", "[+]/Positif 1", "[++]/Positif 2", "[+++]/Positfi3", "[++++]/Positif 4" }));
 
-        u_kristal1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        u_kristal1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "Urat Amorf", "Asam Urat", "Ca. Oxalat", "Tripel Postat" }));
+        cmbKristal.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        cmbKristal.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "Urat Amorf", "Asam Urat", "Ca. Oxalat", "Tripel Postat" }));
 
-        u_kristal2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        u_kristal2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "[-]/Negative", "[+]/Positif 1", "[++]/Positif 2", "[+++]/Positfi3", "[++++]/Positif 4" }));
+        cmbKristal2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        cmbKristal2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "[-]/Negative", "[+]/Positif 1", "[++]/Positif 2", "[+++]/Positfi3", "[++++]/Positif 4" }));
 
-        u_bakter.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        u_bakter.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "[-]/Negative", "[+]/Positif 1", "[++]/Positif 2", "[+++]/Positfi3", "[++++]/Positif 4" }));
+        cmbBakteri.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        cmbBakteri.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "[-]/Negative", "[+]/Positif 1", "[++]/Positif 2", "[+++]/Positfi3", "[++++]/Positif 4" }));
 
-        u_bilirubin.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        u_bilirubin.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "[-]/Negative", "[+]/Positif 1", "[++]/Positif 2", "[+++]/Positfi3", "[++++]/Positif 4" }));
+        cmbBilirubin.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        cmbBilirubin.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "[-]/Negative", "[+]/Positif 1", "[++]/Positif 2", "[+++]/Positfi3", "[++++]/Positif 4" }));
 
-        u_urobinogel.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        u_urobinogel.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "[-]/Negative", "[+]/Positif 1", "[++]/Positif 2", "[+++]/Positfi3", "[++++]/Positif 4" }));
+        cmbUrobilinogen.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        cmbUrobilinogen.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "[-]/Negative", "[+]/Positif 1", "[++]/Positif 2", "[+++]/Positfi3", "[++++]/Positif 4" }));
 
-        jComboBox17.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jComboBox17.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "[-]/Negative", "[+]/Positif 1", "[++]/Positif 2", "[+++]/Positfi3", "[++++]/Positif 4" }));
+        cmbUrobilin.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        cmbUrobilin.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "[-]/Negative", "[+]/Positif 1", "[++]/Positif 2", "[+++]/Positfi3", "[++++]/Positif 4" }));
 
-        jComboBox18.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jComboBox18.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "[-]/Negative", "[+]/Positif 1", "[++]/Positif 2", "[+++]/Positfi3", "[++++]/Positif 4" }));
+        cmbNitrit.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        cmbNitrit.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "[-]/Negative", "[+]/Positif 1", "[++]/Positif 2", "[+++]/Positfi3", "[++++]/Positif 4" }));
 
         jLabel4.setText("jLabel4");
         jLabel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
@@ -1018,16 +1025,16 @@ public class form_hasil extends javax.swing.JPanel {
                                                 .addGap(18, 18, 18)
                                                 .addComponent(pos_PBJ))
                                             .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                .addComponent(u_kejernihan, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(u_Bjenis, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(u_protein, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(u_warna, 0, 215, Short.MAX_VALUE)
-                                                .addComponent(u_reaksi, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                                .addComponent(cmbKejernihan, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(cmbBeratJenis, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(cmbProtein, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(cmbWarna, 0, 215, Short.MAX_VALUE)
+                                                .addComponent(cmbReaksi, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                             .addGroup(jPanel10Layout.createSequentialGroup()
                                                 .addComponent(neg_PE)
                                                 .addGap(18, 18, 18)
                                                 .addComponent(pos_PE))
-                                            .addComponent(u_reduksi, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(cmbReduksi, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addGroup(jPanel10Layout.createSequentialGroup()
                                                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                                     .addComponent(neg_TK)
@@ -1054,23 +1061,23 @@ public class form_hasil extends javax.swing.JPanel {
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel347, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jComboBox18, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jComboBox17, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(u_urobinogel, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(u_bilirubin, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(u_bakter, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(u_lekosi, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(u_S_eritrosit, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cmbNitrit, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cmbUrobilin, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cmbUrobilinogen, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cmbBilirubin, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cmbBakteri, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cmbLekosit, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cmbSendimenEritrosit, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(jPanel10Layout.createSequentialGroup()
                                         .addComponent(neg_S)
                                         .addGap(18, 18, 18)
                                         .addComponent(pos_S))
                                     .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                         .addGroup(jPanel10Layout.createSequentialGroup()
-                                            .addComponent(u_kristal1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(cmbKristal, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(u_kristal2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addComponent(u_epitel, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                            .addComponent(cmbKristal2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(cmbEpitel, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE))))
                             .addGroup(jPanel10Layout.createSequentialGroup()
                                 .addComponent(sv_urine, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
@@ -1095,52 +1102,52 @@ public class form_hasil extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(u_warna, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(cmbWarna, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel348, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(u_S_eritrosit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(cmbSendimenEritrosit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jLabel330, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel331, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(u_kejernihan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cmbKejernihan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel349, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(u_lekosi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cmbLekosit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel332, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(u_Bjenis, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cmbBeratJenis, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel350, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(neg_S)
                     .addComponent(pos_S))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel333, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(u_reaksi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cmbReaksi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel334, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(u_protein, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cmbProtein, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel351, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(u_epitel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cmbEpitel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel335, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(neg_PE)
                     .addComponent(pos_PE)
                     .addComponent(jLabel352, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(u_kristal1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(u_kristal2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cmbKristal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cmbKristal2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel336, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(neg_PBJ)
                     .addComponent(pos_PBJ)
                     .addComponent(jLabel353, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(u_bakter, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cmbBakteri, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel337, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(u_reduksi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cmbReduksi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel338, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1149,28 +1156,28 @@ public class form_hasil extends javax.swing.JPanel {
                     .addComponent(jLabel344)
                     .addComponent(jLabel345)
                     .addComponent(jLabel354, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(u_bilirubin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cmbBilirubin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel339, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(neg_BK)
                     .addComponent(pos_BK)
                     .addComponent(jLabel355, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(u_urobinogel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cmbUrobilinogen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel340, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(pos_DS)
                     .addComponent(neg_DS)
                     .addComponent(jLabel356, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cmbUrobilin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel341, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(neg_TK)
                     .addComponent(pos_TK)
                     .addComponent(jLabel357, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cmbNitrit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(cn_urine, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
@@ -1973,70 +1980,88 @@ public class form_hasil extends javax.swing.JPanel {
         hasil1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         hasil1.setText("HASIL");
 
-        negativtpha.setBackground(new java.awt.Color(255, 255, 255));
-        negativtpha.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        negativtpha.setText("Negative");
+        rbtnTPHANeg.setBackground(new java.awt.Color(255, 255, 255));
+        groupTPHA.add(rbtnTPHANeg);
+        rbtnTPHANeg.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        rbtnTPHANeg.setText("Negative");
 
-        positivetpha.setBackground(new java.awt.Color(255, 255, 255));
-        positivetpha.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        positivetpha.setText("Positive");
+        rbtnTPHAPos.setBackground(new java.awt.Color(255, 255, 255));
+        groupTPHA.add(rbtnTPHAPos);
+        rbtnTPHAPos.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        rbtnTPHAPos.setText("Positive");
 
-        negativtpha1.setBackground(new java.awt.Color(255, 255, 255));
-        negativtpha1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        negativtpha1.setText("Negative");
+        rbtnVDRLNeg.setBackground(new java.awt.Color(255, 255, 255));
+        groupVDRL.add(rbtnVDRLNeg);
+        rbtnVDRLNeg.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        rbtnVDRLNeg.setText("Negative");
 
-        positivetpha1.setBackground(new java.awt.Color(255, 255, 255));
-        positivetpha1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        positivetpha1.setText("Positive");
+        rbtnVDRLPos.setBackground(new java.awt.Color(255, 255, 255));
+        groupVDRL.add(rbtnVDRLPos);
+        rbtnVDRLPos.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        rbtnVDRLPos.setText("Positive");
 
-        negativtpha2.setBackground(new java.awt.Color(255, 255, 255));
-        negativtpha2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        negativtpha2.setText("Negative");
+        rbtnWRNeg.setBackground(new java.awt.Color(255, 255, 255));
+        groupWR.add(rbtnWRNeg);
+        rbtnWRNeg.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        rbtnWRNeg.setText("Negative");
 
-        positivetpha2.setBackground(new java.awt.Color(255, 255, 255));
-        positivetpha2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        positivetpha2.setText("Positive");
+        rbtnWRPos.setBackground(new java.awt.Color(255, 255, 255));
+        groupWR.add(rbtnWRPos);
+        rbtnWRPos.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        rbtnWRPos.setText("Positive");
 
-        negativtpha3.setBackground(new java.awt.Color(255, 255, 255));
-        negativtpha3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        negativtpha3.setText("Negative");
+        rbtnHBsAgNeg.setBackground(new java.awt.Color(255, 255, 255));
+        groupHBsAg.add(rbtnHBsAgNeg);
+        rbtnHBsAgNeg.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        rbtnHBsAgNeg.setText("Negative");
 
-        positivetpha3.setBackground(new java.awt.Color(255, 255, 255));
-        positivetpha3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        positivetpha3.setText("Positive");
+        rbtnHBsAgPos.setBackground(new java.awt.Color(255, 255, 255));
+        groupHBsAg.add(rbtnHBsAgPos);
+        rbtnHBsAgPos.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        rbtnHBsAgPos.setText("Positive");
 
-        comboxAntiHBs.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        comboxAntiHBs.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        cmbAntiHBs.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        cmbAntiHBs.setMaximumRowCount(40);
+        cmbAntiHBs.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "[-]/Negative", "[+]1/1", "[+]1/2", "[+]1/3", "[+]1/4", "[+]1/5", "[+]1/6", "[+]1/7", "[+]1/8", "[+]1/9", "[+]1/10", "[+]1/11", "[+]1/12", "[+]1/13", "[+]1/14", "[+]1/15", "[+]1/16", "[+]1/100", "[+]1/200", "[+]1/300", "[+]1/400", "[+]1/500", "[+]1/600", "[+]1/700", "[+]1/800", "[+]1/1900", "[+]1/1000", "[+]1/1100", "[+]1/1200", "[+]1/1300", "[+]1/1400", "[+]1/1500", "[+]1/1600", "[+]1/1700", "[+]1/1800", "[+]1/1900", "[+]1/2000" }));
+        cmbAntiHBs.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
 
-        comboxHbeAg.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        comboxHbeAg.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        cmbHbeAg.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        cmbHbeAg.setMaximumRowCount(40);
+        cmbHbeAg.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "[-]/Negative", "[+]1/1", "[+]1/2", "[+]1/3", "[+]1/4", "[+]1/5", "[+]1/6", "[+]1/7", "[+]1/8", "[+]1/9", "[+]1/10", "[+]1/11", "[+]1/12", "[+]1/13", "[+]1/14", "[+]1/15", "[+]1/16", "[+]1/100", "[+]1/200", "[+]1/300", "[+]1/400", "[+]1/500", "[+]1/600", "[+]1/700", "[+]1/800", "[+]1/1900", "[+]1/1000", "[+]1/1100", "[+]1/1200", "[+]1/1300", "[+]1/1400", "[+]1/1500", "[+]1/1600", "[+]1/1700", "[+]1/1800", "[+]1/1900", "[+]1/2000" }));
+        cmbHbeAg.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
 
-        comboxAntiHBe.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        comboxAntiHBe.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        cmbAntiHBe.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        cmbAntiHBe.setMaximumRowCount(40);
+        cmbAntiHBe.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "[-]/Negative", "[+]1/1", "[+]1/2", "[+]1/3", "[+]1/4", "[+]1/5", "[+]1/6", "[+]1/7", "[+]1/8", "[+]1/9", "[+]1/10", "[+]1/11", "[+]1/12", "[+]1/13", "[+]1/14", "[+]1/15", "[+]1/16", "[+]1/100", "[+]1/200", "[+]1/300", "[+]1/400", "[+]1/500", "[+]1/600", "[+]1/700", "[+]1/800", "[+]1/1900", "[+]1/1000", "[+]1/1100", "[+]1/1200", "[+]1/1300", "[+]1/1400", "[+]1/1500", "[+]1/1600", "[+]1/1700", "[+]1/1800", "[+]1/1900", "[+]1/2000" }));
+        cmbAntiHBe.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
 
-        comboxAntiHBc.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        comboxAntiHBc.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        cmbAntiHBc.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        cmbAntiHBc.setMaximumRowCount(40);
+        cmbAntiHBc.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "[-]/Negative", "[+]1/1", "[+]1/2", "[+]1/3", "[+]1/4", "[+]1/5", "[+]1/6", "[+]1/7", "[+]1/8", "[+]1/9", "[+]1/10", "[+]1/11", "[+]1/12", "[+]1/13", "[+]1/14", "[+]1/15", "[+]1/16", "[+]1/100", "[+]1/200", "[+]1/300", "[+]1/400", "[+]1/500", "[+]1/600", "[+]1/700", "[+]1/800", "[+]1/1900", "[+]1/1000", "[+]1/1100", "[+]1/1200", "[+]1/1300", "[+]1/1400", "[+]1/1500", "[+]1/1600", "[+]1/1700", "[+]1/1800", "[+]1/1900", "[+]1/2000" }));
+        cmbAntiHBc.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
 
-        comboxAntiHA.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        comboxAntiHA.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        cmbAntiHA.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        cmbAntiHA.setMaximumRowCount(40);
+        cmbAntiHA.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "[-]/Negative", "[+]1/1", "[+]1/2", "[+]1/3", "[+]1/4", "[+]1/5", "[+]1/6", "[+]1/7", "[+]1/8", "[+]1/9", "[+]1/10", "[+]1/11", "[+]1/12", "[+]1/13", "[+]1/14", "[+]1/15", "[+]1/16", "[+]1/100", "[+]1/200", "[+]1/300", "[+]1/400", "[+]1/500", "[+]1/600", "[+]1/700", "[+]1/800", "[+]1/1900", "[+]1/1000", "[+]1/1100", "[+]1/1200", "[+]1/1300", "[+]1/1400", "[+]1/1500", "[+]1/1600", "[+]1/1700", "[+]1/1800", "[+]1/1900", "[+]1/2000" }));
+        cmbAntiHA.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
 
-        tAFP.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        tAFP.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtAFP.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txtAFP.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        tEA.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        tEA.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtEA.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txtEA.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        tIgG.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        tIgG.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtIgG.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txtIgG.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        tIgA.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        tIgA.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtIgA.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txtIgA.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        tIgM.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        tIgM.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtIgM.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txtIgM.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        tIgE.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        tIgE.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtIgE.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txtIgE.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         ngAFP.setBackground(new java.awt.Color(255, 255, 255));
         ngAFP.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
@@ -2174,32 +2199,40 @@ public class form_hasil extends javax.swing.JPanel {
         ft1.setText("  FT I (free thyroxine index)");
         ft1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
 
-        comboxTyphusH.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        comboxTyphusH.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        cmbTyphusH.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        cmbTyphusH.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "[-]Negatif", "[+]1/80", "[+]1/160", "[+]1/240", "[+]1/320" }));
+        cmbTyphusH.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
 
-        comboxParaAH.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        comboxParaAH.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        cmbParatyphusAH.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        cmbParatyphusAH.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "[-]Negatif", "[+]1/80", "[+]1/160", "[+]1/240", "[+]1/320" }));
+        cmbParatyphusAH.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
 
-        comboxParaBH.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        comboxParaBH.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        cmbParatyphusBH.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        cmbParatyphusBH.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "[-]Negatif", "[+]1/80", "[+]1/160", "[+]1/240", "[+]1/320" }));
+        cmbParatyphusBH.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
 
-        comboxParaCH.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        comboxParaCH.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        cmbParatyphusCH.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        cmbParatyphusCH.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "[-]Negatif", "[+]1/80", "[+]1/160", "[+]1/240", "[+]1/320" }));
+        cmbParatyphusCH.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
 
-        comboxTyphusO.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        comboxTyphusO.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        cmbTyphusO.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        cmbTyphusO.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "[-]Negatif", "[+]1/80", "[+]1/160", "[+]1/240", "[+]1/320" }));
+        cmbTyphusO.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
 
-        comboxParaAO.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        comboxParaAO.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        cmbParatyphusAO.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        cmbParatyphusAO.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "[-]Negatif", "[+]1/80", "[+]1/160", "[+]1/240", "[+]1/320" }));
+        cmbParatyphusAO.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
 
-        comboxParaBO.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        comboxParaBO.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        cmbParatyphusBO.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        cmbParatyphusBO.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "[-]Negatif", "[+]1/80", "[+]1/160", "[+]1/240", "[+]1/320" }));
+        cmbParatyphusBO.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
 
-        comboxParaCO.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        comboxParaCO.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        cmbParatyphusCO.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        cmbParatyphusCO.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "[-]Negatif", "[+]1/80", "[+]1/160", "[+]1/240", "[+]1/320" }));
+        cmbParatyphusCO.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
 
-        tASTO.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        tASTO.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtASTO.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txtASTO.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabelASTO.setBackground(new java.awt.Color(255, 255, 255));
         jLabelASTO.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
@@ -2207,36 +2240,40 @@ public class form_hasil extends javax.swing.JPanel {
         jLabelASTO.setText("N : <2000 S Todd  ");
         jLabelASTO.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
 
-        postiveRAF.setBackground(new java.awt.Color(255, 255, 255));
-        postiveRAF.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        postiveRAF.setText("Positive");
+        rbtnCRPPos.setBackground(new java.awt.Color(255, 255, 255));
+        groupCRP.add(rbtnCRPPos);
+        rbtnCRPPos.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        rbtnCRPPos.setText("Positive");
 
-        negativRAF.setBackground(new java.awt.Color(255, 255, 255));
-        negativRAF.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        negativRAF.setText("Negative");
+        rbtnCRPNeg.setBackground(new java.awt.Color(255, 255, 255));
+        groupCRP.add(rbtnCRPNeg);
+        rbtnCRPNeg.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        rbtnCRPNeg.setText("Negative");
 
-        negativeCRP.setBackground(new java.awt.Color(255, 255, 255));
-        negativeCRP.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        negativeCRP.setText("Negative");
+        rbtnRAfNeg.setBackground(new java.awt.Color(255, 255, 255));
+        groupRAF.add(rbtnRAfNeg);
+        rbtnRAfNeg.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        rbtnRAfNeg.setText("Negative");
 
-        positiveCRP.setBackground(new java.awt.Color(255, 255, 255));
-        positiveCRP.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        positiveCRP.setText("Positive");
+        rbtnRAfPos.setBackground(new java.awt.Color(255, 255, 255));
+        groupRAF.add(rbtnRAfPos);
+        rbtnRAfPos.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        rbtnRAfPos.setText("Positive");
 
-        tT4.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        tT4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtT4.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txtT4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        tT3uptake.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        tT3uptake.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtT3Uptake.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txtT3Uptake.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        tFT.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        tFT.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtFTI.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txtFTI.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        tT3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        tT3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtT3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txtT3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        tTSH.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        tTSH.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtTSH.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txtTSH.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabelt4.setBackground(new java.awt.Color(255, 255, 255));
         jLabelt4.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
@@ -2279,6 +2316,11 @@ public class form_hasil extends javax.swing.JPanel {
         judul1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
 
         sv_serologi.setText("SAVE");
+        sv_serologi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sv_serologiActionPerformed(evt);
+            }
+        });
 
         cn_serologi.setText("CANCEL");
 
@@ -2295,62 +2337,62 @@ public class form_hasil extends javax.swing.JPanel {
                             .addGroup(jPanel9Layout.createSequentialGroup()
                                 .addComponent(antiHBe, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(comboxAntiHBe, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(cmbAntiHBe, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel9Layout.createSequentialGroup()
                                 .addComponent(antiHBc, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(comboxAntiHBc, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(cmbAntiHBc, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel9Layout.createSequentialGroup()
                                 .addComponent(antiHA, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(comboxAntiHA, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(cmbAntiHA, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                 .addGroup(jPanel9Layout.createSequentialGroup()
                                     .addComponent(HBsAg, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(negativtpha3))
+                                    .addComponent(rbtnHBsAgNeg))
                                 .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel9Layout.createSequentialGroup()
                                     .addComponent(tpha, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(negativtpha)))
+                                    .addComponent(rbtnTPHANeg)))
                             .addGroup(jPanel9Layout.createSequentialGroup()
                                 .addComponent(vdrl, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(negativtpha1))
+                                .addComponent(rbtnVDRLNeg))
                             .addGroup(jPanel9Layout.createSequentialGroup()
                                 .addComponent(antihbs, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(comboxAntiHBs, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(cmbAntiHBs, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel9Layout.createSequentialGroup()
                                 .addComponent(HbeAg, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(comboxHbeAg, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(cmbHbeAg, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                 .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel9Layout.createSequentialGroup()
                                     .addComponent(EA, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(tEA, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtEA, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(ugEA, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel9Layout.createSequentialGroup()
                                     .addComponent(AFP, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(tAFP, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtAFP, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGap(19, 19, 19)
                                     .addComponent(ngAFP, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addComponent(mgIgA, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGroup(jPanel9Layout.createSequentialGroup()
-                                    .addComponent(tIgM, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtIgM, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGap(18, 18, 18)
                                     .addComponent(mgIgM, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGroup(jPanel9Layout.createSequentialGroup()
-                                    .addComponent(tIgE, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtIgE, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGap(18, 18, 18)
                                     .addComponent(mgIgE, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGroup(jPanel9Layout.createSequentialGroup()
                                     .addComponent(IgG, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(tIgG, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(txtIgG, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(mgIgG, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -2360,15 +2402,15 @@ public class form_hasil extends javax.swing.JPanel {
                                     .addComponent(hasil1, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGroup(jPanel9Layout.createSequentialGroup()
                                     .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(positivetpha1)
-                                        .addComponent(positivetpha)
-                                        .addComponent(positivetpha2)
-                                        .addComponent(positivetpha3))
+                                        .addComponent(rbtnVDRLPos)
+                                        .addComponent(rbtnTPHAPos)
+                                        .addComponent(rbtnWRPos)
+                                        .addComponent(rbtnHBsAgPos))
                                     .addGap(1, 1, 1)))
                             .addGroup(jPanel9Layout.createSequentialGroup()
                                 .addComponent(wr, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(negativtpha2))
+                                .addComponent(rbtnWRNeg))
                             .addGroup(jPanel9Layout.createSequentialGroup()
                                 .addGap(23, 23, 23)
                                 .addComponent(sv_serologi, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2396,52 +2438,52 @@ public class form_hasil extends javax.swing.JPanel {
                                 .addComponent(t3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(comboxTyphusH, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(comboxParaAH, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(comboxParaBH, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(comboxParaCH, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(comboxTyphusO, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(comboxParaAO, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(comboxParaBO, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(comboxParaCO, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(cmbTyphusH, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(cmbParatyphusAH, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(cmbParatyphusBH, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(cmbParatyphusCH, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(cmbTyphusO, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(cmbParatyphusAO, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(cmbParatyphusBO, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(jPanel9Layout.createSequentialGroup()
-                                .addComponent(tASTO, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtASTO, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabelASTO, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel9Layout.createSequentialGroup()
-                                .addComponent(negativeCRP)
+                                .addComponent(rbtnRAfNeg)
                                 .addGap(35, 35, 35)
-                                .addComponent(positiveCRP, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addComponent(rbtnRAfPos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(jPanel9Layout.createSequentialGroup()
-                                .addComponent(negativRAF)
+                                .addComponent(rbtnCRPNeg)
                                 .addGap(35, 35, 35)
-                                .addComponent(postiveRAF, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addComponent(rbtnCRPPos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(jPanel9Layout.createSequentialGroup()
-                                .addComponent(tFT, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtFTI, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabelFT, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(jPanel9Layout.createSequentialGroup()
-                                .addComponent(tT3, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtT3, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabelT3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(jPanel9Layout.createSequentialGroup()
-                                .addComponent(tT4, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtT4, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabelt4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(jPanel9Layout.createSequentialGroup()
-                                .addComponent(tT3uptake, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtT3Uptake, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabelT3up, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addComponent(hasil2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(jPanel9Layout.createSequentialGroup()
-                                .addComponent(tTSH, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtTSH, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabelTSH, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(jLabelTSH, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(cmbParatyphusCO, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addComponent(IgM, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel9Layout.createSequentialGroup()
                         .addComponent(IgA, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(tIgA, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(txtIgA, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(IgE, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(judul, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(0, 0, 0))
@@ -2463,76 +2505,76 @@ public class form_hasil extends javax.swing.JPanel {
                             .addGroup(jPanel9Layout.createSequentialGroup()
                                 .addGap(7, 7, 7)
                                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(negativtpha, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(positivetpha, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(rbtnTPHANeg, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(rbtnTPHAPos, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(vdrl, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(negativtpha1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(positivetpha1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(rbtnVDRLNeg, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(rbtnVDRLPos, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(jPanel9Layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(tpha, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(wr, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(negativtpha2, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(positivetpha2, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(rbtnWRNeg, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(rbtnWRPos, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(HBsAg, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(negativtpha3, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(positivetpha3, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(rbtnHBsAgNeg, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(rbtnHBsAgPos, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(antihbs, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(comboxAntiHBs, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(cmbAntiHBs, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(HbeAg, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(comboxHbeAg, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(cmbHbeAg, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(antiHBe, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(comboxAntiHBe, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(cmbAntiHBe, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(antiHBc, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(comboxAntiHBc, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(cmbAntiHBc, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(antiHA, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(comboxAntiHA, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(cmbAntiHA, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(AFP, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(tAFP, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtAFP, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(ngAFP, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(EA, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(tEA, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtEA, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(ugEA, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(IgG, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(tIgG, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtIgG, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(mgIgG, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(IgA, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(tIgA, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtIgA, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(mgIgA, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(8, 8, 8)
                         .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(IgM, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(tIgM, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtIgM, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(mgIgM, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(8, 8, 8)
                         .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(IgE, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(tIgE, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtIgE, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(mgIgE, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -2553,31 +2595,31 @@ public class form_hasil extends javax.swing.JPanel {
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                                     .addComponent(paraAH, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(comboxParaAH, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                    .addComponent(cmbParatyphusAH, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                                     .addComponent(paraBH, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(comboxParaBH, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                    .addComponent(cmbParatyphusBH, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                                     .addComponent(paraCH, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(comboxParaCH, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                    .addComponent(cmbParatyphusCH, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                                     .addComponent(typhusO, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(comboxTyphusO, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                    .addComponent(cmbTyphusO, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                                     .addComponent(paraAO, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(comboxParaAO, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                    .addComponent(cmbParatyphusAO, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                                     .addComponent(paraBO, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(comboxParaBO, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                            .addComponent(comboxTyphusH, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                    .addComponent(cmbParatyphusBO, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                            .addComponent(cmbTyphusH, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(paraCO, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(comboxParaCO, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(cmbParatyphusCO, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(18, 18, 18)
                                 .addComponent(asto, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(4, 4, 4)
@@ -2585,44 +2627,44 @@ public class form_hasil extends javax.swing.JPanel {
                                     .addGroup(jPanel9Layout.createSequentialGroup()
                                         .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                             .addComponent(crp, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(negativRAF, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(rbtnCRPNeg, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                             .addComponent(raf, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(negativeCRP, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                            .addComponent(rbtnRAfNeg, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                     .addGroup(jPanel9Layout.createSequentialGroup()
-                                        .addComponent(postiveRAF, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(rbtnCRPPos, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(positiveCRP, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addComponent(rbtnRAfPos, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(t4, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(tT4, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtT4, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabelt4, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(t3uptake, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(tT3uptake, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtT3Uptake, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabelT3up, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(ft1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(tFT, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtFTI, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabelFT, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(t3, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(tT3, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtT3, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabelT3, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(tsh, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(tTSH, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtTSH, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabelTSH, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(jPanel9Layout.createSequentialGroup()
                                 .addGap(410, 410, 410)
                                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(tASTO, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtASTO, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabelASTO, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGap(0, 47, Short.MAX_VALUE)))
                 .addContainerGap())
@@ -2634,7 +2676,7 @@ public class form_hasil extends javax.swing.JPanel {
             SEROLOGILayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(SEROLOGILayout.createSequentialGroup()
                 .addComponent(jPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 131, Short.MAX_VALUE))
+                .addContainerGap())
         );
         SEROLOGILayout.setVerticalGroup(
             SEROLOGILayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2965,36 +3007,36 @@ public class form_hasil extends javax.swing.JPanel {
         jLabel58.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jLabel58.setVerifyInputWhenFocusTarget(false);
 
-        bilirubin.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txtBilirubinTotal.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
-        jTextField3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txtBilirubinIndirek.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
-        jTextField4.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txtBilirubinDirek.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
-        jTextField6.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txtFosfataseAlkali.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
-        jTextField5.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txtIndeksIkterus.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
-        jTextField7.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txtFosfatAsamTotal.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
-        jTextField8.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txtProteinTotal.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
-        jTextField9.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txtAlbumin.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
-        jTextField10.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txtGlobulin.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
-        jTextField11.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txtAlfa1Globulin.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
-        jTextField12.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txtAlfa2Globulin.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
-        jTextField13.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txtGamaGlobulin.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
-        jTextField14.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txtElektroAlbumin.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
-        jTextField15.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTextField15.addActionListener(new java.awt.event.ActionListener() {
+        txtBetaGlobulin.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txtBetaGlobulin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField15ActionPerformed(evt);
+                txtBetaGlobulinActionPerformed(evt);
             }
         });
 
@@ -3011,7 +3053,7 @@ public class form_hasil extends javax.swing.JPanel {
         jLabel61.setText("Retensi BSP");
         jLabel61.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jTextField56.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txtRetensiBSP.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
         jLabel62.setBackground(java.awt.Color.white);
         jLabel62.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
@@ -3025,7 +3067,7 @@ public class form_hasil extends javax.swing.JPanel {
         jLabel63.setBackground(java.awt.Color.white);
         jLabel63.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel63.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel63.setText("Na");
+        jLabel63.setText("K");
         jLabel63.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jLabel63.setVerifyInputWhenFocusTarget(false);
 
@@ -3036,7 +3078,7 @@ public class form_hasil extends javax.swing.JPanel {
         jLabel64.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jLabel64.setVerifyInputWhenFocusTarget(false);
 
-        bilirubin1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txtTTT.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
         jLabel44.setBackground(java.awt.Color.white);
         jLabel44.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
@@ -3052,56 +3094,56 @@ public class form_hasil extends javax.swing.JPanel {
         jLabel45.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jLabel45.setVerifyInputWhenFocusTarget(false);
 
-        bilirubin2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txtKunkel.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
-        bilirubin3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txtLipidaTotal.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
-        bilirubin4.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txtKolesterolTotal.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
-        bilirubin5.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txtBetaLipoprotein.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
-        bilirubin6.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txtUreum.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
-        bilirubin7.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txtKreatinin.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
-        bilirubin8.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txtAsamUrat.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
-        bilirubin9.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txtCa.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
-        bilirubin10.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txtP.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
-        bilirubin11.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txtNa.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
-        bilirubin12.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txtK.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
-        bilirubin13.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txtCl.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
         jLabel65.setBackground(java.awt.Color.white);
         jLabel65.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel65.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel65.setText("Na");
+        jLabel65.setText("HDL");
         jLabel65.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jLabel65.setVerifyInputWhenFocusTarget(false);
 
         jLabel66.setBackground(java.awt.Color.white);
         jLabel66.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel66.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel66.setText("Na");
+        jLabel66.setText("LDL");
         jLabel66.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jLabel66.setVerifyInputWhenFocusTarget(false);
 
-        bilirubin14.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txtHdl.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
-        bilirubin15.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txtLdl.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
         jLabel67.setBackground(java.awt.Color.white);
         jLabel67.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel67.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel67.setText("Na");
+        jLabel67.setText("Trigliserida");
         jLabel67.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jLabel67.setVerifyInputWhenFocusTarget(false);
 
-        bilirubin16.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txtTrigliserida.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
         jLabel46.setBackground(java.awt.Color.white);
         jLabel46.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
@@ -3202,6 +3244,11 @@ public class form_hasil extends javax.swing.JPanel {
         jLabel75.setVerifyInputWhenFocusTarget(false);
 
         sv_kimia1.setText("SAVE");
+        sv_kimia1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sv_kimia1ActionPerformed(evt);
+            }
+        });
 
         cn_kimia2.setText("CANCEL");
 
@@ -3231,22 +3278,22 @@ public class form_hasil extends javax.swing.JPanel {
                     .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtBilirubinIndirek, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtBilirubinDirek, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtIndeksIkterus, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtFosfataseAlkali, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtFosfatAsamTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtProteinTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtAlbumin, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtGlobulin, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtAlfa1Globulin, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtAlfa2Globulin, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtGamaGlobulin, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtElektroAlbumin, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtBetaGlobulin, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(bilirubin, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField56, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtBilirubinTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtRetensiBSP, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                     .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -3281,19 +3328,19 @@ public class form_hasil extends javax.swing.JPanel {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel43, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(bilirubin1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtTTT, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel44, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(bilirubin2, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtKunkel, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel45, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(bilirubin3, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtLipidaTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel46, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(bilirubin4, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtKolesterolTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel47, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(jPanel2Layout.createSequentialGroup()
@@ -3303,11 +3350,11 @@ public class form_hasil extends javax.swing.JPanel {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(bilirubin14, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtHdl, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel49, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(bilirubin15, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtLdl, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel50, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(jPanel2Layout.createSequentialGroup()
@@ -3324,45 +3371,45 @@ public class form_hasil extends javax.swing.JPanel {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(bilirubin5, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtBetaLipoprotein, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel52, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(bilirubin6, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtUreum, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel68, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(bilirubin7, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtKreatinin, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel69, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(bilirubin8, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtAsamUrat, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel70, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(bilirubin9, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtCa, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel71, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(bilirubin10, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtP, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel72, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(bilirubin11, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtNa, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel73, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(bilirubin12, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtK, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel74, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(bilirubin13, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtCl, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel75, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel67, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(bilirubin16, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtTrigliserida, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel51, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(57, Short.MAX_VALUE))
@@ -3395,155 +3442,155 @@ public class form_hasil extends javax.swing.JPanel {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                     .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(bilirubin, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtBilirubinTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel38, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(bilirubin1, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtTTT, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel44, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtBilirubinDirek, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel40, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel45, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(bilirubin2, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtKunkel, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtBilirubinIndirek, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel41, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(bilirubin3, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtLipidaTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel46, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                     .addComponent(jLabel28, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtIndeksIkterus, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel48, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(bilirubin4, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtKolesterolTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel47, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                             .addComponent(jLabel27, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtFosfataseAlkali, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                             .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtFosfatAsamTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                             .addComponent(jLabel30, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtProteinTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtAlbumin, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel31, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtGlobulin, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel33, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtElektroAlbumin, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel32, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGap(4, 4, 4)
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(txtAlfa1Globulin, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel34, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtAlfa2Globulin, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel35, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtBetaGlobulin, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel36, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtGamaGlobulin, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel37, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel61, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField56, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtRetensiBSP, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel62, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(jLabel65, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(bilirubin14, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(txtHdl, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jLabel49, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel66, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(bilirubin15, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtLdl, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel50, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel67, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(bilirubin16, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtTrigliserida, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel51, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel54, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(bilirubin5, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtBetaLipoprotein, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel52, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel53, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(bilirubin6, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtUreum, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel68, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel57, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(bilirubin7, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtKreatinin, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel69, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel56, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(bilirubin8, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtAsamUrat, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel70, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel55, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(bilirubin9, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtCa, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel71, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel58, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(bilirubin10, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtP, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel72, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel60, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(bilirubin11, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtNa, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel73, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel63, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(bilirubin12, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtK, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel74, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel64, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(bilirubin13, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtCl, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel75, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(33, 33, 33)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -5053,12 +5100,11 @@ public class form_hasil extends javax.swing.JPanel {
                                         .addComponent(jLabel84)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addComponent(jLabel80)))
-                                .addGap(0, 235, Short.MAX_VALUE)))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(0, 214, Short.MAX_VALUE)))))
+                .addContainerGap(153, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 719, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -5104,14 +5150,16 @@ public class form_hasil extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        main_panel.add(jPanel1, "card2");
+        jScrollPane3.setViewportView(jPanel1);
+
+        main_panel.add(jScrollPane3, "card3");
 
         add(main_panel, "card2");
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField15ActionPerformed
+    private void txtBetaGlobulinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtBetaGlobulinActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField15ActionPerformed
+    }//GEN-LAST:event_txtBetaGlobulinActionPerformed
 
     private void cn_kimia3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cn_kimia3ActionPerformed
         // TODO add your handling code here:
@@ -5133,38 +5181,38 @@ public class form_hasil extends javax.swing.JPanel {
 
 try (PreparedStatement ps = kon.prepareStatement(sql)) {
     ps.setInt(1, Integer.parseInt(id_daftar.getSelectedItem().toString())); // ID Pendaftaran
-    ps.setString(2, u_warna.getSelectedItem().toString());
-    ps.setString(3, u_kejernihan.getSelectedItem().toString());
-    ps.setString(4, u_Bjenis.getSelectedItem().toString());
-    ps.setString(5, u_reaksi.getSelectedItem().toString());
-    ps.setString(6, u_protein.getSelectedItem().toString());
+    ps.setString(2, cmbWarna.getSelectedItem().toString());
+    ps.setString(3, cmbKejernihan.getSelectedItem().toString());
+    ps.setString(4, cmbBeratJenis.getSelectedItem().toString());
+    ps.setString(5, cmbReaksi.getSelectedItem().toString());
+    ps.setString(6, cmbProtein.getSelectedItem().toString());
     
     ps.setString(7, pos_PE.isSelected() ? "Positive" : "Negative"); // Protein Esbach
     ps.setString(8, pos_PBJ.isSelected() ? "Positive" : "Negative"); // Protein Bence Jones
 
-    ps.setString(9, u_reduksi.getSelectedItem().toString());
+    ps.setString(9, cmbReduksi.getSelectedItem().toString());
 
     ps.setString(10, pos_BK.isSelected() ? "Positive" : "Negative"); // Benda Keton
     ps.setString(11, pos_DS.isSelected() ? "Positive" : "Negative"); // Darah Samar
     ps.setString(12, pos_TK.isSelected() ? "Positive" : "Negative"); // Tes Kehamilan
 
-    ps.setString(13, u_S_eritrosit.getSelectedItem().toString());
-    ps.setString(14, u_lekosi.getSelectedItem().toString());
+    ps.setString(13, cmbSendimenEritrosit.getSelectedItem().toString());
+    ps.setString(14, cmbLekosit.getSelectedItem().toString());
     ps.setString(15, pos_S.isSelected() ? "Positive" : "Negative");
 
-    ps.setString(16, u_epitel.getSelectedItem().toString());
-    ps.setString(17, u_kristal1.getSelectedItem().toString());
-    ps.setString(18, u_kristal2.getSelectedItem().toString());
+    ps.setString(16, cmbEpitel.getSelectedItem().toString());
+    ps.setString(17, cmbKristal.getSelectedItem().toString());
+    ps.setString(18, cmbKristal2.getSelectedItem().toString());
     
-    ps.setString(19, u_bakter.getSelectedItem().toString());
-    ps.setString(20, u_bilirubin.getSelectedItem().toString());
-    ps.setString(21, u_urobinogel.getSelectedItem().toString());
-    ps.setString(22, jComboBox17.getSelectedItem().toString());
-    ps.setString(23, jComboBox18.getSelectedItem().toString());
+    ps.setString(19, cmbBakteri.getSelectedItem().toString());
+    ps.setString(20, cmbBilirubin.getSelectedItem().toString());
+    ps.setString(21, cmbUrobilinogen.getSelectedItem().toString());
+    ps.setString(22, cmbUrobilin.getSelectedItem().toString());
+    ps.setString(23, cmbNitrit.getSelectedItem().toString());
 
     ps.executeUpdate();
     JOptionPane.showMessageDialog(null, "Data berhasil disimpan!");
-
+    resetFormUrin();
 } catch (SQLException e) {
     JOptionPane.showMessageDialog(null, "Gagal menyimpan: " + e.getMessage());
 }
@@ -5211,11 +5259,124 @@ try (PreparedStatement ps = kon.prepareStatement(sql)) {
 
         ps.executeUpdate();
         JOptionPane.showMessageDialog(null, "Data berhasil disimpan ke database!");
-
+        resetFormHematologi();
     } catch (SQLException e) {
         JOptionPane.showMessageDialog(null, "Gagal simpan data: " + e.getMessage());
     }
     }//GEN-LAST:event_sv_hematologiActionPerformed
+
+    private void sv_serologiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sv_serologiActionPerformed
+        // TODO add your handling code here:
+          try {
+        String sql = "INSERT INTO hasil_serologi (id_pendaftaran, tpha, vdrl, wr, hbs_ag, anti_hbs, hbe_ag, anti_hbe, anti_hbc, anti_ha, " +
+                "afp, cea, igg, iga, igm, ige, widal_typhus_h, paratyphus_a_h, paratyphus_b_h, paratyphus_c_h, typhus_o, " +
+                "paratyphus_a_o, paratyphus_b_o, paratyphus_c_o, asto, crp, raf, t4, t3_uptake, fti, t3, tsh) " +
+                "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        Connection kon = koneksi.koneksiDb();
+        PreparedStatement ps = kon.prepareStatement(sql);
+        ps.setInt(1, Integer.parseInt(id_daftar.getSelectedItem().toString()));
+
+        // Radio button
+        ps.setString(2, rbtnTPHANeg.isSelected() ? "Negative" : "Positive");
+        ps.setString(3, rbtnVDRLNeg.isSelected() ? "Negative" : "Positive");
+        ps.setString(4, rbtnWRNeg.isSelected() ? "Negative" : "Positive");
+        ps.setString(5, rbtnHBsAgNeg.isSelected() ? "Negative" : "Positive");
+
+        // ComboBox or TextField
+        ps.setString(6, cmbAntiHBs.getSelectedItem().toString());
+        ps.setString(7, cmbHbeAg.getSelectedItem().toString());
+        ps.setString(8, cmbAntiHBe.getSelectedItem().toString());
+        ps.setString(9, cmbAntiHBc.getSelectedItem().toString());
+        ps.setString(10, cmbAntiHA.getSelectedItem().toString());
+
+        // TextField
+        ps.setString(11, txtAFP.getText());
+        ps.setString(12, txtEA.getText());
+        ps.setString(13, txtIgG.getText());
+        ps.setString(14, txtIgA.getText());
+        ps.setString(15, txtIgM.getText());
+        ps.setString(16, txtIgE.getText());
+
+        ps.setString(17, cmbTyphusH.getSelectedItem().toString());
+        ps.setString(18, cmbParatyphusAH.getSelectedItem().toString());
+        ps.setString(19, cmbParatyphusBH.getSelectedItem().toString());
+        ps.setString(20, cmbParatyphusCH.getSelectedItem().toString());
+        ps.setString(21, cmbTyphusO.getSelectedItem().toString());
+        ps.setString(22, cmbParatyphusAO.getSelectedItem().toString());
+        ps.setString(23, cmbParatyphusBO.getSelectedItem().toString());
+        ps.setString(24, cmbParatyphusCO.getSelectedItem().toString());
+
+        // ASTO manual input
+        ps.setString(25, txtASTO.getText());
+        ps.setString(26, rbtnCRPNeg.isSelected() ? "Negative" : "Positive");
+        ps.setString(27, rbtnRAfNeg.isSelected() ? "Negative" : "Positive");
+
+        ps.setString(28, txtT4.getText());
+        ps.setString(29, txtT3Uptake.getText());
+        ps.setString(30, txtFTI.getText());
+        ps.setString(31, txtT3.getText());
+        ps.setString(32, txtTSH.getText());
+
+        ps.executeUpdate();
+        JOptionPane.showMessageDialog(null, "Data serologi berhasil disimpan ke database!");
+
+    } catch (SQLException e) {
+        JOptionPane.showMessageDialog(null, "Gagal menyimpan data serologi: " + e.getMessage());
+    }
+    }//GEN-LAST:event_sv_serologiActionPerformed
+
+    private void sv_kimia1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sv_kimia1ActionPerformed
+        // TODO add your handling code here:
+        try {
+        Connection kon = koneksi.koneksiDb();
+        String sql = "INSERT INTO hasil_kmia1 (id_pendaftaran, bilirubin_total, bilirubin_direk, bilirubin_indirek, indeks_ikterus, " +
+                     "fosfatase_alkali, fosfat_asam_total, protein_total, albumin, globulin, " +
+                     "elektro_albumin, alfa1_globulin, alfa2_globulin, beta_globulin, gama_globulin, retensi_bsp, " +
+                     "ttt, kunkel, lipida_total, kolesterol_total, kolesterol_hdl, kolesterol_ldl, trigliserida, "+
+                     "beta_lipoprotein, ureum, kreatinin, asam_urat, ca, p, na, k, cl) " +
+                     "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+
+        PreparedStatement ps = kon.prepareStatement(sql);
+        ps.setInt(1, Integer.parseInt(id_daftar.getSelectedItem().toString()));
+        ps.setString(2, txtBilirubinTotal.getText());
+        ps.setString(3, txtBilirubinDirek.getText());
+        ps.setString(4, txtBilirubinIndirek.getText());
+        ps.setString(5, txtIndeksIkterus.getText());
+        ps.setString(6, txtFosfataseAlkali.getText());
+        ps.setString(7, txtFosfatAsamTotal.getText());
+        ps.setString(8, txtProteinTotal.getText());
+        ps.setString(9, txtAlbumin.getText());
+        ps.setString(10, txtGlobulin.getText());
+        ps.setString(11, txtElektroAlbumin.getText());
+        ps.setString(12, txtAlfa1Globulin.getText());
+        ps.setString(13, txtAlfa2Globulin.getText());
+        ps.setString(14, txtBetaGlobulin.getText());
+        ps.setString(15, txtGamaGlobulin.getText());
+        ps.setString(16, txtRetensiBSP.getText());
+        ps.setString(17, txtTTT.getText());
+        ps.setString(18, txtKunkel.getText());
+        ps.setString(19, txtLipidaTotal.getText());
+        ps.setString(20, txtKolesterolTotal.getText());
+        ps.setString(21, txtHdl.getText());
+        ps.setString(22, txtLdl.getText());
+        ps.setString(23, txtTrigliserida.getText());
+        ps.setString(24, txtBetaLipoprotein.getText());
+        ps.setString(25, txtUreum.getText());
+        ps.setString(26, txtKreatinin.getText());
+        ps.setString(27, txtAsamUrat.getText());
+        ps.setString(28, txtCa.getText());
+        ps.setString(29, txtP.getText());
+        ps.setString(30, txtNa.getText());
+        ps.setString(31, txtK.getText());
+        ps.setString(32, txtCl.getText());
+
+        ps.executeUpdate();
+        JOptionPane.showMessageDialog(null, "Data Kimia I berhasil disimpan.");
+        ps.close();
+    } catch (SQLException e) {
+        JOptionPane.showMessageDialog(null, "Gagal menyimpan data Kimia I: " + e.getMessage());
+    }
+    }//GEN-LAST:event_sv_kimia1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -5239,53 +5400,60 @@ try (PreparedStatement ps = kon.prepareStatement(sql)) {
     private javax.swing.JLabel antiHBe;
     private javax.swing.JLabel antihbs;
     private javax.swing.JLabel asto;
-    private javax.swing.ButtonGroup benda_keton;
-    private javax.swing.JTextField bilirubin;
-    private javax.swing.JTextField bilirubin1;
-    private javax.swing.JTextField bilirubin10;
-    private javax.swing.JTextField bilirubin11;
-    private javax.swing.JTextField bilirubin12;
-    private javax.swing.JTextField bilirubin13;
-    private javax.swing.JTextField bilirubin14;
-    private javax.swing.JTextField bilirubin15;
-    private javax.swing.JTextField bilirubin16;
-    private javax.swing.JTextField bilirubin2;
-    private javax.swing.JTextField bilirubin3;
-    private javax.swing.JTextField bilirubin4;
-    private javax.swing.JTextField bilirubin5;
-    private javax.swing.JTextField bilirubin6;
-    private javax.swing.JTextField bilirubin7;
-    private javax.swing.JTextField bilirubin8;
-    private javax.swing.JTextField bilirubin9;
+    private javax.swing.JComboBox<String> cmbAntiHA;
+    private javax.swing.JComboBox<String> cmbAntiHBc;
+    private javax.swing.JComboBox<String> cmbAntiHBe;
+    private javax.swing.JComboBox<String> cmbAntiHBs;
+    private javax.swing.JComboBox<String> cmbBakteri;
+    private javax.swing.JComboBox<String> cmbBeratJenis;
+    private javax.swing.JComboBox<String> cmbBilirubin;
+    private javax.swing.JComboBox<String> cmbEpitel;
+    private javax.swing.JComboBox<String> cmbHbeAg;
+    private javax.swing.JComboBox<String> cmbKejernihan;
+    private javax.swing.JComboBox<String> cmbKristal;
+    private javax.swing.JComboBox<String> cmbKristal2;
+    private javax.swing.JComboBox<String> cmbLekosit;
+    private javax.swing.JComboBox<String> cmbNitrit;
+    private javax.swing.JComboBox<String> cmbParatyphusAH;
+    private javax.swing.JComboBox<String> cmbParatyphusAO;
+    private javax.swing.JComboBox<String> cmbParatyphusBH;
+    private javax.swing.JComboBox<String> cmbParatyphusBO;
+    private javax.swing.JComboBox<String> cmbParatyphusCH;
+    private javax.swing.JComboBox<String> cmbParatyphusCO;
+    private javax.swing.JComboBox<String> cmbProtein;
+    private javax.swing.JComboBox<String> cmbReaksi;
+    private javax.swing.JComboBox<String> cmbReduksi;
+    private javax.swing.JComboBox<String> cmbSendimenEritrosit;
+    private javax.swing.JComboBox<String> cmbTyphusH;
+    private javax.swing.JComboBox<String> cmbTyphusO;
+    private javax.swing.JComboBox<String> cmbUrobilin;
+    private javax.swing.JComboBox<String> cmbUrobilinogen;
+    private javax.swing.JComboBox<String> cmbWarna;
     private javax.swing.JButton cn_hematologi;
     private javax.swing.JButton cn_kimia2;
     private javax.swing.JButton cn_kimia3;
     private javax.swing.JButton cn_serologi;
     private javax.swing.JButton cn_tinja;
     private javax.swing.JButton cn_urine;
-    private javax.swing.JComboBox<String> comboxAntiHA;
-    private javax.swing.JComboBox<String> comboxAntiHBc;
-    private javax.swing.JComboBox<String> comboxAntiHBe;
-    private javax.swing.JComboBox<String> comboxAntiHBs;
-    private javax.swing.JComboBox<String> comboxHbeAg;
-    private javax.swing.JComboBox<String> comboxParaAH;
-    private javax.swing.JComboBox<String> comboxParaAO;
-    private javax.swing.JComboBox<String> comboxParaBH;
-    private javax.swing.JComboBox<String> comboxParaBO;
-    private javax.swing.JComboBox<String> comboxParaCH;
-    private javax.swing.JComboBox<String> comboxParaCO;
-    private javax.swing.JComboBox<String> comboxTyphusH;
-    private javax.swing.JComboBox<String> comboxTyphusO;
     private javax.swing.JLabel crp;
-    private javax.swing.ButtonGroup darah_samar;
     private javax.swing.JLabel ft1;
+    private javax.swing.ButtonGroup groupBenceJones;
+    private javax.swing.ButtonGroup groupBendaKeton;
+    private javax.swing.ButtonGroup groupCRP;
+    private javax.swing.ButtonGroup groupDarahSamar;
+    private javax.swing.ButtonGroup groupEsbach;
+    private javax.swing.ButtonGroup groupHBsAg;
+    private javax.swing.ButtonGroup groupRAF;
+    private javax.swing.ButtonGroup groupSilinder;
+    private javax.swing.ButtonGroup groupTPHA;
+    private javax.swing.ButtonGroup groupTesKehamilan;
+    private javax.swing.ButtonGroup groupVDRL;
+    private javax.swing.ButtonGroup groupWR;
     private javax.swing.JLabel hasil1;
     private javax.swing.JLabel hasil2;
     private javax.swing.JComboBox<String> id_daftar;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JComboBox<String> jComboBox17;
-    private javax.swing.JComboBox<String> jComboBox18;
     private javax.swing.JComboBox<String> jComboBox19;
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JComboBox<String> jComboBox20;
@@ -5594,14 +5762,9 @@ try (PreparedStatement ps = kon.prepareStatement(sql)) {
     private javax.swing.JRadioButton jRadioButton9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField10;
-    private javax.swing.JTextField jTextField11;
-    private javax.swing.JTextField jTextField12;
-    private javax.swing.JTextField jTextField13;
-    private javax.swing.JTextField jTextField14;
-    private javax.swing.JTextField jTextField15;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField22;
     private javax.swing.JTextField jTextField23;
@@ -5611,7 +5774,6 @@ try (PreparedStatement ps = kon.prepareStatement(sql)) {
     private javax.swing.JTextField jTextField27;
     private javax.swing.JTextField jTextField28;
     private javax.swing.JTextField jTextField29;
-    private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField30;
     private javax.swing.JTextField jTextField31;
     private javax.swing.JTextField jTextField32;
@@ -5622,7 +5784,6 @@ try (PreparedStatement ps = kon.prepareStatement(sql)) {
     private javax.swing.JTextField jTextField37;
     private javax.swing.JTextField jTextField38;
     private javax.swing.JTextField jTextField39;
-    private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField40;
     private javax.swing.JTextField jTextField41;
     private javax.swing.JTextField jTextField42;
@@ -5633,18 +5794,12 @@ try (PreparedStatement ps = kon.prepareStatement(sql)) {
     private javax.swing.JTextField jTextField47;
     private javax.swing.JTextField jTextField48;
     private javax.swing.JTextField jTextField49;
-    private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField50;
     private javax.swing.JTextField jTextField51;
     private javax.swing.JTextField jTextField52;
     private javax.swing.JTextField jTextField53;
     private javax.swing.JTextField jTextField54;
     private javax.swing.JTextField jTextField55;
-    private javax.swing.JTextField jTextField56;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField9;
     private javax.swing.JLabel judul;
     private javax.swing.JLabel judul1;
     private javax.swing.ButtonGroup lemak;
@@ -5659,12 +5814,6 @@ try (PreparedStatement ps = kon.prepareStatement(sql)) {
     private javax.swing.JRadioButton neg_PE;
     private javax.swing.JRadioButton neg_S;
     private javax.swing.JRadioButton neg_TK;
-    private javax.swing.JRadioButton negativRAF;
-    private javax.swing.JRadioButton negativeCRP;
-    private javax.swing.JRadioButton negativtpha;
-    private javax.swing.JRadioButton negativtpha1;
-    private javax.swing.JRadioButton negativtpha2;
-    private javax.swing.JRadioButton negativtpha3;
     private javax.swing.JLabel ngAFP;
     private javax.swing.JLabel nm_dokter;
     private javax.swing.JLabel nm_pasien;
@@ -5682,16 +5831,19 @@ try (PreparedStatement ps = kon.prepareStatement(sql)) {
     private javax.swing.JRadioButton pos_PE;
     private javax.swing.JRadioButton pos_S;
     private javax.swing.JRadioButton pos_TK;
-    private javax.swing.JRadioButton positiveCRP;
-    private javax.swing.JRadioButton positivetpha;
-    private javax.swing.JRadioButton positivetpha1;
-    private javax.swing.JRadioButton positivetpha2;
-    private javax.swing.JRadioButton positivetpha3;
-    private javax.swing.JRadioButton postiveRAF;
-    private javax.swing.ButtonGroup protein_esbach;
-    private javax.swing.ButtonGroup protein_esbach_jones;
     private javax.swing.JLabel raf;
-    private javax.swing.ButtonGroup silinder;
+    private javax.swing.JRadioButton rbtnCRPNeg;
+    private javax.swing.JRadioButton rbtnCRPPos;
+    private javax.swing.JRadioButton rbtnHBsAgNeg;
+    private javax.swing.JRadioButton rbtnHBsAgPos;
+    private javax.swing.JRadioButton rbtnRAfNeg;
+    private javax.swing.JRadioButton rbtnRAfPos;
+    private javax.swing.JRadioButton rbtnTPHANeg;
+    private javax.swing.JRadioButton rbtnTPHAPos;
+    private javax.swing.JRadioButton rbtnVDRLNeg;
+    private javax.swing.JRadioButton rbtnVDRLPos;
+    private javax.swing.JRadioButton rbtnWRNeg;
+    private javax.swing.JRadioButton rbtnWRPos;
     private javax.swing.JButton sv_hematologi;
     private javax.swing.JButton sv_kimia1;
     private javax.swing.JButton sv_kimia2;
@@ -5701,69 +5853,186 @@ try (PreparedStatement ps = kon.prepareStatement(sql)) {
     private javax.swing.JLabel t3;
     private javax.swing.JLabel t3uptake;
     private javax.swing.JLabel t4;
-    private javax.swing.JTextField tAFP;
-    private javax.swing.JTextField tASTO;
-    private javax.swing.JTextField tEA;
-    private javax.swing.JTextField tFT;
-    private javax.swing.JTextField tIgA;
-    private javax.swing.JTextField tIgE;
-    private javax.swing.JTextField tIgG;
-    private javax.swing.JTextField tIgM;
-    private javax.swing.JTextField tT3;
-    private javax.swing.JTextField tT3uptake;
-    private javax.swing.JTextField tT4;
-    private javax.swing.JTextField tTSH;
     private javax.swing.ButtonGroup t_darah;
     private javax.swing.ButtonGroup t_lendir;
     private javax.swing.ButtonGroup t_nanah;
     private javax.swing.JTable tb_rincian;
-    private javax.swing.ButtonGroup tes_kehamilan;
     private javax.swing.JLabel tpha;
     private javax.swing.JLabel tsh;
+    private javax.swing.JTextField txtAFP;
+    private javax.swing.JTextField txtASTO;
+    private javax.swing.JTextField txtAlbumin;
+    private javax.swing.JTextField txtAlfa1Globulin;
+    private javax.swing.JTextField txtAlfa2Globulin;
+    private javax.swing.JTextField txtAsamUrat;
     private javax.swing.JTextField txtBasofil;
     private javax.swing.JTextField txtBatang;
+    private javax.swing.JTextField txtBetaGlobulin;
+    private javax.swing.JTextField txtBetaLipoprotein;
+    private javax.swing.JTextField txtBilirubinDirek;
+    private javax.swing.JTextField txtBilirubinIndirek;
+    private javax.swing.JTextField txtBilirubinTotal;
+    private javax.swing.JTextField txtCa;
+    private javax.swing.JTextField txtCl;
+    private javax.swing.JTextField txtEA;
+    private javax.swing.JTextField txtElektroAlbumin;
     private javax.swing.JTextField txtEosinofil;
     private javax.swing.JTextField txtEritrosit;
+    private javax.swing.JTextField txtFTI;
+    private javax.swing.JTextField txtFosfatAsamTotal;
+    private javax.swing.JTextField txtFosfataseAlkali;
+    private javax.swing.JTextField txtGamaGlobulin;
+    private javax.swing.JTextField txtGlobulin;
     private javax.swing.JTextField txtGolDarah;
     private javax.swing.JTextField txtHER_MCH;
+    private javax.swing.JTextField txtHdl;
     private javax.swing.JTextField txtHematokrit;
     private javax.swing.JTextField txtHemoglobin;
+    private javax.swing.JTextField txtIgA;
+    private javax.swing.JTextField txtIgE;
+    private javax.swing.JTextField txtIgG;
+    private javax.swing.JTextField txtIgM;
+    private javax.swing.JTextField txtIndeksIkterus;
+    private javax.swing.JTextField txtK;
     private javax.swing.JTextField txtKHER_MCHC;
+    private javax.swing.JTextField txtKolesterolTotal;
+    private javax.swing.JTextField txtKreatinin;
+    private javax.swing.JTextField txtKunkel;
     private javax.swing.JTextField txtLED;
+    private javax.swing.JTextField txtLdl;
     private javax.swing.JTextField txtLeukosit;
     private javax.swing.JTextField txtLimfosit;
+    private javax.swing.JTextField txtLipidaTotal;
     private javax.swing.JTextField txtMalaria;
     private javax.swing.JTextField txtMasaPembekuan;
     private javax.swing.JTextField txtMasaPendarahan;
     private javax.swing.JTextField txtMonosit;
+    private javax.swing.JTextField txtNa;
+    private javax.swing.JTextField txtP;
     private javax.swing.JTextField txtPembendungan;
+    private javax.swing.JTextField txtProteinTotal;
     private javax.swing.JTextField txtReaksiLE;
     private javax.swing.JTextField txtResistensiOsmotik;
+    private javax.swing.JTextField txtRetensiBSP;
     private javax.swing.JTextField txtRetikulosit;
     private javax.swing.JTextField txtRetraksi;
     private javax.swing.JTextField txtSegmen;
     private javax.swing.JTextField txtSelLE;
+    private javax.swing.JTextField txtT3;
+    private javax.swing.JTextField txtT3Uptake;
+    private javax.swing.JTextField txtT4;
+    private javax.swing.JTextField txtTSH;
+    private javax.swing.JTextField txtTTT;
+    private javax.swing.JTextField txtTrigliserida;
     private javax.swing.JTextField txtTrombosit;
+    private javax.swing.JTextField txtUreum;
     private javax.swing.JTextField txtVER_MCH;
     private javax.swing.JTextField txtWestergren;
     private javax.swing.JLabel typhusH;
     private javax.swing.JLabel typhusO;
-    private javax.swing.JComboBox<String> u_Bjenis;
-    private javax.swing.JComboBox<String> u_S_eritrosit;
-    private javax.swing.JComboBox<String> u_bakter;
-    private javax.swing.JComboBox<String> u_bilirubin;
-    private javax.swing.JComboBox<String> u_epitel;
-    private javax.swing.JComboBox<String> u_kejernihan;
-    private javax.swing.JComboBox<String> u_kristal1;
-    private javax.swing.JComboBox<String> u_kristal2;
-    private javax.swing.JComboBox<String> u_lekosi;
-    private javax.swing.JComboBox<String> u_protein;
-    private javax.swing.JComboBox<String> u_reaksi;
-    private javax.swing.JComboBox<String> u_reduksi;
-    private javax.swing.JComboBox<String> u_urobinogel;
-    private javax.swing.JComboBox<String> u_warna;
     private javax.swing.JLabel ugEA;
     private javax.swing.JLabel vdrl;
     private javax.swing.JLabel wr;
     // End of variables declaration//GEN-END:variables
+
+public void resetFormUrin() {
+    // Kolom teks dan combo box
+    cmbWarna.setSelectedIndex(0);
+    cmbKejernihan.setSelectedIndex(0);
+    cmbBeratJenis.setSelectedIndex(0);
+    cmbReaksi.setSelectedIndex(0);
+    cmbProtein.setSelectedIndex(0);
+    cmbReduksi.setSelectedIndex(0);
+
+
+    cmbSendimenEritrosit.setSelectedIndex(0);
+    cmbLekosit.setSelectedIndex(0);
+    cmbEpitel.setSelectedIndex(0);
+    cmbKristal.setSelectedIndex(0);
+    cmbKristal2.setSelectedIndex(0);
+    cmbBakteri.setSelectedIndex(0);
+    cmbBilirubin.setSelectedIndex(0);
+    cmbUrobilinogen.setSelectedIndex(0);
+    cmbUrobilin.setSelectedIndex(0);
+    cmbNitrit.setSelectedIndex(0);
+
+    // Radio button (clearSelection)
+    groupEsbach.clearSelection();
+    groupBenceJones.clearSelection();
+    groupBendaKeton.clearSelection();
+    groupDarahSamar.clearSelection();
+    groupTesKehamilan.clearSelection();
+    groupSilinder.clearSelection();
+}
+
+public void resetFormHematologi() {
+    txtHemoglobin.setText("");
+    txtHematokrit.setText("");
+    txtEritrosit.setText("");
+    txtVER_MCH.setText("");
+    txtHER_MCH.setText("");
+    txtKHER_MCHC.setText("");
+    txtRetikulosit.setText("");
+    txtLeukosit.setText("");
+    txtBasofil.setText("");
+    txtEosinofil.setText("");
+    txtBatang.setText("");
+    txtSegmen.setText("");
+    txtLimfosit.setText("");
+    txtMonosit.setText("");
+    txtLED.setText("");
+    txtWestergren.setText("");
+    txtTrombosit.setText("");
+    txtMasaPendarahan.setText("");
+    txtMasaPembekuan.setText("");
+    txtPembendungan.setText("");
+    txtRetraksi.setText("");
+    txtResistensiOsmotik.setText("");
+    txtSelLE.setText("");
+    txtReaksiLE.setText("");
+    txtMalaria.setText("");
+    txtGolDarah.setText("");
+}
+
+public void resetFormSerologi() {
+    // Text Field
+    txtAFP.setText("");
+    txtEA.setText("");
+    txtIgG.setText("");
+    txtIgA.setText("");
+    txtIgM.setText("");
+    txtIgE.setText("");
+    txtASTO.setText("");
+    txtT4.setText("");
+    txtT3Uptake.setText("");
+    txtFTI.setText("");
+    txtT3.setText("");
+    txtTSH.setText("");
+
+    // ComboBox (set ke indeks pertama)
+    cmbAntiHBs.setSelectedIndex(0);
+    cmbHbeAg.setSelectedIndex(0);
+    cmbAntiHBe.setSelectedIndex(0);
+    cmbAntiHBc.setSelectedIndex(0);
+    cmbAntiHA.setSelectedIndex(0);
+
+    cmbTyphusH.setSelectedIndex(0);
+    cmbParatyphusAH.setSelectedIndex(0);
+    cmbParatyphusBH.setSelectedIndex(0);
+    cmbParatyphusCH.setSelectedIndex(0);
+    cmbTyphusO.setSelectedIndex(0);
+    cmbParatyphusAO.setSelectedIndex(0);
+    cmbParatyphusBO.setSelectedIndex(0);
+    cmbParatyphusCO.setSelectedIndex(0);
+
+    // Radio Button (kosongkan ButtonGroup)
+    groupTPHA.clearSelection();
+    groupVDRL.clearSelection();
+    groupWR.clearSelection();
+    groupHBsAg.clearSelection();
+    groupCRP.clearSelection();
+    groupRAF.clearSelection();
+}
+
+
 }

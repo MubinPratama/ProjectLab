@@ -41,7 +41,6 @@ public class Menu extends javax.swing.JFrame {
         
         Logo.setIcon(logo);
         nama_lab.setIcon(Nama_lab);
-        logo_pn.setIcon(Logo_pn);
     }
      private void showDateTime() {
         Timer timer = new Timer(1000, new ActionListener() {
@@ -109,7 +108,7 @@ public class Menu extends javax.swing.JFrame {
         );
         pn_headerLayout.setVerticalGroup(
             pn_headerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Logo, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
+            .addComponent(Logo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(nama_lab, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
@@ -345,7 +344,6 @@ public class Menu extends javax.swing.JFrame {
                 pn_utama.add(new pn_utama());
                 pn_utama.repaint();
                 pn_utama.revalidate();
-                logo_pn.setIcon(Logo_pn);
             }
         });
         Item_menu menuLogout = new Item_menu(iconMaster, false, null, "Logout", new ActionListener() {
