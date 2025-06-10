@@ -140,21 +140,21 @@ public class form_hasil extends javax.swing.JPanel {
     private void initComponents() {
 
         lemak = new javax.swing.ButtonGroup();
-        protein_esbach = new javax.swing.ButtonGroup();
-        protein_esbach_jones = new javax.swing.ButtonGroup();
-        benda_keton = new javax.swing.ButtonGroup();
-        darah_samar = new javax.swing.ButtonGroup();
-        tes_kehamilan = new javax.swing.ButtonGroup();
-        silinder = new javax.swing.ButtonGroup();
+        groupEsbach = new javax.swing.ButtonGroup();
+        groupBenceJones = new javax.swing.ButtonGroup();
+        groupBendaKeton = new javax.swing.ButtonGroup();
+        groupDarahSamar = new javax.swing.ButtonGroup();
+        groupTesKehamilan = new javax.swing.ButtonGroup();
+        groupSilinder = new javax.swing.ButtonGroup();
         t_lendir = new javax.swing.ButtonGroup();
         t_darah = new javax.swing.ButtonGroup();
         t_nanah = new javax.swing.ButtonGroup();
-        s_tpha = new javax.swing.ButtonGroup();
-        s_vdrl = new javax.swing.ButtonGroup();
-        s_wr = new javax.swing.ButtonGroup();
-        s_hbsag = new javax.swing.ButtonGroup();
-        s_cpr = new javax.swing.ButtonGroup();
-        s_raf = new javax.swing.ButtonGroup();
+        groupTPHA = new javax.swing.ButtonGroup();
+        groupVDRL = new javax.swing.ButtonGroup();
+        groupWR = new javax.swing.ButtonGroup();
+        groupHBsAg = new javax.swing.ButtonGroup();
+        groupCRP = new javax.swing.ButtonGroup();
+        groupRAF = new javax.swing.ButtonGroup();
         main_panel = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -179,16 +179,16 @@ public class form_hasil extends javax.swing.JPanel {
         jLabel339 = new javax.swing.JLabel();
         jLabel340 = new javax.swing.JLabel();
         jLabel341 = new javax.swing.JLabel();
-        u_warna = new javax.swing.JComboBox<>();
-        u_kejernihan = new javax.swing.JComboBox<>();
-        u_Bjenis = new javax.swing.JComboBox<>();
-        u_reaksi = new javax.swing.JComboBox<>();
-        u_protein = new javax.swing.JComboBox<>();
+        cmbWarna = new javax.swing.JComboBox<>();
+        cmbKejernihan = new javax.swing.JComboBox<>();
+        cmbBeratJenis = new javax.swing.JComboBox<>();
+        cmbReaksi = new javax.swing.JComboBox<>();
+        cmbProtein = new javax.swing.JComboBox<>();
         neg_PE = new javax.swing.JRadioButton();
         pos_PE = new javax.swing.JRadioButton();
         neg_PBJ = new javax.swing.JRadioButton();
         pos_PBJ = new javax.swing.JRadioButton();
-        u_reduksi = new javax.swing.JComboBox<>();
+        cmbReduksi = new javax.swing.JComboBox<>();
         neg_BK = new javax.swing.JRadioButton();
         pos_BK = new javax.swing.JRadioButton();
         pos_DS = new javax.swing.JRadioButton();
@@ -211,18 +211,18 @@ public class form_hasil extends javax.swing.JPanel {
         jLabel355 = new javax.swing.JLabel();
         jLabel356 = new javax.swing.JLabel();
         jLabel357 = new javax.swing.JLabel();
-        u_S_eritrosit = new javax.swing.JComboBox<>();
-        u_lekosi = new javax.swing.JComboBox<>();
+        cmbSendimenEritrosit = new javax.swing.JComboBox<>();
+        cmbLekosit = new javax.swing.JComboBox<>();
         neg_S = new javax.swing.JRadioButton();
         pos_S = new javax.swing.JRadioButton();
-        u_epitel = new javax.swing.JComboBox<>();
-        u_kristal1 = new javax.swing.JComboBox<>();
-        u_kristal2 = new javax.swing.JComboBox<>();
-        u_bakter = new javax.swing.JComboBox<>();
-        u_bilirubin = new javax.swing.JComboBox<>();
-        u_urobinogel = new javax.swing.JComboBox<>();
-        jComboBox17 = new javax.swing.JComboBox<>();
-        jComboBox18 = new javax.swing.JComboBox<>();
+        cmbEpitel = new javax.swing.JComboBox<>();
+        cmbKristal = new javax.swing.JComboBox<>();
+        cmbKristal2 = new javax.swing.JComboBox<>();
+        cmbBakteri = new javax.swing.JComboBox<>();
+        cmbBilirubin = new javax.swing.JComboBox<>();
+        cmbUrobilinogen = new javax.swing.JComboBox<>();
+        cmbUrobilin = new javax.swing.JComboBox<>();
+        cmbNitrit = new javax.swing.JComboBox<>();
         jLabel4 = new javax.swing.JLabel();
         sv_urine = new javax.swing.JButton();
         cn_urine = new javax.swing.JButton();
@@ -783,71 +783,71 @@ public class form_hasil extends javax.swing.JPanel {
         jLabel341.setText("Tes Kehamilan");
         jLabel341.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        u_warna.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        u_warna.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "Kuning Muda", "Kuning Tua" }));
+        cmbWarna.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        cmbWarna.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "Kuning Muda", "Kuning Tua" }));
 
-        u_kejernihan.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        u_kejernihan.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "Jernih", "Agak Keruh", "Keruh" }));
+        cmbKejernihan.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        cmbKejernihan.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "Jernih", "Agak Keruh", "Keruh" }));
 
-        u_Bjenis.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        u_Bjenis.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "1.005", "1.010", "1.015", "1.020", "1.025", "1.030" }));
+        cmbBeratJenis.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        cmbBeratJenis.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "1.005", "1.010", "1.015", "1.020", "1.025", "1.030" }));
 
-        u_reaksi.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        u_reaksi.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "5.0", "5.5", "6.0", "6.5", "7.0", "7.5", "8.0" }));
+        cmbReaksi.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        cmbReaksi.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "5.0", "5.5", "6.0", "6.5", "7.0", "7.5", "8.0" }));
 
-        u_protein.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        u_protein.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "[-]/Negative", "[+]/Positif 1", "[++]/Positif 2", "[+++]/Positfi3", "[++++]/Positif 4" }));
+        cmbProtein.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        cmbProtein.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "[-]/Negative", "[+]/Positif 1", "[++]/Positif 2", "[+++]/Positfi3", "[++++]/Positif 4" }));
 
         neg_PE.setBackground(new java.awt.Color(255, 255, 255));
-        protein_esbach.add(neg_PE);
+        groupEsbach.add(neg_PE);
         neg_PE.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         neg_PE.setText("Negative");
 
         pos_PE.setBackground(new java.awt.Color(255, 255, 255));
-        protein_esbach.add(pos_PE);
+        groupEsbach.add(pos_PE);
         pos_PE.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         pos_PE.setText("Positive");
 
         neg_PBJ.setBackground(new java.awt.Color(255, 255, 255));
-        protein_esbach_jones.add(neg_PBJ);
+        groupBenceJones.add(neg_PBJ);
         neg_PBJ.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         neg_PBJ.setText("Negative");
 
         pos_PBJ.setBackground(new java.awt.Color(255, 255, 255));
-        protein_esbach_jones.add(pos_PBJ);
+        groupBenceJones.add(pos_PBJ);
         pos_PBJ.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         pos_PBJ.setText("Positive");
 
-        u_reduksi.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        u_reduksi.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "[-]/Negative", "[+]/Positif 1", "[++]/Positif 2", "[+++]/Positfi3", "[++++]/Positif 4" }));
+        cmbReduksi.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        cmbReduksi.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "[-]/Negative", "[+]/Positif 1", "[++]/Positif 2", "[+++]/Positfi3", "[++++]/Positif 4" }));
 
         neg_BK.setBackground(new java.awt.Color(255, 255, 255));
-        benda_keton.add(neg_BK);
+        groupBendaKeton.add(neg_BK);
         neg_BK.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         neg_BK.setText("Negative");
 
         pos_BK.setBackground(new java.awt.Color(255, 255, 255));
-        benda_keton.add(pos_BK);
+        groupBendaKeton.add(pos_BK);
         pos_BK.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         pos_BK.setText("Positive");
 
         pos_DS.setBackground(new java.awt.Color(255, 255, 255));
-        darah_samar.add(pos_DS);
+        groupDarahSamar.add(pos_DS);
         pos_DS.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         pos_DS.setText("Positive");
 
         neg_DS.setBackground(new java.awt.Color(255, 255, 255));
-        darah_samar.add(neg_DS);
+        groupDarahSamar.add(neg_DS);
         neg_DS.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         neg_DS.setText("Negative");
 
         neg_TK.setBackground(new java.awt.Color(255, 255, 255));
-        tes_kehamilan.add(neg_TK);
+        groupTesKehamilan.add(neg_TK);
         neg_TK.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         neg_TK.setText("Negative");
 
         pos_TK.setBackground(new java.awt.Color(255, 255, 255));
-        tes_kehamilan.add(pos_TK);
+        groupTesKehamilan.add(pos_TK);
         pos_TK.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         pos_TK.setText("Positive");
 
@@ -927,45 +927,45 @@ public class form_hasil extends javax.swing.JPanel {
         jLabel357.setText("Nitrit");
         jLabel357.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        u_S_eritrosit.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        u_S_eritrosit.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "1-2", "2-3", "3-4", "4-5", "5-6", "6-7", "7-8", "8-9", "9-10", "Banyak - Penuh" }));
+        cmbSendimenEritrosit.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        cmbSendimenEritrosit.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "1-2", "2-3", "3-4", "4-5", "5-6", "6-7", "7-8", "8-9", "9-10", "Banyak - Penuh" }));
 
-        u_lekosi.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        u_lekosi.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "1-2", "2-3", "3-4", "4-5", "5-6", "6-7", "7-8", "8-9", "9-10", "Banyak - Penuh" }));
+        cmbLekosit.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        cmbLekosit.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "1-2", "2-3", "3-4", "4-5", "5-6", "6-7", "7-8", "8-9", "9-10", "Banyak - Penuh" }));
 
         neg_S.setBackground(new java.awt.Color(255, 255, 255));
-        silinder.add(neg_S);
+        groupSilinder.add(neg_S);
         neg_S.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         neg_S.setText("Negative");
 
         pos_S.setBackground(new java.awt.Color(255, 255, 255));
-        silinder.add(pos_S);
+        groupSilinder.add(pos_S);
         pos_S.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         pos_S.setText("Positive");
 
-        u_epitel.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        u_epitel.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "[-]/Negative", "[+]/Positif 1", "[++]/Positif 2", "[+++]/Positfi3", "[++++]/Positif 4" }));
+        cmbEpitel.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        cmbEpitel.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "[-]/Negative", "[+]/Positif 1", "[++]/Positif 2", "[+++]/Positfi3", "[++++]/Positif 4" }));
 
-        u_kristal1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        u_kristal1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "Urat Amorf", "Asam Urat", "Ca. Oxalat", "Tripel Postat" }));
+        cmbKristal.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        cmbKristal.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "Urat Amorf", "Asam Urat", "Ca. Oxalat", "Tripel Postat" }));
 
-        u_kristal2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        u_kristal2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "[-]/Negative", "[+]/Positif 1", "[++]/Positif 2", "[+++]/Positfi3", "[++++]/Positif 4" }));
+        cmbKristal2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        cmbKristal2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "[-]/Negative", "[+]/Positif 1", "[++]/Positif 2", "[+++]/Positfi3", "[++++]/Positif 4" }));
 
-        u_bakter.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        u_bakter.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "[-]/Negative", "[+]/Positif 1", "[++]/Positif 2", "[+++]/Positfi3", "[++++]/Positif 4" }));
+        cmbBakteri.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        cmbBakteri.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "[-]/Negative", "[+]/Positif 1", "[++]/Positif 2", "[+++]/Positfi3", "[++++]/Positif 4" }));
 
-        u_bilirubin.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        u_bilirubin.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "[-]/Negative", "[+]/Positif 1", "[++]/Positif 2", "[+++]/Positfi3", "[++++]/Positif 4" }));
+        cmbBilirubin.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        cmbBilirubin.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "[-]/Negative", "[+]/Positif 1", "[++]/Positif 2", "[+++]/Positfi3", "[++++]/Positif 4" }));
 
-        u_urobinogel.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        u_urobinogel.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "[-]/Negative", "[+]/Positif 1", "[++]/Positif 2", "[+++]/Positfi3", "[++++]/Positif 4" }));
+        cmbUrobilinogen.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        cmbUrobilinogen.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "[-]/Negative", "[+]/Positif 1", "[++]/Positif 2", "[+++]/Positfi3", "[++++]/Positif 4" }));
 
-        jComboBox17.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jComboBox17.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "[-]/Negative", "[+]/Positif 1", "[++]/Positif 2", "[+++]/Positfi3", "[++++]/Positif 4" }));
+        cmbUrobilin.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        cmbUrobilin.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "[-]/Negative", "[+]/Positif 1", "[++]/Positif 2", "[+++]/Positfi3", "[++++]/Positif 4" }));
 
-        jComboBox18.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jComboBox18.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "[-]/Negative", "[+]/Positif 1", "[++]/Positif 2", "[+++]/Positfi3", "[++++]/Positif 4" }));
+        cmbNitrit.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        cmbNitrit.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "[-]/Negative", "[+]/Positif 1", "[++]/Positif 2", "[+++]/Positfi3", "[++++]/Positif 4" }));
 
         jLabel4.setText("jLabel4");
         jLabel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
@@ -1024,16 +1024,16 @@ public class form_hasil extends javax.swing.JPanel {
                                                 .addGap(18, 18, 18)
                                                 .addComponent(pos_PBJ))
                                             .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                .addComponent(u_kejernihan, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(u_Bjenis, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(u_protein, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(u_warna, 0, 215, Short.MAX_VALUE)
-                                                .addComponent(u_reaksi, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                                .addComponent(cmbKejernihan, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(cmbBeratJenis, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(cmbProtein, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(cmbWarna, 0, 215, Short.MAX_VALUE)
+                                                .addComponent(cmbReaksi, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                             .addGroup(jPanel10Layout.createSequentialGroup()
                                                 .addComponent(neg_PE)
                                                 .addGap(18, 18, 18)
                                                 .addComponent(pos_PE))
-                                            .addComponent(u_reduksi, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(cmbReduksi, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addGroup(jPanel10Layout.createSequentialGroup()
                                                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                                     .addComponent(neg_TK)
@@ -1060,23 +1060,23 @@ public class form_hasil extends javax.swing.JPanel {
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel347, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jComboBox18, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jComboBox17, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(u_urobinogel, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(u_bilirubin, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(u_bakter, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(u_lekosi, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(u_S_eritrosit, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cmbNitrit, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cmbUrobilin, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cmbUrobilinogen, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cmbBilirubin, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cmbBakteri, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cmbLekosit, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cmbSendimenEritrosit, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(jPanel10Layout.createSequentialGroup()
                                         .addComponent(neg_S)
                                         .addGap(18, 18, 18)
                                         .addComponent(pos_S))
                                     .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                         .addGroup(jPanel10Layout.createSequentialGroup()
-                                            .addComponent(u_kristal1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(cmbKristal, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(u_kristal2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addComponent(u_epitel, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                            .addComponent(cmbKristal2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(cmbEpitel, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE))))
                             .addGroup(jPanel10Layout.createSequentialGroup()
                                 .addComponent(sv_urine, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
@@ -1101,52 +1101,52 @@ public class form_hasil extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(u_warna, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(cmbWarna, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel348, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(u_S_eritrosit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(cmbSendimenEritrosit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jLabel330, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel331, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(u_kejernihan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cmbKejernihan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel349, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(u_lekosi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cmbLekosit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel332, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(u_Bjenis, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cmbBeratJenis, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel350, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(neg_S)
                     .addComponent(pos_S))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel333, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(u_reaksi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cmbReaksi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel334, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(u_protein, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cmbProtein, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel351, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(u_epitel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cmbEpitel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel335, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(neg_PE)
                     .addComponent(pos_PE)
                     .addComponent(jLabel352, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(u_kristal1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(u_kristal2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cmbKristal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cmbKristal2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel336, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(neg_PBJ)
                     .addComponent(pos_PBJ)
                     .addComponent(jLabel353, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(u_bakter, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cmbBakteri, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel337, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(u_reduksi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cmbReduksi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel338, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1155,28 +1155,28 @@ public class form_hasil extends javax.swing.JPanel {
                     .addComponent(jLabel344)
                     .addComponent(jLabel345)
                     .addComponent(jLabel354, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(u_bilirubin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cmbBilirubin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel339, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(neg_BK)
                     .addComponent(pos_BK)
                     .addComponent(jLabel355, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(u_urobinogel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cmbUrobilinogen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel340, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(pos_DS)
                     .addComponent(neg_DS)
                     .addComponent(jLabel356, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cmbUrobilin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel341, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(neg_TK)
                     .addComponent(pos_TK)
                     .addComponent(jLabel357, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cmbNitrit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(cn_urine, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
@@ -1980,42 +1980,42 @@ public class form_hasil extends javax.swing.JPanel {
         hasil1.setText("HASIL");
 
         rbtnTPHANeg.setBackground(new java.awt.Color(255, 255, 255));
-        s_tpha.add(rbtnTPHANeg);
+        groupTPHA.add(rbtnTPHANeg);
         rbtnTPHANeg.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         rbtnTPHANeg.setText("Negative");
 
         rbtnTPHAPos.setBackground(new java.awt.Color(255, 255, 255));
-        s_tpha.add(rbtnTPHAPos);
+        groupTPHA.add(rbtnTPHAPos);
         rbtnTPHAPos.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         rbtnTPHAPos.setText("Positive");
 
         rbtnVDRLNeg.setBackground(new java.awt.Color(255, 255, 255));
-        s_vdrl.add(rbtnVDRLNeg);
+        groupVDRL.add(rbtnVDRLNeg);
         rbtnVDRLNeg.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         rbtnVDRLNeg.setText("Negative");
 
         rbtnVDRLPos.setBackground(new java.awt.Color(255, 255, 255));
-        s_vdrl.add(rbtnVDRLPos);
+        groupVDRL.add(rbtnVDRLPos);
         rbtnVDRLPos.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         rbtnVDRLPos.setText("Positive");
 
         rbtnWRNeg.setBackground(new java.awt.Color(255, 255, 255));
-        s_wr.add(rbtnWRNeg);
+        groupWR.add(rbtnWRNeg);
         rbtnWRNeg.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         rbtnWRNeg.setText("Negative");
 
         rbtnWRPos.setBackground(new java.awt.Color(255, 255, 255));
-        s_wr.add(rbtnWRPos);
+        groupWR.add(rbtnWRPos);
         rbtnWRPos.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         rbtnWRPos.setText("Positive");
 
         rbtnHBsAgNeg.setBackground(new java.awt.Color(255, 255, 255));
-        s_hbsag.add(rbtnHBsAgNeg);
+        groupHBsAg.add(rbtnHBsAgNeg);
         rbtnHBsAgNeg.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         rbtnHBsAgNeg.setText("Negative");
 
         rbtnHBsAgPos.setBackground(new java.awt.Color(255, 255, 255));
-        s_hbsag.add(rbtnHBsAgPos);
+        groupHBsAg.add(rbtnHBsAgPos);
         rbtnHBsAgPos.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         rbtnHBsAgPos.setText("Positive");
 
@@ -2240,22 +2240,22 @@ public class form_hasil extends javax.swing.JPanel {
         jLabelASTO.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
 
         rbtnCRPPos.setBackground(new java.awt.Color(255, 255, 255));
-        s_cpr.add(rbtnCRPPos);
+        groupCRP.add(rbtnCRPPos);
         rbtnCRPPos.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         rbtnCRPPos.setText("Positive");
 
         rbtnCRPNeg.setBackground(new java.awt.Color(255, 255, 255));
-        s_cpr.add(rbtnCRPNeg);
+        groupCRP.add(rbtnCRPNeg);
         rbtnCRPNeg.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         rbtnCRPNeg.setText("Negative");
 
         rbtnRAfNeg.setBackground(new java.awt.Color(255, 255, 255));
-        s_raf.add(rbtnRAfNeg);
+        groupRAF.add(rbtnRAfNeg);
         rbtnRAfNeg.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         rbtnRAfNeg.setText("Negative");
 
         rbtnRAfPos.setBackground(new java.awt.Color(255, 255, 255));
-        s_raf.add(rbtnRAfPos);
+        groupRAF.add(rbtnRAfPos);
         rbtnRAfPos.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         rbtnRAfPos.setText("Positive");
 
@@ -5174,38 +5174,38 @@ public class form_hasil extends javax.swing.JPanel {
 
 try (PreparedStatement ps = kon.prepareStatement(sql)) {
     ps.setInt(1, Integer.parseInt(id_daftar.getSelectedItem().toString())); // ID Pendaftaran
-    ps.setString(2, u_warna.getSelectedItem().toString());
-    ps.setString(3, u_kejernihan.getSelectedItem().toString());
-    ps.setString(4, u_Bjenis.getSelectedItem().toString());
-    ps.setString(5, u_reaksi.getSelectedItem().toString());
-    ps.setString(6, u_protein.getSelectedItem().toString());
+    ps.setString(2, cmbWarna.getSelectedItem().toString());
+    ps.setString(3, cmbKejernihan.getSelectedItem().toString());
+    ps.setString(4, cmbBeratJenis.getSelectedItem().toString());
+    ps.setString(5, cmbReaksi.getSelectedItem().toString());
+    ps.setString(6, cmbProtein.getSelectedItem().toString());
     
     ps.setString(7, pos_PE.isSelected() ? "Positive" : "Negative"); // Protein Esbach
     ps.setString(8, pos_PBJ.isSelected() ? "Positive" : "Negative"); // Protein Bence Jones
 
-    ps.setString(9, u_reduksi.getSelectedItem().toString());
+    ps.setString(9, cmbReduksi.getSelectedItem().toString());
 
     ps.setString(10, pos_BK.isSelected() ? "Positive" : "Negative"); // Benda Keton
     ps.setString(11, pos_DS.isSelected() ? "Positive" : "Negative"); // Darah Samar
     ps.setString(12, pos_TK.isSelected() ? "Positive" : "Negative"); // Tes Kehamilan
 
-    ps.setString(13, u_S_eritrosit.getSelectedItem().toString());
-    ps.setString(14, u_lekosi.getSelectedItem().toString());
+    ps.setString(13, cmbSendimenEritrosit.getSelectedItem().toString());
+    ps.setString(14, cmbLekosit.getSelectedItem().toString());
     ps.setString(15, pos_S.isSelected() ? "Positive" : "Negative");
 
-    ps.setString(16, u_epitel.getSelectedItem().toString());
-    ps.setString(17, u_kristal1.getSelectedItem().toString());
-    ps.setString(18, u_kristal2.getSelectedItem().toString());
+    ps.setString(16, cmbEpitel.getSelectedItem().toString());
+    ps.setString(17, cmbKristal.getSelectedItem().toString());
+    ps.setString(18, cmbKristal2.getSelectedItem().toString());
     
-    ps.setString(19, u_bakter.getSelectedItem().toString());
-    ps.setString(20, u_bilirubin.getSelectedItem().toString());
-    ps.setString(21, u_urobinogel.getSelectedItem().toString());
-    ps.setString(22, jComboBox17.getSelectedItem().toString());
-    ps.setString(23, jComboBox18.getSelectedItem().toString());
+    ps.setString(19, cmbBakteri.getSelectedItem().toString());
+    ps.setString(20, cmbBilirubin.getSelectedItem().toString());
+    ps.setString(21, cmbUrobilinogen.getSelectedItem().toString());
+    ps.setString(22, cmbUrobilin.getSelectedItem().toString());
+    ps.setString(23, cmbNitrit.getSelectedItem().toString());
 
     ps.executeUpdate();
     JOptionPane.showMessageDialog(null, "Data berhasil disimpan!");
-
+    resetFormUrin();
 } catch (SQLException e) {
     JOptionPane.showMessageDialog(null, "Gagal menyimpan: " + e.getMessage());
 }
@@ -5252,7 +5252,7 @@ try (PreparedStatement ps = kon.prepareStatement(sql)) {
 
         ps.executeUpdate();
         JOptionPane.showMessageDialog(null, "Data berhasil disimpan ke database!");
-
+        resetFormHematologi();
     } catch (SQLException e) {
         JOptionPane.showMessageDialog(null, "Gagal simpan data: " + e.getMessage());
     }
@@ -5340,7 +5340,6 @@ try (PreparedStatement ps = kon.prepareStatement(sql)) {
     private javax.swing.JLabel antiHBe;
     private javax.swing.JLabel antihbs;
     private javax.swing.JLabel asto;
-    private javax.swing.ButtonGroup benda_keton;
     private javax.swing.JTextField bilirubin;
     private javax.swing.JTextField bilirubin1;
     private javax.swing.JTextField bilirubin10;
@@ -5362,15 +5361,31 @@ try (PreparedStatement ps = kon.prepareStatement(sql)) {
     private javax.swing.JComboBox<String> cmbAntiHBc;
     private javax.swing.JComboBox<String> cmbAntiHBe;
     private javax.swing.JComboBox<String> cmbAntiHBs;
+    private javax.swing.JComboBox<String> cmbBakteri;
+    private javax.swing.JComboBox<String> cmbBeratJenis;
+    private javax.swing.JComboBox<String> cmbBilirubin;
+    private javax.swing.JComboBox<String> cmbEpitel;
     private javax.swing.JComboBox<String> cmbHbeAg;
+    private javax.swing.JComboBox<String> cmbKejernihan;
+    private javax.swing.JComboBox<String> cmbKristal;
+    private javax.swing.JComboBox<String> cmbKristal2;
+    private javax.swing.JComboBox<String> cmbLekosit;
+    private javax.swing.JComboBox<String> cmbNitrit;
     private javax.swing.JComboBox<String> cmbParatyphusAH;
     private javax.swing.JComboBox<String> cmbParatyphusAO;
     private javax.swing.JComboBox<String> cmbParatyphusBH;
     private javax.swing.JComboBox<String> cmbParatyphusBO;
     private javax.swing.JComboBox<String> cmbParatyphusCH;
     private javax.swing.JComboBox<String> cmbParatyphusCO;
+    private javax.swing.JComboBox<String> cmbProtein;
+    private javax.swing.JComboBox<String> cmbReaksi;
+    private javax.swing.JComboBox<String> cmbReduksi;
+    private javax.swing.JComboBox<String> cmbSendimenEritrosit;
     private javax.swing.JComboBox<String> cmbTyphusH;
     private javax.swing.JComboBox<String> cmbTyphusO;
+    private javax.swing.JComboBox<String> cmbUrobilin;
+    private javax.swing.JComboBox<String> cmbUrobilinogen;
+    private javax.swing.JComboBox<String> cmbWarna;
     private javax.swing.JButton cn_hematologi;
     private javax.swing.JButton cn_kimia2;
     private javax.swing.JButton cn_kimia3;
@@ -5378,15 +5393,24 @@ try (PreparedStatement ps = kon.prepareStatement(sql)) {
     private javax.swing.JButton cn_tinja;
     private javax.swing.JButton cn_urine;
     private javax.swing.JLabel crp;
-    private javax.swing.ButtonGroup darah_samar;
     private javax.swing.JLabel ft1;
+    private javax.swing.ButtonGroup groupBenceJones;
+    private javax.swing.ButtonGroup groupBendaKeton;
+    private javax.swing.ButtonGroup groupCRP;
+    private javax.swing.ButtonGroup groupDarahSamar;
+    private javax.swing.ButtonGroup groupEsbach;
+    private javax.swing.ButtonGroup groupHBsAg;
+    private javax.swing.ButtonGroup groupRAF;
+    private javax.swing.ButtonGroup groupSilinder;
+    private javax.swing.ButtonGroup groupTPHA;
+    private javax.swing.ButtonGroup groupTesKehamilan;
+    private javax.swing.ButtonGroup groupVDRL;
+    private javax.swing.ButtonGroup groupWR;
     private javax.swing.JLabel hasil1;
     private javax.swing.JLabel hasil2;
     private javax.swing.JComboBox<String> id_daftar;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JComboBox<String> jComboBox17;
-    private javax.swing.JComboBox<String> jComboBox18;
     private javax.swing.JComboBox<String> jComboBox19;
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JComboBox<String> jComboBox20;
@@ -5777,8 +5801,6 @@ try (PreparedStatement ps = kon.prepareStatement(sql)) {
     private javax.swing.JRadioButton pos_PE;
     private javax.swing.JRadioButton pos_S;
     private javax.swing.JRadioButton pos_TK;
-    private javax.swing.ButtonGroup protein_esbach;
-    private javax.swing.ButtonGroup protein_esbach_jones;
     private javax.swing.JLabel raf;
     private javax.swing.JRadioButton rbtnCRPNeg;
     private javax.swing.JRadioButton rbtnCRPPos;
@@ -5792,13 +5814,6 @@ try (PreparedStatement ps = kon.prepareStatement(sql)) {
     private javax.swing.JRadioButton rbtnVDRLPos;
     private javax.swing.JRadioButton rbtnWRNeg;
     private javax.swing.JRadioButton rbtnWRPos;
-    private javax.swing.ButtonGroup s_cpr;
-    private javax.swing.ButtonGroup s_hbsag;
-    private javax.swing.ButtonGroup s_raf;
-    private javax.swing.ButtonGroup s_tpha;
-    private javax.swing.ButtonGroup s_vdrl;
-    private javax.swing.ButtonGroup s_wr;
-    private javax.swing.ButtonGroup silinder;
     private javax.swing.JButton sv_hematologi;
     private javax.swing.JButton sv_kimia1;
     private javax.swing.JButton sv_kimia2;
@@ -5812,7 +5827,6 @@ try (PreparedStatement ps = kon.prepareStatement(sql)) {
     private javax.swing.ButtonGroup t_lendir;
     private javax.swing.ButtonGroup t_nanah;
     private javax.swing.JTable tb_rincian;
-    private javax.swing.ButtonGroup tes_kehamilan;
     private javax.swing.JLabel tpha;
     private javax.swing.JLabel tsh;
     private javax.swing.JTextField txtAFP;
@@ -5855,22 +5869,109 @@ try (PreparedStatement ps = kon.prepareStatement(sql)) {
     private javax.swing.JTextField txtWestergren;
     private javax.swing.JLabel typhusH;
     private javax.swing.JLabel typhusO;
-    private javax.swing.JComboBox<String> u_Bjenis;
-    private javax.swing.JComboBox<String> u_S_eritrosit;
-    private javax.swing.JComboBox<String> u_bakter;
-    private javax.swing.JComboBox<String> u_bilirubin;
-    private javax.swing.JComboBox<String> u_epitel;
-    private javax.swing.JComboBox<String> u_kejernihan;
-    private javax.swing.JComboBox<String> u_kristal1;
-    private javax.swing.JComboBox<String> u_kristal2;
-    private javax.swing.JComboBox<String> u_lekosi;
-    private javax.swing.JComboBox<String> u_protein;
-    private javax.swing.JComboBox<String> u_reaksi;
-    private javax.swing.JComboBox<String> u_reduksi;
-    private javax.swing.JComboBox<String> u_urobinogel;
-    private javax.swing.JComboBox<String> u_warna;
     private javax.swing.JLabel ugEA;
     private javax.swing.JLabel vdrl;
     private javax.swing.JLabel wr;
     // End of variables declaration//GEN-END:variables
+
+public void resetFormUrin() {
+    // Kolom teks dan combo box
+    cmbWarna.setSelectedIndex(0);
+    cmbKejernihan.setSelectedIndex(0);
+    cmbBeratJenis.setSelectedIndex(0);
+    cmbReaksi.setSelectedIndex(0);
+    cmbProtein.setSelectedIndex(0);
+    cmbReduksi.setSelectedIndex(0);
+
+
+    cmbSendimenEritrosit.setSelectedIndex(0);
+    cmbLekosit.setSelectedIndex(0);
+    cmbEpitel.setSelectedIndex(0);
+    cmbKristal.setSelectedIndex(0);
+    cmbKristal2.setSelectedIndex(0);
+    cmbBakteri.setSelectedIndex(0);
+    cmbBilirubin.setSelectedIndex(0);
+    cmbUrobilinogen.setSelectedIndex(0);
+    cmbUrobilin.setSelectedIndex(0);
+    cmbNitrit.setSelectedIndex(0);
+
+    // Radio button (clearSelection)
+    groupEsbach.clearSelection();
+    groupBenceJones.clearSelection();
+    groupBendaKeton.clearSelection();
+    groupDarahSamar.clearSelection();
+    groupTesKehamilan.clearSelection();
+    groupSilinder.clearSelection();
+}
+
+public void resetFormHematologi() {
+    txtHemoglobin.setText("");
+    txtHematokrit.setText("");
+    txtEritrosit.setText("");
+    txtVER_MCH.setText("");
+    txtHER_MCH.setText("");
+    txtKHER_MCHC.setText("");
+    txtRetikulosit.setText("");
+    txtLeukosit.setText("");
+    txtBasofil.setText("");
+    txtEosinofil.setText("");
+    txtBatang.setText("");
+    txtSegmen.setText("");
+    txtLimfosit.setText("");
+    txtMonosit.setText("");
+    txtLED.setText("");
+    txtWestergren.setText("");
+    txtTrombosit.setText("");
+    txtMasaPendarahan.setText("");
+    txtMasaPembekuan.setText("");
+    txtPembendungan.setText("");
+    txtRetraksi.setText("");
+    txtResistensiOsmotik.setText("");
+    txtSelLE.setText("");
+    txtReaksiLE.setText("");
+    txtMalaria.setText("");
+    txtGolDarah.setText("");
+}
+
+public void resetFormSerologi() {
+    // Text Field
+    txtAFP.setText("");
+    txtEA.setText("");
+    txtIgG.setText("");
+    txtIgA.setText("");
+    txtIgM.setText("");
+    txtIgE.setText("");
+    txtASTO.setText("");
+    txtT4.setText("");
+    txtT3Uptake.setText("");
+    txtFTI.setText("");
+    txtT3.setText("");
+    txtTSH.setText("");
+
+    // ComboBox (set ke indeks pertama)
+    cmbAntiHBs.setSelectedIndex(0);
+    cmbHbeAg.setSelectedIndex(0);
+    cmbAntiHBe.setSelectedIndex(0);
+    cmbAntiHBc.setSelectedIndex(0);
+    cmbAntiHA.setSelectedIndex(0);
+
+    cmbTyphusH.setSelectedIndex(0);
+    cmbParatyphusAH.setSelectedIndex(0);
+    cmbParatyphusBH.setSelectedIndex(0);
+    cmbParatyphusCH.setSelectedIndex(0);
+    cmbTyphusO.setSelectedIndex(0);
+    cmbParatyphusAO.setSelectedIndex(0);
+    cmbParatyphusBO.setSelectedIndex(0);
+    cmbParatyphusCO.setSelectedIndex(0);
+
+    // Radio Button (kosongkan ButtonGroup)
+    groupTPHA.clearSelection();
+    groupVDRL.clearSelection();
+    groupWR.clearSelection();
+    groupHBsAg.clearSelection();
+    groupCRP.clearSelection();
+    groupRAF.clearSelection();
+}
+
+
 }

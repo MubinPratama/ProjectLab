@@ -4,17 +4,17 @@
   <NonVisualComponents>
     <Component class="javax.swing.ButtonGroup" name="lemak">
     </Component>
-    <Component class="javax.swing.ButtonGroup" name="protein_esbach">
+    <Component class="javax.swing.ButtonGroup" name="groupEsbach">
     </Component>
-    <Component class="javax.swing.ButtonGroup" name="protein_esbach_jones">
+    <Component class="javax.swing.ButtonGroup" name="groupBenceJones">
     </Component>
-    <Component class="javax.swing.ButtonGroup" name="benda_keton">
+    <Component class="javax.swing.ButtonGroup" name="groupBendaKeton">
     </Component>
-    <Component class="javax.swing.ButtonGroup" name="darah_samar">
+    <Component class="javax.swing.ButtonGroup" name="groupDarahSamar">
     </Component>
-    <Component class="javax.swing.ButtonGroup" name="tes_kehamilan">
+    <Component class="javax.swing.ButtonGroup" name="groupTesKehamilan">
     </Component>
-    <Component class="javax.swing.ButtonGroup" name="silinder">
+    <Component class="javax.swing.ButtonGroup" name="groupSilinder">
     </Component>
     <Component class="javax.swing.ButtonGroup" name="t_lendir">
     </Component>
@@ -22,17 +22,17 @@
     </Component>
     <Component class="javax.swing.ButtonGroup" name="t_nanah">
     </Component>
-    <Component class="javax.swing.ButtonGroup" name="s_tpha">
+    <Component class="javax.swing.ButtonGroup" name="groupTPHA">
     </Component>
-    <Component class="javax.swing.ButtonGroup" name="s_vdrl">
+    <Component class="javax.swing.ButtonGroup" name="groupVDRL">
     </Component>
-    <Component class="javax.swing.ButtonGroup" name="s_wr">
+    <Component class="javax.swing.ButtonGroup" name="groupWR">
     </Component>
-    <Component class="javax.swing.ButtonGroup" name="s_hbsag">
+    <Component class="javax.swing.ButtonGroup" name="groupHBsAg">
     </Component>
-    <Component class="javax.swing.ButtonGroup" name="s_cpr">
+    <Component class="javax.swing.ButtonGroup" name="groupCRP">
     </Component>
-    <Component class="javax.swing.ButtonGroup" name="s_raf">
+    <Component class="javax.swing.ButtonGroup" name="groupRAF">
     </Component>
   </NonVisualComponents>
   <AuxValues>
@@ -305,18 +305,18 @@
                                                                       <Component id="pos_PBJ" min="-2" max="-2" attributes="0"/>
                                                                   </Group>
                                                                   <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                                                                      <Component id="u_kejernihan" alignment="0" max="32767" attributes="0"/>
-                                                                      <Component id="u_Bjenis" alignment="0" max="32767" attributes="0"/>
-                                                                      <Component id="u_protein" alignment="0" max="32767" attributes="0"/>
-                                                                      <Component id="u_warna" alignment="0" pref="215" max="32767" attributes="0"/>
-                                                                      <Component id="u_reaksi" alignment="0" max="32767" attributes="0"/>
+                                                                      <Component id="cmbKejernihan" alignment="0" max="32767" attributes="0"/>
+                                                                      <Component id="cmbBeratJenis" alignment="0" max="32767" attributes="0"/>
+                                                                      <Component id="cmbProtein" alignment="0" max="32767" attributes="0"/>
+                                                                      <Component id="cmbWarna" alignment="0" pref="215" max="32767" attributes="0"/>
+                                                                      <Component id="cmbReaksi" alignment="0" max="32767" attributes="0"/>
                                                                   </Group>
                                                                   <Group type="102" alignment="0" attributes="0">
                                                                       <Component id="neg_PE" min="-2" max="-2" attributes="0"/>
                                                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                                                       <Component id="pos_PE" min="-2" max="-2" attributes="0"/>
                                                                   </Group>
-                                                                  <Component id="u_reduksi" alignment="0" min="-2" pref="215" max="-2" attributes="0"/>
+                                                                  <Component id="cmbReduksi" alignment="0" min="-2" pref="215" max="-2" attributes="0"/>
                                                                   <Group type="102" alignment="0" attributes="0">
                                                                       <Group type="103" groupAlignment="1" attributes="0">
                                                                           <Component id="neg_TK" alignment="1" min="-2" max="-2" attributes="0"/>
@@ -350,13 +350,13 @@
                                                       <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
                                                       <Group type="103" groupAlignment="0" attributes="0">
                                                           <Component id="jLabel347" min="-2" pref="214" max="-2" attributes="0"/>
-                                                          <Component id="jComboBox18" alignment="0" min="-2" pref="214" max="-2" attributes="0"/>
-                                                          <Component id="jComboBox17" alignment="0" min="-2" pref="214" max="-2" attributes="0"/>
-                                                          <Component id="u_urobinogel" alignment="0" min="-2" pref="214" max="-2" attributes="0"/>
-                                                          <Component id="u_bilirubin" alignment="0" min="-2" pref="214" max="-2" attributes="0"/>
-                                                          <Component id="u_bakter" alignment="0" min="-2" pref="214" max="-2" attributes="0"/>
-                                                          <Component id="u_lekosi" alignment="0" min="-2" pref="214" max="-2" attributes="0"/>
-                                                          <Component id="u_S_eritrosit" alignment="0" min="-2" pref="214" max="-2" attributes="0"/>
+                                                          <Component id="cmbNitrit" alignment="0" min="-2" pref="214" max="-2" attributes="0"/>
+                                                          <Component id="cmbUrobilin" alignment="0" min="-2" pref="214" max="-2" attributes="0"/>
+                                                          <Component id="cmbUrobilinogen" alignment="0" min="-2" pref="214" max="-2" attributes="0"/>
+                                                          <Component id="cmbBilirubin" alignment="0" min="-2" pref="214" max="-2" attributes="0"/>
+                                                          <Component id="cmbBakteri" alignment="0" min="-2" pref="214" max="-2" attributes="0"/>
+                                                          <Component id="cmbLekosit" alignment="0" min="-2" pref="214" max="-2" attributes="0"/>
+                                                          <Component id="cmbSendimenEritrosit" alignment="0" min="-2" pref="214" max="-2" attributes="0"/>
                                                           <Group type="102" alignment="0" attributes="0">
                                                               <Component id="neg_S" min="-2" max="-2" attributes="0"/>
                                                               <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -364,11 +364,11 @@
                                                           </Group>
                                                           <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
                                                               <Group type="102" alignment="1" attributes="0">
-                                                                  <Component id="u_kristal1" min="-2" pref="90" max="-2" attributes="0"/>
+                                                                  <Component id="cmbKristal" min="-2" pref="90" max="-2" attributes="0"/>
                                                                   <EmptySpace max="32767" attributes="0"/>
-                                                                  <Component id="u_kristal2" min="-2" pref="90" max="-2" attributes="0"/>
+                                                                  <Component id="cmbKristal2" min="-2" pref="90" max="-2" attributes="0"/>
                                                               </Group>
-                                                              <Component id="u_epitel" alignment="1" min="-2" pref="214" max="-2" attributes="0"/>
+                                                              <Component id="cmbEpitel" alignment="1" min="-2" pref="214" max="-2" attributes="0"/>
                                                           </Group>
                                                       </Group>
                                                   </Group>
@@ -405,23 +405,23 @@
                                       <EmptySpace max="32767" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="103" alignment="1" groupAlignment="3" attributes="0">
-                                              <Component id="u_warna" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="cmbWarna" alignment="3" min="-2" max="-2" attributes="0"/>
                                               <Component id="jLabel348" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                                              <Component id="u_S_eritrosit" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="cmbSendimenEritrosit" alignment="3" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                           <Component id="jLabel330" alignment="1" min="-2" pref="25" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
                                           <Component id="jLabel331" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                                          <Component id="u_kejernihan" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="cmbKejernihan" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="jLabel349" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                                          <Component id="u_lekosi" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="cmbLekosit" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
                                           <Component id="jLabel332" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                                          <Component id="u_Bjenis" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="cmbBeratJenis" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="jLabel350" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
                                           <Component id="neg_S" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="pos_S" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -429,14 +429,14 @@
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
                                           <Component id="jLabel333" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                                          <Component id="u_reaksi" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="cmbReaksi" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
                                           <Component id="jLabel334" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                                          <Component id="u_protein" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="cmbProtein" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="jLabel351" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                                          <Component id="u_epitel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="cmbEpitel" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
@@ -444,8 +444,8 @@
                                           <Component id="neg_PE" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="pos_PE" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="jLabel352" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                                          <Component id="u_kristal1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="u_kristal2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="cmbKristal" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="cmbKristal2" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
@@ -453,12 +453,12 @@
                                           <Component id="neg_PBJ" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="pos_PBJ" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="jLabel353" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                                          <Component id="u_bakter" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="cmbBakteri" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
                                           <Component id="jLabel337" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                                          <Component id="u_reduksi" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="cmbReduksi" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
@@ -468,7 +468,7 @@
                                           <Component id="jLabel344" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="jLabel345" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="jLabel354" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                                          <Component id="u_bilirubin" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="cmbBilirubin" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
@@ -476,7 +476,7 @@
                                           <Component id="neg_BK" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="pos_BK" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="jLabel355" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                                          <Component id="u_urobinogel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="cmbUrobilinogen" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
@@ -484,7 +484,7 @@
                                           <Component id="pos_DS" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="neg_DS" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="jLabel356" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                                          <Component id="jComboBox17" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="cmbUrobilin" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
@@ -492,7 +492,7 @@
                                           <Component id="neg_TK" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="pos_TK" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="jLabel357" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                                          <Component id="jComboBox18" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="cmbNitrit" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -733,7 +733,7 @@
                                 </Property>
                               </Properties>
                             </Component>
-                            <Component class="javax.swing.JComboBox" name="u_warna">
+                            <Component class="javax.swing.JComboBox" name="cmbWarna">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Tahoma" size="12" style="0"/>
@@ -750,7 +750,7 @@
                                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                               </AuxValues>
                             </Component>
-                            <Component class="javax.swing.JComboBox" name="u_kejernihan">
+                            <Component class="javax.swing.JComboBox" name="cmbKejernihan">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Tahoma" size="12" style="0"/>
@@ -768,7 +768,7 @@
                                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                               </AuxValues>
                             </Component>
-                            <Component class="javax.swing.JComboBox" name="u_Bjenis">
+                            <Component class="javax.swing.JComboBox" name="cmbBeratJenis">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Tahoma" size="12" style="0"/>
@@ -789,7 +789,7 @@
                                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                               </AuxValues>
                             </Component>
-                            <Component class="javax.swing.JComboBox" name="u_reaksi">
+                            <Component class="javax.swing.JComboBox" name="cmbReaksi">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Tahoma" size="12" style="0"/>
@@ -811,7 +811,7 @@
                                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                               </AuxValues>
                             </Component>
-                            <Component class="javax.swing.JComboBox" name="u_protein">
+                            <Component class="javax.swing.JComboBox" name="cmbProtein">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Tahoma" size="12" style="0"/>
@@ -837,7 +837,7 @@
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                                 </Property>
                                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                                  <ComponentRef name="protein_esbach"/>
+                                  <ComponentRef name="groupEsbach"/>
                                 </Property>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Tahoma" size="12" style="0"/>
@@ -851,7 +851,7 @@
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                                 </Property>
                                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                                  <ComponentRef name="protein_esbach"/>
+                                  <ComponentRef name="groupEsbach"/>
                                 </Property>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Tahoma" size="12" style="0"/>
@@ -865,7 +865,7 @@
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                                 </Property>
                                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                                  <ComponentRef name="protein_esbach_jones"/>
+                                  <ComponentRef name="groupBenceJones"/>
                                 </Property>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Tahoma" size="12" style="0"/>
@@ -879,7 +879,7 @@
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                                 </Property>
                                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                                  <ComponentRef name="protein_esbach_jones"/>
+                                  <ComponentRef name="groupBenceJones"/>
                                 </Property>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Tahoma" size="12" style="0"/>
@@ -887,7 +887,7 @@
                                 <Property name="text" type="java.lang.String" value="Positive"/>
                               </Properties>
                             </Component>
-                            <Component class="javax.swing.JComboBox" name="u_reduksi">
+                            <Component class="javax.swing.JComboBox" name="cmbReduksi">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Tahoma" size="12" style="0"/>
@@ -913,7 +913,7 @@
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                                 </Property>
                                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                                  <ComponentRef name="benda_keton"/>
+                                  <ComponentRef name="groupBendaKeton"/>
                                 </Property>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Tahoma" size="12" style="0"/>
@@ -927,7 +927,7 @@
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                                 </Property>
                                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                                  <ComponentRef name="benda_keton"/>
+                                  <ComponentRef name="groupBendaKeton"/>
                                 </Property>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Tahoma" size="12" style="0"/>
@@ -941,7 +941,7 @@
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                                 </Property>
                                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                                  <ComponentRef name="darah_samar"/>
+                                  <ComponentRef name="groupDarahSamar"/>
                                 </Property>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Tahoma" size="12" style="0"/>
@@ -955,7 +955,7 @@
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                                 </Property>
                                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                                  <ComponentRef name="darah_samar"/>
+                                  <ComponentRef name="groupDarahSamar"/>
                                 </Property>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Tahoma" size="12" style="0"/>
@@ -969,7 +969,7 @@
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                                 </Property>
                                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                                  <ComponentRef name="tes_kehamilan"/>
+                                  <ComponentRef name="groupTesKehamilan"/>
                                 </Property>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Tahoma" size="12" style="0"/>
@@ -983,7 +983,7 @@
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                                 </Property>
                                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                                  <ComponentRef name="tes_kehamilan"/>
+                                  <ComponentRef name="groupTesKehamilan"/>
                                 </Property>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Tahoma" size="12" style="0"/>
@@ -1219,7 +1219,7 @@
                                 </Property>
                               </Properties>
                             </Component>
-                            <Component class="javax.swing.JComboBox" name="u_S_eritrosit">
+                            <Component class="javax.swing.JComboBox" name="cmbSendimenEritrosit">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Tahoma" size="12" style="0"/>
@@ -1244,7 +1244,7 @@
                                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                               </AuxValues>
                             </Component>
-                            <Component class="javax.swing.JComboBox" name="u_lekosi">
+                            <Component class="javax.swing.JComboBox" name="cmbLekosit">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Tahoma" size="12" style="0"/>
@@ -1275,7 +1275,7 @@
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                                 </Property>
                                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                                  <ComponentRef name="silinder"/>
+                                  <ComponentRef name="groupSilinder"/>
                                 </Property>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Tahoma" size="12" style="0"/>
@@ -1289,7 +1289,7 @@
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                                 </Property>
                                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                                  <ComponentRef name="silinder"/>
+                                  <ComponentRef name="groupSilinder"/>
                                 </Property>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Tahoma" size="12" style="0"/>
@@ -1297,7 +1297,7 @@
                                 <Property name="text" type="java.lang.String" value="Positive"/>
                               </Properties>
                             </Component>
-                            <Component class="javax.swing.JComboBox" name="u_epitel">
+                            <Component class="javax.swing.JComboBox" name="cmbEpitel">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Tahoma" size="12" style="0"/>
@@ -1317,7 +1317,7 @@
                                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                               </AuxValues>
                             </Component>
-                            <Component class="javax.swing.JComboBox" name="u_kristal1">
+                            <Component class="javax.swing.JComboBox" name="cmbKristal">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Tahoma" size="12" style="0"/>
@@ -1336,7 +1336,7 @@
                                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                               </AuxValues>
                             </Component>
-                            <Component class="javax.swing.JComboBox" name="u_kristal2">
+                            <Component class="javax.swing.JComboBox" name="cmbKristal2">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Tahoma" size="12" style="0"/>
@@ -1356,7 +1356,7 @@
                                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                               </AuxValues>
                             </Component>
-                            <Component class="javax.swing.JComboBox" name="u_bakter">
+                            <Component class="javax.swing.JComboBox" name="cmbBakteri">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Tahoma" size="12" style="0"/>
@@ -1376,7 +1376,7 @@
                                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                               </AuxValues>
                             </Component>
-                            <Component class="javax.swing.JComboBox" name="u_bilirubin">
+                            <Component class="javax.swing.JComboBox" name="cmbBilirubin">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Tahoma" size="12" style="0"/>
@@ -1396,7 +1396,7 @@
                                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                               </AuxValues>
                             </Component>
-                            <Component class="javax.swing.JComboBox" name="u_urobinogel">
+                            <Component class="javax.swing.JComboBox" name="cmbUrobilinogen">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Tahoma" size="12" style="0"/>
@@ -1416,7 +1416,7 @@
                                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                               </AuxValues>
                             </Component>
-                            <Component class="javax.swing.JComboBox" name="jComboBox17">
+                            <Component class="javax.swing.JComboBox" name="cmbUrobilin">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Tahoma" size="12" style="0"/>
@@ -1436,7 +1436,7 @@
                                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                               </AuxValues>
                             </Component>
-                            <Component class="javax.swing.JComboBox" name="jComboBox18">
+                            <Component class="javax.swing.JComboBox" name="cmbNitrit">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Tahoma" size="12" style="0"/>
@@ -3841,7 +3841,7 @@
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                                 </Property>
                                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                                  <ComponentRef name="s_tpha"/>
+                                  <ComponentRef name="groupTPHA"/>
                                 </Property>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Tahoma" size="12" style="0"/>
@@ -3855,7 +3855,7 @@
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                                 </Property>
                                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                                  <ComponentRef name="s_tpha"/>
+                                  <ComponentRef name="groupTPHA"/>
                                 </Property>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Tahoma" size="12" style="0"/>
@@ -3869,7 +3869,7 @@
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                                 </Property>
                                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                                  <ComponentRef name="s_vdrl"/>
+                                  <ComponentRef name="groupVDRL"/>
                                 </Property>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Tahoma" size="12" style="0"/>
@@ -3883,7 +3883,7 @@
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                                 </Property>
                                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                                  <ComponentRef name="s_vdrl"/>
+                                  <ComponentRef name="groupVDRL"/>
                                 </Property>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Tahoma" size="12" style="0"/>
@@ -3897,7 +3897,7 @@
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                                 </Property>
                                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                                  <ComponentRef name="s_wr"/>
+                                  <ComponentRef name="groupWR"/>
                                 </Property>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Tahoma" size="12" style="0"/>
@@ -3911,7 +3911,7 @@
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                                 </Property>
                                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                                  <ComponentRef name="s_wr"/>
+                                  <ComponentRef name="groupWR"/>
                                 </Property>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Tahoma" size="12" style="0"/>
@@ -3925,7 +3925,7 @@
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                                 </Property>
                                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                                  <ComponentRef name="s_hbsag"/>
+                                  <ComponentRef name="groupHBsAg"/>
                                 </Property>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Tahoma" size="12" style="0"/>
@@ -3939,7 +3939,7 @@
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                                 </Property>
                                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                                  <ComponentRef name="s_hbsag"/>
+                                  <ComponentRef name="groupHBsAg"/>
                                 </Property>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Tahoma" size="12" style="0"/>
@@ -4929,7 +4929,7 @@
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                                 </Property>
                                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                                  <ComponentRef name="s_cpr"/>
+                                  <ComponentRef name="groupCRP"/>
                                 </Property>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Tahoma" size="12" style="0"/>
@@ -4943,7 +4943,7 @@
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                                 </Property>
                                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                                  <ComponentRef name="s_cpr"/>
+                                  <ComponentRef name="groupCRP"/>
                                 </Property>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Tahoma" size="12" style="0"/>
@@ -4957,7 +4957,7 @@
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                                 </Property>
                                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                                  <ComponentRef name="s_raf"/>
+                                  <ComponentRef name="groupRAF"/>
                                 </Property>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Tahoma" size="12" style="0"/>
@@ -4971,7 +4971,7 @@
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                                 </Property>
                                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                                  <ComponentRef name="s_raf"/>
+                                  <ComponentRef name="groupRAF"/>
                                 </Property>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Tahoma" size="12" style="0"/>
