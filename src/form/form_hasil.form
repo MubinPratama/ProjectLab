@@ -5235,22 +5235,22 @@
                                           </Group>
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="2" attributes="0">
-                                              <Component id="jTextField3" alignment="2" min="-2" pref="70" max="-2" attributes="0"/>
-                                              <Component id="jTextField4" alignment="2" min="-2" pref="70" max="-2" attributes="0"/>
-                                              <Component id="jTextField5" alignment="2" min="-2" pref="70" max="-2" attributes="0"/>
-                                              <Component id="jTextField6" alignment="2" min="-2" pref="70" max="-2" attributes="0"/>
-                                              <Component id="jTextField7" alignment="2" min="-2" pref="70" max="-2" attributes="0"/>
-                                              <Component id="jTextField8" alignment="2" min="-2" pref="70" max="-2" attributes="0"/>
-                                              <Component id="jTextField9" alignment="2" min="-2" pref="70" max="-2" attributes="0"/>
-                                              <Component id="jTextField10" alignment="2" min="-2" pref="70" max="-2" attributes="0"/>
-                                              <Component id="jTextField11" alignment="2" min="-2" pref="70" max="-2" attributes="0"/>
-                                              <Component id="jTextField12" alignment="2" min="-2" pref="70" max="-2" attributes="0"/>
-                                              <Component id="jTextField13" alignment="2" min="-2" pref="70" max="-2" attributes="0"/>
-                                              <Component id="jTextField14" alignment="2" min="-2" pref="70" max="-2" attributes="0"/>
-                                              <Component id="jTextField15" alignment="2" min="-2" pref="70" max="-2" attributes="0"/>
+                                              <Component id="txtBilirubinIndirek" alignment="2" min="-2" pref="70" max="-2" attributes="0"/>
+                                              <Component id="txtBilirubinDirek" alignment="2" min="-2" pref="70" max="-2" attributes="0"/>
+                                              <Component id="txtIndeksIkterus" alignment="2" min="-2" pref="70" max="-2" attributes="0"/>
+                                              <Component id="txtFosfataseAlkali" alignment="2" min="-2" pref="70" max="-2" attributes="0"/>
+                                              <Component id="txtFosfatAsamTotal" alignment="2" min="-2" pref="70" max="-2" attributes="0"/>
+                                              <Component id="txtProteinTotal" alignment="2" min="-2" pref="70" max="-2" attributes="0"/>
+                                              <Component id="txtAlbumin" alignment="2" min="-2" pref="70" max="-2" attributes="0"/>
+                                              <Component id="txtGlobulin" alignment="2" min="-2" pref="70" max="-2" attributes="0"/>
+                                              <Component id="txtAlfa1Globulin" alignment="2" min="-2" pref="70" max="-2" attributes="0"/>
+                                              <Component id="txtAlfa2Globulin" alignment="2" min="-2" pref="70" max="-2" attributes="0"/>
+                                              <Component id="txtGamaGlobulin" alignment="2" min="-2" pref="70" max="-2" attributes="0"/>
+                                              <Component id="txtElektroAlbumin" alignment="2" min="-2" pref="70" max="-2" attributes="0"/>
+                                              <Component id="txtBetaGlobulin" alignment="2" min="-2" pref="70" max="-2" attributes="0"/>
                                               <Component id="jLabel22" alignment="2" min="-2" pref="70" max="-2" attributes="0"/>
-                                              <Component id="bilirubin" alignment="2" min="-2" pref="70" max="-2" attributes="0"/>
-                                              <Component id="jTextField56" alignment="2" min="-2" pref="70" max="-2" attributes="0"/>
+                                              <Component id="txtBilirubinTotal" alignment="2" min="-2" pref="70" max="-2" attributes="0"/>
+                                              <Component id="txtRetensiBSP" alignment="2" min="-2" pref="70" max="-2" attributes="0"/>
                                           </Group>
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="2" attributes="0">
@@ -5289,22 +5289,22 @@
                                                           <Component id="jLabel43" min="-2" pref="120" max="-2" attributes="0"/>
                                                       </Group>
                                                       <Group type="102" alignment="0" attributes="0">
-                                                          <Component id="bilirubin1" min="-2" pref="70" max="-2" attributes="0"/>
+                                                          <Component id="txtTTT" min="-2" pref="70" max="-2" attributes="0"/>
                                                           <EmptySpace max="-2" attributes="0"/>
                                                           <Component id="jLabel44" min="-2" pref="120" max="-2" attributes="0"/>
                                                       </Group>
                                                       <Group type="102" alignment="0" attributes="0">
-                                                          <Component id="bilirubin2" min="-2" pref="70" max="-2" attributes="0"/>
+                                                          <Component id="txtKunkel" min="-2" pref="70" max="-2" attributes="0"/>
                                                           <EmptySpace max="-2" attributes="0"/>
                                                           <Component id="jLabel45" min="-2" pref="120" max="-2" attributes="0"/>
                                                       </Group>
                                                       <Group type="102" alignment="0" attributes="0">
-                                                          <Component id="bilirubin3" min="-2" pref="70" max="-2" attributes="0"/>
+                                                          <Component id="txtLipidaTotal" min="-2" pref="70" max="-2" attributes="0"/>
                                                           <EmptySpace max="-2" attributes="0"/>
                                                           <Component id="jLabel46" min="-2" pref="120" max="-2" attributes="0"/>
                                                       </Group>
                                                       <Group type="102" alignment="0" attributes="0">
-                                                          <Component id="bilirubin4" min="-2" pref="70" max="-2" attributes="0"/>
+                                                          <Component id="txtKolesterolTotal" min="-2" pref="70" max="-2" attributes="0"/>
                                                           <EmptySpace max="-2" attributes="0"/>
                                                           <Component id="jLabel47" min="-2" pref="120" max="-2" attributes="0"/>
                                                       </Group>
@@ -5318,12 +5318,12 @@
                                                   <EmptySpace max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="0" attributes="0">
                                                       <Group type="102" alignment="0" attributes="0">
-                                                          <Component id="bilirubin14" min="-2" pref="70" max="-2" attributes="0"/>
+                                                          <Component id="txtHdl" min="-2" pref="70" max="-2" attributes="0"/>
                                                           <EmptySpace max="-2" attributes="0"/>
                                                           <Component id="jLabel49" min="-2" pref="120" max="-2" attributes="0"/>
                                                       </Group>
                                                       <Group type="102" alignment="0" attributes="0">
-                                                          <Component id="bilirubin15" min="-2" pref="70" max="-2" attributes="0"/>
+                                                          <Component id="txtLdl" min="-2" pref="70" max="-2" attributes="0"/>
                                                           <EmptySpace max="-2" attributes="0"/>
                                                           <Component id="jLabel50" min="-2" pref="120" max="-2" attributes="0"/>
                                                       </Group>
@@ -5344,47 +5344,47 @@
                                                   <EmptySpace max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="0" attributes="0">
                                                       <Group type="102" alignment="0" attributes="0">
-                                                          <Component id="bilirubin5" min="-2" pref="70" max="-2" attributes="0"/>
+                                                          <Component id="txtBetaLipoprotein" min="-2" pref="70" max="-2" attributes="0"/>
                                                           <EmptySpace max="-2" attributes="0"/>
                                                           <Component id="jLabel52" min="-2" pref="120" max="-2" attributes="0"/>
                                                       </Group>
                                                       <Group type="102" alignment="0" attributes="0">
-                                                          <Component id="bilirubin6" min="-2" pref="70" max="-2" attributes="0"/>
+                                                          <Component id="txtUreum" min="-2" pref="70" max="-2" attributes="0"/>
                                                           <EmptySpace max="-2" attributes="0"/>
                                                           <Component id="jLabel68" min="-2" pref="120" max="-2" attributes="0"/>
                                                       </Group>
                                                       <Group type="102" alignment="0" attributes="0">
-                                                          <Component id="bilirubin7" min="-2" pref="70" max="-2" attributes="0"/>
+                                                          <Component id="txtKreatinin" min="-2" pref="70" max="-2" attributes="0"/>
                                                           <EmptySpace max="-2" attributes="0"/>
                                                           <Component id="jLabel69" min="-2" pref="120" max="-2" attributes="0"/>
                                                       </Group>
                                                       <Group type="102" alignment="0" attributes="0">
-                                                          <Component id="bilirubin8" min="-2" pref="70" max="-2" attributes="0"/>
+                                                          <Component id="txtAsamUrat" min="-2" pref="70" max="-2" attributes="0"/>
                                                           <EmptySpace max="-2" attributes="0"/>
                                                           <Component id="jLabel70" min="-2" pref="120" max="-2" attributes="0"/>
                                                       </Group>
                                                       <Group type="102" alignment="0" attributes="0">
-                                                          <Component id="bilirubin9" min="-2" pref="70" max="-2" attributes="0"/>
+                                                          <Component id="txtCa" min="-2" pref="70" max="-2" attributes="0"/>
                                                           <EmptySpace max="-2" attributes="0"/>
                                                           <Component id="jLabel71" min="-2" pref="120" max="-2" attributes="0"/>
                                                       </Group>
                                                       <Group type="102" alignment="0" attributes="0">
-                                                          <Component id="bilirubin10" min="-2" pref="70" max="-2" attributes="0"/>
+                                                          <Component id="txtP" min="-2" pref="70" max="-2" attributes="0"/>
                                                           <EmptySpace max="-2" attributes="0"/>
                                                           <Component id="jLabel72" min="-2" pref="120" max="-2" attributes="0"/>
                                                       </Group>
                                                       <Group type="102" alignment="0" attributes="0">
-                                                          <Component id="bilirubin11" min="-2" pref="70" max="-2" attributes="0"/>
+                                                          <Component id="txtNa" min="-2" pref="70" max="-2" attributes="0"/>
                                                           <EmptySpace max="-2" attributes="0"/>
                                                           <Component id="jLabel73" min="-2" pref="120" max="-2" attributes="0"/>
                                                       </Group>
                                                       <Group type="102" alignment="0" attributes="0">
-                                                          <Component id="bilirubin12" min="-2" pref="70" max="-2" attributes="0"/>
+                                                          <Component id="txtK" min="-2" pref="70" max="-2" attributes="0"/>
                                                           <EmptySpace max="-2" attributes="0"/>
                                                           <Component id="jLabel74" min="-2" pref="120" max="-2" attributes="0"/>
                                                       </Group>
                                                       <Group type="102" alignment="0" attributes="0">
-                                                          <Component id="bilirubin13" min="-2" pref="70" max="-2" attributes="0"/>
+                                                          <Component id="txtCl" min="-2" pref="70" max="-2" attributes="0"/>
                                                           <EmptySpace max="-2" attributes="0"/>
                                                           <Component id="jLabel75" min="-2" pref="120" max="-2" attributes="0"/>
                                                       </Group>
@@ -5393,7 +5393,7 @@
                                               <Group type="102" alignment="0" attributes="0">
                                                   <Component id="jLabel67" min="-2" pref="141" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="bilirubin16" min="-2" pref="70" max="-2" attributes="0"/>
+                                                  <Component id="txtTrigliserida" min="-2" pref="70" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
                                                   <Component id="jLabel51" min="-2" pref="120" max="-2" attributes="0"/>
                                               </Group>
@@ -5433,36 +5433,36 @@
                                           <Group type="103" groupAlignment="2" attributes="0">
                                               <Component id="jLabel24" alignment="2" min="-2" pref="28" max="-2" attributes="0"/>
                                               <Component id="jLabel8" alignment="2" min="-2" pref="28" max="-2" attributes="0"/>
-                                              <Component id="bilirubin" alignment="2" min="-2" pref="27" max="-2" attributes="0"/>
+                                              <Component id="txtBilirubinTotal" alignment="2" min="-2" pref="27" max="-2" attributes="0"/>
                                               <Component id="jLabel38" alignment="2" min="-2" pref="28" max="-2" attributes="0"/>
-                                              <Component id="bilirubin1" alignment="2" min="-2" pref="27" max="-2" attributes="0"/>
+                                              <Component id="txtTTT" alignment="2" min="-2" pref="27" max="-2" attributes="0"/>
                                               <Component id="jLabel44" alignment="2" min="-2" pref="26" max="-2" attributes="0"/>
                                           </Group>
                                           <EmptySpace min="-2" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="3" attributes="0">
                                               <Component id="jLabel9" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
-                                              <Component id="jTextField4" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
+                                              <Component id="txtBilirubinDirek" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
                                               <Component id="jLabel25" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
                                               <Component id="jLabel40" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
                                               <Component id="jLabel45" alignment="3" min="-2" pref="26" max="-2" attributes="0"/>
-                                              <Component id="bilirubin2" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                                              <Component id="txtKunkel" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
                                           </Group>
                                           <EmptySpace min="-2" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="3" attributes="0">
                                               <Component id="jLabel10" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
-                                              <Component id="jTextField3" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
+                                              <Component id="txtBilirubinIndirek" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
                                               <Component id="jLabel26" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
                                               <Component id="jLabel41" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
-                                              <Component id="bilirubin3" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                                              <Component id="txtLipidaTotal" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
                                               <Component id="jLabel46" alignment="3" min="-2" pref="26" max="-2" attributes="0"/>
                                           </Group>
                                           <EmptySpace min="-2" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="2" attributes="0">
                                               <Component id="jLabel28" alignment="2" min="-2" pref="28" max="-2" attributes="0"/>
                                               <Component id="jLabel11" alignment="2" min="-2" pref="28" max="-2" attributes="0"/>
-                                              <Component id="jTextField5" alignment="2" min="-2" pref="28" max="-2" attributes="0"/>
+                                              <Component id="txtIndeksIkterus" alignment="2" min="-2" pref="28" max="-2" attributes="0"/>
                                               <Component id="jLabel48" alignment="2" min="-2" pref="28" max="-2" attributes="0"/>
-                                              <Component id="bilirubin4" alignment="2" min="-2" pref="27" max="-2" attributes="0"/>
+                                              <Component id="txtKolesterolTotal" alignment="2" min="-2" pref="27" max="-2" attributes="0"/>
                                               <Component id="jLabel47" alignment="2" min="-2" pref="26" max="-2" attributes="0"/>
                                           </Group>
                                           <EmptySpace min="-2" max="-2" attributes="0"/>
@@ -5470,37 +5470,37 @@
                                               <Group type="102" alignment="0" attributes="0">
                                                   <Group type="103" groupAlignment="2" attributes="0">
                                                       <Component id="jLabel27" alignment="2" min="-2" pref="40" max="-2" attributes="0"/>
-                                                      <Component id="jTextField6" alignment="2" min="-2" pref="28" max="-2" attributes="0"/>
+                                                      <Component id="txtFosfataseAlkali" alignment="2" min="-2" pref="28" max="-2" attributes="0"/>
                                                       <Component id="jLabel12" alignment="2" min="-2" pref="40" max="-2" attributes="0"/>
                                                   </Group>
                                                   <EmptySpace max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="2" attributes="0">
                                                       <Component id="jLabel13" alignment="2" min="-2" pref="40" max="-2" attributes="0"/>
-                                                      <Component id="jTextField7" alignment="2" min="-2" pref="28" max="-2" attributes="0"/>
+                                                      <Component id="txtFosfatAsamTotal" alignment="2" min="-2" pref="28" max="-2" attributes="0"/>
                                                       <Component id="jLabel29" alignment="2" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                                   <EmptySpace max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="2" attributes="0">
                                                       <Component id="jLabel30" alignment="2" min="-2" pref="28" max="-2" attributes="0"/>
-                                                      <Component id="jTextField8" alignment="2" min="-2" pref="28" max="-2" attributes="0"/>
+                                                      <Component id="txtProteinTotal" alignment="2" min="-2" pref="28" max="-2" attributes="0"/>
                                                       <Component id="jLabel14" alignment="2" min="-2" pref="28" max="-2" attributes="0"/>
                                                   </Group>
                                                   <EmptySpace max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="3" attributes="0">
                                                       <Component id="jLabel16" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
-                                                      <Component id="jTextField9" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
+                                                      <Component id="txtAlbumin" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
                                                       <Component id="jLabel31" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
                                                   </Group>
                                                   <EmptySpace min="-2" max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="3" attributes="0">
-                                                      <Component id="jTextField10" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
+                                                      <Component id="txtGlobulin" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
                                                       <Component id="jLabel33" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
                                                       <Component id="jLabel15" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
                                                   </Group>
                                                   <EmptySpace min="-2" max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="3" attributes="0">
                                                       <Component id="jLabel17" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
-                                                      <Component id="jTextField14" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
+                                                      <Component id="txtElektroAlbumin" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
                                                       <Component id="jLabel32" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
                                                   </Group>
                                                   <Group type="103" groupAlignment="0" attributes="0">
@@ -5508,7 +5508,7 @@
                                                           <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
                                                           <Group type="103" groupAlignment="3" attributes="0">
                                                               <Component id="jLabel18" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
-                                                              <Component id="jTextField11" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
+                                                              <Component id="txtAlfa1Globulin" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
                                                           </Group>
                                                       </Group>
                                                       <Group type="102" alignment="0" attributes="0">
@@ -5519,25 +5519,25 @@
                                                   <EmptySpace max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="3" attributes="0">
                                                       <Component id="jLabel20" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
-                                                      <Component id="jTextField12" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
+                                                      <Component id="txtAlfa2Globulin" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
                                                       <Component id="jLabel35" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
                                                   </Group>
                                                   <EmptySpace max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="3" attributes="0">
                                                       <Component id="jLabel19" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
-                                                      <Component id="jTextField15" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
+                                                      <Component id="txtBetaGlobulin" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
                                                       <Component id="jLabel36" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
                                                   </Group>
                                                   <EmptySpace max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="3" attributes="0">
                                                       <Component id="jLabel21" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
-                                                      <Component id="jTextField13" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
+                                                      <Component id="txtGamaGlobulin" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
                                                       <Component id="jLabel37" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
                                                   </Group>
                                                   <EmptySpace max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="3" attributes="0">
                                                       <Component id="jLabel61" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
-                                                      <Component id="jTextField56" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
+                                                      <Component id="txtRetensiBSP" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
                                                       <Component id="jLabel62" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
                                                   </Group>
                                               </Group>
@@ -5545,74 +5545,74 @@
                                                   <Group type="103" groupAlignment="0" attributes="0">
                                                       <Group type="103" alignment="0" groupAlignment="0" attributes="0">
                                                           <Component id="jLabel65" alignment="1" min="-2" pref="28" max="-2" attributes="0"/>
-                                                          <Component id="bilirubin14" alignment="0" min="-2" pref="27" max="-2" attributes="0"/>
+                                                          <Component id="txtHdl" alignment="0" min="-2" pref="27" max="-2" attributes="0"/>
                                                       </Group>
                                                       <Component id="jLabel49" alignment="0" min="-2" pref="26" max="-2" attributes="0"/>
                                                   </Group>
                                                   <EmptySpace max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="3" attributes="0">
                                                       <Component id="jLabel66" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
-                                                      <Component id="bilirubin15" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                                                      <Component id="txtLdl" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
                                                       <Component id="jLabel50" alignment="3" min="-2" pref="26" max="-2" attributes="0"/>
                                                   </Group>
                                                   <EmptySpace max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="3" attributes="0">
                                                       <Component id="jLabel67" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
-                                                      <Component id="bilirubin16" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                                                      <Component id="txtTrigliserida" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
                                                       <Component id="jLabel51" alignment="3" min="-2" pref="26" max="-2" attributes="0"/>
                                                   </Group>
                                                   <EmptySpace max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="3" attributes="0">
                                                       <Component id="jLabel54" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
-                                                      <Component id="bilirubin5" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                                                      <Component id="txtBetaLipoprotein" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
                                                       <Component id="jLabel52" alignment="3" min="-2" pref="26" max="-2" attributes="0"/>
                                                   </Group>
                                                   <EmptySpace max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="3" attributes="0">
                                                       <Component id="jLabel53" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
-                                                      <Component id="bilirubin6" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                                                      <Component id="txtUreum" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
                                                       <Component id="jLabel68" alignment="3" min="-2" pref="26" max="-2" attributes="0"/>
                                                   </Group>
                                                   <EmptySpace min="-2" max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="3" attributes="0">
                                                       <Component id="jLabel57" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
-                                                      <Component id="bilirubin7" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                                                      <Component id="txtKreatinin" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
                                                       <Component id="jLabel69" alignment="3" min="-2" pref="26" max="-2" attributes="0"/>
                                                   </Group>
                                                   <EmptySpace max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="3" attributes="0">
                                                       <Component id="jLabel56" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
-                                                      <Component id="bilirubin8" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                                                      <Component id="txtAsamUrat" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
                                                       <Component id="jLabel70" alignment="3" min="-2" pref="26" max="-2" attributes="0"/>
                                                   </Group>
                                                   <EmptySpace max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="3" attributes="0">
                                                       <Component id="jLabel55" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
-                                                      <Component id="bilirubin9" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                                                      <Component id="txtCa" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
                                                       <Component id="jLabel71" alignment="3" min="-2" pref="26" max="-2" attributes="0"/>
                                                   </Group>
                                                   <EmptySpace max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="3" attributes="0">
                                                       <Component id="jLabel58" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
-                                                      <Component id="bilirubin10" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                                                      <Component id="txtP" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
                                                       <Component id="jLabel72" alignment="3" min="-2" pref="26" max="-2" attributes="0"/>
                                                   </Group>
                                                   <EmptySpace max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="3" attributes="0">
                                                       <Component id="jLabel60" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
-                                                      <Component id="bilirubin11" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                                                      <Component id="txtNa" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
                                                       <Component id="jLabel73" alignment="3" min="-2" pref="26" max="-2" attributes="0"/>
                                                   </Group>
                                                   <EmptySpace max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="3" attributes="0">
                                                       <Component id="jLabel63" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
-                                                      <Component id="bilirubin12" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                                                      <Component id="txtK" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
                                                       <Component id="jLabel74" alignment="3" min="-2" pref="26" max="-2" attributes="0"/>
                                                   </Group>
                                                   <EmptySpace max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="3" attributes="0">
                                                       <Component id="jLabel64" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
-                                                      <Component id="bilirubin13" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                                                      <Component id="txtCl" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
                                                       <Component id="jLabel75" alignment="3" min="-2" pref="26" max="-2" attributes="0"/>
                                                   </Group>
                                               </Group>
@@ -6442,105 +6442,105 @@
                                     <Property name="verifyInputWhenFocusTarget" type="boolean" value="false"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JTextField" name="bilirubin">
+                                <Component class="javax.swing.JTextField" name="txtBilirubinTotal">
                                   <Properties>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="12" style="0"/>
                                     </Property>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JTextField" name="jTextField3">
+                                <Component class="javax.swing.JTextField" name="txtBilirubinIndirek">
                                   <Properties>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="12" style="0"/>
                                     </Property>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JTextField" name="jTextField4">
+                                <Component class="javax.swing.JTextField" name="txtBilirubinDirek">
                                   <Properties>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="12" style="0"/>
                                     </Property>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JTextField" name="jTextField6">
+                                <Component class="javax.swing.JTextField" name="txtFosfataseAlkali">
                                   <Properties>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="12" style="0"/>
                                     </Property>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JTextField" name="jTextField5">
+                                <Component class="javax.swing.JTextField" name="txtIndeksIkterus">
                                   <Properties>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="12" style="0"/>
                                     </Property>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JTextField" name="jTextField7">
+                                <Component class="javax.swing.JTextField" name="txtFosfatAsamTotal">
                                   <Properties>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="12" style="0"/>
                                     </Property>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JTextField" name="jTextField8">
+                                <Component class="javax.swing.JTextField" name="txtProteinTotal">
                                   <Properties>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="12" style="0"/>
                                     </Property>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JTextField" name="jTextField9">
+                                <Component class="javax.swing.JTextField" name="txtAlbumin">
                                   <Properties>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="12" style="0"/>
                                     </Property>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JTextField" name="jTextField10">
+                                <Component class="javax.swing.JTextField" name="txtGlobulin">
                                   <Properties>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="12" style="0"/>
                                     </Property>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JTextField" name="jTextField11">
+                                <Component class="javax.swing.JTextField" name="txtAlfa1Globulin">
                                   <Properties>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="12" style="0"/>
                                     </Property>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JTextField" name="jTextField12">
+                                <Component class="javax.swing.JTextField" name="txtAlfa2Globulin">
                                   <Properties>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="12" style="0"/>
                                     </Property>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JTextField" name="jTextField13">
+                                <Component class="javax.swing.JTextField" name="txtGamaGlobulin">
                                   <Properties>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="12" style="0"/>
                                     </Property>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JTextField" name="jTextField14">
+                                <Component class="javax.swing.JTextField" name="txtElektroAlbumin">
                                   <Properties>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="12" style="0"/>
                                     </Property>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JTextField" name="jTextField15">
+                                <Component class="javax.swing.JTextField" name="txtBetaGlobulin">
                                   <Properties>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="12" style="0"/>
                                     </Property>
                                   </Properties>
                                   <Events>
-                                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField15ActionPerformed"/>
+                                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtBetaGlobulinActionPerformed"/>
                                   </Events>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="jLabel60">
@@ -6578,7 +6578,7 @@
                                     </Property>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JTextField" name="jTextField56">
+                                <Component class="javax.swing.JTextField" name="txtRetensiBSP">
                                   <Properties>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="12" style="0"/>
@@ -6616,7 +6616,7 @@
                                       <Font name="Tahoma" size="12" style="0"/>
                                     </Property>
                                     <Property name="horizontalAlignment" type="int" value="0"/>
-                                    <Property name="text" type="java.lang.String" value="Na"/>
+                                    <Property name="text" type="java.lang.String" value="K"/>
                                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                                         <LineBorder/>
@@ -6643,7 +6643,7 @@
                                     <Property name="verifyInputWhenFocusTarget" type="boolean" value="false"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JTextField" name="bilirubin1">
+                                <Component class="javax.swing.JTextField" name="txtTTT">
                                   <Properties>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="12" style="0"/>
@@ -6686,84 +6686,84 @@
                                     <Property name="verifyInputWhenFocusTarget" type="boolean" value="false"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JTextField" name="bilirubin2">
+                                <Component class="javax.swing.JTextField" name="txtKunkel">
                                   <Properties>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="12" style="0"/>
                                     </Property>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JTextField" name="bilirubin3">
+                                <Component class="javax.swing.JTextField" name="txtLipidaTotal">
                                   <Properties>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="12" style="0"/>
                                     </Property>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JTextField" name="bilirubin4">
+                                <Component class="javax.swing.JTextField" name="txtKolesterolTotal">
                                   <Properties>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="12" style="0"/>
                                     </Property>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JTextField" name="bilirubin5">
+                                <Component class="javax.swing.JTextField" name="txtBetaLipoprotein">
                                   <Properties>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="12" style="0"/>
                                     </Property>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JTextField" name="bilirubin6">
+                                <Component class="javax.swing.JTextField" name="txtUreum">
                                   <Properties>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="12" style="0"/>
                                     </Property>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JTextField" name="bilirubin7">
+                                <Component class="javax.swing.JTextField" name="txtKreatinin">
                                   <Properties>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="12" style="0"/>
                                     </Property>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JTextField" name="bilirubin8">
+                                <Component class="javax.swing.JTextField" name="txtAsamUrat">
                                   <Properties>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="12" style="0"/>
                                     </Property>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JTextField" name="bilirubin9">
+                                <Component class="javax.swing.JTextField" name="txtCa">
                                   <Properties>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="12" style="0"/>
                                     </Property>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JTextField" name="bilirubin10">
+                                <Component class="javax.swing.JTextField" name="txtP">
                                   <Properties>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="12" style="0"/>
                                     </Property>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JTextField" name="bilirubin11">
+                                <Component class="javax.swing.JTextField" name="txtNa">
                                   <Properties>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="12" style="0"/>
                                     </Property>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JTextField" name="bilirubin12">
+                                <Component class="javax.swing.JTextField" name="txtK">
                                   <Properties>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="12" style="0"/>
                                     </Property>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JTextField" name="bilirubin13">
+                                <Component class="javax.swing.JTextField" name="txtCl">
                                   <Properties>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="12" style="0"/>
@@ -6779,7 +6779,7 @@
                                       <Font name="Tahoma" size="12" style="0"/>
                                     </Property>
                                     <Property name="horizontalAlignment" type="int" value="0"/>
-                                    <Property name="text" type="java.lang.String" value="Na"/>
+                                    <Property name="text" type="java.lang.String" value="HDL"/>
                                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                                         <LineBorder/>
@@ -6797,7 +6797,7 @@
                                       <Font name="Tahoma" size="12" style="0"/>
                                     </Property>
                                     <Property name="horizontalAlignment" type="int" value="0"/>
-                                    <Property name="text" type="java.lang.String" value="Na"/>
+                                    <Property name="text" type="java.lang.String" value="LDL"/>
                                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                                         <LineBorder/>
@@ -6806,14 +6806,14 @@
                                     <Property name="verifyInputWhenFocusTarget" type="boolean" value="false"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JTextField" name="bilirubin14">
+                                <Component class="javax.swing.JTextField" name="txtHdl">
                                   <Properties>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="12" style="0"/>
                                     </Property>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JTextField" name="bilirubin15">
+                                <Component class="javax.swing.JTextField" name="txtLdl">
                                   <Properties>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="12" style="0"/>
@@ -6829,7 +6829,7 @@
                                       <Font name="Tahoma" size="12" style="0"/>
                                     </Property>
                                     <Property name="horizontalAlignment" type="int" value="0"/>
-                                    <Property name="text" type="java.lang.String" value="Na"/>
+                                    <Property name="text" type="java.lang.String" value="Trigliserida"/>
                                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                                         <LineBorder/>
@@ -6838,7 +6838,7 @@
                                     <Property name="verifyInputWhenFocusTarget" type="boolean" value="false"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JTextField" name="bilirubin16">
+                                <Component class="javax.swing.JTextField" name="txtTrigliserida">
                                   <Properties>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="12" style="0"/>
@@ -7101,6 +7101,9 @@
                                   <Properties>
                                     <Property name="text" type="java.lang.String" value="SAVE"/>
                                   </Properties>
+                                  <Events>
+                                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sv_kimia1ActionPerformed"/>
+                                  </Events>
                                 </Component>
                                 <Component class="javax.swing.JButton" name="cn_kimia2">
                                   <Properties>
