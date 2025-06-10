@@ -124,8 +124,8 @@ public class form_hasil extends javax.swing.JPanel {
     TabHasil.addTab("URINE", URINE);
     TabHasil.addTab("HEMATOLOGI", HEMATOLOGI);
     TabHasil.addTab("SEROLOGI", SEROLOGI);
-    TabHasil.addTab("KIMIA1", KIMIA1);
-    TabHasil.addTab("KIMIA2", KIMIA2);
+    TabHasil.addTab("KIMIA 1", KIMIA1);
+    TabHasil.addTab("KIMIA 2", KIMIA2);
     TabHasil.addTab("TINJA", TINJA);
 }
     
@@ -5213,6 +5213,8 @@ try (PreparedStatement ps = kon.prepareStatement(sql)) {
     ps.executeUpdate();
     JOptionPane.showMessageDialog(null, "Data berhasil disimpan!");
     resetFormUrin();
+    
+      ps.close();
 } catch (SQLException e) {
     JOptionPane.showMessageDialog(null, "Gagal menyimpan: " + e.getMessage());
 }
@@ -5260,6 +5262,8 @@ try (PreparedStatement ps = kon.prepareStatement(sql)) {
         ps.executeUpdate();
         JOptionPane.showMessageDialog(null, "Data berhasil disimpan ke database!");
         resetFormHematologi();
+        
+          ps.close();
     } catch (SQLException e) {
         JOptionPane.showMessageDialog(null, "Gagal simpan data: " + e.getMessage());
     }
@@ -5319,7 +5323,9 @@ try (PreparedStatement ps = kon.prepareStatement(sql)) {
 
         ps.executeUpdate();
         JOptionPane.showMessageDialog(null, "Data serologi berhasil disimpan ke database!");
-
+        resetFormSerologi();
+        
+          ps.close();
     } catch (SQLException e) {
         JOptionPane.showMessageDialog(null, "Gagal menyimpan data serologi: " + e.getMessage());
     }
@@ -5329,7 +5335,7 @@ try (PreparedStatement ps = kon.prepareStatement(sql)) {
         // TODO add your handling code here:
         try {
         Connection kon = koneksi.koneksiDb();
-        String sql = "INSERT INTO hasil_kmia1 (id_pendaftaran, bilirubin_total, bilirubin_direk, bilirubin_indirek, indeks_ikterus, " +
+        String sql = "INSERT INTO hasil_kimia1 (id_pendaftaran, bilirubin_total, bilirubin_direk, bilirubin_indirek, indeks_ikterus, " +
                      "fosfatase_alkali, fosfat_asam_total, protein_total, albumin, globulin, " +
                      "elektro_albumin, alfa1_globulin, alfa2_globulin, beta_globulin, gama_globulin, retensi_bsp, " +
                      "ttt, kunkel, lipida_total, kolesterol_total, kolesterol_hdl, kolesterol_ldl, trigliserida, "+
@@ -5372,6 +5378,8 @@ try (PreparedStatement ps = kon.prepareStatement(sql)) {
 
         ps.executeUpdate();
         JOptionPane.showMessageDialog(null, "Data Kimia I berhasil disimpan.");
+        resetFormKimia1();
+        
         ps.close();
     } catch (SQLException e) {
         JOptionPane.showMessageDialog(null, "Gagal menyimpan data Kimia I: " + e.getMessage());
@@ -6032,6 +6040,41 @@ public void resetFormSerologi() {
     groupHBsAg.clearSelection();
     groupCRP.clearSelection();
     groupRAF.clearSelection();
+}
+
+public void resetFormKimia1() {
+    txtBilirubinTotal.setText("");
+    txtBilirubinDirek.setText("");
+    txtBilirubinIndirek.setText("");
+    txtIndeksIkterus.setText("");
+    txtFosfataseAlkali.setText("");
+    txtFosfatAsamTotal.setText("");
+    txtProteinTotal.setText("");
+    txtAlbumin.setText("");
+    txtGlobulin.setText("");
+    txtElektroAlbumin.setText("");
+    txtAlfa1Globulin.setText("");
+    txtAlfa2Globulin.setText("");
+    txtBetaGlobulin.setText("");
+    txtGamaGlobulin.setText("");
+    txtRetensiBSP.setText("");
+    
+    txtTTT.setText("");
+    txtKunkel.setText("");
+    txtLipidaTotal.setText("");
+    txtKolesterolTotal.setText("");
+    txtHdl.setText("");
+    txtLdl.setText("");
+    txtTrigliserida.setText("");
+    txtBetaLipoprotein.setText("");
+    txtUreum.setText("");
+    txtKreatinin.setText("");
+    txtAsamUrat.setText("");
+    txtCa.setText("");
+    txtP.setText("");
+    txtNa.setText("");
+    txtK.setText("");
+    txtCl.setText("");
 }
 
 
