@@ -494,7 +494,7 @@ public class form_pendaftaran extends javax.swing.JPanel {
                             .addComponent(jLabel20))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(form_pendaftaranLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                            .addComponent(cbjk, 0, 0, Short.MAX_VALUE)
+                            .addComponent(cbjk, 0, 105, Short.MAX_VALUE)
                             .addComponent(txtTB)
                             .addComponent(txtBB)
                             .addComponent(txtTL)
