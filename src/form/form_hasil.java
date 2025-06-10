@@ -156,6 +156,7 @@ public class form_hasil extends javax.swing.JPanel {
         groupCRP = new javax.swing.ButtonGroup();
         groupRAF = new javax.swing.ButtonGroup();
         main_panel = new javax.swing.JPanel();
+        jScrollPane3 = new javax.swing.JScrollPane();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -5094,12 +5095,11 @@ public class form_hasil extends javax.swing.JPanel {
                                         .addComponent(jLabel84)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addComponent(jLabel80)))
-                                .addGap(0, 235, Short.MAX_VALUE)))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(0, 214, Short.MAX_VALUE)))))
+                .addContainerGap(153, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 719, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -5145,7 +5145,9 @@ public class form_hasil extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        main_panel.add(jPanel1, "card2");
+        jScrollPane3.setViewportView(jPanel1);
+
+        main_panel.add(jScrollPane3, "card3");
 
         add(main_panel, "card2");
     }// </editor-fold>//GEN-END:initComponents
@@ -5261,9 +5263,9 @@ try (PreparedStatement ps = kon.prepareStatement(sql)) {
     private void sv_serologiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sv_serologiActionPerformed
         // TODO add your handling code here:
           try {
-        String sql = "INSERT INTO pemeriksaan_serologi (id_pendaftaran, tpha, vdrl, wr, hbsag, anti_hbs, hbe_ag, anti_hbe, anti_hbc, anti_ha, " +
-                "afp, ea, igg, iga, igm, ige, widal_typhus_h, paratyphus_a_h, paratyphus_b_h, paratyphus_c_h, typhus_o, " +
-                "paratyphus_a_o, paratyphus_b_o, paratyphus_c_o, asto, crp, raf, t4, t3_uptake, ft_i, t3, tsh) " +
+        String sql = "INSERT INTO hasil_serologi (id_pendaftaran, tpha, vdrl, wr, hbs_ag, anti_hbs, hbe_ag, anti_hbe, anti_hbc, anti_ha, " +
+                "afp, cea, igg, iga, igm, ige, widal_typhus_h, paratyphus_a_h, paratyphus_b_h, paratyphus_c_h, typhus_o, " +
+                "paratyphus_a_o, paratyphus_b_o, paratyphus_c_o, asto, crp, raf, t4, t3_uptake, fti, t3, tsh) " +
                 "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         Connection kon = koneksi.koneksiDb();
         PreparedStatement ps = kon.prepareStatement(sql);
@@ -5719,6 +5721,7 @@ try (PreparedStatement ps = kon.prepareStatement(sql)) {
     private javax.swing.JRadioButton jRadioButton9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField10;
