@@ -313,16 +313,6 @@
                                                                   <Group type="103" groupAlignment="0" attributes="0">
                                                                       <Component id="jLabel329" min="-2" pref="215" max="-2" attributes="0"/>
                                                                       <Group type="102" alignment="0" attributes="0">
-                                                                          <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
-                                                                          <Component id="jLabel342" min="-2" max="-2" attributes="0"/>
-                                                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                                          <Component id="jLabel343" min="-2" max="-2" attributes="0"/>
-                                                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                                          <Component id="jLabel344" min="-2" max="-2" attributes="0"/>
-                                                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                                          <Component id="jLabel345" min="-2" max="-2" attributes="0"/>
-                                                                      </Group>
-                                                                      <Group type="102" alignment="0" attributes="0">
                                                                           <Component id="neg_PBJ" min="-2" max="-2" attributes="0"/>
                                                                           <EmptySpace type="separate" max="-2" attributes="0"/>
                                                                           <Component id="pos_PBJ" min="-2" max="-2" attributes="0"/>
@@ -351,6 +341,21 @@
                                                                               <Component id="pos_DS" alignment="0" min="-2" max="-2" attributes="0"/>
                                                                               <Component id="pos_BK" alignment="0" min="-2" max="-2" attributes="0"/>
                                                                               <Component id="pos_TK" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                                          </Group>
+                                                                      </Group>
+                                                                      <Group type="102" alignment="0" attributes="0">
+                                                                          <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
+                                                                          <Group type="103" groupAlignment="1" attributes="0">
+                                                                              <Component id="preview" min="-2" max="-2" attributes="0"/>
+                                                                              <Group type="102" attributes="0">
+                                                                                  <Component id="jLabel342" min="-2" max="-2" attributes="0"/>
+                                                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                                                  <Component id="jLabel343" min="-2" max="-2" attributes="0"/>
+                                                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                                                  <Component id="jLabel344" min="-2" max="-2" attributes="0"/>
+                                                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                                                  <Component id="jLabel345" min="-2" max="-2" attributes="0"/>
+                                                                              </Group>
                                                                           </Group>
                                                                       </Group>
                                                                   </Group>
@@ -519,7 +524,10 @@
                                           </Group>
                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                              <Component id="cn_urine" pref="34" max="32767" attributes="0"/>
+                                              <Group type="103" groupAlignment="3" attributes="0">
+                                                  <Component id="cn_urine" alignment="3" pref="34" max="32767" attributes="0"/>
+                                                  <Component id="preview" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              </Group>
                                               <Component id="sv_urine" max="32767" attributes="0"/>
                                           </Group>
                                           <EmptySpace max="-2" attributes="0"/>
@@ -1501,6 +1509,14 @@
                                   <Properties>
                                     <Property name="text" type="java.lang.String" value="CANCEL"/>
                                   </Properties>
+                                </Component>
+                                <Component class="javax.swing.JButton" name="preview">
+                                  <Properties>
+                                    <Property name="text" type="java.lang.String" value="preview"/>
+                                  </Properties>
+                                  <Events>
+                                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="previewActionPerformed"/>
+                                  </Events>
                                 </Component>
                               </SubComponents>
                             </Container>
@@ -8834,7 +8850,6 @@
                                                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                               </Group>
                                           </Group>
-                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Group type="102" attributes="0">
                                                   <Component id="jLabel378" min="-2" pref="26" max="-2" attributes="0"/>
