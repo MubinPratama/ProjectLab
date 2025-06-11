@@ -3085,15 +3085,13 @@ public class form_hasil extends javax.swing.JPanel {
 
         jLabel44.setBackground(java.awt.Color.white);
         jLabel44.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel44.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel44.setText("NILAI NORMAL");
+        jLabel44.setText("<7 S Mc Lagen");
         jLabel44.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jLabel44.setVerifyInputWhenFocusTarget(false);
 
         jLabel45.setBackground(java.awt.Color.white);
         jLabel45.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel45.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel45.setText("NILAI NORMAL");
+        jLabel45.setText("< 12 S");
         jLabel45.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jLabel45.setVerifyInputWhenFocusTarget(false);
 
@@ -3150,99 +3148,85 @@ public class form_hasil extends javax.swing.JPanel {
 
         jLabel46.setBackground(java.awt.Color.white);
         jLabel46.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel46.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel46.setText("NILAI NORMAL");
+        jLabel46.setText("600 - 1000     mg/dl");
         jLabel46.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jLabel46.setVerifyInputWhenFocusTarget(false);
 
         jLabel47.setBackground(java.awt.Color.white);
         jLabel47.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel47.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel47.setText("NILAI NORMAL");
+        jLabel47.setText("< 220            mg/dl");
         jLabel47.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jLabel47.setVerifyInputWhenFocusTarget(false);
 
         jLabel49.setBackground(java.awt.Color.white);
         jLabel49.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel49.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel49.setText("NILAI NORMAL");
+        jLabel49.setText("36-55 45-65");
         jLabel49.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jLabel49.setVerifyInputWhenFocusTarget(false);
 
         jLabel50.setBackground(java.awt.Color.white);
         jLabel50.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel50.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel50.setText("NILAI NORMAL");
+        jLabel50.setText("120 - 190       mg/dl");
         jLabel50.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jLabel50.setVerifyInputWhenFocusTarget(false);
 
         jLabel51.setBackground(java.awt.Color.white);
         jLabel51.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel51.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel51.setText("NILAI NORMAL");
+        jLabel51.setText("< 200            mg/dl");
         jLabel51.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jLabel51.setVerifyInputWhenFocusTarget(false);
 
         jLabel52.setBackground(java.awt.Color.white);
         jLabel52.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel52.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel52.setText("NILAI NORMAL");
+        jLabel52.setText("360 - 640       mg/dl");
         jLabel52.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jLabel52.setVerifyInputWhenFocusTarget(false);
 
         jLabel68.setBackground(java.awt.Color.white);
         jLabel68.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel68.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel68.setText("NILAI NORMAL");
+        jLabel68.setText("20 - 40           mg/dl");
         jLabel68.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jLabel68.setVerifyInputWhenFocusTarget(false);
 
         jLabel69.setBackground(java.awt.Color.white);
         jLabel69.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel69.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel69.setText("NILAI NORMAL");
+        jLabel69.setText("0.5 - 1.5         mg/dl");
         jLabel69.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jLabel69.setVerifyInputWhenFocusTarget(false);
 
         jLabel70.setBackground(java.awt.Color.white);
         jLabel70.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel70.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel70.setText("NILAI NORMAL");
+        jLabel70.setText("3.0 - 6.0         mg/dl");
         jLabel70.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jLabel70.setVerifyInputWhenFocusTarget(false);
 
         jLabel71.setBackground(java.awt.Color.white);
         jLabel71.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel71.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel71.setText("NILAI NORMAL");
+        jLabel71.setText("9.0 - 11.0       mg/dl");
         jLabel71.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jLabel71.setVerifyInputWhenFocusTarget(false);
 
         jLabel72.setBackground(java.awt.Color.white);
         jLabel72.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel72.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel72.setText("NILAI NORMAL");
+        jLabel72.setText("3.0 - 11.0       mg/dl");
         jLabel72.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jLabel72.setVerifyInputWhenFocusTarget(false);
 
         jLabel73.setBackground(java.awt.Color.white);
         jLabel73.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel73.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel73.setText("NILAI NORMAL");
+        jLabel73.setText("135 - 147       mg/dl");
         jLabel73.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jLabel73.setVerifyInputWhenFocusTarget(false);
 
         jLabel74.setBackground(java.awt.Color.white);
         jLabel74.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel74.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel74.setText("NILAI NORMAL");
+        jLabel74.setText("3.5 - 5.5        mg/dl");
         jLabel74.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jLabel74.setVerifyInputWhenFocusTarget(false);
 
         jLabel75.setBackground(java.awt.Color.white);
         jLabel75.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel75.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel75.setText("NILAI NORMAL");
+        jLabel75.setText("100 - 106       mg/dl");
         jLabel75.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jLabel75.setVerifyInputWhenFocusTarget(false);
 
@@ -4936,7 +4920,6 @@ public class form_hasil extends javax.swing.JPanel {
                                 .addComponent(txtBeratBadan2, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(jLabel414, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(0, 0, Short.MAX_VALUE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel11Layout.createSequentialGroup()
                         .addComponent(jLabel378, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -5095,8 +5078,8 @@ public class form_hasil extends javax.swing.JPanel {
                                         .addComponent(jLabel84)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addComponent(jLabel80)))
-                                .addGap(0, 214, Short.MAX_VALUE)))))
-                .addContainerGap(153, Short.MAX_VALUE))
+                                .addGap(0, 226, Short.MAX_VALUE)))))
+                .addContainerGap(166, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
@@ -5134,9 +5117,9 @@ public class form_hasil extends javax.swing.JPanel {
                                 .addComponent(nm_pasien, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(nm_dokter, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 392, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(16, 16, 16)
+                .addGap(23, 23, 23)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
