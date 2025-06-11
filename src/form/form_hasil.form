@@ -7503,7 +7503,7 @@
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
                                     </Property>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                      <Font name="Tahoma" size="18" style="1"/>
+                                      <Font name="Georgia" size="18" style="1"/>
                                     </Property>
                                     <Property name="horizontalAlignment" type="int" value="0"/>
                                     <Property name="text" type="java.lang.String" value="HASIL PEMERIKSAAN TINJA"/>
@@ -7515,7 +7515,7 @@
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
                                     </Property>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                      <Font name="Tahoma" size="14" style="1"/>
+                                      <Font name="Georgia" size="14" style="1"/>
                                     </Property>
                                     <Property name="horizontalAlignment" type="int" value="0"/>
                                     <Property name="text" type="java.lang.String" value="RUTIN"/>
@@ -7527,7 +7527,7 @@
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
                                     </Property>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                      <Font name="Tahoma" size="12" style="0"/>
+                                      <Font name="Georgia" size="12" style="0"/>
                                     </Property>
                                     <Property name="horizontalAlignment" type="int" value="0"/>
                                     <Property name="text" type="java.lang.String" value="Warna"/>
@@ -7544,7 +7544,7 @@
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
                                     </Property>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                      <Font name="Tahoma" size="12" style="0"/>
+                                      <Font name="Georgia" size="12" style="0"/>
                                     </Property>
                                     <Property name="horizontalAlignment" type="int" value="0"/>
                                     <Property name="text" type="java.lang.String" value="Konsistensi"/>
@@ -7561,7 +7561,7 @@
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
                                     </Property>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                      <Font name="Tahoma" size="12" style="0"/>
+                                      <Font name="Georgia" size="12" style="0"/>
                                     </Property>
                                     <Property name="horizontalAlignment" type="int" value="0"/>
                                     <Property name="text" type="java.lang.String" value="Lendir"/>
@@ -7578,7 +7578,7 @@
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
                                     </Property>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                      <Font name="Tahoma" size="12" style="0"/>
+                                      <Font name="Georgia" size="12" style="0"/>
                                     </Property>
                                     <Property name="horizontalAlignment" type="int" value="0"/>
                                     <Property name="text" type="java.lang.String" value="Darah"/>
@@ -7595,7 +7595,7 @@
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
                                     </Property>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                      <Font name="Tahoma" size="12" style="0"/>
+                                      <Font name="Georgia" size="12" style="0"/>
                                     </Property>
                                     <Property name="horizontalAlignment" type="int" value="0"/>
                                     <Property name="text" type="java.lang.String" value="Nanah"/>
@@ -7612,7 +7612,7 @@
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
                                     </Property>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                      <Font name="Tahoma" size="14" style="1"/>
+                                      <Font name="Georgia" size="14" style="1"/>
                                     </Property>
                                     <Property name="horizontalAlignment" type="int" value="0"/>
                                     <Property name="text" type="java.lang.String" value="MAKROSKOPI"/>
@@ -7652,7 +7652,7 @@
                                       <ComponentRef name="groupLendir"/>
                                     </Property>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                      <Font name="Tahoma" size="12" style="0"/>
+                                      <Font name="Georgia" size="12" style="0"/>
                                     </Property>
                                     <Property name="text" type="java.lang.String" value="Neg"/>
                                   </Properties>
@@ -7666,7 +7666,7 @@
                                       <ComponentRef name="groupDarah"/>
                                     </Property>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                      <Font name="Tahoma" size="12" style="0"/>
+                                      <Font name="Georgia" size="12" style="0"/>
                                     </Property>
                                     <Property name="text" type="java.lang.String" value="Neg"/>
                                   </Properties>
@@ -7680,7 +7680,7 @@
                                       <ComponentRef name="groupNanah"/>
                                     </Property>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                      <Font name="Tahoma" size="12" style="0"/>
+                                      <Font name="Georgia" size="12" style="0"/>
                                     </Property>
                                     <Property name="text" type="java.lang.String" value="Neg"/>
                                   </Properties>
@@ -7694,7 +7694,7 @@
                                       <ComponentRef name="groupLendir"/>
                                     </Property>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                      <Font name="Tahoma" size="12" style="0"/>
+                                      <Font name="Georgia" size="12" style="0"/>
                                     </Property>
                                     <Property name="text" type="java.lang.String" value="Pos"/>
                                   </Properties>
@@ -7708,7 +7708,7 @@
                                       <ComponentRef name="groupDarah"/>
                                     </Property>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                      <Font name="Tahoma" size="12" style="0"/>
+                                      <Font name="Georgia" size="12" style="0"/>
                                     </Property>
                                     <Property name="text" type="java.lang.String" value="Pos"/>
                                   </Properties>
@@ -7722,7 +7722,7 @@
                                       <ComponentRef name="groupNanah"/>
                                     </Property>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                      <Font name="Tahoma" size="12" style="0"/>
+                                      <Font name="Georgia" size="12" style="0"/>
                                     </Property>
                                     <Property name="text" type="java.lang.String" value="Pos"/>
                                   </Properties>
@@ -7733,7 +7733,7 @@
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
                                     </Property>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                      <Font name="Tahoma" size="14" style="1"/>
+                                      <Font name="Georgia" size="14" style="1"/>
                                     </Property>
                                     <Property name="horizontalAlignment" type="int" value="0"/>
                                     <Property name="text" type="java.lang.String" value="PEMERIKSAAN"/>
@@ -7745,7 +7745,7 @@
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
                                     </Property>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                      <Font name="Tahoma" size="12" style="0"/>
+                                      <Font name="Georgia" size="12" style="0"/>
                                     </Property>
                                     <Property name="horizontalAlignment" type="int" value="2"/>
                                     <Property name="text" type="java.lang.String" value=" Lekosit"/>
@@ -7762,7 +7762,7 @@
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
                                     </Property>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                      <Font name="Tahoma" size="12" style="0"/>
+                                      <Font name="Georgia" size="12" style="0"/>
                                     </Property>
                                     <Property name="horizontalAlignment" type="int" value="2"/>
                                     <Property name="text" type="java.lang.String" value=" Eritrosit"/>
@@ -7779,7 +7779,7 @@
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
                                     </Property>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                      <Font name="Tahoma" size="12" style="0"/>
+                                      <Font name="Georgia" size="12" style="0"/>
                                     </Property>
                                     <Property name="horizontalAlignment" type="int" value="2"/>
                                     <Property name="text" type="java.lang.String" value=" E. Coli"/>
@@ -7796,7 +7796,7 @@
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
                                     </Property>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                      <Font name="Tahoma" size="12" style="0"/>
+                                      <Font name="Georgia" size="12" style="0"/>
                                     </Property>
                                     <Property name="horizontalAlignment" type="int" value="2"/>
                                     <Property name="text" type="java.lang.String" value=" E. Histolytica"/>
@@ -7813,7 +7813,7 @@
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
                                     </Property>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                      <Font name="Tahoma" size="12" style="0"/>
+                                      <Font name="Georgia" size="12" style="0"/>
                                     </Property>
                                     <Property name="horizontalAlignment" type="int" value="2"/>
                                     <Property name="text" type="java.lang.String" value=" Telur cacing Ascaris"/>
@@ -7830,7 +7830,7 @@
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
                                     </Property>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                      <Font name="Tahoma" size="12" style="0"/>
+                                      <Font name="Georgia" size="12" style="0"/>
                                     </Property>
                                     <Property name="horizontalAlignment" type="int" value="2"/>
                                     <Property name="text" type="java.lang.String" value=" Ankylostoma"/>
@@ -7847,7 +7847,7 @@
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
                                     </Property>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                      <Font name="Tahoma" size="12" style="0"/>
+                                      <Font name="Georgia" size="12" style="0"/>
                                     </Property>
                                     <Property name="horizontalAlignment" type="int" value="2"/>
                                     <Property name="text" type="java.lang.String" value=" Trichiuris"/>
@@ -7864,7 +7864,7 @@
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
                                     </Property>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                      <Font name="Tahoma" size="12" style="0"/>
+                                      <Font name="Georgia" size="12" style="0"/>
                                     </Property>
                                     <Property name="horizontalAlignment" type="int" value="2"/>
                                     <Property name="text" type="java.lang.String" value=" Lain-lain"/>
@@ -7898,7 +7898,7 @@
                                       <ComponentRef name="groupEcoli"/>
                                     </Property>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                      <Font name="Tahoma" size="12" style="0"/>
+                                      <Font name="Georgia" size="12" style="0"/>
                                     </Property>
                                     <Property name="text" type="java.lang.String" value="Neg"/>
                                   </Properties>
@@ -7912,7 +7912,7 @@
                                       <ComponentRef name="groupEhistolytica"/>
                                     </Property>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                      <Font name="Tahoma" size="12" style="0"/>
+                                      <Font name="Georgia" size="12" style="0"/>
                                     </Property>
                                     <Property name="text" type="java.lang.String" value="Neg"/>
                                   </Properties>
@@ -7926,7 +7926,7 @@
                                       <ComponentRef name="groupTelor"/>
                                     </Property>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                      <Font name="Tahoma" size="12" style="0"/>
+                                      <Font name="Georgia" size="12" style="0"/>
                                     </Property>
                                     <Property name="text" type="java.lang.String" value="Neg"/>
                                   </Properties>
@@ -7940,7 +7940,7 @@
                                       <ComponentRef name="groupAnky"/>
                                     </Property>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                      <Font name="Tahoma" size="12" style="0"/>
+                                      <Font name="Georgia" size="12" style="0"/>
                                     </Property>
                                     <Property name="text" type="java.lang.String" value="Neg"/>
                                   </Properties>
@@ -7954,7 +7954,7 @@
                                       <ComponentRef name="groupTrichiuris"/>
                                     </Property>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                      <Font name="Tahoma" size="12" style="0"/>
+                                      <Font name="Georgia" size="12" style="0"/>
                                     </Property>
                                     <Property name="text" type="java.lang.String" value="Neg"/>
                                   </Properties>
@@ -7968,7 +7968,7 @@
                                       <ComponentRef name="groupLain"/>
                                     </Property>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                      <Font name="Tahoma" size="12" style="0"/>
+                                      <Font name="Georgia" size="12" style="0"/>
                                     </Property>
                                     <Property name="text" type="java.lang.String" value="Neg"/>
                                   </Properties>
@@ -7982,7 +7982,7 @@
                                       <ComponentRef name="groupEcoli"/>
                                     </Property>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                      <Font name="Tahoma" size="12" style="0"/>
+                                      <Font name="Georgia" size="12" style="0"/>
                                     </Property>
                                     <Property name="text" type="java.lang.String" value="Pos"/>
                                   </Properties>
@@ -7996,7 +7996,7 @@
                                       <ComponentRef name="groupEhistolytica"/>
                                     </Property>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                      <Font name="Tahoma" size="12" style="0"/>
+                                      <Font name="Georgia" size="12" style="0"/>
                                     </Property>
                                     <Property name="text" type="java.lang.String" value="Pos"/>
                                   </Properties>
@@ -8010,7 +8010,7 @@
                                       <ComponentRef name="groupTelor"/>
                                     </Property>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                      <Font name="Tahoma" size="12" style="0"/>
+                                      <Font name="Georgia" size="12" style="0"/>
                                     </Property>
                                     <Property name="text" type="java.lang.String" value="Pos"/>
                                   </Properties>
@@ -8024,7 +8024,7 @@
                                       <ComponentRef name="groupAnky"/>
                                     </Property>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                      <Font name="Tahoma" size="12" style="0"/>
+                                      <Font name="Georgia" size="12" style="0"/>
                                     </Property>
                                     <Property name="text" type="java.lang.String" value="Pos"/>
                                   </Properties>
@@ -8038,7 +8038,7 @@
                                       <ComponentRef name="groupTrichiuris"/>
                                     </Property>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                      <Font name="Tahoma" size="12" style="0"/>
+                                      <Font name="Georgia" size="12" style="0"/>
                                     </Property>
                                     <Property name="text" type="java.lang.String" value="Pos"/>
                                   </Properties>
@@ -8052,7 +8052,7 @@
                                       <ComponentRef name="groupLain"/>
                                     </Property>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                      <Font name="Tahoma" size="12" style="0"/>
+                                      <Font name="Georgia" size="12" style="0"/>
                                     </Property>
                                     <Property name="text" type="java.lang.String" value="Pos"/>
                                   </Properties>
@@ -8063,7 +8063,7 @@
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
                                     </Property>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                      <Font name="Tahoma" size="14" style="1"/>
+                                      <Font name="Georgia" size="14" style="1"/>
                                     </Property>
                                     <Property name="horizontalAlignment" type="int" value="0"/>
                                     <Property name="text" type="java.lang.String" value="MIKROSKOPI"/>
@@ -8075,7 +8075,7 @@
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
                                     </Property>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                      <Font name="Tahoma" size="14" style="1"/>
+                                      <Font name="Georgia" size="14" style="1"/>
                                     </Property>
                                     <Property name="horizontalAlignment" type="int" value="0"/>
                                     <Property name="text" type="java.lang.String" value="PEMERIKSAAN"/>
@@ -8087,7 +8087,7 @@
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
                                     </Property>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                      <Font name="Tahoma" size="14" style="1"/>
+                                      <Font name="Georgia" size="14" style="1"/>
                                     </Property>
                                     <Property name="horizontalAlignment" type="int" value="0"/>
                                     <Property name="text" type="java.lang.String" value="PENCERNAAN"/>
@@ -8099,7 +8099,7 @@
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
                                     </Property>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                      <Font name="Tahoma" size="12" style="0"/>
+                                      <Font name="Georgia" size="12" style="0"/>
                                     </Property>
                                     <Property name="horizontalAlignment" type="int" value="0"/>
                                     <Property name="text" type="java.lang.String" value="Amylum"/>
@@ -8116,7 +8116,7 @@
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
                                     </Property>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                      <Font name="Tahoma" size="12" style="0"/>
+                                      <Font name="Georgia" size="12" style="0"/>
                                     </Property>
                                     <Property name="horizontalAlignment" type="int" value="0"/>
                                     <Property name="text" type="java.lang.String" value="Lemak"/>
@@ -8133,7 +8133,7 @@
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
                                     </Property>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                      <Font name="Tahoma" size="12" style="0"/>
+                                      <Font name="Georgia" size="12" style="0"/>
                                     </Property>
                                     <Property name="horizontalAlignment" type="int" value="0"/>
                                     <Property name="text" type="java.lang.String" value="Serat Tumbuh-Tumbuhan"/>
@@ -8150,7 +8150,7 @@
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
                                     </Property>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                      <Font name="Tahoma" size="12" style="0"/>
+                                      <Font name="Georgia" size="12" style="0"/>
                                     </Property>
                                     <Property name="horizontalAlignment" type="int" value="0"/>
                                     <Property name="text" type="java.lang.String" value="Serat Otot"/>
@@ -8167,7 +8167,7 @@
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
                                     </Property>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                      <Font name="Tahoma" size="12" style="0"/>
+                                      <Font name="Georgia" size="12" style="0"/>
                                     </Property>
                                     <Property name="horizontalAlignment" type="int" value="0"/>
                                     <Property name="text" type="java.lang.String" value="Darah Samar"/>
@@ -8187,7 +8187,7 @@
                                       <ComponentRef name="groupAmylum"/>
                                     </Property>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                      <Font name="Tahoma" size="12" style="0"/>
+                                      <Font name="Georgia" size="12" style="0"/>
                                     </Property>
                                     <Property name="text" type="java.lang.String" value="Neg"/>
                                   </Properties>
@@ -8201,7 +8201,7 @@
                                       <ComponentRef name="groupLemak"/>
                                     </Property>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                      <Font name="Tahoma" size="12" style="0"/>
+                                      <Font name="Georgia" size="12" style="0"/>
                                     </Property>
                                     <Property name="text" type="java.lang.String" value="Neg"/>
                                   </Properties>
@@ -8215,7 +8215,7 @@
                                       <ComponentRef name="groupSerat"/>
                                     </Property>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                      <Font name="Tahoma" size="12" style="0"/>
+                                      <Font name="Georgia" size="12" style="0"/>
                                     </Property>
                                     <Property name="text" type="java.lang.String" value="Neg"/>
                                   </Properties>
@@ -8229,7 +8229,7 @@
                                       <ComponentRef name="groupSeratotot"/>
                                     </Property>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                      <Font name="Tahoma" size="12" style="0"/>
+                                      <Font name="Georgia" size="12" style="0"/>
                                     </Property>
                                     <Property name="text" type="java.lang.String" value="Neg"/>
                                   </Properties>
@@ -8243,7 +8243,7 @@
                                       <ComponentRef name="groupDasar"/>
                                     </Property>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                      <Font name="Tahoma" size="12" style="0"/>
+                                      <Font name="Georgia" size="12" style="0"/>
                                     </Property>
                                     <Property name="text" type="java.lang.String" value="Neg"/>
                                   </Properties>
@@ -8257,7 +8257,7 @@
                                       <ComponentRef name="groupAmylum"/>
                                     </Property>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                      <Font name="Tahoma" size="12" style="0"/>
+                                      <Font name="Georgia" size="12" style="0"/>
                                     </Property>
                                     <Property name="text" type="java.lang.String" value="Pos"/>
                                   </Properties>
@@ -8271,7 +8271,7 @@
                                       <ComponentRef name="groupLemak"/>
                                     </Property>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                      <Font name="Tahoma" size="12" style="0"/>
+                                      <Font name="Georgia" size="12" style="0"/>
                                     </Property>
                                     <Property name="text" type="java.lang.String" value="Pos"/>
                                   </Properties>
@@ -8285,7 +8285,7 @@
                                       <ComponentRef name="groupSerat"/>
                                     </Property>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                      <Font name="Tahoma" size="12" style="0"/>
+                                      <Font name="Georgia" size="12" style="0"/>
                                     </Property>
                                     <Property name="text" type="java.lang.String" value="Pos"/>
                                   </Properties>
@@ -8299,7 +8299,7 @@
                                       <ComponentRef name="groupSeratotot"/>
                                     </Property>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                      <Font name="Tahoma" size="12" style="0"/>
+                                      <Font name="Georgia" size="12" style="0"/>
                                     </Property>
                                     <Property name="text" type="java.lang.String" value="Pos"/>
                                   </Properties>
@@ -8313,7 +8313,7 @@
                                       <ComponentRef name="groupDasar"/>
                                     </Property>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                      <Font name="Tahoma" size="12" style="0"/>
+                                      <Font name="Georgia" size="12" style="0"/>
                                     </Property>
                                     <Property name="text" type="java.lang.String" value="Pos"/>
                                   </Properties>
@@ -8335,7 +8335,15 @@
                                 </Component>
                                 <Component class="javax.swing.JButton" name="sv_tinja">
                                   <Properties>
+                                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                      <Font name="Georgia" size="13" style="0"/>
+                                    </Property>
                                     <Property name="text" type="java.lang.String" value="SAVE"/>
+                                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                                      <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+                                        <BevelBorder/>
+                                      </Border>
+                                    </Property>
                                   </Properties>
                                   <Events>
                                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sv_tinjaActionPerformed"/>
@@ -8343,7 +8351,15 @@
                                 </Component>
                                 <Component class="javax.swing.JButton" name="cn_tinja">
                                   <Properties>
+                                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                      <Font name="Georgia" size="13" style="0"/>
+                                    </Property>
                                     <Property name="text" type="java.lang.String" value="CANCEL"/>
+                                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                                      <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+                                        <BevelBorder/>
+                                      </Border>
+                                    </Property>
                                   </Properties>
                                   <Events>
                                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cn_tinjaActionPerformed"/>

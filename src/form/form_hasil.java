@@ -3621,47 +3621,47 @@ public class form_hasil extends javax.swing.JPanel {
         jPanel8.setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel293.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel293.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel293.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
         jLabel293.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel293.setText("HASIL PEMERIKSAAN TINJA");
 
         jLabel294.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel294.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel294.setFont(new java.awt.Font("Georgia", 1, 14)); // NOI18N
         jLabel294.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel294.setText("RUTIN");
 
         jLabel295.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel295.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel295.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
         jLabel295.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel295.setText("Warna");
         jLabel295.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel296.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel296.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel296.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
         jLabel296.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel296.setText("Konsistensi");
         jLabel296.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel297.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel297.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel297.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
         jLabel297.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel297.setText("Lendir");
         jLabel297.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel298.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel298.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel298.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
         jLabel298.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel298.setText("Darah");
         jLabel298.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel299.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel299.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel299.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
         jLabel299.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel299.setText("Nanah");
         jLabel299.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel300.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel300.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel300.setFont(new java.awt.Font("Georgia", 1, 14)); // NOI18N
         jLabel300.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel300.setText("MAKROSKOPI");
 
@@ -3672,83 +3672,83 @@ public class form_hasil extends javax.swing.JPanel {
 
         jRadioButton1.setBackground(new java.awt.Color(255, 255, 255));
         groupLendir.add(jRadioButton1);
-        jRadioButton1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jRadioButton1.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
         jRadioButton1.setText("Neg");
 
         jRadioButton2.setBackground(new java.awt.Color(255, 255, 255));
         groupDarah.add(jRadioButton2);
-        jRadioButton2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jRadioButton2.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
         jRadioButton2.setText("Neg");
 
         jRadioButton3.setBackground(new java.awt.Color(255, 255, 255));
         groupNanah.add(jRadioButton3);
-        jRadioButton3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jRadioButton3.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
         jRadioButton3.setText("Neg");
 
         TLendir.setBackground(new java.awt.Color(255, 255, 255));
         groupLendir.add(TLendir);
-        TLendir.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        TLendir.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
         TLendir.setText("Pos");
 
         TDarah.setBackground(new java.awt.Color(255, 255, 255));
         groupDarah.add(TDarah);
-        TDarah.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        TDarah.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
         TDarah.setText("Pos");
 
         TNanah.setBackground(new java.awt.Color(255, 255, 255));
         groupNanah.add(TNanah);
-        TNanah.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        TNanah.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
         TNanah.setText("Pos");
 
         jLabel301.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel301.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel301.setFont(new java.awt.Font("Georgia", 1, 14)); // NOI18N
         jLabel301.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel301.setText("PEMERIKSAAN");
 
         jLabel302.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel302.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel302.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
         jLabel302.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel302.setText(" Lekosit");
         jLabel302.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel303.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel303.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel303.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
         jLabel303.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel303.setText(" Eritrosit");
         jLabel303.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel304.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel304.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel304.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
         jLabel304.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel304.setText(" E. Coli");
         jLabel304.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel305.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel305.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel305.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
         jLabel305.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel305.setText(" E. Histolytica");
         jLabel305.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel306.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel306.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel306.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
         jLabel306.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel306.setText(" Telur cacing Ascaris");
         jLabel306.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel307.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel307.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel307.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
         jLabel307.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel307.setText(" Ankylostoma");
         jLabel307.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel308.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel308.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel308.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
         jLabel308.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel308.setText(" Trichiuris");
         jLabel308.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel309.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel309.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel309.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
         jLabel309.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel309.setText(" Lain-lain");
         jLabel309.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -3759,171 +3759,175 @@ public class form_hasil extends javax.swing.JPanel {
 
         jRadioButton7.setBackground(new java.awt.Color(255, 255, 255));
         groupEcoli.add(jRadioButton7);
-        jRadioButton7.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jRadioButton7.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
         jRadioButton7.setText("Neg");
 
         jRadioButton8.setBackground(new java.awt.Color(255, 255, 255));
         groupEhistolytica.add(jRadioButton8);
-        jRadioButton8.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jRadioButton8.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
         jRadioButton8.setText("Neg");
 
         jRadioButton9.setBackground(new java.awt.Color(255, 255, 255));
         groupTelor.add(jRadioButton9);
-        jRadioButton9.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jRadioButton9.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
         jRadioButton9.setText("Neg");
 
         jRadioButton10.setBackground(new java.awt.Color(255, 255, 255));
         groupAnky.add(jRadioButton10);
-        jRadioButton10.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jRadioButton10.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
         jRadioButton10.setText("Neg");
 
         jRadioButton11.setBackground(new java.awt.Color(255, 255, 255));
         groupTrichiuris.add(jRadioButton11);
-        jRadioButton11.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jRadioButton11.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
         jRadioButton11.setText("Neg");
 
         jRadioButton12.setBackground(new java.awt.Color(255, 255, 255));
         groupLain.add(jRadioButton12);
-        jRadioButton12.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jRadioButton12.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
         jRadioButton12.setText("Neg");
 
         TEcoli.setBackground(new java.awt.Color(255, 255, 255));
         groupEcoli.add(TEcoli);
-        TEcoli.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        TEcoli.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
         TEcoli.setText("Pos");
 
         TEhistolytica.setBackground(new java.awt.Color(255, 255, 255));
         groupEhistolytica.add(TEhistolytica);
-        TEhistolytica.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        TEhistolytica.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
         TEhistolytica.setText("Pos");
 
         TTelurcacing.setBackground(new java.awt.Color(255, 255, 255));
         groupTelor.add(TTelurcacing);
-        TTelurcacing.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        TTelurcacing.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
         TTelurcacing.setText("Pos");
 
         TAnkylotoma.setBackground(new java.awt.Color(255, 255, 255));
         groupAnky.add(TAnkylotoma);
-        TAnkylotoma.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        TAnkylotoma.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
         TAnkylotoma.setText("Pos");
 
         TTrichiuris.setBackground(new java.awt.Color(255, 255, 255));
         groupTrichiuris.add(TTrichiuris);
-        TTrichiuris.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        TTrichiuris.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
         TTrichiuris.setText("Pos");
 
         TLL.setBackground(new java.awt.Color(255, 255, 255));
         groupLain.add(TLL);
-        TLL.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        TLL.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
         TLL.setText("Pos");
 
         jLabel310.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel310.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel310.setFont(new java.awt.Font("Georgia", 1, 14)); // NOI18N
         jLabel310.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel310.setText("MIKROSKOPI");
 
         jLabel311.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel311.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel311.setFont(new java.awt.Font("Georgia", 1, 14)); // NOI18N
         jLabel311.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel311.setText("PEMERIKSAAN");
 
         jLabel312.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel312.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel312.setFont(new java.awt.Font("Georgia", 1, 14)); // NOI18N
         jLabel312.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel312.setText("PENCERNAAN");
 
         jLabel313.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel313.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel313.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
         jLabel313.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel313.setText("Amylum");
         jLabel313.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel314.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel314.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel314.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
         jLabel314.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel314.setText("Lemak");
         jLabel314.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel315.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel315.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel315.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
         jLabel315.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel315.setText("Serat Tumbuh-Tumbuhan");
         jLabel315.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel316.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel316.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel316.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
         jLabel316.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel316.setText("Serat Otot");
         jLabel316.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel317.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel317.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel317.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
         jLabel317.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel317.setText("Darah Samar");
         jLabel317.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jRadioButton19.setBackground(new java.awt.Color(255, 255, 255));
         groupAmylum.add(jRadioButton19);
-        jRadioButton19.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jRadioButton19.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
         jRadioButton19.setText("Neg");
 
         jRadioButton20.setBackground(new java.awt.Color(255, 255, 255));
         groupLemak.add(jRadioButton20);
-        jRadioButton20.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jRadioButton20.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
         jRadioButton20.setText("Neg");
 
         jRadioButton21.setBackground(new java.awt.Color(255, 255, 255));
         groupSerat.add(jRadioButton21);
-        jRadioButton21.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jRadioButton21.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
         jRadioButton21.setText("Neg");
 
         jRadioButton22.setBackground(new java.awt.Color(255, 255, 255));
         groupSeratotot.add(jRadioButton22);
-        jRadioButton22.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jRadioButton22.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
         jRadioButton22.setText("Neg");
 
         jRadioButton23.setBackground(new java.awt.Color(255, 255, 255));
         groupDasar.add(jRadioButton23);
-        jRadioButton23.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jRadioButton23.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
         jRadioButton23.setText("Neg");
 
         TAmylum.setBackground(new java.awt.Color(255, 255, 255));
         groupAmylum.add(TAmylum);
-        TAmylum.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        TAmylum.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
         TAmylum.setText("Pos");
 
         TLemak.setBackground(new java.awt.Color(255, 255, 255));
         groupLemak.add(TLemak);
-        TLemak.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        TLemak.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
         TLemak.setText("Pos");
 
         TSerat.setBackground(new java.awt.Color(255, 255, 255));
         groupSerat.add(TSerat);
-        TSerat.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        TSerat.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
         TSerat.setText("Pos");
 
         TSeratotot.setBackground(new java.awt.Color(255, 255, 255));
         groupSeratotot.add(TSeratotot);
-        TSeratotot.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        TSeratotot.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
         TSeratotot.setText("Pos");
 
         TDarahsamar.setBackground(new java.awt.Color(255, 255, 255));
         groupDasar.add(TDarahsamar);
-        TDarahsamar.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        TDarahsamar.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
         TDarahsamar.setText("Pos");
 
         jLabel318.setBackground(new java.awt.Color(255, 255, 255));
         jLabel318.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel318.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
 
+        sv_tinja.setFont(new java.awt.Font("Georgia", 0, 13)); // NOI18N
         sv_tinja.setText("SAVE");
+        sv_tinja.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         sv_tinja.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 sv_tinjaActionPerformed(evt);
             }
         });
 
+        cn_tinja.setFont(new java.awt.Font("Georgia", 0, 13)); // NOI18N
         cn_tinja.setText("CANCEL");
+        cn_tinja.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         cn_tinja.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cn_tinjaActionPerformed(evt);
