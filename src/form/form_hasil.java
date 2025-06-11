@@ -18,6 +18,7 @@ import java.util.HashSet;
 import javax.swing.JOptionPane;
 import javax.swing.Timer;
 import java.util.HashSet;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -46,6 +47,11 @@ public class form_hasil extends javax.swing.JPanel {
         ambiliddaftar();
     }
 });
+    
+    String[] kolom = {"Pemeriksaan", "Hasil Pemeriksaan"};
+    DefaultTableModel model = new DefaultTableModel(null, kolom);
+    tb_rincian.setModel(model);
+    
     }
     private void ambiliddaftar() {
         try {
@@ -5091,7 +5097,7 @@ public class form_hasil extends javax.swing.JPanel {
                                         .addComponent(jLabel84)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addComponent(jLabel80)))
-                                .addGap(0, 226, Short.MAX_VALUE)))))
+                                .addGap(0, 178, Short.MAX_VALUE)))))
                 .addContainerGap(166, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
@@ -5203,6 +5209,7 @@ try (PreparedStatement ps = kon.prepareStatement(sql)) {
 
     ps.executeUpdate();
     JOptionPane.showMessageDialog(null, "Data berhasil disimpan!");
+    tampilkanHasilUrineKeTabel();
     resetFormUrin();
     
       ps.close();
@@ -5270,28 +5277,21 @@ try (PreparedStatement ps = kon.prepareStatement(sql)) {
         Connection kon = koneksi.koneksiDb();
         PreparedStatement ps = kon.prepareStatement(sql);
         ps.setInt(1, Integer.parseInt(id_daftar.getSelectedItem().toString()));
-
-        // Radio button
         ps.setString(2, rbtnTPHANeg.isSelected() ? "Negative" : "Positive");
         ps.setString(3, rbtnVDRLNeg.isSelected() ? "Negative" : "Positive");
         ps.setString(4, rbtnWRNeg.isSelected() ? "Negative" : "Positive");
         ps.setString(5, rbtnHBsAgNeg.isSelected() ? "Negative" : "Positive");
-
-        // ComboBox or TextField
         ps.setString(6, cmbAntiHBs.getSelectedItem().toString());
         ps.setString(7, cmbHbeAg.getSelectedItem().toString());
         ps.setString(8, cmbAntiHBe.getSelectedItem().toString());
         ps.setString(9, cmbAntiHBc.getSelectedItem().toString());
         ps.setString(10, cmbAntiHA.getSelectedItem().toString());
-
-        // TextField
         ps.setString(11, txtAFP.getText());
         ps.setString(12, txtEA.getText());
         ps.setString(13, txtIgG.getText());
         ps.setString(14, txtIgA.getText());
         ps.setString(15, txtIgM.getText());
         ps.setString(16, txtIgE.getText());
-
         ps.setString(17, cmbTyphusH.getSelectedItem().toString());
         ps.setString(18, cmbParatyphusAH.getSelectedItem().toString());
         ps.setString(19, cmbParatyphusBH.getSelectedItem().toString());
@@ -5300,12 +5300,9 @@ try (PreparedStatement ps = kon.prepareStatement(sql)) {
         ps.setString(22, cmbParatyphusAO.getSelectedItem().toString());
         ps.setString(23, cmbParatyphusBO.getSelectedItem().toString());
         ps.setString(24, cmbParatyphusCO.getSelectedItem().toString());
-
-        // ASTO manual input
         ps.setString(25, txtASTO.getText());
         ps.setString(26, rbtnCRPNeg.isSelected() ? "Negative" : "Positive");
         ps.setString(27, rbtnRAfNeg.isSelected() ? "Negative" : "Positive");
-
         ps.setString(28, txtT4.getText());
         ps.setString(29, txtT3Uptake.getText());
         ps.setString(30, txtFTI.getText());
@@ -5403,15 +5400,12 @@ try (PreparedStatement ps = kon.prepareStatement(sql)) {
         ps.setString(9, txt2Jam.getText());
         ps.setString(10, txt3Jam.getText());
         ps.setString(11, txt2Jam1_5.getText());
-
         ps.setString(12, txtAST.getText());
         ps.setString(13, txtALT.getText());
         ps.setString(14, txtLDH.getText());
         ps.setString(15, txtAlfaHBDH.getText());
-
         ps.setString(16, cbReduksi.getSelectedItem().toString());
         ps.setString(17, cbBdKeton.getSelectedItem().toString());
-
         ps.setString(18, txtHbA1c.getText());
         ps.setString(19, txtCCT.getText());
         ps.setString(20, txtKreatininDarah.getText());
@@ -5420,7 +5414,6 @@ try (PreparedStatement ps = kon.prepareStatement(sql)) {
         ps.setString(23, txtWaktuUrin.getText());
         ps.setString(24, txtTinggiBadan.getText());
         ps.setString(25, txtBeratBadan.getText());
-
         ps.setString(26, txtUreaClearance.getText());
         ps.setString(27, txtUreumDarah.getText());
         ps.setString(28, txtUreumUrin.getText());
@@ -5428,7 +5421,6 @@ try (PreparedStatement ps = kon.prepareStatement(sql)) {
         ps.setString(30, txtWaktuUrin2.getText());
         ps.setString(31, txtTinggiBadan2.getText());
         ps.setString(32, txtBeratBadan2.getText());
-
         ps.setString(33, txtCK.getText());
         ps.setString(34, txtGamaGT.getText());
         ps.setString(35, txtCHE.getText());
@@ -5456,7 +5448,6 @@ try (PreparedStatement ps = kon.prepareStatement(sql)) {
     ps.setInt(1, Integer.parseInt(id_daftar.getSelectedItem().toString())); 
     ps.setString(2, TWarna.getText());
     ps.setString(3, TKonsistensi.getSelectedItem().toString());
-    
     ps.setString(4, TLendir.isSelected() ? "Positive" : "Negative"); 
     ps.setString(5, TDarah.isSelected() ? "Positive" : "Negative"); 
     ps.setString(6, TNanah.isSelected() ? "Positive" : "Negative"); 
@@ -5486,6 +5477,7 @@ try (PreparedStatement ps = kon.prepareStatement(sql)) {
 
     private void previewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_previewActionPerformed
         // TODO add your handling code here:
+        tampilkanHasilUrineKeTabel();
     }//GEN-LAST:event_previewActionPerformed
 
 
@@ -6239,4 +6231,83 @@ public void resetFormTinja(){
     groupSeratotot.clearSelection();
     groupDasar.clearSelection();
 }
+
+private void tambahBarisJikaAda(DefaultTableModel model, String label, String value) {
+    if (value != null && !value.trim().isEmpty()) {
+        model.addRow(new Object[]{label, value});
+    }
+}
+
+public void tampilkanHasilUrineKeTabel() {
+    // Ambil model tabel
+    DefaultTableModel model = (DefaultTableModel) tb_rincian.getModel();
+
+    // Tambahkan baris hasil pemeriksaan satu per satu
+    tambahBarisJikaAda(model,"Warna", cmbWarna.getSelectedItem().toString());
+    tambahBarisJikaAda(model,"Kejernihan", cmbKejernihan.getSelectedItem().toString());
+    tambahBarisJikaAda(model,"Berat Jenis", cmbBeratJenis.getSelectedItem().toString());
+    tambahBarisJikaAda(model,"Reaksi", cmbReaksi.getSelectedItem().toString());
+    tambahBarisJikaAda(model,"Protein", cmbProtein.getSelectedItem().toString());
+    tambahBarisJikaAda(model,"Reduksi", cmbReduksi.getSelectedItem().toString());
+    tambahBarisJikaAda(model,"Sendimen Eritrosit", cmbSendimenEritrosit.getSelectedItem().toString());
+    tambahBarisJikaAda(model,"Lekosi", cmbLekosit.getSelectedItem().toString());
+    tambahBarisJikaAda(model,"Epitel", cmbEpitel.getSelectedItem().toString());
+    tambahBarisJikaAda(model,"Kristal Jenis", cmbKristal.getSelectedItem().toString());
+    tambahBarisJikaAda(model,"Kristal Bentuk", cmbKristal2.getSelectedItem().toString());
+    tambahBarisJikaAda(model,"Bakteri", cmbBakteri.getSelectedItem().toString());
+    tambahBarisJikaAda(model,"Bilirubin", cmbBilirubin.getSelectedItem().toString());
+    tambahBarisJikaAda(model,"Urobilinogen", cmbUrobilinogen.getSelectedItem().toString());
+    tambahBarisJikaAda(model,"Urobilin", cmbUrobilin.getSelectedItem().toString());
+    tambahBarisJikaAda(model,"Nitrit", cmbNitrit.getSelectedItem().toString());
+
+    // Contoh jika kamu pakai radio button untuk tes kehamilan
+    String hasilPE = pos_PE.isSelected() ? "Positif" : neg_PE.isSelected() ? "Negatif" : "";
+    String hasilPBJ = pos_PBJ.isSelected() ? "Positif" : neg_PBJ.isSelected() ? "Negatif" : "";
+    String hasilBK = pos_BK.isSelected() ? "Positif" : neg_BK.isSelected() ? "Negatif" : "";
+    String hasilDS = pos_DS.isSelected() ? "Positif" : neg_DS.isSelected() ? "Negatif" : "";
+    String hasilTK = pos_TK.isSelected() ? "Positif" : neg_TK.isSelected() ? "Negatif" : "";
+    String hasilS = pos_S.isSelected() ? "Positif" : neg_S.isSelected() ? "Negatif" : "";
+    
+    tambahBarisJikaAda(model,"Protein Esbach", hasilPE);
+    tambahBarisJikaAda(model,"Protein Esbach Jones", hasilPBJ);
+    tambahBarisJikaAda(model,"Benda Keton", hasilBK);
+    tambahBarisJikaAda(model,"Darah Samar", hasilDS);
+    tambahBarisJikaAda(model,"Tes Kehamilan", hasilTK);
+    tambahBarisJikaAda(model,"Silinder", hasilS);
+     
+}
+
+public void tampilkanHasilHematologiKeTabel() {
+    // Ambil model tabel
+    DefaultTableModel model = (DefaultTableModel) tb_rincian.getModel();
+
+    // Tambahkan baris hasil pemeriksaan satu per satu
+    tambahBarisJikaAda(model,"Hemoglobin", txtHemoglobin.getText());
+    tambahBarisJikaAda(model,"Hematokrit", txtHematokrit.getText());
+    tambahBarisJikaAda(model,"Eritrosit", txtEritrosit.getText());
+    tambahBarisJikaAda(model,"VER MCH", txtVER_MCH.getText());
+    tambahBarisJikaAda(model,"HER MCH", txtHER_MCH.getText());
+    tambahBarisJikaAda(model,"KHER MCHC", txtKHER_MCHC.getText());
+    tambahBarisJikaAda(model,"Rerikulosit", txtRetikulosit.getText());
+    tambahBarisJikaAda(model,"Leukosit", txtLeukosit.getText());
+    tambahBarisJikaAda(model,"Basofil", txtBasofil.getText());
+    tambahBarisJikaAda(model,"Eosinofil", txtEosinofil.getText());
+    tambahBarisJikaAda(model,"Batang", txtBatang.getText());
+    tambahBarisJikaAda(model,"Segmen", txtSegmen.getText());
+    tambahBarisJikaAda(model,"Limfosit", txtLimfosit.getText());
+    tambahBarisJikaAda(model,"Monosit", txtMonosit.getText());
+    tambahBarisJikaAda(model,"LED", txtLED.getText());
+    tambahBarisJikaAda(model,"Westergren", txtWestergren.getText());
+    tambahBarisJikaAda(model,"Trombosit", txtTrombosit.getText());
+    tambahBarisJikaAda(model,"Masa Pendarahan", txtMasaPendarahan.getText());
+    tambahBarisJikaAda(model,"Masa embekuan", txtMasaPembekuan.getText());
+    tambahBarisJikaAda(model,"Nitrit", txtPembendungan.getText());
+    tambahBarisJikaAda(model,"Retraksi", txtRetraksi.getText());
+    tambahBarisJikaAda(model,"Resistensi Osmotik", txtResistensiOsmotik.getText());
+    tambahBarisJikaAda(model,"SelLE", txtSelLE.getText());
+    tambahBarisJikaAda(model,"ReaksiLE", txtReaksiLE.getText());
+    tambahBarisJikaAda(model,"Malaria", txtMalaria.getText());
+    tambahBarisJikaAda(model,"GolDarah", txtGolDarah.getText());
+}
+
 }
