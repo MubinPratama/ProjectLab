@@ -7191,16 +7191,16 @@
                                                           <Group type="102" alignment="0" attributes="0">
                                                               <Group type="103" groupAlignment="0" attributes="0">
                                                                   <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                                                                      <Component id="jRadioButton2" alignment="1" max="32767" attributes="0"/>
-                                                                      <Component id="jRadioButton1" alignment="1" min="-2" pref="72" max="-2" attributes="0"/>
+                                                                      <Component id="TDarahN" alignment="1" max="32767" attributes="0"/>
+                                                                      <Component id="TLendirN" alignment="1" min="-2" pref="72" max="-2" attributes="0"/>
                                                                   </Group>
-                                                                  <Component id="jRadioButton3" alignment="0" min="-2" pref="72" max="-2" attributes="0"/>
+                                                                  <Component id="TNanahN" alignment="0" min="-2" pref="72" max="-2" attributes="0"/>
                                                               </Group>
                                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                                                  <Component id="TLendir" alignment="0" max="32767" attributes="0"/>
-                                                                  <Component id="TDarah" alignment="0" max="32767" attributes="0"/>
-                                                                  <Component id="TNanah" alignment="0" min="-2" pref="73" max="-2" attributes="0"/>
+                                                                  <Component id="TLendirP" alignment="0" max="32767" attributes="0"/>
+                                                                  <Component id="TDarahP" alignment="0" max="32767" attributes="0"/>
+                                                                  <Component id="TNanahP" alignment="0" min="-2" pref="73" max="-2" attributes="0"/>
                                                               </Group>
                                                           </Group>
                                                           <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
@@ -7231,36 +7231,36 @@
                                                               <Group type="103" groupAlignment="1" attributes="0">
                                                                   <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
                                                                       <Group type="102" alignment="1" attributes="0">
-                                                                          <Component id="jRadioButton8" min="-2" pref="66" max="-2" attributes="0"/>
+                                                                          <Component id="TEhistolyticaN" min="-2" pref="66" max="-2" attributes="0"/>
                                                                           <EmptySpace max="-2" attributes="0"/>
-                                                                          <Component id="TEhistolytica" max="32767" attributes="0"/>
+                                                                          <Component id="TEhistolyticaP" max="32767" attributes="0"/>
                                                                       </Group>
                                                                       <Group type="102" alignment="1" attributes="0">
-                                                                          <Component id="jRadioButton7" min="-2" pref="66" max="-2" attributes="0"/>
+                                                                          <Component id="TEcoliN" min="-2" pref="66" max="-2" attributes="0"/>
                                                                           <EmptySpace max="-2" attributes="0"/>
-                                                                          <Component id="TEcoli" max="32767" attributes="0"/>
+                                                                          <Component id="TEcoliP" max="32767" attributes="0"/>
                                                                       </Group>
                                                                       <Component id="TEritrosit" alignment="0" max="32767" attributes="0"/>
                                                                       <Component id="TLekosit" alignment="0" max="32767" attributes="0"/>
                                                                       <Group type="102" alignment="0" attributes="0">
                                                                           <Group type="103" groupAlignment="1" attributes="0">
-                                                                              <Component id="jRadioButton12" max="32767" attributes="0"/>
-                                                                              <Component id="jRadioButton11" max="32767" attributes="0"/>
-                                                                              <Component id="jRadioButton10" min="-2" pref="66" max="-2" attributes="0"/>
+                                                                              <Component id="TLLN" max="32767" attributes="0"/>
+                                                                              <Component id="TTrichiurisN" max="32767" attributes="0"/>
+                                                                              <Component id="TAnkylotomaN" min="-2" pref="66" max="-2" attributes="0"/>
                                                                           </Group>
                                                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                                                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                                                              <Component id="TTrichiuris" alignment="0" max="32767" attributes="0"/>
-                                                                              <Component id="TAnkylotoma" alignment="0" max="32767" attributes="0"/>
-                                                                              <Component id="TLL" min="-2" pref="74" max="-2" attributes="0"/>
+                                                                              <Component id="TTrichiurisP" alignment="0" max="32767" attributes="0"/>
+                                                                              <Component id="TAnkylotomaP" alignment="0" max="32767" attributes="0"/>
+                                                                              <Component id="TLLP" min="-2" pref="74" max="-2" attributes="0"/>
                                                                           </Group>
                                                                           <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
                                                                       </Group>
                                                                   </Group>
                                                                   <Group type="102" alignment="0" attributes="0">
-                                                                      <Component id="jRadioButton9" min="-2" pref="66" max="-2" attributes="0"/>
+                                                                      <Component id="TTelurcacingN" min="-2" pref="66" max="-2" attributes="0"/>
                                                                       <EmptySpace max="-2" attributes="0"/>
-                                                                      <Component id="TTelurcacing" min="-2" pref="76" max="-2" attributes="0"/>
+                                                                      <Component id="TTelurcacingP" min="-2" pref="76" max="-2" attributes="0"/>
                                                                   </Group>
                                                               </Group>
                                                           </Group>
@@ -7278,19 +7278,19 @@
                                                       <Group type="103" groupAlignment="0" attributes="0">
                                                           <Group type="102" alignment="0" attributes="0">
                                                               <Group type="103" groupAlignment="0" attributes="0">
-                                                                  <Component id="jRadioButton19" alignment="0" min="-2" pref="66" max="-2" attributes="0"/>
-                                                                  <Component id="jRadioButton20" alignment="0" min="-2" pref="66" max="-2" attributes="0"/>
-                                                                  <Component id="jRadioButton21" alignment="0" min="-2" pref="66" max="-2" attributes="0"/>
-                                                                  <Component id="jRadioButton22" alignment="0" min="-2" pref="66" max="-2" attributes="0"/>
-                                                                  <Component id="jRadioButton23" alignment="0" min="-2" pref="66" max="-2" attributes="0"/>
+                                                                  <Component id="TAmylumN" alignment="0" min="-2" pref="66" max="-2" attributes="0"/>
+                                                                  <Component id="TLemakN" alignment="0" min="-2" pref="66" max="-2" attributes="0"/>
+                                                                  <Component id="TSeratN" alignment="0" min="-2" pref="66" max="-2" attributes="0"/>
+                                                                  <Component id="TSeratototN" alignment="0" min="-2" pref="66" max="-2" attributes="0"/>
+                                                                  <Component id="TDarahsamarN" alignment="0" min="-2" pref="66" max="-2" attributes="0"/>
                                                               </Group>
                                                               <EmptySpace max="-2" attributes="0"/>
                                                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                                                  <Component id="TLemak" alignment="0" min="-2" pref="79" max="-2" attributes="0"/>
-                                                                  <Component id="TSerat" alignment="0" min="-2" pref="79" max="-2" attributes="0"/>
-                                                                  <Component id="TSeratotot" alignment="0" min="-2" pref="79" max="-2" attributes="0"/>
-                                                                  <Component id="TDarahsamar" alignment="0" min="-2" pref="79" max="-2" attributes="0"/>
-                                                                  <Component id="TAmylum" alignment="0" min="-2" pref="79" max="-2" attributes="0"/>
+                                                                  <Component id="TLemakP" alignment="0" min="-2" pref="79" max="-2" attributes="0"/>
+                                                                  <Component id="TSeratP" alignment="0" min="-2" pref="79" max="-2" attributes="0"/>
+                                                                  <Component id="TSeratototP" alignment="0" min="-2" pref="79" max="-2" attributes="0"/>
+                                                                  <Component id="TDarahsamarP" alignment="0" min="-2" pref="79" max="-2" attributes="0"/>
+                                                                  <Component id="TAmylumP" alignment="0" min="-2" pref="79" max="-2" attributes="0"/>
                                                               </Group>
                                                           </Group>
                                                           <Component id="jLabel312" min="-2" pref="145" max="-2" attributes="0"/>
@@ -7318,7 +7318,7 @@
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Group type="102" alignment="0" attributes="0">
                                                   <EmptySpace min="-2" pref="148" max="-2" attributes="0"/>
-                                                  <Component id="jRadioButton22" min="-2" pref="31" max="-2" attributes="0"/>
+                                                  <Component id="TSeratototN" min="-2" pref="31" max="-2" attributes="0"/>
                                               </Group>
                                               <Group type="102" alignment="0" attributes="0">
                                                   <EmptySpace min="-2" pref="148" max="-2" attributes="0"/>
@@ -7326,7 +7326,7 @@
                                               </Group>
                                               <Group type="102" alignment="0" attributes="0">
                                                   <EmptySpace min="-2" pref="111" max="-2" attributes="0"/>
-                                                  <Component id="jRadioButton21" min="-2" pref="31" max="-2" attributes="0"/>
+                                                  <Component id="TSeratN" min="-2" pref="31" max="-2" attributes="0"/>
                                               </Group>
                                               <Group type="102" alignment="0" attributes="0">
                                                   <EmptySpace min="-2" pref="111" max="-2" attributes="0"/>
@@ -7334,7 +7334,7 @@
                                               </Group>
                                               <Group type="102" alignment="0" attributes="0">
                                                   <EmptySpace min="-2" pref="74" max="-2" attributes="0"/>
-                                                  <Component id="jRadioButton20" min="-2" pref="31" max="-2" attributes="0"/>
+                                                  <Component id="TLemakN" min="-2" pref="31" max="-2" attributes="0"/>
                                               </Group>
                                               <Group type="102" alignment="0" attributes="0">
                                                   <EmptySpace min="-2" pref="74" max="-2" attributes="0"/>
@@ -7343,7 +7343,7 @@
                                               <Group type="102" alignment="0" attributes="0">
                                                   <EmptySpace min="185" pref="185" max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="0" attributes="0">
-                                                      <Component id="jRadioButton23" min="-2" pref="31" max="-2" attributes="0"/>
+                                                      <Component id="TDarahsamarN" min="-2" pref="31" max="-2" attributes="0"/>
                                                       <Component id="jLabel317" min="-2" pref="31" max="-2" attributes="0"/>
                                                   </Group>
                                               </Group>
@@ -7356,24 +7356,24 @@
                                                   <Group type="103" groupAlignment="0" attributes="0">
                                                       <Group type="102" alignment="0" attributes="0">
                                                           <EmptySpace min="-2" pref="148" max="-2" attributes="0"/>
-                                                          <Component id="TDarahsamar" min="-2" pref="31" max="-2" attributes="0"/>
+                                                          <Component id="TDarahsamarP" min="-2" pref="31" max="-2" attributes="0"/>
                                                       </Group>
                                                       <Group type="102" alignment="0" attributes="0">
                                                           <EmptySpace min="-2" pref="111" max="-2" attributes="0"/>
-                                                          <Component id="TSeratotot" min="-2" pref="31" max="-2" attributes="0"/>
+                                                          <Component id="TSeratototP" min="-2" pref="31" max="-2" attributes="0"/>
                                                       </Group>
                                                       <Group type="102" alignment="0" attributes="0">
                                                           <EmptySpace min="-2" pref="74" max="-2" attributes="0"/>
-                                                          <Component id="TSerat" min="-2" pref="31" max="-2" attributes="0"/>
+                                                          <Component id="TSeratP" min="-2" pref="31" max="-2" attributes="0"/>
                                                       </Group>
                                                       <Group type="102" alignment="0" attributes="0">
                                                           <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
-                                                          <Component id="TLemak" min="-2" pref="31" max="-2" attributes="0"/>
+                                                          <Component id="TLemakP" min="-2" pref="31" max="-2" attributes="0"/>
                                                       </Group>
-                                                      <Component id="TAmylum" alignment="0" min="-2" pref="31" max="-2" attributes="0"/>
+                                                      <Component id="TAmylumP" alignment="0" min="-2" pref="31" max="-2" attributes="0"/>
                                                       <Group type="103" alignment="0" groupAlignment="3" attributes="0">
                                                           <Component id="jLabel313" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
-                                                          <Component id="jRadioButton19" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
+                                                          <Component id="TAmylumN" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
                                                       </Group>
                                                   </Group>
                                               </Group>
@@ -7385,23 +7385,23 @@
                                                   <Component id="TKonsistensi" min="-2" pref="31" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="2" attributes="0">
-                                                      <Component id="jRadioButton1" alignment="2" min="-2" pref="31" max="-2" attributes="0"/>
-                                                      <Component id="TLendir" alignment="2" min="-2" pref="31" max="-2" attributes="0"/>
+                                                      <Component id="TLendirN" alignment="2" min="-2" pref="31" max="-2" attributes="0"/>
+                                                      <Component id="TLendirP" alignment="2" min="-2" pref="31" max="-2" attributes="0"/>
                                                       <Component id="jLabel297" alignment="2" min="-2" pref="31" max="-2" attributes="0"/>
                                                   </Group>
                                                   <EmptySpace max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="2" attributes="0">
-                                                      <Component id="jRadioButton2" alignment="2" min="-2" pref="31" max="-2" attributes="0"/>
-                                                      <Component id="TDarah" alignment="2" min="-2" pref="31" max="-2" attributes="0"/>
+                                                      <Component id="TDarahN" alignment="2" min="-2" pref="31" max="-2" attributes="0"/>
+                                                      <Component id="TDarahP" alignment="2" min="-2" pref="31" max="-2" attributes="0"/>
                                                       <Component id="jLabel298" alignment="2" min="-2" pref="31" max="-2" attributes="0"/>
                                                   </Group>
                                                   <EmptySpace max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="0" attributes="0">
                                                       <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                                                          <Component id="jRadioButton3" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
+                                                          <Component id="TNanahN" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
                                                           <Component id="jLabel299" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
                                                       </Group>
-                                                      <Component id="TNanah" min="-2" pref="31" max="-2" attributes="0"/>
+                                                      <Component id="TNanahP" min="-2" pref="31" max="-2" attributes="0"/>
                                                   </Group>
                                               </Group>
                                               <Group type="102" alignment="0" attributes="0">
@@ -7421,20 +7421,20 @@
                                                       <Group type="102" alignment="0" attributes="0">
                                                           <EmptySpace min="184" pref="184" max="-2" attributes="0"/>
                                                           <Group type="103" groupAlignment="2" attributes="0">
-                                                              <Component id="jRadioButton10" alignment="2" min="-2" pref="31" max="-2" attributes="0"/>
-                                                              <Component id="TAnkylotoma" alignment="2" min="-2" pref="31" max="-2" attributes="0"/>
+                                                              <Component id="TAnkylotomaN" alignment="2" min="-2" pref="31" max="-2" attributes="0"/>
+                                                              <Component id="TAnkylotomaP" alignment="2" min="-2" pref="31" max="-2" attributes="0"/>
                                                               <Component id="jLabel307" alignment="2" min="-2" pref="31" max="-2" attributes="0"/>
                                                           </Group>
                                                           <EmptySpace max="-2" attributes="0"/>
                                                           <Group type="103" groupAlignment="2" attributes="0">
                                                               <Component id="jLabel308" alignment="2" min="-2" pref="31" max="-2" attributes="0"/>
-                                                              <Component id="jRadioButton11" alignment="2" min="-2" pref="31" max="-2" attributes="0"/>
-                                                              <Component id="TTrichiuris" alignment="2" min="-2" pref="31" max="-2" attributes="0"/>
+                                                              <Component id="TTrichiurisN" alignment="2" min="-2" pref="31" max="-2" attributes="0"/>
+                                                              <Component id="TTrichiurisP" alignment="2" min="-2" pref="31" max="-2" attributes="0"/>
                                                           </Group>
                                                           <EmptySpace max="-2" attributes="0"/>
                                                           <Group type="103" groupAlignment="2" attributes="0">
-                                                              <Component id="TLL" alignment="2" min="-2" pref="31" max="-2" attributes="0"/>
-                                                              <Component id="jRadioButton12" alignment="2" min="-2" pref="31" max="-2" attributes="0"/>
+                                                              <Component id="TLLP" alignment="2" min="-2" pref="31" max="-2" attributes="0"/>
+                                                              <Component id="TLLN" alignment="2" min="-2" pref="31" max="-2" attributes="0"/>
                                                               <Component id="jLabel309" alignment="2" min="-2" pref="31" max="-2" attributes="0"/>
                                                           </Group>
                                                       </Group>
@@ -7458,8 +7458,8 @@
                                                       <Group type="102" alignment="0" attributes="0">
                                                           <EmptySpace min="-2" pref="148" max="-2" attributes="0"/>
                                                           <Group type="103" groupAlignment="0" attributes="0">
-                                                              <Component id="TTelurcacing" min="-2" pref="31" max="-2" attributes="0"/>
-                                                              <Component id="jRadioButton9" min="-2" pref="31" max="-2" attributes="0"/>
+                                                              <Component id="TTelurcacingP" min="-2" pref="31" max="-2" attributes="0"/>
+                                                              <Component id="TTelurcacingN" min="-2" pref="31" max="-2" attributes="0"/>
                                                           </Group>
                                                       </Group>
                                                       <Component id="TLekosit" alignment="0" min="-2" pref="31" max="-2" attributes="0"/>
@@ -7469,19 +7469,19 @@
                                                       </Group>
                                                       <Group type="102" alignment="0" attributes="0">
                                                           <EmptySpace min="-2" pref="74" max="-2" attributes="0"/>
-                                                          <Component id="jRadioButton7" min="-2" pref="31" max="-2" attributes="0"/>
+                                                          <Component id="TEcoliN" min="-2" pref="31" max="-2" attributes="0"/>
                                                       </Group>
                                                       <Group type="102" alignment="0" attributes="0">
                                                           <EmptySpace min="-2" pref="74" max="-2" attributes="0"/>
-                                                          <Component id="TEcoli" min="-2" pref="31" max="-2" attributes="0"/>
+                                                          <Component id="TEcoliP" min="-2" pref="31" max="-2" attributes="0"/>
                                                       </Group>
                                                       <Group type="102" alignment="0" attributes="0">
                                                           <EmptySpace min="-2" pref="111" max="-2" attributes="0"/>
-                                                          <Component id="jRadioButton8" min="-2" pref="31" max="-2" attributes="0"/>
+                                                          <Component id="TEhistolyticaN" min="-2" pref="31" max="-2" attributes="0"/>
                                                       </Group>
                                                       <Group type="102" alignment="0" attributes="0">
                                                           <EmptySpace min="-2" pref="111" max="-2" attributes="0"/>
-                                                          <Component id="TEhistolytica" min="-2" pref="31" max="-2" attributes="0"/>
+                                                          <Component id="TEhistolyticaP" min="-2" pref="31" max="-2" attributes="0"/>
                                                       </Group>
                                                   </Group>
                                               </Group>
@@ -7643,7 +7643,7 @@
                                     <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                                   </AuxValues>
                                 </Component>
-                                <Component class="javax.swing.JRadioButton" name="jRadioButton1">
+                                <Component class="javax.swing.JRadioButton" name="TLendirN">
                                   <Properties>
                                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -7657,7 +7657,7 @@
                                     <Property name="text" type="java.lang.String" value="Neg"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JRadioButton" name="jRadioButton2">
+                                <Component class="javax.swing.JRadioButton" name="TDarahN">
                                   <Properties>
                                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -7671,7 +7671,7 @@
                                     <Property name="text" type="java.lang.String" value="Neg"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JRadioButton" name="jRadioButton3">
+                                <Component class="javax.swing.JRadioButton" name="TNanahN">
                                   <Properties>
                                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -7685,7 +7685,7 @@
                                     <Property name="text" type="java.lang.String" value="Neg"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JRadioButton" name="TLendir">
+                                <Component class="javax.swing.JRadioButton" name="TLendirP">
                                   <Properties>
                                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -7699,7 +7699,7 @@
                                     <Property name="text" type="java.lang.String" value="Pos"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JRadioButton" name="TDarah">
+                                <Component class="javax.swing.JRadioButton" name="TDarahP">
                                   <Properties>
                                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -7713,7 +7713,7 @@
                                     <Property name="text" type="java.lang.String" value="Pos"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JRadioButton" name="TNanah">
+                                <Component class="javax.swing.JRadioButton" name="TNanahP">
                                   <Properties>
                                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -7889,7 +7889,7 @@
                                     </Property>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JRadioButton" name="jRadioButton7">
+                                <Component class="javax.swing.JRadioButton" name="TEcoliN">
                                   <Properties>
                                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -7903,7 +7903,7 @@
                                     <Property name="text" type="java.lang.String" value="Neg"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JRadioButton" name="jRadioButton8">
+                                <Component class="javax.swing.JRadioButton" name="TEhistolyticaN">
                                   <Properties>
                                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -7917,7 +7917,7 @@
                                     <Property name="text" type="java.lang.String" value="Neg"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JRadioButton" name="jRadioButton9">
+                                <Component class="javax.swing.JRadioButton" name="TTelurcacingN">
                                   <Properties>
                                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -7931,7 +7931,7 @@
                                     <Property name="text" type="java.lang.String" value="Neg"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JRadioButton" name="jRadioButton10">
+                                <Component class="javax.swing.JRadioButton" name="TAnkylotomaN">
                                   <Properties>
                                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -7945,7 +7945,7 @@
                                     <Property name="text" type="java.lang.String" value="Neg"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JRadioButton" name="jRadioButton11">
+                                <Component class="javax.swing.JRadioButton" name="TTrichiurisN">
                                   <Properties>
                                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -7959,7 +7959,7 @@
                                     <Property name="text" type="java.lang.String" value="Neg"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JRadioButton" name="jRadioButton12">
+                                <Component class="javax.swing.JRadioButton" name="TLLN">
                                   <Properties>
                                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -7973,7 +7973,7 @@
                                     <Property name="text" type="java.lang.String" value="Neg"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JRadioButton" name="TEcoli">
+                                <Component class="javax.swing.JRadioButton" name="TEcoliP">
                                   <Properties>
                                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -7987,7 +7987,7 @@
                                     <Property name="text" type="java.lang.String" value="Pos"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JRadioButton" name="TEhistolytica">
+                                <Component class="javax.swing.JRadioButton" name="TEhistolyticaP">
                                   <Properties>
                                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -8001,7 +8001,7 @@
                                     <Property name="text" type="java.lang.String" value="Pos"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JRadioButton" name="TTelurcacing">
+                                <Component class="javax.swing.JRadioButton" name="TTelurcacingP">
                                   <Properties>
                                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -8015,7 +8015,7 @@
                                     <Property name="text" type="java.lang.String" value="Pos"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JRadioButton" name="TAnkylotoma">
+                                <Component class="javax.swing.JRadioButton" name="TAnkylotomaP">
                                   <Properties>
                                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -8029,7 +8029,7 @@
                                     <Property name="text" type="java.lang.String" value="Pos"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JRadioButton" name="TTrichiuris">
+                                <Component class="javax.swing.JRadioButton" name="TTrichiurisP">
                                   <Properties>
                                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -8043,7 +8043,7 @@
                                     <Property name="text" type="java.lang.String" value="Pos"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JRadioButton" name="TLL">
+                                <Component class="javax.swing.JRadioButton" name="TLLP">
                                   <Properties>
                                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -8178,7 +8178,7 @@
                                     </Property>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JRadioButton" name="jRadioButton19">
+                                <Component class="javax.swing.JRadioButton" name="TAmylumN">
                                   <Properties>
                                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -8192,7 +8192,7 @@
                                     <Property name="text" type="java.lang.String" value="Neg"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JRadioButton" name="jRadioButton20">
+                                <Component class="javax.swing.JRadioButton" name="TLemakN">
                                   <Properties>
                                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -8206,7 +8206,7 @@
                                     <Property name="text" type="java.lang.String" value="Neg"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JRadioButton" name="jRadioButton21">
+                                <Component class="javax.swing.JRadioButton" name="TSeratN">
                                   <Properties>
                                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -8220,7 +8220,7 @@
                                     <Property name="text" type="java.lang.String" value="Neg"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JRadioButton" name="jRadioButton22">
+                                <Component class="javax.swing.JRadioButton" name="TSeratototN">
                                   <Properties>
                                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -8234,7 +8234,7 @@
                                     <Property name="text" type="java.lang.String" value="Neg"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JRadioButton" name="jRadioButton23">
+                                <Component class="javax.swing.JRadioButton" name="TDarahsamarN">
                                   <Properties>
                                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -8248,7 +8248,7 @@
                                     <Property name="text" type="java.lang.String" value="Neg"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JRadioButton" name="TAmylum">
+                                <Component class="javax.swing.JRadioButton" name="TAmylumP">
                                   <Properties>
                                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -8262,7 +8262,7 @@
                                     <Property name="text" type="java.lang.String" value="Pos"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JRadioButton" name="TLemak">
+                                <Component class="javax.swing.JRadioButton" name="TLemakP">
                                   <Properties>
                                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -8276,7 +8276,7 @@
                                     <Property name="text" type="java.lang.String" value="Pos"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JRadioButton" name="TSerat">
+                                <Component class="javax.swing.JRadioButton" name="TSeratP">
                                   <Properties>
                                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -8290,7 +8290,7 @@
                                     <Property name="text" type="java.lang.String" value="Pos"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JRadioButton" name="TSeratotot">
+                                <Component class="javax.swing.JRadioButton" name="TSeratototP">
                                   <Properties>
                                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -8304,7 +8304,7 @@
                                     <Property name="text" type="java.lang.String" value="Pos"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JRadioButton" name="TDarahsamar">
+                                <Component class="javax.swing.JRadioButton" name="TDarahsamarP">
                                   <Properties>
                                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="ff" green="ff" red="ff" type="rgb"/>

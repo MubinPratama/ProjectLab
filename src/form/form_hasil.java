@@ -536,12 +536,12 @@ public class form_hasil extends javax.swing.JPanel {
         jLabel300 = new javax.swing.JLabel();
         TWarna = new javax.swing.JTextField();
         TKonsistensi = new javax.swing.JComboBox<>();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jRadioButton3 = new javax.swing.JRadioButton();
-        TLendir = new javax.swing.JRadioButton();
-        TDarah = new javax.swing.JRadioButton();
-        TNanah = new javax.swing.JRadioButton();
+        TLendirN = new javax.swing.JRadioButton();
+        TDarahN = new javax.swing.JRadioButton();
+        TNanahN = new javax.swing.JRadioButton();
+        TLendirP = new javax.swing.JRadioButton();
+        TDarahP = new javax.swing.JRadioButton();
+        TNanahP = new javax.swing.JRadioButton();
         jLabel301 = new javax.swing.JLabel();
         jLabel302 = new javax.swing.JLabel();
         jLabel303 = new javax.swing.JLabel();
@@ -553,18 +553,18 @@ public class form_hasil extends javax.swing.JPanel {
         jLabel309 = new javax.swing.JLabel();
         TLekosit = new javax.swing.JTextField();
         TEritrosit = new javax.swing.JTextField();
-        jRadioButton7 = new javax.swing.JRadioButton();
-        jRadioButton8 = new javax.swing.JRadioButton();
-        jRadioButton9 = new javax.swing.JRadioButton();
-        jRadioButton10 = new javax.swing.JRadioButton();
-        jRadioButton11 = new javax.swing.JRadioButton();
-        jRadioButton12 = new javax.swing.JRadioButton();
-        TEcoli = new javax.swing.JRadioButton();
-        TEhistolytica = new javax.swing.JRadioButton();
-        TTelurcacing = new javax.swing.JRadioButton();
-        TAnkylotoma = new javax.swing.JRadioButton();
-        TTrichiuris = new javax.swing.JRadioButton();
-        TLL = new javax.swing.JRadioButton();
+        TEcoliN = new javax.swing.JRadioButton();
+        TEhistolyticaN = new javax.swing.JRadioButton();
+        TTelurcacingN = new javax.swing.JRadioButton();
+        TAnkylotomaN = new javax.swing.JRadioButton();
+        TTrichiurisN = new javax.swing.JRadioButton();
+        TLLN = new javax.swing.JRadioButton();
+        TEcoliP = new javax.swing.JRadioButton();
+        TEhistolyticaP = new javax.swing.JRadioButton();
+        TTelurcacingP = new javax.swing.JRadioButton();
+        TAnkylotomaP = new javax.swing.JRadioButton();
+        TTrichiurisP = new javax.swing.JRadioButton();
+        TLLP = new javax.swing.JRadioButton();
         jLabel310 = new javax.swing.JLabel();
         jLabel311 = new javax.swing.JLabel();
         jLabel312 = new javax.swing.JLabel();
@@ -573,16 +573,16 @@ public class form_hasil extends javax.swing.JPanel {
         jLabel315 = new javax.swing.JLabel();
         jLabel316 = new javax.swing.JLabel();
         jLabel317 = new javax.swing.JLabel();
-        jRadioButton19 = new javax.swing.JRadioButton();
-        jRadioButton20 = new javax.swing.JRadioButton();
-        jRadioButton21 = new javax.swing.JRadioButton();
-        jRadioButton22 = new javax.swing.JRadioButton();
-        jRadioButton23 = new javax.swing.JRadioButton();
-        TAmylum = new javax.swing.JRadioButton();
-        TLemak = new javax.swing.JRadioButton();
-        TSerat = new javax.swing.JRadioButton();
-        TSeratotot = new javax.swing.JRadioButton();
-        TDarahsamar = new javax.swing.JRadioButton();
+        TAmylumN = new javax.swing.JRadioButton();
+        TLemakN = new javax.swing.JRadioButton();
+        TSeratN = new javax.swing.JRadioButton();
+        TSeratototN = new javax.swing.JRadioButton();
+        TDarahsamarN = new javax.swing.JRadioButton();
+        TAmylumP = new javax.swing.JRadioButton();
+        TLemakP = new javax.swing.JRadioButton();
+        TSeratP = new javax.swing.JRadioButton();
+        TSeratototP = new javax.swing.JRadioButton();
+        TDarahsamarP = new javax.swing.JRadioButton();
         jLabel318 = new javax.swing.JLabel();
         sv_tinja = new javax.swing.JButton();
         cn_tinja = new javax.swing.JButton();
@@ -3676,35 +3676,35 @@ public class form_hasil extends javax.swing.JPanel {
         TKonsistensi.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         TKonsistensi.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "Encer", "Lembek", "Padat" }));
 
-        jRadioButton1.setBackground(new java.awt.Color(255, 255, 255));
-        groupLendir.add(jRadioButton1);
-        jRadioButton1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jRadioButton1.setText("Neg");
+        TLendirN.setBackground(new java.awt.Color(255, 255, 255));
+        groupLendir.add(TLendirN);
+        TLendirN.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        TLendirN.setText("Neg");
 
-        jRadioButton2.setBackground(new java.awt.Color(255, 255, 255));
-        groupDarah.add(jRadioButton2);
-        jRadioButton2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jRadioButton2.setText("Neg");
+        TDarahN.setBackground(new java.awt.Color(255, 255, 255));
+        groupDarah.add(TDarahN);
+        TDarahN.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        TDarahN.setText("Neg");
 
-        jRadioButton3.setBackground(new java.awt.Color(255, 255, 255));
-        groupNanah.add(jRadioButton3);
-        jRadioButton3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jRadioButton3.setText("Neg");
+        TNanahN.setBackground(new java.awt.Color(255, 255, 255));
+        groupNanah.add(TNanahN);
+        TNanahN.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        TNanahN.setText("Neg");
 
-        TLendir.setBackground(new java.awt.Color(255, 255, 255));
-        groupLendir.add(TLendir);
-        TLendir.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        TLendir.setText("Pos");
+        TLendirP.setBackground(new java.awt.Color(255, 255, 255));
+        groupLendir.add(TLendirP);
+        TLendirP.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        TLendirP.setText("Pos");
 
-        TDarah.setBackground(new java.awt.Color(255, 255, 255));
-        groupDarah.add(TDarah);
-        TDarah.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        TDarah.setText("Pos");
+        TDarahP.setBackground(new java.awt.Color(255, 255, 255));
+        groupDarah.add(TDarahP);
+        TDarahP.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        TDarahP.setText("Pos");
 
-        TNanah.setBackground(new java.awt.Color(255, 255, 255));
-        groupNanah.add(TNanah);
-        TNanah.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        TNanah.setText("Pos");
+        TNanahP.setBackground(new java.awt.Color(255, 255, 255));
+        groupNanah.add(TNanahP);
+        TNanahP.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        TNanahP.setText("Pos");
 
         jLabel301.setBackground(new java.awt.Color(255, 255, 255));
         jLabel301.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -3763,65 +3763,65 @@ public class form_hasil extends javax.swing.JPanel {
 
         TEritrosit.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
-        jRadioButton7.setBackground(new java.awt.Color(255, 255, 255));
-        groupEcoli.add(jRadioButton7);
-        jRadioButton7.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jRadioButton7.setText("Neg");
+        TEcoliN.setBackground(new java.awt.Color(255, 255, 255));
+        groupEcoli.add(TEcoliN);
+        TEcoliN.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        TEcoliN.setText("Neg");
 
-        jRadioButton8.setBackground(new java.awt.Color(255, 255, 255));
-        groupEhistolytica.add(jRadioButton8);
-        jRadioButton8.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jRadioButton8.setText("Neg");
+        TEhistolyticaN.setBackground(new java.awt.Color(255, 255, 255));
+        groupEhistolytica.add(TEhistolyticaN);
+        TEhistolyticaN.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        TEhistolyticaN.setText("Neg");
 
-        jRadioButton9.setBackground(new java.awt.Color(255, 255, 255));
-        groupTelor.add(jRadioButton9);
-        jRadioButton9.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jRadioButton9.setText("Neg");
+        TTelurcacingN.setBackground(new java.awt.Color(255, 255, 255));
+        groupTelor.add(TTelurcacingN);
+        TTelurcacingN.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        TTelurcacingN.setText("Neg");
 
-        jRadioButton10.setBackground(new java.awt.Color(255, 255, 255));
-        groupAnky.add(jRadioButton10);
-        jRadioButton10.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jRadioButton10.setText("Neg");
+        TAnkylotomaN.setBackground(new java.awt.Color(255, 255, 255));
+        groupAnky.add(TAnkylotomaN);
+        TAnkylotomaN.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        TAnkylotomaN.setText("Neg");
 
-        jRadioButton11.setBackground(new java.awt.Color(255, 255, 255));
-        groupTrichiuris.add(jRadioButton11);
-        jRadioButton11.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jRadioButton11.setText("Neg");
+        TTrichiurisN.setBackground(new java.awt.Color(255, 255, 255));
+        groupTrichiuris.add(TTrichiurisN);
+        TTrichiurisN.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        TTrichiurisN.setText("Neg");
 
-        jRadioButton12.setBackground(new java.awt.Color(255, 255, 255));
-        groupLain.add(jRadioButton12);
-        jRadioButton12.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jRadioButton12.setText("Neg");
+        TLLN.setBackground(new java.awt.Color(255, 255, 255));
+        groupLain.add(TLLN);
+        TLLN.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        TLLN.setText("Neg");
 
-        TEcoli.setBackground(new java.awt.Color(255, 255, 255));
-        groupEcoli.add(TEcoli);
-        TEcoli.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        TEcoli.setText("Pos");
+        TEcoliP.setBackground(new java.awt.Color(255, 255, 255));
+        groupEcoli.add(TEcoliP);
+        TEcoliP.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        TEcoliP.setText("Pos");
 
-        TEhistolytica.setBackground(new java.awt.Color(255, 255, 255));
-        groupEhistolytica.add(TEhistolytica);
-        TEhistolytica.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        TEhistolytica.setText("Pos");
+        TEhistolyticaP.setBackground(new java.awt.Color(255, 255, 255));
+        groupEhistolytica.add(TEhistolyticaP);
+        TEhistolyticaP.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        TEhistolyticaP.setText("Pos");
 
-        TTelurcacing.setBackground(new java.awt.Color(255, 255, 255));
-        groupTelor.add(TTelurcacing);
-        TTelurcacing.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        TTelurcacing.setText("Pos");
+        TTelurcacingP.setBackground(new java.awt.Color(255, 255, 255));
+        groupTelor.add(TTelurcacingP);
+        TTelurcacingP.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        TTelurcacingP.setText("Pos");
 
-        TAnkylotoma.setBackground(new java.awt.Color(255, 255, 255));
-        groupAnky.add(TAnkylotoma);
-        TAnkylotoma.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        TAnkylotoma.setText("Pos");
+        TAnkylotomaP.setBackground(new java.awt.Color(255, 255, 255));
+        groupAnky.add(TAnkylotomaP);
+        TAnkylotomaP.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        TAnkylotomaP.setText("Pos");
 
-        TTrichiuris.setBackground(new java.awt.Color(255, 255, 255));
-        groupTrichiuris.add(TTrichiuris);
-        TTrichiuris.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        TTrichiuris.setText("Pos");
+        TTrichiurisP.setBackground(new java.awt.Color(255, 255, 255));
+        groupTrichiuris.add(TTrichiurisP);
+        TTrichiurisP.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        TTrichiurisP.setText("Pos");
 
-        TLL.setBackground(new java.awt.Color(255, 255, 255));
-        groupLain.add(TLL);
-        TLL.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        TLL.setText("Pos");
+        TLLP.setBackground(new java.awt.Color(255, 255, 255));
+        groupLain.add(TLLP);
+        TLLP.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        TLLP.setText("Pos");
 
         jLabel310.setBackground(new java.awt.Color(255, 255, 255));
         jLabel310.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -3868,55 +3868,55 @@ public class form_hasil extends javax.swing.JPanel {
         jLabel317.setText("Darah Samar");
         jLabel317.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jRadioButton19.setBackground(new java.awt.Color(255, 255, 255));
-        groupAmylum.add(jRadioButton19);
-        jRadioButton19.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jRadioButton19.setText("Neg");
+        TAmylumN.setBackground(new java.awt.Color(255, 255, 255));
+        groupAmylum.add(TAmylumN);
+        TAmylumN.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        TAmylumN.setText("Neg");
 
-        jRadioButton20.setBackground(new java.awt.Color(255, 255, 255));
-        groupLemak.add(jRadioButton20);
-        jRadioButton20.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jRadioButton20.setText("Neg");
+        TLemakN.setBackground(new java.awt.Color(255, 255, 255));
+        groupLemak.add(TLemakN);
+        TLemakN.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        TLemakN.setText("Neg");
 
-        jRadioButton21.setBackground(new java.awt.Color(255, 255, 255));
-        groupSerat.add(jRadioButton21);
-        jRadioButton21.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jRadioButton21.setText("Neg");
+        TSeratN.setBackground(new java.awt.Color(255, 255, 255));
+        groupSerat.add(TSeratN);
+        TSeratN.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        TSeratN.setText("Neg");
 
-        jRadioButton22.setBackground(new java.awt.Color(255, 255, 255));
-        groupSeratotot.add(jRadioButton22);
-        jRadioButton22.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jRadioButton22.setText("Neg");
+        TSeratototN.setBackground(new java.awt.Color(255, 255, 255));
+        groupSeratotot.add(TSeratototN);
+        TSeratototN.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        TSeratototN.setText("Neg");
 
-        jRadioButton23.setBackground(new java.awt.Color(255, 255, 255));
-        groupDasar.add(jRadioButton23);
-        jRadioButton23.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jRadioButton23.setText("Neg");
+        TDarahsamarN.setBackground(new java.awt.Color(255, 255, 255));
+        groupDasar.add(TDarahsamarN);
+        TDarahsamarN.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        TDarahsamarN.setText("Neg");
 
-        TAmylum.setBackground(new java.awt.Color(255, 255, 255));
-        groupAmylum.add(TAmylum);
-        TAmylum.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        TAmylum.setText("Pos");
+        TAmylumP.setBackground(new java.awt.Color(255, 255, 255));
+        groupAmylum.add(TAmylumP);
+        TAmylumP.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        TAmylumP.setText("Pos");
 
-        TLemak.setBackground(new java.awt.Color(255, 255, 255));
-        groupLemak.add(TLemak);
-        TLemak.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        TLemak.setText("Pos");
+        TLemakP.setBackground(new java.awt.Color(255, 255, 255));
+        groupLemak.add(TLemakP);
+        TLemakP.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        TLemakP.setText("Pos");
 
-        TSerat.setBackground(new java.awt.Color(255, 255, 255));
-        groupSerat.add(TSerat);
-        TSerat.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        TSerat.setText("Pos");
+        TSeratP.setBackground(new java.awt.Color(255, 255, 255));
+        groupSerat.add(TSeratP);
+        TSeratP.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        TSeratP.setText("Pos");
 
-        TSeratotot.setBackground(new java.awt.Color(255, 255, 255));
-        groupSeratotot.add(TSeratotot);
-        TSeratotot.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        TSeratotot.setText("Pos");
+        TSeratototP.setBackground(new java.awt.Color(255, 255, 255));
+        groupSeratotot.add(TSeratototP);
+        TSeratototP.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        TSeratototP.setText("Pos");
 
-        TDarahsamar.setBackground(new java.awt.Color(255, 255, 255));
-        groupDasar.add(TDarahsamar);
-        TDarahsamar.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        TDarahsamar.setText("Pos");
+        TDarahsamarP.setBackground(new java.awt.Color(255, 255, 255));
+        groupDasar.add(TDarahsamarP);
+        TDarahsamarP.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        TDarahsamarP.setText("Pos");
 
         jLabel318.setBackground(new java.awt.Color(255, 255, 255));
         jLabel318.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
@@ -3960,14 +3960,14 @@ public class form_hasil extends javax.swing.JPanel {
                                 .addGroup(jPanel8Layout.createSequentialGroup()
                                     .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(jRadioButton2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(jRadioButton1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addComponent(jRadioButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(TDarahN, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(TLendirN, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(TNanahN, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                     .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(TLendir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(TDarah, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(TNanah, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addComponent(TLendirP, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(TDarahP, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(TNanahP, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(TWarna)
                                     .addComponent(jLabel300, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -3992,30 +3992,30 @@ public class form_hasil extends javax.swing.JPanel {
                                     .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                         .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
-                                                .addComponent(jRadioButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(TEhistolyticaN, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(TEhistolytica, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                                .addComponent(TEhistolyticaP, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
-                                                .addComponent(jRadioButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(TEcoliN, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(TEcoli, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                                .addComponent(TEcoliP, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                             .addComponent(TEritrosit)
                                             .addComponent(TLekosit)
                                             .addGroup(jPanel8Layout.createSequentialGroup()
                                                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                    .addComponent(jRadioButton12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                    .addComponent(jRadioButton11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                    .addComponent(jRadioButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                    .addComponent(TLLN, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                    .addComponent(TTrichiurisN, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                    .addComponent(TAnkylotomaN, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE))
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                    .addComponent(TTrichiuris, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                    .addComponent(TAnkylotoma, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                    .addComponent(TLL, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                    .addComponent(TTrichiurisP, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                    .addComponent(TAnkylotomaP, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                    .addComponent(TLLP, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
                                                 .addGap(3, 3, 3)))
                                         .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel8Layout.createSequentialGroup()
-                                            .addComponent(jRadioButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(TTelurcacingN, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(TTelurcacing, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                            .addComponent(TTelurcacingP, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                             .addGap(33, 33, 33)
                             .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(jLabel313, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -4028,18 +4028,18 @@ public class form_hasil extends javax.swing.JPanel {
                             .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addGroup(jPanel8Layout.createSequentialGroup()
                                     .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jRadioButton19, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jRadioButton20, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jRadioButton21, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jRadioButton22, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jRadioButton23, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(TAmylumN, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(TLemakN, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(TSeratN, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(TSeratototN, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(TDarahsamarN, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                     .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(TLemak, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(TSerat, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(TSeratotot, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(TDarahsamar, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(TAmylum, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addComponent(TLemakP, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(TSeratP, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(TSeratototP, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(TDarahsamarP, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(TAmylumP, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addComponent(jLabel312, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(jPanel8Layout.createSequentialGroup()
                         .addComponent(sv_tinja, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -4058,26 +4058,26 @@ public class form_hasil extends javax.swing.JPanel {
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel8Layout.createSequentialGroup()
                         .addGap(148, 148, 148)
-                        .addComponent(jRadioButton22, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(TSeratototN, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel8Layout.createSequentialGroup()
                         .addGap(148, 148, 148)
                         .addComponent(jLabel316, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel8Layout.createSequentialGroup()
                         .addGap(111, 111, 111)
-                        .addComponent(jRadioButton21, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(TSeratN, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel8Layout.createSequentialGroup()
                         .addGap(111, 111, 111)
                         .addComponent(jLabel315, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel8Layout.createSequentialGroup()
                         .addGap(74, 74, 74)
-                        .addComponent(jRadioButton20, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(TLemakN, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel8Layout.createSequentialGroup()
                         .addGap(74, 74, 74)
                         .addComponent(jLabel314, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel8Layout.createSequentialGroup()
                         .addGap(185, 185, 185)
                         .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jRadioButton23, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(TDarahsamarN, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel317, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel8Layout.createSequentialGroup()
                         .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -4087,20 +4087,20 @@ public class form_hasil extends javax.swing.JPanel {
                         .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel8Layout.createSequentialGroup()
                                 .addGap(148, 148, 148)
-                                .addComponent(TDarahsamar, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(TDarahsamarP, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel8Layout.createSequentialGroup()
                                 .addGap(111, 111, 111)
-                                .addComponent(TSeratotot, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(TSeratototP, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel8Layout.createSequentialGroup()
                                 .addGap(74, 74, 74)
-                                .addComponent(TSerat, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(TSeratP, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel8Layout.createSequentialGroup()
                                 .addGap(37, 37, 37)
-                                .addComponent(TLemak, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(TAmylum, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(TLemakP, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(TAmylumP, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(jLabel313, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jRadioButton19, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(TAmylumN, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(jPanel8Layout.createSequentialGroup()
                         .addComponent(jLabel300, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -4109,20 +4109,20 @@ public class form_hasil extends javax.swing.JPanel {
                         .addComponent(TKonsistensi, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                            .addComponent(jRadioButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(TLendir, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(TLendirN, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(TLendirP, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel297, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                            .addComponent(jRadioButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(TDarah, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(TDarahN, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(TDarahP, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel298, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jRadioButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(TNanahN, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(jLabel299, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(TNanah, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(TNanahP, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel8Layout.createSequentialGroup()
                         .addComponent(jLabel294, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -4138,18 +4138,18 @@ public class form_hasil extends javax.swing.JPanel {
                             .addGroup(jPanel8Layout.createSequentialGroup()
                                 .addGap(184, 184, 184)
                                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                                    .addComponent(jRadioButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(TAnkylotoma, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(TAnkylotomaN, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(TAnkylotomaP, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel307, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                                     .addComponent(jLabel308, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jRadioButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(TTrichiuris, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(TTrichiurisN, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(TTrichiurisP, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                                    .addComponent(TLL, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jRadioButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(TLLP, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(TLLN, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel309, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(jPanel8Layout.createSequentialGroup()
                                 .addGap(148, 148, 148)
@@ -4167,24 +4167,24 @@ public class form_hasil extends javax.swing.JPanel {
                             .addGroup(jPanel8Layout.createSequentialGroup()
                                 .addGap(148, 148, 148)
                                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(TTelurcacing, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jRadioButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(TTelurcacingP, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(TTelurcacingN, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addComponent(TLekosit, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel8Layout.createSequentialGroup()
                                 .addGap(37, 37, 37)
                                 .addComponent(TEritrosit, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel8Layout.createSequentialGroup()
                                 .addGap(74, 74, 74)
-                                .addComponent(jRadioButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(TEcoliN, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel8Layout.createSequentialGroup()
                                 .addGap(74, 74, 74)
-                                .addComponent(TEcoli, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(TEcoliP, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel8Layout.createSequentialGroup()
                                 .addGap(111, 111, 111)
-                                .addComponent(jRadioButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(TEhistolyticaN, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel8Layout.createSequentialGroup()
                                 .addGap(111, 111, 111)
-                                .addComponent(TEhistolytica, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addComponent(TEhistolyticaP, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(cn_tinja, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -5259,6 +5259,7 @@ try (PreparedStatement ps = kon.prepareStatement(sql)) {
 
         ps.executeUpdate();
         JOptionPane.showMessageDialog(null, "Data berhasil disimpan ke database!");
+        tampilkanHasilHematologiKeTabel();
         resetFormHematologi();
         
           ps.close();
@@ -5311,6 +5312,7 @@ try (PreparedStatement ps = kon.prepareStatement(sql)) {
 
         ps.executeUpdate();
         JOptionPane.showMessageDialog(null, "Data serologi berhasil disimpan ke database!");
+        tampilkanHasilSerologiKeTabel();
         resetFormSerologi();
         
           ps.close();
@@ -5366,6 +5368,7 @@ try (PreparedStatement ps = kon.prepareStatement(sql)) {
 
         ps.executeUpdate();
         JOptionPane.showMessageDialog(null, "Data Kimia I berhasil disimpan.");
+        tampilkanHasilKimia1KeTabel();
         resetFormKimia1();
         
         ps.close();
@@ -5427,6 +5430,7 @@ try (PreparedStatement ps = kon.prepareStatement(sql)) {
 
         ps.executeUpdate();
         JOptionPane.showMessageDialog(null, "Data pemeriksaan Kimia II berhasil disimpan!");
+        tampilkanHasilKimia2KeTabel();
         resetFormKimia2();
                 
         ps.close();
@@ -5448,25 +5452,26 @@ try (PreparedStatement ps = kon.prepareStatement(sql)) {
     ps.setInt(1, Integer.parseInt(id_daftar.getSelectedItem().toString())); 
     ps.setString(2, TWarna.getText());
     ps.setString(3, TKonsistensi.getSelectedItem().toString());
-    ps.setString(4, TLendir.isSelected() ? "Positive" : "Negative"); 
-    ps.setString(5, TDarah.isSelected() ? "Positive" : "Negative"); 
-    ps.setString(6, TNanah.isSelected() ? "Positive" : "Negative"); 
+    ps.setString(4, TLendirP.isSelected() ? "Positive" : "Negative"); 
+    ps.setString(5, TDarahP.isSelected() ? "Positive" : "Negative"); 
+    ps.setString(6, TNanahP.isSelected() ? "Positive" : "Negative"); 
     ps.setString(7, TLekosit.getText());
     ps.setString(8, TEritrosit.getText());
-    ps.setString(9, TEcoli.isSelected() ? "Positive" : "Negative"); 
-    ps.setString(10, TEhistolytica.isSelected() ? "Positive" : "Negative"); 
-    ps.setString(11, TTelurcacing.isSelected() ? "Positive" : "Negative"); 
-    ps.setString(12, TAnkylotoma.isSelected() ? "Positive" : "Negative"); 
-    ps.setString(13, TTrichiuris.isSelected() ? "Positive" : "Negative"); 
-    ps.setString(14, TLL.isSelected() ? "Positive" : "Negative"); 
-    ps.setString(15, TAmylum.isSelected() ? "Positive" : "Negative"); 
-    ps.setString(16, TLemak.isSelected() ? "Positive" : "Negative"); 
-    ps.setString(17, TSerat.isSelected() ? "Positive" : "Negative"); 
-    ps.setString(18, TSeratotot.isSelected() ? "Positive" : "Negative"); 
-    ps.setString(19, TDarahsamar.isSelected() ? "Positive" : "Negative"); 
+    ps.setString(9, TEcoliP.isSelected() ? "Positive" : "Negative"); 
+    ps.setString(10, TEhistolyticaP.isSelected() ? "Positive" : "Negative"); 
+    ps.setString(11, TTelurcacingP.isSelected() ? "Positive" : "Negative"); 
+    ps.setString(12, TAnkylotomaP.isSelected() ? "Positive" : "Negative"); 
+    ps.setString(13, TTrichiurisP.isSelected() ? "Positive" : "Negative"); 
+    ps.setString(14, TLLP.isSelected() ? "Positive" : "Negative"); 
+    ps.setString(15, TAmylumP.isSelected() ? "Positive" : "Negative"); 
+    ps.setString(16, TLemakP.isSelected() ? "Positive" : "Negative"); 
+    ps.setString(17, TSeratP.isSelected() ? "Positive" : "Negative"); 
+    ps.setString(18, TSeratototP.isSelected() ? "Positive" : "Negative"); 
+    ps.setString(19, TDarahsamarP.isSelected() ? "Positive" : "Negative"); 
 
     ps.executeUpdate();
     JOptionPane.showMessageDialog(null, "Data berhasil disimpan!");
+    tampilkanHasilTinjaKeTabel();
     resetFormTinja();
     
       ps.close();
@@ -5494,24 +5499,38 @@ try (PreparedStatement ps = kon.prepareStatement(sql)) {
     private javax.swing.JPanel KIMIA1;
     private javax.swing.JPanel KIMIA2;
     private javax.swing.JPanel SEROLOGI;
-    private javax.swing.JRadioButton TAmylum;
-    private javax.swing.JRadioButton TAnkylotoma;
-    private javax.swing.JRadioButton TDarah;
-    private javax.swing.JRadioButton TDarahsamar;
-    private javax.swing.JRadioButton TEcoli;
-    private javax.swing.JRadioButton TEhistolytica;
+    private javax.swing.JRadioButton TAmylumN;
+    private javax.swing.JRadioButton TAmylumP;
+    private javax.swing.JRadioButton TAnkylotomaN;
+    private javax.swing.JRadioButton TAnkylotomaP;
+    private javax.swing.JRadioButton TDarahN;
+    private javax.swing.JRadioButton TDarahP;
+    private javax.swing.JRadioButton TDarahsamarN;
+    private javax.swing.JRadioButton TDarahsamarP;
+    private javax.swing.JRadioButton TEcoliN;
+    private javax.swing.JRadioButton TEcoliP;
+    private javax.swing.JRadioButton TEhistolyticaN;
+    private javax.swing.JRadioButton TEhistolyticaP;
     private javax.swing.JTextField TEritrosit;
     private javax.swing.JPanel TINJA;
     private javax.swing.JComboBox<String> TKonsistensi;
-    private javax.swing.JRadioButton TLL;
+    private javax.swing.JRadioButton TLLN;
+    private javax.swing.JRadioButton TLLP;
     private javax.swing.JTextField TLekosit;
-    private javax.swing.JRadioButton TLemak;
-    private javax.swing.JRadioButton TLendir;
-    private javax.swing.JRadioButton TNanah;
-    private javax.swing.JRadioButton TSerat;
-    private javax.swing.JRadioButton TSeratotot;
-    private javax.swing.JRadioButton TTelurcacing;
-    private javax.swing.JRadioButton TTrichiuris;
+    private javax.swing.JRadioButton TLemakN;
+    private javax.swing.JRadioButton TLemakP;
+    private javax.swing.JRadioButton TLendirN;
+    private javax.swing.JRadioButton TLendirP;
+    private javax.swing.JRadioButton TNanahN;
+    private javax.swing.JRadioButton TNanahP;
+    private javax.swing.JRadioButton TSeratN;
+    private javax.swing.JRadioButton TSeratP;
+    private javax.swing.JRadioButton TSeratototN;
+    private javax.swing.JRadioButton TSeratototP;
+    private javax.swing.JRadioButton TTelurcacingN;
+    private javax.swing.JRadioButton TTelurcacingP;
+    private javax.swing.JRadioButton TTrichiurisN;
+    private javax.swing.JRadioButton TTrichiurisP;
     private javax.swing.JTextField TWarna;
     private javax.swing.JTabbedPane TabHasil;
     private javax.swing.JPanel URINE;
@@ -5859,20 +5878,6 @@ try (PreparedStatement ps = kon.prepareStatement(sql)) {
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton10;
-    private javax.swing.JRadioButton jRadioButton11;
-    private javax.swing.JRadioButton jRadioButton12;
-    private javax.swing.JRadioButton jRadioButton19;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton20;
-    private javax.swing.JRadioButton jRadioButton21;
-    private javax.swing.JRadioButton jRadioButton22;
-    private javax.swing.JRadioButton jRadioButton23;
-    private javax.swing.JRadioButton jRadioButton3;
-    private javax.swing.JRadioButton jRadioButton7;
-    private javax.swing.JRadioButton jRadioButton8;
-    private javax.swing.JRadioButton jRadioButton9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
@@ -6308,6 +6313,165 @@ public void tampilkanHasilHematologiKeTabel() {
     tambahBarisJikaAda(model,"ReaksiLE", txtReaksiLE.getText());
     tambahBarisJikaAda(model,"Malaria", txtMalaria.getText());
     tambahBarisJikaAda(model,"GolDarah", txtGolDarah.getText());
+}
+
+public void tampilkanHasilSerologiKeTabel() {
+    DefaultTableModel model = (DefaultTableModel) tb_rincian.getModel();//Ambil Tabel Model
+
+    tambahBarisJikaAda(model,"Anti - HBs", cmbAntiHBs.getSelectedItem().toString());
+    tambahBarisJikaAda(model,"Hbe Ag", cmbHbeAg.getSelectedItem().toString());
+    tambahBarisJikaAda(model,"Anti - HBe", cmbAntiHBe.getSelectedItem().toString());
+    tambahBarisJikaAda(model,"Anti - HBc", cmbAntiHBc.getSelectedItem().toString());
+    tambahBarisJikaAda(model,"Anti - HA", cmbAntiHA.getSelectedItem().toString());
+    tambahBarisJikaAda(model,"Typhus H", cmbTyphusH.getSelectedItem().toString());
+    tambahBarisJikaAda(model,"Paratyphus A H", cmbParatyphusAH.getSelectedItem().toString());
+    tambahBarisJikaAda(model,"Paratyphus B H", cmbParatyphusBH.getSelectedItem().toString());
+    tambahBarisJikaAda(model,"Paratyphus C H", cmbParatyphusCH.getSelectedItem().toString());
+    tambahBarisJikaAda(model,"Typhus O", cmbTyphusO.getSelectedItem().toString());
+    tambahBarisJikaAda(model,"Paratyphus A O", cmbParatyphusAO.getSelectedItem().toString());
+    tambahBarisJikaAda(model,"Paratyphus B O", cmbParatyphusBO.getSelectedItem().toString());
+    tambahBarisJikaAda(model,"Paratyphus C O", cmbParatyphusCO.getSelectedItem().toString());
+
+    tambahBarisJikaAda(model,"AFP (alfa-fetoprotein)", txtAFP.getText());
+    tambahBarisJikaAda(model,"EA (carcing-embryonic Ag)", txtEA.getText());
+    tambahBarisJikaAda(model,"Imunoglobulin : IgG", txtIgG.getText());
+    tambahBarisJikaAda(model,"IgA", txtIgA.getText());
+    tambahBarisJikaAda(model,"IgM", txtIgM.getText());
+    tambahBarisJikaAda(model,"IgE", txtIgE.getText());
+    tambahBarisJikaAda(model,"ASTO", txtASTO.getText());
+    tambahBarisJikaAda(model,"T4", txtT4.getText());
+    tambahBarisJikaAda(model,"T3 Uptake", txtT3Uptake.getText());
+    tambahBarisJikaAda(model,"FTI", txtFTI.getText());
+    tambahBarisJikaAda(model,"T3", txtT3.getText());
+    tambahBarisJikaAda(model,"TSH", txtTSH.getText());
+
+    String hasilTPHA = rbtnTPHAPos.isSelected() ? "Positif" : rbtnTPHANeg.isSelected() ? "Negatif" : "";
+    String hasilVDRLN = rbtnVDRLPos.isSelected() ? "Positif" : rbtnVDRLNeg.isSelected() ? "Negatif" : "";
+    String hasilWR = rbtnWRPos.isSelected() ? "Positif" : rbtnWRNeg.isSelected() ? "Negatif" : "";
+    String hasilHBsAg = rbtnHBsAgPos.isSelected() ? "Positif" : rbtnHBsAgNeg.isSelected() ? "Negatif" : "";
+    String hasilCRP = rbtnCRPPos.isSelected() ? "Positif" : rbtnCRPNeg.isSelected() ? "Negatif" : "";
+    String hasiRAf = rbtnRAfNeg.isSelected() ? "Positif" : rbtnRAfNeg.isSelected() ? "Negatif" : "";
+    
+    tambahBarisJikaAda(model,"TPHA", hasilTPHA);
+    tambahBarisJikaAda(model,"VDRL", hasilVDRLN);
+    tambahBarisJikaAda(model,"WR", hasilWR);
+    tambahBarisJikaAda(model,"HBsAg", hasilHBsAg);
+    tambahBarisJikaAda(model,"CRP", hasilCRP);
+    tambahBarisJikaAda(model,"RAF", hasiRAf);
+     
+}
+
+public void tampilkanHasilKimia1KeTabel() {
+    DefaultTableModel model = (DefaultTableModel) tb_rincian.getModel();//Ambil Tabel Model
+    
+    tambahBarisJikaAda(model,"Bilirubin Total", txtBilirubinTotal.getText());
+    tambahBarisJikaAda(model,"Bilirubin Direk", txtBilirubinDirek.getText());
+    tambahBarisJikaAda(model,"Bilirubin Indirek", txtBilirubinIndirek.getText());
+    tambahBarisJikaAda(model,"Indeks Ikterus", txtIndeksIkterus.getText());
+    tambahBarisJikaAda(model,"Fosfatase Alkali", txtFosfataseAlkali.getText());
+    tambahBarisJikaAda(model,"FosfatAsam Total", txtFosfatAsamTotal.getText());
+    tambahBarisJikaAda(model,"Protein Total", txtProteinTotal.getText());
+    tambahBarisJikaAda(model,"Albumin", txtAlbumin.getText());
+    tambahBarisJikaAda(model,"Globulin", txtGlobulin.getText());
+    tambahBarisJikaAda(model,"Elektro Albumin", txtElektroAlbumin.getText());
+    tambahBarisJikaAda(model,"Alfa 1 Globulin", txtAlfa1Globulin.getText());
+    tambahBarisJikaAda(model,"Alfa 2 Globulin", txtAlfa2Globulin.getText());
+    tambahBarisJikaAda(model,"Beta Globulin", txtBetaGlobulin.getText());
+    tambahBarisJikaAda(model,"Gama Globulin", txtGamaGlobulin.getText());
+    tambahBarisJikaAda(model,"Retensi BSP", txtRetensiBSP.getText());
+    tambahBarisJikaAda(model,"TTT", txtTTT.getText());
+    tambahBarisJikaAda(model,"Kunkel", txtKunkel.getText());
+    tambahBarisJikaAda(model,"Lipida Total", txtLipidaTotal.getText());
+    tambahBarisJikaAda(model,"Kolesterol Total", txtKolesterolTotal.getText());
+    tambahBarisJikaAda(model,"HDL", txtHdl.getText());
+    tambahBarisJikaAda(model,"LDL", txtLdl.getText());
+    tambahBarisJikaAda(model,"Trigli serida", txtTrigliserida.getText());
+    tambahBarisJikaAda(model,"Beta Lipoprotein", txtBetaLipoprotein.getText());
+    tambahBarisJikaAda(model,"Ureum", txtUreum.getText());
+    tambahBarisJikaAda(model,"Kreatinin", txtKreatinin.getText());
+    tambahBarisJikaAda(model,"AsamUrat", txtAsamUrat.getText());
+    tambahBarisJikaAda(model,"Ca", txtCa.getText());
+    tambahBarisJikaAda(model,"P", txtP.getText());
+    tambahBarisJikaAda(model,"Na", txtNa.getText());
+    tambahBarisJikaAda(model,"K", txtK.getText());
+    tambahBarisJikaAda(model,"Cl", txtCl.getText());
+}
+
+public void tampilkanHasilKimia2KeTabel() {
+    DefaultTableModel model = (DefaultTableModel) tb_rincian.getModel();//Ambil Tabel Model
+    
+    tambahBarisJikaAda(model,"Puasa [N 80-110 mg/dl]",txtPuasa.getText());
+    tambahBarisJikaAda(model,"Postprandial [N : 140]",txtPostprandial.getText());
+    tambahBarisJikaAda(model,"Kurva Puasa",txtKurvaPuasa.getText());
+    tambahBarisJikaAda(model,"Puasa Pukul 11",txtPk11.getText());
+    tambahBarisJikaAda(model,"Puasa Pukul 16",txtPk16.getText());
+    tambahBarisJikaAda(model,"Toleransi Puasa",txtToleransi.getText());
+    tambahBarisJikaAda(model,"Toleransi Puasa Setelah 1 Jam | 1/2",txt1Jam.getText());
+    tambahBarisJikaAda(model,"Toleransi Puasa Setelah 2 Jam | 1",txt2Jam.getText());
+    tambahBarisJikaAda(model,"Toleransi Puasa Setelah 3 Jam | 1,5",txt3Jam.getText());
+    tambahBarisJikaAda(model,"Toleransi Puaasa Setelah 2 Jam berulang",txt2Jam1_5.getText());
+    tambahBarisJikaAda(model,"AST [SGOT]",txtAST.getText());
+    tambahBarisJikaAda(model,"ALT [SGPT]",txtALT.getText());
+    tambahBarisJikaAda(model,"LDH",txtLDH.getText());
+    tambahBarisJikaAda(model,"Alfa HBDH",txtAlfaHBDH.getText());
+    tambahBarisJikaAda(model,"Reduksi",cbReduksi.getSelectedItem().toString());
+    tambahBarisJikaAda(model,"Benda Keton",cbBdKeton.getSelectedItem().toString());
+    tambahBarisJikaAda(model,"Glycosylated Hemaglobin [HbA1]:",txtHbA1c.getText());
+    tambahBarisJikaAda(model,"Creatinine Clearance [CCT]",txtCCT.getText());
+    tambahBarisJikaAda(model,"Kreatinin Darah",txtKreatininDarah.getText());
+    tambahBarisJikaAda(model,"Kreatinin Urin",txtKreatininUrin.getText());
+    tambahBarisJikaAda(model,"Volum Urin CCT",txtVolumUrin.getText());
+    tambahBarisJikaAda(model,"Waktu Urin CCT",txtWaktuUrin.getText());
+    tambahBarisJikaAda(model,"Tinggi Badan CCT",txtTinggiBadan.getText());
+    tambahBarisJikaAda(model,"Berat Badan CCT",txtBeratBadan.getText());
+    tambahBarisJikaAda(model,"Urea Clearance",txtUreaClearance.getText());
+    tambahBarisJikaAda(model,"Ureum Darah",txtUreumDarah.getText());
+    tambahBarisJikaAda(model,"Ureum Urin",txtUreumUrin.getText());
+    tambahBarisJikaAda(model,"Volume Urin Cs",txtVolumUrin2.getText());
+    tambahBarisJikaAda(model,"Waktu Urin Cs",txtWaktuUrin2.getText());
+    tambahBarisJikaAda(model,"Tinggi Badan Cs",txtTinggiBadan2.getText());
+    tambahBarisJikaAda(model,"Berat Badan Cs",txtBeratBadan2.getText());
+    tambahBarisJikaAda(model,"CK [CPK]",txtCK.getText());
+    tambahBarisJikaAda(model,"Gama GT",txtGamaGT.getText());
+    tambahBarisJikaAda(model,"CH",txtCHE.getText());
+}
+
+public void tampilkanHasilTinjaKeTabel() {
+    DefaultTableModel model = (DefaultTableModel) tb_rincian.getModel();//Ambil Tabel Model
+    
+    tambahBarisJikaAda(model,"",TWarna.getText());
+    tambahBarisJikaAda(model,"",TLekosit.getText());
+    tambahBarisJikaAda(model,"",TEritrosit.getText());
+    
+    String hasilL = TLendirP.isSelected() ? "Positif" : TLendirN.isSelected() ? "Negatif" : "";
+    String hasilD = TDarahP.isSelected() ? "Positif" : TDarahN.isSelected() ? "Negatif" : "";
+    String hasilN = TNanahP.isSelected() ? "Positif" : TNanahN.isSelected() ? "Negatif" : "";
+    String hasilEc = TEcoliP.isSelected() ? "Positif" : TEcoliN.isSelected() ? "Negatif" : "";
+    String hasilEh = TEhistolyticaP.isSelected() ? "Positif" : TEhistolyticaN.isSelected() ? "Negatif" : "";
+    String hasilT = TTelurcacingP.isSelected() ? "Positif" : TTelurcacingN.isSelected() ? "Negatif" : "";
+    String hasilA = TAnkylotomaP.isSelected() ? "Positif" : TAnkylotomaN.isSelected() ? "Negatif" : "";
+    String hasilLL = TLLP.isSelected() ? "Positif" : TLLN.isSelected() ? "Negatif" : "";
+    String hasilAM = TAmylumP.isSelected() ? "Positif" : TAmylumN.isSelected() ? "Negatif" : "";
+    String hasilTri = TTrichiurisP.isSelected() ? "Positif" : TTrichiurisN.isSelected() ? "Negatif" : "";
+    
+    String hasilLE = TLemakP.isSelected() ? "Positif" : TLemakN.isSelected() ? "Negatif" : "";
+    String hasilSe = TSeratP.isSelected() ? "Positif" : TSeratN.isSelected() ? "Negatif" : "";
+    String hasilSO = TSeratototP.isSelected() ? "Positif" : TSeratototN.isSelected() ? "Negatif" : "";
+    String hasilDS = TDarahsamarP.isSelected() ? "Positif" : TDarahsamarN.isSelected() ? "Negatif" : "";
+    
+    tambahBarisJikaAda(model,"Lendir", hasilL);
+    tambahBarisJikaAda(model,"Darah", hasilD);
+    tambahBarisJikaAda(model,"Nanah", hasilN);
+    tambahBarisJikaAda(model,"E. Coli", hasilEc);
+    tambahBarisJikaAda(model,"E. Histolytica", hasilEh);
+    tambahBarisJikaAda(model,"Telur cacing Ascaris", hasilT);
+    tambahBarisJikaAda(model,"Ankylotoma", hasilA);
+    tambahBarisJikaAda(model,"Trichiuris", hasilTri);
+    tambahBarisJikaAda(model,"Amylum", hasilTri);
+    tambahBarisJikaAda(model,"Lemak", hasilLE);
+    tambahBarisJikaAda(model,"Serat Tumbuh-tumbuhan", hasilSe);
+    tambahBarisJikaAda(model,"Serat Otot", hasilSO);
+    tambahBarisJikaAda(model,"Darah Samar", hasilDS);
 }
 
 }
