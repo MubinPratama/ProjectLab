@@ -237,6 +237,7 @@ public class form_hasil extends javax.swing.JPanel {
         jLabel4 = new javax.swing.JLabel();
         sv_urine = new javax.swing.JButton();
         cn_urine = new javax.swing.JButton();
+        preview = new javax.swing.JButton();
         HEMATOLOGI = new javax.swing.JPanel();
         jPanel7 = new javax.swing.JPanel();
         jLabel181 = new javax.swing.JLabel();
@@ -983,6 +984,13 @@ public class form_hasil extends javax.swing.JPanel {
 
         cn_urine.setText("CANCEL");
 
+        preview.setText("preview");
+        preview.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                previewActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
         jPanel10.setLayout(jPanel10Layout);
         jPanel10Layout.setHorizontalGroup(
@@ -1015,15 +1023,6 @@ public class form_hasil extends javax.swing.JPanel {
                                         .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(jLabel329, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addGroup(jPanel10Layout.createSequentialGroup()
-                                                .addGap(3, 3, 3)
-                                                .addComponent(jLabel342)
-                                                .addGap(18, 18, 18)
-                                                .addComponent(jLabel343)
-                                                .addGap(18, 18, 18)
-                                                .addComponent(jLabel344)
-                                                .addGap(18, 18, 18)
-                                                .addComponent(jLabel345))
-                                            .addGroup(jPanel10Layout.createSequentialGroup()
                                                 .addComponent(neg_PBJ)
                                                 .addGap(18, 18, 18)
                                                 .addComponent(pos_PBJ))
@@ -1047,7 +1046,19 @@ public class form_hasil extends javax.swing.JPanel {
                                                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                     .addComponent(pos_DS)
                                                     .addComponent(pos_BK)
-                                                    .addComponent(pos_TK))))))
+                                                    .addComponent(pos_TK)))
+                                            .addGroup(jPanel10Layout.createSequentialGroup()
+                                                .addGap(3, 3, 3)
+                                                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                    .addComponent(preview)
+                                                    .addGroup(jPanel10Layout.createSequentialGroup()
+                                                        .addComponent(jLabel342)
+                                                        .addGap(18, 18, 18)
+                                                        .addComponent(jLabel343)
+                                                        .addGap(18, 18, 18)
+                                                        .addComponent(jLabel344)
+                                                        .addGap(18, 18, 18)
+                                                        .addComponent(jLabel345)))))))
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(jLabel346, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -1183,7 +1194,9 @@ public class form_hasil extends javax.swing.JPanel {
                     .addComponent(cmbNitrit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(cn_urine, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
+                    .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(cn_urine, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
+                        .addComponent(preview))
                     .addComponent(sv_urine, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -5471,6 +5484,10 @@ try (PreparedStatement ps = kon.prepareStatement(sql)) {
 }
     }//GEN-LAST:event_sv_tinjaActionPerformed
 
+    private void previewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_previewActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_previewActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel AFP;
@@ -5898,6 +5915,7 @@ try (PreparedStatement ps = kon.prepareStatement(sql)) {
     private javax.swing.JRadioButton pos_PE;
     private javax.swing.JRadioButton pos_S;
     private javax.swing.JRadioButton pos_TK;
+    private javax.swing.JButton preview;
     private javax.swing.JLabel raf;
     private javax.swing.JRadioButton rbtnCRPNeg;
     private javax.swing.JRadioButton rbtnCRPPos;
