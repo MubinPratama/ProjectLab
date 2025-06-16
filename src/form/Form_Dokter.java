@@ -28,7 +28,6 @@ public class Form_Dokter extends javax.swing.JPanel {
         
         bt_hapus.setVisible(false);
         bt_batal.setVisible(false);
-        bt_edit.setVisible(false);
     }
     
     private void tampilkanData() {
@@ -74,7 +73,9 @@ public class Form_Dokter extends javax.swing.JPanel {
         bt_batal = new javax.swing.JButton();
         bt_tambah = new javax.swing.JButton();
         bt_hapus = new javax.swing.JButton();
-        bt_edit = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
+        caridata = new javax.swing.JTextField();
+        bt_cardat = new javax.swing.JButton();
         TambahDokter = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         bt_batalTambah = new javax.swing.JButton();
@@ -86,7 +87,6 @@ public class Form_Dokter extends javax.swing.JPanel {
         jLabel5 = new javax.swing.JLabel();
         Kontak = new javax.swing.JTextField();
         bt_Simpan = new javax.swing.JButton();
-        bt_SimpanEdit = new javax.swing.JButton();
 
         setLayout(new java.awt.CardLayout());
 
@@ -134,10 +134,13 @@ public class Form_Dokter extends javax.swing.JPanel {
             }
         });
 
-        bt_edit.setText("Edit");
-        bt_edit.addActionListener(new java.awt.event.ActionListener() {
+        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel6.setText("Cari Data");
+
+        bt_cardat.setText("Cari Data");
+        bt_cardat.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bt_editActionPerformed(evt);
+                bt_cardatActionPerformed(evt);
             }
         });
 
@@ -145,22 +148,24 @@ public class Form_Dokter extends javax.swing.JPanel {
         dataDokter.setLayout(dataDokterLayout);
         dataDokterLayout.setHorizontalGroup(
             dataDokterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 754, Short.MAX_VALUE)
+            .addComponent(jScrollPane1)
             .addGroup(dataDokterLayout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(dataDokterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1)
                     .addGroup(dataDokterLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel1))
-                    .addGroup(dataDokterLayout.createSequentialGroup()
-                        .addGap(17, 17, 17)
-                        .addGroup(dataDokterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(bt_edit, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(bt_tambah, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
+                        .addComponent(bt_tambah, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(bt_hapus, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(bt_batal, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(374, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(bt_batal, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabel6)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(caridata, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(bt_cardat)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         dataDokterLayout.setVerticalGroup(
             dataDokterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -168,13 +173,18 @@ public class Form_Dokter extends javax.swing.JPanel {
                 .addContainerGap()
                 .addComponent(jLabel1)
                 .addGap(49, 49, 49)
-                .addGroup(dataDokterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(bt_batal, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(bt_tambah, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(bt_hapus, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(bt_edit, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(dataDokterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(dataDokterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(bt_batal, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(bt_hapus, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(bt_tambah, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(dataDokterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabel6)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, dataDokterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(caridata, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(bt_cardat))))
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane1))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 432, Short.MAX_VALUE))
         );
 
         mainPanel.add(dataDokter, "card2");
@@ -244,7 +254,7 @@ public class Form_Dokter extends javax.swing.JPanel {
                 .addComponent(jLabel5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Kontak, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(238, Short.MAX_VALUE))
+                .addContainerGap(243, Short.MAX_VALUE))
         );
 
         bt_Simpan.setBackground(new java.awt.Color(0, 235, 21));
@@ -253,15 +263,6 @@ public class Form_Dokter extends javax.swing.JPanel {
         bt_Simpan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bt_SimpanActionPerformed(evt);
-            }
-        });
-
-        bt_SimpanEdit.setBackground(new java.awt.Color(0, 235, 21));
-        bt_SimpanEdit.setText("SIMPAN EDIT");
-        bt_SimpanEdit.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
-        bt_SimpanEdit.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bt_SimpanEditActionPerformed(evt);
             }
         });
 
@@ -276,11 +277,8 @@ public class Form_Dokter extends javax.swing.JPanel {
                     .addGroup(TambahDokterLayout.createSequentialGroup()
                         .addGroup(TambahDokterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel2)
-                            .addGroup(TambahDokterLayout.createSequentialGroup()
-                                .addComponent(bt_Simpan, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(bt_SimpanEdit, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 408, Short.MAX_VALUE)
+                            .addComponent(bt_Simpan, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 506, Short.MAX_VALUE)
                         .addComponent(bt_batalTambah, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
@@ -289,14 +287,13 @@ public class Form_Dokter extends javax.swing.JPanel {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, TambahDokterLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel2)
-                .addGap(48, 48, 48)
-                .addGroup(TambahDokterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(bt_batalTambah, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(TambahDokterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(TambahDokterLayout.createSequentialGroup()
-                            .addGap(1, 1, 1)
-                            .addComponent(bt_Simpan, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(bt_SimpanEdit, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(TambahDokterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(TambahDokterLayout.createSequentialGroup()
+                        .addGap(49, 49, 49)
+                        .addComponent(bt_Simpan, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, TambahDokterLayout.createSequentialGroup()
+                        .addGap(48, 48, 48)
+                        .addComponent(bt_batalTambah, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(14, 14, 14)
                 .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
@@ -311,9 +308,7 @@ public class Form_Dokter extends javax.swing.JPanel {
         // batal utama
         bt_hapus.setVisible(false);
         bt_batal.setVisible(false);
-        bt_edit.setVisible(false);
-        
-        bt_tambah.setVisible(true);
+        bt_tambah.setText("Tambah");
     }//GEN-LAST:event_bt_batalActionPerformed
 
     private void bt_hapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_hapusActionPerformed
@@ -357,13 +352,18 @@ public class Form_Dokter extends javax.swing.JPanel {
         mainPanel.add(dataDokter);
         mainPanel.repaint();
         mainPanel.revalidate();
+        
+        Id_Dokter.setText("");
+        Nama_dokter.setText("");
+        Kontak.setText("");
        
     }//GEN-LAST:event_bt_batalTambahActionPerformed
 
     private void bt_SimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_SimpanActionPerformed
         // TODO add your handling code here:
         try {
-        String sql = "INSERT INTO dokter VALUES (?, ?, ?)";
+        String sql = "INSERT INTO dokter VALUES (?, ?, ?)" +
+                "ON DUPLICATE KEY UPDATE nama = VALUES(nama), kontak = VALUES(kontak)";
         Connection kon = koneksi.koneksiDb();
         PreparedStatement pst = kon.prepareStatement(sql);
         pst.setString(1, Id_Dokter.getText());
@@ -371,7 +371,7 @@ public class Form_Dokter extends javax.swing.JPanel {
         pst.setString(3, Kontak.getText());
         
         pst.executeUpdate();
-        JOptionPane.showMessageDialog(null, "Data berhasil disimpan!");
+        JOptionPane.showMessageDialog(null, "Data berhasil disimpan! / ");
         Id_Dokter.setText("");
         Nama_dokter.setText("");
         Kontak.setText("");
@@ -382,37 +382,7 @@ public class Form_Dokter extends javax.swing.JPanel {
 
     private void bt_tambahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_tambahActionPerformed
         // TODO add your handling code here:
-        mainPanel.removeAll();
-        mainPanel.repaint();
-        mainPanel.revalidate();
-        
-        mainPanel.add(TambahDokter);
-        mainPanel.repaint();
-        mainPanel.revalidate();
-        
-        bt_SimpanEdit.setVisible(false);
-    }//GEN-LAST:event_bt_tambahActionPerformed
-
-    private void KontakActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KontakActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_KontakActionPerformed
-
-    private void tabel_dokterMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tabel_dokterMouseClicked
-        // TODO add your handling code here:
-        bt_hapus.setVisible(true);
-        bt_batal.setVisible(true);
-        bt_edit.setVisible(true);
-        
-        bt_tambah.setVisible(false);
-    }//GEN-LAST:event_tabel_dokterMouseClicked
-
-    private void Id_DokterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Id_DokterActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Id_DokterActionPerformed
-
-    private void bt_editActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_editActionPerformed
-        // TODO add your handling code here:
-        int selectedRow = tabel_dokter.getSelectedRow();
+       int selectedRow = tabel_dokter.getSelectedRow();
            
         if (selectedRow != -1) {
         // Ambil data dari tabel
@@ -426,39 +396,66 @@ public class Form_Dokter extends javax.swing.JPanel {
         Kontak.setText(kontak);
 
         // Tampilkan panel formulir
-        dataDokter.setVisible(false);
-        TambahDokter.setVisible(true);
+        mainPanel.removeAll();
+        mainPanel.repaint();
+        mainPanel.revalidate();
+        
+        mainPanel.add(TambahDokter);
+        mainPanel.repaint();
+        mainPanel.revalidate();
     } else {
-        JOptionPane.showMessageDialog(null, "Pilih data yang ingin diedit!");
-    }
+        mainPanel.removeAll();
+        mainPanel.repaint();
+        mainPanel.revalidate();
+        
+        mainPanel.add(TambahDokter);
+        mainPanel.repaint();
+        mainPanel.revalidate();
+        
+    } 
+    }//GEN-LAST:event_bt_tambahActionPerformed
 
-    bt_Simpan.setVisible(false);
-    bt_SimpanEdit.setVisible(true);
-    }//GEN-LAST:event_bt_editActionPerformed
-
-    private void bt_SimpanEditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_SimpanEditActionPerformed
+    private void KontakActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KontakActionPerformed
         // TODO add your handling code here:
-        try {
-            int IdDokter = Integer.parseInt(Id_Dokter.getText());
-            String nama = Nama_dokter.getText();
-            String kontak = Kontak.getText();
+    }//GEN-LAST:event_KontakActionPerformed
 
-            Connection kon = koneksi.koneksiDb();
-            String sql = "UPDATE dokter SET Nama = ?, Kontak = ? WHERE id_Dokter = ?";
-            PreparedStatement pst = kon.prepareStatement(sql);
-            pst.setString(1, nama);
-            pst.setString(2, kontak);
-            pst.setInt(3, IdDokter);
-            pst.executeUpdate();
+    private void tabel_dokterMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tabel_dokterMouseClicked
+        // TODO add your handling code here:
+        bt_hapus.setVisible(true);
+        bt_batal.setVisible(true);
 
-            JOptionPane.showMessageDialog(null, "Data berhasil diupdate.");
-            Id_Dokter.setText("");
-            Nama_dokter.setText("");
-            Kontak.setText("");
-        } catch (Exception ex) {
-            JOptionPane.showMessageDialog(null, "Terjadi kesalahan: " + ex.getMessage());
+        
+        bt_tambah.setText("EDIT");
+    }//GEN-LAST:event_tabel_dokterMouseClicked
+
+    private void Id_DokterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Id_DokterActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Id_DokterActionPerformed
+
+    private void bt_cardatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_cardatActionPerformed
+        // TODO add your handling code here:
+        String Sql = "SELECT * FROM dokter WHERE Nama like '%"+caridata.getText()+"%'";
+        Connection kon = koneksi.koneksiDb();
+
+        try{
+            java.sql.Statement stat = kon.createStatement();
+            ResultSet hasil = stat.executeQuery(Sql);
+
+            DefaultTableModel model = (DefaultTableModel) tabel_dokter.getModel();
+            model.setRowCount(0);
+            while(hasil.next()){
+                String a = hasil.getString("id_dokter");
+                String b = hasil.getString("Nama");
+                String c = hasil.getString("Kontak");
+
+                String[] data = {a, b, c};
+                model.addRow(data);
+
+            }
+        }catch(Exception e){
+
         }
-    }//GEN-LAST:event_bt_SimpanEditActionPerformed
+    }//GEN-LAST:event_bt_cardatActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -467,18 +464,19 @@ public class Form_Dokter extends javax.swing.JPanel {
     private javax.swing.JTextField Nama_dokter;
     private javax.swing.JPanel TambahDokter;
     private javax.swing.JButton bt_Simpan;
-    private javax.swing.JButton bt_SimpanEdit;
     private javax.swing.JButton bt_batal;
     private javax.swing.JButton bt_batalTambah;
-    private javax.swing.JButton bt_edit;
+    private javax.swing.JButton bt_cardat;
     private javax.swing.JButton bt_hapus;
     private javax.swing.JButton bt_tambah;
+    private javax.swing.JTextField caridata;
     private javax.swing.JPanel dataDokter;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JPanel mainPanel;

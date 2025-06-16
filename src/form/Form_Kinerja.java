@@ -3,23 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package laboratorium;
-
-import javax.swing.ImageIcon;
+package form;
 
 /**
  *
- * @author user
+ * @author Basuki
  */
-public class pn_utama extends javax.swing.JPanel {
+public class Form_Kinerja extends javax.swing.JPanel {
 
     /**
-     * Creates new form pn_utama
+     * Creates new form Form_Kinerja
      */
-    public pn_utama() {
+    public Form_Kinerja() {
         initComponents();
-        ImageIcon Logo_pn = new ImageIcon(getClass().getResource("/img/pn_utama.jpg"));
-        logo_pn.setIcon(Logo_pn);
     }
 
     /**
@@ -31,26 +27,30 @@ public class pn_utama extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        logo_pn = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 255, 255));
-
-        logo_pn.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("jLabel1");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(logo_pn, javax.swing.GroupLayout.DEFAULT_SIZE, 809, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(179, 179, 179)
+                .addComponent(jLabel1)
+                .addContainerGap(180, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(logo_pn, javax.swing.GroupLayout.DEFAULT_SIZE, 589, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(104, 104, 104)
+                .addComponent(jLabel1)
+                .addContainerGap(180, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel logo_pn;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
