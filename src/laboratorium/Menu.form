@@ -56,7 +56,7 @@
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Component id="Logo" alignment="0" pref="70" max="32767" attributes="0"/>
+              <Component id="Logo" alignment="0" max="32767" attributes="0"/>
               <Component id="nama_lab" alignment="0" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
@@ -236,6 +236,9 @@
           <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
           <SubComponents>
             <Component class="javax.swing.JLabel" name="logo_pn">
+              <Properties>
+                <Property name="horizontalAlignment" type="int" value="0"/>
+              </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
                   <BorderConstraints direction="Center"/>

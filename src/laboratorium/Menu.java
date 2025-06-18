@@ -41,7 +41,6 @@ public class Menu extends javax.swing.JFrame {
         
         Logo.setIcon(logo);
         nama_lab.setIcon(Nama_lab);
-        logo_pn.setIcon(Logo_pn);
     }
      private void showDateTime() {
         Timer timer = new Timer(1000, new ActionListener() {
@@ -109,7 +108,7 @@ public class Menu extends javax.swing.JFrame {
         );
         pn_headerLayout.setVerticalGroup(
             pn_headerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Logo, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
+            .addComponent(Logo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(nama_lab, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
@@ -182,6 +181,8 @@ public class Menu extends javax.swing.JFrame {
         pn_utama.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         pn_utama.setName(""); // NOI18N
         pn_utama.setLayout(new java.awt.BorderLayout());
+
+        logo_pn.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         pn_utama.add(logo_pn, java.awt.BorderLayout.CENTER);
 
         javax.swing.GroupLayout pn_isiLayout = new javax.swing.GroupLayout(pn_isi);
@@ -273,7 +274,7 @@ public class Menu extends javax.swing.JFrame {
         ImageIcon iconLpKinerja = new ImageIcon(getClass().getResource("/img/lp_Hasil.png"));
         ImageIcon iconLpKeuangan = new ImageIcon(getClass().getResource("/img/lp_keuangan.png"));
         ImageIcon iconLphasil = new ImageIcon(getClass().getResource("/img/lp_Hasil.png"));
-        
+        ImageIcon Logo_pn = new ImageIcon(getClass().getResource("/img/pn_utama.jpg"));
         
         Item_menu masDokter = new Item_menu(null, true, iconDokter, "Dokter", new ActionListener() {
             @Override

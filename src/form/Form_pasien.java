@@ -30,7 +30,6 @@ public class Form_pasien extends javax.swing.JPanel {
         
         bt_hapus.setVisible(false);
         bt_batal.setVisible(false);
-        bt_edit.setVisible(false);
         
     } 
     
@@ -133,7 +132,6 @@ public class Form_pasien extends javax.swing.JPanel {
         bt_batal = new javax.swing.JButton();
         bt_tambah = new javax.swing.JButton();
         bt_hapus = new javax.swing.JButton();
-        bt_edit = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         caridata = new javax.swing.JTextField();
         bt_cardat = new javax.swing.JButton();
@@ -185,7 +183,7 @@ public class Form_pasien extends javax.swing.JPanel {
         jScrollPane3.setViewportView(tabel_pasien);
 
         jLabel12.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel12.setText("DATA DOKTER");
+        jLabel12.setText("DATA PASIEN");
 
         bt_batal.setText("Batal");
         bt_batal.addActionListener(new java.awt.event.ActionListener() {
@@ -207,8 +205,6 @@ public class Form_pasien extends javax.swing.JPanel {
                 bt_hapusActionPerformed(evt);
             }
         });
-
-        bt_edit.setText("Edit");
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setText("Cari Data");
@@ -233,9 +229,7 @@ public class Form_pasien extends javax.swing.JPanel {
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(dataPasienLayout.createSequentialGroup()
                         .addGap(17, 17, 17)
-                        .addGroup(dataPasienLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(bt_edit, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(bt_tambah, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(bt_tambah, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(bt_hapus, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
@@ -258,8 +252,7 @@ public class Form_pasien extends javax.swing.JPanel {
                     .addGroup(dataPasienLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(bt_batal, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(bt_tambah, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(bt_hapus, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(bt_edit, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(bt_hapus, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(dataPasienLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(jLabel1)
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, dataPasienLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -293,29 +286,14 @@ public class Form_pasien extends javax.swing.JPanel {
         jLabel3.setText("ID PASIEN");
 
         IdPasien.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
-        IdPasien.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                IdPasienActionPerformed(evt);
-            }
-        });
 
         jLabel4.setText("NAMA PASIEN");
 
         NamaPasien.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
-        NamaPasien.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                NamaPasienActionPerformed(evt);
-            }
-        });
 
         jLabel5.setText("ALAMAT");
 
         Telepon.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
-        Telepon.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                TeleponActionPerformed(evt);
-            }
-        });
 
         Alamat.setColumns(20);
         Alamat.setRows(5);
@@ -330,27 +308,12 @@ public class Form_pasien extends javax.swing.JPanel {
         jLabel9.setText("TANGGAL LAHIR");
 
         TinggiBadan.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
-        TinggiBadan.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                TinggiBadanActionPerformed(evt);
-            }
-        });
 
         jLabel10.setText("BERAT BADAN");
 
         BeratBadan.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
-        BeratBadan.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BeratBadanActionPerformed(evt);
-            }
-        });
 
         TanggalLahir.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
-        TanggalLahir.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                TanggalLahirActionPerformed(evt);
-            }
-        });
 
         jLabel11.setText("JENIS KELAMIN");
 
@@ -483,17 +446,23 @@ public class Form_pasien extends javax.swing.JPanel {
     private void bt_SimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_SimpanActionPerformed
         // TODO add your handling code here:
     try {
-        String sql = "INSERT INTO pasien(Nama, Alamat, jk, no_telp, Tgl_Lahir, Tinggi, Berat, goldar) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO pasien(No_rm, Nama, Alamat, jk, no_telp, Tgl_Lahir, Tinggi, Berat, goldar) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)"+
+                "ON DUPLICATE KEY UPDATE " +
+                 "nama = VALUES(Nama), alamat = VALUES(Alamat), jk = VALUES(jk), " +
+                 "no_telp = VALUES(no_telp), tgl_lahir = VALUES(Tgl_Lahir), " +
+                 "tinggi = VALUES(Tinggi), berat = VALUES(Berat), goldar = VALUES(goldar)";
         Connection kon = koneksi.koneksiDb();
         PreparedStatement pst = kon.prepareStatement(sql);
-        pst.setString(1, NamaPasien.getText());
-        pst.setString(2, Alamat.getText());
-        pst.setString(3, JK.getSelectedItem().toString());
-        pst.setString(4, Telepon.getText());
-        pst.setString(5, TanggalLahir.getText()); // pastikan formatnya YYYY-MM-DD
-        pst.setDouble(6, Double.parseDouble(TinggiBadan.getText()));
-        pst.setDouble(7, Double.parseDouble(BeratBadan.getText()));
-        pst.setString(8, Goldar.getSelectedItem().toString());
+        pst.setString(1, IdPasien.getText());  // Tambahkan ID Pasien
+        pst.setString(2, NamaPasien.getText());
+        pst.setString(3, Alamat.getText());
+        pst.setString(4, JK.getSelectedItem().toString());
+        pst.setString(5, Telepon.getText());
+        pst.setString(6, TanggalLahir.getText()); // Format: YYYY-MM-DD
+        pst.setDouble(7, Double.parseDouble(TinggiBadan.getText()));
+        pst.setDouble(8, Double.parseDouble(BeratBadan.getText()));
+        pst.setString(9, Goldar.getSelectedItem().toString());
+
         
         pst.executeUpdate();
         JOptionPane.showMessageDialog(null, "Data berhasil disimpan!");
@@ -521,50 +490,49 @@ public class Form_pasien extends javax.swing.JPanel {
         mainPanel.revalidate();
     }//GEN-LAST:event_bt_batalTambahActionPerformed
 
-    private void TeleponActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TeleponActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_TeleponActionPerformed
-
-    private void TinggiBadanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TinggiBadanActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_TinggiBadanActionPerformed
-
-    private void BeratBadanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BeratBadanActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_BeratBadanActionPerformed
-
-    private void TanggalLahirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TanggalLahirActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_TanggalLahirActionPerformed
-
-    private void IdPasienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IdPasienActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_IdPasienActionPerformed
-
-    private void NamaPasienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NamaPasienActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_NamaPasienActionPerformed
-
     private void tabel_pasienMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tabel_pasienMouseClicked
         // TODO add your handling code here:
         bt_hapus.setVisible(true);
         bt_batal.setVisible(true);
-        bt_edit.setVisible(true);
-
-        bt_tambah.setVisible(false);
+        bt_tambah.setText("EDIT");;
     }//GEN-LAST:event_tabel_pasienMouseClicked
 
     private void bt_batalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_batalActionPerformed
         // batal utama
         bt_hapus.setVisible(false);
         bt_batal.setVisible(false);
-        bt_edit.setVisible(false);
-
-        bt_tambah.setVisible(true);
+        bt_tambah.setText("Tambah");;
     }//GEN-LAST:event_bt_batalActionPerformed
 
     private void bt_tambahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_tambahActionPerformed
         // TODO add your handling code here:
+        int selectedRow = tabel_pasien.getSelectedRow();
+           
+        if (selectedRow != -1) {
+        // Ambil data dari tabel
+        String id = tabel_pasien.getValueAt(selectedRow, 0).toString();
+        String nama = tabel_pasien.getValueAt(selectedRow, 1).toString();
+        String alamat = tabel_pasien.getValueAt(selectedRow, 2).toString();
+        String jk = tabel_pasien.getValueAt(selectedRow, 3).toString();
+        String telepon = tabel_pasien.getValueAt(selectedRow, 4).toString();
+        String tgl_lahir = tabel_pasien.getValueAt(selectedRow, 5).toString();
+        String tinggi = tabel_pasien.getValueAt(selectedRow, 6).toString();
+        String berat = tabel_pasien.getValueAt(selectedRow, 7).toString();
+        String goldar = tabel_pasien.getValueAt(selectedRow, 8).toString();
+        
+
+        // Masukkan ke text field di panel Formulir
+        IdPasien.setText(id );
+        NamaPasien.setText(nama);
+        Alamat.setText(alamat);
+        Telepon.setText(telepon);
+        TanggalLahir.setText(tgl_lahir);
+        TinggiBadan.setText(tinggi);
+        BeratBadan.setText(berat);
+        JK.setSelectedItem(jk);
+        Goldar.setSelectedItem(goldar);
+
+        // Tampilkan panel formulir
         mainPanel.removeAll();
         mainPanel.repaint();
         mainPanel.revalidate();
@@ -572,10 +540,49 @@ public class Form_pasien extends javax.swing.JPanel {
         mainPanel.add(tambahPasien);
         mainPanel.repaint();
         mainPanel.revalidate();
+    } else {
+        mainPanel.removeAll();
+        mainPanel.repaint();
+        mainPanel.revalidate();
+
+        mainPanel.add(tambahPasien);
+        mainPanel.repaint();
+        mainPanel.revalidate();
+        
+    } 
+        
     }//GEN-LAST:event_bt_tambahActionPerformed
 
     private void bt_hapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_hapusActionPerformed
         // TODO add your handling code here:
+        int selectedRow = tabel_pasien.getSelectedRow();
+    
+    if (selectedRow != -1) {
+        int idDokter = Integer.parseInt(tabel_pasien.getValueAt(selectedRow, 0).toString());
+
+        int konfirmasi = JOptionPane.showConfirmDialog(null, 
+            "Yakin ingin menghapus data ini?", "Konfirmasi", 
+            JOptionPane.YES_NO_OPTION);
+
+        if (konfirmasi == JOptionPane.YES_OPTION) {
+            try {
+                Connection kon = koneksi.koneksiDb();
+                String sql = "DELETE FROM pasien WHERE No_rm = ?";
+                PreparedStatement pst = kon.prepareStatement(sql);
+                pst.setInt(1, idDokter);
+                pst.executeUpdate();
+
+                DefaultTableModel model = (DefaultTableModel) tabel_pasien.getModel();
+                model.removeRow(selectedRow);
+
+                JOptionPane.showMessageDialog(null, "Data berhasil dihapus.");
+            } catch (Exception ex) {
+                JOptionPane.showMessageDialog(null, "Terjadi kesalahan: " + ex.getMessage());
+            }
+        }
+    } else {
+        JOptionPane.showMessageDialog(null, "Pilih data terlebih dahulu!");
+    }
     }//GEN-LAST:event_bt_hapusActionPerformed
 
     private void bt_cardatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_cardatActionPerformed
@@ -624,7 +631,6 @@ public class Form_pasien extends javax.swing.JPanel {
     private javax.swing.JButton bt_batal;
     private javax.swing.JButton bt_batalTambah;
     private javax.swing.JButton bt_cardat;
-    private javax.swing.JButton bt_edit;
     private javax.swing.JButton bt_hapus;
     private javax.swing.JButton bt_tambah;
     private javax.swing.JTextField caridata;
