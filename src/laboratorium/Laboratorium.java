@@ -20,8 +20,8 @@ public class Laboratorium {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Login fa = new Login();
-//        Menu fa = new Menu();
+//        Login fa = new Login();
+        Menu fa = new Menu();
         fa.show();
     }
     
