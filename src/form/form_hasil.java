@@ -81,7 +81,7 @@ public class form_hasil extends javax.swing.JPanel {
     public void loadIdPendaftaran() {
     try {
         Connection kon = koneksi.koneksiDb();
-        String sql = "SELECT id_pendaftaran FROM pendaftaran";
+        String sql = "SELECT id_pendaftaran FROM pendaftaran WHERE status_hasil ='Belum'";
         PreparedStatement pst = kon.prepareStatement(sql);
         ResultSet rs = pst.executeQuery();
 
@@ -700,7 +700,7 @@ public class form_hasil extends javax.swing.JPanel {
         jLabel84 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         tb_rincian = new javax.swing.JTable();
-        jButton1 = new javax.swing.JButton();
+        sv_hasil = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
 
         setLayout(new java.awt.CardLayout());
@@ -4202,7 +4202,7 @@ public class form_hasil extends javax.swing.JPanel {
             TINJALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(TINJALayout.createSequentialGroup()
                 .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(0, 490, Short.MAX_VALUE))
         );
 
         TabHasil.addTab("TINJA", TINJA);
@@ -5049,7 +5049,12 @@ public class form_hasil extends javax.swing.JPanel {
         ));
         jScrollPane2.setViewportView(tb_rincian);
 
-        jButton1.setText("SAVE");
+        sv_hasil.setText("SAVE");
+        sv_hasil.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sv_hasilActionPerformed(evt);
+            }
+        });
 
         jButton2.setText("CANCEL");
 
@@ -5069,7 +5074,7 @@ public class form_hasil extends javax.swing.JPanel {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(jButton1)
+                                        .addComponent(sv_hasil)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(jButton2))
                                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -5097,8 +5102,8 @@ public class form_hasil extends javax.swing.JPanel {
                                         .addComponent(jLabel84)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addComponent(jLabel80)))
-                                .addGap(0, 178, Short.MAX_VALUE)))))
-                .addContainerGap(166, Short.MAX_VALUE))
+                                .addGap(0, 180, Short.MAX_VALUE)))))
+                .addContainerGap(156, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
@@ -5142,9 +5147,9 @@ public class form_hasil extends javax.swing.JPanel {
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
+                    .addComponent(sv_hasil)
                     .addComponent(jButton2))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(50, Short.MAX_VALUE))
         );
 
         jScrollPane3.setViewportView(jPanel1);
@@ -5485,6 +5490,25 @@ try (PreparedStatement ps = kon.prepareStatement(sql)) {
         tampilkanHasilUrineKeTabel();
     }//GEN-LAST:event_previewActionPerformed
 
+    private void sv_hasilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sv_hasilActionPerformed
+        // TODO add your handling code here:
+        int idPendaftaran = Integer.parseInt(id_daftar.getSelectedItem().toString());
+        simpanPreviewKeDatabase(idPendaftaran);
+            try {
+                Connection kon = koneksi.koneksiDb();
+                String update = "UPDATE pendaftaran SET status_hasil = 'sudah' WHERE id_pendaftaran = ?";
+                PreparedStatement pstUpdate = kon.prepareStatement(update);
+                pstUpdate.setInt(1, Integer.parseInt(id_daftar.getSelectedItem().toString()));
+                pstUpdate.executeUpdate();
+            }catch (SQLException e) {
+                JOptionPane.showMessageDialog(null, "Gagal menyimpan data" + e.getMessage());
+            }
+        
+        DefaultTableModel model = (DefaultTableModel) tb_rincian.getModel();
+        model.setRowCount(0);
+
+    }//GEN-LAST:event_sv_hasilActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel AFP;
@@ -5607,7 +5631,6 @@ try (PreparedStatement ps = kon.prepareStatement(sql)) {
     private javax.swing.JLabel hasil1;
     private javax.swing.JLabel hasil2;
     private javax.swing.JComboBox<String> id_daftar;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -5926,6 +5949,7 @@ try (PreparedStatement ps = kon.prepareStatement(sql)) {
     private javax.swing.JRadioButton rbtnVDRLPos;
     private javax.swing.JRadioButton rbtnWRNeg;
     private javax.swing.JRadioButton rbtnWRPos;
+    private javax.swing.JButton sv_hasil;
     private javax.swing.JButton sv_hematologi;
     private javax.swing.JButton sv_kimia1;
     private javax.swing.JButton sv_kimia2;
@@ -6439,9 +6463,9 @@ public void tampilkanHasilKimia2KeTabel() {
 public void tampilkanHasilTinjaKeTabel() {
     DefaultTableModel model = (DefaultTableModel) tb_rincian.getModel();//Ambil Tabel Model
     
-    tambahBarisJikaAda(model,"",TWarna.getText());
-    tambahBarisJikaAda(model,"",TLekosit.getText());
-    tambahBarisJikaAda(model,"",TEritrosit.getText());
+    tambahBarisJikaAda(model,"Warna",TWarna.getText());
+    tambahBarisJikaAda(model,"Lekosi",TLekosit.getText());
+    tambahBarisJikaAda(model,"Eritrosit",TEritrosit.getText());
     
     String hasilL = TLendirP.isSelected() ? "Positif" : TLendirN.isSelected() ? "Negatif" : "";
     String hasilD = TDarahP.isSelected() ? "Positif" : TDarahN.isSelected() ? "Negatif" : "";
@@ -6474,4 +6498,29 @@ public void tampilkanHasilTinjaKeTabel() {
     tambahBarisJikaAda(model,"Darah Samar", hasilDS);
 }
 
+private void simpanPreviewKeDatabase(int idPendaftaran) {
+    DefaultTableModel model = (DefaultTableModel) tb_rincian.getModel();
+    String sql = "INSERT INTO hasil_periksa (id_pendaftaran, nama_pemeriksaan, hasil_pemeriksaan) VALUES (?, ?, ?)";
+
+    try {
+        Connection con = koneksi.koneksiDb(); // Pastikan koneksi sudah siap
+        PreparedStatement pst = con.prepareStatement(sql);
+
+        for (int i = 0; i < model.getRowCount(); i++) {
+            String nama = model.getValueAt(i, 0).toString();
+            String hasil = model.getValueAt(i, 1).toString();
+
+            pst.setInt(1, idPendaftaran);
+            pst.setString(2, nama);
+            pst.setString(3, hasil);
+            pst.addBatch(); // Kumpulkan batch
+        }
+
+        pst.executeBatch(); // Jalankan semua sekaligus
+        JOptionPane.showMessageDialog(this, "Data hasil berhasil disimpan ke database!");
+    } catch (SQLException e) {
+        JOptionPane.showMessageDialog(this, "Gagal simpan data: " + e.getMessage());
+        e.printStackTrace();
+    }
+}
 }

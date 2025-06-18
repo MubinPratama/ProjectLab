@@ -801,7 +801,7 @@ public class form_pendaftaran extends javax.swing.JPanel {
     // End of variables declaration//GEN-END:variables
 
     private void tampilkanDataPasien(String idPasien) { 
-        if (idPasien == null || idPasien.trim().length() < 5 || idPasien.trim().toLowerCase().equals("-- id baru --")) {
+        if (idPasien == null || idPasien.trim().toLowerCase().equals("-- id baru --")) {
         return;
     }
     try {
@@ -883,8 +883,4 @@ public class form_pendaftaran extends javax.swing.JPanel {
     model.setRowCount(0);
 }
     
-    
-private void tes(){
-    
-}
 }
