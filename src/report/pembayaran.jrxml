@@ -1,239 +1,135 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="15738bd0-6b1d-4f5b-ae8c-582d0767db67">
-	<property name="template.type" value="columnar"/>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="50602131-2dd4-4767-b0e6-0fa06fe8a62b">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
-	<style name="Title" forecolor="#000000" fontName="Times New Roman" fontSize="50" isBold="false" pdfFontName="Times-Bold"/>
-	<style name="SubTitle" forecolor="#666666" fontName="Times New Roman" fontSize="18" isBold="false" pdfFontName="Times-Roman"/>
-	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true" pdfFontName="Times-Roman"/>
-	<style name="Detail" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman"/>
-	<style name="Row" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman">
+	<style name="Title" fontName="Times New Roman" fontSize="50" isBold="true" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#736343" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<style name="Row" mode="Transparent">
 		<conditionalStyle>
 			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
-			<style mode="Opaque" backcolor="#F0EFEF"/>
+			<style backcolor="#E6DAC3"/>
 		</conditionalStyle>
 	</style>
 	<queryString language="SQL">
 		<![CDATA[SELECT
-     dokter.`Id_Dokter` AS dokter_Id_Dokter,
-     dokter.`Nama` AS dokter_Nama,
      pembayaran.`id_pembayaran` AS pembayaran_id_pembayaran,
      pembayaran.`id_pendaftaran` AS pembayaran_id_pendaftaran,
      pembayaran.`tanggal_bayar` AS pembayaran_tanggal_bayar,
      pembayaran.`total_bayar` AS pembayaran_total_bayar,
      pembayaran.`metode_pembayaran` AS pembayaran_metode_pembayaran,
      pembayaran.`dibayar` AS pembayaran_dibayar,
-     pembayaran.`kembali` AS pembayaran_kembali,
-     pendaftaran.`id_pendaftaran` AS pendaftaran_id_pendaftaran,
-     pendaftaran.`No_rm` AS pendaftaran_No_rm,
-     pendaftaran.`Id_dokter` AS pendaftaran_Id_dokter,
-     pendaftaran.`tanggal_daftar` AS pendaftaran_tanggal_daftar,
-     pendaftaran_detail.`id_detail` AS pendaftaran_detail_id_detail,
-     pendaftaran_detail.`id_pendaftaran` AS pendaftaran_detail_id_pendaftaran,
-     pendaftaran_detail.`id_layanan` AS pendaftaran_detail_id_layanan,
-     pendaftaran_detail.`harga` AS pendaftaran_detail_harga,
-     pasien.`No_rm` AS pasien_No_rm,
-     pasien.`Nama` AS pasien_Nama,
-     pasien.`Alamat` AS pasien_Alamat,
-     pasien.`jk` AS pasien_jk,
-     pasien.`no_telp` AS pasien_no_telp,
-     pasien.`Tgl_Lahir` AS pasien_Tgl_Lahir,
-     pasien.`Tinggi` AS pasien_Tinggi,
-     pasien.`Berat` AS pasien_Berat,
-     pasien.`goldar` AS pasien_goldar,
-     layanan.`id_layanan` AS layanan_id_layanan,
-     layanan.`nama_layanan` AS layanan_nama_layanan,
-     layanan.`harga` AS layanan_harga,
-     dokter.`Kontak` AS dokter_Kontak
+     pembayaran.`kembali` AS pembayaran_kembali
 FROM
-     `dokter` dokter INNER JOIN `pendaftaran` pendaftaran ON dokter.`Id_Dokter` = pendaftaran.`Id_dokter`
-     INNER JOIN `pembayaran` pembayaran ON pendaftaran.`id_pendaftaran` = pembayaran.`id_pendaftaran`
-     INNER JOIN `pendaftaran_detail` pendaftaran_detail ON pendaftaran.`id_pendaftaran` = pendaftaran_detail.`id_pendaftaran`
-     INNER JOIN `pasien` pasien ON pendaftaran.`No_rm` = pasien.`No_rm`
-     INNER JOIN `layanan` layanan ON pendaftaran_detail.`id_layanan` = layanan.`id_layanan`]]>
+     `pembayaran` pembayaran]]>
 	</queryString>
-	<field name="pasien_Nama" class="java.lang.String"/>
-	<field name="dokter_Nama" class="java.lang.String"/>
-	<field name="layanan_nama_layanan" class="java.lang.String"/>
-	<field name="layanan_harga" class="java.math.BigDecimal"/>
+	<field name="pembayaran_id_pembayaran" class="java.lang.String"/>
+	<field name="pembayaran_id_pendaftaran" class="java.lang.Integer"/>
 	<field name="pembayaran_tanggal_bayar" class="java.sql.Date"/>
-	<field name="pembayaran_metode_pembayaran" class="java.lang.String"/>
 	<field name="pembayaran_total_bayar" class="java.lang.Double"/>
+	<field name="pembayaran_metode_pembayaran" class="java.lang.String"/>
 	<field name="pembayaran_dibayar" class="java.lang.Double"/>
 	<field name="pembayaran_kembali" class="java.lang.Double"/>
 	<background>
 		<band splitType="Stretch"/>
 	</background>
 	<title>
-		<band height="132" splitType="Stretch">
+		<band height="102" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="86" y="17" width="625" height="62" forecolor="#736343" uuid="f5b4bd87-b35b-4823-959d-ed146037e412"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="45" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[LAPORAN KEUANGAN]]></text>
+			</staticText>
 			<image>
-				<reportElement x="2" y="0" width="118" height="132" uuid="762ef48d-ce25-4d28-9705-11b52aa49a1f"/>
-				<imageExpression><![CDATA["tree1.png"]]></imageExpression>
+				<reportElement x="736" y="2" width="66" height="60" uuid="ead64b81-b1ec-42c4-ab81-b5073d6a68b1"/>
+				<imageExpression><![CDATA["C:\\Users\\Pongo\\Documents\\NetBeansProjects\\ProjectLab\\src\\Img\\logo_lab.png"]]></imageExpression>
 			</image>
-			<staticText>
-				<reportElement style="Title" x="120" y="10" width="435" height="93" uuid="dd8f2613-7afe-4102-99ba-7ff0ca55e48c"/>
-				<textElement>
-					<font fontName="Georgia" size="60" isBold="false"/>
-				</textElement>
-				<text><![CDATA[Pembayaran]]></text>
-			</staticText>
-			<staticText>
-				<reportElement style="SubTitle" x="336" y="103" width="217" height="29" uuid="c95d72af-b795-4821-82e4-a6c48e777a2f"/>
-				<textElement>
-					<font size="22" isBold="false"/>
-				</textElement>
-				<text><![CDATA[]]></text>
-			</staticText>
 		</band>
 	</title>
 	<pageHeader>
 		<band splitType="Stretch"/>
 	</pageHeader>
 	<columnHeader>
-		<band splitType="Stretch"/>
-	</columnHeader>
-	<detail>
-		<band height="180" splitType="Stretch">
-			<image>
-				<reportElement x="2" y="0" width="56" height="80" uuid="1b18be70-e564-4ca1-a8d6-945eeecf2e86"/>
-				<imageExpression><![CDATA["tree2.png"]]></imageExpression>
-			</image>
+		<band height="16" splitType="Stretch">
 			<line>
-				<reportElement positionType="FixRelativeToBottom" x="0" y="177" width="551" height="1" uuid="294fe5fb-ae07-459d-b8b0-8b42613333bd"/>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="802" height="1" uuid="be565159-a7ee-4dac-a633-8253bca958fd"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
 			</line>
 			<staticText>
-				<reportElement style="Column header" positionType="Float" x="79" y="0" width="132" height="20" forecolor="#000000" uuid="3fef038c-85be-49b0-a33e-a46c0d706651"/>
-				<textElement textAlignment="Right">
-					<font fontName="Georgia" size="12" isBold="false"/>
-				</textElement>
-				<text><![CDATA[Nama Pasien]]></text>
+				<reportElement style="Column header" x="0" y="0" width="114" height="15" forecolor="#736343" uuid="60864724-ec7d-45f6-987d-2848658d5264"/>
+				<text><![CDATA[pembayaran_id_pembayaran]]></text>
 			</staticText>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement style="Detail" positionType="Float" x="215" y="0" width="338" height="18" uuid="47028a8f-6200-41b0-9069-877d593fc2fb"/>
-				<textElement>
-					<font fontName="Georgia" size="12" isBold="false" pdfFontName="Times-Bold"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{pasien_Nama}]]></textFieldExpression>
-			</textField>
 			<staticText>
-				<reportElement style="Column header" positionType="Float" x="79" y="20" width="132" height="20" forecolor="#000000" uuid="96f6fe11-09e8-49a2-b3ab-474d9d8fd51c"/>
-				<textElement textAlignment="Right">
-					<font fontName="Georgia" size="12" isBold="false"/>
-				</textElement>
-				<text><![CDATA[Nama dokter]]></text>
+				<reportElement style="Column header" x="114" y="0" width="114" height="15" forecolor="#736343" uuid="61f179d4-63ae-4b90-88b6-34f59f107ede"/>
+				<text><![CDATA[pembayaran_id_pendaftaran]]></text>
 			</staticText>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement style="Detail" positionType="Float" x="215" y="20" width="338" height="18" uuid="db4c9d1f-8e10-4773-894e-21ecd8937d41"/>
-				<textElement>
-					<font fontName="Georgia" size="12" isBold="false" pdfFontName="Times-Bold"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{dokter_Nama}]]></textFieldExpression>
-			</textField>
 			<staticText>
-				<reportElement style="Column header" positionType="Float" x="79" y="40" width="132" height="20" forecolor="#000000" uuid="229e4704-8b1b-4f15-8b53-cbac25451fb3"/>
-				<textElement textAlignment="Right">
-					<font fontName="Georgia" size="12" isBold="false"/>
-				</textElement>
-				<text><![CDATA[Nama layanan]]></text>
+				<reportElement style="Column header" x="228" y="0" width="114" height="15" forecolor="#736343" uuid="a1905045-921a-434e-a0d9-a9a73a1448e8"/>
+				<text><![CDATA[pembayaran_tanggal_bayar]]></text>
 			</staticText>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement style="Detail" positionType="Float" x="215" y="40" width="338" height="18" uuid="0db5b78e-a535-471d-acd4-a5aa43b86155"/>
-				<textElement>
-					<font fontName="Georgia" size="12" isBold="false" pdfFontName="Times-Bold"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{layanan_nama_layanan}]]></textFieldExpression>
-			</textField>
 			<staticText>
-				<reportElement style="Column header" positionType="Float" x="79" y="60" width="132" height="20" forecolor="#000000" uuid="2597fe72-90a1-4dbb-92ff-61fe4da6f088"/>
-				<textElement textAlignment="Right">
-					<font fontName="Georgia" size="12" isBold="false"/>
-				</textElement>
-				<text><![CDATA[Harga layanan]]></text>
+				<reportElement style="Column header" x="342" y="0" width="114" height="15" forecolor="#736343" uuid="00e1762d-5056-4ba3-b65d-a4e9774fc663"/>
+				<text><![CDATA[pembayaran_total_bayar]]></text>
 			</staticText>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement style="Detail" positionType="Float" x="215" y="60" width="338" height="18" uuid="58c39feb-80fd-4130-9f3f-d576eb0ed976"/>
-				<textElement>
-					<font fontName="Georgia" size="12" isBold="false" pdfFontName="Times-Bold"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{layanan_harga}]]></textFieldExpression>
-			</textField>
 			<staticText>
-				<reportElement style="Column header" positionType="Float" x="79" y="80" width="132" height="20" forecolor="#000000" uuid="40f8a0fa-9b29-43ff-94ee-d873239f84d2"/>
-				<textElement textAlignment="Right">
-					<font fontName="Georgia" size="12" isBold="false"/>
-				</textElement>
-				<text><![CDATA[Tanggal pembayaran]]></text>
+				<reportElement style="Column header" x="456" y="0" width="114" height="15" forecolor="#736343" uuid="c50d1a0a-362d-4a55-9367-86e55f0aaef2"/>
+				<text><![CDATA[pembayaran_metode_pembayaran]]></text>
 			</staticText>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement style="Detail" positionType="Float" x="215" y="80" width="338" height="18" uuid="4db40dad-29f4-4ac4-a39f-14e5e1acfb6d"/>
-				<textElement>
-					<font fontName="Georgia" size="12" isBold="false" pdfFontName="Times-Bold"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{pembayaran_tanggal_bayar}]]></textFieldExpression>
-			</textField>
 			<staticText>
-				<reportElement style="Column header" positionType="Float" x="79" y="100" width="132" height="20" forecolor="#000000" uuid="28c3bad7-9c41-4793-9141-1c3ec3ce85f0"/>
-				<textElement textAlignment="Right">
-					<font fontName="Georgia" size="12" isBold="false"/>
-				</textElement>
-				<text><![CDATA[Metode pembayran]]></text>
+				<reportElement style="Column header" x="570" y="0" width="114" height="15" forecolor="#736343" uuid="9c304919-3ff7-4238-9556-b620314e71ec"/>
+				<text><![CDATA[pembayaran_dibayar]]></text>
 			</staticText>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement style="Detail" positionType="Float" x="215" y="100" width="338" height="18" uuid="103622e6-e956-438f-bdd0-3eb92981d0be"/>
-				<textElement>
-					<font fontName="Georgia" size="12" isBold="false" pdfFontName="Times-Bold"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{pembayaran_metode_pembayaran}]]></textFieldExpression>
-			</textField>
 			<staticText>
-				<reportElement style="Column header" positionType="Float" x="79" y="120" width="132" height="20" forecolor="#000000" uuid="6b878972-7d72-480f-a3f1-250a430e307b"/>
-				<textElement textAlignment="Right">
-					<font fontName="Georgia" size="12" isBold="false"/>
-				</textElement>
-				<text><![CDATA[Total pembayaran]]></text>
+				<reportElement style="Column header" x="684" y="0" width="114" height="15" forecolor="#736343" uuid="dc7ed9b1-77ae-49f4-a987-64469808961f"/>
+				<text><![CDATA[pembayaran_kembali]]></text>
 			</staticText>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement style="Detail" positionType="Float" x="215" y="120" width="338" height="18" uuid="6f447a9a-ede0-4ac5-9cd2-f7ef59d0f4fb"/>
-				<textElement>
-					<font fontName="Georgia" size="12" isBold="false" pdfFontName="Times-Bold"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{pembayaran_total_bayar}]]></textFieldExpression>
-			</textField>
-			<staticText>
-				<reportElement style="Column header" positionType="Float" x="79" y="140" width="132" height="20" forecolor="#000000" uuid="e4a28898-f037-4e7c-8282-1fd281b7791e"/>
-				<textElement textAlignment="Right">
-					<font fontName="Georgia" size="12" isBold="false"/>
-				</textElement>
-				<text><![CDATA[Dibayar]]></text>
-			</staticText>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement style="Detail" positionType="Float" x="215" y="140" width="338" height="18" uuid="c46ca7a6-d882-4c9d-99f6-488fe39beb12"/>
-				<textElement>
-					<font fontName="Georgia" size="12" isBold="false" pdfFontName="Times-Bold"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{pembayaran_dibayar}]]></textFieldExpression>
-			</textField>
-			<staticText>
-				<reportElement style="Column header" positionType="Float" x="79" y="160" width="132" height="20" forecolor="#000000" uuid="ca961eba-0078-49a2-8675-62557b430676"/>
-				<textElement textAlignment="Right">
-					<font fontName="Georgia" size="12" isBold="false"/>
-				</textElement>
-				<text><![CDATA[Kembalian]]></text>
-			</staticText>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement style="Detail" positionType="Float" x="215" y="160" width="338" height="18" uuid="7e43e85b-63fd-405b-b12f-b0336a6841fd"/>
-				<textElement>
-					<font fontName="Georgia" size="12" isBold="false" pdfFontName="Times-Bold"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{pembayaran_kembali}]]></textFieldExpression>
-			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="15" splitType="Stretch">
+			<frame>
+				<reportElement style="Row" mode="Opaque" x="0" y="0" width="802" height="15" uuid="322ff8d1-7e59-4cad-a8b8-51860bd657c4"/>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="0" y="0" width="114" height="15" uuid="a23644b3-b6b5-45e3-8268-a324fa7afd76"/>
+					<textFieldExpression><![CDATA[$F{pembayaran_id_pembayaran}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="114" y="0" width="114" height="15" uuid="fb27837f-a8c4-42b6-8e29-04b7aed570ef"/>
+					<textFieldExpression><![CDATA[$F{pembayaran_id_pendaftaran}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="228" y="0" width="114" height="15" uuid="cae2325e-2358-44ec-966f-e541e97147db"/>
+					<textFieldExpression><![CDATA[$F{pembayaran_tanggal_bayar}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="342" y="0" width="114" height="15" uuid="91d1466f-f968-476a-83df-0aa231b2f59e"/>
+					<textFieldExpression><![CDATA[$F{pembayaran_total_bayar}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="456" y="0" width="114" height="15" uuid="0a87e3c4-6fc0-4d0a-9e07-ec56ec64d8cf"/>
+					<textFieldExpression><![CDATA[$F{pembayaran_metode_pembayaran}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="570" y="0" width="114" height="15" uuid="b572fccc-d9a2-426e-87ad-3297438e79e9"/>
+					<textFieldExpression><![CDATA[$F{pembayaran_dibayar}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="684" y="0" width="114" height="15" uuid="296b408c-c8ec-47dd-8c8a-293f542b3b23"/>
+					<textFieldExpression><![CDATA[$F{pembayaran_kembali}]]></textFieldExpression>
+				</textField>
+			</frame>
 		</band>
 	</detail>
 	<columnFooter>
-		<band height="7" splitType="Stretch">
+		<band height="6" splitType="Stretch">
 			<line>
-				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="370e8e2c-34f5-46f5-8da0-ce597f6d8218"/>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="802" height="1" uuid="135c88fb-2c96-43ee-a54c-8c97f5896e6d"/>
 				<graphicElement>
 					<pen lineWidth="0.5" lineColor="#999999"/>
 				</graphicElement>
@@ -241,32 +137,7 @@ FROM
 		</band>
 	</columnFooter>
 	<pageFooter>
-		<band height="13" splitType="Stretch">
-			<frame>
-				<reportElement mode="Opaque" x="2" y="0" width="555" height="13" forecolor="#D0B48E" backcolor="#9DB1B8" uuid="e632ee9c-75b4-4f05-8a55-3123e6f9ca65"/>
-				<textField evaluationTime="Report">
-					<reportElement style="Column header" x="513" y="-1" width="40" height="13" forecolor="#FFFFFF" uuid="63f2c99d-335b-404c-bb4a-eedae9cfd1e4"/>
-					<textElement verticalAlignment="Middle">
-						<font size="10" isBold="false"/>
-					</textElement>
-					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
-				</textField>
-				<textField>
-					<reportElement style="Column header" x="433" y="-1" width="80" height="13" forecolor="#FFFFFF" uuid="0cf633b5-6721-4ed0-9c29-518ede1baee8"/>
-					<textElement textAlignment="Right" verticalAlignment="Middle">
-						<font size="10" isBold="false"/>
-					</textElement>
-					<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
-				</textField>
-				<textField pattern="EEEEE dd MMMMM yyyy">
-					<reportElement style="Column header" x="2" y="0" width="197" height="13" forecolor="#FFFFFF" uuid="fcf47b7c-8ad5-4026-8e06-729ff75e5732"/>
-					<textElement verticalAlignment="Middle">
-						<font size="10" isBold="false"/>
-					</textElement>
-					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
-				</textField>
-			</frame>
-		</band>
+		<band height="25" splitType="Stretch"/>
 	</pageFooter>
 	<summary>
 		<band splitType="Stretch"/>
