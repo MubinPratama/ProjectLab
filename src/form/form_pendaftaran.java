@@ -884,5 +884,7 @@ public class form_pendaftaran extends javax.swing.JPanel {
 }
     
     
-
+private void tes(){
+    
+}
 }
