@@ -77,7 +77,6 @@ public class Form_Dokter extends javax.swing.JPanel {
         caridata = new javax.swing.JTextField();
         bt_cardat = new javax.swing.JButton();
         TambahDokter = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
         bt_batalTambah = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
@@ -87,6 +86,7 @@ public class Form_Dokter extends javax.swing.JPanel {
         jLabel5 = new javax.swing.JLabel();
         Kontak = new javax.swing.JTextField();
         bt_Simpan = new javax.swing.JButton();
+        jLabel7 = new javax.swing.JLabel();
 
         setLayout(new java.awt.CardLayout());
 
@@ -206,9 +206,6 @@ public class Form_Dokter extends javax.swing.JPanel {
 
         mainPanel.add(dataDokter, "card2");
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel2.setText("DATA DOKTER");
-
         bt_batalTambah.setText("Batal");
         bt_batalTambah.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -253,7 +250,7 @@ public class Form_Dokter extends javax.swing.JPanel {
                             .addComponent(jLabel3)
                             .addComponent(jLabel4)
                             .addComponent(jLabel5))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(0, 714, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -283,6 +280,9 @@ public class Form_Dokter extends javax.swing.JPanel {
             }
         });
 
+        jLabel7.setFont(new java.awt.Font("Georgia", 1, 36)); // NOI18N
+        jLabel7.setText("DATA DOKTER");
+
         javax.swing.GroupLayout TambahDokterLayout = new javax.swing.GroupLayout(TambahDokter);
         TambahDokter.setLayout(TambahDokterLayout);
         TambahDokterLayout.setHorizontalGroup(
@@ -292,24 +292,25 @@ public class Form_Dokter extends javax.swing.JPanel {
                 .addGroup(TambahDokterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(TambahDokterLayout.createSequentialGroup()
-                        .addGroup(TambahDokterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addComponent(bt_Simpan, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 568, Short.MAX_VALUE)
-                        .addComponent(bt_batalTambah, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(bt_Simpan, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 578, Short.MAX_VALUE)
+                        .addComponent(bt_batalTambah, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(TambahDokterLayout.createSequentialGroup()
+                        .addComponent(jLabel7)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         TambahDokterLayout.setVerticalGroup(
             TambahDokterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, TambahDokterLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel2)
                 .addGroup(TambahDokterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(TambahDokterLayout.createSequentialGroup()
-                        .addGap(49, 49, 49)
+                        .addContainerGap()
+                        .addComponent(jLabel7)
+                        .addGap(30, 30, 30)
                         .addComponent(bt_Simpan, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, TambahDokterLayout.createSequentialGroup()
-                        .addGap(48, 48, 48)
+                        .addGap(81, 81, 81)
                         .addComponent(bt_batalTambah, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(14, 14, 14)
                 .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -489,11 +490,11 @@ public class Form_Dokter extends javax.swing.JPanel {
     private javax.swing.JTextField caridata;
     private javax.swing.JPanel dataDokter;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JPanel mainPanel;
