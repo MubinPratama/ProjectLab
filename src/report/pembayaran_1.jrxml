@@ -38,7 +38,7 @@ FROM
 	<title>
 		<band height="102" splitType="Stretch">
 			<staticText>
-				<reportElement style="Title" x="88" y="0" width="625" height="62" forecolor="#736343" uuid="f5b4bd87-b35b-4823-959d-ed146037e412"/>
+				<reportElement style="Title" x="86" y="17" width="625" height="62" forecolor="#736343" uuid="f5b4bd87-b35b-4823-959d-ed146037e412"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="45" pdfFontName="Times-Roman"/>
 				</textElement>
