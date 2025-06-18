@@ -5182,7 +5182,7 @@ public class form_hasil extends javax.swing.JPanel {
     + "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
 try (PreparedStatement ps = kon.prepareStatement(sql)) {
-    ps.setInt(1, Integer.parseInt(id_daftar.getSelectedItem().toString())); // ID Pendaftaran
+    ps.setString(1, id_daftar.getSelectedItem().toString()); // ID Pendaftaran
     ps.setString(2, cmbWarna.getSelectedItem().toString());
     ps.setString(3, cmbKejernihan.getSelectedItem().toString());
     ps.setString(4, cmbBeratJenis.getSelectedItem().toString());
@@ -5233,7 +5233,7 @@ try (PreparedStatement ps = kon.prepareStatement(sql)) {
                 "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         Connection kon = koneksi.koneksiDb();
         PreparedStatement ps = kon.prepareStatement(sql);
-        ps.setInt(1, Integer.parseInt(id_daftar.getSelectedItem().toString())); // misal dari TextField ID
+        ps.setString(1, id_daftar.getSelectedItem().toString()); // misal dari TextField ID
 
         ps.setString(2, txtHemoglobin.getText());
         ps.setString(3, txtHematokrit.getText());
@@ -5282,7 +5282,7 @@ try (PreparedStatement ps = kon.prepareStatement(sql)) {
                 "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         Connection kon = koneksi.koneksiDb();
         PreparedStatement ps = kon.prepareStatement(sql);
-        ps.setInt(1, Integer.parseInt(id_daftar.getSelectedItem().toString()));
+        ps.setString(1, id_daftar.getSelectedItem().toString());
         ps.setString(2, rbtnTPHANeg.isSelected() ? "Negative" : "Positive");
         ps.setString(3, rbtnVDRLNeg.isSelected() ? "Negative" : "Positive");
         ps.setString(4, rbtnWRNeg.isSelected() ? "Negative" : "Positive");
@@ -5338,7 +5338,7 @@ try (PreparedStatement ps = kon.prepareStatement(sql)) {
                      "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
         PreparedStatement ps = kon.prepareStatement(sql);
-        ps.setInt(1, Integer.parseInt(id_daftar.getSelectedItem().toString()));
+        ps.setString(1, id_daftar.getSelectedItem().toString());
         ps.setString(2, txtBilirubinTotal.getText());
         ps.setString(3, txtBilirubinDirek.getText());
         ps.setString(4, txtBilirubinIndirek.getText());
@@ -5397,7 +5397,7 @@ try (PreparedStatement ps = kon.prepareStatement(sql)) {
 
         PreparedStatement ps = kon.prepareStatement(sql);
 
-        ps.setInt(1, Integer.parseInt(id_daftar.getSelectedItem().toString()));
+        ps.setString(1, id_daftar.getSelectedItem().toString());
         ps.setString(2, txtPuasa.getText());
         ps.setString(3, txtPostprandial.getText());
         ps.setString(4, txtKurvaPuasa.getText());
@@ -5454,7 +5454,7 @@ try (PreparedStatement ps = kon.prepareStatement(sql)) {
         + "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
 try (PreparedStatement ps = kon.prepareStatement(sql)) {
-    ps.setInt(1, Integer.parseInt(id_daftar.getSelectedItem().toString())); 
+    ps.setString(1, id_daftar.getSelectedItem().toString());
     ps.setString(2, TWarna.getText());
     ps.setString(3, TKonsistensi.getSelectedItem().toString());
     ps.setString(4, TLendirP.isSelected() ? "Positive" : "Negative"); 
@@ -5492,13 +5492,13 @@ try (PreparedStatement ps = kon.prepareStatement(sql)) {
 
     private void sv_hasilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sv_hasilActionPerformed
         // TODO add your handling code here:
-        int idPendaftaran = Integer.parseInt(id_daftar.getSelectedItem().toString());
+        String idPendaftaran = id_daftar.getSelectedItem().toString();
         simpanPreviewKeDatabase(idPendaftaran);
             try {
                 Connection kon = koneksi.koneksiDb();
                 String update = "UPDATE pendaftaran SET status_hasil = 'sudah' WHERE id_pendaftaran = ?";
                 PreparedStatement pstUpdate = kon.prepareStatement(update);
-                pstUpdate.setInt(1, Integer.parseInt(id_daftar.getSelectedItem().toString()));
+                pstUpdate.setString(1, id_daftar.getSelectedItem().toString());
                 pstUpdate.executeUpdate();
             }catch (SQLException e) {
                 JOptionPane.showMessageDialog(null, "Gagal menyimpan data" + e.getMessage());
@@ -6498,7 +6498,7 @@ public void tampilkanHasilTinjaKeTabel() {
     tambahBarisJikaAda(model,"Darah Samar", hasilDS);
 }
 
-private void simpanPreviewKeDatabase(int idPendaftaran) {
+private void simpanPreviewKeDatabase(String idPendaftaran) {
     DefaultTableModel model = (DefaultTableModel) tb_rincian.getModel();
     String sql = "INSERT INTO hasil_periksa (id_pendaftaran, nama_pemeriksaan, hasil_pemeriksaan) VALUES (?, ?, ?)";
 
@@ -6510,7 +6510,7 @@ private void simpanPreviewKeDatabase(int idPendaftaran) {
             String nama = model.getValueAt(i, 0).toString();
             String hasil = model.getValueAt(i, 1).toString();
 
-            pst.setInt(1, idPendaftaran);
+            pst.setString(1, idPendaftaran);
             pst.setString(2, nama);
             pst.setString(3, hasil);
             pst.addBatch(); // Kumpulkan batch

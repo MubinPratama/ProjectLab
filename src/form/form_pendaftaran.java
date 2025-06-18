@@ -18,6 +18,8 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.HashMap;
 import javax.swing.JDialog;
@@ -45,8 +47,9 @@ public class form_pendaftaran extends javax.swing.JPanel {
         loadDokter();
         loadLayanan();
         loadJenisKelamin();
+        generateIdPendaftaran();
         
-        //Tgl Lahie
+        //Tgl Lahir
         JDateChooser TanggalLahir = new JDateChooser();
         TanggalLahir.setDateFormatString("yyyy-MM-dd"); // format sesuai DB
         form_pendaftaran.add(TanggalLahir); // masukkan ke panel
@@ -225,6 +228,28 @@ public class form_pendaftaran extends javax.swing.JPanel {
         }
     }
     
+     private void generateIdPendaftaran() {
+        try {
+            Connection kon = koneksi.koneksiDb();
+            LocalDate now = LocalDate.now();
+            String tanggalStr = now.format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+            String tanggalId = now.format(DateTimeFormatter.ofPattern("yyyyMMdd"));
+
+            String sql = "SELECT COUNT(*) as total FROM pendaftaran WHERE tanggal_daftar = ?";
+            PreparedStatement pst = kon.prepareStatement(sql);
+            pst.setString(1, tanggalStr);
+            ResultSet rs = pst.executeQuery();
+
+            int urut = 1;
+            if (rs.next()) {
+                urut = rs.getInt("total") + 1;
+            }
+            String noUrutStr = String.format("%03d", urut);
+            idPendaftaran.setText(tanggalId + noUrutStr);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Gagal generate ID: " + e.getMessage());
+        }
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -278,6 +303,8 @@ public class form_pendaftaran extends javax.swing.JPanel {
         jLabel24 = new javax.swing.JLabel();
         lblTanggal = new javax.swing.JLabel();
         TanggalLahir = new com.toedter.calendar.JDateChooser();
+        jLabel11 = new javax.swing.JLabel();
+        idPendaftaran = new javax.swing.JFormattedTextField();
 
         jLabel8.setText("INI TESTER");
 
@@ -468,13 +495,15 @@ public class form_pendaftaran extends javax.swing.JPanel {
         lblTanggal.setText("jLabel11");
         lblTanggal.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
 
+        jLabel11.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
+        jLabel11.setText("Tanggal  :");
+
         javax.swing.GroupLayout form_pendaftaranLayout = new javax.swing.GroupLayout(form_pendaftaran);
         form_pendaftaran.setLayout(form_pendaftaranLayout);
         form_pendaftaranLayout.setHorizontalGroup(
             form_pendaftaranLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(form_pendaftaranLayout.createSequentialGroup()
-                .addGroup(form_pendaftaranLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel24, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, form_pendaftaranLayout.createSequentialGroup()
+                .addGroup(form_pendaftaranLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(form_pendaftaranLayout.createSequentialGroup()
                         .addGap(10, 10, 10)
                         .addGroup(form_pendaftaranLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -482,27 +511,35 @@ public class form_pendaftaran extends javax.swing.JPanel {
                             .addGroup(form_pendaftaranLayout.createSequentialGroup()
                                 .addComponent(jLabel6)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(form_pendaftaranLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(form_pendaftaranLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addGroup(form_pendaftaranLayout.createSequentialGroup()
                                         .addComponent(SimpanDaftar, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(170, 170, 170)
-                                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(203, 203, 203))
                                     .addGroup(form_pendaftaranLayout.createSequentialGroup()
-                                        .addGroup(form_pendaftaranLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(form_pendaftaranLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, form_pendaftaranLayout.createSequentialGroup()
+                                                .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addComponent(idPendaftaran))
+                                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, form_pendaftaranLayout.createSequentialGroup()
+                                                .addGroup(form_pendaftaranLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addGroup(form_pendaftaranLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                    .addGroup(form_pendaftaranLayout.createSequentialGroup()
+                                                        .addComponent(Layanan, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                        .addComponent(bt_layanan, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                    .addComponent(lblTanggal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                    .addComponent(Dokter, javax.swing.GroupLayout.PREFERRED_SIZE, 331, javax.swing.GroupLayout.PREFERRED_SIZE))))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addGroup(form_pendaftaranLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addGroup(form_pendaftaranLayout.createSequentialGroup()
-                                                .addComponent(Layanan, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
-                                                .addComponent(bt_layanan, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addComponent(lblTanggal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(Dokter, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                        .addGap(41, 41, 41)
-                                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))))))
-                    .addGroup(form_pendaftaranLayout.createSequentialGroup()
+                                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 361, Short.MAX_VALUE))))))
+                    .addComponent(jLabel24, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, form_pendaftaranLayout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(form_pendaftaranLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(form_pendaftaranLayout.createSequentialGroup()
@@ -595,9 +632,13 @@ public class form_pendaftaran extends javax.swing.JPanel {
                             .addComponent(txttelp, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel20)
                             .addComponent(jLabel16, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(18, 18, 18)
                 .addGroup(form_pendaftaranLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(form_pendaftaranLayout.createSequentialGroup()
+                        .addGap(19, 19, 19)
+                        .addGroup(form_pendaftaranLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(idPendaftaran, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel11))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(form_pendaftaranLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel3)
                             .addComponent(Dokter, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -611,8 +652,10 @@ public class form_pendaftaran extends javax.swing.JPanel {
                             .addGroup(form_pendaftaranLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(Layanan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(bt_layanan))))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(57, 57, 57)
+                    .addGroup(form_pendaftaranLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(42, 42, 42)
                 .addGroup(form_pendaftaranLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(form_pendaftaranLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(SimpanDaftar)
@@ -641,94 +684,92 @@ public class form_pendaftaran extends javax.swing.JPanel {
     private void SimpanDaftarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SimpanDaftarActionPerformed
         // TODO add your handling code here:
   try {
-        Connection kon = koneksi.koneksiDb();
-        kon.setAutoCommit(false);
+    Connection kon = koneksi.koneksiDb();
+    kon.setAutoCommit(false);
 
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-        String tglLahir = sdf.format(TanggalLahir.getDate());
+    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+    String tglLahir = sdf.format(TanggalLahir.getDate());
 
-        // Ambil data dari form
-        String No_rm;
-        String nama = txtNama.getText();
-        String alamat = txtAlamat.getText();
-        String jk = cbjk.getSelectedItem().toString();
-        String tinggi = txtTB.getText();
-        String berat = txtBB.getText();
-        String telp = txttelp.getText();
-        String tanggalInput = lblTanggal.getText();
-        String namaDokterDipilih = Dokter.getSelectedItem().toString();
-        String idDokter = mapDokter.get(namaDokterDipilih);
+    // Ambil data dari form
+    String id_pendaftaran = idPendaftaran.getText();  // ID pendaftaran sudah digenerate manual
+    String No_rm;
+    String nama = txtNama.getText();
+    String alamat = txtAlamat.getText();
+    String jk = cbjk.getSelectedItem().toString();
+    String tinggi = txtTB.getText();
+    String berat = txtBB.getText();
+    String telp = txttelp.getText();
+    String tanggalInput = lblTanggal.getText();
+    String namaDokterDipilih = Dokter.getSelectedItem().toString();
+    String idDokter = mapDokter.get(namaDokterDipilih);
 
-        // === CEK APAKAH PASIEN BARU ===
-        if (cbPasien.getSelectedItem().toString().equals("-- ID Baru --")) {
-            // Simpan pasien baru
-            PreparedStatement psPasien = kon.prepareStatement(
-                "INSERT INTO pasien (Nama, Alamat, jk, Tinggi, Berat, Tgl_lahir, no_telp) VALUES (?, ?, ?, ?, ?, ?, ?)",
-                Statement.RETURN_GENERATED_KEYS
-            );
-            psPasien.setString(1, nama);
-            psPasien.setString(2, alamat);
-            psPasien.setString(3, jk);
-            psPasien.setString(4, tinggi);
-            psPasien.setString(5, berat);
-            psPasien.setString(6, tglLahir);
-            psPasien.setString(7, telp);
-            psPasien.executeUpdate();
-
-            ResultSet rs = psPasien.getGeneratedKeys();
-            if (rs.next()) {
-                No_rm = String.valueOf(rs.getInt(1)); // No_rm generated by DB
-            } else {
-                throw new SQLException("Gagal menyimpan pasien baru, ID tidak tersedia.");
-            }
-
-            rs.close();
-            psPasien.close();
-        } else {
-            No_rm = cbPasien.getSelectedItem().toString();
-        }
-
-        // === SIMPAN PENDAFTARAN ===
-        PreparedStatement psPendaftaran = kon.prepareStatement(
-            "INSERT INTO pendaftaran (No_rm, Id_dokter, tanggal_daftar) VALUES (?, ?, ?)",
+    // === CEK APAKAH PASIEN BARU ===
+    if (cbPasien.getSelectedItem().toString().equals("-- ID Baru --")) {
+        // Simpan pasien baru
+        PreparedStatement psPasien = kon.prepareStatement(
+            "INSERT INTO pasien (Nama, Alamat, jk, Tinggi, Berat, Tgl_lahir, no_telp) VALUES (?, ?, ?, ?, ?, ?, ?)",
             Statement.RETURN_GENERATED_KEYS
         );
-        psPendaftaran.setString(1, No_rm);
-        psPendaftaran.setString(2, idDokter);
-        psPendaftaran.setString(3, tanggalInput);
-        psPendaftaran.executeUpdate();
+        psPasien.setString(1, nama);
+        psPasien.setString(2, alamat);
+        psPasien.setString(3, jk);
+        psPasien.setString(4, tinggi);
+        psPasien.setString(5, berat);
+        psPasien.setString(6, tglLahir);
+        psPasien.setString(7, telp);
+        psPasien.executeUpdate();
 
-        ResultSet rsId = psPendaftaran.getGeneratedKeys();
-        int idPendaftaran = 0;
-        if (rsId.next()) {
-            idPendaftaran = rsId.getInt(1);
+        ResultSet rs = psPasien.getGeneratedKeys();
+        if (rs.next()) {
+            No_rm = String.valueOf(rs.getInt(1)); // Ambil No_rm dari DB
+        } else {
+            throw new SQLException("Gagal menyimpan pasien baru, ID tidak tersedia.");
         }
 
-        // === SIMPAN DETAIL LAYANAN ===
-        DefaultTableModel model = (DefaultTableModel) table_layanan.getModel();
-        PreparedStatement psDetail = kon.prepareStatement(
-            "INSERT INTO pendaftaran_detail (id_pendaftaran, id_layanan, harga) VALUES (?, ?, ?)"
-        );
-
-        for (int i = 0; i < model.getRowCount(); i++) {
-            int harga = Integer.parseInt(model.getValueAt(i, 1).toString());
-            String namaLayananDipilih = model.getValueAt(i, 0).toString();
-            String idLayanan = mapLayanan.get(namaLayananDipilih);
-
-            psDetail.setInt(1, idPendaftaran);
-            psDetail.setString(2, idLayanan);
-            psDetail.setInt(3, harga);
-            psDetail.addBatch();
-        }
-
-        psDetail.executeBatch();
-        kon.commit(); // SELESAIKAN TRANSAKSI
-        JOptionPane.showMessageDialog(this, "Data berhasil disimpan!");
-        resetdaftar();
-    } catch (Exception e) {
-        e.printStackTrace();
-        JOptionPane.showMessageDialog(this, "Gagal menyimpan data: " + e.getMessage());
+        rs.close();
+        psPasien.close();
+    } else {
+        No_rm = cbPasien.getSelectedItem().toString();
     }
+
+    // === SIMPAN PENDAFTARAN ===
+    PreparedStatement psPendaftaran = kon.prepareStatement(
+        "INSERT INTO pendaftaran (id_pendaftaran, No_rm, Id_dokter, tanggal_daftar) VALUES (?, ?, ?, ?)"
+    );
+    psPendaftaran.setString(1, id_pendaftaran); // manual ID
+    psPendaftaran.setString(2, No_rm);
+    psPendaftaran.setString(3, idDokter);
+    psPendaftaran.setString(4, tanggalInput);
+    psPendaftaran.executeUpdate();
+
+    // === SIMPAN DETAIL LAYANAN ===
+    DefaultTableModel model = (DefaultTableModel) table_layanan.getModel();
+    PreparedStatement psDetail = kon.prepareStatement(
+        "INSERT INTO pendaftaran_detail (id_pendaftaran, id_layanan, harga) VALUES (?, ?, ?)"
+    );
+
+    for (int i = 0; i < model.getRowCount(); i++) {
+        int harga = Integer.parseInt(model.getValueAt(i, 1).toString());
+        String namaLayananDipilih = model.getValueAt(i, 0).toString();
+        String idLayanan = mapLayanan.get(namaLayananDipilih);
+
+        psDetail.setString(1, id_pendaftaran);  // pakai id_pendaftaran dari awal
+        psDetail.setString(2, idLayanan);
+        psDetail.setInt(3, harga);
+        psDetail.addBatch();
+    }
+
+    psDetail.executeBatch();
+    kon.commit(); // SELESAIKAN TRANSAKSI
+
+    JOptionPane.showMessageDialog(this, "Data berhasil disimpan!");
+    resetdaftar(); // reset form
+
+} catch (Exception e) {
+    e.printStackTrace();
+    JOptionPane.showMessageDialog(this, "Gagal menyimpan data: " + e.getMessage());
+}
+
     }//GEN-LAST:event_SimpanDaftarActionPerformed
 
     private void bt_layananActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_layananActionPerformed
@@ -762,9 +803,11 @@ public class form_pendaftaran extends javax.swing.JPanel {
     private javax.swing.JComboBox<String> cbPasien;
     private javax.swing.JComboBox<String> cbjk;
     private javax.swing.JPanel form_pendaftaran;
+    private javax.swing.JFormattedTextField idPendaftaran;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;

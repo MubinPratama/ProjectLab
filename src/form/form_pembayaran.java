@@ -300,7 +300,7 @@ public class form_pembayaran extends javax.swing.JPanel {
             try {
             String update = "UPDATE pendaftaran SET status_bayar = 'sudah' WHERE id_pendaftaran = ?";
             PreparedStatement pstUpdate = kon.prepareStatement(update);
-            pstUpdate.setInt(1, Integer.parseInt(no_pendaftaran.getSelectedItem().toString()));
+            pstUpdate.setString(1, no_pendaftaran.getSelectedItem().toString());
             pstUpdate.executeUpdate();
             JOptionPane.showMessageDialog(this, "Status Sudah Diubah");
             resetForm();
