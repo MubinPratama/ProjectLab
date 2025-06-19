@@ -89,6 +89,7 @@ public class Form_pasien extends javax.swing.JPanel {
     private void tampilkanData() {
     DefaultTableModel model = new DefaultTableModel();
     model.addColumn("ID Pasien");
+    model.addColumn("NIK/BPJS");
     model.addColumn("Nama");
     model.addColumn("Alamat");
     model.addColumn("Jenis Kelamin");
@@ -107,6 +108,7 @@ public class Form_pasien extends javax.swing.JPanel {
         while (res.next()) {
             model.addRow(new Object[]{
                 res.getString("No_rm"),
+                res.getString("NIK"),
                 res.getString("Nama"),
                 res.getString("Alamat"),
                 res.getString("jk"),
@@ -167,8 +169,6 @@ public class Form_pasien extends javax.swing.JPanel {
         bt_cardat = new javax.swing.JButton();
         tambahPasien = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        bt_Simpan = new javax.swing.JButton();
-        bt_batalTambah = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         IdPasien = new javax.swing.JTextField();
@@ -189,6 +189,10 @@ public class Form_pasien extends javax.swing.JPanel {
         JK = new javax.swing.JComboBox<>();
         jLabel11 = new javax.swing.JLabel();
         TanggalLahir = new com.toedter.calendar.JDateChooser();
+        jLabel13 = new javax.swing.JLabel();
+        Nik = new javax.swing.JTextField();
+        bt_Simpan = new javax.swing.JButton();
+        bt_batalTambah = new javax.swing.JButton();
 
         setLayout(new java.awt.CardLayout());
 
@@ -233,7 +237,6 @@ public class Form_pasien extends javax.swing.JPanel {
         bt_tambah.setText("Tambah Data");
         bt_tambah.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         bt_tambah.setOpaque(false);
-        bt_tambah.setPreferredSize(new java.awt.Dimension(91, 23));
         bt_tambah.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bt_tambahActionPerformed(evt);
@@ -312,8 +315,71 @@ public class Form_pasien extends javax.swing.JPanel {
 
         mainPanel.add(dataPasien, "card2");
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        tambahPasien.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel2.setFont(new java.awt.Font("Georgia", 1, 36)); // NOI18N
         jLabel2.setText("TambahPasien");
+
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel3.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
+        jLabel3.setText("ID PASIEN");
+
+        IdPasien.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
+        IdPasien.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
+
+        jLabel4.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
+        jLabel4.setText("NAMA PASIEN");
+
+        NamaPasien.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
+        NamaPasien.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
+
+        jLabel5.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
+        jLabel5.setText("ALAMAT");
+
+        Telepon.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
+        Telepon.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
+
+        Alamat.setColumns(20);
+        Alamat.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
+        Alamat.setRows(5);
+        jScrollPane2.setViewportView(Alamat);
+
+        jLabel6.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
+        jLabel6.setText("NO TELEPON");
+
+        jLabel7.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
+        jLabel7.setText("TINGGI BADAN");
+
+        jLabel8.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
+        jLabel8.setText("GOLONGAN DARAH");
+
+        jLabel9.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
+        jLabel9.setText("TANGGAL LAHIR");
+
+        TinggiBadan.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
+        TinggiBadan.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
+
+        jLabel10.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
+        jLabel10.setText("BERAT BADAN");
+
+        BeratBadan.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
+        BeratBadan.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
+
+        Goldar.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
+
+        JK.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
+
+        jLabel11.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
+        jLabel11.setText("JENIS KELAMIN");
+
+        TanggalLahir.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
+
+        jLabel13.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
+        jLabel13.setText("NIK / BPJS");
+
+        Nik.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
+        Nik.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
 
         bt_Simpan.setBackground(new java.awt.Color(0, 235, 21));
         bt_Simpan.setText("SIMPAN");
@@ -330,38 +396,6 @@ public class Form_pasien extends javax.swing.JPanel {
                 bt_batalTambahActionPerformed(evt);
             }
         });
-
-        jLabel3.setText("ID PASIEN");
-
-        IdPasien.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
-
-        jLabel4.setText("NAMA PASIEN");
-
-        NamaPasien.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
-
-        jLabel5.setText("ALAMAT");
-
-        Telepon.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
-
-        Alamat.setColumns(20);
-        Alamat.setRows(5);
-        jScrollPane2.setViewportView(Alamat);
-
-        jLabel6.setText("NO TELEPON");
-
-        jLabel7.setText("TINGGI BADAN");
-
-        jLabel8.setText("GOLONGAN DARAH");
-
-        jLabel9.setText("TANGGAL LAHIR");
-
-        TinggiBadan.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
-
-        jLabel10.setText("BERAT BADAN");
-
-        BeratBadan.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
-
-        jLabel11.setText("JENIS KELAMIN");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -391,26 +425,36 @@ public class Form_pasien extends javax.swing.JPanel {
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel3)
                                     .addComponent(jLabel5)
-                                    .addComponent(jLabel6))
-                                .addGap(0, 0, Short.MAX_VALUE)))
+                                    .addComponent(jLabel6)
+                                    .addComponent(jLabel13))
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addComponent(Nik))
                         .addContainerGap())
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel4)
                             .addComponent(NamaPasien, javax.swing.GroupLayout.PREFERRED_SIZE, 322, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 73, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 93, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel11)
                             .addComponent(JK, javax.swing.GroupLayout.PREFERRED_SIZE, 304, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(102, 102, 102))))
+                        .addGap(102, 102, 102))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(bt_Simpan, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(bt_batalTambah, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(IdPasien, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel13)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Nik, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -445,7 +489,11 @@ public class Form_pasien extends javax.swing.JPanel {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(TinggiBadan, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(BeratBadan, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(51, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(bt_Simpan, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(bt_batalTambah, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 2, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout tambahPasienLayout = new javax.swing.GroupLayout(tambahPasien);
@@ -453,35 +501,19 @@ public class Form_pasien extends javax.swing.JPanel {
         tambahPasienLayout.setHorizontalGroup(
             tambahPasienLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(tambahPasienLayout.createSequentialGroup()
-                .addGroup(tambahPasienLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(tambahPasienLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(tambahPasienLayout.createSequentialGroup()
-                        .addGroup(tambahPasienLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(tambahPasienLayout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(jLabel2))
-                            .addGroup(tambahPasienLayout.createSequentialGroup()
-                                .addGap(17, 17, 17)
-                                .addComponent(bt_Simpan, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(44, 44, 44)
-                                .addComponent(bt_batalTambah, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 542, Short.MAX_VALUE)))
-                .addContainerGap())
+                .addContainerGap()
+                .addComponent(jLabel2)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         tambahPasienLayout.setVerticalGroup(
             tambahPasienLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tambahPasienLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel2)
-                .addGap(49, 49, 49)
-                .addGroup(tambahPasienLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(bt_batalTambah, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(bt_Simpan, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(19, 19, 19))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         mainPanel.add(tambahPasien, "card3");
@@ -494,27 +526,29 @@ public class Form_pasien extends javax.swing.JPanel {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         String tglLahir = sdf.format(TanggalLahir.getDate());
     try {
-        String sql = "INSERT INTO pasien(No_rm, Nama, Alamat, jk, no_telp, Tgl_Lahir, Tinggi, Berat, goldar) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)"+
+        String sql = "INSERT INTO pasien(No_rm, NIK, Nama, Alamat, jk, no_telp, Tgl_Lahir, Tinggi, Berat, goldar) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"+
                 "ON DUPLICATE KEY UPDATE " +
-                 "nama = VALUES(Nama), alamat = VALUES(Alamat), jk = VALUES(jk), " +
+                 "nik = VALUES(nik), nama = VALUES(Nama), alamat = VALUES(Alamat), jk = VALUES(jk), " +
                  "no_telp = VALUES(no_telp), tgl_lahir = VALUES(Tgl_Lahir), " +
                  "tinggi = VALUES(Tinggi), berat = VALUES(Berat), goldar = VALUES(goldar)";
         Connection kon = koneksi.koneksiDb();
         PreparedStatement pst = kon.prepareStatement(sql);
         pst.setString(1, IdPasien.getText());  // Tambahkan ID Pasien
-        pst.setString(2, NamaPasien.getText());
-        pst.setString(3, Alamat.getText());
-        pst.setString(4, JK.getSelectedItem().toString());
-        pst.setString(5, Telepon.getText());
-        pst.setString(6, tglLahir); // Format: YYYY-MM-DD
-        pst.setDouble(7, Double.parseDouble(TinggiBadan.getText()));
-        pst.setDouble(8, Double.parseDouble(BeratBadan.getText()));
-        pst.setString(9, Goldar.getSelectedItem().toString());
+        pst.setString(2, Nik.getText());  
+        pst.setString(3, NamaPasien.getText());
+        pst.setString(4, Alamat.getText());
+        pst.setString(5, JK.getSelectedItem().toString());
+        pst.setString(6, Telepon.getText());
+        pst.setString(7, tglLahir); // Format: YYYY-MM-DD
+        pst.setDouble(8, Double.parseDouble(TinggiBadan.getText()));
+        pst.setDouble(9, Double.parseDouble(BeratBadan.getText()));
+        pst.setString(10, Goldar.getSelectedItem().toString());
 
         
         pst.executeUpdate();
         JOptionPane.showMessageDialog(null, "Data berhasil disimpan!");
         IdPasien.setText("");
+        Nik.setText("");
         NamaPasien.setText("");
         Alamat.setText("");
         Telepon.setText("");
@@ -530,6 +564,7 @@ public class Form_pasien extends javax.swing.JPanel {
     private void bt_batalTambahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_batalTambahActionPerformed
         // TODO add your handling code here:
         IdPasien.setText("");
+        Nik.setText("");
         NamaPasien.setText("");
         Alamat.setText("");
         Telepon.setText("");
@@ -568,18 +603,20 @@ public class Form_pasien extends javax.swing.JPanel {
         if (selectedRow != -1) {
         // Ambil data dari tabel
         String id = tabel_pasien.getValueAt(selectedRow, 0).toString();
-        String nama = tabel_pasien.getValueAt(selectedRow, 1).toString();
-        String alamat = tabel_pasien.getValueAt(selectedRow, 2).toString();
-        String jk = tabel_pasien.getValueAt(selectedRow, 3).toString();
-        String telepon = tabel_pasien.getValueAt(selectedRow, 4).toString();
-        String tgl_lahir = tabel_pasien.getValueAt(selectedRow, 5).toString();
-        String tinggi = tabel_pasien.getValueAt(selectedRow, 6).toString();
-        String berat = tabel_pasien.getValueAt(selectedRow, 7).toString();
-        String goldar = tabel_pasien.getValueAt(selectedRow, 8).toString();
+        String nik = tabel_pasien.getValueAt(selectedRow, 1).toString();
+        String nama = tabel_pasien.getValueAt(selectedRow, 2).toString();
+        String alamat = tabel_pasien.getValueAt(selectedRow, 3).toString();
+        String jk = tabel_pasien.getValueAt(selectedRow, 4).toString();
+        String telepon = tabel_pasien.getValueAt(selectedRow, 5).toString();
+        String tgl_lahir = tabel_pasien.getValueAt(selectedRow, 6).toString();
+        String tinggi = tabel_pasien.getValueAt(selectedRow, 7).toString();
+        String berat = tabel_pasien.getValueAt(selectedRow, 8).toString();
+        String goldar = tabel_pasien.getValueAt(selectedRow, 9).toString();
         
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         // Masukkan ke text field di panel Formulir
         IdPasien.setText(id );
+        Nik.setText(nik );
         NamaPasien.setText(nama);
         Alamat.setText(alamat);
         Telepon.setText(telepon);
@@ -661,16 +698,17 @@ public class Form_pasien extends javax.swing.JPanel {
             model.setRowCount(0);
             while(hasil.next()){
                 String a = hasil.getString("No_rm");
-                String b = hasil.getString("Nama");
-                String c = hasil.getString("Alamat");
-                String d = hasil.getString("jk");
-                String e = hasil.getString("no_telp");
-                String f = hasil.getString("Tgl_Lahir");
-                String g = String.valueOf(hasil.getDouble("Tinggi"));
-                String h = String.valueOf(hasil.getDouble("Berat"));
-                String i = hasil.getString("goldar"); // kalau ada kolom goldar
+                String b = hasil.getString("NIK");
+                String c = hasil.getString("Nama");
+                String d = hasil.getString("Alamat");
+                String e = hasil.getString("jk");
+                String f = hasil.getString("no_telp");
+                String g = hasil.getString("Tgl_Lahir");
+                String h = String.valueOf(hasil.getDouble("Tinggi"));
+                String i = String.valueOf(hasil.getDouble("Berat"));
+                String j = hasil.getString("goldar"); // kalau ada kolom goldar
 
-                String[] data = {a, b, c, d, e, f, g, h, i};
+                String[] data = {a, b, c, d, e, f, g, h, i, j};
                 model.addRow(data);
                 
             }
@@ -687,6 +725,7 @@ public class Form_pasien extends javax.swing.JPanel {
     private javax.swing.JTextField IdPasien;
     private javax.swing.JComboBox<String> JK;
     private javax.swing.JTextField NamaPasien;
+    private javax.swing.JTextField Nik;
     private com.toedter.calendar.JDateChooser TanggalLahir;
     private javax.swing.JTextField Telepon;
     private javax.swing.JTextField TinggiBadan;
@@ -702,6 +741,7 @@ public class Form_pasien extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

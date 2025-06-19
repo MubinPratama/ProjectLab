@@ -35,6 +35,8 @@ public class Form_Dokter extends javax.swing.JPanel {
     model.addColumn("ID Dokter");
     model.addColumn("Nama");
     model.addColumn("Kontak");
+    model.addColumn("Spesialis");
+    model.addColumn("Alamat");
 
     try {
         String sql = "SELECT * FROM dokter";
@@ -47,6 +49,8 @@ public class Form_Dokter extends javax.swing.JPanel {
                 res.getString("Id_Dokter"),
                 res.getString("Nama"),
                 res.getString("Kontak"),
+                res.getString("spesialis"),
+                res.getString("Alamat"),
             });
         }
 
@@ -78,15 +82,19 @@ public class Form_Dokter extends javax.swing.JPanel {
         bt_cardat = new javax.swing.JButton();
         TambahDokter = new javax.swing.JPanel();
         bt_batalTambah = new javax.swing.JButton();
-        jPanel1 = new javax.swing.JPanel();
+        bt_Simpan = new javax.swing.JButton();
+        jLabel7 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         Id_Dokter = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         Nama_dokter = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         Kontak = new javax.swing.JTextField();
-        bt_Simpan = new javax.swing.JButton();
-        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        Spesialis = new javax.swing.JTextField();
+        jLabel9 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        Alamat = new javax.swing.JTextArea();
 
         setLayout(new java.awt.CardLayout());
 
@@ -162,17 +170,19 @@ public class Form_Dokter extends javax.swing.JPanel {
         dataDokter.setLayout(dataDokterLayout);
         dataDokterLayout.setHorizontalGroup(
             dataDokterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 816, Short.MAX_VALUE)
             .addGroup(dataDokterLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(dataDokterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
+                    .addGroup(dataDokterLayout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(dataDokterLayout.createSequentialGroup()
                         .addGroup(dataDokterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(dataDokterLayout.createSequentialGroup()
                                 .addComponent(jLabel6)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(caridata, javax.swing.GroupLayout.PREFERRED_SIZE, 571, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(caridata))
                             .addGroup(dataDokterLayout.createSequentialGroup()
                                 .addComponent(bt_tambah, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -181,7 +191,7 @@ public class Form_Dokter extends javax.swing.JPanel {
                                 .addComponent(bt_batal, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(bt_cardat, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(114, Short.MAX_VALUE))
+                .addContainerGap())
         );
         dataDokterLayout.setVerticalGroup(
             dataDokterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -206,74 +216,22 @@ public class Form_Dokter extends javax.swing.JPanel {
 
         mainPanel.add(dataDokter, "card2");
 
+        TambahDokter.setBackground(new java.awt.Color(255, 255, 255));
+
+        bt_batalTambah.setBackground(new java.awt.Color(255, 255, 102));
         bt_batalTambah.setText("Batal");
+        bt_batalTambah.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        bt_batalTambah.setBorderPainted(false);
         bt_batalTambah.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bt_batalTambahActionPerformed(evt);
             }
         });
 
-        jLabel3.setText("ID DOKTER");
-
-        Id_Dokter.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
-        Id_Dokter.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Id_DokterActionPerformed(evt);
-            }
-        });
-
-        jLabel4.setText("Nama Dokter");
-
-        Nama_dokter.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
-
-        jLabel5.setText("Kontak");
-
-        Kontak.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
-        Kontak.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                KontakActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Id_Dokter)
-                    .addComponent(Nama_dokter)
-                    .addComponent(Kontak)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel5))
-                        .addGap(0, 714, Short.MAX_VALUE)))
-                .addContainerGap())
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Id_Dokter, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Nama_dokter, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Kontak, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(257, Short.MAX_VALUE))
-        );
-
         bt_Simpan.setBackground(new java.awt.Color(0, 235, 21));
         bt_Simpan.setText("SIMPAN");
-        bt_Simpan.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        bt_Simpan.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        bt_Simpan.setBorderPainted(false);
         bt_Simpan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bt_SimpanActionPerformed(evt);
@@ -283,6 +241,54 @@ public class Form_Dokter extends javax.swing.JPanel {
         jLabel7.setFont(new java.awt.Font("Georgia", 1, 36)); // NOI18N
         jLabel7.setText("DATA DOKTER");
 
+        jLabel3.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
+        jLabel3.setText("ID DOKTER");
+
+        Id_Dokter.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
+        Id_Dokter.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
+        Id_Dokter.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Id_DokterActionPerformed(evt);
+            }
+        });
+
+        jLabel4.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
+        jLabel4.setText("Nama Dokter");
+
+        Nama_dokter.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
+        Nama_dokter.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
+
+        jLabel5.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
+        jLabel5.setText("Kontak");
+
+        Kontak.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
+        Kontak.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
+        Kontak.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                KontakActionPerformed(evt);
+            }
+        });
+
+        jLabel8.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
+        jLabel8.setText("Spesialis");
+
+        Spesialis.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
+        Spesialis.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
+        Spesialis.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SpesialisActionPerformed(evt);
+            }
+        });
+
+        jLabel9.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
+        jLabel9.setText("Alamat");
+
+        Alamat.setColumns(20);
+        Alamat.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
+        Alamat.setRows(5);
+        Alamat.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
+        jScrollPane2.setViewportView(Alamat);
+
         javax.swing.GroupLayout TambahDokterLayout = new javax.swing.GroupLayout(TambahDokter);
         TambahDokter.setLayout(TambahDokterLayout);
         TambahDokterLayout.setHorizontalGroup(
@@ -290,31 +296,56 @@ public class Form_Dokter extends javax.swing.JPanel {
             .addGroup(TambahDokterLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(TambahDokterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Id_Dokter, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(Nama_dokter)
+                    .addComponent(Kontak)
+                    .addComponent(Spesialis)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(TambahDokterLayout.createSequentialGroup()
-                        .addComponent(bt_Simpan, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 578, Short.MAX_VALUE)
-                        .addComponent(bt_batalTambah, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(TambahDokterLayout.createSequentialGroup()
-                        .addComponent(jLabel7)
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGroup(TambahDokterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel7)
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel5)
+                            .addComponent(jLabel8)
+                            .addComponent(jLabel9)
+                            .addGroup(TambahDokterLayout.createSequentialGroup()
+                                .addComponent(bt_Simpan, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(bt_batalTambah, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 509, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         TambahDokterLayout.setVerticalGroup(
             TambahDokterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, TambahDokterLayout.createSequentialGroup()
-                .addGroup(TambahDokterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(TambahDokterLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel7)
-                        .addGap(30, 30, 30)
-                        .addComponent(bt_Simpan, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, TambahDokterLayout.createSequentialGroup()
-                        .addGap(81, 81, 81)
-                        .addComponent(bt_batalTambah, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(14, 14, 14)
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addContainerGap()
+                .addComponent(jLabel7)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Id_Dokter, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Nama_dokter, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Kontak, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel8)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Spesialis, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel9)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(TambahDokterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(bt_batalTambah, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(bt_Simpan, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(31, Short.MAX_VALUE))
         );
 
         mainPanel.add(TambahDokter, "card2");
@@ -380,19 +411,24 @@ public class Form_Dokter extends javax.swing.JPanel {
     private void bt_SimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_SimpanActionPerformed
         // TODO add your handling code here:
         try {
-        String sql = "INSERT INTO dokter VALUES (?, ?, ?)" +
-                "ON DUPLICATE KEY UPDATE nama = VALUES(nama), kontak = VALUES(kontak)";
+        String sql = "INSERT INTO dokter VALUES (?, ?, ?, ?, ?)" +
+                "ON DUPLICATE KEY UPDATE nama = VALUES(nama), kontak = VALUES(kontak),"+
+                "spesialis = VALUES(spesialis), alamat = VALUES(alamat) ";
         Connection kon = koneksi.koneksiDb();
         PreparedStatement pst = kon.prepareStatement(sql);
         pst.setString(1, Id_Dokter.getText());
         pst.setString(2, Nama_dokter.getText());
         pst.setString(3, Kontak.getText());
+        pst.setString(4, Spesialis.getText());
+        pst.setString(5, Alamat.getText());
         
         pst.executeUpdate();
         JOptionPane.showMessageDialog(null, "Data berhasil disimpan! / ");
         Id_Dokter.setText("");
         Nama_dokter.setText("");
         Kontak.setText("");
+        Spesialis.setText("");
+        Alamat.setText("");
     } catch (Exception e) {
         JOptionPane.showMessageDialog(null, "Gagal menyimpan data: " + e.getMessage());
     }
@@ -407,11 +443,15 @@ public class Form_Dokter extends javax.swing.JPanel {
         String id = tabel_dokter.getValueAt(selectedRow, 0).toString();
         String nama = tabel_dokter.getValueAt(selectedRow, 1).toString();
         String kontak = tabel_dokter.getValueAt(selectedRow, 2).toString();
+        String spesialis = tabel_dokter.getValueAt(selectedRow, 3).toString();
+        String alamat = tabel_dokter.getValueAt(selectedRow, 3).toString();
 
         // Masukkan ke text field di panel Formulir
         Id_Dokter.setText(id);
         Nama_dokter.setText(nama);
         Kontak.setText(kontak);
+        Spesialis.setText(spesialis);
+        Alamat.setText(alamat);
 
         // Tampilkan panel formulir
         mainPanel.removeAll();
@@ -465,8 +505,10 @@ public class Form_Dokter extends javax.swing.JPanel {
                 String a = hasil.getString("id_dokter");
                 String b = hasil.getString("Nama");
                 String c = hasil.getString("Kontak");
+                String d = hasil.getString("spesialis");
+                String e = hasil.getString("Alamat");
 
-                String[] data = {a, b, c};
+                String[] data = {a, b, c, d, e};
                 model.addRow(data);
 
             }
@@ -475,11 +517,17 @@ public class Form_Dokter extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_bt_cardatActionPerformed
 
+    private void SpesialisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SpesialisActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_SpesialisActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextArea Alamat;
     private javax.swing.JTextField Id_Dokter;
     private javax.swing.JTextField Kontak;
     private javax.swing.JTextField Nama_dokter;
+    private javax.swing.JTextField Spesialis;
     private javax.swing.JPanel TambahDokter;
     private javax.swing.JButton bt_Simpan;
     private javax.swing.JButton bt_batal;
@@ -495,8 +543,10 @@ public class Form_Dokter extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JPanel mainPanel;
     private javax.swing.JTable tabel_dokter;
     // End of variables declaration//GEN-END:variables

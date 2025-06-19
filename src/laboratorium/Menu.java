@@ -44,7 +44,7 @@ public class Menu extends javax.swing.JFrame {
         nama_lab.setIcon(Nama_lab);
     }
      private void showDateTime() {
-    Timer timer = new Timer(200, new ActionListener() {
+        Timer timer = new Timer(200, new ActionListener() {
         int i = 0;
         String baseText;
 
@@ -168,8 +168,7 @@ public class Menu extends javax.swing.JFrame {
             .addGroup(pn_sidebarLayout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 487, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 479, Short.MAX_VALUE))
         );
 
         getContentPane().add(pn_sidebar, java.awt.BorderLayout.LINE_START);
