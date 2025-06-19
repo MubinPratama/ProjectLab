@@ -228,7 +228,7 @@ public class form_pendaftaran extends javax.swing.JPanel {
         }
     }
     
-    private void generateIdPendaftaran() {
+     private void generateIdPendaftaran() {
         try {
             Connection kon = koneksi.koneksiDb();
             LocalDate now = LocalDate.now();

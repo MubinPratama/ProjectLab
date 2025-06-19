@@ -124,9 +124,11 @@ public class Form_Dokter extends javax.swing.JPanel {
         jLabel1.setFont(new java.awt.Font("Georgia", 1, 36)); // NOI18N
         jLabel1.setText("DATA DOKTER");
 
-        bt_batal.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
-        bt_batal.setText("Batal");
-        bt_batal.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        bt_batal.setBackground(new java.awt.Color(255, 255, 0));
+        bt_batal.setFont(new java.awt.Font("Georgia", 1, 14)); // NOI18N
+        bt_batal.setText("BATAL");
+        bt_batal.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        bt_batal.setBorderPainted(false);
         bt_batal.setPreferredSize(new java.awt.Dimension(47, 27));
         bt_batal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -134,18 +136,22 @@ public class Form_Dokter extends javax.swing.JPanel {
             }
         });
 
-        bt_tambah.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
-        bt_tambah.setText("Tambah Data");
-        bt_tambah.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        bt_tambah.setBackground(new java.awt.Color(38, 220, 240));
+        bt_tambah.setFont(new java.awt.Font("Georgia", 1, 14)); // NOI18N
+        bt_tambah.setText("TAMBAH");
+        bt_tambah.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        bt_tambah.setBorderPainted(false);
         bt_tambah.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bt_tambahActionPerformed(evt);
             }
         });
 
-        bt_hapus.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
-        bt_hapus.setText("Hapus");
-        bt_hapus.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        bt_hapus.setBackground(new java.awt.Color(240, 16, 14));
+        bt_hapus.setFont(new java.awt.Font("Georgia", 1, 14)); // NOI18N
+        bt_hapus.setText("HAPUS");
+        bt_hapus.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        bt_hapus.setBorderPainted(false);
         bt_hapus.setPreferredSize(new java.awt.Dimension(59, 27));
         bt_hapus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -219,7 +225,8 @@ public class Form_Dokter extends javax.swing.JPanel {
         TambahDokter.setBackground(new java.awt.Color(255, 255, 255));
 
         bt_batalTambah.setBackground(new java.awt.Color(255, 255, 102));
-        bt_batalTambah.setText("Batal");
+        bt_batalTambah.setFont(new java.awt.Font("Georgia", 1, 14)); // NOI18N
+        bt_batalTambah.setText("BATAL");
         bt_batalTambah.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         bt_batalTambah.setBorderPainted(false);
         bt_batalTambah.addActionListener(new java.awt.event.ActionListener() {
@@ -228,7 +235,8 @@ public class Form_Dokter extends javax.swing.JPanel {
             }
         });
 
-        bt_Simpan.setBackground(new java.awt.Color(0, 235, 21));
+        bt_Simpan.setBackground(new java.awt.Color(51, 255, 0));
+        bt_Simpan.setFont(new java.awt.Font("Georgia", 1, 14)); // NOI18N
         bt_Simpan.setText("SIMPAN");
         bt_Simpan.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         bt_Simpan.setBorderPainted(false);
