@@ -7,6 +7,7 @@ package laboratorium;
 
 import form.Form_Dokter;
 import form.Form_Layanan;
+import form.Form_lp_Kinerja;
 import form.Form_pasien;
 import form.form_hasil;
 import form.form_pembayaran;
@@ -16,6 +17,7 @@ import java.awt.event.ActionListener;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Locale;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
@@ -43,20 +45,32 @@ public class Menu extends javax.swing.JFrame {
         nama_lab.setIcon(Nama_lab);
     }
      private void showDateTime() {
-        Timer timer = new Timer(1000, new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                Date now = new Date();
-                SimpleDateFormat hari = new SimpleDateFormat("EEEE");
-                SimpleDateFormat tanggal = new SimpleDateFormat("dd MMMM yyyy ");
-                SimpleDateFormat waktu = new SimpleDateFormat("HH:mm:ss");
-                lblHari.setText(hari.format(now));
-                lblTanggal.setText(tanggal.format(now));
-                lblWaktu.setText(waktu.format(now));
+        Timer timer = new Timer(200, new ActionListener() {
+        int i = 0;
+        String baseText;
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            // Ambil waktu sekarang
+            Locale indo = new Locale("id", "ID");
+            Date now = new Date();
+            SimpleDateFormat sdf = new SimpleDateFormat("EEEE, dd MMMM yyyy | HH:mm",indo);
+            String waktu = sdf.format(now);
+
+            // Tambahkan spasi agar running-nya halus
+            baseText = "   " + waktu + "   ";
+            i++;
+            if (i > baseText.length()) {
+                i = 0;
             }
-        });
-        timer.start();
-    }
+
+            // Scroll teks
+            String scrollText = baseText.substring(i) + baseText.substring(0, i);
+            lblHari.setText(scrollText);  // Ganti dengan nama JLabel kamu kalau beda
+        }
+    });
+    timer.start();
+}
 
 
     /**
@@ -73,8 +87,6 @@ public class Menu extends javax.swing.JFrame {
         nama_lab = new javax.swing.JLabel();
         pn_sidebar = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
-        lblWaktu = new javax.swing.JLabel();
-        lblTanggal = new javax.swing.JLabel();
         lblHari = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         pn_menu = new javax.swing.JPanel();
@@ -104,7 +116,7 @@ public class Menu extends javax.swing.JFrame {
                 .addComponent(Logo, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(nama_lab, javax.swing.GroupLayout.PREFERRED_SIZE, 501, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(162, Short.MAX_VALUE))
+                .addContainerGap(165, Short.MAX_VALUE))
         );
         pn_headerLayout.setVerticalGroup(
             pn_headerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -119,42 +131,29 @@ public class Menu extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
-        lblWaktu.setBackground(new java.awt.Color(255, 255, 255));
-        lblWaktu.setText("jLabel2");
-
-        lblTanggal.setBackground(new java.awt.Color(255, 255, 255));
-        lblTanggal.setText("jLabel2");
-
-        lblHari.setBackground(new java.awt.Color(255, 255, 255));
+        lblHari.setBackground(new java.awt.Color(153, 255, 255));
+        lblHari.setFont(new java.awt.Font("Georgia", 1, 14)); // NOI18N
+        lblHari.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblHari.setText("jLabel2");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(79, 79, 79)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblWaktu, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblTanggal, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblHari, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(lblHari, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(lblHari, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lblTanggal, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(lblWaktu, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(0, 11, Short.MAX_VALUE)
+                .addComponent(lblHari))
         );
 
         jScrollPane1.setBackground(new java.awt.Color(255, 255, 255));
         jScrollPane1.setBorder(null);
 
         pn_menu.setBackground(new java.awt.Color(255, 255, 255));
+        pn_menu.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         pn_menu.setLayout(new javax.swing.BoxLayout(pn_menu, javax.swing.BoxLayout.Y_AXIS));
         jScrollPane1.setViewportView(pn_menu);
 
@@ -170,7 +169,7 @@ public class Menu extends javax.swing.JFrame {
             .addGroup(pn_sidebarLayout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 439, Short.MAX_VALUE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 479, Short.MAX_VALUE))
         );
 
         getContentPane().add(pn_sidebar, java.awt.BorderLayout.LINE_START);
@@ -249,8 +248,6 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblHari;
-    private javax.swing.JLabel lblTanggal;
-    private javax.swing.JLabel lblWaktu;
     private javax.swing.JLabel logo_pn;
     private javax.swing.JLabel nama_lab;
     private javax.swing.JPanel pn_header;
@@ -332,10 +329,18 @@ public class Menu extends javax.swing.JFrame {
                 }
             });
         
-        Item_menu lpHasil = new Item_menu(null, true, iconLphasil, "Hasil", null);
+        Item_menu lpHasil = new Item_menu(null, true, iconLphasil, "Hasil Pemeriksaan", null);
         Item_menu lpPemeriksaan = new Item_menu(null, true, iconLpPriksa, "Pemeriksaan", null);
-        Item_menu lpkinerja = new Item_menu(null, true, iconLpKinerja, "Kinerja", null);
-        Item_menu lpKeuangan = new Item_menu(null, true, iconLpKeuangan, "Pemeriksaan", null);
+        Item_menu lpkinerja = new Item_menu(null, true, iconLpKinerja, "Kinerja", new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                pn_utama.removeAll();
+                pn_utama.add(new Form_lp_Kinerja());
+                pn_utama.repaint();
+                pn_utama.revalidate();
+                }
+            });
+        Item_menu lpKeuangan = new Item_menu(null, true, iconLpKeuangan, "keuangan", null);
         
         Item_menu menuHome = new Item_menu(iconMaster, false, null, "Home", new ActionListener() {
             @Override

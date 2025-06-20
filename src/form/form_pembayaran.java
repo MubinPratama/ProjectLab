@@ -63,7 +63,7 @@ public class form_pembayaran extends javax.swing.JPanel {
     private void loadNoPendaftaran() {
         try {
             Connection kon = koneksi.koneksiDb();
-            String sql = "SELECT id_pendaftaran FROM pendaftaran";
+            String sql = "SELECT id_pendaftaran FROM pendaftaran WHERE status_bayar ='Belum'";
             PreparedStatement pst = kon.prepareStatement(sql);
             ResultSet rs = pst.executeQuery();
             while (rs.next()) {
@@ -281,8 +281,8 @@ public class form_pembayaran extends javax.swing.JPanel {
 
     private void bt_simpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_simpanActionPerformed
         // TODO add your handling code here:
+         Connection kon = koneksi.koneksiDb();
         try {
-            Connection kon = koneksi.koneksiDb();
             String sql = "INSERT INTO pembayaran (id_pembayaran, id_pendaftaran, tanggal_bayar, total_bayar) VALUES (?, ?, ?, ?)";
             PreparedStatement pst = kon.prepareStatement(sql);
             pst.setString(1, idPembayaran.getText());
@@ -292,10 +292,20 @@ public class form_pembayaran extends javax.swing.JPanel {
             pst.executeUpdate();
             JOptionPane.showMessageDialog(this, "Pembayaran berhasil disimpan");
             cetakNota();
-            resetForm();
-           
+        
         } catch (Exception e) {
             JOptionPane.showMessageDialog(this, "Gagal simpan pembayaran: " + e.getMessage());
+        }
+        //UPDATE STATUS PEMBAYARAN
+            try {
+            String update = "UPDATE pendaftaran SET status_bayar = 'sudah' WHERE id_pendaftaran = ?";
+            PreparedStatement pstUpdate = kon.prepareStatement(update);
+            pstUpdate.setString(1, no_pendaftaran.getSelectedItem().toString());
+            pstUpdate.executeUpdate();
+            JOptionPane.showMessageDialog(this, "Status Sudah Diubah");
+            resetForm();
+        }catch (SQLException e) {
+            JOptionPane.showMessageDialog(null, "Gagal Update Status" + e.getMessage());
         }
     }//GEN-LAST:event_bt_simpanActionPerformed
 
