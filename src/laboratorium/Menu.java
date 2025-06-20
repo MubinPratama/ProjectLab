@@ -7,6 +7,7 @@ package laboratorium;
 
 import form.Form_Dokter;
 import form.Form_Layanan;
+import form.Form_lp_Kinerja;
 import form.Form_pasien;
 import form.form_hasil;
 import form.form_pembayaran;
@@ -328,10 +329,18 @@ public class Menu extends javax.swing.JFrame {
                 }
             });
         
-        Item_menu lpHasil = new Item_menu(null, true, iconLphasil, "Hasil", null);
+        Item_menu lpHasil = new Item_menu(null, true, iconLphasil, "Hasil Pemeriksaan", null);
         Item_menu lpPemeriksaan = new Item_menu(null, true, iconLpPriksa, "Pemeriksaan", null);
-        Item_menu lpkinerja = new Item_menu(null, true, iconLpKinerja, "Kinerja", null);
-        Item_menu lpKeuangan = new Item_menu(null, true, iconLpKeuangan, "Pemeriksaan", null);
+        Item_menu lpkinerja = new Item_menu(null, true, iconLpKinerja, "Kinerja", new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                pn_utama.removeAll();
+                pn_utama.add(new Form_lp_Kinerja());
+                pn_utama.repaint();
+                pn_utama.revalidate();
+                }
+            });
+        Item_menu lpKeuangan = new Item_menu(null, true, iconLpKeuangan, "keuangan", null);
         
         Item_menu menuHome = new Item_menu(iconMaster, false, null, "Home", new ActionListener() {
             @Override
