@@ -14,8 +14,13 @@ import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
+import net.sf.jasperreports.engine.JasperFillManager;
+import net.sf.jasperreports.engine.JasperPrint;
+import net.sf.jasperreports.view.JasperViewer;
 
 /**
  *
@@ -88,7 +93,7 @@ public class Form_lp_Kinerja extends javax.swing.JPanel {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        Cetak = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tbl_laporan = new javax.swing.JTable();
         Dari = new com.toedter.calendar.JDateChooser();
@@ -103,7 +108,12 @@ public class Form_lp_Kinerja extends javax.swing.JPanel {
         jLabel6.setFont(new java.awt.Font("Georgia", 0, 18)); // NOI18N
         jLabel6.setText("Periode :");
 
-        jButton1.setText("CETAK");
+        Cetak.setText("CETAK");
+        Cetak.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CetakActionPerformed(evt);
+            }
+        });
 
         tbl_laporan.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -137,7 +147,7 @@ public class Form_lp_Kinerja extends javax.swing.JPanel {
             .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Cetak, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jLabel7)
@@ -154,7 +164,7 @@ public class Form_lp_Kinerja extends javax.swing.JPanel {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Cetak, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(7, 7, 7)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(Dari, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -238,11 +248,40 @@ public class Form_lp_Kinerja extends javax.swing.JPanel {
 
     }//GEN-LAST:event_cb_filterActionPerformed
 
+    private void CetakActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CetakActionPerformed
+        // TODO add your handling code here:
+        try {
+        Connection conn = koneksi.koneksiDb(); // pastikan koneksi DB kamu di sini
+
+        // Ambil tanggal dari JDateChooser
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        String dari = sdf.format(Dari.getDate());
+
+        // Path ke file .jrxml
+        String reportPath = "src/report/NGETES.jrxml"; // atau .jrxml jika belum dikompilasi
+
+        // Parameter ke Jasper
+        Map<String, Object> param = new HashMap<>();
+        param.put("Dari", dari);
+
+        // Compile jika pakai jrxml
+        // JasperReport report = JasperCompileManager.compileReport(reportPath);
+
+        // Fill dan tampilkan
+        JasperPrint cetak = JasperFillManager.fillReport(reportPath, param, conn);
+        JasperViewer.viewReport(cetak, false);
+        
+    } catch (Exception e) {
+        JOptionPane.showMessageDialog(this, "Gagal mencetak laporan: " + e.getMessage());
+        e.printStackTrace();
+    }
+    }//GEN-LAST:event_CetakActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Cetak;
     private com.toedter.calendar.JDateChooser Dari;
     private javax.swing.JComboBox<String> cb_filter;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
