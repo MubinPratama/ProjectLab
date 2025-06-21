@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d268e812-edf4-4ca5-a30e-9755df8b1d40">
 	<property name="ireport.zoom" value="1.4641000000000035"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="0"/>
+	<property name="ireport.y" value="48"/>
 	<style name="table">
 		<box>
 			<pen lineWidth="1.0" lineColor="#000000"/>
@@ -25,17 +25,22 @@
 	</style>
 	<subDataset name="Table Dataset 1" uuid="06f38821-c4ed-4d9b-a9f2-20f6ac98df8f"/>
 	<parameter name="Dari" class="java.util.Date"/>
-	<parameter name="Sampai" class="java.util.Date"/>
+	<parameter name="param_iddokter" class="java.lang.String"/>
 	<queryString>
 		<![CDATA[SELECT 
-    d.id_dokter,
-    d.Nama AS nama_dokter,
-    COUNT(p.id_pendaftaran) AS jumlah_pemeriksaan,
+    d.id_dokter, 
+    d.Nama AS nama_dokter, 
+    COUNT(p.id_pendaftaran) AS jumlah_pemeriksaan, 
     MIN(p.tanggal_daftar) AS aktif_mulai
-FROM pendaftaran p
-JOIN dokter d ON p.id_dokter = d.id_dokter
-GROUP BY d.id_dokter, d.Nama
-ORDER BY jumlah_pemeriksaan DESC]]>
+FROM 
+    pendaftaran p
+JOIN 
+    dokter d ON p.id_dokter = d.id_dokter
+WHERE 
+     d.id_dokter = $P{param_iddokter}
+  AND p.tanggal_daftar>=$P{Dari}
+GROUP BY 
+    d.id_dokter, d.Nama]]>
 	</queryString>
 	<field name="id_dokter" class="java.lang.Integer">
 		<fieldDescription><![CDATA[]]></fieldDescription>

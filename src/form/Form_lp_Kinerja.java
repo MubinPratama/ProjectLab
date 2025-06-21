@@ -18,8 +18,10 @@ import java.util.HashMap;
 import java.util.Map;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
+import net.sf.jasperreports.engine.JasperCompileManager;
 import net.sf.jasperreports.engine.JasperFillManager;
 import net.sf.jasperreports.engine.JasperPrint;
+import net.sf.jasperreports.engine.JasperReport;
 import net.sf.jasperreports.view.JasperViewer;
 
 /**
@@ -251,24 +253,33 @@ public class Form_lp_Kinerja extends javax.swing.JPanel {
     private void CetakActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CetakActionPerformed
         // TODO add your handling code here:
         try {
+            int selectedRow = tbl_laporan.getSelectedRow();
+            if (selectedRow == -1) {
+                JOptionPane.showMessageDialog(this, "Pilih salah satu baris dokter terlebih dahulu.");
+                return;
+            }
+            
         Connection conn = koneksi.koneksiDb(); // pastikan koneksi DB kamu di sini
 
         // Ambil tanggal dari JDateChooser
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-        String dari = sdf.format(Dari.getDate());
+        java.util.Date dari = Dari.getDate();
+        String idDokter = tbl_laporan.getValueAt(selectedRow, 0).toString();
 
         // Path ke file .jrxml
-        String reportPath = "src/report/NGETES.jrxml"; // atau .jrxml jika belum dikompilasi
+//        String reportPath = "src/report/NGETES.jrxml"; // atau .jrxml jika belum dikompilasi
 
         // Parameter ke Jasper
         Map<String, Object> param = new HashMap<>();
+        param.put("param_iddokter", idDokter);
         param.put("Dari", dari);
 
         // Compile jika pakai jrxml
         // JasperReport report = JasperCompileManager.compileReport(reportPath);
 
         // Fill dan tampilkan
-        JasperPrint cetak = JasperFillManager.fillReport(reportPath, param, conn);
+        JasperReport report = JasperCompileManager.compileReport("src/report/NGETES.jrxml");
+        JasperPrint cetak = JasperFillManager.fillReport(report, param, conn);
         JasperViewer.viewReport(cetak, false);
         
     } catch (Exception e) {
