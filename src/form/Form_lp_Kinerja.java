@@ -17,6 +17,14 @@ import java.util.Date;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
+import net.sf.jasperreports.engine.JasperCompileManager;
+import net.sf.jasperreports.engine.JasperFillManager;
+import net.sf.jasperreports.engine.JasperPrint;
+import net.sf.jasperreports.engine.JasperReport;
+import net.sf.jasperreports.engine.JasperExportManager;
+import net.sf.jasperreports.engine.util.JRLoader;
+import net.sf.jasperreports.view.JasperViewer;
+
 /**
  *
  * @author user
@@ -74,6 +82,25 @@ public class Form_lp_Kinerja extends javax.swing.JPanel {
     }
 
     }
+
+    private void cetakLaporan(String tglAwal, String tglAkhir) {
+    try {
+        Connection kon = koneksi.koneksiDb();
+        String reportPath = "src/report/LaporanKinerja.jasper"; // Sesuaikan path file .jasper kamu
+
+        // Parameter ke JasperReport
+        Map<String, Object> params = new HashMap<>();
+        params.put("startDate", java.sql.Date.valueOf(tglAwal));
+        params.put("endDate", java.sql.Date.valueOf(tglAkhir));
+
+        JasperPrint print = JasperFillManager.fillReport(reportPath, params, kon);
+        JasperViewer.viewReport(print, false);
+
+    } catch (Exception e) {
+        JOptionPane.showMessageDialog(this, "Gagal mencetak laporan: " + e.getMessage());
+        e.printStackTrace();
+    }
+}
 
 
     /**

@@ -13,7 +13,7 @@
 			<style backcolor="#E6DAC3"/>
 		</conditionalStyle>
 	</style>
-	<queryString language="SQL">
+	<queryString>
 		<![CDATA[SELECT
      pembayaran.`id_pembayaran` AS pembayaran_id_pembayaran,
      pembayaran.`id_pendaftaran` AS pembayaran_id_pendaftaran,
@@ -26,7 +26,7 @@ FROM
      `pembayaran` pembayaran]]>
 	</queryString>
 	<field name="pembayaran_id_pembayaran" class="java.lang.String"/>
-	<field name="pembayaran_id_pendaftaran" class="java.lang.Integer"/>
+	<field name="pembayaran_id_pendaftaran" class="java.lang.Long"/>
 	<field name="pembayaran_tanggal_bayar" class="java.sql.Date"/>
 	<field name="pembayaran_total_bayar" class="java.lang.Double"/>
 	<field name="pembayaran_metode_pembayaran" class="java.lang.String"/>
@@ -44,10 +44,6 @@ FROM
 				</textElement>
 				<text><![CDATA[LAPORAN KEUANGAN]]></text>
 			</staticText>
-			<image>
-				<reportElement x="736" y="2" width="66" height="60" uuid="ead64b81-b1ec-42c4-ab81-b5073d6a68b1"/>
-				<imageExpression><![CDATA["C:\\Users\\Pongo\\Documents\\NetBeansProjects\\ProjectLab\\src\\Img\\logo_lab.png"]]></imageExpression>
-			</image>
 		</band>
 	</title>
 	<pageHeader>
