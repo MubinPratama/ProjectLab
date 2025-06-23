@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="7b0f3f26-e493-4609-a282-3c76df752be9">
+	<property name="ireport.zoom" value="2.143588810000002"/>
+	<property name="ireport.x" value="80"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Times New Roman" fontSize="50" isBold="true" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#736343" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<style name="Row" mode="Transparent">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style backcolor="#E6DAC3"/>
+		</conditionalStyle>
+	</style>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="New Dataset 1" uuid="e5330a79-a949-4454-b586-939ed9186fc7">
+		<queryString language="SQL">
+			<![CDATA[SELECT 
+    pendaftaran.id_pendaftaran AS `Id_Pendaftaran`,
+    pasien.Nama AS `Nama_Pasien`,
+    layanan.nama_layanan AS `Nama_Layanan`,
+    pendaftaran.tanggal_daftar AS `Tanggal`
+FROM 
+    pendaftaran
+JOIN 
+    pasien ON pendaftaran.No_rm = pasien.No_rm
+JOIN 
+    pendaftaran_detail ON pendaftaran.id_pendaftaran = pendaftaran_detail.id_pendaftaran
+JOIN 
+    layanan ON pendaftaran_detail.id_layanan = layanan.id_layanan
+ORDER BY 
+    pasien.Nama ASC, pendaftaran.tanggal_daftar ASC;
+]]>
+		</queryString>
+		<field name="Id_Pendaftaran" class="java.lang.Long">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="Nama_Pasien" class="java.lang.String"/>
+		<field name="Nama_Layanan" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="Tanggal" class="java.sql.Date"/>
+	</subDataset>
+	<queryString>
+		<![CDATA[SELECT 
+    pendaftaran.id_pendaftaran AS `Id_Pendaftaran`,
+    pasien.Nama AS `Nama_Pasien`,
+    layanan.nama_layanan AS `Nama_Layanan`,
+    pendaftaran.tanggal_daftar AS `Tanggal`
+FROM 
+    pendaftaran
+JOIN 
+    pasien ON pendaftaran.No_rm = pasien.No_rm
+JOIN 
+    pendaftaran_detail ON pendaftaran.id_pendaftaran = pendaftaran_detail.id_pendaftaran
+JOIN 
+    layanan ON pendaftaran_detail.id_layanan = layanan.id_layanan
+ORDER BY 
+    pendaftaran.tanggal_daftar ASC, pasien.Nama ASC;
+]]>
+	</queryString>
+	<field name="Id_Pendaftaran" class="java.lang.Long">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Nama_Pasien" class="java.lang.String"/>
+	<field name="Nama_Layanan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Tanggal" class="java.sql.Date"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="87" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="189" y="0" width="486" height="62" uuid="f2bf9bae-c482-4dc3-a43e-d849129b1c8b"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[Laporan Pendaftaran ]]></text>
+			</staticText>
+			<image>
+				<reportElement x="109" y="2" width="68" height="60" uuid="a4a3686e-7e80-4024-a573-360b4fff92ad"/>
+				<imageExpression><![CDATA["C:\\Users\\Basuki\\Documents\\NetBeansProjects\\ProjectLab\\src\\Img\\logo_lab.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="21" splitType="Stretch">
+			<staticText>
+				<reportElement x="80" y="0" width="98" height="20" uuid="e7c88f0d-cad6-481d-acc1-4b6d7f9a9233"/>
+				<text><![CDATA[Id_Pendaftaran]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="189" y="0" width="200" height="20" uuid="36a5f6ed-25b0-41a2-a3cd-792eee94bf43"/>
+				<text><![CDATA[Nama_Pasien]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="400" y="0" width="200" height="20" uuid="1c778821-15d3-431e-8dd0-00d3778330be"/>
+				<text><![CDATA[Nama_Layanan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="610" y="1" width="125" height="20" uuid="3b993ca0-0474-4bbe-80e3-ec01c8e46913"/>
+				<text><![CDATA[Tanggal]]></text>
+			</staticText>
+			<line>
+				<reportElement x="178" y="0" width="1" height="21" uuid="dce46efc-f1fb-4c6d-b7fd-d3391100e3ab"/>
+			</line>
+			<line>
+				<reportElement x="79" y="0" width="1" height="21" uuid="9e0577d1-b55e-4bbe-b551-6349c573e389"/>
+			</line>
+			<line>
+				<reportElement x="389" y="0" width="1" height="21" uuid="36b5d5a8-0de8-40ed-b45a-7d5218a0abd8"/>
+			</line>
+			<line>
+				<reportElement x="600" y="0" width="1" height="21" uuid="05cc7d30-a4a8-4759-99ba-16f241954592"/>
+			</line>
+			<line>
+				<reportElement x="734" y="0" width="1" height="21" uuid="11e09553-61c2-4963-9e83-44cc06a1033a"/>
+			</line>
+			<line>
+				<reportElement x="80" y="19" width="655" height="1" uuid="7a276421-ac1f-4988-9d76-22a089a9722f"/>
+			</line>
+			<line>
+				<reportElement x="79" y="0" width="655" height="1" uuid="79eee1af-2fcc-4394-8698-e7952a9fb4d5"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<textField>
+				<reportElement x="90" y="0" width="88" height="20" uuid="3e937f3f-d41d-4be7-a630-dfd8e878f39b"/>
+				<textFieldExpression><![CDATA[$F{Id_Pendaftaran}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="189" y="0" width="200" height="20" uuid="4b32c1f9-a510-4022-a9ee-f1c20855ae5b"/>
+				<textFieldExpression><![CDATA[$F{Nama_Pasien}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="400" y="0" width="200" height="20" uuid="1e44874b-b22b-41a2-b16d-be360f1d8c89"/>
+				<textFieldExpression><![CDATA[$F{Nama_Layanan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="610" y="0" width="125" height="20" uuid="be616f7f-ba2b-480c-b7c1-bc7d006e3424"/>
+				<textFieldExpression><![CDATA[$F{Tanggal}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="178" y="-1" width="1" height="21" uuid="3ab359f0-9d3c-49f7-ac19-df2f0770fb36"/>
+			</line>
+			<line>
+				<reportElement x="79" y="20" width="655" height="1" uuid="758bd097-5970-46ca-af64-68e9182b2f73"/>
+			</line>
+			<line>
+				<reportElement x="79" y="-1" width="1" height="21" uuid="c73d229b-b05d-4d9f-b976-1abdc2397ac7"/>
+			</line>
+			<line>
+				<reportElement x="389" y="-1" width="1" height="21" uuid="7043ab62-5891-4fec-9a8e-efb213db49b7"/>
+			</line>
+			<line>
+				<reportElement x="600" y="-1" width="1" height="21" uuid="65335d23-a4e7-4ebd-b131-ed0052333f30"/>
+			</line>
+			<line>
+				<reportElement x="734" y="0" width="1" height="21" uuid="fd40e7a4-ee9f-4171-b2f0-c164d46ce42b"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="40" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="25" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
