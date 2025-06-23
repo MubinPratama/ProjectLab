@@ -344,6 +344,7 @@ public class form_pendaftaran extends javax.swing.JPanel {
 
         main_panel.setLayout(new java.awt.CardLayout());
 
+        form_pendaftaran.setBackground(new java.awt.Color(255, 255, 255));
         form_pendaftaran.setMaximumSize(new java.awt.Dimension(2147483647, 2147483647));
         form_pendaftaran.setPreferredSize(new java.awt.Dimension(500, 462));
 
@@ -353,6 +354,8 @@ public class form_pendaftaran extends javax.swing.JPanel {
         jLabel6.setFont(new java.awt.Font("Georgia", 0, 18)); // NOI18N
 
         cbPasien.setFont(new java.awt.Font("Georgia", 0, 18)); // NOI18N
+        cbPasien.setBorder(null);
+        cbPasien.setOpaque(false);
         cbPasien.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbPasienActionPerformed(evt);
@@ -366,6 +369,8 @@ public class form_pendaftaran extends javax.swing.JPanel {
         jLabel3.setText("Dokter    :");
 
         Dokter.setFont(new java.awt.Font("Georgia", 0, 18)); // NOI18N
+        Dokter.setBorder(null);
+        Dokter.setOpaque(false);
 
         jLabel4.setFont(new java.awt.Font("Georgia", 0, 18)); // NOI18N
         jLabel4.setText("Tanggal  :");
@@ -373,8 +378,12 @@ public class form_pendaftaran extends javax.swing.JPanel {
         jLabel5.setFont(new java.awt.Font("Georgia", 0, 18)); // NOI18N
         jLabel5.setText("Layanan :");
 
+        bt_layanan.setBackground(new java.awt.Color(51, 51, 255));
         bt_layanan.setFont(new java.awt.Font("Georgia", 0, 18)); // NOI18N
+        bt_layanan.setForeground(new java.awt.Color(255, 255, 255));
         bt_layanan.setText("Tambah");
+        bt_layanan.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        bt_layanan.setBorderPainted(false);
         bt_layanan.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 bt_layananMouseClicked(evt);
@@ -400,16 +409,22 @@ public class form_pendaftaran extends javax.swing.JPanel {
         table_layanan.setRowHeight(20);
         jScrollPane1.setViewportView(table_layanan);
 
+        SimpanDaftar.setBackground(new java.awt.Color(0, 255, 0));
         SimpanDaftar.setFont(new java.awt.Font("Georgia", 0, 18)); // NOI18N
         SimpanDaftar.setText("Simpan");
+        SimpanDaftar.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        SimpanDaftar.setBorderPainted(false);
         SimpanDaftar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SimpanDaftarActionPerformed(evt);
             }
         });
 
+        jButton3.setBackground(new java.awt.Color(255, 255, 0));
         jButton3.setFont(new java.awt.Font("Georgia", 0, 18)); // NOI18N
         jButton3.setText("Batal");
+        jButton3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jButton3.setBorderPainted(false);
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -417,6 +432,8 @@ public class form_pendaftaran extends javax.swing.JPanel {
         });
 
         Layanan.setFont(new java.awt.Font("Georgia", 0, 18)); // NOI18N
+        Layanan.setBorder(null);
+        Layanan.setOpaque(false);
         Layanan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 LayananActionPerformed(evt);
@@ -454,10 +471,12 @@ public class form_pendaftaran extends javax.swing.JPanel {
         jLabel19.setText(":");
 
         txtAlamat.setColumns(20);
+        txtAlamat.setFont(new java.awt.Font("Georgia", 0, 18)); // NOI18N
         txtAlamat.setRows(5);
         jScrollPane2.setViewportView(txtAlamat);
 
         txtNama.setFont(new java.awt.Font("Georgia", 0, 18)); // NOI18N
+        txtNama.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
         txtNama.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtNamaActionPerformed(evt);
@@ -465,6 +484,7 @@ public class form_pendaftaran extends javax.swing.JPanel {
         });
 
         txttelp.setFont(new java.awt.Font("Georgia", 0, 18)); // NOI18N
+        txttelp.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
 
         jLabel16.setFont(new java.awt.Font("Georgia", 0, 18)); // NOI18N
         jLabel16.setText("No Telepon");
@@ -482,8 +502,11 @@ public class form_pendaftaran extends javax.swing.JPanel {
         jLabel23.setText(":");
 
         cbjk.setFont(new java.awt.Font("Georgia", 0, 18)); // NOI18N
+        cbjk.setBorder(null);
+        cbjk.setOpaque(false);
 
         txtTB.setFont(new java.awt.Font("Georgia", 0, 18)); // NOI18N
+        txtTB.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
         txtTB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtTBActionPerformed(evt);
@@ -491,6 +514,7 @@ public class form_pendaftaran extends javax.swing.JPanel {
         });
 
         txtBB.setFont(new java.awt.Font("Georgia", 0, 18)); // NOI18N
+        txtBB.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
         txtBB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtBBActionPerformed(evt);
@@ -502,10 +526,15 @@ public class form_pendaftaran extends javax.swing.JPanel {
 
         lblTanggal.setFont(new java.awt.Font("Georgia", 0, 18)); // NOI18N
         lblTanggal.setText("jLabel11");
-        lblTanggal.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        lblTanggal.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
+
+        TanggalLahir.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
 
         jLabel11.setFont(new java.awt.Font("Georgia", 0, 18)); // NOI18N
         jLabel11.setText("Nomor    :");
+
+        idPendaftaran.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
+        idPendaftaran.setFont(new java.awt.Font("Georgia", 2, 18)); // NOI18N
 
         javax.swing.GroupLayout form_pendaftaranLayout = new javax.swing.GroupLayout(form_pendaftaran);
         form_pendaftaran.setLayout(form_pendaftaranLayout);
@@ -583,13 +612,11 @@ public class form_pendaftaran extends javax.swing.JPanel {
                             .addComponent(jLabel21))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(form_pendaftaranLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(cbjk, javax.swing.GroupLayout.Alignment.CENTER, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(cbjk, javax.swing.GroupLayout.Alignment.CENTER, 0, 162, Short.MAX_VALUE)
                             .addComponent(txtBB, javax.swing.GroupLayout.Alignment.CENTER)
                             .addComponent(txttelp, javax.swing.GroupLayout.Alignment.CENTER)
-                            .addGroup(form_pendaftaranLayout.createSequentialGroup()
-                                .addComponent(TanggalLahir, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 58, Short.MAX_VALUE))
-                            .addComponent(txtTB))))
+                            .addComponent(txtTB)
+                            .addComponent(TanggalLahir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap())
             .addComponent(jLabel24, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(form_pendaftaranLayout.createSequentialGroup()
@@ -664,11 +691,11 @@ public class form_pendaftaran extends javax.swing.JPanel {
                         .addGroup(form_pendaftaranLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                             .addComponent(jLabel5)
                             .addComponent(Layanan, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(bt_layanan, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(bt_layanan, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(55, 55, 55)
                         .addGroup(form_pendaftaranLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(SimpanDaftar, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(SimpanDaftar, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(94, 94, 94)
                         .addComponent(jLabel6))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE))
