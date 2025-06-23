@@ -26,6 +26,7 @@
 	<subDataset name="Table Dataset 1" uuid="06f38821-c4ed-4d9b-a9f2-20f6ac98df8f"/>
 	<parameter name="Dari" class="java.util.Date"/>
 	<parameter name="param_iddokter" class="java.lang.String"/>
+	<parameter name="Sampai" class="java.util.Date"/>
 	<queryString>
 		<![CDATA[SELECT 
     d.id_dokter, 
@@ -38,7 +39,7 @@ JOIN
     dokter d ON p.id_dokter = d.id_dokter
 WHERE 
      d.id_dokter = $P{param_iddokter}
-  AND p.tanggal_daftar>=$P{Dari}
+  OR p.tanggal_daftar BETWEEN $P{Dari} AND $P{Sampai}
 GROUP BY 
     d.id_dokter, d.Nama]]>
 	</queryString>
