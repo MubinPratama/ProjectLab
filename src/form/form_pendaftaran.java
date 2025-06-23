@@ -347,7 +347,7 @@ public class form_pendaftaran extends javax.swing.JPanel {
         form_pendaftaran.setMaximumSize(new java.awt.Dimension(2147483647, 2147483647));
         form_pendaftaran.setPreferredSize(new java.awt.Dimension(500, 462));
 
-        jLabel1.setFont(new java.awt.Font("Georgia", 0, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Georgia", 1, 24)); // NOI18N
         jLabel1.setText("FORMULIR PENDAFTARAN PERAWATAN");
 
         jLabel6.setFont(new java.awt.Font("Georgia", 0, 18)); // NOI18N
@@ -535,8 +535,10 @@ public class form_pendaftaran extends javax.swing.JPanel {
                                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
                             .addGroup(form_pendaftaranLayout.createSequentialGroup()
                                 .addGroup(form_pendaftaranLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel1)
-                                    .addComponent(jLabel6))
+                                    .addGroup(form_pendaftaranLayout.createSequentialGroup()
+                                        .addGap(412, 412, 412)
+                                        .addComponent(jLabel6))
+                                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 551, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(0, 0, Short.MAX_VALUE))))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, form_pendaftaranLayout.createSequentialGroup()
                         .addContainerGap()
@@ -600,8 +602,8 @@ public class form_pendaftaran extends javax.swing.JPanel {
         form_pendaftaranLayout.setVerticalGroup(
             form_pendaftaranLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(form_pendaftaranLayout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addComponent(jLabel1)
+                .addContainerGap()
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(form_pendaftaranLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                     .addComponent(jLabel21)

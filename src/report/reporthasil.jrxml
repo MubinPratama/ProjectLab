@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="af8a07ff-d0ac-4672-bed2-2268a907e72e">
+	<property name="ireport.zoom" value="1.4641000000000006"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
 	<queryString language="SQL">
 		<![CDATA[SELECT
      hasil_periksa.`id` AS hasil_periksa_id,
@@ -19,16 +22,58 @@ FROM
 		<band splitType="Stretch"/>
 	</background>
 	<title>
-		<band height="79" splitType="Stretch"/>
+		<band height="76" splitType="Stretch"/>
 	</title>
 	<pageHeader>
 		<band height="35" splitType="Stretch"/>
 	</pageHeader>
 	<columnHeader>
-		<band height="61" splitType="Stretch"/>
+		<band height="30" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="111" height="20" uuid="a5eb4136-c469-4dd2-b584-ffcbd55624fe"/>
+				<text><![CDATA[hasil_periksa_id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="111" y="0" width="111" height="20" uuid="5e359f9c-b377-4eb0-87cd-37a6b5a6a399"/>
+				<text><![CDATA[hasil_periksa_id_pendaftaran]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="222" y="0" width="111" height="20" uuid="6dae62c9-ba30-423d-8fe0-5e845ae013a8"/>
+				<text><![CDATA[hasil_periksa_nama_pemeriksaan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="333" y="0" width="111" height="20" uuid="5225c73d-5492-43e9-a251-409a1e517898"/>
+				<text><![CDATA[hasil_periksa_hasil_pemeriksaan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="444" y="0" width="111" height="20" uuid="e54d796d-eca5-4522-ab55-9e128e01989d"/>
+				<text><![CDATA[hasil_periksa_waktu_input]]></text>
+			</staticText>
+		</band>
 	</columnHeader>
 	<detail>
-		<band height="125" splitType="Stretch"/>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="111" height="20" uuid="fca2c3c0-9763-4976-b914-a5c13642418c"/>
+				<textFieldExpression><![CDATA[$F{hasil_periksa_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="111" y="0" width="111" height="20" uuid="5b10c9a9-8f35-4a2a-bab8-b5bcaa71ebc1"/>
+				<textFieldExpression><![CDATA[$F{hasil_periksa_id_pendaftaran}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="222" y="0" width="111" height="20" uuid="b9488468-969e-4988-9231-8f2e8f5b8474"/>
+				<textFieldExpression><![CDATA[$F{hasil_periksa_nama_pemeriksaan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="333" y="0" width="111" height="20" uuid="2d0d3a55-ff69-46ad-aee5-02568cd87d56"/>
+				<textFieldExpression><![CDATA[$F{hasil_periksa_hasil_pemeriksaan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="444" y="0" width="111" height="20" uuid="2978e644-423f-4b0a-8c2a-b652ecec4498"/>
+				<textFieldExpression><![CDATA[$F{hasil_periksa_waktu_input}]]></textFieldExpression>
+			</textField>
+		</band>
 	</detail>
 	<columnFooter>
 		<band height="45" splitType="Stretch"/>
