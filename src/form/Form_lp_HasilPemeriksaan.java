@@ -5,12 +5,14 @@
  */
 package form;
 
+
 import com.toedter.calendar.JDateChooser;
 import config.koneksi;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -23,69 +25,80 @@ import net.sf.jasperreports.engine.JasperFillManager;
 import net.sf.jasperreports.engine.JasperPrint;
 import net.sf.jasperreports.engine.JasperReport;
 import net.sf.jasperreports.view.JasperViewer;
-
 /**
  *
- * @author user
+ * @author Basuki
  */
-public class Form_lp_Kinerja extends javax.swing.JPanel {
-
+public class Form_lp_HasilPemeriksaan extends javax.swing.JPanel {
+private DefaultTableModel tabmode;
     /**
-     * Creates new form Form_lp_Kinerja
+     * Creates new form Form_lp_HasilPemeriksaan
      */
-    public Form_lp_Kinerja() {
+    public Form_lp_HasilPemeriksaan() {
         initComponents();
         tampildata();
-        
     }
+
     private void tampildata() {
-    DefaultTableModel model = new DefaultTableModel();
-    model.addColumn("ID Dokter");
-    model.addColumn("Nama Dokter");
-    model.addColumn("Jumlah Pemeriksaan");
-    model.addColumn("Tanggal Aktif");
+    Object[] Baris = {"ID", "ID Pendaftaran", "Nama Pemeriksaan", "Hasil Pemeriksaan", "Waktu Input"};
+    tabmode = new DefaultTableModel(null, Baris);
 
     try {
         Connection kon = koneksi.koneksiDb();
+        String filter = cb_filter.getSelectedItem().toString();
+        Date dari = Dari.getDate();
 
-//        // Format tanggal dari JDateChooser
-//        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-//        String dari = sdf.format(Dari.getDate());
-//        String sampai = sdf.format(Sampai.getDate());
+        if (dari == null) {
+            JOptionPane.showMessageDialog(this, "Tanggal harus diisi!");
+            return;
+        }
 
-        String sql = "SELECT d.id_dokter, d.Nama AS nama_dokter, d.aktif_mulai, " +
-                 "COUNT(p.id_pendaftaran) AS jumlah_pemeriksaan " +
-                 "FROM pendaftaran p " +
-                 "JOIN dokter d ON p.id_dokter = d.id_dokter " +
-                 "GROUP BY d.id_dokter, d.Nama, d.aktif_mulai " +
-                 "ORDER BY jumlah_pemeriksaan DESC";
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        String tglAwal = sdf.format(dari);
+        String tglAkhir = tglAwal;
 
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(dari);
+
+        if (filter.equals("Mingguan")) {
+            cal.add(Calendar.DAY_OF_MONTH, 6);
+        } else if (filter.equals("Bulanan")) {
+            cal.add(Calendar.DAY_OF_MONTH, 29);
+        }
+
+        if (!filter.equals("Harian")) {
+            tglAkhir = sdf.format(cal.getTime());
+        }
+
+        String sql = "SELECT * FROM hasil_periksa WHERE waktu_input BETWEEN ? AND ? ORDER BY id_pendaftaran";
         PreparedStatement ps = kon.prepareStatement(sql);
-//        ps.setString(1, dari);
-//        ps.setString(2, sampai);
+        ps.setString(1, tglAwal);
+        ps.setString(2, tglAkhir);
 
         ResultSet rs = ps.executeQuery();
 
         while (rs.next()) {
-            model.addRow(new Object[]{
-                rs.getString("id_dokter"),
-                rs.getString("nama_dokter"),
-                rs.getInt("jumlah_pemeriksaan"),
-                rs.getDate("aktif_mulai")
+            tabmode.addRow(new Object[]{
+                rs.getString("id"),
+                rs.getString("id_pendaftaran"),
+                rs.getString("nama_pemeriksaan"),
+                rs.getString("hasil_pemeriksaan"),
+                rs.getTimestamp("waktu_input")
             });
         }
 
-        tbl_laporan.setModel(model);
+        tbl_hasil.setModel(tabmode);
+
     } catch (Exception e) {
         JOptionPane.showMessageDialog(this, "Gagal menampilkan data: " + e.getMessage());
     }
+}
 
-    }
 
-    private void cetakLaporan(String tglAwal, String tglAkhir) {
+private void cetakLaporan(String tglAwal, String tglAkhir) {
     try {
         Connection kon = koneksi.koneksiDb();
-        String reportPath = "src/report/NGETES.jasper"; // Sesuaikan path file .jasper kamu
+        String reportPath = "src/report/reporthasil.jasper"; // Sesuaikan path file .jasper kamu
 
         // Parameter ke JasperReport
         Map<String, Object> params = new HashMap<>();
@@ -100,8 +113,6 @@ public class Form_lp_Kinerja extends javax.swing.JPanel {
         e.printStackTrace();
     }
 }
-
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -116,7 +127,7 @@ public class Form_lp_Kinerja extends javax.swing.JPanel {
         jLabel6 = new javax.swing.JLabel();
         Cetak = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        tbl_laporan = new javax.swing.JTable();
+        tbl_hasil = new javax.swing.JTable();
         Dari = new com.toedter.calendar.JDateChooser();
         jLabel7 = new javax.swing.JLabel();
         cb_filter = new javax.swing.JComboBox<>();
@@ -124,19 +135,19 @@ public class Form_lp_Kinerja extends javax.swing.JPanel {
         setLayout(new java.awt.CardLayout());
 
         jLabel1.setFont(new java.awt.Font("Georgia", 1, 36)); // NOI18N
-        jLabel1.setText("Laporan Kinerja");
+        jLabel1.setText("Laporan Hasil Pemeriksaan");
 
         jLabel6.setFont(new java.awt.Font("Georgia", 0, 18)); // NOI18N
         jLabel6.setText("Periode :");
 
-        Cetak.setText("<html>CETAK<br>PER DOKTER</html>");
+        Cetak.setText("CETAK");
         Cetak.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CetakActionPerformed(evt);
             }
         });
 
-        tbl_laporan.setModel(new javax.swing.table.DefaultTableModel(
+        tbl_hasil.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -147,7 +158,7 @@ public class Form_lp_Kinerja extends javax.swing.JPanel {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane1.setViewportView(tbl_laporan);
+        jScrollPane1.setViewportView(tbl_hasil);
 
         jLabel7.setFont(new java.awt.Font("Georgia", 0, 18)); // NOI18N
         jLabel7.setText("Cari Data dari :");
@@ -178,7 +189,7 @@ public class Form_lp_Kinerja extends javax.swing.JPanel {
                         .addComponent(jLabel6)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(cb_filter, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(120, 335, Short.MAX_VALUE))
+                .addGap(120, 172, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -186,7 +197,7 @@ public class Form_lp_Kinerja extends javax.swing.JPanel {
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Cetak, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(14, 14, 14)
+                .addGap(7, 7, 7)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(Dari, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -203,28 +214,23 @@ public class Form_lp_Kinerja extends javax.swing.JPanel {
 
     private void cb_filterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb_filterActionPerformed
         // TODO add your handling code here:
-            DefaultTableModel model = new DefaultTableModel();
-    model.addColumn("ID Dokter");
-    model.addColumn("Nama Dokter");
-    model.addColumn("Tanggal Aktif");
-    model.addColumn("Jumlah Pemeriksaan");
+        tampildata(); // tampilkan ulang data dengan filter yang dipilih
+    }//GEN-LAST:event_cb_filterActionPerformed
 
-    try {
-        Connection kon = koneksi.koneksiDb();
-        String filter = cb_filter.getSelectedItem().toString();
+    private void CetakActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CetakActionPerformed
+        // TODO add your handling code here:
         Date dari = Dari.getDate();
+        String filter = cb_filter.getSelectedItem().toString();
 
         if (dari == null) {
-            JOptionPane.showMessageDialog(this, "Tanggal harus diisi!");
+            JOptionPane.showMessageDialog(this, "Tanggal harus diisi sebelum mencetak!");
             return;
         }
 
-        // Format tanggal ke string
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         String tglAwal = sdf.format(dari);
-        String tglAkhir = tglAwal; // Default sama untuk Harian
+        String tglAkhir = tglAwal;
 
-        // Hitung tanggal akhir jika filter mingguan/bulanan
         Calendar cal = Calendar.getInstance();
         cal.setTime(dari);
 
@@ -238,90 +244,7 @@ public class Form_lp_Kinerja extends javax.swing.JPanel {
             tglAkhir = sdf.format(cal.getTime());
         }
 
-        // SQL Query
-        String sql = "SELECT d.id_dokter, d.Nama AS nama_dokter, COUNT(p.id_pendaftaran) AS jumlah_pemeriksaan, " +
-                     "MIN(p.tanggal_daftar) AS aktif_mulai " +
-                     "FROM pendaftaran p " +
-                     "JOIN dokter d ON p.id_dokter = d.id_dokter " +
-                     "WHERE p.tanggal_daftar BETWEEN ? AND ? " +
-                     "GROUP BY d.id_dokter, d.Nama";
-
-        PreparedStatement ps = kon.prepareStatement(sql);
-        ps.setString(1, tglAwal);
-        ps.setString(2, tglAkhir);
-
-        ResultSet rs = ps.executeQuery();
-
-        while (rs.next()) {
-            model.addRow(new Object[]{
-                rs.getString("id_dokter"),
-                rs.getString("nama_dokter"),
-                rs.getString("aktif_mulai"),
-                rs.getInt("jumlah_pemeriksaan")
-            });
-        }
-
-        tbl_laporan.setModel(model);
-
-    } catch (Exception e) {
-        JOptionPane.showMessageDialog(this, "Gagal menampilkan data: " + e.getMessage());
-    }
-
-    }//GEN-LAST:event_cb_filterActionPerformed
-
-    private void CetakActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CetakActionPerformed
-        // TODO add your handling code here:
-        try {
-            int selectedRow = tbl_laporan.getSelectedRow();
-            if (selectedRow == -1) {
-                JOptionPane.showMessageDialog(this, "Pilih salah satu baris dokter terlebih dahulu.");
-                return;
-            }
-            
-        Connection conn = koneksi.koneksiDb(); // pastikan koneksi DB kamu di sini
-
-        // Ambil tanggal dari JDateChooser
-        String filter = cb_filter.getSelectedItem().toString();
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-        java.util.Date dari = Dari.getDate();
-        String idDokter = tbl_laporan.getValueAt(selectedRow, 0).toString();
-        java.util.Date sampai;
-        Calendar cal = Calendar.getInstance();
-        cal.setTime(dari);
-        
-        switch (filter.toLowerCase()) {
-            case "harian":
-                sampai = dari;
-                break;
-            case "mingguan":
-                cal.add(Calendar.DAY_OF_MONTH, 6); // 7 hari total
-                sampai = cal.getTime();
-                break;
-            case "bulanan":
-                cal.set(Calendar.DAY_OF_MONTH, cal.getActualMaximum(Calendar.DAY_OF_MONTH));
-                sampai = cal.getTime();
-                break;
-            default:
-                sampai = dari;
-        }
-        // Parameter ke Jasper
-        Map<String, Object> param = new HashMap<>();
-        param.put("param_iddokter", idDokter);
-        param.put("Dari", dari);
-        param.put("Sampai", dari);
-
-        // Compile jika pakai jrxml
-        // JasperReport report = JasperCompileManager.compileReport(reportPath);
-
-        // Fill dan tampilkan
-        JasperReport report = JasperCompileManager.compileReport("src/report/NGETES.jrxml");
-        JasperPrint cetak = JasperFillManager.fillReport(report, param, conn);
-        JasperViewer.viewReport(cetak, false);
-        
-    } catch (Exception e) {
-        JOptionPane.showMessageDialog(this, "Gagal mencetak laporan: " + e.getMessage());
-        e.printStackTrace();
-    }
+        cetakLaporan(tglAwal, tglAkhir);
     }//GEN-LAST:event_CetakActionPerformed
 
 
@@ -334,6 +257,6 @@ public class Form_lp_Kinerja extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable tbl_laporan;
+    private javax.swing.JTable tbl_hasil;
     // End of variables declaration//GEN-END:variables
 }
