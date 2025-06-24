@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="7b0f3f26-e493-4609-a282-3c76df752be9">
-	<property name="ireport.zoom" value="2.143588810000002"/>
-	<property name="ireport.x" value="80"/>
+	<property name="ireport.zoom" value="1.6105100000000037"/>
+	<property name="ireport.x" value="62"/>
 	<property name="ireport.y" value="0"/>
 	<style name="Title" fontName="Times New Roman" fontSize="50" isBold="true" pdfFontName="Times-Bold"/>
 	<style name="SubTitle" forecolor="#736343" fontName="Arial" fontSize="18"/>
@@ -49,8 +49,7 @@ JOIN
 JOIN 
     layanan ON pendaftaran_detail.id_layanan = layanan.id_layanan
 ORDER BY 
-    pasien.Nama ASC, pendaftaran.tanggal_daftar ASC;
-]]>
+    pasien.Nama ASC, pendaftaran.tanggal_daftar ASC;]]>
 		</queryString>
 		<field name="Id_Pendaftaran" class="java.lang.Long">
 			<fieldDescription><![CDATA[]]></fieldDescription>
@@ -76,8 +75,7 @@ JOIN
 JOIN 
     layanan ON pendaftaran_detail.id_layanan = layanan.id_layanan
 ORDER BY 
-    pendaftaran.tanggal_daftar ASC, pasien.Nama ASC;
-]]>
+    pendaftaran.tanggal_daftar ASC, pasien.Nama ASC;]]>
 	</queryString>
 	<field name="Id_Pendaftaran" class="java.lang.Long">
 		<fieldDescription><![CDATA[]]></fieldDescription>
@@ -111,11 +109,11 @@ ORDER BY
 	<columnHeader>
 		<band height="21" splitType="Stretch">
 			<staticText>
-				<reportElement x="80" y="0" width="98" height="20" uuid="e7c88f0d-cad6-481d-acc1-4b6d7f9a9233"/>
+				<reportElement x="86" y="0" width="88" height="20" uuid="e7c88f0d-cad6-481d-acc1-4b6d7f9a9233"/>
 				<text><![CDATA[Id_Pendaftaran]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="189" y="0" width="200" height="20" uuid="36a5f6ed-25b0-41a2-a3cd-792eee94bf43"/>
+				<reportElement x="185" y="0" width="200" height="20" uuid="36a5f6ed-25b0-41a2-a3cd-792eee94bf43"/>
 				<text><![CDATA[Nama_Pasien]]></text>
 			</staticText>
 			<staticText>
@@ -152,12 +150,8 @@ ORDER BY
 	<detail>
 		<band height="21" splitType="Stretch">
 			<textField>
-				<reportElement x="90" y="0" width="88" height="20" uuid="3e937f3f-d41d-4be7-a630-dfd8e878f39b"/>
+				<reportElement x="86" y="0" width="88" height="20" uuid="3e937f3f-d41d-4be7-a630-dfd8e878f39b"/>
 				<textFieldExpression><![CDATA[$F{Id_Pendaftaran}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement x="189" y="0" width="200" height="20" uuid="4b32c1f9-a510-4022-a9ee-f1c20855ae5b"/>
-				<textFieldExpression><![CDATA[$F{Nama_Pasien}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="400" y="0" width="200" height="20" uuid="1e44874b-b22b-41a2-b16d-be360f1d8c89"/>
@@ -185,6 +179,10 @@ ORDER BY
 			<line>
 				<reportElement x="734" y="0" width="1" height="21" uuid="fd40e7a4-ee9f-4171-b2f0-c164d46ce42b"/>
 			</line>
+			<textField>
+				<reportElement x="185" y="0" width="200" height="20" uuid="4b32c1f9-a510-4022-a9ee-f1c20855ae5b"/>
+				<textFieldExpression><![CDATA[$F{Nama_Pasien}]]></textFieldExpression>
+			</textField>
 		</band>
 	</detail>
 	<columnFooter>

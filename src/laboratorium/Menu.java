@@ -332,7 +332,15 @@ public class Menu extends javax.swing.JFrame {
                     pn_utama.revalidate();
                     }
                 });
-        Item_menu lpPemeriksaan = new Item_menu(null, true, iconLpPriksa, "Pendaftaran", null);
+        Item_menu lpPemeriksaan = new Item_menu(null, true, iconLpPriksa, "Pendaftaran", new ActionListener() {
+            @Override
+                public void actionPerformed(ActionEvent e) {
+                    pn_utama.removeAll();
+                    pn_utama.add(new Form_lp_pendaftaran());
+                    pn_utama.repaint();
+                    pn_utama.revalidate();
+                    }
+                });
         Item_menu lpkinerja = new Item_menu(null, true, iconLpKinerja, "Kinerja", new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

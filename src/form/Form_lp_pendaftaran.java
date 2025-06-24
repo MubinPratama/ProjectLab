@@ -27,41 +27,36 @@ import net.sf.jasperreports.view.JasperViewer;
  *
  * @author user
  */
-public class Form_lp_keuangan extends javax.swing.JPanel {
+public class Form_lp_pendaftaran extends javax.swing.JPanel {
 
     /**
-     * Creates new form Form_lp_keuangan
+     * Creates new form Form_lp_pendaftaran
      */
-    public Form_lp_keuangan() {
+    public Form_lp_pendaftaran() {
         initComponents();
         tampildata();
-        
+       
     }
     
     private void tampildata() {
     DefaultTableModel model = new DefaultTableModel();
-    model.addColumn("ID Keuangan");
+    model.addColumn("ID pendaftaran");
+    model.addColumn("Nama pasien");
     model.addColumn("Nama layanan");
-    model.addColumn("Total pendapatan");
     model.addColumn("Tanggal");
 
     try {
         Connection kon = koneksi.koneksiDb();
 
-        String sql ="SELECT CONCAT('KEU-', LPAD(ROW_NUMBER() OVER (ORDER BY pembayaran.`tanggal_bayar`, layanan.`nama_layanan`), 5, '0')) AS `id_keuangan`," +
-                    "     layanan.`nama_layanan` AS `nama_layanan`," +
-                    "     SUM(pendaftaran_detail.`harga`) AS `total_pendapatan`," +
-                    "     pembayaran.`tanggal_bayar` AS `tanggal`" +
-                    "FROM" +
-                    "     `pendaftaran` pendaftaran INNER JOIN `pendaftaran_detail` pendaftaran_detail ON pendaftaran.`id_pendaftaran` = pendaftaran_detail.`id_pendaftaran`" +
-                    "     INNER JOIN `layanan` layanan ON pendaftaran_detail.`id_layanan` = layanan.`id_layanan`" +
-                    "     INNER JOIN `pembayaran` pembayaran ON pendaftaran.`id_pendaftaran` = pembayaran.`id_pendaftaran`" +
-                    "GROUP BY" +
-                    "     pembayaran.`tanggal_bayar`," +
-                    "     layanan.`nama_layanan`" +
-                    "ORDER BY" +
-                    "     pembayaran.`tanggal_bayar` ASC," +
-                    "     layanan.`nama_layanan` ASC";
+        String sql ="SELECT pendaftaran.id_pendaftaran AS `Id_Pendaftaran`," +
+                    "    pasien.Nama AS `Nama_Pasien`," +
+                    "    layanan.nama_layanan AS `Nama_Layanan`," +
+                    "    pendaftaran.tanggal_daftar AS `Tanggal`" +
+                    "FROM pendaftaran " +
+                    "INNER JOIN pasien ON pendaftaran.No_rm = pasien.No_rm " +
+                    "INNER JOIN pendaftaran_detail ON pendaftaran.id_pendaftaran = pendaftaran_detail.id_pendaftaran " 
+                + "INNER JOIN layanan ON pendaftaran_detail.id_layanan = layanan.id_layanan " 
+                + "ORDER BY pendaftaran.tanggal_daftar ASC, pasien.Nama ASC";
 
         PreparedStatement ps = kon.prepareStatement(sql);
 
@@ -69,10 +64,10 @@ public class Form_lp_keuangan extends javax.swing.JPanel {
 
         while (rs.next()) {
             model.addRow(new Object[]{
-                rs.getString("id_keuangan"),
-                rs.getString("nama_layanan"),
-                rs.getInt("total_pendapatan"),
-                rs.getDate("tanggal")
+                rs.getString("Id_Pendaftaran"),
+                rs.getString("Nama_Pasien"),
+                rs.getString("Nama_Layanan"),
+                rs.getDate("Tanggal")
             });
         }
 
@@ -106,7 +101,7 @@ public class Form_lp_keuangan extends javax.swing.JPanel {
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setFont(new java.awt.Font("Georgia", 1, 36)); // NOI18N
-        jLabel1.setText("Laporan Keuangan");
+        jLabel1.setText("Laporan Pendaftaran");
 
         Cetak.setBackground(new java.awt.Color(255, 255, 255));
         Cetak.setText("CETAK");
@@ -115,6 +110,8 @@ public class Form_lp_keuangan extends javax.swing.JPanel {
                 CetakActionPerformed(evt);
             }
         });
+
+        jScrollPane1.setBackground(new java.awt.Color(255, 255, 255));
 
         tbl_laporan.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -133,16 +130,14 @@ public class Form_lp_keuangan extends javax.swing.JPanel {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 858, Short.MAX_VALUE)
+            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(Cetak, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jScrollPane1)))
+                .addContainerGap()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 838, Short.MAX_VALUE)
                 .addContainerGap())
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(Cetak, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -152,7 +147,7 @@ public class Form_lp_keuangan extends javax.swing.JPanel {
                 .addComponent(Cetak, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 44, Short.MAX_VALUE))
+                .addContainerGap(55, Short.MAX_VALUE))
         );
 
         add(jPanel1, "card3");
@@ -162,7 +157,7 @@ public class Form_lp_keuangan extends javax.swing.JPanel {
         // TODO add your handling code here:
         try {
         // Path ke file .jasper
-        String reportPath = "src/report/keuangan.jasper";
+        String reportPath = "src/report/pendaftaran.jasper";
 
         // Koneksi ke database
         Connection kon = koneksi.koneksiDb(); // pastikan kamu punya method koneksi seperti ini
