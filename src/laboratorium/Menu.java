@@ -5,14 +5,7 @@
  */
 package laboratorium;
 
-import form.Form_Dokter;
-import form.Form_Layanan;
-import form.Form_lp_Kinerja;
-import form.Form_lp_HasilPemeriksaan;
-import form.Form_pasien;
-import form.form_hasil;
-import form.form_pembayaran;
-import form.form_pendaftaran;
+import form.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.text.SimpleDateFormat;
