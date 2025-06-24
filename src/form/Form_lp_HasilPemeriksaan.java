@@ -48,6 +48,7 @@ private DefaultTableModel tabmode;
         String sql = "SELECT p.id_pendaftaran, ps.nama AS nama_pasien, p.tanggal_daftar " +
                      "FROM pendaftaran p " +
                      "JOIN pasien ps ON p.No_rm = ps.No_rm " +
+                     "WHERE status_hasil ='sudah'"+
                      "ORDER BY p.id_pendaftaran ASC";
 
         Connection kon = koneksi.koneksiDb();
@@ -207,7 +208,8 @@ private DefaultTableModel tabmode;
         String sql = "SELECT p.id_pendaftaran, ps.nama AS nama_pasien, p.tanggal_daftar " +
                      "FROM pendaftaran p " +
                      "JOIN pasien ps ON p.No_rm = ps.No_rm " +
-                     "WHERE p.id_pendaftaran LIKE ? OR ps.nama LIKE ? " +
+                     "WHERE (p.id_pendaftaran LIKE ? OR ps.nama LIKE ?) " + 
+                     "AND (status_hasil ='sudah') " +
                      "ORDER BY p.id_pendaftaran ASC";
 
         Connection kon = koneksi.koneksiDb();
