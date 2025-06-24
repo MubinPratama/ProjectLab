@@ -40,79 +40,35 @@ private DefaultTableModel tabmode;
     }
 
     private void tampildata() {
-    Object[] Baris = {"ID", "ID Pendaftaran", "Nama Pemeriksaan", "Hasil Pemeriksaan", "Waktu Input"};
-    tabmode = new DefaultTableModel(null, Baris);
+    DefaultTableModel model = new DefaultTableModel();
+    model.addColumn("Nomor Pendaftaran");
+    model.addColumn("Nama Pasien");
+    model.addColumn("Tanggal Daftar");
 
     try {
+        String sql = "SELECT p.id_pendaftaran, ps.nama AS nama_pasien, p.tanggal_daftar " +
+                     "FROM pendaftaran p " +
+                     "JOIN pasien ps ON p.No_rm = ps.No_rm " +
+                     "ORDER BY p.id_pendaftaran ASC";
+
         Connection kon = koneksi.koneksiDb();
-        String filter = cb_filter.getSelectedItem().toString();
-        Date dari = Dari.getDate();
+        Statement stm = kon.createStatement();
+        ResultSet res = stm.executeQuery(sql);
 
-        if (dari == null) {
-            JOptionPane.showMessageDialog(this, "Tanggal harus diisi!");
-            return;
-        }
-
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-        String tglAwal = sdf.format(dari);
-        String tglAkhir = tglAwal;
-
-        Calendar cal = Calendar.getInstance();
-        cal.setTime(dari);
-
-        if (filter.equals("Mingguan")) {
-            cal.add(Calendar.DAY_OF_MONTH, 6);
-        } else if (filter.equals("Bulanan")) {
-            cal.add(Calendar.DAY_OF_MONTH, 29);
-        }
-
-        if (!filter.equals("Harian")) {
-            tglAkhir = sdf.format(cal.getTime());
-        }
-
-        String sql = "SELECT * FROM hasil_periksa WHERE waktu_input BETWEEN ? AND ? ORDER BY id_pendaftaran";
-        PreparedStatement ps = kon.prepareStatement(sql);
-        ps.setString(1, tglAwal);
-        ps.setString(2, tglAkhir);
-
-        ResultSet rs = ps.executeQuery();
-
-        while (rs.next()) {
-            tabmode.addRow(new Object[]{
-                rs.getString("id"),
-                rs.getString("id_pendaftaran"),
-                rs.getString("nama_pemeriksaan"),
-                rs.getString("hasil_pemeriksaan"),
-                rs.getTimestamp("waktu_input")
+        while (res.next()) {
+            model.addRow(new Object[]{
+                res.getString("id_pendaftaran"),
+                res.getString("nama_pasien"),
+                res.getString("tanggal_daftar")
             });
         }
 
-        tbl_hasil.setModel(tabmode);
-
+        tbl_hasil.setModel(model);
     } catch (Exception e) {
         JOptionPane.showMessageDialog(this, "Gagal menampilkan data: " + e.getMessage());
     }
 }
 
-
-private void cetakLaporan(String tglAwal, String tglAkhir) {
-    try {
-        Connection kon = koneksi.koneksiDb();
-        String reportPath = "src/report/reporthasil.jasper"; // Sesuaikan path file .jasper kamu
-
-        // Parameter ke JasperReport
-        Map<String, Object> params = new HashMap<>();
-        params.put("startDate", java.sql.Date.valueOf(tglAwal));
-        params.put("endDate", java.sql.Date.valueOf(tglAkhir));
-
-        JasperPrint print = JasperFillManager.fillReport(reportPath, params, kon);
-        JasperViewer.viewReport(print, false);
-
-    } catch (Exception e) {
-        JOptionPane.showMessageDialog(this, "Gagal mencetak laporan: " + e.getMessage());
-        e.printStackTrace();
-    }
-}
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -124,21 +80,17 @@ private void cetakLaporan(String tglAwal, String tglAkhir) {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
         Cetak = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tbl_hasil = new javax.swing.JTable();
-        Dari = new com.toedter.calendar.JDateChooser();
-        jLabel7 = new javax.swing.JLabel();
-        cb_filter = new javax.swing.JComboBox<>();
+        caridata = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        bt_cardat = new javax.swing.JButton();
 
         setLayout(new java.awt.CardLayout());
 
         jLabel1.setFont(new java.awt.Font("Georgia", 1, 36)); // NOI18N
         jLabel1.setText("Laporan Hasil Pemeriksaan");
-
-        jLabel6.setFont(new java.awt.Font("Georgia", 0, 18)); // NOI18N
-        jLabel6.setText("Periode :");
 
         Cetak.setText("CETAK");
         Cetak.addActionListener(new java.awt.event.ActionListener() {
@@ -160,14 +112,15 @@ private void cetakLaporan(String tglAwal, String tglAkhir) {
         ));
         jScrollPane1.setViewportView(tbl_hasil);
 
-        jLabel7.setFont(new java.awt.Font("Georgia", 0, 18)); // NOI18N
-        jLabel7.setText("Cari Data dari :");
+        jLabel2.setFont(new java.awt.Font("Georgia", 0, 18)); // NOI18N
+        jLabel2.setText("Cari Data");
 
-        cb_filter.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
-        cb_filter.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Harian", "Mingguan", "Bulanan" }));
-        cb_filter.addActionListener(new java.awt.event.ActionListener() {
+        bt_cardat.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
+        bt_cardat.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/search (1) (1).png"))); // NOI18N
+        bt_cardat.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        bt_cardat.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cb_filterActionPerformed(evt);
+                bt_cardatActionPerformed(evt);
             }
         });
 
@@ -175,21 +128,20 @@ private void cetakLaporan(String tglAwal, String tglAkhir) {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 695, Short.MAX_VALUE)
             .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Cetak, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel7)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(Dari, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(Cetak, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 579, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel6)
+                        .addComponent(caridata)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(cb_filter, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(120, 172, Short.MAX_VALUE))
+                        .addComponent(bt_cardat, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -197,13 +149,12 @@ private void cetakLaporan(String tglAwal, String tglAkhir) {
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Cetak, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(7, 7, 7)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(Dari, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(cb_filter, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(8, 8, 8)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(bt_cardat, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(caridata, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel2)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
@@ -212,49 +163,79 @@ private void cetakLaporan(String tglAwal, String tglAkhir) {
         add(jPanel1, "card3");
     }// </editor-fold>//GEN-END:initComponents
 
-    private void cb_filterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb_filterActionPerformed
-        // TODO add your handling code here:
-        tampildata(); // tampilkan ulang data dengan filter yang dipilih
-    }//GEN-LAST:event_cb_filterActionPerformed
-
     private void CetakActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CetakActionPerformed
-        // TODO add your handling code here:
-        Date dari = Dari.getDate();
-        String filter = cb_filter.getSelectedItem().toString();
+         //TODO add your handling code here:
+         try {
+             int selectedRow = tbl_hasil.getSelectedRow();
+            if (selectedRow == -1) {
+                JOptionPane.showMessageDialog(this, "Pilih salah satu baris dokter terlebih dahulu.");
+                return;
+            }
+        Connection kon = koneksi.koneksiDb();
+        
+        Map<String, Object> param = new HashMap<>();
+        param.put("id_pendaftaran", tbl_hasil.getValueAt(selectedRow, 0).toString()); // Sesuaikan dengan nama parameter di report
 
-        if (dari == null) {
-            JOptionPane.showMessageDialog(this, "Tanggal harus diisi sebelum mencetak!");
-            return;
-        }
+        // 4. Load & compile file .jrxml
+        JasperReport report = JasperCompileManager.compileReport("src/report/report_hasil_p.jrxml");
 
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-        String tglAwal = sdf.format(dari);
-        String tglAkhir = tglAwal;
+        // 5. Isi report dengan data dari database
+        JasperPrint print = JasperFillManager.fillReport(report, param, kon);
 
-        Calendar cal = Calendar.getInstance();
-        cal.setTime(dari);
+        // 6. Tampilkan report
+        JasperViewer.viewReport(print, false);
 
-        if (filter.equals("Mingguan")) {
-            cal.add(Calendar.DAY_OF_MONTH, 6);
-        } else if (filter.equals("Bulanan")) {
-            cal.add(Calendar.DAY_OF_MONTH, 29);
-        }
-
-        if (!filter.equals("Harian")) {
-            tglAkhir = sdf.format(cal.getTime());
-        }
-
-        cetakLaporan(tglAwal, tglAkhir);
+    } catch (Exception e) {
+        JOptionPane.showMessageDialog(this, "Gagal mencetak: " + e.getMessage());
+        e.printStackTrace();
+    }
     }//GEN-LAST:event_CetakActionPerformed
+
+    private void bt_cardatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_cardatActionPerformed
+        // TODO add your handling code here:
+    DefaultTableModel model = new DefaultTableModel();
+    model.addColumn("Nomor Pendaftaran");
+    model.addColumn("Nama Pasien");
+    model.addColumn("Tanggal Daftar");
+
+    String keyword = caridata.getText().trim();
+
+    try {
+        String sql = "SELECT p.id_pendaftaran, ps.nama AS nama_pasien, p.tanggal_daftar " +
+                     "FROM pendaftaran p " +
+                     "JOIN pasien ps ON p.No_rm = ps.No_rm " +
+                     "WHERE p.id_pendaftaran LIKE ? OR ps.nama LIKE ? " +
+                     "ORDER BY p.id_pendaftaran ASC";
+
+        Connection kon = koneksi.koneksiDb();
+        PreparedStatement ps = kon.prepareStatement(sql);
+        ps.setString(1, "%" + keyword + "%");
+        ps.setString(2, "%" + keyword + "%");
+
+        ResultSet rs = ps.executeQuery();
+
+        while (rs.next()) {
+            model.addRow(new Object[]{
+                rs.getString("id_pendaftaran"),
+                rs.getString("nama_pasien"),
+                rs.getString("tanggal_daftar")
+            });
+        }
+
+        tbl_hasil.setModel(model);
+    } catch (Exception e) {
+        JOptionPane.showMessageDialog(this, "Gagal mencari data: " + e.getMessage());
+    }
+
+    }//GEN-LAST:event_bt_cardatActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Cetak;
-    private com.toedter.calendar.JDateChooser Dari;
-    private javax.swing.JComboBox<String> cb_filter;
+    private javax.swing.JButton bt_cardat;
+    private javax.swing.JTextField caridata;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable tbl_hasil;
