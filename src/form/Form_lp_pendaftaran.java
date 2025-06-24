@@ -5,37 +5,37 @@
  */
 package form;
 
-import com.toedter.calendar.JDateChooser;
-import config.koneksi;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
-import javax.swing.JOptionPane;
-import javax.swing.table.DefaultTableModel;
-import net.sf.jasperreports.engine.JasperCompileManager;
-import net.sf.jasperreports.engine.JasperFillManager;
-import net.sf.jasperreports.engine.JasperPrint;
-import net.sf.jasperreports.engine.JasperReport;
+import net.sf.jasperreports.engine.*;
 import net.sf.jasperreports.view.JasperViewer;
+import javax.swing.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
 
 /**
  *
  * @author user
  */
-public class Form_lp_Kinerja extends javax.swing.JPanel {
+public class Form_lp_Pendaftaran extends javax.swing.JPanel {
 
     /**
      * Creates new form Form_lp_Kinerja
      */
-    public Form_lp_Kinerja() {
-        initComponents();
-        tampildata();
+    public Form_lp_Pendaftaran() {
+         setTitle("Laporan Pendaftaran");
+        setSize(400, 200);
+        setLocationRelativeTo(null);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setLayout(null);
+
+        JLabel lblTitle = new JLabel("Laporan Pendaftaran");
+        lblTitle.setBounds(100, 20, 200, 30);
+        add(lblTitle);
+
+        btnCetak = new JButton("CETAK");
+        btnCetak.setBounds(140, 80, 100, 30);
+        add(btnCetak);
+
+        btnCetak.addActionListener(e -> cetakLaporan());
         
     }
     private void tampildata() {
@@ -113,21 +113,14 @@ public class Form_lp_Kinerja extends javax.swing.JPanel {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
         Cetak = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tbl_laporan = new javax.swing.JTable();
-        Dari = new com.toedter.calendar.JDateChooser();
-        jLabel7 = new javax.swing.JLabel();
-        cb_filter = new javax.swing.JComboBox<>();
 
         setLayout(new java.awt.CardLayout());
 
         jLabel1.setFont(new java.awt.Font("Georgia", 1, 36)); // NOI18N
-        jLabel1.setText("Laporan Kinerja");
-
-        jLabel6.setFont(new java.awt.Font("Georgia", 0, 18)); // NOI18N
-        jLabel6.setText("Periode :");
+        jLabel1.setText("Laporan Pendaftaran");
 
         Cetak.setText("CETAK");
         Cetak.addActionListener(new java.awt.event.ActionListener() {
@@ -149,172 +142,71 @@ public class Form_lp_Kinerja extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(tbl_laporan);
 
-        jLabel7.setFont(new java.awt.Font("Georgia", 0, 18)); // NOI18N
-        jLabel7.setText("Cari Data dari :");
-
-        cb_filter.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
-        cb_filter.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Harian", "Mingguan", "Bulanan" }));
-        cb_filter.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cb_filterActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Cetak, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 838, Short.MAX_VALUE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel7)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(Dari, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel6)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(cb_filter, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(120, 335, Short.MAX_VALUE))
+                        .addComponent(Cetak, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
                 .addComponent(Cetak, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(7, 7, 7)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(Dari, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(cb_filter, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 1, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 361, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(77, 77, 77))
         );
 
         add(jPanel1, "card3");
     }// </editor-fold>//GEN-END:initComponents
 
-    private void cb_filterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb_filterActionPerformed
-        // TODO add your handling code here:
-            DefaultTableModel model = new DefaultTableModel();
-    model.addColumn("ID Dokter");
-    model.addColumn("Nama Dokter");
-    model.addColumn("Tanggal Aktif");
-    model.addColumn("Jumlah Pemeriksaan");
-
-    try {
-        Connection kon = koneksi.koneksiDb();
-        String filter = cb_filter.getSelectedItem().toString();
-        Date dari = Dari.getDate();
-
-        if (dari == null) {
-            JOptionPane.showMessageDialog(this, "Tanggal harus diisi!");
-            return;
-        }
-
-        // Format tanggal ke string
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-        String tglAwal = sdf.format(dari);
-        String tglAkhir = tglAwal; // Default sama untuk Harian
-
-        // Hitung tanggal akhir jika filter mingguan/bulanan
-        Calendar cal = Calendar.getInstance();
-        cal.setTime(dari);
-
-        if (filter.equals("Mingguan")) {
-            cal.add(Calendar.DAY_OF_MONTH, 6);
-        } else if (filter.equals("Bulanan")) {
-            cal.add(Calendar.DAY_OF_MONTH, 29);
-        }
-
-        if (!filter.equals("Harian")) {
-            tglAkhir = sdf.format(cal.getTime());
-        }
-
-        // SQL Query
-        String sql = "SELECT d.id_dokter, d.Nama AS nama_dokter, COUNT(p.id_pendaftaran) AS jumlah_pemeriksaan, " +
-                     "MIN(p.tanggal_daftar) AS aktif_mulai " +
-                     "FROM pendaftaran p " +
-                     "JOIN dokter d ON p.id_dokter = d.id_dokter " +
-                     "WHERE p.tanggal_daftar BETWEEN ? AND ? " +
-                     "GROUP BY d.id_dokter, d.Nama";
-
-        PreparedStatement ps = kon.prepareStatement(sql);
-        ps.setString(1, tglAwal);
-        ps.setString(2, tglAkhir);
-
-        ResultSet rs = ps.executeQuery();
-
-        while (rs.next()) {
-            model.addRow(new Object[]{
-                rs.getString("id_dokter"),
-                rs.getString("nama_dokter"),
-                rs.getString("aktif_mulai"),
-                rs.getInt("jumlah_pemeriksaan")
-            });
-        }
-
-        tbl_laporan.setModel(model);
-
-    } catch (Exception e) {
-        JOptionPane.showMessageDialog(this, "Gagal menampilkan data: " + e.getMessage());
-    }
-
-    }//GEN-LAST:event_cb_filterActionPerformed
-
     private void CetakActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CetakActionPerformed
         // TODO add your handling code here:
         try {
-            int selectedRow = tbl_laporan.getSelectedRow();
-            if (selectedRow == -1) {
-                JOptionPane.showMessageDialog(this, "Pilih salah satu baris dokter terlebih dahulu.");
-                return;
-            }
-            
-        Connection conn = koneksi.koneksiDb(); // pastikan koneksi DB kamu di sini
+            String url = "jdbc:mysql://localhost:3306/db_lab"; // Ganti sesuai nama database
+            String user = "root";
+            String pass = "";
 
-        // Ambil tanggal dari JDateChooser
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-        java.util.Date dari = Dari.getDate();
-        String idDokter = tbl_laporan.getValueAt(selectedRow, 0).toString();
+            Connection conn = koneksi.koneksiDb(); // pastikan koneksi DB kamu di sini
 
-        // Path ke file .jrxml
-//        String reportPath = "src/report/NGETES.jrxml"; // atau .jrxml jika belum dikompilasi
+            // Load file .jrxml
+            String path = "src/report/pendaftaran.jrxml"; // Pastikan path benar
+            JasperReport jr = JasperCompileManager.compileReport(path);
+            // Path ke file .jrxml
+            //        String reportPath = "src/report/NGETES.jrxml"; // atau .jrxml jika belum dikompilasi
 
-        // Parameter ke Jasper
-        Map<String, Object> param = new HashMap<>();
-        param.put("param_iddokter", idDokter);
-        param.put("Dari", dari);
+            // Isi laporan tanpa parameter
+            JasperPrint jp = JasperFillManager.fillReport(jr, null, conn);
 
-        // Compile jika pakai jrxml
-        // JasperReport report = JasperCompileManager.compileReport(reportPath);
+              // Tampilkan laporan
+            JasperViewer viewer = new JasperViewer(jp, false);
+            viewer.setVisible(true);
 
-        // Fill dan tampilkan
-        JasperReport report = JasperCompileManager.compileReport("src/report/NGETES.jrxml");
-        JasperPrint cetak = JasperFillManager.fillReport(report, param, conn);
-        JasperViewer.viewReport(cetak, false);
-        
-    } catch (Exception e) {
-        JOptionPane.showMessageDialog(this, "Gagal mencetak laporan: " + e.getMessage());
-        e.printStackTrace();
-    }
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            JOptionPane.showMessageDialog(this, "Gagal mencetak laporan: " + ex.getMessage());
+        }
     }//GEN-LAST:event_CetakActionPerformed
 
-
+ public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> {
+            new FormPendaftaran().setVisible(true);
+        });
+    }
+}
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Cetak;
-    private com.toedter.calendar.JDateChooser Dari;
-    private javax.swing.JComboBox<String> cb_filter;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable tbl_laporan;

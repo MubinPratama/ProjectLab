@@ -49,8 +49,7 @@ JOIN
 JOIN 
     layanan ON pendaftaran_detail.id_layanan = layanan.id_layanan
 ORDER BY 
-    pasien.Nama ASC, pendaftaran.tanggal_daftar ASC;
-]]>
+    pasien.Nama ASC, pendaftaran.tanggal_daftar ASC;]]>
 		</queryString>
 		<field name="Id_Pendaftaran" class="java.lang.Long">
 			<fieldDescription><![CDATA[]]></fieldDescription>
@@ -76,8 +75,7 @@ JOIN
 JOIN 
     layanan ON pendaftaran_detail.id_layanan = layanan.id_layanan
 ORDER BY 
-    pendaftaran.tanggal_daftar ASC, pasien.Nama ASC;
-]]>
+    pendaftaran.tanggal_daftar ASC, pasien.Nama ASC;]]>
 	</queryString>
 	<field name="Id_Pendaftaran" class="java.lang.Long">
 		<fieldDescription><![CDATA[]]></fieldDescription>
