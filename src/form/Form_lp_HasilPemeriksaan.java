@@ -165,30 +165,23 @@ private DefaultTableModel tabmode;
 
     private void CetakActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CetakActionPerformed
          //TODO add your handling code here:
-         try {
-             int selectedRow = tbl_hasil.getSelectedRow();
-            if (selectedRow == -1) {
-                JOptionPane.showMessageDialog(this, "Pilih salah satu baris dokter terlebih dahulu.");
-                return;
-            }
-        Connection kon = koneksi.koneksiDb();
+     try {
         
+         Connection kon = koneksi.koneksiDb();
         Map<String, Object> param = new HashMap<>();
-        param.put("id_pendaftaran", tbl_hasil.getValueAt(selectedRow, 0).toString()); // Sesuaikan dengan nama parameter di report
+        int selectedRow = tbl_hasil.getSelectedRow();
+        String idpendaftaran = tbl_hasil.getValueAt(selectedRow, 0).toString();
+        
+        param.put("id_pendaftaran",idpendaftaran); // ambil dari input user atau combo box
 
-        // 4. Load & compile file .jrxml
-        JasperReport report = JasperCompileManager.compileReport("src/report/report_hasil_p.jrxml");
+        JasperReport report = JasperCompileManager.compileReport("src/report/hasil.jrxml");
+        JasperPrint cetak = JasperFillManager.fillReport(report, param, kon);
+        JasperViewer.viewReport(cetak, false);
+} catch (Exception e) {
+    JOptionPane.showMessageDialog(this, "Gagal mencetak: " + e.getMessage());
+    e.printStackTrace();
+}
 
-        // 5. Isi report dengan data dari database
-        JasperPrint print = JasperFillManager.fillReport(report, param, kon);
-
-        // 6. Tampilkan report
-        JasperViewer.viewReport(print, false);
-
-    } catch (Exception e) {
-        JOptionPane.showMessageDialog(this, "Gagal mencetak: " + e.getMessage());
-        e.printStackTrace();
-    }
     }//GEN-LAST:event_CetakActionPerformed
 
     private void bt_cardatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_cardatActionPerformed

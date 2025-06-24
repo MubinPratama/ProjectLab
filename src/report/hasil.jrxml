@@ -3,7 +3,7 @@
 	<property name="ireport.zoom" value="1.6105100000000017"/>
 	<property name="ireport.x" value="48"/>
 	<property name="ireport.y" value="0"/>
-	<parameter name="id_pendaftaran" class="java.lang.Long"/>
+	<parameter name="id_pendaftaran" class="java.lang.String"/>
 	<queryString>
 		<![CDATA[SELECT 
     ps.nama AS nama_pasien,
@@ -15,7 +15,7 @@ FROM hasil_periksa h
 JOIN pendaftaran p ON h.id_pendaftaran = p.id_pendaftaran
 JOIN pasien ps ON p.No_rm = ps.No_rm
 JOIN dokter d ON p.id_dokter = d.id_dokter
-WHERE h.id_pendaftaran = $p{id_pendaftaran}]]>
+WHERE h.id_pendaftaran = $P{id_pendaftaran}]]>
 	</queryString>
 	<field name="nama_pasien" class="java.lang.String"/>
 	<field name="nama_dokter" class="java.lang.String"/>
@@ -34,7 +34,6 @@ WHERE h.id_pendaftaran = $p{id_pendaftaran}]]>
 	<title>
 		<band height="57" splitType="Stretch">
 			<staticText>
-				<reportElement style="Title" x="185" y="0" width="209" height="51" uuid="97573f68-7241-4185-836d-daefb72dbc52"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="32" isBold="true" pdfFontName="Times-Roman"/>
 				</textElement>
