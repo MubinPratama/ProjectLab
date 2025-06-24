@@ -85,7 +85,7 @@ public class Form_lp_Kinerja extends javax.swing.JPanel {
     private void cetakLaporan(String tglAwal, String tglAkhir) {
     try {
         Connection kon = koneksi.koneksiDb();
-        String reportPath = "src/report/NGETES.jasper"; // Sesuaikan path file .jasper kamu
+        String reportPath = "src/report/Kinerja.jasper"; // Sesuaikan path file .jasper kamu
 
         // Parameter ke JasperReport
         Map<String, Object> params = new HashMap<>();
@@ -314,7 +314,7 @@ public class Form_lp_Kinerja extends javax.swing.JPanel {
         // JasperReport report = JasperCompileManager.compileReport(reportPath);
 
         // Fill dan tampilkan
-        JasperReport report = JasperCompileManager.compileReport("src/report/NGETES.jrxml");
+        JasperReport report = JasperCompileManager.compileReport("src/report/Kinerja.jrxml");
         JasperPrint cetak = JasperFillManager.fillReport(report, param, conn);
         JasperViewer.viewReport(cetak, false);
         

@@ -5,7 +5,6 @@
  */
 package form;
 
-
 import com.toedter.calendar.JDateChooser;
 import config.koneksi;
 import java.sql.Connection;
@@ -49,11 +48,14 @@ private DefaultTableModel tabmode;
         String sql = "SELECT p.id_pendaftaran, ps.nama AS nama_pasien, p.tanggal_daftar " +
                      "FROM pendaftaran p " +
                      "JOIN pasien ps ON p.No_rm = ps.No_rm " +
+                     "WHERE status_hasil ='sudah'"+
                      "ORDER BY p.id_pendaftaran ASC";
 
         Connection kon = koneksi.koneksiDb();
         Statement stm = kon.createStatement();
         ResultSet res = stm.executeQuery(sql);
+//        PreparedStatement ps = kon.prepareStatement(sql);
+//        ResultSet res = ps.executeQuery();
 
         while (res.next()) {
             model.addRow(new Object[]{
@@ -63,7 +65,7 @@ private DefaultTableModel tabmode;
             });
         }
 
-        tbl_hasil.setModel(model);
+        tbl_laporan.setModel(model);
     } catch (Exception e) {
         JOptionPane.showMessageDialog(this, "Gagal menampilkan data: " + e.getMessage());
     }
@@ -81,11 +83,11 @@ private DefaultTableModel tabmode;
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         Cetak = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        tbl_hasil = new javax.swing.JTable();
         caridata = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         bt_cardat = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tbl_laporan = new javax.swing.JTable();
 
         setLayout(new java.awt.CardLayout());
 
@@ -99,19 +101,6 @@ private DefaultTableModel tabmode;
             }
         });
 
-        tbl_hasil.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
-            }
-        ));
-        jScrollPane1.setViewportView(tbl_hasil);
-
         jLabel2.setFont(new java.awt.Font("Georgia", 0, 18)); // NOI18N
         jLabel2.setText("Cari Data");
 
@@ -124,12 +113,24 @@ private DefaultTableModel tabmode;
             }
         });
 
+        tbl_laporan.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(tbl_laporan);
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 695, Short.MAX_VALUE)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -140,7 +141,10 @@ private DefaultTableModel tabmode;
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(caridata)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(bt_cardat, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(bt_cardat, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jScrollPane1)))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -155,22 +159,21 @@ private DefaultTableModel tabmode;
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(caridata, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel2)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 421, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         add(jPanel1, "card3");
     }// </editor-fold>//GEN-END:initComponents
 
     private void CetakActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CetakActionPerformed
-         //TODO add your handling code here:
-     try {
-        
+         //TODO add your handling code here:     try {
+        try{
          Connection kon = koneksi.koneksiDb();
         Map<String, Object> param = new HashMap<>();
-        int selectedRow = tbl_hasil.getSelectedRow();
-        String idpendaftaran = tbl_hasil.getValueAt(selectedRow, 0).toString();
+        int selectedRow = tbl_laporan.getSelectedRow();
+        Long  idpendaftaran = Long.parseLong(tbl_laporan.getValueAt(selectedRow, 0).toString());
         
         param.put("id_pendaftaran",idpendaftaran); // ambil dari input user atau combo box
 
@@ -181,7 +184,6 @@ private DefaultTableModel tabmode;
     JOptionPane.showMessageDialog(this, "Gagal mencetak: " + e.getMessage());
     e.printStackTrace();
 }
-
     }//GEN-LAST:event_CetakActionPerformed
 
     private void bt_cardatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_cardatActionPerformed
@@ -197,7 +199,7 @@ private DefaultTableModel tabmode;
         String sql = "SELECT p.id_pendaftaran, ps.nama AS nama_pasien, p.tanggal_daftar " +
                      "FROM pendaftaran p " +
                      "JOIN pasien ps ON p.No_rm = ps.No_rm " +
-                     "WHERE p.id_pendaftaran LIKE ? OR ps.nama LIKE ? " +
+                     "(p.id_pendaftaran LIKE ? OR ps.nama LIKE ?) AND p.status_hasil = 'sudah'" +
                      "ORDER BY p.id_pendaftaran ASC";
 
         Connection kon = koneksi.koneksiDb();
@@ -215,7 +217,7 @@ private DefaultTableModel tabmode;
             });
         }
 
-        tbl_hasil.setModel(model);
+        tbl_laporan.setModel(model);
     } catch (Exception e) {
         JOptionPane.showMessageDialog(this, "Gagal mencari data: " + e.getMessage());
     }
@@ -231,6 +233,6 @@ private DefaultTableModel tabmode;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable tbl_hasil;
+    private javax.swing.JTable tbl_laporan;
     // End of variables declaration//GEN-END:variables
 }
