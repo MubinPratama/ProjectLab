@@ -1,24 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="af8a07ff-d0ac-4672-bed2-2268a907e72e">
-	<property name="ireport.zoom" value="1.6105100000000017"/>
+	<property name="ireport.zoom" value="1.210000000000001"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
-	<parameter name="id_pendaftaran" class="java.lang.String"/>
+	<parameter name="id_pendaftaran" class="java.lang.Long"/>
 	<queryString>
-		<![CDATA[SELECT
-     pasien.`Nama` AS `nama_pasien`,
-     dokter.`Nama` AS `nama_dokter`,
-     pendaftaran.`tanggal_daftar` AS `tanggal_daftar`,
-     hasil_periksa.`nama_pemeriksaan` AS `nama_pemeriksaan`,
-     hasil_periksa.`hasil_pemeriksaan` AS `hasil_pemeriksaan`
-FROM
-     `pendaftaran` pendaftaran INNER JOIN `pasien` pasien ON pendaftaran.`No_rm` = pasien.`No_rm`
-     INNER JOIN `dokter` dokter ON pendaftaran.`Id_dokter` = dokter.`Id_Dokter`
-     INNER JOIN `hasil_periksa` hasil_periksa ON pendaftaran.`id_pendaftaran` = hasil_periksa.`id_pendaftaran`
-WHERE
-     pendaftaran.`id_pendaftaran` = $P{id_pendaftaran}
-ORDER BY
-     hasil_periksa.`id` ASC]]>
+		<![CDATA[SELECT 
+    ps.nama AS nama_pasien,
+    d.nama AS nama_dokter,
+    p.tanggal_daftar,
+    h.nama_pemeriksaan,
+    h.hasil_pemeriksaan
+FROM hasil_periksa h
+JOIN pendaftaran p ON h.id_pendaftaran = p.id_pendaftaran
+JOIN pasien ps ON p.No_rm = ps.No_rm
+JOIN dokter d ON p.id_dokter = d.id_dokter
+WHERE h.id_pendaftaran = $P{id_pendaftaran}]]>
 	</queryString>
 	<field name="nama_pasien" class="java.lang.String"/>
 	<field name="nama_dokter" class="java.lang.String"/>
@@ -36,12 +33,8 @@ ORDER BY
 	</background>
 	<title>
 		<band height="57" splitType="Stretch">
-			<image>
-				<reportElement x="118" y="0" width="53" height="51" uuid="b6a12eb5-638b-4985-957b-3471bc339016"/>
-				<imageExpression><![CDATA["C:\\Users\\Basuki\\Documents\\NetBeansProjects\\ProjectLab\\src\\Img\\logo_lab.jpg"]]></imageExpression>
-			</image>
 			<staticText>
-				<reportElement style="Title" x="185" y="0" width="209" height="51" uuid="97573f68-7241-4185-836d-daefb72dbc52"/>
+				<reportElement x="185" y="0" width="209" height="51" uuid="97573f68-7241-4185-836d-daefb72dbc52"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="32" isBold="true" pdfFontName="Times-Roman"/>
 				</textElement>

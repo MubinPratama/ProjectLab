@@ -85,7 +85,7 @@ public class Form_lp_Kinerja extends javax.swing.JPanel {
     private void cetakLaporan(String tglAwal, String tglAkhir) {
     try {
         Connection kon = koneksi.koneksiDb();
-        String reportPath = "src/report/NGETES.jasper"; // Sesuaikan path file .jasper kamu
+        String reportPath = "src/report/Kinerja.jasper"; // Sesuaikan path file .jasper kamu
 
         // Parameter ke JasperReport
         Map<String, Object> params = new HashMap<>();
@@ -129,7 +129,7 @@ public class Form_lp_Kinerja extends javax.swing.JPanel {
         jLabel6.setFont(new java.awt.Font("Georgia", 0, 18)); // NOI18N
         jLabel6.setText("Periode :");
 
-        Cetak.setText("CETAK");
+        Cetak.setText("<html>CETAK<br>PER DOKTER</html>");
         Cetak.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CetakActionPerformed(evt);
@@ -186,7 +186,7 @@ public class Form_lp_Kinerja extends javax.swing.JPanel {
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Cetak, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(7, 7, 7)
+                .addGap(14, 14, 14)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(Dari, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -195,7 +195,7 @@ public class Form_lp_Kinerja extends javax.swing.JPanel {
                     .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 1, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         add(jPanel1, "card3");
@@ -281,23 +281,40 @@ public class Form_lp_Kinerja extends javax.swing.JPanel {
         Connection conn = koneksi.koneksiDb(); // pastikan koneksi DB kamu di sini
 
         // Ambil tanggal dari JDateChooser
+        String filter = cb_filter.getSelectedItem().toString();
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         java.util.Date dari = Dari.getDate();
         String idDokter = tbl_laporan.getValueAt(selectedRow, 0).toString();
-
-        // Path ke file .jrxml
-//        String reportPath = "src/report/NGETES.jrxml"; // atau .jrxml jika belum dikompilasi
-
+        java.util.Date sampai;
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(dari);
+        
+        switch (filter.toLowerCase()) {
+            case "harian":
+                sampai = dari;
+                break;
+            case "mingguan":
+                cal.add(Calendar.DAY_OF_MONTH, 6); // 7 hari total
+                sampai = cal.getTime();
+                break;
+            case "bulanan":
+                cal.set(Calendar.DAY_OF_MONTH, cal.getActualMaximum(Calendar.DAY_OF_MONTH));
+                sampai = cal.getTime();
+                break;
+            default:
+                sampai = dari;
+        }
         // Parameter ke Jasper
         Map<String, Object> param = new HashMap<>();
         param.put("param_iddokter", idDokter);
         param.put("Dari", dari);
+        param.put("Sampai", dari);
 
         // Compile jika pakai jrxml
         // JasperReport report = JasperCompileManager.compileReport(reportPath);
 
         // Fill dan tampilkan
-        JasperReport report = JasperCompileManager.compileReport("src/report/NGETES.jrxml");
+        JasperReport report = JasperCompileManager.compileReport("src/report/Kinerja.jrxml");
         JasperPrint cetak = JasperFillManager.fillReport(report, param, conn);
         JasperViewer.viewReport(cetak, false);
         
