@@ -5,14 +5,12 @@
  */
 package form;
 
-
 import com.toedter.calendar.JDateChooser;
 import config.koneksi;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -40,55 +38,42 @@ private DefaultTableModel tabmode;
     }
 
     private void tampildata() {
-    Object[] Baris = {"ID", "ID Pendaftaran", "Nama Pemeriksaan", "Hasil Pemeriksaan", "Waktu Input"};
-    tabmode = new DefaultTableModel(null, Baris);
+    DefaultTableModel model = new DefaultTableModel();
+    model.addColumn("Nama Pemeriksaan");
+    model.addColumn("Nama Dokter");
+    
 
     try {
         Connection kon = koneksi.koneksiDb();
-        String filter = cb_filter.getSelectedItem().toString();
-        Date dari = Dari.getDate();
 
-        if (dari == null) {
-            JOptionPane.showMessageDialog(this, "Tanggal harus diisi!");
-            return;
-        }
+//        // Format tanggal dari JDateChooser
+//        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+//        String dari = sdf.format(Dari.getDate());
+//        String sampai = sdf.format(Sampai.getDate());
 
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-        String tglAwal = sdf.format(dari);
-        String tglAkhir = tglAwal;
+        String sql = "SELECT d.id_dokter, d.Nama AS nama_dokter, d.aktif_mulai, " +
+                 "COUNT(p.id_pendaftaran) AS jumlah_pemeriksaan " +
+                 "FROM pendaftaran p " +
+                 "JOIN dokter d ON p.id_dokter = d.id_dokter " +
+                 "GROUP BY d.id_dokter, d.Nama, d.aktif_mulai " +
+                 "ORDER BY jumlah_pemeriksaan DESC";
 
-        Calendar cal = Calendar.getInstance();
-        cal.setTime(dari);
-
-        if (filter.equals("Mingguan")) {
-            cal.add(Calendar.DAY_OF_MONTH, 6);
-        } else if (filter.equals("Bulanan")) {
-            cal.add(Calendar.DAY_OF_MONTH, 29);
-        }
-
-        if (!filter.equals("Harian")) {
-            tglAkhir = sdf.format(cal.getTime());
-        }
-
-        String sql = "SELECT * FROM hasil_periksa WHERE waktu_input BETWEEN ? AND ? ORDER BY id_pendaftaran";
         PreparedStatement ps = kon.prepareStatement(sql);
-        ps.setString(1, tglAwal);
-        ps.setString(2, tglAkhir);
+//        ps.setString(1, dari);
+//        ps.setString(2, sampai);
 
         ResultSet rs = ps.executeQuery();
 
         while (rs.next()) {
-            tabmode.addRow(new Object[]{
-                rs.getString("id"),
-                rs.getString("id_pendaftaran"),
-                rs.getString("nama_pemeriksaan"),
-                rs.getString("hasil_pemeriksaan"),
-                rs.getTimestamp("waktu_input")
+            model.addRow(new Object[]{
+                rs.getString("id_dokter"),
+                rs.getString("nama_dokter"),
+                rs.getInt("jumlah_pemeriksaan"),
+                rs.getDate("aktif_mulai")
             });
         }
 
-        tbl_hasil.setModel(tabmode);
-
+        tbl_laporan.setModel(model);
     } catch (Exception e) {
         JOptionPane.showMessageDialog(this, "Gagal menampilkan data: " + e.getMessage());
     }
@@ -127,7 +112,7 @@ private void cetakLaporan(String tglAwal, String tglAkhir) {
         jLabel6 = new javax.swing.JLabel();
         Cetak = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        tbl_hasil = new javax.swing.JTable();
+        tbl_laporan = new javax.swing.JTable();
         Dari = new com.toedter.calendar.JDateChooser();
         jLabel7 = new javax.swing.JLabel();
         cb_filter = new javax.swing.JComboBox<>();
@@ -147,7 +132,7 @@ private void cetakLaporan(String tglAwal, String tglAkhir) {
             }
         });
 
-        tbl_hasil.setModel(new javax.swing.table.DefaultTableModel(
+        tbl_laporan.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -158,7 +143,7 @@ private void cetakLaporan(String tglAwal, String tglAkhir) {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane1.setViewportView(tbl_hasil);
+        jScrollPane1.setViewportView(tbl_laporan);
 
         jLabel7.setFont(new java.awt.Font("Georgia", 0, 18)); // NOI18N
         jLabel7.setText("Cari Data dari :");
@@ -257,6 +242,6 @@ private void cetakLaporan(String tglAwal, String tglAkhir) {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable tbl_hasil;
+    private javax.swing.JTable tbl_laporan;
     // End of variables declaration//GEN-END:variables
 }
