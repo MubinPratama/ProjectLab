@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="300" pageHeight="842" columnWidth="260" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="5" uuid="85975a13-cbaf-4717-91fe-c9eeb29eecc5">
-	<property name="ireport.zoom" value="2.0490403660952174"/>
-	<property name="ireport.x" value="4"/>
-	<property name="ireport.y" value="96"/>
+	<property name="ireport.zoom" value="3.0000000000000133"/>
+	<property name="ireport.x" value="64"/>
+	<property name="ireport.y" value="361"/>
 	<parameter name="id_pendaftaran" class="java.lang.String"/>
 	<queryString>
 		<![CDATA[SELECT 
@@ -63,7 +63,7 @@ WHERE p.id_pendaftaran = $P{id_pendaftaran}
 	<pageHeader>
 		<band height="30" splitType="Immediate">
 			<staticText>
-				<reportElement x="59" y="5" width="165" height="20" uuid="a8af2164-3df8-497e-959f-b6887c82faff"/>
+				<reportElement x="73" y="5" width="165" height="20" uuid="a8af2164-3df8-497e-959f-b6887c82faff"/>
 				<textElement>
 					<font fontName="Times New Roman" size="15" isBold="true" isItalic="false"/>
 				</textElement>

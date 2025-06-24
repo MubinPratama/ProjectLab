@@ -10,8 +10,15 @@ import java.awt.event.ItemListener;
 import java.sql.*;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.HashMap;
+import java.util.Map;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
+import net.sf.jasperreports.engine.JasperCompileManager;
+import net.sf.jasperreports.engine.JasperFillManager;
+import net.sf.jasperreports.engine.JasperPrint;
+import net.sf.jasperreports.engine.JasperReport;
+import net.sf.jasperreports.view.JasperViewer;
 
 /**
  *
@@ -310,17 +317,20 @@ public class form_pembayaran extends javax.swing.JPanel {
             pst.setString(4, biaya.getText());
             pst.executeUpdate();
             JOptionPane.showMessageDialog(this, "Pembayaran berhasil disimpan");
-            cetakNota();
+            
         
         } catch (Exception e) {
             JOptionPane.showMessageDialog(this, "Gagal simpan pembayaran: " + e.getMessage());
         }
         //UPDATE STATUS PEMBAYARAN
+        
             try {
             String update = "UPDATE pendaftaran SET status_bayar = 'sudah' WHERE id_pendaftaran = ?";
             PreparedStatement pstUpdate = kon.prepareStatement(update);
             pstUpdate.setString(1, no_pendaftaran.getSelectedItem().toString());
             pstUpdate.executeUpdate();
+            
+            cetakNota();
             JOptionPane.showMessageDialog(this, "Status Sudah Diubah");
             resetForm();
         }catch (SQLException e) {
@@ -408,28 +418,26 @@ public class form_pembayaran extends javax.swing.JPanel {
 }
    
 private void cetakNota(){
-    try {
-        String nota = "=== NOTA PEMBAYARAN ===\n";
-        nota += "No Pembayaran: " + idPembayaran.getText() + "\n";
-        nota += "Tanggal: " + tglbayar.getText() + "\n";
-        nota += "Nama Pasien: " + nm_pasien.getText() + "\n";
-        nota += "Nama Dokter: " + nm_dokter.getText() + "\n";
-        nota += "\nRincian:\n";
+   try {
+        // 1. Siapkan koneksi ke database
+        Connection kon = koneksi.koneksiDb();
+        
+        Map<String, Object> param = new HashMap<>();
+        param.put("id_pembayaran", idPembayaran.getText()); // Sesuaikan dengan nama parameter di report
 
-        DefaultTableModel model = (DefaultTableModel) tbl_rincian.getModel();
-        for (int i = 0; i < model.getRowCount(); i++) {
-            String layanan = model.getValueAt(i, 0).toString();
-            String harga = model.getValueAt(i, 1).toString();
-            nota += "- " + layanan + " : Rp" + harga + "\n";
-        }
+        // 4. Load & compile file .jrxml
+        JasperReport report = JasperCompileManager.compileReport("src/report/nota_pembayaran.jrxml");
 
-        nota += "\nTotal: Rp" + biaya.getText();
+        // 5. Isi report dengan data dari database
+        JasperPrint print = JasperFillManager.fillReport(report, param, kon);
 
-        JTextArea area = new JTextArea(nota);
-        area.print();  // ini akan panggil dialog print
+        // 6. Tampilkan report
+        JasperViewer.viewReport(print, false);
 
     } catch (Exception e) {
-        JOptionPane.showMessageDialog(this, "Gagal cetak nota: " + e.getMessage());
+        JOptionPane.showMessageDialog(this, "Gagal mencetak: " + e.getMessage());
+        e.printStackTrace();
     }
+
 }
 }
