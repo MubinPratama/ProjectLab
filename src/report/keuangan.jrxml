@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="50602131-2dd4-4767-b0e6-0fa06fe8a62b">
-	<property name="ireport.zoom" value="1.0000000000000004"/>
+	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
 	<style name="Title" fontName="Times New Roman" fontSize="50" isBold="true" pdfFontName="Times-Bold"/>
@@ -15,7 +15,7 @@
 	</style>
 	<queryString>
 		<![CDATA[SELECT
-     CONCAT('KEU-', LPAD(pembayaran.`id_pembayaran`, 5, '0')) AS `id_keuangan`,
+     CAST(CONCAT('KEU-', LPAD(ROW_NUMBER() OVER (ORDER BY pembayaran.`tanggal_bayar`, layanan.`nama_layanan`), 5, '0')) AS CHAR) AS `id_keuangan`,
      layanan.`nama_layanan` AS `nama_layanan`,
      SUM(pendaftaran_detail.`harga`) AS `total_pendapatan`,
      pembayaran.`tanggal_bayar` AS `tanggal`
