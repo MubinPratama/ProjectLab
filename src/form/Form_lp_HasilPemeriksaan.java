@@ -91,19 +91,27 @@ private DefaultTableModel tabmode;
 
         setLayout(new java.awt.CardLayout());
 
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setFont(new java.awt.Font("Georgia", 1, 36)); // NOI18N
         jLabel1.setText("Laporan Hasil Pemeriksaan");
 
+        Cetak.setBackground(new java.awt.Color(102, 102, 255));
         Cetak.setText("CETAK");
+        Cetak.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        Cetak.setBorderPainted(false);
         Cetak.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CetakActionPerformed(evt);
             }
         });
 
+        jLabel2.setBackground(new java.awt.Color(255, 255, 255));
         jLabel2.setFont(new java.awt.Font("Georgia", 0, 18)); // NOI18N
         jLabel2.setText("Cari Data");
 
+        bt_cardat.setBackground(new java.awt.Color(255, 255, 255));
         bt_cardat.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
         bt_cardat.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/search (1) (1).png"))); // NOI18N
         bt_cardat.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -113,6 +121,9 @@ private DefaultTableModel tabmode;
             }
         });
 
+        jScrollPane1.setBackground(new java.awt.Color(255, 255, 255));
+
+        tbl_laporan.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
         tbl_laporan.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},

@@ -108,14 +108,18 @@ public class Form_lp_keuangan extends javax.swing.JPanel {
         jLabel1.setFont(new java.awt.Font("Georgia", 1, 36)); // NOI18N
         jLabel1.setText("Laporan Keuangan");
 
-        Cetak.setBackground(new java.awt.Color(255, 255, 255));
+        Cetak.setBackground(new java.awt.Color(102, 102, 255));
+        Cetak.setFont(new java.awt.Font("Georgia", 1, 12)); // NOI18N
         Cetak.setText("CETAK");
+        Cetak.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        Cetak.setBorderPainted(false);
         Cetak.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CetakActionPerformed(evt);
             }
         });
 
+        tbl_laporan.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
         tbl_laporan.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
