@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="300" pageHeight="842" columnWidth="260" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="5" uuid="85975a13-cbaf-4717-91fe-c9eeb29eecc5">
+	<property name="ireport.zoom" value="2.0490403660952174"/>
+	<property name="ireport.x" value="4"/>
+	<property name="ireport.y" value="96"/>
+	<parameter name="id_pendaftaran" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT 
+    p.id_pendaftaran, 
+    p.tanggal_daftar,
+    ps.Nama AS nama_pasien, 
+    d.Nama AS nama_dokter,
+    l.nama_layanan,
+    l.harga
+FROM pendaftaran p
+JOIN pasien ps ON p.No_rm = ps.No_rm
+JOIN dokter d ON p.id_dokter = d.id_dokter
+JOIN pendaftaran_detail pd ON p.id_pendaftaran = pd.id_pendaftaran
+JOIN layanan l ON pd.id_layanan = l.id_layanan
+WHERE p.id_pendaftaran = $P{id_pendaftaran}
+]]>
+	</queryString>
+	<field name="id_pendaftaran" class="java.lang.Long">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tanggal_daftar" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama_pasien" class="java.lang.String"/>
+	<field name="nama_dokter" class="java.lang.String"/>
+	<field name="nama_layanan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="harga" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<title>
+		<band height="66" splitType="Stretch">
+			<image>
+				<reportElement x="28" y="2" width="49" height="44" uuid="7d12163a-6fb8-45a6-95cb-049e6732161d"/>
+				<imageExpression><![CDATA["C:\\Users\\user\\OneDrive\\Dokumen\\NetBeansProjects\\Laboratorium\\src\\Img\\logo_lab.jpg"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="77" y="3" width="161" height="44" uuid="79b2ed2a-3617-4183-8d62-a91c6305a5f6"/>
+				<imageExpression><![CDATA["C:\\Users\\user\\OneDrive\\Dokumen\\NetBeansProjects\\Laboratorium\\src\\Img\\nama_lab.jpg"]]></imageExpression>
+			</image>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="73" y="45" width="114" height="20" uuid="2d42a3cc-58a5-4edd-b80c-6519d6cc7ccd"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH.mm">
+				<reportElement x="187" y="45" width="51" height="20" uuid="4abbf7b3-324c-4df8-a5ab-8e33522614ab"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="30" splitType="Immediate">
+			<staticText>
+				<reportElement x="59" y="5" width="165" height="20" uuid="a8af2164-3df8-497e-959f-b6887c82faff"/>
+				<textElement>
+					<font fontName="Times New Roman" size="15" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[NOTA PENDAFTARAN]]></text>
+			</staticText>
+			<line>
+				<reportElement x="-23" y="29" width="303" height="1" uuid="97571de4-bbfb-40e9-9d14-911d7e4ac0a9"/>
+			</line>
+			<line>
+				<reportElement x="-30" y="4" width="310" height="1" uuid="b7197115-efe4-4edc-bcb4-61362c769739"/>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="77" splitType="Immediate">
+			<staticText>
+				<reportElement x="0" y="3" width="88" height="16" uuid="603b8ea4-86df-4baa-ab0d-0283b433f15b"/>
+				<text><![CDATA[No. Pendaftaran   :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="19" width="88" height="14" uuid="2649fb77-25ad-4ef7-8275-7dc75f8460bd"/>
+				<text><![CDATA[Nama Pasien        :]]></text>
+			</staticText>
+			<line>
+				<reportElement x="-23" y="50" width="303" height="1" uuid="00494ded-e88e-4444-b817-c5c4da058608"/>
+			</line>
+			<textField>
+				<reportElement x="97" y="15" width="100" height="14" uuid="3ff615b4-560f-41dd-8db6-efa89a3106ee"/>
+				<textFieldExpression><![CDATA[$F{nama_pasien}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="97" y="0" width="100" height="16" uuid="3281029d-e999-4d58-8d2a-0705d6112bcd"/>
+				<textFieldExpression><![CDATA[$F{id_pendaftaran}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="34" width="88" height="15" uuid="0704e4a0-43f2-48e3-8395-25da84448239"/>
+				<text><![CDATA[Nama Dokter        :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="97" y="33" width="100" height="15" uuid="a583ea40-e8cb-4012-bfd2-885c32bc6c44"/>
+				<textFieldExpression><![CDATA[$F{nama_dokter}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="55" width="97" height="16" uuid="1f1f70d4-dd56-4d68-9413-f58bfceb0ea1"/>
+				<text><![CDATA[Nama Layanan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="55" width="97" height="16" uuid="8fe26a3d-d6d3-485e-a5c9-3b7e820704d3"/>
+				<text><![CDATA[Harga]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="19" splitType="Immediate">
+			<textField isStretchWithOverflow="true">
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="1" width="97" height="16" uuid="df951c44-fee0-4507-9109-3f51caad9c45"/>
+				<textFieldExpression><![CDATA[$F{nama_layanan}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="">
+				<reportElement stretchType="RelativeToTallestObject" x="100" y="0" width="78" height="16" uuid="786a229d-25bf-45d0-91cf-2647c34c445d"/>
+				<textFieldExpression><![CDATA[$F{harga}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="55" splitType="Immediate">
+			<staticText>
+				<reportElement positionType="Float" x="0" y="0" width="260" height="26" uuid="3e69cfc9-6a9b-462f-9e56-e4c1149f977e"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[Terimakasih atas kepercayaan ada kepada BALANCEFILE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="14" width="260" height="26" uuid="3756c077-4a93-475c-973e-952eb59d94b3"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[Untuk informasi lebih lanjut, hubungi:
+Telp/WA: 08xx-xxxx-xxxx | Email: info@balancelife.id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="40" width="260" height="15" uuid="43cae9db-bb3f-49f1-b720-8e2bc4f3da8d"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[Harap membawa nota ini saat melakukan pemeriksaan.]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+</jasperReport>

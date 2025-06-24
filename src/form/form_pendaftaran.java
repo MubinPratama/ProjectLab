@@ -11,6 +11,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
+import java.io.File;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -22,10 +23,16 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.Map;
 import javax.swing.JDialog;
 import javax.swing.JOptionPane;
 import javax.swing.Timer;
 import javax.swing.table.DefaultTableModel;
+import net.sf.jasperreports.engine.JasperCompileManager;
+import net.sf.jasperreports.engine.JasperFillManager;
+import net.sf.jasperreports.engine.JasperPrint;
+import net.sf.jasperreports.engine.JasperReport;
+import net.sf.jasperreports.view.JasperViewer;
 /**
  *
  * @author user
@@ -799,8 +806,21 @@ public class form_pendaftaran extends javax.swing.JPanel {
 
     psDetail.executeBatch();
     kon.commit(); // SELESAIKAN TRANSAKSI
+    
 
     JOptionPane.showMessageDialog(this, "Data berhasil disimpan!");
+    try {
+//        File file = new File("src/laporan/nota_pendaftaran.jasper"); // path ke file .jasper
+        Map<String, Object> param = new HashMap<>();
+         param.put("id_pendaftaran",idPendaftaran.getText()); // ambil dari input user atau combo box
+
+        JasperReport report = JasperCompileManager.compileReport("src/report/nota_pendaftaran.jrxml");
+        JasperPrint cetak = JasperFillManager.fillReport(report, param, kon);
+        JasperViewer.viewReport(cetak, false);
+        
+    } catch (Exception e) {
+        JOptionPane.showMessageDialog(null, "Error mencetak: " + e.getMessage());
+    }
     resetdaftar(); // reset form
 
 } catch (Exception e) {
