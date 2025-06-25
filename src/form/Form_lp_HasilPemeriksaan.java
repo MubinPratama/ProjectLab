@@ -91,19 +91,27 @@ private DefaultTableModel tabmode;
 
         setLayout(new java.awt.CardLayout());
 
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setFont(new java.awt.Font("Georgia", 1, 36)); // NOI18N
         jLabel1.setText("Laporan Hasil Pemeriksaan");
 
+        Cetak.setBackground(new java.awt.Color(102, 102, 255));
         Cetak.setText("CETAK");
+        Cetak.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        Cetak.setBorderPainted(false);
         Cetak.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CetakActionPerformed(evt);
             }
         });
 
+        jLabel2.setBackground(new java.awt.Color(255, 255, 255));
         jLabel2.setFont(new java.awt.Font("Georgia", 0, 18)); // NOI18N
         jLabel2.setText("Cari Data");
 
+        bt_cardat.setBackground(new java.awt.Color(255, 255, 255));
         bt_cardat.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
         bt_cardat.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/search (1) (1).png"))); // NOI18N
         bt_cardat.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -113,6 +121,9 @@ private DefaultTableModel tabmode;
             }
         });
 
+        jScrollPane1.setBackground(new java.awt.Color(255, 255, 255));
+
+        tbl_laporan.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
         tbl_laporan.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -168,31 +179,22 @@ private DefaultTableModel tabmode;
     }// </editor-fold>//GEN-END:initComponents
 
     private void CetakActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CetakActionPerformed
-         //TODO add your handling code here:
-         try {
-             int selectedRow = tbl_laporan.getSelectedRow();
-            if (selectedRow == -1) {
-                JOptionPane.showMessageDialog(this, "Pilih salah satu baris terlebih dahulu.");
-                return;
-            }
-        Connection kon = koneksi.koneksiDb();
-        
+         //TODO add your handling code here:     try {
+        try{
+         Connection kon = koneksi.koneksiDb();
         Map<String, Object> param = new HashMap<>();
-        param.put("id_pendaftaran", Long.parseLong(tbl_laporan.getValueAt(selectedRow, 0).toString()));// Sesuaikan dengan nama parameter di report
+        int selectedRow = tbl_laporan.getSelectedRow();
+        Long  idpendaftaran = Long.parseLong(tbl_laporan.getValueAt(selectedRow, 0).toString());
+        
+        param.put("id_pendaftaran",idpendaftaran); // ambil dari input user atau combo box
 
-        // 4. Load & compile file .jrxml
         JasperReport report = JasperCompileManager.compileReport("src/report/hasil.jrxml");
-
-        // 5. Isi report dengan data dari database
-        JasperPrint print = JasperFillManager.fillReport(report, param, kon);
-
-        // 6. Tampilkan report
-        JasperViewer.viewReport(print, false);
-
-    } catch (Exception e) {
-        JOptionPane.showMessageDialog(this, "Gagal mencetak: " + e.getMessage());
-        e.printStackTrace();
-    }
+        JasperPrint cetak = JasperFillManager.fillReport(report, param, kon);
+        JasperViewer.viewReport(cetak, false);
+} catch (Exception e) {
+    JOptionPane.showMessageDialog(this, "Gagal mencetak: " + e.getMessage());
+    e.printStackTrace();
+}
     }//GEN-LAST:event_CetakActionPerformed
 
     private void bt_cardatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_cardatActionPerformed
