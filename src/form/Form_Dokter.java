@@ -419,7 +419,7 @@ public class Form_Dokter extends javax.swing.JPanel {
     private void bt_SimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_SimpanActionPerformed
         // TODO add your handling code here:
         try {
-        String sql = "INSERT INTO dokter VALUES (?, ?, ?, ?, ?)" +
+        String sql = "INSERT INTO dokter(id_dokter, nama, kontak, spesialis, alamat)VALUES (?, ?, ?, ?, ?)" +
                 "ON DUPLICATE KEY UPDATE nama = VALUES(nama), kontak = VALUES(kontak),"+
                 "spesialis = VALUES(spesialis), alamat = VALUES(alamat) ";
         Connection kon = koneksi.koneksiDb();
