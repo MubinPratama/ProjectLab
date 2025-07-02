@@ -34,7 +34,7 @@ WHERE h.id_pendaftaran = $P{id_pendaftaran}]]>
 	<title>
 		<band height="57" splitType="Stretch">
 			<staticText>
-				<reportElement x="185" y="0" width="209" height="51" uuid="97573f68-7241-4185-836d-daefb72dbc52"/>
+				<reportElement x="210" y="0" width="209" height="51" uuid="97573f68-7241-4185-836d-daefb72dbc52"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="32" isBold="true" pdfFontName="Times-Roman"/>
 				</textElement>

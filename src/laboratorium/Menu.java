@@ -377,11 +377,9 @@ public class Menu extends javax.swing.JFrame {
 
         if (confirm == JOptionPane.YES_OPTION) {
             // Buka form login
-                    Login fa = new Login();
-                    fa.show();
-                    removeAll();
-                    repaint();
-                    revalidate();
+                    new Menu().setVisible(false);
+                    dispose();
+                    new Login().setVisible(true);
             }
         }
     });
