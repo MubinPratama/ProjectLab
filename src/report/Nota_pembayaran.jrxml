@@ -49,7 +49,7 @@ WHERE pb.id_pembayaran = $P{id_pembayaran}]]>
 		<band height="63" splitType="Stretch">
 			<image>
 				<reportElement x="74" y="-1" width="161" height="44" uuid="6bba5b78-b5ef-4a0a-b5ed-d8f3f99d975b"/>
-				<imageExpression><![CDATA["C:\\Users\\user\\OneDrive\\Dokumen\\NetBeansProjects\\Laboratorium\\src\\Img\\nama_lab.jpg"]]></imageExpression>
+				<imageExpression><![CDATA[$P{REPORT_DIR} + "nama_lab.jpg"]]></imageExpression>
 			</image>
 			<textField pattern="EEEEE dd MMMMM yyyy">
 				<reportElement x="60" y="43" width="114" height="20" uuid="84c16de1-8bfb-450c-ab4f-c4131d79e8da"/>
@@ -60,7 +60,8 @@ WHERE pb.id_pembayaran = $P{id_pembayaran}]]>
 			</textField>
 			<image>
 				<reportElement x="25" y="0" width="49" height="44" uuid="25b4327d-48d3-4639-87ca-2e61d2aaf838"/>
-				<imageExpression><![CDATA["C:\\Users\\user\\OneDrive\\Dokumen\\NetBeansProjects\\Laboratorium\\src\\Img\\logo_lab.jpg"]]></imageExpression>
+				<imageExpression><![CDATA[$P{REPORT_DIR} + "logo_lab.jpg"]]></imageExpression>
+
 			</image>
 			<textField pattern="HH.mm">
 				<reportElement x="174" y="43" width="51" height="20" uuid="7956f91a-e12d-41a7-945b-aa219b48d70a"/>

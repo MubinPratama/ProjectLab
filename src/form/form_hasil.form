@@ -7379,29 +7379,25 @@
                                                                       </Group>
                                                                       <Group type="103" alignment="0" groupAlignment="1" attributes="0">
                                                                           <Group type="102" alignment="0" attributes="0">
-                                                                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                                                                  <Group type="102" attributes="0">
-                                                                                      <Group type="103" groupAlignment="1" attributes="0">
-                                                                                          <Component id="jLabel369" alignment="0" pref="137" max="32767" attributes="0"/>
-                                                                                          <Component id="jLabel368" max="32767" attributes="0"/>
-                                                                                          <Group type="102" alignment="1" attributes="0">
-                                                                                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                                                                              <Component id="jLabel371" min="-2" max="-2" attributes="0"/>
-                                                                                          </Group>
+                                                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                                                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                                                                      <Component id="jLabel369" alignment="0" pref="137" max="32767" attributes="0"/>
+                                                                                      <Component id="jLabel368" max="32767" attributes="0"/>
+                                                                                      <Group type="102" alignment="1" attributes="0">
+                                                                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                                                                          <Component id="jLabel371" min="-2" max="-2" attributes="0"/>
                                                                                       </Group>
-                                                                                      <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
                                                                                   </Group>
-                                                                                  <Group type="102" attributes="0">
+                                                                                  <Group type="102" alignment="0" attributes="0">
                                                                                       <Group type="103" groupAlignment="1" max="-2" attributes="0">
                                                                                           <Component id="jLabel370" alignment="0" max="32767" attributes="0"/>
                                                                                           <Component id="jLabel372" alignment="0" pref="89" max="32767" attributes="0"/>
                                                                                       </Group>
-                                                                                      <EmptySpace min="-2" max="-2" attributes="0"/>
-                                                                                      <Component id="jLabel373" max="32767" attributes="0"/>
-                                                                                      <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
+                                                                                      <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
+                                                                                      <Component id="jLabel373" min="-2" pref="49" max="-2" attributes="0"/>
                                                                                   </Group>
                                                                               </Group>
-                                                                              <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+                                                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                                                               <Group type="103" groupAlignment="0" attributes="0">
                                                                                   <Component id="txtToleransi" alignment="1" max="32767" attributes="0"/>
                                                                                   <Component id="txt1Jam" alignment="1" max="32767" attributes="0"/>
