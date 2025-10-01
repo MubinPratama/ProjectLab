@@ -376,12 +376,10 @@ public class Menu extends javax.swing.JFrame {
         int confirm = JOptionPane.showConfirmDialog(null, "Yakin ingin logout?", "Logout", JOptionPane.YES_NO_OPTION);
 
         if (confirm == JOptionPane.YES_OPTION) {
-            // Buka form login
-                    Login fa = new Login();
-                    fa.show();
-                    removeAll();
-                    repaint();
-                    revalidate();
+            new Menu().setVisible(false);
+
+            dispose(); 
+            new Login().setVisible(true);
             }
         }
     });
