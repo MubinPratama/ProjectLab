@@ -5695,6 +5695,7 @@ try (PreparedStatement ps = kon.prepareStatement(sql)) {
             ps.executeUpdate();
 
             JOptionPane.showMessageDialog(null, "Layanan berhasil ditambahkan!");
+            TabHasil.removeAll();
             TabHasil.revalidate();
             TabHasil.repaint(); 
         } catch (Exception ex) {
