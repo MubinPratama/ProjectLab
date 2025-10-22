@@ -5,6 +5,9 @@
  */
 package laboratorium;
 
+import java.awt.Color;
+import java.awt.Component;
+import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -27,6 +30,10 @@ public class Item_menu extends javax.swing.JPanel {
      * Creates new form Item_menu
      */
     private final ArrayList<Item_menu> subMenu = new ArrayList<>();
+    private final Color normalColor = Color.WHITE;
+    private final Color hoverColor = new Color(65, 175, 255);
+    private final Color activeColor = new Color(239, 33, 124);
+    private boolean active = false;
     private ActionListener act;
     
     public Item_menu(Icon icon, boolean sbm, Icon iconsub, String menuName, ActionListener act, Item_menu... subMenu) {
@@ -65,8 +72,15 @@ public class Item_menu extends javax.swing.JPanel {
         Lb_icon = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
+        setBorder(javax.swing.BorderFactory.createEtchedBorder());
         setPreferredSize(new java.awt.Dimension(240, 63));
         addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                formMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                formMouseReleased(evt);
+            }
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 formMouseClicked(evt);
             }
@@ -75,12 +89,6 @@ public class Item_menu extends javax.swing.JPanel {
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 formMouseExited(evt);
-            }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                formMousePressed(evt);
-            }
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                formMouseReleased(evt);
             }
         });
 
@@ -97,7 +105,7 @@ public class Item_menu extends javax.swing.JPanel {
                 .addGap(18, 18, 18)
                 .addComponent(Lb_Sub, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(Lb_menu, javax.swing.GroupLayout.DEFAULT_SIZE, 99, Short.MAX_VALUE)
+                .addComponent(Lb_menu, javax.swing.GroupLayout.DEFAULT_SIZE, 95, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -107,7 +115,7 @@ public class Item_menu extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(Lb_Sub, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(Lb_icon, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Lb_menu, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 41, Short.MAX_VALUE))
+                    .addComponent(Lb_menu, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 37, Short.MAX_VALUE))
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -127,22 +135,25 @@ public class Item_menu extends javax.swing.JPanel {
 
     private void formMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseEntered
         // TODO add your handling code here:
-        setBackground(new java.awt.Color(204,204,204));
+        if (!active) {
+                    setBackground(hoverColor);
+                }
     }//GEN-LAST:event_formMouseEntered
 
     private void formMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseExited
         // TODO add your handling code here:
-        setBackground(new java.awt.Color(255,255,255));
+        if (!active) {
+                    setBackground(normalColor);
+                }
     }//GEN-LAST:event_formMouseExited
 
     private void formMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseClicked
         // TODO add your handling code here:
-                setBackground(new java.awt.Color(204,102,255));
+                setActiveMenu();
     }//GEN-LAST:event_formMouseClicked
 
     private void formMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseReleased
         // TODO add your handling code here:
-        setBackground(new java.awt.Color(204,102,255));
     }//GEN-LAST:event_formMouseReleased
 
 
@@ -151,7 +162,22 @@ public class Item_menu extends javax.swing.JPanel {
     private javax.swing.JLabel Lb_icon;
     private javax.swing.JLabel Lb_menu;
     // End of variables declaration//GEN-END:variables
-
+    
+    private void setActiveMenu() {
+        Container parent = getParent();
+        for (Component comp : parent.getComponents()) {
+            if (comp instanceof Item_menu) {
+                ((Item_menu) comp).setInactive();
+            }
+        }
+        active = true;
+        setBackground(activeColor);
+    }
+    public void setInactive() {
+        active = false;
+        setBackground(normalColor);
+    }
+    
     private void hideMenu() {
         new Thread(new Runnable(){
            @Override

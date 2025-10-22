@@ -5,13 +5,20 @@
  */
 package form;
 import config.koneksi;
-import java.awt.event.ItemEvent;
-import java.awt.event.ItemListener;
+//import java.awt.event.ItemEvent;
+//import java.awt.event.ItemListener;
 import java.sql.*;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.HashMap;
+import java.util.Map;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
+import net.sf.jasperreports.engine.JasperCompileManager;
+import net.sf.jasperreports.engine.JasperFillManager;
+import net.sf.jasperreports.engine.JasperPrint;
+import net.sf.jasperreports.engine.JasperReport;
+import net.sf.jasperreports.view.JasperViewer;
 
 /**
  *
@@ -63,7 +70,7 @@ public class form_pembayaran extends javax.swing.JPanel {
     private void loadNoPendaftaran() {
         try {
             Connection kon = koneksi.koneksiDb();
-            String sql = "SELECT id_pendaftaran FROM pendaftaran";
+            String sql = "SELECT id_pendaftaran FROM pendaftaran WHERE status_bayar ='Belum'";
             PreparedStatement pst = kon.prepareStatement(sql);
             ResultSet rs = pst.executeQuery();
             while (rs.next()) {
@@ -112,27 +119,27 @@ public class form_pembayaran extends javax.swing.JPanel {
         jPanel1.setPreferredSize(getPreferredSize());
 
         jLabel1.setBackground(new java.awt.Color(153, 0, 255));
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText(" PEMBAYARAN PEMERIKSAAN");
         jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
         jLabel2.setText("No Pembayaran:");
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
         jLabel3.setText("No Pendaftaran");
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
         jLabel4.setText("Tanggal:");
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
         jLabel5.setText("Total Biaya :");
 
-        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
         jLabel6.setText("Tabel Rincian");
 
-        no_pendaftaran.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        no_pendaftaran.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
         no_pendaftaran.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Nomer Pendaftaran" }));
         no_pendaftaran.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -140,7 +147,7 @@ public class form_pembayaran extends javax.swing.JPanel {
             }
         });
 
-        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
         jLabel7.setText("Rp.");
 
         tbl_rincian.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
@@ -157,25 +164,44 @@ public class form_pembayaran extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(tbl_rincian);
 
-        bt_simpan.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        bt_simpan.setBackground(new java.awt.Color(0, 255, 0));
+        bt_simpan.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
         bt_simpan.setText("Simpan");
+        bt_simpan.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        bt_simpan.setBorderPainted(false);
         bt_simpan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bt_simpanActionPerformed(evt);
             }
         });
 
-        jButton2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jButton2.setBackground(new java.awt.Color(255, 255, 0));
+        jButton2.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
         jButton2.setText("Batal");
+        jButton2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jButton2.setBorderPainted(false);
 
-        jButton3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jButton3.setBackground(new java.awt.Color(255, 51, 51));
+        jButton3.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
         jButton3.setText("Hapus");
+        jButton3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jButton3.setBorderPainted(false);
 
-        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        idPembayaran.setFont(new java.awt.Font("Georgia", 0, 18)); // NOI18N
+
+        biaya.setFont(new java.awt.Font("Georgia", 0, 18)); // NOI18N
+
+        tglbayar.setFont(new java.awt.Font("Georgia", 0, 18)); // NOI18N
+
+        nm_pasien.setFont(new java.awt.Font("Georgia", 0, 18)); // NOI18N
+
+        jLabel8.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
         jLabel8.setText("Nama Pasien : ");
 
-        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel9.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
         jLabel9.setText("Nama Dokter : ");
+
+        nm_dokter.setFont(new java.awt.Font("Georgia", 0, 18)); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -185,21 +211,9 @@ public class form_pembayaran extends javax.swing.JPanel {
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(bt_simpan)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton3))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(tglbayar, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel7)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(biaya, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
@@ -218,7 +232,19 @@ public class form_pembayaran extends javax.swing.JPanel {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(nm_dokter, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(nm_dokter, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(bt_simpan, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel5)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabel7)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(biaya, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(260, Short.MAX_VALUE))
             .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
@@ -257,9 +283,9 @@ public class form_pembayaran extends javax.swing.JPanel {
                     .addComponent(biaya, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(64, 64, 64)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(bt_simpan)
-                    .addComponent(jButton2)
-                    .addComponent(jButton3))
+                    .addComponent(bt_simpan, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(40, 40, 40))
         );
 
@@ -269,20 +295,20 @@ public class form_pembayaran extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 722, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 722, Short.MAX_VALUE))
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 507, Short.MAX_VALUE)
+            .addGap(0, 537, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 537, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
     private void bt_simpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_simpanActionPerformed
         // TODO add your handling code here:
+         Connection kon = koneksi.koneksiDb();
         try {
-            Connection kon = koneksi.koneksiDb();
             String sql = "INSERT INTO pembayaran (id_pembayaran, id_pendaftaran, tanggal_bayar, total_bayar) VALUES (?, ?, ?, ?)";
             PreparedStatement pst = kon.prepareStatement(sql);
             pst.setString(1, idPembayaran.getText());
@@ -291,11 +317,24 @@ public class form_pembayaran extends javax.swing.JPanel {
             pst.setString(4, biaya.getText());
             pst.executeUpdate();
             JOptionPane.showMessageDialog(this, "Pembayaran berhasil disimpan");
-            cetakNota();
-            resetForm();
-           
+            
+        
         } catch (Exception e) {
             JOptionPane.showMessageDialog(this, "Gagal simpan pembayaran: " + e.getMessage());
+        }
+        //UPDATE STATUS PEMBAYARAN
+        
+            try {
+            String update = "UPDATE pendaftaran SET status_bayar = 'sudah' WHERE id_pendaftaran = ?";
+            PreparedStatement pstUpdate = kon.prepareStatement(update);
+            pstUpdate.setString(1, no_pendaftaran.getSelectedItem().toString());
+            pstUpdate.executeUpdate();
+            
+//            cetakNota();
+            JOptionPane.showMessageDialog(this, "Status Sudah Diubah");
+            resetForm();
+        }catch (SQLException e) {
+            JOptionPane.showMessageDialog(null, "Gagal Update Status" + e.getMessage());
         }
     }//GEN-LAST:event_bt_simpanActionPerformed
 
@@ -378,29 +417,27 @@ public class form_pembayaran extends javax.swing.JPanel {
     generateIdPembayaran(); // Generate ulang ID baru
 }
    
-private void cetakNota(){
-    try {
-        String nota = "=== NOTA PEMBAYARAN ===\n";
-        nota += "No Pembayaran: " + idPembayaran.getText() + "\n";
-        nota += "Tanggal: " + tglbayar.getText() + "\n";
-        nota += "Nama Pasien: " + nm_pasien.getText() + "\n";
-        nota += "Nama Dokter: " + nm_dokter.getText() + "\n";
-        nota += "\nRincian:\n";
-
-        DefaultTableModel model = (DefaultTableModel) tbl_rincian.getModel();
-        for (int i = 0; i < model.getRowCount(); i++) {
-            String layanan = model.getValueAt(i, 0).toString();
-            String harga = model.getValueAt(i, 1).toString();
-            nota += "- " + layanan + " : Rp" + harga + "\n";
-        }
-
-        nota += "\nTotal: Rp" + biaya.getText();
-
-        JTextArea area = new JTextArea(nota);
-        area.print();  // ini akan panggil dialog print
-
-    } catch (Exception e) {
-        JOptionPane.showMessageDialog(this, "Gagal cetak nota: " + e.getMessage());
-    }
-}
+//private void cetakNota(){
+//   try {
+//        // 1. Siapkan koneksi ke database
+//        Connection kon = koneksi.koneksiDb();
+//        
+//        Map<String, Object> param = new HashMap<>();
+//        param.put("id_pembayaran", idPembayaran.getText()); // Sesuaikan dengan nama parameter di report
+//
+//        // 4. Load & compile file .jrxml
+//        JasperReport report = JasperCompileManager.compileReport("src/report/Nota_pembayaran.jrxml");
+//
+//        // 5. Isi report dengan data dari database
+//        JasperPrint print = JasperFillManager.fillReport(report, param, kon);
+//
+//        // 6. Tampilkan report
+//        JasperViewer.viewReport(print, false);
+//
+//    } catch (Exception e) {
+//        JOptionPane.showMessageDialog(this, "Gagal mencetak: " + e.getMessage());
+//        e.printStackTrace();
+//    }
+//
+//}
 }
