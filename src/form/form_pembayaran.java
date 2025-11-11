@@ -5,8 +5,8 @@
  */
 package form;
 import config.koneksi;
-import java.awt.event.ItemEvent;
-import java.awt.event.ItemListener;
+//import java.awt.event.ItemEvent;
+//import java.awt.event.ItemListener;
 import java.sql.*;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -325,7 +325,7 @@ public class form_pembayaran extends javax.swing.JPanel {
             pstUpdate.setString(1, no_pendaftaran.getSelectedItem().toString());
             pstUpdate.executeUpdate();
             
-            cetakNota();
+//            cetakNota();
             JOptionPane.showMessageDialog(this, "Status Sudah Diubah");
             resetForm();
         }catch (SQLException e) {
@@ -416,27 +416,27 @@ public class form_pembayaran extends javax.swing.JPanel {
     generateIdPembayaran(); // Generate ulang ID baru
 }
    
-private void cetakNota(){
-   try {
-        // 1. Siapkan koneksi ke database
-        Connection kon = koneksi.koneksiDb();
-        
-        Map<String, Object> param = new HashMap<>();
-        param.put("id_pembayaran", idPembayaran.getText()); // Sesuaikan dengan nama parameter di report
-
-        // 4. Load & compile file .jrxml
-        JasperReport report = JasperCompileManager.compileReport("src/report/nota_pembayaran.jrxml");
-
-        // 5. Isi report dengan data dari database
-        JasperPrint print = JasperFillManager.fillReport(report, param, kon);
-
-        // 6. Tampilkan report
-        JasperViewer.viewReport(print, false);
-
-    } catch (Exception e) {
-        JOptionPane.showMessageDialog(this, "Gagal mencetak: " + e.getMessage());
-        e.printStackTrace();
-    }
-
-}
+//private void cetakNota(){
+//   try {
+//        // 1. Siapkan koneksi ke database
+//        Connection kon = koneksi.koneksiDb();
+//        
+//        Map<String, Object> param = new HashMap<>();
+//        param.put("id_pembayaran", idPembayaran.getText()); // Sesuaikan dengan nama parameter di report
+//
+//        // 4. Load & compile file .jrxml
+//        JasperReport report = JasperCompileManager.compileReport("src/report/Nota_pembayaran.jrxml");
+//
+//        // 5. Isi report dengan data dari database
+//        JasperPrint print = JasperFillManager.fillReport(report, param, kon);
+//
+//        // 6. Tampilkan report
+//        JasperViewer.viewReport(print, false);
+//
+//    } catch (Exception e) {
+//        JOptionPane.showMessageDialog(this, "Gagal mencetak: " + e.getMessage());
+//        e.printStackTrace();
+//    }
+//
+//}
 }

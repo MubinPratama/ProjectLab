@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="300" pageHeight="842" columnWidth="260" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="5" uuid="85975a13-cbaf-4717-91fe-c9eeb29eecc5">
-	<property name="ireport.zoom" value="3.0000000000000133"/>
-	<property name="ireport.x" value="64"/>
-	<property name="ireport.y" value="361"/>
+	<property name="ireport.zoom" value="1.6934217901613395"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
 	<parameter name="id_pendaftaran" class="java.lang.String"/>
 	<queryString>
 		<![CDATA[SELECT 
@@ -17,8 +17,7 @@ JOIN pasien ps ON p.No_rm = ps.No_rm
 JOIN dokter d ON p.id_dokter = d.id_dokter
 JOIN pendaftaran_detail pd ON p.id_pendaftaran = pd.id_pendaftaran
 JOIN layanan l ON pd.id_layanan = l.id_layanan
-WHERE p.id_pendaftaran = $P{id_pendaftaran}
-]]>
+WHERE p.id_pendaftaran = $P{id_pendaftaran}]]>
 	</queryString>
 	<field name="id_pendaftaran" class="java.lang.Long">
 		<fieldDescription><![CDATA[]]></fieldDescription>
@@ -35,29 +34,29 @@ WHERE p.id_pendaftaran = $P{id_pendaftaran}
 		<fieldDescription><![CDATA[]]></fieldDescription>
 	</field>
 	<title>
-		<band height="66" splitType="Stretch">
-			<image>
-				<reportElement x="28" y="2" width="49" height="44" uuid="7d12163a-6fb8-45a6-95cb-049e6732161d"/>
-				<imageExpression><![CDATA["C:\\Users\\user\\OneDrive\\Dokumen\\NetBeansProjects\\Laboratorium\\src\\Img\\logo_lab.jpg"]]></imageExpression>
-			</image>
-			<image>
-				<reportElement x="77" y="3" width="161" height="44" uuid="79b2ed2a-3617-4183-8d62-a91c6305a5f6"/>
-				<imageExpression><![CDATA["C:\\Users\\user\\OneDrive\\Dokumen\\NetBeansProjects\\Laboratorium\\src\\Img\\nama_lab.jpg"]]></imageExpression>
-			</image>
+		<band height="53" splitType="Stretch">
 			<textField pattern="EEEEE dd MMMMM yyyy">
-				<reportElement x="73" y="45" width="114" height="20" uuid="2d42a3cc-58a5-4edd-b80c-6519d6cc7ccd"/>
+				<reportElement x="73" y="33" width="114" height="20" uuid="2d42a3cc-58a5-4edd-b80c-6519d6cc7ccd"/>
 				<textElement>
 					<font fontName="Times New Roman" size="12"/>
 				</textElement>
 				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
 			</textField>
 			<textField pattern="HH.mm">
-				<reportElement x="187" y="45" width="51" height="20" uuid="4abbf7b3-324c-4df8-a5ab-8e33522614ab"/>
+				<reportElement x="187" y="33" width="51" height="20" uuid="4abbf7b3-324c-4df8-a5ab-8e33522614ab"/>
 				<textElement>
 					<font fontName="Times New Roman" size="12"/>
 				</textElement>
 				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
 			</textField>
+			<image>
+				<reportElement x="49" y="0" width="39" height="28" uuid="7d355fb5-caeb-4d45-a7b1-1989b8e81a6e"/>
+				<imageExpression><![CDATA["C:\\Users\\Basuki\\Documents\\NetBeansProjects\\ProjectLab\\src\\Img\\logo_lab.jpg"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="88" y="0" width="124" height="28" uuid="c862c7dd-4d95-4aa2-907d-9ab74ef24b26"/>
+				<imageExpression><![CDATA["C:\\Users\\Basuki\\Documents\\NetBeansProjects\\ProjectLab\\src\\Img\\nama_lab.jpg"]]></imageExpression>
+			</image>
 		</band>
 	</title>
 	<pageHeader>

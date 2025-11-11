@@ -43,32 +43,36 @@ private DefaultTableModel tabmode;
     model.addColumn("Nomor Pendaftaran");
     model.addColumn("Nama Pasien");
     model.addColumn("Tanggal Daftar");
-
+    model.addColumn("Layanan");
     try {
-        String sql = "SELECT p.id_pendaftaran, ps.nama AS nama_pasien, p.tanggal_daftar " +
-                     "FROM pendaftaran p " +
-                     "JOIN pasien ps ON p.No_rm = ps.No_rm " +
-                     "WHERE status_hasil ='sudah'"+
-                     "ORDER BY p.id_pendaftaran ASC";
+    String sql = "SELECT p.id_pendaftaran, ps.nama AS nama_pasien, p.tanggal_daftar, l.nama_layanan " +
+                 "FROM pendaftaran p " +
+                 "JOIN pasien ps ON p.No_rm = ps.No_rm " +
+                 "JOIN pendaftaran_detail pd ON p.id_pendaftaran = pd.id_pendaftaran " +
+                 "JOIN layanan l ON pd.id_layanan = l.id_layanan " +
+                 "WHERE p.status_hasil = 'sudah' " +
+                 "ORDER BY p.id_pendaftaran ASC";
 
-        Connection kon = koneksi.koneksiDb();
-        Statement stm = kon.createStatement();
-        ResultSet res = stm.executeQuery(sql);
-//        PreparedStatement ps = kon.prepareStatement(sql);
-//        ResultSet res = ps.executeQuery();
+    Connection kon = koneksi.koneksiDb();
+    Statement stm = kon.createStatement();
+    ResultSet res = stm.executeQuery(sql);
 
-        while (res.next()) {
-            model.addRow(new Object[]{
-                res.getString("id_pendaftaran"),
-                res.getString("nama_pasien"),
-                res.getString("tanggal_daftar")
-            });
-        }
+    // Bersihkan tabel model dulu biar gak dobel
+    model.setRowCount(0);
 
-        tbl_laporan.setModel(model);
-    } catch (Exception e) {
-        JOptionPane.showMessageDialog(this, "Gagal menampilkan data: " + e.getMessage());
+    while (res.next()) {
+        model.addRow(new Object[]{
+            res.getString("id_pendaftaran"),
+            res.getString("nama_pasien"),
+            res.getString("tanggal_daftar"),
+            res.getString("nama_layanan")
+        });
     }
+
+    tbl_laporan.setModel(model);
+} catch (Exception e) {
+    JOptionPane.showMessageDialog(this, "Gagal menampilkan data: " + e.getMessage());
+}
 }
 
     /**
@@ -200,38 +204,47 @@ private DefaultTableModel tabmode;
     private void bt_cardatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_cardatActionPerformed
         // TODO add your handling code here:
     DefaultTableModel model = new DefaultTableModel();
-    model.addColumn("Nomor Pendaftaran");
-    model.addColumn("Nama Pasien");
-    model.addColumn("Tanggal Daftar");
+model.addColumn("Nomor Pendaftaran");
+model.addColumn("Nama Pasien");
+model.addColumn("Tanggal Daftar");
+model.addColumn("Nama Layanan"); // ✅ Tambahkan kolom layanan
 
-    String keyword = caridata.getText().trim();
+String keyword = caridata.getText().trim();
 
-    try {
-        String sql = "SELECT p.id_pendaftaran, ps.nama AS nama_pasien, p.tanggal_daftar " +
-                     "FROM pendaftaran p " +
-                     "JOIN pasien ps ON p.No_rm = ps.No_rm " +
-                     "(p.id_pendaftaran LIKE ? OR ps.nama LIKE ?) AND p.status_hasil = 'sudah'" +
-                     "ORDER BY p.id_pendaftaran ASC";
+try {
+    String sql = "SELECT p.id_pendaftaran, ps.nama AS nama_pasien, p.tanggal_daftar, l.nama_layanan " +
+                 "FROM pendaftaran p " +
+                 "JOIN pasien ps ON p.No_rm = ps.No_rm " +
+                 "JOIN pendaftaran_detail pd ON p.id_pendaftaran = pd.id_pendaftaran " +
+                 "JOIN layanan l ON pd.id_layanan = l.id_layanan " +
+                 "WHERE (p.id_pendaftaran LIKE ? OR ps.nama LIKE ? OR l.nama_layanan LIKE ?) " + // ✅ Filter juga berdasarkan layanan
+                 "AND p.status_hasil = 'sudah' " +
+                 "ORDER BY p.id_pendaftaran ASC";
 
-        Connection kon = koneksi.koneksiDb();
-        PreparedStatement ps = kon.prepareStatement(sql);
-        ps.setString(1, "%" + keyword + "%");
-        ps.setString(2, "%" + keyword + "%");
+    Connection kon = koneksi.koneksiDb();
+    PreparedStatement ps = kon.prepareStatement(sql);
+    ps.setString(1, "%" + keyword + "%");
+    ps.setString(2, "%" + keyword + "%");
+    ps.setString(3, "%" + keyword + "%");
 
-        ResultSet rs = ps.executeQuery();
+    ResultSet rs = ps.executeQuery();
 
-        while (rs.next()) {
-            model.addRow(new Object[]{
-                rs.getString("id_pendaftaran"),
-                rs.getString("nama_pasien"),
-                rs.getString("tanggal_daftar")
-            });
-        }
+    model.setRowCount(0); // Bersihkan tabel sebelum isi ulang
 
-        tbl_laporan.setModel(model);
-    } catch (Exception e) {
-        JOptionPane.showMessageDialog(this, "Gagal mencari data: " + e.getMessage());
+    while (rs.next()) {
+        model.addRow(new Object[]{
+            rs.getString("id_pendaftaran"),
+            rs.getString("nama_pasien"),
+            rs.getString("tanggal_daftar"),
+            rs.getString("nama_layanan")
+        });
     }
+
+    tbl_laporan.setModel(model);
+} catch (Exception e) {
+    JOptionPane.showMessageDialog(this, "Gagal mencari data: " + e.getMessage());
+}
+
 
     }//GEN-LAST:event_bt_cardatActionPerformed
 

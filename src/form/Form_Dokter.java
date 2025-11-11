@@ -452,7 +452,7 @@ public class Form_Dokter extends javax.swing.JPanel {
         String nama = tabel_dokter.getValueAt(selectedRow, 1).toString();
         String kontak = tabel_dokter.getValueAt(selectedRow, 2).toString();
         String spesialis = tabel_dokter.getValueAt(selectedRow, 3).toString();
-        String alamat = tabel_dokter.getValueAt(selectedRow, 3).toString();
+        String alamat = tabel_dokter.getValueAt(selectedRow, 4).toString();
 
         // Masukkan ke text field di panel Formulir
         Id_Dokter.setText(id);
