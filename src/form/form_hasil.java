@@ -12,12 +12,16 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.HashSet;
 import javax.swing.JOptionPane;
 import javax.swing.Timer;
 import java.util.HashSet;
+import java.util.Map;
+import javax.swing.JTabbedPane;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -32,6 +36,8 @@ public class form_hasil extends javax.swing.JPanel {
     public form_hasil() {
         initComponents();
         loadIdPendaftaran();
+        loadLayanan();
+        
                     
     id_daftar.addActionListener(new ActionListener() {
     @Override
@@ -93,6 +99,38 @@ public class form_hasil extends javax.swing.JPanel {
     }
 }
     
+HashMap<String, String> mapLayanan = new HashMap<>();
+HashMap<String, Integer> mapHarga = new HashMap<>();
+
+private void loadLayanan() {
+    try {
+        Connection kon = koneksi.koneksiDb();
+        Statement st = kon.createStatement();
+        ResultSet rs = st.executeQuery("SELECT id_layanan, nama_layanan, harga FROM layanan");
+
+        Layanan.removeAllItems();
+        mapLayanan.clear();
+        mapHarga.clear();
+
+        while (rs.next()) {
+            String id = rs.getString("id_layanan");
+            String nama = rs.getString("nama_layanan");
+            int harga = rs.getInt("harga");
+
+            // isi combo
+            Layanan.addItem(nama);
+
+            // isi hashmap
+            mapLayanan.put(nama, id);
+            mapHarga.put(nama, harga);
+        }
+
+    } catch (Exception e) {
+        e.printStackTrace();
+        JOptionPane.showMessageDialog(null, "Gagal load layanan: " + e.getMessage());
+    }
+}
+
     private void tampilkanTabSesuaiLayanan() {
     try {
         // Ambil ID Pendaftaran dari combobox
@@ -697,6 +735,9 @@ public class form_hasil extends javax.swing.JPanel {
         tb_rincian = new javax.swing.JTable();
         sv_hasil = new javax.swing.JButton();
         cancel = new javax.swing.JButton();
+        Layanan = new javax.swing.JComboBox<>();
+        bt_tambahLayanan = new javax.swing.JButton();
+        jLabel77 = new javax.swing.JLabel();
 
         setLayout(new java.awt.CardLayout());
 
@@ -714,7 +755,7 @@ public class form_hasil extends javax.swing.JPanel {
         jLabel2.setText("Pendaftaran");
 
         jLabel3.setFont(new java.awt.Font("Georgia", 0, 18)); // NOI18N
-        jLabel3.setText("Nama Pasien");
+        jLabel3.setText("Tambah Layanan");
 
         TabHasil.setBackground(new java.awt.Color(255, 255, 255));
         TabHasil.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
@@ -5170,6 +5211,19 @@ public class form_hasil extends javax.swing.JPanel {
             }
         });
 
+        Layanan.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
+        Layanan.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        bt_tambahLayanan.setText("Tambah Layanan");
+        bt_tambahLayanan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bt_tambahLayananActionPerformed(evt);
+            }
+        });
+
+        jLabel77.setFont(new java.awt.Font("Georgia", 0, 18)); // NOI18N
+        jLabel77.setText("Nama Pasien");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -5177,7 +5231,7 @@ public class form_hasil extends javax.swing.JPanel {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(20, 20, 20)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 719, Short.MAX_VALUE)
+                    .addComponent(jScrollPane2)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -5185,24 +5239,29 @@ public class form_hasil extends javax.swing.JPanel {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(cancel, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                        .addComponent(jLabel76, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addGap(12, 12, 12))
+                                    .addComponent(jLabel77, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel3)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                                .addComponent(jLabel76, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addGap(12, 12, 12)))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel81)
-                                            .addComponent(jLabel82)
-                                            .addComponent(jLabel83))))
+                                    .addComponent(jLabel81)
+                                    .addComponent(jLabel82)
+                                    .addComponent(jLabel83))
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(id_daftar, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(nm_pasien, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(nm_dokter, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(nm_dokter, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(88, 88, 88)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(Layanan, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(bt_tambahLayanan))
+                                    .addComponent(jLabel3))))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap(131, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -5215,9 +5274,7 @@ public class form_hasil extends javax.swing.JPanel {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(82, 82, 82)
-                        .addComponent(jLabel3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(109, 109, 109)
                         .addComponent(jLabel76))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
@@ -5229,13 +5286,21 @@ public class form_hasil extends javax.swing.JPanel {
                                     .addComponent(jLabel2)
                                     .addComponent(jLabel81))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel82)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel82)
+                                    .addComponent(jLabel77))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel83))
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(id_daftar, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(id_daftar, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel3))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(nm_pasien, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(nm_pasien, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(Layanan, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(bt_tambahLayanan)))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(nm_dokter, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -5605,6 +5670,37 @@ try (PreparedStatement ps = kon.prepareStatement(sql)) {
         // TODO add your handling code here:
     }//GEN-LAST:event_cancelActionPerformed
 
+    private void bt_tambahLayananActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_tambahLayananActionPerformed
+        // TODO add your handling code here: 
+        try {
+            Connection kon = koneksi.koneksiDb();
+            // Ambil layanan dari combo
+            String namaLayanan = Layanan.getSelectedItem().toString();
+            String idLayanan = mapLayanan.get(namaLayanan);   // ambil id_layanan dari HashMap
+            int harga = mapHarga.get(namaLayanan);            // ambil harga dari HashMap
+            String idPendaftaran = id_daftar.getSelectedItem().toString();
+            
+            // Insert langsung ke database
+            PreparedStatement ps = kon.prepareStatement(
+                "INSERT INTO pendaftaran_detail (id_pendaftaran, id_layanan, harga) VALUES (?, ?, ?)"
+            );
+
+            ps.setString(1, idPendaftaran);  
+            ps.setString(2, idLayanan);
+            ps.setInt(3, harga);
+
+            ps.executeUpdate();
+
+            JOptionPane.showMessageDialog(null, "Layanan berhasil ditambahkan!");
+            TabHasil.removeAll();
+            TabHasil.revalidate();
+            TabHasil.repaint(); 
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            JOptionPane.showMessageDialog(null, "Error: " + ex.getMessage());
+        }
+    }//GEN-LAST:event_bt_tambahLayananActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel AFP;
@@ -5618,6 +5714,7 @@ try (PreparedStatement ps = kon.prepareStatement(sql)) {
     private javax.swing.JLabel IgM;
     private javax.swing.JPanel KIMIA1;
     private javax.swing.JPanel KIMIA2;
+    private javax.swing.JComboBox<String> Layanan;
     private javax.swing.JPanel SEROLOGI;
     private javax.swing.JRadioButton TAmylumN;
     private javax.swing.JRadioButton TAmylumP;
@@ -5659,6 +5756,7 @@ try (PreparedStatement ps = kon.prepareStatement(sql)) {
     private javax.swing.JLabel antiHBe;
     private javax.swing.JLabel antihbs;
     private javax.swing.JLabel asto;
+    private javax.swing.JButton bt_tambahLayanan;
     private javax.swing.JButton cancel;
     private javax.swing.JComboBox<String> cbBdKeton;
     private javax.swing.JComboBox<String> cbReduksi;
@@ -5976,6 +6074,7 @@ try (PreparedStatement ps = kon.prepareStatement(sql)) {
     private javax.swing.JLabel jLabel74;
     private javax.swing.JLabel jLabel75;
     private javax.swing.JLabel jLabel76;
+    private javax.swing.JLabel jLabel77;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel81;
     private javax.swing.JLabel jLabel82;
