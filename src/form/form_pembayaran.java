@@ -103,8 +103,7 @@ public class form_pembayaran extends javax.swing.JPanel {
         jScrollPane1 = new javax.swing.JScrollPane();
         tbl_rincian = new javax.swing.JTable();
         bt_simpan = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        Batal = new javax.swing.JButton();
         idPembayaran = new javax.swing.JFormattedTextField();
         biaya = new javax.swing.JFormattedTextField();
         tglbayar = new javax.swing.JFormattedTextField();
@@ -175,17 +174,16 @@ public class form_pembayaran extends javax.swing.JPanel {
             }
         });
 
-        jButton2.setBackground(new java.awt.Color(255, 255, 0));
-        jButton2.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
-        jButton2.setText("Batal");
-        jButton2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        jButton2.setBorderPainted(false);
-
-        jButton3.setBackground(new java.awt.Color(255, 51, 51));
-        jButton3.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
-        jButton3.setText("Hapus");
-        jButton3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        jButton3.setBorderPainted(false);
+        Batal.setBackground(new java.awt.Color(255, 255, 0));
+        Batal.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
+        Batal.setText("Batal");
+        Batal.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        Batal.setBorderPainted(false);
+        Batal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BatalActionPerformed(evt);
+            }
+        });
 
         idPembayaran.setFont(new java.awt.Font("Georgia", 0, 18)); // NOI18N
 
@@ -236,9 +234,7 @@ public class form_pembayaran extends javax.swing.JPanel {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(bt_simpan, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(Batal, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel5)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -284,8 +280,7 @@ public class form_pembayaran extends javax.swing.JPanel {
                 .addGap(27, 27, 27)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(bt_simpan, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Batal, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(40, 40, 40))
         );
 
@@ -342,13 +337,17 @@ public class form_pembayaran extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_no_pendaftaranActionPerformed
 
+    private void BatalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BatalActionPerformed
+        // TODO add your handling code here:
+        resetForm();
+    }//GEN-LAST:event_BatalActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Batal;
     private javax.swing.JFormattedTextField biaya;
     private javax.swing.JButton bt_simpan;
     private javax.swing.JFormattedTextField idPembayaran;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
