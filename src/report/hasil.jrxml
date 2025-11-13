@@ -80,7 +80,7 @@ h.id_pendaftaran = $P{id_pendaftaran}
 				<text><![CDATA[ Nama_pemeriksaan]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="196" y="2" width="277" height="20" uuid="c114301c-d265-48e4-965b-809e297c02a7"/>
+				<reportElement x="195" y="2" width="277" height="20" uuid="c114301c-d265-48e4-965b-809e297c02a7"/>
 				<text><![CDATA[ Hasil_pemeriksaan]]></text>
 			</staticText>
 			<line>
