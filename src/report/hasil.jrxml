@@ -15,7 +15,10 @@ FROM hasil_periksa h
 JOIN pendaftaran p ON h.id_pendaftaran = p.id_pendaftaran
 JOIN pasien ps ON p.No_rm = ps.No_rm
 JOIN dokter d ON p.id_dokter = d.id_dokter
-WHERE h.id_pendaftaran = $P{id_pendaftaran}]]>
+RIGHT JOIN hasil_hematologi hh ON p.id_pendaftaran = hh.id_pendaftaran
+WHERE 
+h.id_pendaftaran = $P{id_pendaftaran}
+]]>
 	</queryString>
 	<field name="nama_pasien" class="java.lang.String"/>
 	<field name="nama_dokter" class="java.lang.String"/>
@@ -32,9 +35,9 @@ WHERE h.id_pendaftaran = $P{id_pendaftaran}]]>
 		<band splitType="Stretch"/>
 	</background>
 	<title>
-		<band height="57" splitType="Stretch">
+		<band height="51" splitType="Stretch">
 			<staticText>
-				<reportElement x="210" y="0" width="209" height="51" uuid="97573f68-7241-4185-836d-daefb72dbc52"/>
+				<reportElement x="171" y="0" width="209" height="51" uuid="97573f68-7241-4185-836d-daefb72dbc52"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="32" isBold="true" pdfFontName="Times-Roman"/>
 				</textElement>
@@ -73,11 +76,11 @@ WHERE h.id_pendaftaran = $P{id_pendaftaran}]]>
 	<columnHeader>
 		<band height="22" splitType="Stretch">
 			<staticText>
-				<reportElement x="10" y="1" width="185" height="20" uuid="95cfebad-be39-4568-89cd-8d50fbde5e97"/>
+				<reportElement x="0" y="1" width="185" height="20" uuid="95cfebad-be39-4568-89cd-8d50fbde5e97"/>
 				<text><![CDATA[ Nama_pemeriksaan]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="210" y="2" width="359" height="20" uuid="c114301c-d265-48e4-965b-809e297c02a7"/>
+				<reportElement x="196" y="2" width="277" height="20" uuid="c114301c-d265-48e4-965b-809e297c02a7"/>
 				<text><![CDATA[ Hasil_pemeriksaan]]></text>
 			</staticText>
 			<line>
@@ -100,11 +103,12 @@ WHERE h.id_pendaftaran = $P{id_pendaftaran}]]>
 	<detail>
 		<band height="21" splitType="Stretch">
 			<textField>
-				<reportElement x="10" y="0" width="185" height="20" uuid="290de6cb-2738-41ad-ad8a-a9dccae07a87"/>
+				<reportElement x="1" y="1" width="185" height="20" uuid="290de6cb-2738-41ad-ad8a-a9dccae07a87"/>
 				<textFieldExpression><![CDATA[$F{nama_pemeriksaan}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="210" y="0" width="277" height="20" uuid="3b3179cb-cb41-48a2-a7c1-d420da9fa601"/>
+				<reportElement x="196" y="0" width="277" height="20" uuid="3b3179cb-cb41-48a2-a7c1-d420da9fa601"/>
+				<textElement verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$F{hasil_pemeriksaan}]]></textFieldExpression>
 			</textField>
 			<line>

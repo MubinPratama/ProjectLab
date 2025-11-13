@@ -285,8 +285,6 @@ public class Form_lp_Kinerja extends javax.swing.JPanel {
                 return;
             }
             
-        Connection conn = koneksi.koneksiDb(); // pastikan koneksi DB kamu di sini
-
         // Ambil tanggal dari JDateChooser
         String filter = cb_filter.getSelectedItem().toString();
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
@@ -311,6 +309,8 @@ public class Form_lp_Kinerja extends javax.swing.JPanel {
             default:
                 sampai = dari;
         }
+        // pastikan koneksi DB kamu di sini
+        Connection conn = koneksi.koneksiDb(); 
         // Parameter ke Jasper
         Map<String, Object> param = new HashMap<>();
         param.put("param_iddokter", idDokter);
@@ -319,9 +319,9 @@ public class Form_lp_Kinerja extends javax.swing.JPanel {
 
         // Compile jika pakai jrxml
         // JasperReport report = JasperCompileManager.compileReport(reportPath);
-
         // Fill dan tampilkan
         JasperReport report = JasperCompileManager.compileReport("src/report/Kinerja.jrxml");
+        //print report
         JasperPrint cetak = JasperFillManager.fillReport(report, param, conn);
         JasperViewer.viewReport(cetak, false);
         
