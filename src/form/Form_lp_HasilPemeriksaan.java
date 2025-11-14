@@ -193,10 +193,10 @@ private DefaultTableModel tabmode;
             Long  idpendaftaran = Long.parseLong(tbl_laporan.getValueAt(selectedRow, 0).toString());
             param.put("id_pendaftaran",idpendaftaran); // ambil dari input user atau combo box
             // pilih layanan
-            /**String namalayanan = tbl_laporan.getValueAt(selectedRow, 3).toString();
-            String layanan = "hasil_"+namalayanan.toLowerCase().replace(" ","");
-            param.put("layanan",layanan);
-            */
+            String namalayanan = tbl_laporan.getValueAt(selectedRow, 3).toString();
+            //String layanan = "hasil_"+namalayanan.toLowerCase().replace(" ","");
+            param.put("layanan",namalayanan);
+            
             //adress to file .jrxml
             JasperReport report = JasperCompileManager.compileReport("src/report/hasil.jrxml");
             

@@ -60,20 +60,24 @@ ORDER BY
 		</field>
 		<field name="Tanggal" class="java.sql.Date"/>
 	</subDataset>
+	<parameter name="TGL_MULAI" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="TGL_SELESAI" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
 	<queryString>
 		<![CDATA[SELECT 
     pendaftaran.id_pendaftaran AS `Id_Pendaftaran`,
     pasien.Nama AS `Nama_Pasien`,
     layanan.nama_layanan AS `Nama_Layanan`,
     pendaftaran.tanggal_daftar AS `Tanggal`
-FROM 
-    pendaftaran
-JOIN 
-    pasien ON pendaftaran.No_rm = pasien.No_rm
-JOIN 
-    pendaftaran_detail ON pendaftaran.id_pendaftaran = pendaftaran_detail.id_pendaftaran
-JOIN 
-    layanan ON pendaftaran_detail.id_layanan = layanan.id_layanan
+FROM pendaftaran
+JOIN pasien ON pendaftaran.No_rm = pasien.No_rm
+JOIN pendaftaran_detail ON pendaftaran.id_pendaftaran = pendaftaran_detail.id_pendaftaran
+JOIN layanan ON pendaftaran_detail.id_layanan = layanan.id_layanan
+WHERE 
+pendaftaran.tanggal_daftar BETWEEN $P{TGL_MULAI} AND $P{TGL_SELESAI}
 ORDER BY 
     pendaftaran.tanggal_daftar ASC, pasien.Nama ASC;]]>
 	</queryString>

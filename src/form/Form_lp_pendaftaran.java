@@ -22,6 +22,7 @@ import net.sf.jasperreports.engine.JasperFillManager;
 import net.sf.jasperreports.engine.JasperPrint;
 import net.sf.jasperreports.engine.JasperReport;
 import net.sf.jasperreports.view.JasperViewer;
+import com.toedter.calendar.JDateChooser;
 
 /**
  *
@@ -94,6 +95,10 @@ public class Form_lp_pendaftaran extends javax.swing.JPanel {
         Cetak = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tbl_laporan = new javax.swing.JTable();
+        dariTglTxt = new javax.swing.JLabel();
+        sampaiTglTxt = new javax.swing.JLabel();
+        dariTgl = new com.toedter.calendar.JDateChooser();
+        sampaiTgl = new com.toedter.calendar.JDateChooser();
 
         setLayout(new java.awt.CardLayout());
 
@@ -130,6 +135,18 @@ public class Form_lp_pendaftaran extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(tbl_laporan);
 
+        dariTglTxt.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        dariTglTxt.setText("Dari");
+
+        sampaiTglTxt.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        sampaiTglTxt.setText("- Sampai");
+
+        dariTgl.setDateFormatString("yyyy-MM-dd");
+        dariTgl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+
+        sampaiTgl.setDateFormatString("yyyy-MM-dd");
+        sampaiTgl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -138,21 +155,39 @@ public class Form_lp_pendaftaran extends javax.swing.JPanel {
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 838, Short.MAX_VALUE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(Cetak, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(dariTglTxt)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(dariTgl, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(sampaiTglTxt)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(sampaiTgl, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(1, 1, 1)
-                .addComponent(Cetak, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(1, 1, 1)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(Cetak, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(dariTglTxt, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(dariTgl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(sampaiTgl, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(sampaiTglTxt))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(55, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         add(jPanel1, "card3");
@@ -161,6 +196,24 @@ public class Form_lp_pendaftaran extends javax.swing.JPanel {
     private void CetakActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CetakActionPerformed
         // TODO add your handling code here:
         try {
+        // 1. Siapkan format tanggal (harus yyyy-MM-dd agar cocok dengan SQL)
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+
+        // 2. Validasi: Pastikan tanggal tidak kosong
+        if (dariTgl.getDate() == null || sampaiTgl.getDate() == null) {
+            JOptionPane.showMessageDialog(this, "Silakan pilih rentang tanggal terlebih dahulu.", "Error", JOptionPane.ERROR_MESSAGE);
+            return; // Hentikan proses jika tanggal kosong
+        }
+
+        // 3. Ambil tanggal dan format ke string
+        String tglMulai = sdf.format(dariTgl.getDate());
+        String tglSelesai = sdf.format(sampaiTgl.getDate());
+
+        // 4. Siapkan parameter untuk dikirim ke JasperReport
+        // Nama parameter ("PARAM_TGL_MULAI") harus SAMA PERSIS dengan di .jrxml
+        Map<String, Object> param = new HashMap<>();
+        param.put("TGL_MULAI", tglMulai);
+        param.put("TGL_SELESAI", tglSelesai);
         // Path ke file .jasper
         String reportPath = "src/report/pendaftaran.jasper";
 
@@ -168,7 +221,7 @@ public class Form_lp_pendaftaran extends javax.swing.JPanel {
         Connection kon = koneksi.koneksiDb(); // pastikan kamu punya method koneksi seperti ini
 
         // Menjalankan laporan tanpa parameter
-        JasperPrint jp = JasperFillManager.fillReport(reportPath, null, kon);
+        JasperPrint jp = JasperFillManager.fillReport(reportPath, param, kon);
 
         // Menampilkan ke JasperViewer
         JasperViewer.viewReport(jp, false);
@@ -176,17 +229,21 @@ public class Form_lp_pendaftaran extends javax.swing.JPanel {
         // Jika ingin langsung print tanpa viewer
         // JasperPrintManager.printReport(jp, true);
 
-    } catch (Exception e) {
-        JOptionPane.showMessageDialog(null, "Gagal mencetak laporan: \n" + e.getMessage());
-    }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Gagal mencetak laporan: \n" + e.getMessage());
+        }
     }//GEN-LAST:event_CetakActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Cetak;
+    private com.toedter.calendar.JDateChooser dariTgl;
+    private javax.swing.JLabel dariTglTxt;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private com.toedter.calendar.JDateChooser sampaiTgl;
+    private javax.swing.JLabel sampaiTglTxt;
     private javax.swing.JTable tbl_laporan;
     // End of variables declaration//GEN-END:variables
 }

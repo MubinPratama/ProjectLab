@@ -4,6 +4,9 @@
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
 	<parameter name="id_pendaftaran" class="java.lang.Long" isForPrompting="false"/>
+	<parameter name="layanan" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
 	<queryString>
 		<![CDATA[SELECT 
     ps.nama AS nama_pasien,
@@ -15,10 +18,9 @@ FROM hasil_periksa h
 JOIN pendaftaran p ON h.id_pendaftaran = p.id_pendaftaran
 JOIN pasien ps ON p.No_rm = ps.No_rm
 JOIN dokter d ON p.id_dokter = d.id_dokter
-RIGHT JOIN hasil_hematologi hh ON p.id_pendaftaran = hh.id_pendaftaran
 WHERE 
-h.id_pendaftaran = $P{id_pendaftaran}
-]]>
+h.id_pendaftaran = $P{id_pendaftaran} and 
+h.layanan = $P{layanan}]]>
 	</queryString>
 	<field name="nama_pasien" class="java.lang.String"/>
 	<field name="nama_dokter" class="java.lang.String"/>
@@ -37,12 +39,16 @@ h.id_pendaftaran = $P{id_pendaftaran}
 	<title>
 		<band height="51" splitType="Stretch">
 			<staticText>
-				<reportElement x="171" y="0" width="209" height="51" uuid="97573f68-7241-4185-836d-daefb72dbc52"/>
+				<reportElement x="78" y="0" width="209" height="51" uuid="97573f68-7241-4185-836d-daefb72dbc52"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="32" isBold="true" pdfFontName="Times-Roman"/>
 				</textElement>
 				<text><![CDATA[Laporan Hasil ]]></text>
 			</staticText>
+			<textField>
+				<reportElement x="330" y="28" width="100" height="20" uuid="c181aca0-ee26-40c6-bdaa-c931ebda3879"/>
+				<textFieldExpression><![CDATA[$P{layanan}]]></textFieldExpression>
+			</textField>
 		</band>
 	</title>
 	<pageHeader>
