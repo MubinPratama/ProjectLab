@@ -54,7 +54,7 @@ public class form_hasil extends javax.swing.JPanel {
     }
 });
     
-    String[] kolom = {"Pemeriksaan", "Hasil Pemeriksaan"};
+    String[] kolom = {"Pemeriksaan", "Hasil Pemeriksaan", "Layanan"};
     DefaultTableModel model = new DefaultTableModel(null, kolom);
     tb_rincian.setModel(model);
     }
@@ -6452,9 +6452,9 @@ public void resetFormTinja(){
     groupDasar.clearSelection();
 }
 
-private void tambahBarisJikaAda(DefaultTableModel model, String label, String value) {
-    if (value != null && !value.trim().isEmpty()) {
-        model.addRow(new Object[]{label, value});
+private void tambahBarisJikaAda(DefaultTableModel model, String namaPemeriksaan, String Hasil, String NamaLayanan) {
+    if (Hasil != null && !Hasil.trim().isEmpty()) {
+        model.addRow(new Object[]{namaPemeriksaan, Hasil, NamaLayanan});
     }
 }
 
@@ -6463,22 +6463,22 @@ public void tampilkanHasilUrineKeTabel() {
     DefaultTableModel model = (DefaultTableModel) tb_rincian.getModel();
 
     // Tambahkan baris hasil pemeriksaan satu per satu
-    tambahBarisJikaAda(model,"Warna", cmbWarna.getSelectedItem().toString());
-    tambahBarisJikaAda(model,"Kejernihan", cmbKejernihan.getSelectedItem().toString());
-    tambahBarisJikaAda(model,"Berat Jenis", cmbBeratJenis.getSelectedItem().toString());
-    tambahBarisJikaAda(model,"Reaksi", cmbReaksi.getSelectedItem().toString());
-    tambahBarisJikaAda(model,"Protein", cmbProtein.getSelectedItem().toString());
-    tambahBarisJikaAda(model,"Reduksi", cmbReduksi.getSelectedItem().toString());
-    tambahBarisJikaAda(model,"Sendimen Eritrosit", cmbSendimenEritrosit.getSelectedItem().toString());
-    tambahBarisJikaAda(model,"Lekosi", cmbLekosit.getSelectedItem().toString());
-    tambahBarisJikaAda(model,"Epitel", cmbEpitel.getSelectedItem().toString());
-    tambahBarisJikaAda(model,"Kristal Jenis", cmbKristal.getSelectedItem().toString());
-    tambahBarisJikaAda(model,"Kristal Bentuk", cmbKristal2.getSelectedItem().toString());
-    tambahBarisJikaAda(model,"Bakteri", cmbBakteri.getSelectedItem().toString());
-    tambahBarisJikaAda(model,"Bilirubin", cmbBilirubin.getSelectedItem().toString());
-    tambahBarisJikaAda(model,"Urobilinogen", cmbUrobilinogen.getSelectedItem().toString());
-    tambahBarisJikaAda(model,"Urobilin", cmbUrobilin.getSelectedItem().toString());
-    tambahBarisJikaAda(model,"Nitrit", cmbNitrit.getSelectedItem().toString());
+    tambahBarisJikaAda(model,"Warna", cmbWarna.getSelectedItem().toString(), "Urine");
+    tambahBarisJikaAda(model,"Kejernihan", cmbKejernihan.getSelectedItem().toString(), "Urine");
+    tambahBarisJikaAda(model,"Berat Jenis", cmbBeratJenis.getSelectedItem().toString(), "Urine");
+    tambahBarisJikaAda(model,"Reaksi", cmbReaksi.getSelectedItem().toString(), "Urine");
+    tambahBarisJikaAda(model,"Protein", cmbProtein.getSelectedItem().toString(), "Urine");
+    tambahBarisJikaAda(model,"Reduksi", cmbReduksi.getSelectedItem().toString(), "Urine");
+    tambahBarisJikaAda(model,"Sendimen Eritrosit", cmbSendimenEritrosit.getSelectedItem().toString(), "Urine");
+    tambahBarisJikaAda(model,"Lekosi", cmbLekosit.getSelectedItem().toString(), "Urine");
+    tambahBarisJikaAda(model,"Epitel", cmbEpitel.getSelectedItem().toString(), "Urine");
+    tambahBarisJikaAda(model,"Kristal Jenis", cmbKristal.getSelectedItem().toString(), "Urine");
+    tambahBarisJikaAda(model,"Kristal Bentuk", cmbKristal2.getSelectedItem().toString(), "Urine");
+    tambahBarisJikaAda(model,"Bakteri", cmbBakteri.getSelectedItem().toString(), "Urine");
+    tambahBarisJikaAda(model,"Bilirubin", cmbBilirubin.getSelectedItem().toString(), "Urine");
+    tambahBarisJikaAda(model,"Urobilinogen", cmbUrobilinogen.getSelectedItem().toString(), "Urine");
+    tambahBarisJikaAda(model,"Urobilin", cmbUrobilin.getSelectedItem().toString(), "Urine");
+    tambahBarisJikaAda(model,"Nitrit", cmbNitrit.getSelectedItem().toString(), "Urine");
 
     // Contoh jika kamu pakai radio button untuk tes kehamilan
     String hasilPE = pos_PE.isSelected() ? "Positif" : neg_PE.isSelected() ? "Negatif" : "";
@@ -6488,12 +6488,12 @@ public void tampilkanHasilUrineKeTabel() {
     String hasilTK = pos_TK.isSelected() ? "Positif" : neg_TK.isSelected() ? "Negatif" : "";
     String hasilS = pos_S.isSelected() ? "Positif" : neg_S.isSelected() ? "Negatif" : "";
     
-    tambahBarisJikaAda(model,"Protein Esbach", hasilPE);
-    tambahBarisJikaAda(model,"Protein Esbach Jones", hasilPBJ);
-    tambahBarisJikaAda(model,"Benda Keton", hasilBK);
-    tambahBarisJikaAda(model,"Darah Samar", hasilDS);
-    tambahBarisJikaAda(model,"Tes Kehamilan", hasilTK);
-    tambahBarisJikaAda(model,"Silinder", hasilS);
+    tambahBarisJikaAda(model,"Protein Esbach", hasilPE, "Urine");
+    tambahBarisJikaAda(model,"Protein Esbach Jones", hasilPBJ, "Urine");
+    tambahBarisJikaAda(model,"Benda Keton", hasilBK, "Urine");
+    tambahBarisJikaAda(model,"Darah Samar", hasilDS, "Urine");
+    tambahBarisJikaAda(model,"Tes Kehamilan", hasilTK, "Urine");
+    tambahBarisJikaAda(model,"Silinder", hasilS, "Urine");
      
 }
 
@@ -6502,63 +6502,63 @@ public void tampilkanHasilHematologiKeTabel() {
     DefaultTableModel model = (DefaultTableModel) tb_rincian.getModel();
 
     // Tambahkan baris hasil pemeriksaan satu per satu
-    tambahBarisJikaAda(model,"Hemoglobin", txtHemoglobin.getText());
-    tambahBarisJikaAda(model,"Hematokrit", txtHematokrit.getText());
-    tambahBarisJikaAda(model,"Eritrosit", txtEritrosit.getText());
-    tambahBarisJikaAda(model,"VER MCH", txtVER_MCH.getText());
-    tambahBarisJikaAda(model,"HER MCH", txtHER_MCH.getText());
-    tambahBarisJikaAda(model,"KHER MCHC", txtKHER_MCHC.getText());
-    tambahBarisJikaAda(model,"Rerikulosit", txtRetikulosit.getText());
-    tambahBarisJikaAda(model,"Leukosit", txtLeukosit.getText());
-    tambahBarisJikaAda(model,"Basofil", txtBasofil.getText());
-    tambahBarisJikaAda(model,"Eosinofil", txtEosinofil.getText());
-    tambahBarisJikaAda(model,"Batang", txtBatang.getText());
-    tambahBarisJikaAda(model,"Segmen", txtSegmen.getText());
-    tambahBarisJikaAda(model,"Limfosit", txtLimfosit.getText());
-    tambahBarisJikaAda(model,"Monosit", txtMonosit.getText());
-    tambahBarisJikaAda(model,"LED", txtLED.getText());
-    tambahBarisJikaAda(model,"Westergren", txtWestergren.getText());
-    tambahBarisJikaAda(model,"Trombosit", txtTrombosit.getText());
-    tambahBarisJikaAda(model,"Masa Pendarahan", txtMasaPendarahan.getText());
-    tambahBarisJikaAda(model,"Masa embekuan", txtMasaPembekuan.getText());
-    tambahBarisJikaAda(model,"Nitrit", txtPembendungan.getText());
-    tambahBarisJikaAda(model,"Retraksi", txtRetraksi.getText());
-    tambahBarisJikaAda(model,"Resistensi Osmotik", txtResistensiOsmotik.getText());
-    tambahBarisJikaAda(model,"SelLE", txtSelLE.getText());
-    tambahBarisJikaAda(model,"ReaksiLE", txtReaksiLE.getText());
-    tambahBarisJikaAda(model,"Malaria", txtMalaria.getText());
-    tambahBarisJikaAda(model,"GolDarah", txtGolDarah.getText());
+    tambahBarisJikaAda(model,"Hemoglobin", txtHemoglobin.getText(), "Hematologi");
+    tambahBarisJikaAda(model,"Hematokrit", txtHematokrit.getText(), "Hematologi");
+    tambahBarisJikaAda(model,"Eritrosit", txtEritrosit.getText(), "Hematologi");
+    tambahBarisJikaAda(model,"VER MCH", txtVER_MCH.getText(), "Hematologi");
+    tambahBarisJikaAda(model,"HER MCH", txtHER_MCH.getText(), "Hematologi");
+    tambahBarisJikaAda(model,"KHER MCHC", txtKHER_MCHC.getText(), "Hematologi");
+    tambahBarisJikaAda(model,"Rerikulosit", txtRetikulosit.getText(), "Hematologi");
+    tambahBarisJikaAda(model,"Leukosit", txtLeukosit.getText(), "Hematologi");
+    tambahBarisJikaAda(model,"Basofil", txtBasofil.getText(), "Hematologi");
+    tambahBarisJikaAda(model,"Eosinofil", txtEosinofil.getText(), "Hematologi");
+    tambahBarisJikaAda(model,"Batang", txtBatang.getText(), "Hematologi");
+    tambahBarisJikaAda(model,"Segmen", txtSegmen.getText(), "Hematologi");
+    tambahBarisJikaAda(model,"Limfosit", txtLimfosit.getText(), "Hematologi");
+    tambahBarisJikaAda(model,"Monosit", txtMonosit.getText(), "Hematologi");
+    tambahBarisJikaAda(model,"LED", txtLED.getText(), "Hematologi");
+    tambahBarisJikaAda(model,"Westergren", txtWestergren.getText(), "Hematologi");
+    tambahBarisJikaAda(model,"Trombosit", txtTrombosit.getText(), "Hematologi");
+    tambahBarisJikaAda(model,"Masa Pendarahan", txtMasaPendarahan.getText(), "Hematologi");
+    tambahBarisJikaAda(model,"Masa embekuan", txtMasaPembekuan.getText(), "Hematologi");
+    tambahBarisJikaAda(model,"Nitrit", txtPembendungan.getText(), "Hematologi");
+    tambahBarisJikaAda(model,"Retraksi", txtRetraksi.getText(), "Hematologi");
+    tambahBarisJikaAda(model,"Resistensi Osmotik", txtResistensiOsmotik.getText(), "Hematologi");
+    tambahBarisJikaAda(model,"SelLE", txtSelLE.getText(), "Hematologi");
+    tambahBarisJikaAda(model,"ReaksiLE", txtReaksiLE.getText(), "Hematologi");
+    tambahBarisJikaAda(model,"Malaria", txtMalaria.getText(), "Hematologi");
+    tambahBarisJikaAda(model,"GolDarah", txtGolDarah.getText(), "Hematologi");
 }
 
 public void tampilkanHasilSerologiKeTabel() {
     DefaultTableModel model = (DefaultTableModel) tb_rincian.getModel();//Ambil Tabel Model
 
-    tambahBarisJikaAda(model,"Anti - HBs", cmbAntiHBs.getSelectedItem().toString());
-    tambahBarisJikaAda(model,"Hbe Ag", cmbHbeAg.getSelectedItem().toString());
-    tambahBarisJikaAda(model,"Anti - HBe", cmbAntiHBe.getSelectedItem().toString());
-    tambahBarisJikaAda(model,"Anti - HBc", cmbAntiHBc.getSelectedItem().toString());
-    tambahBarisJikaAda(model,"Anti - HA", cmbAntiHA.getSelectedItem().toString());
-    tambahBarisJikaAda(model,"Typhus H", cmbTyphusH.getSelectedItem().toString());
-    tambahBarisJikaAda(model,"Paratyphus A H", cmbParatyphusAH.getSelectedItem().toString());
-    tambahBarisJikaAda(model,"Paratyphus B H", cmbParatyphusBH.getSelectedItem().toString());
-    tambahBarisJikaAda(model,"Paratyphus C H", cmbParatyphusCH.getSelectedItem().toString());
-    tambahBarisJikaAda(model,"Typhus O", cmbTyphusO.getSelectedItem().toString());
-    tambahBarisJikaAda(model,"Paratyphus A O", cmbParatyphusAO.getSelectedItem().toString());
-    tambahBarisJikaAda(model,"Paratyphus B O", cmbParatyphusBO.getSelectedItem().toString());
-    tambahBarisJikaAda(model,"Paratyphus C O", cmbParatyphusCO.getSelectedItem().toString());
+    tambahBarisJikaAda(model,"Anti - HBs", cmbAntiHBs.getSelectedItem().toString(), "Serologi");
+    tambahBarisJikaAda(model,"Hbe Ag", cmbHbeAg.getSelectedItem().toString(), "Serologi");
+    tambahBarisJikaAda(model,"Anti - HBe", cmbAntiHBe.getSelectedItem().toString(), "Serologi");
+    tambahBarisJikaAda(model,"Anti - HBc", cmbAntiHBc.getSelectedItem().toString(), "Serologi");
+    tambahBarisJikaAda(model,"Anti - HA", cmbAntiHA.getSelectedItem().toString(), "Serologi");
+    tambahBarisJikaAda(model,"Typhus H", cmbTyphusH.getSelectedItem().toString(), "Serologi");
+    tambahBarisJikaAda(model,"Paratyphus A H", cmbParatyphusAH.getSelectedItem().toString(), "Serologi");
+    tambahBarisJikaAda(model,"Paratyphus B H", cmbParatyphusBH.getSelectedItem().toString(), "Serologi");
+    tambahBarisJikaAda(model,"Paratyphus C H", cmbParatyphusCH.getSelectedItem().toString(), "Serologi");
+    tambahBarisJikaAda(model,"Typhus O", cmbTyphusO.getSelectedItem().toString(), "Serologi");
+    tambahBarisJikaAda(model,"Paratyphus A O", cmbParatyphusAO.getSelectedItem().toString(), "Serologi");
+    tambahBarisJikaAda(model,"Paratyphus B O", cmbParatyphusBO.getSelectedItem().toString(), "Serologi");
+    tambahBarisJikaAda(model,"Paratyphus C O", cmbParatyphusCO.getSelectedItem().toString(), "Serologi");
 
-    tambahBarisJikaAda(model,"AFP (alfa-fetoprotein)", txtAFP.getText());
-    tambahBarisJikaAda(model,"EA (carcing-embryonic Ag)", txtEA.getText());
-    tambahBarisJikaAda(model,"Imunoglobulin : IgG", txtIgG.getText());
-    tambahBarisJikaAda(model,"IgA", txtIgA.getText());
-    tambahBarisJikaAda(model,"IgM", txtIgM.getText());
-    tambahBarisJikaAda(model,"IgE", txtIgE.getText());
-    tambahBarisJikaAda(model,"ASTO", txtASTO.getText());
-    tambahBarisJikaAda(model,"T4", txtT4.getText());
-    tambahBarisJikaAda(model,"T3 Uptake", txtT3Uptake.getText());
-    tambahBarisJikaAda(model,"FTI", txtFTI.getText());
-    tambahBarisJikaAda(model,"T3", txtT3.getText());
-    tambahBarisJikaAda(model,"TSH", txtTSH.getText());
+    tambahBarisJikaAda(model,"AFP (alfa-fetoprotein)", txtAFP.getText(), "Serologi");
+    tambahBarisJikaAda(model,"EA (carcing-embryonic Ag)", txtEA.getText(), "Serologi");
+    tambahBarisJikaAda(model,"Imunoglobulin : IgG", txtIgG.getText(), "Serologi");
+    tambahBarisJikaAda(model,"IgA", txtIgA.getText(), "Serologi");
+    tambahBarisJikaAda(model,"IgM", txtIgM.getText(), "Serologi");
+    tambahBarisJikaAda(model,"IgE", txtIgE.getText(), "Serologi");
+    tambahBarisJikaAda(model,"ASTO", txtASTO.getText(), "Serologi");
+    tambahBarisJikaAda(model,"T4", txtT4.getText(), "Serologi");
+    tambahBarisJikaAda(model,"T3 Uptake", txtT3Uptake.getText(), "Serologi");
+    tambahBarisJikaAda(model,"FTI", txtFTI.getText(), "Serologi");
+    tambahBarisJikaAda(model,"T3", txtT3.getText(), "Serologi");
+    tambahBarisJikaAda(model,"TSH", txtTSH.getText(), "Serologi");
 
     String hasilTPHA = rbtnTPHAPos.isSelected() ? "Positif" : rbtnTPHANeg.isSelected() ? "Negatif" : "";
     String hasilVDRLN = rbtnVDRLPos.isSelected() ? "Positif" : rbtnVDRLNeg.isSelected() ? "Negatif" : "";
@@ -6567,96 +6567,96 @@ public void tampilkanHasilSerologiKeTabel() {
     String hasilCRP = rbtnCRPPos.isSelected() ? "Positif" : rbtnCRPNeg.isSelected() ? "Negatif" : "";
     String hasiRAf = rbtnRAfNeg.isSelected() ? "Positif" : rbtnRAfNeg.isSelected() ? "Negatif" : "";
     
-    tambahBarisJikaAda(model,"TPHA", hasilTPHA);
-    tambahBarisJikaAda(model,"VDRL", hasilVDRLN);
-    tambahBarisJikaAda(model,"WR", hasilWR);
-    tambahBarisJikaAda(model,"HBsAg", hasilHBsAg);
-    tambahBarisJikaAda(model,"CRP", hasilCRP);
-    tambahBarisJikaAda(model,"RAF", hasiRAf);
+    tambahBarisJikaAda(model,"TPHA", hasilTPHA, "Serologi");
+    tambahBarisJikaAda(model,"VDRL", hasilVDRLN, "Serologi");
+    tambahBarisJikaAda(model,"WR", hasilWR, "Serologi");
+    tambahBarisJikaAda(model,"HBsAg", hasilHBsAg, "Serologi");
+    tambahBarisJikaAda(model,"CRP", hasilCRP, "Serologi");
+    tambahBarisJikaAda(model,"RAF", hasiRAf, "Serologi");
      
 }
 
 public void tampilkanHasilKimia1KeTabel() {
     DefaultTableModel model = (DefaultTableModel) tb_rincian.getModel();//Ambil Tabel Model
     
-    tambahBarisJikaAda(model,"Bilirubin Total", txtBilirubinTotal.getText());
-    tambahBarisJikaAda(model,"Bilirubin Direk", txtBilirubinDirek.getText());
-    tambahBarisJikaAda(model,"Bilirubin Indirek", txtBilirubinIndirek.getText());
-    tambahBarisJikaAda(model,"Indeks Ikterus", txtIndeksIkterus.getText());
-    tambahBarisJikaAda(model,"Fosfatase Alkali", txtFosfataseAlkali.getText());
-    tambahBarisJikaAda(model,"FosfatAsam Total", txtFosfatAsamTotal.getText());
-    tambahBarisJikaAda(model,"Protein Total", txtProteinTotal.getText());
-    tambahBarisJikaAda(model,"Albumin", txtAlbumin.getText());
-    tambahBarisJikaAda(model,"Globulin", txtGlobulin.getText());
-    tambahBarisJikaAda(model,"Elektro Albumin", txtElektroAlbumin.getText());
-    tambahBarisJikaAda(model,"Alfa 1 Globulin", txtAlfa1Globulin.getText());
-    tambahBarisJikaAda(model,"Alfa 2 Globulin", txtAlfa2Globulin.getText());
-    tambahBarisJikaAda(model,"Beta Globulin", txtBetaGlobulin.getText());
-    tambahBarisJikaAda(model,"Gama Globulin", txtGamaGlobulin.getText());
-    tambahBarisJikaAda(model,"Retensi BSP", txtRetensiBSP.getText());
-    tambahBarisJikaAda(model,"TTT", txtTTT.getText());
-    tambahBarisJikaAda(model,"Kunkel", txtKunkel.getText());
-    tambahBarisJikaAda(model,"Lipida Total", txtLipidaTotal.getText());
-    tambahBarisJikaAda(model,"Kolesterol Total", txtKolesterolTotal.getText());
-    tambahBarisJikaAda(model,"HDL", txtHdl.getText());
-    tambahBarisJikaAda(model,"LDL", txtLdl.getText());
-    tambahBarisJikaAda(model,"Trigli serida", txtTrigliserida.getText());
-    tambahBarisJikaAda(model,"Beta Lipoprotein", txtBetaLipoprotein.getText());
-    tambahBarisJikaAda(model,"Ureum", txtUreum.getText());
-    tambahBarisJikaAda(model,"Kreatinin", txtKreatinin.getText());
-    tambahBarisJikaAda(model,"AsamUrat", txtAsamUrat.getText());
-    tambahBarisJikaAda(model,"Ca", txtCa.getText());
-    tambahBarisJikaAda(model,"P", txtP.getText());
-    tambahBarisJikaAda(model,"Na", txtNa.getText());
-    tambahBarisJikaAda(model,"K", txtK.getText());
-    tambahBarisJikaAda(model,"Cl", txtCl.getText());
+    tambahBarisJikaAda(model,"Bilirubin Total", txtBilirubinTotal.getText(), "Kimia 1");
+    tambahBarisJikaAda(model,"Bilirubin Direk", txtBilirubinDirek.getText(), "Kimia 1");
+    tambahBarisJikaAda(model,"Bilirubin Indirek", txtBilirubinIndirek.getText(), "Kimia 1");
+    tambahBarisJikaAda(model,"Indeks Ikterus", txtIndeksIkterus.getText(), "Kimia 1");
+    tambahBarisJikaAda(model,"Fosfatase Alkali", txtFosfataseAlkali.getText(), "Kimia 1");
+    tambahBarisJikaAda(model,"FosfatAsam Total", txtFosfatAsamTotal.getText(), "Kimia 1");
+    tambahBarisJikaAda(model,"Protein Total", txtProteinTotal.getText(), "Kimia 1");
+    tambahBarisJikaAda(model,"Albumin", txtAlbumin.getText(), "Kimia 1");
+    tambahBarisJikaAda(model,"Globulin", txtGlobulin.getText(), "Kimia 1");
+    tambahBarisJikaAda(model,"Elektro Albumin", txtElektroAlbumin.getText(), "Kimia 1");
+    tambahBarisJikaAda(model,"Alfa 1 Globulin", txtAlfa1Globulin.getText(), "Kimia 1");
+    tambahBarisJikaAda(model,"Alfa 2 Globulin", txtAlfa2Globulin.getText(), "Kimia 1");
+    tambahBarisJikaAda(model,"Beta Globulin", txtBetaGlobulin.getText(), "Kimia 1");
+    tambahBarisJikaAda(model,"Gama Globulin", txtGamaGlobulin.getText(), "Kimia 1");
+    tambahBarisJikaAda(model,"Retensi BSP", txtRetensiBSP.getText(), "Kimia 1");
+    tambahBarisJikaAda(model,"TTT", txtTTT.getText(), "Kimia 1");
+    tambahBarisJikaAda(model,"Kunkel", txtKunkel.getText(), "Kimia 1");
+    tambahBarisJikaAda(model,"Lipida Total", txtLipidaTotal.getText(), "Kimia 1");
+    tambahBarisJikaAda(model,"Kolesterol Total", txtKolesterolTotal.getText(), "Kimia 1");
+    tambahBarisJikaAda(model,"HDL", txtHdl.getText(), "Kimia 1");
+    tambahBarisJikaAda(model,"LDL", txtLdl.getText(), "Kimia 1");
+    tambahBarisJikaAda(model,"Trigli serida", txtTrigliserida.getText(), "Kimia 1");
+    tambahBarisJikaAda(model,"Beta Lipoprotein", txtBetaLipoprotein.getText(), "Kimia 1");
+    tambahBarisJikaAda(model,"Ureum", txtUreum.getText(), "Kimia 1");
+    tambahBarisJikaAda(model,"Kreatinin", txtKreatinin.getText(), "Kimia 1");
+    tambahBarisJikaAda(model,"AsamUrat", txtAsamUrat.getText(), "Kimia 1");
+    tambahBarisJikaAda(model,"Ca", txtCa.getText(), "Kimia 1");
+    tambahBarisJikaAda(model,"P", txtP.getText(), "Kimia 1");
+    tambahBarisJikaAda(model,"Na", txtNa.getText(), "Kimia 1");
+    tambahBarisJikaAda(model,"K", txtK.getText(), "Kimia 1");
+    tambahBarisJikaAda(model,"Cl", txtCl.getText(), "Kimia 1");
 }
 
 public void tampilkanHasilKimia2KeTabel() {
     DefaultTableModel model = (DefaultTableModel) tb_rincian.getModel();//Ambil Tabel Model
     
-    tambahBarisJikaAda(model,"Puasa [N 80-110 mg/dl]",txtPuasa.getText());
-    tambahBarisJikaAda(model,"Postprandial [N : 140]",txtPostprandial.getText());
-    tambahBarisJikaAda(model,"Kurva Puasa",txtKurvaPuasa.getText());
-    tambahBarisJikaAda(model,"Puasa Pukul 11",txtPk11.getText());
-    tambahBarisJikaAda(model,"Puasa Pukul 16",txtPk16.getText());
-    tambahBarisJikaAda(model,"Toleransi Puasa",txtToleransi.getText());
-    tambahBarisJikaAda(model,"Toleransi Puasa Setelah 1 Jam | 1/2",txt1Jam.getText());
-    tambahBarisJikaAda(model,"Toleransi Puasa Setelah 2 Jam | 1",txt2Jam.getText());
-    tambahBarisJikaAda(model,"Toleransi Puasa Setelah 3 Jam | 1,5",txt3Jam.getText());
-    tambahBarisJikaAda(model,"Toleransi Puaasa Setelah 2 Jam berulang",txt2Jam1_5.getText());
-    tambahBarisJikaAda(model,"AST [SGOT]",txtAST.getText());
-    tambahBarisJikaAda(model,"ALT [SGPT]",txtALT.getText());
-    tambahBarisJikaAda(model,"LDH",txtLDH.getText());
-    tambahBarisJikaAda(model,"Alfa HBDH",txtAlfaHBDH.getText());
-    tambahBarisJikaAda(model,"Reduksi",cbReduksi.getSelectedItem().toString());
-    tambahBarisJikaAda(model,"Benda Keton",cbBdKeton.getSelectedItem().toString());
-    tambahBarisJikaAda(model,"Glycosylated Hemaglobin [HbA1]:",txtHbA1c.getText());
-    tambahBarisJikaAda(model,"Creatinine Clearance [CCT]",txtCCT.getText());
-    tambahBarisJikaAda(model,"Kreatinin Darah",txtKreatininDarah.getText());
-    tambahBarisJikaAda(model,"Kreatinin Urin",txtKreatininUrin.getText());
-    tambahBarisJikaAda(model,"Volum Urin CCT",txtVolumUrin.getText());
-    tambahBarisJikaAda(model,"Waktu Urin CCT",txtWaktuUrin.getText());
-    tambahBarisJikaAda(model,"Tinggi Badan CCT",txtTinggiBadan.getText());
-    tambahBarisJikaAda(model,"Berat Badan CCT",txtBeratBadan.getText());
-    tambahBarisJikaAda(model,"Urea Clearance",txtUreaClearance.getText());
-    tambahBarisJikaAda(model,"Ureum Darah",txtUreumDarah.getText());
-    tambahBarisJikaAda(model,"Ureum Urin",txtUreumUrin.getText());
-    tambahBarisJikaAda(model,"Volume Urin Cs",txtVolumUrin2.getText());
-    tambahBarisJikaAda(model,"Waktu Urin Cs",txtWaktuUrin2.getText());
-    tambahBarisJikaAda(model,"Tinggi Badan Cs",txtTinggiBadan2.getText());
-    tambahBarisJikaAda(model,"Berat Badan Cs",txtBeratBadan2.getText());
-    tambahBarisJikaAda(model,"CK [CPK]",txtCK.getText());
-    tambahBarisJikaAda(model,"Gama GT",txtGamaGT.getText());
-    tambahBarisJikaAda(model,"CH",txtCHE.getText());
+    tambahBarisJikaAda(model,"Puasa [N 80-110 mg/dl]",txtPuasa.getText(), "Kimia 2");
+    tambahBarisJikaAda(model,"Postprandial [N : 140]",txtPostprandial.getText(), "Kimia 2");
+    tambahBarisJikaAda(model,"Kurva Puasa",txtKurvaPuasa.getText(), "Kimia 2");
+    tambahBarisJikaAda(model,"Puasa Pukul 11",txtPk11.getText(), "Kimia 2");
+    tambahBarisJikaAda(model,"Puasa Pukul 16",txtPk16.getText(), "Kimia 2");
+    tambahBarisJikaAda(model,"Toleransi Puasa",txtToleransi.getText(), "Kimia 2");
+    tambahBarisJikaAda(model,"Toleransi Puasa Setelah 1 Jam | 1/2",txt1Jam.getText(), "Kimia 2");
+    tambahBarisJikaAda(model,"Toleransi Puasa Setelah 2 Jam | 1",txt2Jam.getText(), "Kimia 2");
+    tambahBarisJikaAda(model,"Toleransi Puasa Setelah 3 Jam | 1,5",txt3Jam.getText(), "Kimia 2");
+    tambahBarisJikaAda(model,"Toleransi Puaasa Setelah 2 Jam berulang",txt2Jam1_5.getText(), "Kimia 2");
+    tambahBarisJikaAda(model,"AST [SGOT]",txtAST.getText(), "Kimia 2");
+    tambahBarisJikaAda(model,"ALT [SGPT]",txtALT.getText(), "Kimia 2");
+    tambahBarisJikaAda(model,"LDH",txtLDH.getText(), "Kimia 2");
+    tambahBarisJikaAda(model,"Alfa HBDH",txtAlfaHBDH.getText(), "Kimia 2");
+    tambahBarisJikaAda(model,"Reduksi",cbReduksi.getSelectedItem().toString(), "Kimia 2");
+    tambahBarisJikaAda(model,"Benda Keton",cbBdKeton.getSelectedItem().toString(), "Kimia 2");
+    tambahBarisJikaAda(model,"Glycosylated Hemaglobin [HbA1]:",txtHbA1c.getText(), "Kimia 2");
+    tambahBarisJikaAda(model,"Creatinine Clearance [CCT]",txtCCT.getText(), "Kimia 2");
+    tambahBarisJikaAda(model,"Kreatinin Darah",txtKreatininDarah.getText(), "Kimia 2");
+    tambahBarisJikaAda(model,"Kreatinin Urin",txtKreatininUrin.getText(), "Kimia 2");
+    tambahBarisJikaAda(model,"Volum Urin CCT",txtVolumUrin.getText(), "Kimia 2");
+    tambahBarisJikaAda(model,"Waktu Urin CCT",txtWaktuUrin.getText(), "Kimia 2");
+    tambahBarisJikaAda(model,"Tinggi Badan CCT",txtTinggiBadan.getText(), "Kimia 2");
+    tambahBarisJikaAda(model,"Berat Badan CCT",txtBeratBadan.getText(), "Kimia 2");
+    tambahBarisJikaAda(model,"Urea Clearance",txtUreaClearance.getText(), "Kimia 2");
+    tambahBarisJikaAda(model,"Ureum Darah",txtUreumDarah.getText(), "Kimia 2");
+    tambahBarisJikaAda(model,"Ureum Urin",txtUreumUrin.getText(), "Kimia 2");
+    tambahBarisJikaAda(model,"Volume Urin Cs",txtVolumUrin2.getText(), "Kimia 2");
+    tambahBarisJikaAda(model,"Waktu Urin Cs",txtWaktuUrin2.getText(), "Kimia 2");
+    tambahBarisJikaAda(model,"Tinggi Badan Cs",txtTinggiBadan2.getText(), "Kimia 2");
+    tambahBarisJikaAda(model,"Berat Badan Cs",txtBeratBadan2.getText(), "Kimia 2");
+    tambahBarisJikaAda(model,"CK [CPK]",txtCK.getText(), "Kimia 2");
+    tambahBarisJikaAda(model,"Gama GT",txtGamaGT.getText(), "Kimia 2");
+    tambahBarisJikaAda(model,"CH",txtCHE.getText(), "Kimia 2");
 }
 
 public void tampilkanHasilTinjaKeTabel() {
     DefaultTableModel model = (DefaultTableModel) tb_rincian.getModel();//Ambil Tabel Model
     
-    tambahBarisJikaAda(model,"Warna",TWarna.getText());
-    tambahBarisJikaAda(model,"Lekosi",TLekosit.getText());
-    tambahBarisJikaAda(model,"Eritrosit",TEritrosit.getText());
+    tambahBarisJikaAda(model,"Warna",TWarna.getText(), "Tinja");
+    tambahBarisJikaAda(model,"Lekosi",TLekosit.getText(), "Tinja");
+    tambahBarisJikaAda(model,"Eritrosit",TEritrosit.getText(), "Tinja");
     
     String hasilL = TLendirP.isSelected() ? "Positif" : TLendirN.isSelected() ? "Negatif" : "";
     String hasilD = TDarahP.isSelected() ? "Positif" : TDarahN.isSelected() ? "Negatif" : "";
@@ -6674,24 +6674,24 @@ public void tampilkanHasilTinjaKeTabel() {
     String hasilSO = TSeratototP.isSelected() ? "Positif" : TSeratototN.isSelected() ? "Negatif" : "";
     String hasilDS = TDarahsamarP.isSelected() ? "Positif" : TDarahsamarN.isSelected() ? "Negatif" : "";
     
-    tambahBarisJikaAda(model,"Lendir", hasilL);
-    tambahBarisJikaAda(model,"Darah", hasilD);
-    tambahBarisJikaAda(model,"Nanah", hasilN);
-    tambahBarisJikaAda(model,"E. Coli", hasilEc);
-    tambahBarisJikaAda(model,"E. Histolytica", hasilEh);
-    tambahBarisJikaAda(model,"Telur cacing Ascaris", hasilT);
-    tambahBarisJikaAda(model,"Ankylotoma", hasilA);
-    tambahBarisJikaAda(model,"Trichiuris", hasilTri);
-    tambahBarisJikaAda(model,"Amylum", hasilTri);
-    tambahBarisJikaAda(model,"Lemak", hasilLE);
-    tambahBarisJikaAda(model,"Serat Tumbuh-tumbuhan", hasilSe);
-    tambahBarisJikaAda(model,"Serat Otot", hasilSO);
-    tambahBarisJikaAda(model,"Darah Samar", hasilDS);
+    tambahBarisJikaAda(model,"Lendir", hasilL, "Tinja");
+    tambahBarisJikaAda(model,"Darah", hasilD, "Tinja");
+    tambahBarisJikaAda(model,"Nanah", hasilN, "Tinja");
+    tambahBarisJikaAda(model,"E. Coli", hasilEc, "Tinja");
+    tambahBarisJikaAda(model,"E. Histolytica", hasilEh, "Tinja");
+    tambahBarisJikaAda(model,"Telur cacing Ascaris", hasilT, "Tinja");
+    tambahBarisJikaAda(model,"Ankylotoma", hasilA, "Tinja");
+    tambahBarisJikaAda(model,"Trichiuris", hasilTri, "Tinja");
+    tambahBarisJikaAda(model,"Amylum", hasilTri, "Tinja");
+    tambahBarisJikaAda(model,"Lemak", hasilLE, "Tinja");
+    tambahBarisJikaAda(model,"Serat Tumbuh-tumbuhan", hasilSe, "Tinja");
+    tambahBarisJikaAda(model,"Serat Otot", hasilSO, "Tinja");
+    tambahBarisJikaAda(model,"Darah Samar", hasilDS, "Tinja");
 }
 
 private void simpanPreviewKeDatabase(String idPendaftaran) {
     DefaultTableModel model = (DefaultTableModel) tb_rincian.getModel();
-    String sql = "INSERT INTO hasil_periksa (id_pendaftaran, nama_pemeriksaan, hasil_pemeriksaan) VALUES (?, ?, ?)";
+    String sql = "INSERT INTO hasil_periksa (id_pendaftaran, nama_pemeriksaan, hasil_pemeriksaan, layanan) VALUES (?, ?, ?, ?)";
 
     try {
         Connection con = koneksi.koneksiDb(); // Pastikan koneksi sudah siap
@@ -6700,10 +6700,12 @@ private void simpanPreviewKeDatabase(String idPendaftaran) {
         for (int i = 0; i < model.getRowCount(); i++) {
             String nama = model.getValueAt(i, 0).toString();
             String hasil = model.getValueAt(i, 1).toString();
+            String layanan = model.getValueAt(i, 2).toString();
 
             pst.setString(1, idPendaftaran);
             pst.setString(2, nama);
             pst.setString(3, hasil);
+            pst.setString(4, layanan);
             pst.addBatch(); // Kumpulkan batch
         }
 
