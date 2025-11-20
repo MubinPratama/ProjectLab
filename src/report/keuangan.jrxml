@@ -13,16 +13,24 @@
 			<style backcolor="#E6DAC3"/>
 		</conditionalStyle>
 	</style>
+	<parameter name="TGL_MULAI" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="TGL_SELESAI" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
 	<queryString>
 		<![CDATA[SELECT
      CAST(CONCAT('KEU-', LPAD(ROW_NUMBER() OVER (ORDER BY pembayaran.`tanggal_bayar`, layanan.`nama_layanan`), 5, '0')) AS CHAR) AS `id_keuangan`,
      layanan.`nama_layanan` AS `nama_layanan`,
      SUM(pendaftaran_detail.`harga`) AS `total_pendapatan`,
      pembayaran.`tanggal_bayar` AS `tanggal`
-FROM
-     `pendaftaran` pendaftaran INNER JOIN `pendaftaran_detail` pendaftaran_detail ON pendaftaran.`id_pendaftaran` = pendaftaran_detail.`id_pendaftaran`
-     INNER JOIN `layanan` layanan ON pendaftaran_detail.`id_layanan` = layanan.`id_layanan`
-     INNER JOIN `pembayaran` pembayaran ON pendaftaran.`id_pendaftaran` = pembayaran.`id_pendaftaran`
+FROM `pendaftaran` pendaftaran 
+INNER JOIN `pendaftaran_detail` pendaftaran_detail ON pendaftaran.`id_pendaftaran` = pendaftaran_detail.`id_pendaftaran`
+INNER JOIN `layanan` layanan ON pendaftaran_detail.`id_layanan` = layanan.`id_layanan`
+INNER JOIN `pembayaran` pembayaran ON pendaftaran.`id_pendaftaran` = pembayaran.`id_pendaftaran`
+WHERE 
+pembayaran.`tanggal_bayar` BETWEEN $P{TGL_MULAI} AND $P{TGL_SELESAI}
 GROUP BY
      pembayaran.`tanggal_bayar`,
      layanan.`nama_layanan`

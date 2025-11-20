@@ -24,6 +24,7 @@ import net.sf.jasperreports.engine.JasperFillManager;
 import net.sf.jasperreports.engine.JasperPrint;
 import net.sf.jasperreports.engine.JasperReport;
 import net.sf.jasperreports.view.JasperViewer;
+import java.io.InputStream;
 /**
  *
  * @author Basuki
@@ -39,29 +40,33 @@ private DefaultTableModel tabmode;
     }
 
     private void tampildata() {
-    DefaultTableModel model = new DefaultTableModel();
-    model.addColumn("Nomor Pendaftaran");
-    model.addColumn("Nama Pasien");
-    model.addColumn("Tanggal Daftar");
-
-    try {
-        String sql = "SELECT p.id_pendaftaran, ps.nama AS nama_pasien, p.tanggal_daftar " +
+        DefaultTableModel model = new DefaultTableModel();
+        model.addColumn("Nomor Pendaftaran");
+        model.addColumn("Nama Pasien");
+        model.addColumn("Tanggal Daftar");
+        model.addColumn("Layanan");
+        try {
+        String sql = "SELECT p.id_pendaftaran, ps.nama AS nama_pasien, p.tanggal_daftar, l.nama_layanan " +
                      "FROM pendaftaran p " +
                      "JOIN pasien ps ON p.No_rm = ps.No_rm " +
-                     "WHERE status_hasil ='sudah'"+
+                     "JOIN pendaftaran_detail pd ON p.id_pendaftaran = pd.id_pendaftaran " +
+                     "JOIN layanan l ON pd.id_layanan = l.id_layanan " +
+                     "WHERE p.status_hasil = 'sudah' " +
                      "ORDER BY p.id_pendaftaran ASC";
 
         Connection kon = koneksi.koneksiDb();
         Statement stm = kon.createStatement();
         ResultSet res = stm.executeQuery(sql);
-//        PreparedStatement ps = kon.prepareStatement(sql);
-//        ResultSet res = ps.executeQuery();
+
+        // Bersihkan tabel model dulu biar gak dobel
+        model.setRowCount(0);
 
         while (res.next()) {
             model.addRow(new Object[]{
                 res.getString("id_pendaftaran"),
                 res.getString("nama_pasien"),
-                res.getString("tanggal_daftar")
+                res.getString("tanggal_daftar"),
+                res.getString("nama_layanan")
             });
         }
 
@@ -69,7 +74,7 @@ private DefaultTableModel tabmode;
     } catch (Exception e) {
         JOptionPane.showMessageDialog(this, "Gagal menampilkan data: " + e.getMessage());
     }
-}
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -299,59 +304,75 @@ private DefaultTableModel tabmode;
     private void CetakActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CetakActionPerformed
          //TODO add your handling code here:     try {
         try{
-         Connection kon = koneksi.koneksiDb();
-        Map<String, Object> param = new HashMap<>();
-        int selectedRow = tbl_laporan.getSelectedRow();
-        Long  idpendaftaran = Long.parseLong(tbl_laporan.getValueAt(selectedRow, 0).toString());
-        
-        param.put("id_pendaftaran",idpendaftaran); // ambil dari input user atau combo box
-
-        JasperReport report = JasperCompileManager.compileReport("src/report/hasil.jrxml");
-        JasperPrint cetak = JasperFillManager.fillReport(report, param, kon);
-        JasperViewer.viewReport(cetak, false);
-} catch (Exception e) {
-    JOptionPane.showMessageDialog(this, "Gagal mencetak: " + e.getMessage());
-    e.printStackTrace();
-}
+            //connection to data base
+            Connection kon = koneksi.koneksiDb();
+            //Parameter to jasper
+            Map<String, Object> param = new HashMap<>();
+            int selectedRow = tbl_laporan.getSelectedRow();
+            Long  idpendaftaran = Long.parseLong(tbl_laporan.getValueAt(selectedRow, 0).toString());
+            param.put("id_pendaftaran",idpendaftaran); // ambil dari input user atau combo box
+            // pilih layanan
+            String namalayanan = tbl_laporan.getValueAt(selectedRow, 3).toString();
+            //String layanan = "hasil_"+namalayanan.toLowerCase().replace(" ","");
+            param.put("layanan",namalayanan);
+            //ambil logo
+            InputStream logo = getClass().getResourceAsStream("/Img/logo_lab.png");
+            param.put("logo", logo);
+            
+            //adress to file .jrxml
+            JasperReport report = JasperCompileManager.compileReport("src/report/hasil.jrxml");
+            
+            //print report
+            JasperPrint cetak = JasperFillManager.fillReport(report, param, kon);
+            JasperViewer.viewReport(cetak, false);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Gagal mencetak: " + e.getMessage());
+            e.printStackTrace();
+        }
     }//GEN-LAST:event_CetakActionPerformed
 
     private void bt_cardatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_cardatActionPerformed
         // TODO add your handling code here:
-    DefaultTableModel model = new DefaultTableModel();
-    model.addColumn("Nomor Pendaftaran");
-    model.addColumn("Nama Pasien");
-    model.addColumn("Tanggal Daftar");
+        DefaultTableModel model = new DefaultTableModel();
+        model.addColumn("Nomor Pendaftaran");
+        model.addColumn("Nama Pasien");
+        model.addColumn("Tanggal Daftar");
+        model.addColumn("Nama Layanan"); // ✅ Tambahkan kolom layanan
 
-    String keyword = caridata.getText().trim();
+        String keyword = caridata.getText().trim();
 
-    try {
-        String sql = "SELECT p.id_pendaftaran, ps.nama AS nama_pasien, p.tanggal_daftar " +
-                     "FROM pendaftaran p " +
-                     "JOIN pasien ps ON p.No_rm = ps.No_rm " +
-                     "WHERE (p.id_pendaftaran LIKE ? OR ps.nama LIKE ?) " + 
-                     "AND (status_hasil ='sudah') " +
-                     "ORDER BY p.id_pendaftaran ASC";
+        try {
+            String sql = "SELECT p.id_pendaftaran, ps.nama AS nama_pasien, p.tanggal_daftar, l.nama_layanan " +
+                         "FROM pendaftaran p " +
+                         "JOIN pasien ps ON p.No_rm = ps.No_rm " +
+                         "JOIN pendaftaran_detail pd ON p.id_pendaftaran = pd.id_pendaftaran " +
+                         "JOIN layanan l ON pd.id_layanan = l.id_layanan " +
+                         "WHERE (p.id_pendaftaran LIKE ? OR ps.nama LIKE ? OR l.nama_layanan LIKE ?) " + // ✅ Filter juga berdasarkan layanan
+                         "AND p.status_hasil = 'sudah' " +
+                         "ORDER BY p.id_pendaftaran ASC";
+            Connection kon = koneksi.koneksiDb();
+            PreparedStatement ps = kon.prepareStatement(sql);
+            ps.setString(1, "%" + keyword + "%");
+            ps.setString(2, "%" + keyword + "%");
+            ps.setString(3, "%" + keyword + "%");
 
-        Connection kon = koneksi.koneksiDb();
-        PreparedStatement ps = kon.prepareStatement(sql);
-        ps.setString(1, "%" + keyword + "%");
-        ps.setString(2, "%" + keyword + "%");
+            ResultSet rs = ps.executeQuery();
 
-        ResultSet rs = ps.executeQuery();
+            model.setRowCount(0); // Bersihkan tabel sebelum isi ulang
 
-        while (rs.next()) {
-            model.addRow(new Object[]{
-                rs.getString("id_pendaftaran"),
-                rs.getString("nama_pasien"),
-                rs.getString("tanggal_daftar")
-            });
+            while (rs.next()) {
+                model.addRow(new Object[]{
+                    rs.getString("id_pendaftaran"),
+                    rs.getString("nama_pasien"),
+                    rs.getString("tanggal_daftar"),
+                    rs.getString("nama_layanan")
+                });
+            }
+
+            tbl_laporan.setModel(model);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Gagal mencari data: " + e.getMessage());
         }
-
-        tbl_laporan.setModel(model);
-    } catch (Exception e) {
-        JOptionPane.showMessageDialog(this, "Gagal mencari data: " + e.getMessage());
-    }
-
     }//GEN-LAST:event_bt_cardatActionPerformed
 
     private void neg_PEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_neg_PEActionPerformed
