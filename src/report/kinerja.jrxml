@@ -26,6 +26,9 @@
 	<subDataset name="Table Dataset 1" uuid="06f38821-c4ed-4d9b-a9f2-20f6ac98df8f"/>
 	<parameter name="Dari" class="java.util.Date"/>
 	<parameter name="param_iddokter" class="java.lang.String"/>
+	<parameter name="logo" class="java.io.InputStream">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
 	<queryString>
 		<![CDATA[SELECT 
     d.id_dokter, 

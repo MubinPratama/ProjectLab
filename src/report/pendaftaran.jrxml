@@ -66,6 +66,9 @@ ORDER BY
 	<parameter name="TGL_SELESAI" class="java.lang.String">
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
 	</parameter>
+	<parameter name="logo" class="java.io.InputStream">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
 	<queryString>
 		<![CDATA[SELECT 
     pendaftaran.id_pendaftaran AS `Id_Pendaftaran`,
@@ -103,7 +106,7 @@ ORDER BY
 			</staticText>
 			<image>
 				<reportElement x="109" y="2" width="68" height="60" uuid="a4a3686e-7e80-4024-a573-360b4fff92ad"/>
-				<imageExpression><![CDATA["C:\\Users\\Basuki\\Documents\\NetBeansProjects\\ProjectLab\\src\\Img\\logo_lab.jpg"]]></imageExpression>
+				<imageExpression><![CDATA[$P{logo}]]></imageExpression>
 			</image>
 		</band>
 	</title>
