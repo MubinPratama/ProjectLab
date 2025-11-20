@@ -93,19 +93,6 @@ private DefaultTableModel tabmode;
         bt_cardat = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tbl_laporan = new javax.swing.JTable();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        idPembayaran1 = new javax.swing.JFormattedTextField();
-        idPembayaran3 = new javax.swing.JFormattedTextField();
-        idPembayaran4 = new javax.swing.JFormattedTextField();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        idPembayaran5 = new javax.swing.JFormattedTextField();
-        neg_PE = new javax.swing.JRadioButton();
-        pos_PE = new javax.swing.JRadioButton();
-        no_pendaftaran = new javax.swing.JComboBox<>();
 
         setLayout(new java.awt.CardLayout());
 
@@ -161,58 +148,11 @@ private DefaultTableModel tabmode;
         ));
         jScrollPane1.setViewportView(tbl_laporan);
 
-        jLabel3.setFont(new java.awt.Font("Georgia", 1, 14)); // NOI18N
-        jLabel3.setText("Nomor Pemeriksaan      :");
-
-        jLabel4.setFont(new java.awt.Font("Georgia", 1, 14)); // NOI18N
-        jLabel4.setText("Jenis Kelamin                  :");
-
-        jLabel5.setFont(new java.awt.Font("Georgia", 1, 14)); // NOI18N
-        jLabel5.setText("Nama Pasien                    :");
-
-        jLabel6.setFont(new java.awt.Font("Georgia", 1, 14)); // NOI18N
-        jLabel6.setText("Tanggal Pemeriksaan      :");
-
-        idPembayaran1.setFont(new java.awt.Font("Georgia", 0, 18)); // NOI18N
-
-        idPembayaran3.setFont(new java.awt.Font("Georgia", 0, 18)); // NOI18N
-
-        idPembayaran4.setFont(new java.awt.Font("Georgia", 0, 18)); // NOI18N
-
-        jLabel7.setFont(new java.awt.Font("Georgia", 1, 14)); // NOI18N
-        jLabel7.setText("Nama Dokter                   :");
-
-        jLabel8.setFont(new java.awt.Font("Georgia", 1, 14)); // NOI18N
-        jLabel8.setText("Jenis Pemeriksaan          :");
-
-        idPembayaran5.setFont(new java.awt.Font("Georgia", 0, 18)); // NOI18N
-
-        neg_PE.setBackground(new java.awt.Color(255, 255, 255));
-        neg_PE.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
-        neg_PE.setText("Laki Laki");
-        neg_PE.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                neg_PEActionPerformed(evt);
-            }
-        });
-
-        pos_PE.setBackground(new java.awt.Color(255, 255, 255));
-        pos_PE.setFont(new java.awt.Font("Georgia", 0, 12)); // NOI18N
-        pos_PE.setText("Perempuan");
-
-        no_pendaftaran.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
-        no_pendaftaran.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Nomer Pendaftaran" }));
-        no_pendaftaran.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                no_pendaftaranActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 695, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -225,35 +165,8 @@ private DefaultTableModel tabmode;
                         .addContainerGap()
                         .addComponent(jScrollPane1))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Cetak, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel3)
-                                    .addComponent(jLabel5)
-                                    .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel4))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(idPembayaran3, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(neg_PE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(pos_PE))
-                                    .addComponent(idPembayaran1, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(no_pendaftaran, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(2, 2, 2)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(jLabel7)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(idPembayaran5, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(jLabel8)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(idPembayaran4, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                        .addGap(0, 236, Short.MAX_VALUE)))
+                        .addComponent(Cetak, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 589, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -268,34 +181,9 @@ private DefaultTableModel tabmode;
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(caridata, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel2)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(no_pendaftaran, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(13, 13, 13)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel5)
-                    .addComponent(idPembayaran1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(neg_PE)
-                    .addComponent(pos_PE))
-                .addGap(9, 9, 9)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
-                    .addComponent(idPembayaran3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(idPembayaran4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel8))
-                .addGap(21, 21, 21)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7)
-                    .addComponent(idPembayaran5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 114, Short.MAX_VALUE)
-                .addGap(80, 80, 80))
+                .addGap(303, 303, 303))
         );
 
         add(jPanel1, "card3");
@@ -375,14 +263,6 @@ private DefaultTableModel tabmode;
         }
     }//GEN-LAST:event_bt_cardatActionPerformed
 
-    private void neg_PEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_neg_PEActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_neg_PEActionPerformed
-
-    private void no_pendaftaranActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_no_pendaftaranActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_no_pendaftaranActionPerformed
-
     private void caridataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_caridataActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_caridataActionPerformed
@@ -392,23 +272,10 @@ private DefaultTableModel tabmode;
     private javax.swing.JButton Cetak;
     private javax.swing.JButton bt_cardat;
     private javax.swing.JTextField caridata;
-    private javax.swing.JFormattedTextField idPembayaran1;
-    private javax.swing.JFormattedTextField idPembayaran3;
-    private javax.swing.JFormattedTextField idPembayaran4;
-    private javax.swing.JFormattedTextField idPembayaran5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JRadioButton neg_PE;
-    private javax.swing.JComboBox<String> no_pendaftaran;
-    private javax.swing.JRadioButton pos_PE;
     private javax.swing.JTable tbl_laporan;
     // End of variables declaration//GEN-END:variables
 }
