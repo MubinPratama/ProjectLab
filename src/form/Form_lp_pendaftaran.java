@@ -23,6 +23,7 @@ import net.sf.jasperreports.engine.JasperPrint;
 import net.sf.jasperreports.engine.JasperReport;
 import net.sf.jasperreports.view.JasperViewer;
 import com.toedter.calendar.JDateChooser;
+import java.io.InputStream;
 
 /**
  *
@@ -214,6 +215,10 @@ public class Form_lp_pendaftaran extends javax.swing.JPanel {
         Map<String, Object> param = new HashMap<>();
         param.put("TGL_MULAI", tglMulai);
         param.put("TGL_SELESAI", tglSelesai);
+        //ambil logo
+        InputStream logo = getClass().getResourceAsStream("/Img/logo_lab.png");
+        param.put("logo", logo);
+        
         // Path ke file .jasper
         String reportPath = "src/report/pendaftaran.jasper";
 

@@ -67,8 +67,8 @@ GROUP BY
 				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
 			</textField>
 			<image>
-				<reportElement x="106" y="0" width="47" height="41" uuid="77da1f8b-06d0-4792-b737-9611999e073b"/>
-				<imageExpression><![CDATA["C:\\Users\\Basuki\\Documents\\NetBeansProjects\\ProjectLab\\src\\Img\\logo_lab.jpg"]]></imageExpression>
+				<reportElement x="113" y="0" width="47" height="41" uuid="77da1f8b-06d0-4792-b737-9611999e073b"/>
+				<imageExpression><![CDATA[$P{logo}]]></imageExpression>
 			</image>
 		</band>
 	</title>

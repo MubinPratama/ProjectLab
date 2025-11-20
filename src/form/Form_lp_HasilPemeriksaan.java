@@ -24,6 +24,7 @@ import net.sf.jasperreports.engine.JasperFillManager;
 import net.sf.jasperreports.engine.JasperPrint;
 import net.sf.jasperreports.engine.JasperReport;
 import net.sf.jasperreports.view.JasperViewer;
+import java.io.InputStream;
 /**
  *
  * @author Basuki
@@ -196,6 +197,9 @@ private DefaultTableModel tabmode;
             String namalayanan = tbl_laporan.getValueAt(selectedRow, 3).toString();
             //String layanan = "hasil_"+namalayanan.toLowerCase().replace(" ","");
             param.put("layanan",namalayanan);
+            //ambil logo
+            InputStream logo = getClass().getResourceAsStream("/Img/logo_lab.png");
+            param.put("logo", logo);
             
             //adress to file .jrxml
             JasperReport report = JasperCompileManager.compileReport("src/report/hasil.jrxml");

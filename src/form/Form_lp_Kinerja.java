@@ -23,6 +23,7 @@ import net.sf.jasperreports.engine.JasperFillManager;
 import net.sf.jasperreports.engine.JasperPrint;
 import net.sf.jasperreports.engine.JasperReport;
 import net.sf.jasperreports.view.JasperViewer;
+import java.io.InputStream;
 
 /**
  *
@@ -316,6 +317,9 @@ public class Form_lp_Kinerja extends javax.swing.JPanel {
         param.put("param_iddokter", idDokter);
         param.put("Dari", dari);
         param.put("Sampai", dari);
+        //ambil logo
+        InputStream logo = getClass().getResourceAsStream("/Img/logo_lab.png");
+        param.put("logo", logo);
 
         // Compile jika pakai jrxml
         // JasperReport report = JasperCompileManager.compileReport(reportPath);

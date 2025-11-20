@@ -7,6 +7,9 @@
 	<parameter name="layanan" class="java.lang.String">
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
 	</parameter>
+	<parameter name="logo" class="java.io.InputStream">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
 	<queryString>
 		<![CDATA[SELECT 
     ps.nama AS nama_pasien,
@@ -39,16 +42,20 @@ h.layanan = $P{layanan}]]>
 	<title>
 		<band height="51" splitType="Stretch">
 			<staticText>
-				<reportElement x="78" y="0" width="209" height="51" uuid="97573f68-7241-4185-836d-daefb72dbc52"/>
+				<reportElement x="140" y="0" width="209" height="51" uuid="97573f68-7241-4185-836d-daefb72dbc52"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="32" isBold="true" pdfFontName="Times-Roman"/>
 				</textElement>
-				<text><![CDATA[Laporan Hasil ]]></text>
+				<text><![CDATA[Laporan Has1l ]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="330" y="28" width="100" height="20" uuid="c181aca0-ee26-40c6-bdaa-c931ebda3879"/>
+				<reportElement x="349" y="16" width="100" height="20" uuid="c181aca0-ee26-40c6-bdaa-c931ebda3879"/>
 				<textFieldExpression><![CDATA[$P{layanan}]]></textFieldExpression>
 			</textField>
+			<image>
+				<reportElement x="78" y="0" width="50" height="50" uuid="986c4734-396f-4ae6-b49c-abcb5eaa7012"/>
+				<imageExpression><![CDATA[$P{logo}]]></imageExpression>
+			</image>
 		</band>
 	</title>
 	<pageHeader>

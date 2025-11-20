@@ -22,6 +22,7 @@ import net.sf.jasperreports.engine.JasperFillManager;
 import net.sf.jasperreports.engine.JasperPrint;
 import net.sf.jasperreports.engine.JasperReport;
 import net.sf.jasperreports.view.JasperViewer;
+import java.io.InputStream;
 
 /**
  *
@@ -215,6 +216,10 @@ public class Form_lp_keuangan extends javax.swing.JPanel {
             Map<String, Object> param = new HashMap<>();
             param.put("TGL_MULAI", tglMulai);
             param.put("TGL_SELESAI", tglSelesai);
+            //ambil logo
+            InputStream logo = getClass().getResourceAsStream("/Img/logo_lab.png");
+            param.put("logo", logo);
+            
             // Path ke file .jasper
             String reportPath = "src/report/keuangan.jasper";
 
