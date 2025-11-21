@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="50602131-2dd4-4767-b0e6-0fa06fe8a62b">
-	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.zoom" value="1.3310000000000013"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="0"/>
+	<property name="ireport.y" value="6"/>
 	<style name="Title" fontName="Times New Roman" fontSize="50" isBold="true" pdfFontName="Times-Bold"/>
 	<style name="SubTitle" forecolor="#736343" fontName="Arial" fontSize="18"/>
 	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
@@ -13,16 +13,24 @@
 			<style backcolor="#E6DAC3"/>
 		</conditionalStyle>
 	</style>
+	<parameter name="TGL_MULAI" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="TGL_SELESAI" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
 	<queryString>
 		<![CDATA[SELECT
      CAST(CONCAT('KEU-', LPAD(ROW_NUMBER() OVER (ORDER BY pembayaran.`tanggal_bayar`, layanan.`nama_layanan`), 5, '0')) AS CHAR) AS `id_keuangan`,
      layanan.`nama_layanan` AS `nama_layanan`,
      SUM(pendaftaran_detail.`harga`) AS `total_pendapatan`,
      pembayaran.`tanggal_bayar` AS `tanggal`
-FROM
-     `pendaftaran` pendaftaran INNER JOIN `pendaftaran_detail` pendaftaran_detail ON pendaftaran.`id_pendaftaran` = pendaftaran_detail.`id_pendaftaran`
-     INNER JOIN `layanan` layanan ON pendaftaran_detail.`id_layanan` = layanan.`id_layanan`
-     INNER JOIN `pembayaran` pembayaran ON pendaftaran.`id_pendaftaran` = pembayaran.`id_pendaftaran`
+FROM `pendaftaran` pendaftaran 
+INNER JOIN `pendaftaran_detail` pendaftaran_detail ON pendaftaran.`id_pendaftaran` = pendaftaran_detail.`id_pendaftaran`
+INNER JOIN `layanan` layanan ON pendaftaran_detail.`id_layanan` = layanan.`id_layanan`
+INNER JOIN `pembayaran` pembayaran ON pendaftaran.`id_pendaftaran` = pembayaran.`id_pendaftaran`
+WHERE 
+pembayaran.`tanggal_bayar` BETWEEN $P{TGL_MULAI} AND $P{TGL_SELESAI}
 GROUP BY
      pembayaran.`tanggal_bayar`,
      layanan.`nama_layanan`
@@ -40,18 +48,63 @@ ORDER BY
 		<band splitType="Stretch"/>
 	</background>
 	<title>
-		<band height="79" splitType="Stretch">
-			<staticText>
-				<reportElement style="Title" x="162" y="2" width="525" height="62" forecolor="#000000" uuid="f5b4bd87-b35b-4823-959d-ed146037e412"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="45" pdfFontName="Times-Roman"/>
-				</textElement>
-				<text><![CDATA[LAPORAN KEUANGAN]]></text>
-			</staticText>
+		<band height="347" splitType="Stretch">
 			<image>
 				<reportElement x="93" y="2" width="66" height="60" uuid="b63337e3-4bfc-4d8f-9dd5-7531e8a81a72"/>
 				<imageExpression><![CDATA["C:\\Users\\Basuki\\Documents\\NetBeansProjects\\ProjectLab\\src\\Img\\logo_lab.jpg"]]></imageExpression>
 			</image>
+			<staticText>
+				<reportElement style="Title" x="150" y="0" width="495" height="60" forecolor="#000000" uuid="e5590859-6f09-4244-9805-4c3d4ea79033"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="45" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[KLINIK PRATAMA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Title" x="135" y="51" width="525" height="62" forecolor="#000000" uuid="0d25a196-df71-47c2-97a9-5e46a7cd0368"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="40" isBold="true" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[CONDET JAYA 24 JAM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Title" x="34" y="90" width="727" height="62" forecolor="#000000" uuid="5f47baa3-12ba-4fd4-84f8-fec3728c53e2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="18" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[Jl condet raya no 18 Rt/Rw 003/04, Batu Ampar, Kec. Kramat jati, Kota Jakarta Timur,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Title" x="34" y="113" width="727" height="62" forecolor="#000000" uuid="6dd6c25a-0c92-440b-af2e-4c64ffce6cfd"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="18" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[Daerah Khusus Ibukota Jakarta 13520]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Title" x="34" y="132" width="727" height="62" forecolor="#000000" uuid="f9e58dd7-f98b-4882-a966-705431a4759d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="18" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[No. Telp: 021 8090712]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Title" x="34" y="152" width="727" height="62" forecolor="#000000" uuid="5dd5a445-41cc-4ef1-be7b-84e3f7d5529a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="18" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[e-mail:klinikcondetjaya@gmail.com]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Title" x="604" y="297" width="198" height="50" forecolor="#000000" uuid="f5b4bd87-b35b-4823-959d-ed146037e412"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[LAPORAN KEUANGAN]]></text>
+			</staticText>
+			<line>
+				<reportElement x="34" y="194" width="727" height="1" uuid="2b746503-5d32-47d3-8b5e-0b51dc359f84"/>
+			</line>
 		</band>
 	</title>
 	<pageHeader>
@@ -140,7 +193,7 @@ ORDER BY
 		<band height="29" splitType="Stretch"/>
 	</columnFooter>
 	<pageFooter>
-		<band height="25" splitType="Stretch"/>
+		<band height="151" splitType="Stretch"/>
 	</pageFooter>
 	<summary>
 		<band splitType="Stretch"/>

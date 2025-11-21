@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d268e812-edf4-4ca5-a30e-9755df8b1d40">
-	<property name="ireport.zoom" value="1.1000000000000025"/>
+	<property name="ireport.zoom" value="1.4641000000000044"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
 	<style name="table">
@@ -26,6 +26,9 @@
 	<subDataset name="Table Dataset 1" uuid="06f38821-c4ed-4d9b-a9f2-20f6ac98df8f"/>
 	<parameter name="Dari" class="java.util.Date"/>
 	<parameter name="param_iddokter" class="java.lang.String"/>
+	<parameter name="logo" class="java.io.InputStream">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
 	<queryString>
 		<![CDATA[SELECT 
     d.id_dokter, 
@@ -54,26 +57,71 @@ GROUP BY
 		<band splitType="Stretch"/>
 	</background>
 	<title>
-		<band height="72" splitType="Stretch">
+		<band height="269" splitType="Stretch">
 			<staticText>
-				<reportElement x="160" y="13" width="257" height="28" uuid="31e09cb5-c035-4f21-bb35-fa80c79cdc5c"/>
+				<reportElement x="319" y="241" width="257" height="28" uuid="31e09cb5-c035-4f21-bb35-fa80c79cdc5c"/>
 				<textElement>
-					<font fontName="Times New Roman" size="24" isBold="true"/>
+					<font fontName="Times New Roman" size="14" isBold="true"/>
 				</textElement>
 				<text><![CDATA[LAPORAN KINERJA DOKTER]]></text>
 			</staticText>
 			<textField pattern="EEEEE dd MMMMM yyyy">
-				<reportElement x="317" y="41" width="100" height="20" uuid="5a5b6833-87a3-488a-ad75-682f305911f1"/>
+				<reportElement x="0" y="241" width="100" height="20" uuid="5a5b6833-87a3-488a-ad75-682f305911f1"/>
 				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
 			</textField>
 			<image>
-				<reportElement x="106" y="0" width="47" height="41" uuid="77da1f8b-06d0-4792-b737-9611999e073b"/>
-				<imageExpression><![CDATA["C:\\Users\\Basuki\\Documents\\NetBeansProjects\\ProjectLab\\src\\Img\\logo_lab.jpg"]]></imageExpression>
+				<reportElement x="38" y="28" width="47" height="41" uuid="77da1f8b-06d0-4792-b737-9611999e073b"/>
+				<imageExpression><![CDATA[$P{logo}]]></imageExpression>
 			</image>
+			<staticText>
+				<reportElement style="Title" x="27" y="119" width="495" height="62" forecolor="#000000" uuid="755a05ff-fca1-4fb2-a793-25d787714699"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="13" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[e-mail:klinikcondetjaya@gmail.com]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Title" x="27" y="69" width="495" height="62" forecolor="#000000" uuid="10a29f11-337e-4a68-92e2-40cc9a29bdb5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="13" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[Jl condet raya no 18 Rt/Rw 003/04, Batu Ampar, Kec. Kramat jati, Kota Jakarta Timur,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Title" x="27" y="103" width="495" height="62" forecolor="#000000" uuid="b646ac72-4248-42ca-86e4-ecda3e02bd21"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="13" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[No. Telp: 021 8090712]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Title" x="27" y="84" width="495" height="62" forecolor="#000000" uuid="31cc0c15-910d-4d06-a597-df486b6fbc06"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="13" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[Daerah Khusus Ibukota Jakarta 13520]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Title" x="27" y="41" width="495" height="62" forecolor="#000000" uuid="50d5e30b-16a0-4b54-8427-2cd789f4e4d6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="32" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[CONDET JAYA 24 JAM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Title" x="27" y="9" width="495" height="60" forecolor="#000000" uuid="316069d9-515e-4a44-8876-6c53cadc7789"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="36" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[KLINIK PRATAMA]]></text>
+			</staticText>
+			<line>
+				<reportElement x="27" y="161" width="495" height="1" uuid="c4a2b909-01e2-4bbe-9218-a716dfce2c4e"/>
+			</line>
 		</band>
 	</title>
 	<pageHeader>
-		<band height="14" splitType="Stretch">
+		<band height="15" splitType="Stretch">
 			<line>
 				<reportElement x="-22" y="0" width="599" height="1" uuid="b0455bfc-6350-473b-8ca4-b862d2c3d51e"/>
 			</line>

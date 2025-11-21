@@ -24,6 +24,7 @@ import net.sf.jasperreports.engine.JasperFillManager;
 import net.sf.jasperreports.engine.JasperPrint;
 import net.sf.jasperreports.engine.JasperReport;
 import net.sf.jasperreports.view.JasperViewer;
+import java.io.InputStream;
 /**
  *
  * @author Basuki
@@ -39,41 +40,41 @@ private DefaultTableModel tabmode;
     }
 
     private void tampildata() {
-    DefaultTableModel model = new DefaultTableModel();
-    model.addColumn("Nomor Pendaftaran");
-    model.addColumn("Nama Pasien");
-    model.addColumn("Tanggal Daftar");
-    model.addColumn("Layanan");
-    try {
-    String sql = "SELECT p.id_pendaftaran, ps.nama AS nama_pasien, p.tanggal_daftar, l.nama_layanan " +
-                 "FROM pendaftaran p " +
-                 "JOIN pasien ps ON p.No_rm = ps.No_rm " +
-                 "JOIN pendaftaran_detail pd ON p.id_pendaftaran = pd.id_pendaftaran " +
-                 "JOIN layanan l ON pd.id_layanan = l.id_layanan " +
-                 "WHERE p.status_hasil = 'sudah' " +
-                 "ORDER BY p.id_pendaftaran ASC";
+        DefaultTableModel model = new DefaultTableModel();
+        model.addColumn("Nomor Pendaftaran");
+        model.addColumn("Nama Pasien");
+        model.addColumn("Tanggal Daftar");
+        model.addColumn("Layanan");
+        try {
+        String sql = "SELECT p.id_pendaftaran, ps.nama AS nama_pasien, p.tanggal_daftar, l.nama_layanan " +
+                     "FROM pendaftaran p " +
+                     "JOIN pasien ps ON p.No_rm = ps.No_rm " +
+                     "JOIN pendaftaran_detail pd ON p.id_pendaftaran = pd.id_pendaftaran " +
+                     "JOIN layanan l ON pd.id_layanan = l.id_layanan " +
+                     "WHERE p.status_hasil = 'sudah' " +
+                     "ORDER BY p.id_pendaftaran ASC";
 
-    Connection kon = koneksi.koneksiDb();
-    Statement stm = kon.createStatement();
-    ResultSet res = stm.executeQuery(sql);
+        Connection kon = koneksi.koneksiDb();
+        Statement stm = kon.createStatement();
+        ResultSet res = stm.executeQuery(sql);
 
-    // Bersihkan tabel model dulu biar gak dobel
-    model.setRowCount(0);
+        // Bersihkan tabel model dulu biar gak dobel
+        model.setRowCount(0);
 
-    while (res.next()) {
-        model.addRow(new Object[]{
-            res.getString("id_pendaftaran"),
-            res.getString("nama_pasien"),
-            res.getString("tanggal_daftar"),
-            res.getString("nama_layanan")
-        });
+        while (res.next()) {
+            model.addRow(new Object[]{
+                res.getString("id_pendaftaran"),
+                res.getString("nama_pasien"),
+                res.getString("tanggal_daftar"),
+                res.getString("nama_layanan")
+            });
+        }
+
+        tbl_laporan.setModel(model);
+    } catch (Exception e) {
+        JOptionPane.showMessageDialog(this, "Gagal menampilkan data: " + e.getMessage());
     }
-
-    tbl_laporan.setModel(model);
-} catch (Exception e) {
-    JOptionPane.showMessageDialog(this, "Gagal menampilkan data: " + e.getMessage());
-}
-}
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -108,6 +109,12 @@ private DefaultTableModel tabmode;
         Cetak.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CetakActionPerformed(evt);
+            }
+        });
+
+        caridata.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                caridataActionPerformed(evt);
             }
         });
 
@@ -149,9 +156,6 @@ private DefaultTableModel tabmode;
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(Cetak, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 579, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(caridata)
@@ -159,7 +163,10 @@ private DefaultTableModel tabmode;
                         .addComponent(bt_cardat, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jScrollPane1)))
+                        .addComponent(jScrollPane1))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(Cetak, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 589, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -174,9 +181,9 @@ private DefaultTableModel tabmode;
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(caridata, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel2)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 421, Short.MAX_VALUE)
-                .addContainerGap())
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 114, Short.MAX_VALUE)
+                .addGap(303, 303, 303))
         );
 
         add(jPanel1, "card3");
@@ -185,68 +192,80 @@ private DefaultTableModel tabmode;
     private void CetakActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CetakActionPerformed
          //TODO add your handling code here:     try {
         try{
-         Connection kon = koneksi.koneksiDb();
-        Map<String, Object> param = new HashMap<>();
-        int selectedRow = tbl_laporan.getSelectedRow();
-        Long  idpendaftaran = Long.parseLong(tbl_laporan.getValueAt(selectedRow, 0).toString());
-        
-        param.put("id_pendaftaran",idpendaftaran); // ambil dari input user atau combo box
-
-        JasperReport report = JasperCompileManager.compileReport("src/report/hasil.jrxml");
-        JasperPrint cetak = JasperFillManager.fillReport(report, param, kon);
-        JasperViewer.viewReport(cetak, false);
-} catch (Exception e) {
-    JOptionPane.showMessageDialog(this, "Gagal mencetak: " + e.getMessage());
-    e.printStackTrace();
-}
+            //connection to data base
+            Connection kon = koneksi.koneksiDb();
+            //Parameter to jasper
+            Map<String, Object> param = new HashMap<>();
+            int selectedRow = tbl_laporan.getSelectedRow();
+            Long  idpendaftaran = Long.parseLong(tbl_laporan.getValueAt(selectedRow, 0).toString());
+            param.put("id_pendaftaran",idpendaftaran); // ambil dari input user atau combo box
+            // pilih layanan
+            String namalayanan = tbl_laporan.getValueAt(selectedRow, 3).toString();
+            //String layanan = "hasil_"+namalayanan.toLowerCase().replace(" ","");
+            param.put("layanan",namalayanan);
+            //ambil logo
+            InputStream logo = getClass().getResourceAsStream("/Img/logo_lab.png");
+            param.put("logo", logo);
+            
+            //adress to file .jrxml
+            JasperReport report = JasperCompileManager.compileReport("src/report/hasil.jrxml");
+            
+            //print report
+            JasperPrint cetak = JasperFillManager.fillReport(report, param, kon);
+            JasperViewer.viewReport(cetak, false);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Gagal mencetak: " + e.getMessage());
+            e.printStackTrace();
+        }
     }//GEN-LAST:event_CetakActionPerformed
 
     private void bt_cardatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_cardatActionPerformed
         // TODO add your handling code here:
-    DefaultTableModel model = new DefaultTableModel();
-model.addColumn("Nomor Pendaftaran");
-model.addColumn("Nama Pasien");
-model.addColumn("Tanggal Daftar");
-model.addColumn("Nama Layanan"); // ✅ Tambahkan kolom layanan
+        DefaultTableModel model = new DefaultTableModel();
+        model.addColumn("Nomor Pendaftaran");
+        model.addColumn("Nama Pasien");
+        model.addColumn("Tanggal Daftar");
+        model.addColumn("Nama Layanan"); // ✅ Tambahkan kolom layanan
 
-String keyword = caridata.getText().trim();
+        String keyword = caridata.getText().trim();
 
-try {
-    String sql = "SELECT p.id_pendaftaran, ps.nama AS nama_pasien, p.tanggal_daftar, l.nama_layanan " +
-                 "FROM pendaftaran p " +
-                 "JOIN pasien ps ON p.No_rm = ps.No_rm " +
-                 "JOIN pendaftaran_detail pd ON p.id_pendaftaran = pd.id_pendaftaran " +
-                 "JOIN layanan l ON pd.id_layanan = l.id_layanan " +
-                 "WHERE (p.id_pendaftaran LIKE ? OR ps.nama LIKE ? OR l.nama_layanan LIKE ?) " + // ✅ Filter juga berdasarkan layanan
-                 "AND p.status_hasil = 'sudah' " +
-                 "ORDER BY p.id_pendaftaran ASC";
+        try {
+            String sql = "SELECT p.id_pendaftaran, ps.nama AS nama_pasien, p.tanggal_daftar, l.nama_layanan " +
+                         "FROM pendaftaran p " +
+                         "JOIN pasien ps ON p.No_rm = ps.No_rm " +
+                         "JOIN pendaftaran_detail pd ON p.id_pendaftaran = pd.id_pendaftaran " +
+                         "JOIN layanan l ON pd.id_layanan = l.id_layanan " +
+                         "WHERE (p.id_pendaftaran LIKE ? OR ps.nama LIKE ? OR l.nama_layanan LIKE ?) " + // ✅ Filter juga berdasarkan layanan
+                         "AND p.status_hasil = 'sudah' " +
+                         "ORDER BY p.id_pendaftaran ASC";
+            Connection kon = koneksi.koneksiDb();
+            PreparedStatement ps = kon.prepareStatement(sql);
+            ps.setString(1, "%" + keyword + "%");
+            ps.setString(2, "%" + keyword + "%");
+            ps.setString(3, "%" + keyword + "%");
 
-    Connection kon = koneksi.koneksiDb();
-    PreparedStatement ps = kon.prepareStatement(sql);
-    ps.setString(1, "%" + keyword + "%");
-    ps.setString(2, "%" + keyword + "%");
-    ps.setString(3, "%" + keyword + "%");
+            ResultSet rs = ps.executeQuery();
 
-    ResultSet rs = ps.executeQuery();
+            model.setRowCount(0); // Bersihkan tabel sebelum isi ulang
 
-    model.setRowCount(0); // Bersihkan tabel sebelum isi ulang
+            while (rs.next()) {
+                model.addRow(new Object[]{
+                    rs.getString("id_pendaftaran"),
+                    rs.getString("nama_pasien"),
+                    rs.getString("tanggal_daftar"),
+                    rs.getString("nama_layanan")
+                });
+            }
 
-    while (rs.next()) {
-        model.addRow(new Object[]{
-            rs.getString("id_pendaftaran"),
-            rs.getString("nama_pasien"),
-            rs.getString("tanggal_daftar"),
-            rs.getString("nama_layanan")
-        });
-    }
-
-    tbl_laporan.setModel(model);
-} catch (Exception e) {
-    JOptionPane.showMessageDialog(this, "Gagal mencari data: " + e.getMessage());
-}
-
-
+            tbl_laporan.setModel(model);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Gagal mencari data: " + e.getMessage());
+        }
     }//GEN-LAST:event_bt_cardatActionPerformed
+
+    private void caridataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_caridataActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_caridataActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
