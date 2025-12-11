@@ -74,7 +74,7 @@ GROUP BY
 				<imageExpression><![CDATA[$P{logo}]]></imageExpression>
 			</image>
 			<staticText>
-				<reportElement style="Title" x="27" y="119" width="495" height="62" forecolor="#000000" uuid="755a05ff-fca1-4fb2-a793-25d787714699"/>
+				<reportElement style="Title" x="27" y="133" width="495" height="27" forecolor="#000000" uuid="755a05ff-fca1-4fb2-a793-25d787714699"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="13" pdfFontName="Times-Roman"/>
 				</textElement>
@@ -88,14 +88,14 @@ GROUP BY
 				<text><![CDATA[Jl condet raya no 18 Rt/Rw 003/04, Batu Ampar, Kec. Kramat jati, Kota Jakarta Timur,]]></text>
 			</staticText>
 			<staticText>
-				<reportElement style="Title" x="27" y="103" width="495" height="62" forecolor="#000000" uuid="b646ac72-4248-42ca-86e4-ecda3e02bd21"/>
+				<reportElement style="Title" x="27" y="118" width="495" height="28" forecolor="#000000" uuid="b646ac72-4248-42ca-86e4-ecda3e02bd21"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="13" pdfFontName="Times-Roman"/>
 				</textElement>
 				<text><![CDATA[No. Telp: 021 8090712]]></text>
 			</staticText>
 			<staticText>
-				<reportElement style="Title" x="27" y="84" width="495" height="62" forecolor="#000000" uuid="31cc0c15-910d-4d06-a597-df486b6fbc06"/>
+				<reportElement style="Title" x="27" y="83" width="495" height="62" forecolor="#000000" uuid="31cc0c15-910d-4d06-a597-df486b6fbc06"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="13" pdfFontName="Times-Roman"/>
 				</textElement>
@@ -109,7 +109,7 @@ GROUP BY
 				<text><![CDATA[CONDET JAYA 24 JAM]]></text>
 			</staticText>
 			<staticText>
-				<reportElement style="Title" x="27" y="9" width="495" height="60" forecolor="#000000" uuid="316069d9-515e-4a44-8876-6c53cadc7789"/>
+				<reportElement style="Title" x="27" y="16" width="495" height="51" forecolor="#000000" uuid="316069d9-515e-4a44-8876-6c53cadc7789"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="36" pdfFontName="Times-Roman"/>
 				</textElement>
