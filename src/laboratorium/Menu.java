@@ -26,11 +26,36 @@ public class Menu extends javax.swing.JFrame {
     /**
      * Creates new form Menu
      */
-    public Menu() {
+    private String levelUser;
+    Item_menu masDokter;
+    Item_menu masPasien;
+    Item_menu masLayanan;
+
+    Item_menu pendaftaran;
+    Item_menu inputhasil;
+    Item_menu pembayaran;
+
+    Item_menu lpHasil;
+    Item_menu lpPemeriksaan;
+    Item_menu lpkinerja;
+    Item_menu lpKeuangan;
+
+    Item_menu menuHome;
+    Item_menu menuLogout;
+    Item_menu menuMaster;
+    Item_menu menuTransaksi;
+    Item_menu menuReport;
+
+    public Menu(String level) {
+        
+        this.levelUser = level;
+        
         initComponents();
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
         showDateTime();
         execute();
+        applyAccess();
+        
         ImageIcon logo = new ImageIcon(getClass().getResource("/img/logo_lab.png"));
         ImageIcon Nama_lab = new ImageIcon(getClass().getResource("/img/nama_lab.png"));
         ImageIcon Logo_pn = new ImageIcon(getClass().getResource("/img/pn_utama.jpg"));
@@ -205,37 +230,6 @@ public class Menu extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Menu().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Logo;
@@ -267,7 +261,7 @@ public class Menu extends javax.swing.JFrame {
         ImageIcon iconLphasil = new ImageIcon(getClass().getResource("/img/lp_Hasil.png"));
         ImageIcon Logo_pn = new ImageIcon(getClass().getResource("/img/pn_utama.jpg"));
         
-        Item_menu masDokter = new Item_menu(null, true, iconDokter, "Dokter", new ActionListener() {
+        masDokter = new Item_menu(null, true, iconDokter, "Dokter", new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 pn_utama.removeAll();
@@ -276,7 +270,7 @@ public class Menu extends javax.swing.JFrame {
                 pn_utama.revalidate();
             }
         });
-        Item_menu masPasien = new Item_menu(null, true, iconPasien, "Pasien", new ActionListener() {
+        masPasien = new Item_menu(null, true, iconPasien, "Pasien", new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 pn_utama.removeAll();
@@ -285,7 +279,7 @@ public class Menu extends javax.swing.JFrame {
                 pn_utama.revalidate();
                 }
             });
-        Item_menu masLayanan = new Item_menu(null, true, iconLayanan, "Layanan", new ActionListener() {
+        masLayanan = new Item_menu(null, true, iconLayanan, "Layanan", new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 pn_utama.removeAll();
@@ -295,7 +289,7 @@ public class Menu extends javax.swing.JFrame {
                 }
             });
         
-        Item_menu pendaftaran = new Item_menu(null, true, iconPendaftaran, "Pendaftaran", new ActionListener() {
+        pendaftaran = new Item_menu(null, true, iconPendaftaran, "Pendaftaran", new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 pn_utama.removeAll();
@@ -304,7 +298,7 @@ public class Menu extends javax.swing.JFrame {
                 pn_utama.revalidate();
                 }
             });
-        Item_menu inputhasil = new Item_menu(null, true, iconHasil, "Input Hasil",new ActionListener() {
+        inputhasil = new Item_menu(null, true, iconHasil, "Input Hasil",new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 pn_utama.removeAll();
@@ -313,7 +307,7 @@ public class Menu extends javax.swing.JFrame {
                 pn_utama.revalidate();
                 }
             });
-        Item_menu pembayaran = new Item_menu(null, true, iconPembayaran, "Pembayaran", new ActionListener() {
+        pembayaran = new Item_menu(null, true, iconPembayaran, "Pembayaran", new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 pn_utama.removeAll();
@@ -323,7 +317,7 @@ public class Menu extends javax.swing.JFrame {
                 }
             });
         
-        Item_menu lpHasil = new Item_menu(null, true, iconLphasil, "Hasil Pemeriksaan", new ActionListener() {
+        lpHasil = new Item_menu(null, true, iconLphasil, "Hasil Pemeriksaan", new ActionListener() {
             @Override
                 public void actionPerformed(ActionEvent e) {
                     pn_utama.removeAll();
@@ -332,7 +326,7 @@ public class Menu extends javax.swing.JFrame {
                     pn_utama.revalidate();
                     }
                 });
-        Item_menu lpPemeriksaan = new Item_menu(null, true, iconLpPriksa, "Pendaftaran", new ActionListener() {
+        lpPemeriksaan = new Item_menu(null, true, iconLpPriksa, "Pendaftaran", new ActionListener() {
             @Override
                 public void actionPerformed(ActionEvent e) {
                     pn_utama.removeAll();
@@ -341,7 +335,7 @@ public class Menu extends javax.swing.JFrame {
                     pn_utama.revalidate();
                     }
                 });
-        Item_menu lpkinerja = new Item_menu(null, true, iconLpKinerja, "Kinerja", new ActionListener() {
+        lpkinerja = new Item_menu(null, true, iconLpKinerja, "Kinerja", new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 pn_utama.removeAll();
@@ -351,7 +345,7 @@ public class Menu extends javax.swing.JFrame {
                 }
             });
         
-        Item_menu lpKeuangan = new Item_menu(null, true, iconLpKeuangan, "keuangan", new ActionListener() {
+        lpKeuangan = new Item_menu(null, true, iconLpKeuangan, "keuangan", new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 pn_utama.removeAll();
@@ -361,7 +355,7 @@ public class Menu extends javax.swing.JFrame {
                 }
             });
         
-        Item_menu menuHome = new Item_menu(iconMaster, false, null, "Home", new ActionListener() {
+        menuHome = new Item_menu(iconMaster, false, null, "Home", new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 pn_utama.removeAll();
@@ -370,22 +364,22 @@ public class Menu extends javax.swing.JFrame {
                 pn_utama.revalidate();
             }
         });
-        Item_menu menuLogout = new Item_menu(iconMaster, false, null, "Logout", new ActionListener() {
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        int confirm = JOptionPane.showConfirmDialog(null, "Yakin ingin logout?", "Logout", JOptionPane.YES_NO_OPTION);
+        menuLogout = new Item_menu(iconMaster, false, null, "Logout", new ActionListener() {
+            
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            int confirm = JOptionPane.showConfirmDialog(null, "Yakin ingin logout?", "Logout", JOptionPane.YES_NO_OPTION);
 
-        if (confirm == JOptionPane.YES_OPTION) {
-            // Buka form login
-                    new Menu().setVisible(false);
-                    dispose();
-                    new Login().setVisible(true);
+            if (confirm == JOptionPane.YES_OPTION) {
+                // Buka form login
+                        dispose();
+                        new Login().setVisible(true);
+                }
             }
-        }
-    });
-        Item_menu menuMaster = new Item_menu(null, false, iconMaster, "master", null, masDokter, masPasien, masLayanan);
-        Item_menu menuTransaksi = new Item_menu(null, false, iconTransaksi, "Transaksi", null, pendaftaran, inputhasil, pembayaran);
-        Item_menu menuReport = new Item_menu(null, false, iconReport, "Report", null, lpHasil, lpPemeriksaan, lpkinerja, lpKeuangan);
+        });
+        menuMaster = new Item_menu(null, false, iconMaster, "master", null, masDokter, masPasien, masLayanan);
+        menuTransaksi = new Item_menu(null, false, iconTransaksi, "Transaksi", null, pendaftaran, inputhasil, pembayaran);
+        menuReport = new Item_menu(null, false, iconReport, "Report", null, lpHasil, lpPemeriksaan, lpkinerja, lpKeuangan);
         
         addMenu(menuHome, menuMaster,menuTransaksi,menuReport,menuLogout);
     }
@@ -400,4 +394,31 @@ public class Menu extends javax.swing.JFrame {
             pn_menu.revalidate();
         }
     }
+    
+    private void applyAccess() {
+        switch (levelUser.toLowerCase()) {
+
+            case "petugas":
+                // Full access – tidak disembunyikan
+                break;
+
+            case "pj":
+                menuTransaksi.setVisible(false);
+
+                break;
+
+            case "kepala":
+                menuMaster.setVisible(false);
+                menuTransaksi.setVisible(false);
+                break;
+
+            default:
+                // Jika level tidak dikenali → hanya Home + Logout
+                menuMaster.setVisible(false);
+                menuTransaksi.setVisible(false);
+                menuReport.setVisible(false);
+                break;
+        }
+    
+}
 }

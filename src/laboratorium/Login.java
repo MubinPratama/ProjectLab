@@ -278,8 +278,8 @@ public class Login extends javax.swing.JFrame {
             String sql = "SELECT * FROM dokter where id_dokter ='"+txUser.getText()+"' and Kontak = '"+txPass.getText()+"'";
             ResultSet rs = st.executeQuery(sql);
             if(rs.next()){
-                    Menu fa = new Menu();
-                    fa.show();
+                    String level = rs.getString("Akses");
+                    new Menu(level).setVisible(true);
                     this.dispose();
             }else{
                 JOptionPane.showMessageDialog(null,"Maaf password atau username anda salah");
