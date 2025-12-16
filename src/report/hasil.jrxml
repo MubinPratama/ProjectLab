@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="af8a07ff-d0ac-4672-bed2-2268a907e72e">
 	<property name="ireport.zoom" value="1.3310000000000015"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="26"/>
+	<property name="ireport.y" value="0"/>
 	<parameter name="id_pendaftaran" class="java.lang.Long" isForPrompting="false"/>
 	<parameter name="layanan" class="java.lang.String">
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
@@ -42,7 +42,7 @@ h.layanan = $P{layanan}]]>
 	<title>
 		<band height="229" splitType="Stretch">
 			<staticText>
-				<reportElement x="445" y="206" width="108" height="23" uuid="97573f68-7241-4185-836d-daefb72dbc52"/>
+				<reportElement x="347" y="206" width="108" height="23" uuid="97573f68-7241-4185-836d-daefb72dbc52"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="16" isBold="true" pdfFontName="Times-Roman"/>
 				</textElement>
@@ -53,42 +53,42 @@ h.layanan = $P{layanan}]]>
 				<imageExpression><![CDATA[$P{logo}]]></imageExpression>
 			</image>
 			<staticText>
-				<reportElement style="Title" x="26" y="137" width="500" height="18" forecolor="#000000" uuid="ae34854b-2aba-4496-bfa3-129a528827bf"/>
+				<reportElement x="26" y="137" width="500" height="18" forecolor="#000000" uuid="ae34854b-2aba-4496-bfa3-129a528827bf"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="13" pdfFontName="Times-Roman"/>
 				</textElement>
 				<text><![CDATA[No. Telp: 021 8090712]]></text>
 			</staticText>
 			<staticText>
-				<reportElement style="Title" x="26" y="154" width="500" height="22" forecolor="#000000" uuid="fbd7931b-f560-42b9-92ba-ff6acbb1bd3e"/>
+				<reportElement x="26" y="154" width="500" height="22" forecolor="#000000" uuid="fbd7931b-f560-42b9-92ba-ff6acbb1bd3e"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="13" pdfFontName="Times-Roman"/>
 				</textElement>
 				<text><![CDATA[e-mail:klinikcondetjaya@gmail.com]]></text>
 			</staticText>
 			<staticText>
-				<reportElement style="Title" x="128" y="2" width="368" height="49" forecolor="#000000" uuid="a85ccd8a-e06b-4fc8-bd17-ff15da9f14f6"/>
+				<reportElement x="128" y="2" width="368" height="49" forecolor="#000000" uuid="a85ccd8a-e06b-4fc8-bd17-ff15da9f14f6"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="32" pdfFontName="Times-Roman"/>
 				</textElement>
 				<text><![CDATA[KLINIK PRATAMA]]></text>
 			</staticText>
 			<staticText>
-				<reportElement style="Title" x="26" y="114" width="500" height="22" forecolor="#000000" uuid="01c88de8-9ff9-4354-9c5a-116a60906d01"/>
+				<reportElement x="26" y="114" width="500" height="22" forecolor="#000000" uuid="01c88de8-9ff9-4354-9c5a-116a60906d01"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="13" pdfFontName="Times-Roman"/>
 				</textElement>
 				<text><![CDATA[Daerah Khusus Ibukota Jakarta 13520]]></text>
 			</staticText>
 			<staticText>
-				<reportElement style="Title" x="26" y="96" width="500" height="19" forecolor="#000000" uuid="5d58cf27-f766-4b49-8d98-c8f2f3f7bc1c"/>
+				<reportElement x="26" y="96" width="500" height="19" forecolor="#000000" uuid="5d58cf27-f766-4b49-8d98-c8f2f3f7bc1c"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="13" pdfFontName="Times-Roman"/>
 				</textElement>
 				<text><![CDATA[Jl condet raya no 18 Rt/Rw 003/04, Batu Ampar, Kec. Kramat jati, Kota Jakarta Timur,]]></text>
 			</staticText>
 			<staticText>
-				<reportElement style="Title" x="78" y="50" width="418" height="45" forecolor="#000000" uuid="a04d5ed7-36ad-45b6-afc1-a7b510527d86"/>
+				<reportElement x="78" y="50" width="418" height="45" forecolor="#000000" uuid="a04d5ed7-36ad-45b6-afc1-a7b510527d86"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="32" isBold="true" pdfFontName="Times-Roman"/>
 				</textElement>
@@ -97,6 +97,13 @@ h.layanan = $P{layanan}]]>
 			<line>
 				<reportElement x="28" y="175" width="498" height="1" uuid="b25c8c1b-1d89-46da-bb31-028da85314d9"/>
 			</line>
+			<textField>
+				<reportElement x="455" y="206" width="100" height="23" uuid="c181aca0-ee26-40c6-bdaa-c931ebda3879"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="16" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{layanan}]]></textFieldExpression>
+			</textField>
 		</band>
 	</title>
 	<pageHeader>
@@ -124,10 +131,6 @@ h.layanan = $P{layanan}]]>
 			<textField>
 				<reportElement x="85" y="40" width="100" height="20" uuid="1c52ded0-519b-4184-a162-f24e4154dedd"/>
 				<textFieldExpression><![CDATA[$F{tanggal_daftar}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement x="318" y="20" width="100" height="20" uuid="c181aca0-ee26-40c6-bdaa-c931ebda3879"/>
-				<textFieldExpression><![CDATA[$P{layanan}]]></textFieldExpression>
 			</textField>
 		</band>
 	</pageHeader>

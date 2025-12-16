@@ -192,11 +192,19 @@ private DefaultTableModel tabmode;
     private void CetakActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CetakActionPerformed
          //TODO add your handling code here:     try {
         try{
+            // 1. Ambil baris yang dipilih
+            int selectedRow = tbl_laporan.getSelectedRow();
+
+            // 2. [PENTING] Validasi: Cek apakah ada baris yang dipilih
+            // Ini yang kurang di kode B Anda
+            if (selectedRow == -1) {
+                JOptionPane.showMessageDialog(this, "Pilih salah satu baris pasien terlebih dahulu.");
+                return; // Berhenti di sini jika tidak ada yang dipilih
+            }
             //connection to data base
             Connection kon = koneksi.koneksiDb();
             //Parameter to jasper
             Map<String, Object> param = new HashMap<>();
-            int selectedRow = tbl_laporan.getSelectedRow();
             Long  idpendaftaran = Long.parseLong(tbl_laporan.getValueAt(selectedRow, 0).toString());
             param.put("id_pendaftaran",idpendaftaran); // ambil dari input user atau combo box
             // pilih layanan
