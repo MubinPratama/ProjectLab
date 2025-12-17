@@ -46,7 +46,7 @@ public class Login extends javax.swing.JFrame {
             SimpleDateFormat sdf = new SimpleDateFormat("EEEE, dd MMMM yyyy || HH:mm",indo);
             String waktu = sdf.format(now);
             
-            String fullText = "   SELAMAT DATANG DI SISTEM LABORATORIUM KLINIK PRATAMA CONDET JAYA   || "+waktu+" ||   ";
+            String fullText = "   SELAMAT DATANG DI SISTEM LABORATORIUM KLINIK PRATAMA CONDET JAYA !! || "+waktu+" ||   ";
             int scrollIndex = 0;
         
             @Override
