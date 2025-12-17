@@ -57,7 +57,7 @@ public class Menu extends javax.swing.JFrame {
         applyAccess();
         
         ImageIcon logo = new ImageIcon(getClass().getResource("/img/logo_lab.png"));
-        ImageIcon Nama_lab = new ImageIcon(getClass().getResource("/img/nama_lab.png"));
+        ImageIcon Nama_lab = new ImageIcon(getClass().getResource("/img/logotulisan.png"));
         ImageIcon Logo_pn = new ImageIcon(getClass().getResource("/img/pn_utama.jpg"));
         
         Logo.setIcon(logo);
@@ -134,12 +134,12 @@ public class Menu extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(Logo, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(nama_lab, javax.swing.GroupLayout.PREFERRED_SIZE, 501, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(165, Short.MAX_VALUE))
+                .addComponent(nama_lab, javax.swing.GroupLayout.PREFERRED_SIZE, 626, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(32, Short.MAX_VALUE))
         );
         pn_headerLayout.setVerticalGroup(
             pn_headerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Logo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(Logo, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
             .addComponent(nama_lab, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
