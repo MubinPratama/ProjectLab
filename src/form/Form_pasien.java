@@ -222,12 +222,11 @@ public class Form_pasien extends javax.swing.JPanel {
         jLabel12.setFont(new java.awt.Font("Georgia", 1, 36)); // NOI18N
         jLabel12.setText("DATA PASIEN");
 
-        bt_batal.setBackground(new java.awt.Color(255, 255, 0));
+        bt_batal.setBackground(new java.awt.Color(213, 213, 0));
         bt_batal.setFont(new java.awt.Font("Georgia", 1, 14)); // NOI18N
         bt_batal.setText("BATAL");
         bt_batal.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         bt_batal.setBorderPainted(false);
-        bt_batal.setOpaque(false);
         bt_batal.setPreferredSize(new java.awt.Dimension(91, 23));
         bt_batal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -235,24 +234,22 @@ public class Form_pasien extends javax.swing.JPanel {
             }
         });
 
-        bt_tambah.setBackground(new java.awt.Color(38, 220, 240));
+        bt_tambah.setBackground(new java.awt.Color(0, 173, 68));
         bt_tambah.setFont(new java.awt.Font("Georgia", 1, 14)); // NOI18N
         bt_tambah.setText("TAMBAH");
         bt_tambah.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         bt_tambah.setBorderPainted(false);
-        bt_tambah.setOpaque(false);
         bt_tambah.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bt_tambahActionPerformed(evt);
             }
         });
 
-        bt_hapus.setBackground(new java.awt.Color(240, 16, 14));
+        bt_hapus.setBackground(new java.awt.Color(222, 0, 0));
         bt_hapus.setFont(new java.awt.Font("Georgia", 1, 14)); // NOI18N
         bt_hapus.setText("HAPUS");
         bt_hapus.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         bt_hapus.setBorderPainted(false);
-        bt_hapus.setOpaque(false);
         bt_hapus.setPreferredSize(new java.awt.Dimension(91, 23));
         bt_hapus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -303,7 +300,7 @@ public class Form_pasien extends javax.swing.JPanel {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, dataPasienLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel12)
-                .addGap(20, 20, 20)
+                .addGap(18, 18, 18)
                 .addGroup(dataPasienLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(bt_tambah, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(dataPasienLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
@@ -315,8 +312,8 @@ public class Form_pasien extends javax.swing.JPanel {
                     .addGroup(dataPasienLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(caridata, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel1)))
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 463, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 472, Short.MAX_VALUE))
         );
 
         mainPanel.add(dataPasien, "card2");

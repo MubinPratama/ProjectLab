@@ -116,7 +116,7 @@ private void tampilkanData() {
         });
         jScrollPane1.setViewportView(tabel_Layanan);
 
-        bt_batal.setBackground(new java.awt.Color(255, 255, 0));
+        bt_batal.setBackground(new java.awt.Color(213, 213, 0));
         bt_batal.setFont(new java.awt.Font("Georgia", 1, 14)); // NOI18N
         bt_batal.setText("BATAL");
         bt_batal.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -127,7 +127,7 @@ private void tampilkanData() {
             }
         });
 
-        bt_tambah.setBackground(new java.awt.Color(38, 220, 240));
+        bt_tambah.setBackground(new java.awt.Color(0, 173, 68));
         bt_tambah.setFont(new java.awt.Font("Georgia", 1, 14)); // NOI18N
         bt_tambah.setText("TAMBAH");
         bt_tambah.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -138,7 +138,7 @@ private void tampilkanData() {
             }
         });
 
-        bt_hapus.setBackground(new java.awt.Color(240, 16, 14));
+        bt_hapus.setBackground(new java.awt.Color(222, 0, 0));
         bt_hapus.setFont(new java.awt.Font("Georgia", 1, 14)); // NOI18N
         bt_hapus.setText("HAPUS");
         bt_hapus.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -191,18 +191,19 @@ private void tampilkanData() {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DataLayananLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addGroup(DataLayananLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(bt_tambah, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(bt_hapus, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(bt_batal, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(22, 22, 22)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(DataLayananLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(bt_cardat, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(caridata, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 302, Short.MAX_VALUE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 371, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         mainPanel.add(DataLayanan, "card2");
