@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="7b0f3f26-e493-4609-a282-3c76df752be9">
-	<property name="ireport.zoom" value="0.6830134553650722"/>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="7b0f3f26-e493-4609-a282-3c76df752be9">
+	<property name="ireport.zoom" value="0.9090909090909177"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
 	<style name="Title" fontName="Times New Roman" fontSize="50" isBold="true" pdfFontName="Times-Bold"/>
@@ -96,62 +96,62 @@ ORDER BY
 		<band splitType="Stretch"/>
 	</background>
 	<title>
-		<band height="292" splitType="Stretch">
+		<band height="225" splitType="Stretch">
 			<staticText>
-				<reportElement x="628" y="255" width="173" height="25" uuid="f2bf9bae-c482-4dc3-a43e-d849129b1c8b"/>
+				<reportElement x="382" y="199" width="173" height="25" uuid="f2bf9bae-c482-4dc3-a43e-d849129b1c8b"/>
 				<textElement verticalAlignment="Middle">
 					<font size="16" pdfFontName="Times-Roman"/>
 				</textElement>
 				<text><![CDATA[Laporan Pendaftaran ]]></text>
 			</staticText>
+			<staticText>
+				<reportElement x="29" y="112" width="505" height="18" forecolor="#000000" uuid="281032b0-c2fe-4ecd-8711-3581498f6883"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="13" isBold="false" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[Daerah Khusus Ibukota Jakarta 13520]]></text>
+			</staticText>
 			<image>
-				<reportElement x="129" y="14" width="66" height="60" uuid="b6c96e6a-b47f-48cd-adea-9f270b7d26c4"/>
+				<reportElement x="32" y="3" width="48" height="46" uuid="e0321d4e-410c-48c3-8880-bff4de2e9cb9"/>
 				<imageExpression><![CDATA[$P{logo}]]></imageExpression>
 			</image>
 			<staticText>
-				<reportElement x="52" y="200" width="727" height="25" forecolor="#000000" uuid="b2f37869-c294-4a24-aec1-b31c5f41cb4c"/>
+				<reportElement x="29" y="48" width="505" height="46" forecolor="#000000" uuid="a6a6474d-c690-47cb-87bd-e460d59980ec"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="18" isBold="false" pdfFontName="Times-Roman"/>
-				</textElement>
-				<text><![CDATA[e-mail:klinikcondetjaya@gmail.com]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="168" y="12" width="495" height="60" forecolor="#000000" uuid="f8823549-0ca2-475b-aadf-ab21950c1933"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="45" pdfFontName="Times-Roman"/>
-				</textElement>
-				<text><![CDATA[KLINIK PRATAMA]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="153" y="72" width="525" height="53" forecolor="#000000" uuid="9a6d7fc5-07f3-4dc9-8c99-a8c24dd0228b"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="40" isBold="true" pdfFontName="Times-Roman"/>
+					<font fontName="Times New Roman" size="40" isBold="true" pdfFontName="Times-Roman"/>
 				</textElement>
 				<text><![CDATA[CONDET JAYA 24 JAM]]></text>
 			</staticText>
 			<line>
-				<reportElement x="-30" y="225" width="895" height="1" uuid="665032f5-61ae-48a8-a9b6-df7c2916819b"/>
+				<reportElement x="-42" y="168" width="895" height="1" uuid="b7ccc8f0-b98f-452f-86b0-6d4531014832"/>
 			</line>
 			<staticText>
-				<reportElement x="52" y="175" width="727" height="25" forecolor="#000000" uuid="0ab38fb7-0d34-48e3-9ba8-da1cfb4f3cb8"/>
+				<reportElement mode="Transparent" x="29" y="94" width="505" height="18" forecolor="#000000" uuid="5e416b51-bbad-4ad5-b8d0-843663664509"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="18" isBold="false" pdfFontName="Times-Roman"/>
-				</textElement>
-				<text><![CDATA[No. Telp: 021 8090712]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="52" y="150" width="727" height="25" forecolor="#000000" uuid="b7fd3ab2-6bfa-4571-90d2-4d28e4a4afcd"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="18" isBold="false" pdfFontName="Times-Roman"/>
-				</textElement>
-				<text><![CDATA[Daerah Khusus Ibukota Jakarta 13520]]></text>
-			</staticText>
-			<staticText>
-				<reportElement mode="Transparent" x="52" y="125" width="727" height="25" forecolor="#000000" uuid="fcd57016-2f26-4c7d-aa18-3798a066608b"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="18" isBold="false" pdfFontName="Times-Roman"/>
+					<font fontName="Times New Roman" size="13" isBold="false" pdfFontName="Times-Roman"/>
 				</textElement>
 				<text><![CDATA[Jl condet raya no 18 Rt/Rw 003/04, Batu Ampar, Kec. Kramat jati, Kota Jakarta Timur,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="29" y="148" width="505" height="18" forecolor="#000000" uuid="e0720319-d635-4977-854d-09f7ca69177e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="13" isBold="false" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[e-mail:klinikcondetjaya@gmail.com]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="3" width="434" height="46" forecolor="#000000" uuid="d17d78d5-ec42-4d9c-935d-e517c839f886"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="40" isBold="true" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[KLINIK PRATAMA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="29" y="130" width="505" height="18" forecolor="#000000" uuid="f0a42928-c388-425c-83a4-a8f2bffd1892"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="13" isBold="false" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[No. Telp: 021 8090712]]></text>
 			</staticText>
 		</band>
 	</title>
@@ -161,110 +161,110 @@ ORDER BY
 	<columnHeader>
 		<band height="21" splitType="Stretch">
 			<staticText>
-				<reportElement x="86" y="0" width="88" height="20" uuid="e7c88f0d-cad6-481d-acc1-4b6d7f9a9233"/>
+				<reportElement x="22" y="0" width="88" height="20" uuid="e7c88f0d-cad6-481d-acc1-4b6d7f9a9233"/>
 				<text><![CDATA[Id_Pendaftaran]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="185" y="0" width="200" height="20" uuid="36a5f6ed-25b0-41a2-a3cd-792eee94bf43"/>
+				<reportElement x="121" y="0" width="172" height="20" uuid="36a5f6ed-25b0-41a2-a3cd-792eee94bf43"/>
 				<text><![CDATA[Nama_Pasien]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="400" y="0" width="200" height="20" uuid="1c778821-15d3-431e-8dd0-00d3778330be"/>
+				<reportElement x="294" y="0" width="121" height="20" uuid="1c778821-15d3-431e-8dd0-00d3778330be"/>
 				<text><![CDATA[Nama_Layanan]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="610" y="1" width="125" height="20" uuid="3b993ca0-0474-4bbe-80e3-ec01c8e46913"/>
+				<reportElement x="417" y="0" width="125" height="20" uuid="3b993ca0-0474-4bbe-80e3-ec01c8e46913"/>
 				<text><![CDATA[Tanggal]]></text>
 			</staticText>
 			<line>
-				<reportElement x="178" y="0" width="1" height="21" uuid="dce46efc-f1fb-4c6d-b7fd-d3391100e3ab"/>
+				<reportElement x="114" y="0" width="1" height="21" uuid="dce46efc-f1fb-4c6d-b7fd-d3391100e3ab"/>
 			</line>
 			<line>
-				<reportElement x="79" y="0" width="1" height="21" uuid="9e0577d1-b55e-4bbe-b551-6349c573e389"/>
+				<reportElement x="15" y="0" width="1" height="21" uuid="9e0577d1-b55e-4bbe-b551-6349c573e389"/>
 			</line>
 			<line>
-				<reportElement x="389" y="0" width="1" height="21" uuid="36b5d5a8-0de8-40ed-b45a-7d5218a0abd8"/>
+				<reportElement x="292" y="0" width="1" height="21" uuid="36b5d5a8-0de8-40ed-b45a-7d5218a0abd8"/>
 			</line>
 			<line>
-				<reportElement x="600" y="0" width="1" height="21" uuid="05cc7d30-a4a8-4759-99ba-16f241954592"/>
+				<reportElement x="415" y="0" width="1" height="21" uuid="05cc7d30-a4a8-4759-99ba-16f241954592"/>
 			</line>
 			<line>
-				<reportElement x="734" y="0" width="1" height="21" uuid="11e09553-61c2-4963-9e83-44cc06a1033a"/>
+				<reportElement x="542" y="0" width="1" height="21" uuid="11e09553-61c2-4963-9e83-44cc06a1033a"/>
 			</line>
 			<line>
-				<reportElement x="80" y="19" width="655" height="1" uuid="7a276421-ac1f-4988-9d76-22a089a9722f"/>
+				<reportElement x="16" y="19" width="526" height="1" uuid="7a276421-ac1f-4988-9d76-22a089a9722f"/>
 			</line>
 			<line>
-				<reportElement x="79" y="0" width="655" height="1" uuid="79eee1af-2fcc-4394-8698-e7952a9fb4d5"/>
+				<reportElement x="15" y="0" width="527" height="1" uuid="79eee1af-2fcc-4394-8698-e7952a9fb4d5"/>
 			</line>
 		</band>
 	</columnHeader>
 	<detail>
 		<band height="21" splitType="Stretch">
 			<textField>
-				<reportElement x="86" y="0" width="88" height="20" uuid="3e937f3f-d41d-4be7-a630-dfd8e878f39b"/>
+				<reportElement x="22" y="0" width="88" height="20" uuid="3e937f3f-d41d-4be7-a630-dfd8e878f39b"/>
 				<textFieldExpression><![CDATA[$F{Id_Pendaftaran}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="400" y="0" width="200" height="20" uuid="1e44874b-b22b-41a2-b16d-be360f1d8c89"/>
+				<reportElement x="294" y="0" width="121" height="20" uuid="1e44874b-b22b-41a2-b16d-be360f1d8c89"/>
 				<textFieldExpression><![CDATA[$F{Nama_Layanan}]]></textFieldExpression>
 			</textField>
+			<line>
+				<reportElement x="15" y="20" width="527" height="1" uuid="758bd097-5970-46ca-af64-68e9182b2f73"/>
+			</line>
+			<line>
+				<reportElement x="15" y="-1" width="1" height="21" uuid="c73d229b-b05d-4d9f-b976-1abdc2397ac7"/>
+			</line>
+			<line>
+				<reportElement x="292" y="-1" width="1" height="21" uuid="7043ab62-5891-4fec-9a8e-efb213db49b7"/>
+			</line>
+			<line>
+				<reportElement x="415" y="-1" width="1" height="21" uuid="65335d23-a4e7-4ebd-b131-ed0052333f30"/>
+			</line>
+			<line>
+				<reportElement x="542" y="0" width="1" height="21" uuid="fd40e7a4-ee9f-4171-b2f0-c164d46ce42b"/>
+			</line>
 			<textField>
-				<reportElement x="610" y="0" width="125" height="20" uuid="be616f7f-ba2b-480c-b7c1-bc7d006e3424"/>
+				<reportElement x="121" y="0" width="172" height="20" uuid="4b32c1f9-a510-4022-a9ee-f1c20855ae5b"/>
+				<textFieldExpression><![CDATA[$F{Nama_Pasien}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="417" y="1" width="125" height="20" uuid="be616f7f-ba2b-480c-b7c1-bc7d006e3424"/>
 				<textFieldExpression><![CDATA[$F{Tanggal}]]></textFieldExpression>
 			</textField>
 			<line>
-				<reportElement x="178" y="-1" width="1" height="21" uuid="3ab359f0-9d3c-49f7-ac19-df2f0770fb36"/>
+				<reportElement x="114" y="0" width="1" height="21" uuid="3ab359f0-9d3c-49f7-ac19-df2f0770fb36"/>
 			</line>
-			<line>
-				<reportElement x="79" y="20" width="655" height="1" uuid="758bd097-5970-46ca-af64-68e9182b2f73"/>
-			</line>
-			<line>
-				<reportElement x="79" y="-1" width="1" height="21" uuid="c73d229b-b05d-4d9f-b976-1abdc2397ac7"/>
-			</line>
-			<line>
-				<reportElement x="389" y="-1" width="1" height="21" uuid="7043ab62-5891-4fec-9a8e-efb213db49b7"/>
-			</line>
-			<line>
-				<reportElement x="600" y="-1" width="1" height="21" uuid="65335d23-a4e7-4ebd-b131-ed0052333f30"/>
-			</line>
-			<line>
-				<reportElement x="734" y="0" width="1" height="21" uuid="fd40e7a4-ee9f-4171-b2f0-c164d46ce42b"/>
-			</line>
-			<textField>
-				<reportElement x="185" y="0" width="200" height="20" uuid="4b32c1f9-a510-4022-a9ee-f1c20855ae5b"/>
-				<textFieldExpression><![CDATA[$F{Nama_Pasien}]]></textFieldExpression>
-			</textField>
 		</band>
 	</detail>
 	<columnFooter>
-		<band height="20" splitType="Stretch"/>
+		<band height="49" splitType="Stretch"/>
 	</columnFooter>
 	<pageFooter>
 		<band height="117" splitType="Stretch">
 			<staticText>
-				<reportElement x="610" y="4" width="44" height="20" uuid="3a764d02-02b7-4530-9624-2279cba943b3"/>
+				<reportElement x="367" y="3" width="44" height="20" uuid="3a764d02-02b7-4530-9624-2279cba943b3"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="13"/>
 				</textElement>
 				<text><![CDATA[Jakarta,]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="610" y="96" width="87" height="20" uuid="e4be79e2-ac2b-4e01-a838-b06f3ac22090"/>
+				<reportElement x="367" y="95" width="87" height="20" uuid="e4be79e2-ac2b-4e01-a838-b06f3ac22090"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="13"/>
 				</textElement>
 				<text><![CDATA[Parlupi, A. Md.]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="610" y="24" width="68" height="20" uuid="1107e86b-1a61-4e91-83f4-87bfb76c06d6"/>
+				<reportElement x="367" y="23" width="68" height="20" uuid="1107e86b-1a61-4e91-83f4-87bfb76c06d6"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="13"/>
 				</textElement>
 				<text><![CDATA[Kepala Lab]]></text>
 			</staticText>
 			<textField pattern="EEEEE dd MMMMM yyyy">
-				<reportElement x="654" y="4" width="142" height="20" uuid="8c5deb0c-db99-4a7a-84e6-05386d606ac5"/>
+				<reportElement x="411" y="3" width="142" height="20" uuid="8c5deb0c-db99-4a7a-84e6-05386d606ac5"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="13"/>
 				</textElement>
