@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d268e812-edf4-4ca5-a30e-9755df8b1d40">
-	<property name="ireport.zoom" value="1.4641000000000044"/>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d268e812-edf4-4ca5-a30e-9755df8b1d40">
+	<property name="ireport.zoom" value="0.7513148009015866"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
 	<style name="table">
@@ -23,7 +23,32 @@
 			<pen lineWidth="0.5" lineColor="#000000"/>
 		</box>
 	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#FAEBD7">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#FFE4BF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#FFF8EF"/>
+		</conditionalStyle>
+	</style>
 	<subDataset name="Table Dataset 1" uuid="06f38821-c4ed-4d9b-a9f2-20f6ac98df8f"/>
+	<subDataset name="Table Dataset 2" uuid="3eaa90e5-1a78-4d18-ab84-da3d9162a350"/>
 	<parameter name="Dari" class="java.util.Date"/>
 	<parameter name="param_iddokter" class="java.lang.String"/>
 	<parameter name="logo" class="java.io.InputStream">
@@ -57,124 +82,155 @@ GROUP BY
 		<band splitType="Stretch"/>
 	</background>
 	<title>
-		<band height="269" splitType="Stretch">
+		<band height="292" splitType="Stretch">
 			<staticText>
-				<reportElement x="319" y="241" width="257" height="28" uuid="31e09cb5-c035-4f21-bb35-fa80c79cdc5c"/>
+				<reportElement x="545" y="264" width="257" height="28" uuid="31e09cb5-c035-4f21-bb35-fa80c79cdc5c"/>
 				<textElement>
 					<font fontName="Times New Roman" size="14" isBold="true"/>
 				</textElement>
 				<text><![CDATA[LAPORAN KINERJA DOKTER]]></text>
 			</staticText>
 			<textField pattern="EEEEE dd MMMMM yyyy">
-				<reportElement x="0" y="241" width="100" height="20" uuid="5a5b6833-87a3-488a-ad75-682f305911f1"/>
+				<reportElement x="0" y="264" width="100" height="20" uuid="5a5b6833-87a3-488a-ad75-682f305911f1"/>
 				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
 			</textField>
+			<staticText>
+				<reportElement x="42" y="140" width="727" height="25" forecolor="#000000" uuid="b9499a44-88ff-43b8-857f-0aed56a1eabc"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="18" isBold="false" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[Daerah Khusus Ibukota Jakarta 13520]]></text>
+			</staticText>
+			<line>
+				<reportElement x="-40" y="215" width="895" height="1" uuid="516d1e6c-3ee8-43ab-a725-de4bad71dc10"/>
+			</line>
 			<image>
-				<reportElement x="38" y="28" width="47" height="41" uuid="77da1f8b-06d0-4792-b737-9611999e073b"/>
+				<reportElement x="119" y="4" width="66" height="60" uuid="c53ba928-eccb-4571-b2d2-a41d88840ad5"/>
 				<imageExpression><![CDATA[$P{logo}]]></imageExpression>
 			</image>
 			<staticText>
-				<reportElement x="27" y="133" width="495" height="27" forecolor="#000000" uuid="755a05ff-fca1-4fb2-a793-25d787714699"/>
+				<reportElement mode="Transparent" x="42" y="115" width="727" height="25" forecolor="#000000" uuid="9ae3b038-4159-4473-9f27-e655c7bfc7b6"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="13" pdfFontName="Times-Roman"/>
-				</textElement>
-				<text><![CDATA[e-mail:klinikcondetjaya@gmail.com]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="27" y="69" width="495" height="62" forecolor="#000000" uuid="10a29f11-337e-4a68-92e2-40cc9a29bdb5"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="13" pdfFontName="Times-Roman"/>
+					<font size="18" isBold="false" pdfFontName="Times-Roman"/>
 				</textElement>
 				<text><![CDATA[Jl condet raya no 18 Rt/Rw 003/04, Batu Ampar, Kec. Kramat jati, Kota Jakarta Timur,]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="27" y="118" width="495" height="28" forecolor="#000000" uuid="b646ac72-4248-42ca-86e4-ecda3e02bd21"/>
+				<reportElement x="143" y="62" width="525" height="53" forecolor="#000000" uuid="4f8bcda4-a83b-4100-9307-d66ccf6672f6"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="13" pdfFontName="Times-Roman"/>
-				</textElement>
-				<text><![CDATA[No. Telp: 021 8090712]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="27" y="83" width="495" height="62" forecolor="#000000" uuid="31cc0c15-910d-4d06-a597-df486b6fbc06"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="13" pdfFontName="Times-Roman"/>
-				</textElement>
-				<text><![CDATA[Daerah Khusus Ibukota Jakarta 13520]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="27" y="42" width="495" height="62" forecolor="#000000" uuid="50d5e30b-16a0-4b54-8427-2cd789f4e4d6"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="32" pdfFontName="Times-Roman"/>
+					<font size="40" isBold="true" pdfFontName="Times-Roman"/>
 				</textElement>
 				<text><![CDATA[CONDET JAYA 24 JAM]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="27" y="16" width="495" height="51" forecolor="#000000" uuid="316069d9-515e-4a44-8876-6c53cadc7789"/>
+				<reportElement x="42" y="165" width="727" height="25" forecolor="#000000" uuid="9fa4737e-2111-43b2-9b1d-88f56daabc9e"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="36" pdfFontName="Times-Roman"/>
+					<font size="18" isBold="false" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[No. Telp: 021 8090712]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="42" y="190" width="727" height="25" forecolor="#000000" uuid="4614315c-0e9b-48d3-b9b5-1e1374e1939c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="18" isBold="false" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[e-mail:klinikcondetjaya@gmail.com]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="158" y="2" width="495" height="60" forecolor="#000000" uuid="e1b06741-5093-4051-b554-d82b8b6242d5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="45" pdfFontName="Times-Roman"/>
 				</textElement>
 				<text><![CDATA[KLINIK PRATAMA]]></text>
 			</staticText>
-			<line>
-				<reportElement x="27" y="161" width="495" height="1" uuid="c4a2b909-01e2-4bbe-9218-a716dfce2c4e"/>
-			</line>
 		</band>
 	</title>
 	<pageHeader>
-		<band height="15" splitType="Stretch">
-			<line>
-				<reportElement x="-22" y="0" width="599" height="1" uuid="b0455bfc-6350-473b-8ca4-b862d2c3d51e"/>
-			</line>
-		</band>
+		<band height="27" splitType="Stretch"/>
 	</pageHeader>
 	<columnHeader>
-		<band height="21" splitType="Stretch">
+		<band height="20" splitType="Stretch">
+			<line>
+				<reportElement x="123" y="1" width="555" height="1" uuid="b0455bfc-6350-473b-8ca4-b862d2c3d51e"/>
+			</line>
 			<staticText>
-				<reportElement x="0" y="1" width="120" height="20" uuid="c83df2ea-1739-4b7d-a745-efd4e1bbbf68"/>
+				<reportElement x="123" y="0" width="120" height="20" uuid="c83df2ea-1739-4b7d-a745-efd4e1bbbf68"/>
 				<text><![CDATA[ID DOKTER]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="120" y="1" width="145" height="20" uuid="a36493c9-9e18-4ac9-92ab-6b720c83a505"/>
+				<reportElement x="243" y="0" width="145" height="20" uuid="a36493c9-9e18-4ac9-92ab-6b720c83a505"/>
 				<text><![CDATA[NAMA DOKTER]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="265" y="0" width="135" height="20" uuid="795a97c1-8935-45a4-83e1-12318238413e"/>
+				<reportElement x="388" y="0" width="135" height="20" uuid="795a97c1-8935-45a4-83e1-12318238413e"/>
 				<text><![CDATA[JUMLAH PEMERIKSAAN]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="400" y="0" width="155" height="20" uuid="a0bbd274-f6f5-4194-8757-3e8fbf165614"/>
+				<reportElement x="523" y="0" width="155" height="20" uuid="a0bbd274-f6f5-4194-8757-3e8fbf165614"/>
 				<text><![CDATA[AKTIF MULAI]]></text>
 			</staticText>
-			<line>
-				<reportElement x="-23" y="19" width="599" height="1" uuid="e085716a-1829-499c-99ba-19cd6c7b3fe4"/>
-			</line>
 		</band>
 	</columnHeader>
 	<detail>
 		<band height="23" splitType="Stretch">
 			<textField>
-				<reportElement x="120" y="0" width="145" height="20" uuid="7497de5a-c1cb-4005-b741-c77397c36ee2"/>
+				<reportElement x="243" y="0" width="145" height="20" uuid="7497de5a-c1cb-4005-b741-c77397c36ee2"/>
 				<textFieldExpression><![CDATA[$F{nama_dokter}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="0" y="0" width="120" height="20" uuid="7ed23817-ab0e-4bb7-a1a4-c3a263c87f2a"/>
+				<reportElement x="122" y="0" width="120" height="20" uuid="7ed23817-ab0e-4bb7-a1a4-c3a263c87f2a"/>
 				<textFieldExpression><![CDATA[$F{id_dokter}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="265" y="0" width="135" height="20" uuid="be6964fb-6981-4e74-b414-02be0132bd0f"/>
+				<reportElement x="388" y="0" width="135" height="20" uuid="be6964fb-6981-4e74-b414-02be0132bd0f"/>
 				<textFieldExpression><![CDATA[$F{jumlah_pemeriksaan}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="400" y="0" width="155" height="20" uuid="977d122b-0e37-49f0-9700-0e89ce810e09"/>
+				<reportElement x="523" y="0" width="155" height="20" uuid="977d122b-0e37-49f0-9700-0e89ce810e09"/>
 				<textFieldExpression><![CDATA[$F{aktif_mulai}]]></textFieldExpression>
 			</textField>
+			<line>
+				<reportElement x="123" y="-1" width="555" height="1" uuid="f08ab75a-fc55-4701-bca3-65df21fe3c7b"/>
+			</line>
+			<line>
+				<reportElement x="122" y="19" width="555" height="1" uuid="0030e94a-04e3-4e16-b375-efc1e9d8cbd1"/>
+			</line>
 		</band>
 	</detail>
 	<columnFooter>
-		<band height="45" splitType="Stretch"/>
+		<band height="30" splitType="Stretch"/>
 	</columnFooter>
 	<pageFooter>
-		<band height="54" splitType="Stretch"/>
+		<band height="119" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="658" y="4" width="142" height="20" uuid="7d5ea3a0-b438-4bdc-bcf5-f474192956b8"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="614" y="96" width="87" height="20" uuid="a5ff2fd3-37eb-46e3-8361-dbfc272316ac"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="13"/>
+				</textElement>
+				<text><![CDATA[Parlupi, A. Md.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="614" y="24" width="68" height="20" uuid="13ca2eea-d5b6-4601-91ee-6dddebec1715"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="13"/>
+				</textElement>
+				<text><![CDATA[Kepala Lab]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="614" y="4" width="44" height="20" uuid="06545e90-e92b-4999-94e2-51de09b08173"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="13"/>
+				</textElement>
+				<text><![CDATA[Jakarta,]]></text>
+			</staticText>
+		</band>
 	</pageFooter>
 	<summary>
 		<band height="42" splitType="Stretch"/>
