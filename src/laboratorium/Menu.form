@@ -49,14 +49,14 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="Logo" min="-2" pref="79" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="nama_lab" min="-2" pref="501" max="-2" attributes="0"/>
-                  <EmptySpace pref="165" max="32767" attributes="0"/>
+                  <Component id="nama_lab" min="-2" pref="626" max="-2" attributes="0"/>
+                  <EmptySpace pref="32" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Component id="Logo" alignment="0" max="32767" attributes="0"/>
+              <Component id="Logo" alignment="0" pref="70" max="32767" attributes="0"/>
               <Component id="nama_lab" alignment="0" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>

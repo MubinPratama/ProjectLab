@@ -102,7 +102,7 @@ GROUP BY
 				<text><![CDATA[Daerah Khusus Ibukota Jakarta 13520]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="27" y="41" width="495" height="62" forecolor="#000000" uuid="50d5e30b-16a0-4b54-8427-2cd789f4e4d6"/>
+				<reportElement x="27" y="42" width="495" height="62" forecolor="#000000" uuid="50d5e30b-16a0-4b54-8427-2cd789f4e4d6"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="32" pdfFontName="Times-Roman"/>
 				</textElement>
