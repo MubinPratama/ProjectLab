@@ -17,11 +17,34 @@ public class pn_utama extends javax.swing.JPanel {
      * Creates new form pn_utama
      */
     public pn_utama() {
-        initComponents();
-        ImageIcon Logo_pn = new ImageIcon(getClass().getResource("/img/pn_utama.jpg"));
-        logo_pn.setIcon(Logo_pn);
-    }
-
+    initComponents();
+    
+    // 1. Ambil Gambar Asli
+    ImageIcon iconAsli = new ImageIcon(getClass().getResource("/img/logo_lab.png"));
+    
+    // 2. Skala Gambar (Misal: Lebar 300px, Tinggi otomatis menjaga rasio)
+    // Image.SCALE_SMOOTH membuat gambar tetap tajam saat diperbesar
+    java.awt.Image img = iconAsli.getImage();
+    java.awt.Image imgBesar = img.getScaledInstance(300, 300, java.awt.Image.SCALE_SMOOTH);
+    ImageIcon LogoBesar = new ImageIcon(imgBesar);
+    
+    // 3. Pasang Gambar ke Label
+    logo_pn.setIcon(LogoBesar);
+    
+    // 4. Tambahkan Tulisan di bawah Logo
+    logo_pn.setText("KLINIK PRATAMA CONDET JAYA");
+    
+    // 5. Atur Posisi Tulisan (Tulisan di BAWAH gambar, posisi Tengah)
+    logo_pn.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+    logo_pn.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+    logo_pn.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+    
+    // 6. Atur Font Tulisan (Tebal, Ukuran 24)
+    logo_pn.setFont(new java.awt.Font("Tahoma", java.awt.Font.BOLD, 24));
+    
+    // 7. Beri jarak antara gambar dan tulisan
+    logo_pn.setIconTextGap(20);
+}
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

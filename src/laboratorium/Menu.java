@@ -58,7 +58,7 @@ public class Menu extends javax.swing.JFrame {
         
         ImageIcon logo = new ImageIcon(getClass().getResource("/img/logo_lab.png"));
         ImageIcon Nama_lab = new ImageIcon(getClass().getResource("/img/logotulisan.png"));
-        ImageIcon Logo_pn = new ImageIcon(getClass().getResource("/img/pn_utama"));
+        ImageIcon Logo_pn = new ImageIcon(getClass().getResource("/img/pn_utama.jpg"));
         
         Logo.setIcon(logo);
         nama_lab.setIcon(Nama_lab);
