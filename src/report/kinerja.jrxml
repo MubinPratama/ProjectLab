@@ -74,42 +74,42 @@ GROUP BY
 				<imageExpression><![CDATA[$P{logo}]]></imageExpression>
 			</image>
 			<staticText>
-				<reportElement  x="27" y="133" width="495" height="27" forecolor="#000000" uuid="755a05ff-fca1-4fb2-a793-25d787714699"/>
+				<reportElement x="27" y="133" width="495" height="27" forecolor="#000000" uuid="755a05ff-fca1-4fb2-a793-25d787714699"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="13" pdfFontName="Times-Roman"/>
 				</textElement>
 				<text><![CDATA[e-mail:klinikcondetjaya@gmail.com]]></text>
 			</staticText>
 			<staticText>
-				<reportElement  x="27" y="69" width="495" height="62" forecolor="#000000" uuid="10a29f11-337e-4a68-92e2-40cc9a29bdb5"/>
+				<reportElement x="27" y="69" width="495" height="62" forecolor="#000000" uuid="10a29f11-337e-4a68-92e2-40cc9a29bdb5"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="13" pdfFontName="Times-Roman"/>
 				</textElement>
 				<text><![CDATA[Jl condet raya no 18 Rt/Rw 003/04, Batu Ampar, Kec. Kramat jati, Kota Jakarta Timur,]]></text>
 			</staticText>
 			<staticText>
-				<reportElement  x="27" y="118" width="495" height="28" forecolor="#000000" uuid="b646ac72-4248-42ca-86e4-ecda3e02bd21"/>
+				<reportElement x="27" y="118" width="495" height="28" forecolor="#000000" uuid="b646ac72-4248-42ca-86e4-ecda3e02bd21"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="13" pdfFontName="Times-Roman"/>
 				</textElement>
 				<text><![CDATA[No. Telp: 021 8090712]]></text>
 			</staticText>
 			<staticText>
-				<reportElement  x="27" y="83" width="495" height="62" forecolor="#000000" uuid="31cc0c15-910d-4d06-a597-df486b6fbc06"/>
+				<reportElement x="27" y="83" width="495" height="62" forecolor="#000000" uuid="31cc0c15-910d-4d06-a597-df486b6fbc06"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="13" pdfFontName="Times-Roman"/>
 				</textElement>
 				<text><![CDATA[Daerah Khusus Ibukota Jakarta 13520]]></text>
 			</staticText>
 			<staticText>
-				<reportElement  x="27" y="41" width="495" height="62" forecolor="#000000" uuid="50d5e30b-16a0-4b54-8427-2cd789f4e4d6"/>
+				<reportElement x="27" y="42" width="495" height="62" forecolor="#000000" uuid="50d5e30b-16a0-4b54-8427-2cd789f4e4d6"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="32" pdfFontName="Times-Roman"/>
 				</textElement>
 				<text><![CDATA[CONDET JAYA 24 JAM]]></text>
 			</staticText>
 			<staticText>
-				<reportElement  x="27" y="16" width="495" height="51" forecolor="#000000" uuid="316069d9-515e-4a44-8876-6c53cadc7789"/>
+				<reportElement x="27" y="16" width="495" height="51" forecolor="#000000" uuid="316069d9-515e-4a44-8876-6c53cadc7789"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="36" pdfFontName="Times-Roman"/>
 				</textElement>
