@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="7b0f3f26-e493-4609-a282-3c76df752be9">
 	<property name="ireport.zoom" value="1.0000000000000022"/>
-	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="0"/>
+	<property name="ireport.x" value="60"/>
+	<property name="ireport.y" value="22"/>
 	<style name="Title" fontName="Times New Roman" fontSize="50" isBold="true" pdfFontName="Times-Bold"/>
 	<style name="SubTitle" forecolor="#736343" fontName="Arial" fontSize="18"/>
 	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
@@ -241,7 +241,36 @@ ORDER BY
 		<band height="40" splitType="Stretch"/>
 	</columnFooter>
 	<pageFooter>
-		<band height="25" splitType="Stretch"/>
+		<band height="141" splitType="Stretch">
+			<staticText>
+				<reportElement x="586" y="0" width="50" height="22" forecolor="#000000" uuid="96937686-c1dd-4da0-8e65-5d50b9dc0f08"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="13" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[Jakarta,]]></text>
+			</staticText>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="636" y="0" width="188" height="22" uuid="93d8a73d-692c-4742-b39d-f9605033470a"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="586" y="92" width="91" height="22" forecolor="#000000" uuid="c2b98480-14c3-4502-8590-9acf17302ea9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="13" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[Parlupi, A. Md.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="586" y="22" width="68" height="22" forecolor="#000000" uuid="ef915ecd-c929-4bc1-a57a-a89eac8cf293"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="13" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[Kepala Lab]]></text>
+			</staticText>
+		</band>
 	</pageFooter>
 	<summary>
 		<band splitType="Stretch"/>

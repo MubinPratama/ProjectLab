@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d268e812-edf4-4ca5-a30e-9755df8b1d40">
-	<property name="ireport.zoom" value="1.4641000000000044"/>
+	<property name="ireport.zoom" value="1.2100000000000035"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="0"/>
+	<property name="ireport.y" value="137"/>
 	<style name="table">
 		<box>
 			<pen lineWidth="1.0" lineColor="#000000"/>
@@ -174,7 +174,36 @@ GROUP BY
 		<band height="45" splitType="Stretch"/>
 	</columnFooter>
 	<pageFooter>
-		<band height="54" splitType="Stretch"/>
+		<band height="127" splitType="Stretch">
+			<staticText>
+				<reportElement x="317" y="92" width="91" height="22" forecolor="#000000" uuid="a2ca7ed0-7a2e-47ae-ad65-584c3a327dbb"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="13" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[Parlupi, A. Md.]]></text>
+			</staticText>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="367" y="0" width="188" height="22" uuid="9b7c3c35-9abd-4b4e-9f11-ccdcf963f74b"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="317" y="0" width="50" height="22" forecolor="#000000" uuid="78d05338-1138-4ad0-98f4-0b364b49ee72"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="13" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[Jakarta,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="317" y="22" width="68" height="22" forecolor="#000000" uuid="9a343e86-7d5d-4e6a-a7b8-90e48b9907e9"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="13" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[Kepala Lab]]></text>
+			</staticText>
+		</band>
 	</pageFooter>
 	<summary>
 		<band height="42" splitType="Stretch"/>
