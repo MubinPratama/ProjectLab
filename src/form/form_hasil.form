@@ -146,11 +146,12 @@
                           </Group>
                           <EmptySpace pref="131" max="32767" attributes="0"/>
                       </Group>
+                      <Component id="jLabel1" alignment="0" max="32767" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jScrollPane1" pref="0" max="32767" attributes="0"/>
+                          <Component id="jScrollPane1" min="-2" pref="814" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
-                      <Component id="jLabel1" alignment="0" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
@@ -1737,23 +1738,31 @@
                                               <Component id="jLabel236" alignment="0" max="32767" attributes="0"/>
                                               <Component id="jLabel238" alignment="0" max="32767" attributes="0"/>
                                           </Group>
-                                          <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                              <Component id="txtMalaria" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="txtReaksiLE" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="txtSelLE" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="txtResistensiOsmotik" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="txtPembendungan" max="32767" attributes="0"/>
-                                              <Component id="txtMasaPembekuan" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="txtMasaPendarahan" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="txtTrombosit" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="txtWestergren" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="txtLED" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="jLabel215" alignment="0" pref="110" max="32767" attributes="0"/>
-                                              <Component id="txtRetraksi" max="32767" attributes="0"/>
-                                              <Component id="txtGolDarah" max="32767" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="102" attributes="0">
+                                                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                                      <Component id="txtMalaria" alignment="0" max="32767" attributes="0"/>
+                                                      <Component id="txtReaksiLE" alignment="0" max="32767" attributes="0"/>
+                                                      <Component id="txtSelLE" alignment="0" max="32767" attributes="0"/>
+                                                      <Component id="txtResistensiOsmotik" alignment="0" max="32767" attributes="0"/>
+                                                      <Component id="txtPembendungan" max="32767" attributes="0"/>
+                                                      <Component id="txtMasaPembekuan" alignment="0" max="32767" attributes="0"/>
+                                                      <Component id="txtTrombosit" alignment="0" max="32767" attributes="0"/>
+                                                      <Component id="txtWestergren" alignment="0" max="32767" attributes="0"/>
+                                                      <Component id="txtLED" alignment="0" max="32767" attributes="0"/>
+                                                      <Component id="jLabel215" alignment="0" pref="110" max="32767" attributes="0"/>
+                                                      <Component id="txtRetraksi" max="32767" attributes="0"/>
+                                                      <Component id="txtGolDarah" max="32767" attributes="0"/>
+                                                  </Group>
+                                                  <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="1" attributes="0">
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="txtMasaPendarahan" min="-2" pref="110" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                              </Group>
                                           </Group>
-                                          <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                               <Component id="jLabel229" alignment="0" max="32767" attributes="0"/>
                                               <Component id="jLabel225" alignment="0" max="32767" attributes="0"/>
@@ -1836,6 +1845,7 @@
                                                                   <Component id="txtTrombosit" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
                                                               </Group>
                                                           </Group>
+                                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                                           <Component id="jLabel222" min="-2" pref="38" max="-2" attributes="0"/>
                                                       </Group>
                                                       <Component id="txtLED" min="-2" pref="38" max="-2" attributes="0"/>
