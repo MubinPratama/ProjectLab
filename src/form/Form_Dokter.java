@@ -124,7 +124,7 @@ public class Form_Dokter extends javax.swing.JPanel {
         jLabel1.setFont(new java.awt.Font("Georgia", 1, 36)); // NOI18N
         jLabel1.setText("DATA DOKTER");
 
-        bt_batal.setBackground(new java.awt.Color(255, 255, 0));
+        bt_batal.setBackground(new java.awt.Color(213, 213, 0));
         bt_batal.setFont(new java.awt.Font("Georgia", 1, 14)); // NOI18N
         bt_batal.setText("BATAL");
         bt_batal.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -136,7 +136,7 @@ public class Form_Dokter extends javax.swing.JPanel {
             }
         });
 
-        bt_tambah.setBackground(new java.awt.Color(38, 220, 240));
+        bt_tambah.setBackground(new java.awt.Color(0, 173, 68));
         bt_tambah.setFont(new java.awt.Font("Georgia", 1, 14)); // NOI18N
         bt_tambah.setText("TAMBAH");
         bt_tambah.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -147,7 +147,7 @@ public class Form_Dokter extends javax.swing.JPanel {
             }
         });
 
-        bt_hapus.setBackground(new java.awt.Color(240, 16, 14));
+        bt_hapus.setBackground(new java.awt.Color(222, 0, 0));
         bt_hapus.setFont(new java.awt.Font("Georgia", 1, 14)); // NOI18N
         bt_hapus.setText("HAPUS");
         bt_hapus.setBorder(javax.swing.BorderFactory.createEtchedBorder());
