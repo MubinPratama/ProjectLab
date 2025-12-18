@@ -96,16 +96,16 @@ ORDER BY
 		<band splitType="Stretch"/>
 	</background>
 	<title>
-		<band height="313" splitType="Stretch">
+		<band height="280" splitType="Stretch">
 			<staticText>
-				<reportElement style="Title" x="629" y="251" width="173" height="62" uuid="f2bf9bae-c482-4dc3-a43e-d849129b1c8b"/>
+				<reportElement style="Title" x="628" y="255" width="173" height="25" uuid="f2bf9bae-c482-4dc3-a43e-d849129b1c8b"/>
 				<textElement verticalAlignment="Middle">
 					<font size="16" pdfFontName="Times-Roman"/>
 				</textElement>
 				<text><![CDATA[Laporan Pendaftaran ]]></text>
 			</staticText>
 			<image>
-				<reportElement x="109" y="2" width="65" height="46" uuid="a4a3686e-7e80-4024-a573-360b4fff92ad"/>
+				<reportElement x="110" y="12" width="65" height="46" uuid="a4a3686e-7e80-4024-a573-360b4fff92ad"/>
 				<imageExpression><![CDATA[$P{logo}]]></imageExpression>
 			</image>
 			<staticText>
@@ -238,7 +238,7 @@ ORDER BY
 		</band>
 	</detail>
 	<columnFooter>
-		<band height="40" splitType="Stretch"/>
+		<band height="61" splitType="Stretch"/>
 	</columnFooter>
 	<pageFooter>
 		<band height="25" splitType="Stretch"/>

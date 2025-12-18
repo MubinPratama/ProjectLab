@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="50602131-2dd4-4767-b0e6-0fa06fe8a62b">
 	<property name="ireport.zoom" value="1.3310000000000013"/>
-	<property name="ireport.x" value="42"/>
-	<property name="ireport.y" value="96"/>
+	<property name="ireport.x" value="320"/>
+	<property name="ireport.y" value="229"/>
 	<style name="Title" fontName="Times New Roman" fontSize="50" isBold="true" pdfFontName="Times-Bold"/>
 	<style name="SubTitle" forecolor="#736343" fontName="Arial" fontSize="18"/>
 	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
@@ -196,7 +196,12 @@ ORDER BY
 		<band height="29" splitType="Stretch"/>
 	</columnFooter>
 	<pageFooter>
-		<band height="151" splitType="Stretch"/>
+		<band height="80" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="646" y="0" width="156" height="20" uuid="84e59136-5687-4b47-bad5-a47567895b94"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
 	</pageFooter>
 	<summary>
 		<band splitType="Stretch"/>
