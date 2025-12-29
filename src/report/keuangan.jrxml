@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="50602131-2dd4-4767-b0e6-0fa06fe8a62b">
 	<property name="ireport.zoom" value="1.100000000000004"/>
-	<property name="ireport.x" value="99"/>
+	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="16"/>
 	<style name="Title" fontName="Times New Roman" fontSize="50" isBold="true" pdfFontName="Times-Bold"/>
 	<style name="SubTitle" forecolor="#736343" fontName="Arial" fontSize="18"/>
@@ -53,7 +53,7 @@ ORDER BY
 	<title>
 		<band height="234" splitType="Stretch">
 			<staticText>
-				<reportElement x="357" y="208" width="198" height="24" forecolor="#000000" uuid="f5b4bd87-b35b-4823-959d-ed146037e412"/>
+				<reportElement x="171" y="210" width="198" height="24" forecolor="#000000" uuid="f5b4bd87-b35b-4823-959d-ed146037e412"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="16" isBold="true" pdfFontName="Times-Roman"/>
 				</textElement>
@@ -231,7 +231,7 @@ ORDER BY
 				<textElement verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="13"/>
 				</textElement>
-				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				<textFieldExpression><![CDATA[new java.text.SimpleDateFormat("EEEEE dd MMMMM yyyy", new java.util.Locale("id", "ID")).format(new java.util.Date())]]></textFieldExpression>
 			</textField>
 		</band>
 	</pageFooter>
