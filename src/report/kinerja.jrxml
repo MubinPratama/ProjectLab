@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d268e812-edf4-4ca5-a30e-9755df8b1d40">
-	<property name="ireport.zoom" value="0.8264462809917453"/>
+	<property name="ireport.zoom" value="1.1000000000000132"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="0"/>
+	<property name="ireport.y" value="28"/>
 	<style name="table">
 		<box>
 			<pen lineWidth="1.0" lineColor="#000000"/>
@@ -137,8 +137,8 @@ GROUP BY
 	<pageHeader>
 		<band height="27" splitType="Stretch">
 			<staticText>
-				<reportElement x="349" y="0" width="205" height="18" uuid="31e09cb5-c035-4f21-bb35-fa80c79cdc5c"/>
-				<textElement>
+				<reportElement x="178" y="9" width="205" height="18" uuid="31e09cb5-c035-4f21-bb35-fa80c79cdc5c"/>
+				<textElement textAlignment="Center">
 					<font fontName="Times New Roman" size="14" isBold="true"/>
 				</textElement>
 				<text><![CDATA[LAPORAN KINERJA DOKTER]]></text>
@@ -212,7 +212,7 @@ GROUP BY
 				<textElement verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="13"/>
 				</textElement>
-				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				<textFieldExpression><![CDATA[new java.text.SimpleDateFormat("EEEEE dd MMMMM yyyy", new java.util.Locale("id", "ID")).format(new java.util.Date())]]></textFieldExpression>
 			</textField>
 			<staticText>
 				<reportElement x="366" y="96" width="87" height="20" uuid="a5ff2fd3-37eb-46e3-8361-dbfc272316ac"/>

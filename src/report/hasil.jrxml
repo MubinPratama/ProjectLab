@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="af8a07ff-d0ac-4672-bed2-2268a907e72e">
-	<property name="ireport.zoom" value="0.8264462809917433"/>
+	<property name="ireport.zoom" value="1.3310000000000135"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="0"/>
+	<property name="ireport.y" value="48"/>
 	<style name="table">
 		<box>
 			<pen lineWidth="1.0" lineColor="#000000"/>
@@ -63,14 +63,14 @@ h.layanan = $P{layanan}]]>
 	<title>
 		<band height="222" splitType="Stretch">
 			<staticText>
-				<reportElement x="386" y="196" width="65" height="23" uuid="97573f68-7241-4185-836d-daefb72dbc52"/>
+				<reportElement x="190" y="199" width="65" height="23" uuid="97573f68-7241-4185-836d-daefb72dbc52"/>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="16" isBold="true" pdfFontName="Times-Roman"/>
 				</textElement>
 				<text><![CDATA[Laporan Hasil ]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="450" y="196" width="100" height="23" uuid="c181aca0-ee26-40c6-bdaa-c931ebda3879"/>
+				<reportElement x="254" y="199" width="100" height="23" uuid="c181aca0-ee26-40c6-bdaa-c931ebda3879"/>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="16" isBold="true"/>
 				</textElement>
@@ -135,15 +135,15 @@ h.layanan = $P{layanan}]]>
 			</textField>
 			<staticText>
 				<reportElement x="0" y="0" width="78" height="20" uuid="268be1c7-1ef9-49eb-898e-5c0902548cd1"/>
-				<text><![CDATA[Nama_pasien :]]></text>
+				<text><![CDATA[Nama pasien :]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="0" y="20" width="78" height="20" uuid="7594cf07-9dea-4a5f-af50-8df00479bb98"/>
-				<text><![CDATA[Nama_dokter :]]></text>
+				<text><![CDATA[Nama dokter :]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="0" y="40" width="78" height="20" uuid="c52fbd20-d241-49c1-bd82-0305f537535d"/>
-				<text><![CDATA[Tanggal_daftar :]]></text>
+				<text><![CDATA[Tanggal daftar :]]></text>
 			</staticText>
 			<textField>
 				<reportElement x="85" y="20" width="100" height="20" uuid="67f37911-808d-4727-85bd-c05221917d80"/>
@@ -158,14 +158,14 @@ h.layanan = $P{layanan}]]>
 	<columnHeader>
 		<band height="22" splitType="Stretch">
 			<staticText>
-				<reportElement x="59" y="1" width="185" height="20" uuid="95cfebad-be39-4568-89cd-8d50fbde5e97"/>
+				<reportElement x="61" y="1" width="185" height="20" uuid="95cfebad-be39-4568-89cd-8d50fbde5e97"/>
 				<textElement verticalAlignment="Middle"/>
-				<text><![CDATA[ Nama_pemeriksaan]]></text>
+				<text><![CDATA[ Nama pemeriksaan]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="254" y="2" width="215" height="20" uuid="c114301c-d265-48e4-965b-809e297c02a7"/>
 				<textElement verticalAlignment="Middle"/>
-				<text><![CDATA[ Hasil_pemeriksaan]]></text>
+				<text><![CDATA[ Hasil pemeriksaan]]></text>
 			</staticText>
 			<line>
 				<reportElement x="59" y="0" width="410" height="1" uuid="792c27c4-ac56-490a-8507-70b0548c915e"/>
@@ -187,7 +187,7 @@ h.layanan = $P{layanan}]]>
 	<detail>
 		<band height="21" splitType="Stretch">
 			<textField>
-				<reportElement x="60" y="1" width="185" height="20" uuid="290de6cb-2738-41ad-ad8a-a9dccae07a87"/>
+				<reportElement x="61" y="1" width="185" height="20" uuid="290de6cb-2738-41ad-ad8a-a9dccae07a87"/>
 				<textElement verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$F{nama_pemeriksaan}]]></textFieldExpression>
 			</textField>
@@ -227,7 +227,7 @@ h.layanan = $P{layanan}]]>
 				<textElement verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="13"/>
 				</textElement>
-				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				<textFieldExpression><![CDATA[new java.text.SimpleDateFormat("EEEEE dd MMMMM yyyy", new java.util.Locale("id", "ID")).format(new java.util.Date())]]></textFieldExpression>
 			</textField>
 			<staticText>
 				<reportElement x="364" y="92" width="87" height="20" uuid="7d8be8b5-dcf3-4358-bb85-9a2be00f669d"/>

@@ -98,9 +98,9 @@ ORDER BY
 	<title>
 		<band height="225" splitType="Stretch">
 			<staticText>
-				<reportElement x="382" y="199" width="173" height="25" uuid="f2bf9bae-c482-4dc3-a43e-d849129b1c8b"/>
-				<textElement verticalAlignment="Middle">
-					<font size="16" pdfFontName="Times-Roman"/>
+				<reportElement x="169" y="200" width="173" height="25" uuid="f2bf9bae-c482-4dc3-a43e-d849129b1c8b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16" isBold="true" pdfFontName="Times-Roman"/>
 				</textElement>
 				<text><![CDATA[Laporan Pendaftaran ]]></text>
 			</staticText>
@@ -268,7 +268,7 @@ ORDER BY
 				<textElement verticalAlignment="Middle">
 					<font fontName="Times New Roman" size="13"/>
 				</textElement>
-				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				<textFieldExpression><![CDATA[new java.text.SimpleDateFormat("EEEEE dd MMMMM yyyy", new java.util.Locale("id", "ID")).format(new java.util.Date())]]></textFieldExpression>
 			</textField>
 		</band>
 	</pageFooter>
