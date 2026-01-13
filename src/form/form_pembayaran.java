@@ -31,18 +31,26 @@ public class form_pembayaran extends javax.swing.JPanel {
      */
     public form_pembayaran() {
         initComponents();
-        initComponents();
         loadNoPendaftaran();
         generateIdPembayaran();
         tglbayar.setText(LocalDate.now().toString());
-        
-        
+
+        // --- PENGATURAN KOLOM TABEL (3 KOLOM) ---
+        String[] kolom = {"No", "Layanan", "Harga"};
+        DefaultTableModel model = new DefaultTableModel(null, kolom);
+        tbl_rincian.setModel(model);
+
+        // Mengatur lebar kolom "No" agar lebih ramping
+        tbl_rincian.getColumnModel().getColumn(0).setPreferredWidth(30);
+        tbl_rincian.getColumnModel().getColumn(1).setPreferredWidth(250);
+        // ----------------------------------------
+
         no_pendaftaran.addActionListener(e -> {
-        String selectedId = (String) no_pendaftaran.getSelectedItem();
-        if (selectedId != null) {
-            isiDataDariPendaftaran(selectedId);
-        }
-    });
+            String selectedId = (String) no_pendaftaran.getSelectedItem();
+            if (selectedId != null && !selectedId.equals("Nomer Pendaftaran")) {
+                isiDataDariPendaftaran(selectedId);
+            }
+        });
     }
     
     private void generateIdPembayaran() {
@@ -272,12 +280,12 @@ public class form_pembayaran extends javax.swing.JPanel {
                 .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(48, 48, 48)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(biaya, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(27, 27, 27)
+                .addGap(57, 57, 57)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(bt_simpan, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Batal, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -381,18 +389,26 @@ public class form_pembayaran extends javax.swing.JPanel {
 
             // Load detail layanan
             DefaultTableModel model = (DefaultTableModel) tbl_rincian.getModel();
-            model.setRowCount(0);
-            String detailSql = "SELECT l.nama_layanan, l.harga FROM pendaftaran_detail pd " +
-                   "JOIN layanan l ON l.id_layanan = pd.id_layanan " +
-                   "WHERE pd.id_pendaftaran = ?";
+            model.setRowCount(0); // Bersihkan tabel
+
+            String detailSql = "SELECT l.nama_layanan, l.harga " +
+                               "FROM pendaftaran_detail pd " +
+                               "JOIN layanan l ON l.id_layanan = pd.id_layanan " +
+                               "WHERE pd.id_pendaftaran = ?";
+
             PreparedStatement pstDetail = kon.prepareStatement(detailSql);
             pstDetail.setString(1, idPendaftaran);
             ResultSet rsDetail = pstDetail.executeQuery();
+
             int total = 0;
+            int no = 1; // Inisialisasi nomor urut
+
             while (rsDetail.next()) {
                 String layanan = rsDetail.getString("nama_layanan");
                 int harga = rsDetail.getInt("harga");
-                model.addRow(new Object[]{layanan, harga});
+
+                // Tambahkan ke baris tabel: [No, Layanan, Harga]
+                model.addRow(new Object[]{no++, layanan, harga});
                 total += harga;
             }
             biaya.setText(String.valueOf(total));
