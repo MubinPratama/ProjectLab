@@ -283,7 +283,7 @@ public class form_pendaftaran extends javax.swing.JPanel {
         jScrollPane1 = new javax.swing.JScrollPane();
         table_layanan = new javax.swing.JTable();
         SimpanDaftar = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        btn_batal = new javax.swing.JButton();
         Layanan = new javax.swing.JComboBox<>();
         jLabel7 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
@@ -427,14 +427,14 @@ public class form_pendaftaran extends javax.swing.JPanel {
             }
         });
 
-        jButton3.setBackground(new java.awt.Color(255, 255, 0));
-        jButton3.setFont(new java.awt.Font("Georgia", 0, 18)); // NOI18N
-        jButton3.setText("Batal");
-        jButton3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        jButton3.setBorderPainted(false);
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        btn_batal.setBackground(new java.awt.Color(255, 255, 0));
+        btn_batal.setFont(new java.awt.Font("Georgia", 0, 18)); // NOI18N
+        btn_batal.setText("Batal");
+        btn_batal.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        btn_batal.setBorderPainted(false);
+        btn_batal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                btn_batalActionPerformed(evt);
             }
         });
 
@@ -630,7 +630,7 @@ public class form_pendaftaran extends javax.swing.JPanel {
                 .addContainerGap()
                 .addComponent(SimpanDaftar, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(170, 170, 170)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btn_batal, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         form_pendaftaranLayout.setVerticalGroup(
@@ -698,11 +698,11 @@ public class form_pendaftaran extends javax.swing.JPanel {
                         .addGroup(form_pendaftaranLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                             .addComponent(jLabel5)
                             .addComponent(Layanan, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(bt_layanan, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(bt_layanan, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(55, 55, 55)
                         .addGroup(form_pendaftaranLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(SimpanDaftar, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(btn_batal, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(94, 94, 94)
                         .addComponent(jLabel6))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -722,9 +722,9 @@ public class form_pendaftaran extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_LayananActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void btn_batalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_batalActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_btn_batalActionPerformed
 
     private void SimpanDaftarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SimpanDaftarActionPerformed
         // TODO add your handling code here:
@@ -832,6 +832,7 @@ public class form_pendaftaran extends javax.swing.JPanel {
 
     private void bt_layananActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_layananActionPerformed
         // TODO add your handling code here:
+        resetdaftar();
     }//GEN-LAST:event_bt_layananActionPerformed
 
     private void bt_layananMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_layananMouseClicked
@@ -858,11 +859,11 @@ public class form_pendaftaran extends javax.swing.JPanel {
     private javax.swing.JButton SimpanDaftar;
     private com.toedter.calendar.JDateChooser TanggalLahir;
     private javax.swing.JButton bt_layanan;
+    private javax.swing.JButton btn_batal;
     private javax.swing.JComboBox<String> cbPasien;
     private javax.swing.JComboBox<String> cbjk;
     private javax.swing.JPanel form_pendaftaran;
     private javax.swing.JFormattedTextField idPendaftaran;
-    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -967,21 +968,33 @@ public class form_pendaftaran extends javax.swing.JPanel {
 }
     
     private void resetdaftar() {
-    cbPasien.setSelectedIndex(0); // pilih kembali ke "-- ID Baru --" jika ada
+    // 1. Reset Komponen Pasien
+    cbPasien.setSelectedIndex(0); 
     txtNama.setText("");
     txtAlamat.setText("");
-    cbjk.setSelectedIndex(0); // asumsi index 0 = default kosong atau "L"
+    cbjk.setSelectedIndex(0); 
     txtTB.setText("");
     txtBB.setText("");
     TanggalLahir.setDate(null);
     txttelp.setText("");
 
-    Dokter.setSelectedIndex(0); // reset dokter ke default
-    lblTanggal.setText(new SimpleDateFormat("yyyy-MM-dd").format(new Date())); // reset tanggal ke hari ini
+    // 2. Reset Komponen Pendaftaran
+    Dokter.setSelectedIndex(0); 
+    Layanan.setSelectedIndex(0);
+    
+    // Mengatur ulang label tanggal ke hari ini
+    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+    lblTanggal.setText(sdf.format(new Date()));
 
-    // Hapus semua baris di tabel layanan
+    // 3. Menghapus semua baris di tabel layanan preview
     DefaultTableModel model = (DefaultTableModel) table_layanan.getModel();
     model.setRowCount(0);
+    
+    // 4. PENTING: Generate ulang ID Pendaftaran agar sinkron dengan database terbaru
+    generateIdPendaftaran();
+    
+    // 5. Kembalikan fokus ke combobox pasien
+    cbPasien.requestFocus();
 }
     
 }
