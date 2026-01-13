@@ -86,12 +86,20 @@ public class form_pendaftaran extends javax.swing.JPanel {
     });
 
      //data pasien
-        cbPasien.addItemListener(new ItemListener() {
+    cbPasien.addItemListener(new ItemListener() {
         @Override
         public void itemStateChanged(ItemEvent e) {
             if (e.getStateChange() == ItemEvent.SELECTED) {
-                String selected  =  cbPasien.getSelectedItem().toString();
-                tampilkanDataPasien(selected);
+                String selected = cbPasien.getSelectedItem().toString();
+
+                if ("-- ID Baru --".equals(selected)) {
+                    // Logika jika Pasien Baru
+                    idBaruLogic();
+                } else {
+                    // Logika jika Pasien Lama (Lakukan Deteksi)
+                    cbPasien.setEditable(false);
+                    tampilkanDataPasien(selected);
+                }
             }
         }
     });
@@ -902,48 +910,69 @@ public class form_pendaftaran extends javax.swing.JPanel {
     private javax.swing.JTextField txttelp;
     // End of variables declaration//GEN-END:variables
 
-    private void tampilkanDataPasien(String idPasien) { 
-        if (idPasien == null || idPasien.trim().toLowerCase().equals("-- id baru --")) {
-        return;
-    }
-    try {
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-        Connection kon = koneksi.koneksiDb();
-        String sql = "SELECT * FROM pasien WHERE No_rm = ?";
-        PreparedStatement ps = kon.prepareStatement(sql);
-        ps.setString(1, idPasien);
-        ResultSet rs = ps.executeQuery();
+    private void idBaruLogic() {
+        try {
+            Connection kon = koneksi.koneksiDb();
+            Statement st = kon.createStatement();
+            ResultSet rs = st.executeQuery("SELECT MAX(No_rm) AS max_id FROM pasien");
 
-        if (rs.next()) {
-            txtNama.setText(rs.getString("Nama"));
-            txtAlamat.setText(rs.getString("Alamat"));
-            cbjk.setSelectedItem(rs.getString("jk"));
-            txtTB.setText(rs.getString("Tinggi"));
-            txtBB.setText(rs.getString("Berat"));
-
-            String tglStr = rs.getString("tgl_lahir");
-            if (tglStr != null && !tglStr.isEmpty()) {
-                try {
-                    Date tglLahir = sdf.parse(tglStr); // ubah dari String ke Date
-                    TanggalLahir.setDate(tglLahir);   // set ke JDateChooser
-                } catch (ParseException ex) {
-                    ex.printStackTrace();
-                    JOptionPane.showMessageDialog(null, "Format tanggal lahir tidak valid!");
-                }
+            int nextId = 1;
+            if (rs.next()) {
+                nextId = rs.getInt("max_id") + 1;
             }
 
-            txttelp.setText(rs.getString("no_telp"));
-        } else {
-            JOptionPane.showMessageDialog(this, "Data pasien tidak ditemukan.");
+            // Reset semua field agar kosong untuk input baru
+            txtNama.setText("");
+            txtAlamat.setText("");
+            cbjk.setSelectedIndex(0);
+            txtTB.setText("");
+            txtBB.setText("");
+            TanggalLahir.setDate(null);
+            txttelp.setText("");
+
+            // Aktifkan mode edit untuk menampilkan ID baru
+            cbPasien.setEditable(true);
+            cbPasien.setSelectedItem(String.valueOf(nextId));
+            txtNama.requestFocus(); // Langsung fokus ke Nama
+
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+    }
+    
+        private void tampilkanDataPasien(String idPasien) { 
+        // Jika string kosong atau ID Baru, jangan jalankan query
+        if (idPasien == null || idPasien.isEmpty() || idPasien.equals("-- ID Baru --")) {
+            return;
         }
 
-        rs.close();
-        ps.close();
-        kon.close();
-    } catch (Exception ex) {
-        JOptionPane.showMessageDialog(this, "Gagal mengambil data pasien: " + ex.getMessage());
+        try {
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+            Connection kon = koneksi.koneksiDb();
+            String sql = "SELECT * FROM pasien WHERE No_rm = ?";
+            PreparedStatement ps = kon.prepareStatement(sql);
+            ps.setString(1, idPasien);
+            ResultSet rs = ps.executeQuery();
+
+            if (rs.next()) {
+                txtNama.setText(rs.getString("Nama"));
+                txtAlamat.setText(rs.getString("Alamat"));
+                cbjk.setSelectedItem(rs.getString("jk"));
+                txtTB.setText(rs.getString("Tinggi"));
+                txtBB.setText(rs.getString("Berat"));
+
+                String tglStr = rs.getString("tgl_lahir");
+                if (tglStr != null && !tglStr.isEmpty()) {
+                    TanggalLahir.setDate(sdf.parse(tglStr));
+                }
+                txttelp.setText(rs.getString("no_telp"));
+            }
+            rs.close();
+            ps.close();
+        } catch (Exception ex) {
+            // Abaikan error jika data memang belum ada (saat mengetik ID baru)
+        }
     }
-}
     
     private int ambilHargaLayanan(String namaLayanan) {
     int harga = 0;
