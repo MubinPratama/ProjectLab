@@ -5679,6 +5679,12 @@ try (PreparedStatement ps = kon.prepareStatement(sql)) {
                 PreparedStatement pstUpdate = kon.prepareStatement(update);
                 pstUpdate.setString(1, id_daftar.getSelectedItem().toString());
                 pstUpdate.executeUpdate();
+                
+                // PANGGIL DISINI AGAR TABEL BERSIH SETELAH SIMPAN KE DATABASE
+                hapusTabelPreview(); 
+
+                JOptionPane.showMessageDialog(null, "Data Berhasil Diselesaikan!");
+                loadIdPendaftaran(); // Refresh list pendaftaran
             }catch (SQLException e) {
                 JOptionPane.showMessageDialog(null, "Gagal menyimpan data" + e.getMessage());
             }
@@ -5690,6 +5696,13 @@ try (PreparedStatement ps = kon.prepareStatement(sql)) {
 
     private void cancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelActionPerformed
         // TODO add your handling code here:
+        int opsi = JOptionPane.showConfirmDialog(null, "Bersihkan semua rincian?", "Konfirmasi", JOptionPane.YES_NO_OPTION);
+        if (opsi == JOptionPane.YES_OPTION) {
+            hapusTabelPreview();
+            nm_pasien.setText("");
+            nm_dokter.setText("");
+            id_daftar.setSelectedIndex(0);
+        }
     }//GEN-LAST:event_cancelActionPerformed
 
     private void bt_tambahLayananActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_tambahLayananActionPerformed
@@ -6757,5 +6770,13 @@ private void simpanPreviewKeDatabase(String idPendaftaran) {
         JOptionPane.showMessageDialog(this, "Gagal simpan data: " + e.getMessage());
         e.printStackTrace();
     }
+}
+
+private void hapusTabelPreview() {
+    // Mengambil model dari tabel rincian
+    DefaultTableModel model = (DefaultTableModel) tb_rincian.getModel();
+    
+    // Mengatur jumlah baris menjadi 0 (menghapus semua baris)
+    model.setRowCount(0);
 }
 }
