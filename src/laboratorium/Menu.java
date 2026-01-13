@@ -345,7 +345,7 @@ public class Menu extends javax.swing.JFrame {
                 }
             });
         
-        lpKeuangan = new Item_menu(null, true, iconLpKeuangan, "keuangan", new ActionListener() {
+        lpKeuangan = new Item_menu(null, true, iconLpKeuangan, "Keuangan", new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 pn_utama.removeAll();
@@ -377,7 +377,7 @@ public class Menu extends javax.swing.JFrame {
                 }
             }
         });
-        menuMaster = new Item_menu(null, false, iconMaster, "master", null, masDokter, masPasien, masLayanan);
+        menuMaster = new Item_menu(null, false, iconMaster, "Master", null, masDokter, masPasien, masLayanan);
         menuTransaksi = new Item_menu(null, false, iconTransaksi, "Transaksi", null, pendaftaran, inputhasil, pembayaran);
         menuReport = new Item_menu(null, false, iconReport, "Report", null, lpHasil, lpPemeriksaan, lpkinerja, lpKeuangan);
         

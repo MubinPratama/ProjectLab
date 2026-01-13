@@ -108,16 +108,7 @@ public class form_pendaftaran extends javax.swing.JPanel {
         DefaultTableModel model = new DefaultTableModel(new Object[]{"Layanan", "Harga"}, 0);
         table_layanan.setModel(model);
         
-        bt_layanan.addActionListener(new ActionListener() {
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        String namaLayanan = Layanan.getSelectedItem().toString();
-        int harga = ambilHargaLayanan(namaLayanan); // method ambil harga dari DB atau daftar
-
-        DefaultTableModel model = (DefaultTableModel) table_layanan.getModel();
-        model.addRow(new Object[]{namaLayanan, harga});
-    }
-});
+        
         
         
     }
@@ -732,6 +723,7 @@ public class form_pendaftaran extends javax.swing.JPanel {
 
     private void btn_batalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_batalActionPerformed
         // TODO add your handling code here:
+        resetdaftar();
     }//GEN-LAST:event_btn_batalActionPerformed
 
     private void SimpanDaftarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SimpanDaftarActionPerformed
@@ -816,7 +808,7 @@ public class form_pendaftaran extends javax.swing.JPanel {
     kon.commit(); // SELESAIKAN TRANSAKSI
     
 
-    JOptionPane.showMessageDialog(this, "Data berhasil disimpan!");
+    //JOptionPane.showMessageDialog(this, "Data berhasil disimpan!");
     try {
 //        File file = new File("src/laporan/nota_pendaftaran.jasper"); // path ke file .jasper
         Map<String, Object> param = new HashMap<>();
@@ -840,7 +832,31 @@ public class form_pendaftaran extends javax.swing.JPanel {
 
     private void bt_layananActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_layananActionPerformed
         // TODO add your handling code here:
-        resetdaftar();
+        // 1. Ambil data dari JComboBox Layanan
+        String namaLayanan = Layanan.getSelectedItem().toString();
+
+        // Validasi agar tidak menambah pilihan default/kosong
+        if (namaLayanan.equals("Pilih Layanan") || namaLayanan.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Silahkan pilih layanan terlebih dahulu!");
+            return;
+        }
+
+        // 2. Ambil harga menggunakan method yang sudah Anda buat
+        int harga = ambilHargaLayanan(namaLayanan); 
+
+        // 3. Masukkan ke Tabel Preview
+        DefaultTableModel model = (DefaultTableModel) table_layanan.getModel();
+
+        // Cek apakah layanan sudah ada di tabel (mencegah duplikat)
+        for (int i = 0; i < model.getRowCount(); i++) {
+            if (model.getValueAt(i, 0).equals(namaLayanan)) {
+                JOptionPane.showMessageDialog(this, "Layanan ini sudah ditambahkan!");
+                return;
+            }
+        }
+
+        // Tambahkan baris baru [Nama Layanan, Harga]
+        model.addRow(new Object[]{namaLayanan, harga});
     }//GEN-LAST:event_bt_layananActionPerformed
 
     private void bt_layananMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_layananMouseClicked
