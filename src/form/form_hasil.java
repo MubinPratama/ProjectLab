@@ -1086,6 +1086,11 @@ private void loadLayanan() {
         cn_urine.setText("CANCEL");
         cn_urine.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         cn_urine.setBorderPainted(false);
+        cn_urine.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cn_urineActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
         jPanel10.setLayout(jPanel10Layout);
@@ -1679,6 +1684,11 @@ private void loadLayanan() {
         cn_hematologi.setText("CANCEL");
         cn_hematologi.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         cn_hematologi.setBorderPainted(false);
+        cn_hematologi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cn_hematologiActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
@@ -2446,6 +2456,11 @@ private void loadLayanan() {
         cn_serologi.setText("CANCEL");
         cn_serologi.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         cn_serologi.setBorderPainted(false);
+        cn_serologi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cn_serologiActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
@@ -3368,6 +3383,11 @@ private void loadLayanan() {
         cn_kimia2.setText("CANCEL");
         cn_kimia2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         cn_kimia2.setBorderPainted(false);
+        cn_kimia2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cn_kimia2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -5327,10 +5347,12 @@ private void loadLayanan() {
 
     private void cn_kimia3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cn_kimia3ActionPerformed
         // TODO add your handling code here:
+        resetFormKimia2();
     }//GEN-LAST:event_cn_kimia3ActionPerformed
 
     private void cn_tinjaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cn_tinjaActionPerformed
         // TODO add your handling code here:
+        resetFormTinja();
     }//GEN-LAST:event_cn_tinjaActionPerformed
 
     private void sv_urineActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sv_urineActionPerformed
@@ -5700,6 +5722,26 @@ try (PreparedStatement ps = kon.prepareStatement(sql)) {
             JOptionPane.showMessageDialog(null, "Error: " + ex.getMessage());
         }
     }//GEN-LAST:event_bt_tambahLayananActionPerformed
+
+    private void cn_urineActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cn_urineActionPerformed
+        // TODO add your handling code here:
+        resetFormUrin();
+    }//GEN-LAST:event_cn_urineActionPerformed
+
+    private void cn_hematologiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cn_hematologiActionPerformed
+        // TODO add your handling code here:
+        resetFormHematologi();
+    }//GEN-LAST:event_cn_hematologiActionPerformed
+
+    private void cn_serologiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cn_serologiActionPerformed
+        // TODO add your handling code here:
+        resetFormSerologi();
+    }//GEN-LAST:event_cn_serologiActionPerformed
+
+    private void cn_kimia2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cn_kimia2ActionPerformed
+        // TODO add your handling code here:
+        resetFormKimia1();
+    }//GEN-LAST:event_cn_kimia2ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
