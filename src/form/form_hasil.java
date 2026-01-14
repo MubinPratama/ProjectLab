@@ -4879,7 +4879,7 @@ private void loadLayanan() {
         jLabel318.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
         jLabel318.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
 
-        sv_tinja.setBackground(new java.awt.Color(255, 255, 255));
+        sv_tinja.setBackground(new java.awt.Color(0, 255, 0));
         sv_tinja.setFont(new java.awt.Font("Georgia", 1, 14)); // NOI18N
         sv_tinja.setText("SAVE");
         sv_tinja.setBorder(javax.swing.BorderFactory.createEtchedBorder());
